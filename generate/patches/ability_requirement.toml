@@ -1,41 +1,52 @@
 [7.1394] # InfestorTerran - BURROWDOWN_INFESTORTERRAN
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [9.1374] # Baneling - BURROWDOWN_BANELING
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [18.1450] # CommandCenter - UPGRADETOPLANETARYFORTRESS_PLANETARYFORTRESS
-requirements = [ { "building" =  22 } ] # Engineering bay
+requirements = [{ "building" = 22 }] # Engineering bay
 
 [18.1516] # CommandCenter - UPGRADETOORBITAL_ORBITALCOMMAND
-requirements = [ { "building" =  21 } ] # Barracks
+requirements = [{ "building" = 21 }] # Barracks
 
 [21.562] # Barracks - BARRACKSTRAIN_GHOST
-requirements = [ { "building" =  26, "addon" = 5 } ] # Ghost academy, Attached tech lab
+requirements = [
+  { "building" = 26, "addon" = 5 },
+] # Ghost academy, Attached tech lab
 
 [21.563] # Barracks - BARRACKSTRAIN_MARAUDER
-requirements = [ { "addon" =  5 } ] # Attached tech lab
+requirements = [{ "addon" = 5 }] # Attached tech lab
 
 [26.710] # GhostAcademy - BUILD_NUKE
-requirements = [ { "building" =  27 } ] # Factory
+requirements = [{ "building" = 27 }] # Factory
 
 [27.591] # Factory - FACTORYTRAIN_SIEGETANK
-requirements = [ { "addon" =  5 } ] # Attached tech lab
+requirements = [{ "addon" = 5 }] # Attached tech lab
 
 [27.594] # Factory - FACTORYTRAIN_THOR
-requirements = [ { "addon" =  5 }, { "building" = 29 } ] # Attached tech lab, Armory
+requirements = [
+  { "addon" = 5 },
+  { "building" = 29 },
+] # Attached tech lab, Armory
 
 [27.596] # Factory - TRAIN_HELLBAT
-requirements = [ { "building" = 29 } ] # Armory
+requirements = [{ "building" = 29 }] # Armory
+
+[27.597] # Factory - TRAIN_CYCLONE
+requirements = [{ "addon" = 5 }]
 
 [28.621] # Starport - STARPORTTRAIN_BANSHEE
-requirements = [ { "addon" =  5 } ] # Attached tech lab
+requirements = [{ "addon" = 5 }] # Attached tech lab
 
 [28.622] # Starport - STARPORTTRAIN_RAVEN
-requirements = [ { "addon" =  5 } ] # Attached tech lab
+requirements = [{ "addon" = 5 }] # Attached tech lab
 
 [28.623] # Starport - STARPORTTRAIN_BATTLECRUISER
-requirements = [ { "addon" =  5 }, { "building" = 30 } ] # Attached tech lab, Fusion core
+requirements = [
+  { "addon" = 5 },
+  { "building" = 30 },
+] # Attached tech lab, Fusion core
 
 # [37.730] # BarracksTechLab - BARRACKSTECHLABRESEARCH_STIMPACK
 # requirements = []
@@ -56,61 +67,61 @@ requirements = [ { "addon" =  5 }, { "building" = 30 } ] # Attached tech lab, Fu
 # requirements = []
 
 [45.321] # SCV - TERRANBUILD_BARRACKS
-requirements = [ { "building" = 19 } ] # Supply depot
+requirements = [{ "building" = 19 }] # Supply depot
 
 [45.322] # SCV - TERRANBUILD_ENGINEERINGBAY
-requirements = [ { "building" = 18 } ] # Command center
+requirements = [{ "building" = 18 }] # Command center
 
 [45.323] # SCV - TERRANBUILD_MISSILETURRET
-requirements = [ { "building" = 22 } ] # Engineering bay
+requirements = [{ "building" = 22 }] # Engineering bay
 
 [45.324] # SCV - TERRANBUILD_BUNKER
-requirements = [ { "building" = 21 } ] # Barracks
+requirements = [{ "building" = 21 }] # Barracks
 
 [45.326] # SCV - TERRANBUILD_SENSORTOWER
-requirements = [ { "building" = 22 } ] # Engineering bay
+requirements = [{ "building" = 22 }] # Engineering bay
 
 [45.327] # SCV - TERRANBUILD_GHOSTACADEMY
-requirements = [ { "building" = 21 } ] # Barracks
+requirements = [{ "building" = 21 }] # Barracks
 
 [45.328] # SCV - TERRANBUILD_FACTORY
-requirements = [ { "building" = 21 } ] # Barracks
+requirements = [{ "building" = 21 }] # Barracks
 
 [45.329] # SCV - TERRANBUILD_STARPORT
-requirements = [ { "building" = 27 } ] # Factory
+requirements = [{ "building" = 27 }] # Factory
 
 [45.331] # SCV - TERRANBUILD_ARMORY
-requirements = [ { "building" = 27 } ] # Factory
+requirements = [{ "building" = 27 }] # Factory
 
 [45.333] # SCV - TERRANBUILD_FUSIONCORE
-requirements = [ { "building" = 28 } ] # Starport
+requirements = [{ "building" = 28 }] # Starport
 
 [48.380] # Marine - EFFECT_STIM_MARINE
-requirements = [ { "upgrade" =  15 } ] # Stimpack
+requirements = [{ "upgrade" = 15 }] # Stimpack
 
 [50.382] # Ghost - BEHAVIOR_CLOAKON_GHOST
-requirements = [ { "upgrade" =  25 } ] # Personal cloaking
+requirements = [{ "upgrade" = 25 }] # Personal cloaking
 
 [51.253] # Marauder - EFFECT_STIM_MARAUDER
-requirements = [ { "upgrade" =  15 } ] # Stimpack
+requirements = [{ "upgrade" = 15 }] # Stimpack
 
 [53.1998] # Hellion - MORPH_HELLBAT
-requirements = [ { "building" = 29 } ] # Armory
+requirements = [{ "building" = 29 }] # Armory
 
 [55.392] # Banshee - BEHAVIOR_CLOAKON_BANSHE
-requirements = [ { "upgrade" =  20 } ] # Banshee cloack
+requirements = [{ "upgrade" = 20 }] # Banshee cloack
 
 [56.3747] # Raven - EFFECT_INTERFERENCEMATRIX
-requirements = [ { "upgrade" = 299 } ] # INTERFERENCEMATRIX
+requirements = [{ "upgrade" = 299 }] # INTERFERENCEMATRIX
 
 [57.401] # Battlecruiser - YAMATO_YAMATOGUN
-requirements = [ { "upgrade" = 76 } ] # BattlecruiserEnableSpecializations
+requirements = [{ "upgrade" = 76 }] # BattlecruiserEnableSpecializations
 
 # [59.1] # Nexus - SMART
 # requirements = []
 
 [59.110] # Nexus - NEXUSTRAINMOTHERSHIP_MOTHERSHIP
-requirements = [ { "building" = 64 } ] # Fleet beacon
+requirements = [{ "building" = 64 }] # Fleet beacon
 
 # [59.1006] # Nexus - NEXUSTRAIN_PROBE
 # requirements = []
@@ -128,22 +139,22 @@ requirements = [ { "building" = 64 } ] # Fleet beacon
 # requirements = []
 
 [62.917] # Gateway - GATEWAYTRAIN_STALKER
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 [62.919] # Gateway - GATEWAYTRAIN_HIGHTEMPLAR
-requirements = [ { "building" = 68 } ] # Templar archive
+requirements = [{ "building" = 68 }] # Templar archive
 
 [62.920] # Gateway - GATEWAYTRAIN_DARKTEMPLAR
-requirements = [ { "building" = 69 } ] # Dark Shrine
+requirements = [{ "building" = 69 }] # Dark Shrine
 
 [62.921] # Gateway - GATEWAYTRAIN_SENTRY
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 [62.922] # Gateway - TRAIN_ADEPT
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 [62.1518] # Gateway - MORPH_WARPGATE
-requirements = [ { "upgrade" =  84 } ] # Warpgate
+requirements = [{ "upgrade" = 84 }] # Warpgate
 
 # [63.1062] # Forge - FORGERESEARCH_PROTOSSGROUNDWEAPONSLEVEL1
 # requirements = []
@@ -176,13 +187,13 @@ requirements = [ { "upgrade" =  84 } ] # Warpgate
 # requirements = []
 
 [67.948] # Stargate - STARGATETRAIN_CARRIER
-requirements = [ { "building" = 64 } ] # Fleet beacon
+requirements = [{ "building" = 64 }] # Fleet beacon
 
 # [67.950] # Stargate - STARGATETRAIN_VOIDRAY
 # requirements = []
 
 [67.955] # Stargate - STARGATETRAIN_TEMPEST
-requirements = [ { "building" = 64 } ] # Fleet beacon
+requirements = [{ "building" = 64 }] # Fleet beacon
 
 # [67.954] # Stargate - STARGATETRAIN_ORACLE
 # requirements = []
@@ -206,10 +217,10 @@ requirements = [ { "building" = 64 } ] # Fleet beacon
 # requirements = []
 
 [71.978] # RoboticsFacility - ROBOTICSFACILITYTRAIN_COLOSSUS
-requirements = [ { "building" = 70 } ] # Robotics bay
+requirements = [{ "building" = 70 }] # Robotics bay
 
 [71.994] # RoboticsFacility - TRAIN_DISRUPTOR
-requirements = [ { "building" = 70 } ] # Robotics bay
+requirements = [{ "building" = 70 }] # Robotics bay
 
 # [71.195] # RoboticsFacility - RALLY_BUILDING
 # requirements = []
@@ -224,178 +235,181 @@ requirements = [ { "building" = 70 } ] # Robotics bay
 # requirements = []
 
 [73.1819] # Zealot - EFFECT_CHARGE
-requirements = [ { "upgrade" = 86 } ] # Charge
+requirements = [{ "upgrade" = 86 }] # Charge
 
 [74.1442] # Stalker - EFFECT_BLINK_STALKER
-requirements = [ { "upgrade" =  87 } ] # Blink
+requirements = [{ "upgrade" = 87 }] # Blink
 
 [75.1036] # HighTemplar - PSISTORM_PSISTORM
-requirements = [ { "upgrade" = 52 } ] # PsiStormTech
+requirements = [{ "upgrade" = 52 }] # PsiStormTech
 
 [76.2700] # DarkTemplar - EFFECT_SHADOWSTRIDE
-requirements = [ { "upgrade" =  141 } ] # DT Blink
+requirements = [{ "upgrade" = 141 }] # DT Blink
 
 [84.883] # Probe - PROTOSSBUILD_GATEWAY
-requirements = [ { "building" = 60 } ] # Pylon
+requirements = [{ "building" = 60 }] # Pylon
 
 [84.884] # Probe - PROTOSSBUILD_FORGE
-requirements = [ { "building" = 60 } ] # Pylon
+requirements = [{ "building" = 60 }] # Pylon
 
 [84.885] # Probe - PROTOSSBUILD_FLEETBEACON
-requirements = [ { "building" = 67 } ] # Stargate
+requirements = [{ "building" = 67 }] # Stargate
 
 [84.886] # Probe - PROTOSSBUILD_TWILIGHTCOUNCIL
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 [84.887] # Probe - PROTOSSBUILD_PHOTONCANNON
-requirements = [ { "building" = 63 } ] # Forge
+requirements = [{ "building" = 63 }] # Forge
 
 [84.889] # Probe - PROTOSSBUILD_STARGATE
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 [84.890] # Probe - PROTOSSBUILD_TEMPLARARCHIVE
-requirements = [ { "building" = 65 } ] # Twilight council
+requirements = [{ "building" = 65 }] # Twilight council
 
 [84.891] # Probe - PROTOSSBUILD_DARKSHRINE
-requirements = [ { "building" = 65 } ] # Twilight council
+requirements = [{ "building" = 65 }] # Twilight council
 
 [84.892] # Probe - PROTOSSBUILD_ROBOTICSBAY
-requirements = [ { "building" = 71 } ] # Robotics facility
+requirements = [{ "building" = 71 }] # Robotics facility
 
 [84.893] # Probe - PROTOSSBUILD_ROBOTICSFACILITY
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 [84.894] # Probe - PROTOSSBUILD_CYBERNETICSCORE
-requirements = [ { "building" = 62 } ] # Gateway
+requirements = [{ "building" = 62 }] # Gateway
 
 [84.895] # Probe - BUILD_SHIELDBATTERY
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 [86.1216] # Hatchery - UPGRADETOLAIR_LAIR
-requirements = [ { "building" = 89 } ] # Spawning pool
+requirements = [{ "building" = 89 }] # Spawning pool
 
 [86.1632] # Hatchery - TRAINQUEEN_QUEEN
-requirements = [ { "building" = 89 } ] # Spawning pool
+requirements = [{ "building" = 89 }] # Spawning pool
 
 [92.1220] # Spire - UPGRADETOGREATERSPIRE_GREATERSPIRE
-requirements = [ { "building" = 101 } ] # Hive
+requirements = [{ "building" = 101 }] # Hive
 
 [100.1218] # Lair - UPGRADETOHIVE_HIVE
-requirements = [ { "building" = 94 } ] # Infestation pit
+requirements = [{ "building" = 94 }] # Infestation pit
 
 [100.1632] # Lair - TRAINQUEEN_QUEEN
-requirements = [ { "building" = 89 } ] # Spawning pool
+requirements = [{ "building" = 89 }] # Spawning pool
 
 [101.1632] # Hive - TRAINQUEEN_QUEEN
-requirements = [ { "building" = 89 } ] # Spawning pool
+requirements = [{ "building" = 89 }] # Spawning pool
 
 [104.1155] # Drone - ZERGBUILD_SPAWNINGPOOL
-requirements = [ { "building" = 86 } ] # Hatchery
+requirements = [{ "building" = 86 }] # Hatchery
 
 [104.1156] # Drone - ZERGBUILD_EVOLUTIONCHAMBER
-requirements = [ { "building" = 86 } ] # Hatchery
+requirements = [{ "building" = 86 }] # Hatchery
 
 [104.1157] # Drone - ZERGBUILD_HYDRALISKDEN
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [104.1158] # Drone - ZERGBUILD_SPIRE
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [104.1159] # Drone - ZERGBUILD_ULTRALISKCAVERN
-requirements = [ { "building" = 101 } ] # Hive
+requirements = [{ "building" = 101 }] # Hive
 
 [104.1160] # Drone - ZERGBUILD_INFESTATIONPIT
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [104.1161] # Drone - ZERGBUILD_NYDUSNETWORK
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [104.1162] # Drone - ZERGBUILD_BANELINGNEST
-requirements = [ { "building" = 89 } ] # Spawning pool
+requirements = [{ "building" = 89 }] # Spawning pool
 
 [104.1163] # Drone - BUILD_LURKERDEN
-requirements = [ { "building" = 91 } ] # HydraliskDen
+requirements = [{ "building" = 91 }] # HydraliskDen
 
 [104.1165] # Drone - ZERGBUILD_ROACHWARREN
-requirements = [ { "building" = 89 } ] # Spawning pool
+requirements = [{ "building" = 89 }] # Spawning pool
 
 [104.1166] # Drone - ZERGBUILD_SPINECRAWLER
-requirements = [ { "building" = 89 } ] # Spawning pool
+requirements = [{ "building" = 89 }] # Spawning pool
 
 [104.1167] # Drone - ZERGBUILD_SPORECRAWLER
-requirements = [ { "building" = 89 } ] # Spawning pool
+requirements = [{ "building" = 89 }] # Spawning pool
 
 [104.1378] # Drone - BURROWDOWN_DRONE
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [105.80] # Zergling - MORPHZERGLINGTOBANELING_BANELING
-requirements = [ { "building" = 96 } ] # Baneling nest
+requirements = [{ "building" = 96 }] # Baneling nest
 
 [105.1390] # Zergling - BURROWDOWN_ZERGLING
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [105.4119] # Zergling - MORPHTOBANELING_BANELING
-requirements = [ { "building" = 96 } ] # Baneling nest
+requirements = [{ "building" = 96 }] # Baneling nest
 
 [106.1448] # Overlord - MORPH_OVERSEER
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [106.1692] # Overlord - BEHAVIOR_GENERATECREEPON
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [106.2708] # Overlord - MORPH_OVERLORDTRANSPORT
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [107.1382] # Hydralisk - BURROWDOWN_HYDRALISK
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [107.2332] # Hydralisk - MORPH_LURKER
-requirements = [ { "building" = 504 } ] # Lurker den (MP)
+requirements = [{ "building" = 504 }] # Lurker den (MP)
+
+[107.4109] # Hydralisk - AMORPHOUSARMORCLOUD_AMORPHOUSARMORCLOUD
+requirements = [{ "building" = 101 }] # Hive
 
 [109.1512] # Ultralisk - BURROWDOWN_ULTRALISK
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [110.1386] # Roach - BURROWDOWN_ROACH
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [110.2330] # Roach - MORPHTORAVAGER_RAVAGER
-requirements = [ { "building" = 86 } ] # Roach warren
+requirements = [{ "building" = 86 }] # Roach warren
 
 [111.249] # Infestor - NEURALPARASITE_NEURALPARASITE
-requirements = [ { "upgrade" = 101 } ] # Neural parasite
+requirements = [{ "upgrade" = 101 }] # Neural parasite
 
 [111.1394] # Infestor - BURROWDOWN_INFESTORTERRAN
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [111.1444] # Infestor - BURROWDOWN_INFESTOR
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [111.3801] # Infestor - AMORPHOUSARMORCLOUD_AMORPHOUSARMORCLOUD
-requirements = [ { "upgrade" =  297 } ] # MicrobialShroud
+requirements = [{ "upgrade" = 297 }] # MicrobialShroud
 
 [112.1372] # Corruptor - MORPHTOBROODLORD_BROODLORD
-requirements = [ { "building" = 102 } ] # Greater spire
+requirements = [{ "building" = 102 }] # Greater spire
 
 [118.16] # RoachBurrowed - MOVE
-requirements = [ { "upgrade" = 3 } ] # Tunneling claws
+requirements = [{ "upgrade" = 3 }] # Tunneling claws
 
 [118.17] # RoachBurrowed - PATROL
-requirements = [ { "upgrade" = 3 } ] # Tunneling claws
+requirements = [{ "upgrade" = 3 }] # Tunneling claws
 
 [118.18] # RoachBurrowed - HOLDPOSITION
-requirements = [ { "upgrade" = 3 } ] # Tunneling claws
+requirements = [{ "upgrade" = 3 }] # Tunneling claws
 
 [118.19] # RoachBurrowed - SCAN_MOVE
-requirements = [ { "upgrade" = 3 } ] # Tunneling claws
+requirements = [{ "upgrade" = 3 }] # Tunneling claws
 
 [118.1] # RoachBurrowed - SMART
-requirements = [ { "upgrade" = 3 } ] # Tunneling claws
+requirements = [{ "upgrade" = 3 }] # Tunneling claws
 
 [126.1433] # Queen - BURROWDOWN_QUEEN
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [127.249] # InfestorBurrowed - NEURALPARASITE_NEURALPARASITE
-requirements = [ { "upgrade" = 101 } ] # Neural parasite
+requirements = [{ "upgrade" = 101 }] # Neural parasite
 
 # [133.1] # WarpGate - SMART
 # requirements = []
@@ -404,19 +418,19 @@ requirements = [ { "upgrade" = 101 } ] # Neural parasite
 # requirements = []
 
 [133.1414] # WarpGate - WARPGATETRAIN_STALKER
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 [133.1416] # WarpGate - WARPGATETRAIN_HIGHTEMPLAR
-requirements = [ { "building" = 68 } ] # Templar archive
+requirements = [{ "building" = 68 }] # Templar archive
 
 [133.1417] # WarpGate - WARPGATETRAIN_DARKTEMPLAR
-requirements = [ { "building" = 69 } ] # Dark Shrine
+requirements = [{ "building" = 69 }] # Dark Shrine
 
 [133.1418] # WarpGate - WARPGATETRAIN_SENTRY
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 [133.1419] # WarpGate - TRAINWARP_ADEPT
-requirements = [ { "building" = 72 } ] # Cybernetics core
+requirements = [{ "building" = 72 }] # Cybernetics core
 
 # [133.1520] # WarpGate - MORPH_GATEWAY
 # requirements = []
@@ -425,52 +439,52 @@ requirements = [ { "building" = 72 } ] # Cybernetics core
 requirements = [] # Not in the game
 
 [151.1343] # Larva - LARVATRAIN_ZERGLING
-requirements = [ { "building" = 89 } ] # Spawning pool
+requirements = [{ "building" = 89 }] # Spawning pool
 
 [151.1345] # Larva - LARVATRAIN_HYDRALISK
-requirements = [ { "building" = 91 } ] # Hydralisk den
+requirements = [{ "building" = 91 }] # Hydralisk den
 
 [151.1346] # Larva - LARVATRAIN_MUTALISK
-requirements = [ { "building" = 92 } ] # Spire
+requirements = [{ "building" = 92 }] # Spire
 
 [151.1348] # Larva - LARVATRAIN_ULTRALISK
-requirements = [ { "building" = 93 } ] # Ultralisk cavern
+requirements = [{ "building" = 93 }] # Ultralisk cavern
 
 [151.1351] # Larva - LARVATRAIN_ROACH
-requirements = [ { "building" = 97 } ] # Roach warren
+requirements = [{ "building" = 97 }] # Roach warren
 
 [151.1352] # Larva - LARVATRAIN_INFESTOR
-requirements = [ { "building" = 94 } ] # Infestation pit
+requirements = [{ "building" = 94 }] # Infestation pit
 
 [151.1353] # Larva - LARVATRAIN_CORRUPTOR
-requirements = [ { "building" = 92 } ] # Spire
+requirements = [{ "building" = 92 }] # Spire
 
 [151.1354] # Larva - LARVATRAIN_VIPER
-requirements = [ { "building" = 101 } ] # Hive
+requirements = [{ "building" = 101 }] # Hive
 
 [151.1356] # Larva - TRAIN_SWARMHOST
-requirements = [ { "building" = 94 } ] # Infestation pit
+requirements = [{ "building" = 94 }] # Infestation pit
 
 [484.1978] # HellionTank - MORPH_HELLION
-requirements = [ { "building" = 29 } ] # Armory
+requirements = [{ "building" = 29 }] # Armory
 
 [488.1847] # MothershipCore - MORPH_MOTHERSHIP
 requirements = [] # Not in the game, skipping
 
 [494.2014] # SwarmHostMP - BURROWDOWN_SWARMHOST
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [688.2340] # Ravager - BURROWDOWN_RAVAGER
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [731.2489] # DefilerMP - DEFILERMPBURROW_BURROWDOWN
-requirements = [ { "upgrade" =  64 } ] # Burrow
+requirements = [{ "upgrade" = 64 }] # Burrow
 
 [893.1448] # OverlordTransport - MORPH_OVERSEER
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [893.1692] # OverlordTransport - BEHAVIOR_GENERATECREEPON
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 # [1910.3765] # ShieldBattery - EFFECT_RESTORE
 # requirements = []

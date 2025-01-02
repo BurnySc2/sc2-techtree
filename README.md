@@ -7,15 +7,17 @@ This repository contains Python scripts for data generation.
 # Development
 
 - Install StarCraft II (and for linux set environment variables) [similar to the instructions here](https://github.com/BurnySc2/python-sc2#installation)
-- Install python3.8 or newer
-- Install `poetry` via `pip install poetry`
+- Install python3.9 or newer
+- Install `uv` via `pip install uv`
 
 The Python code to generate new data is the directory `generate`.
 
 You can run
-```py 
-poetry run python run.py
+
+```py
+uv run --env-file=.env python run.py
 ```
+
 to generate a new `/data/data.json`.
 
 # Missing data? Invalid data? Other issues?
