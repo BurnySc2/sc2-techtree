@@ -288,6 +288,9 @@ requirements = [{ "building" = 89 }] # Spawning pool
 [86.1632] # Hatchery - TRAINQUEEN_QUEEN
 requirements = [{ "building" = 89 }] # Spawning pool
 
+[91.1284] # HydraliskDen - HYDRALISKDENRESEARCH_RESEARCHFRENZY
+requirements = [{ "building" = 101 }] # Hive
+
 [92.1220] # Spire - UPGRADETOGREATERSPIRE_GREATERSPIRE
 requirements = [{ "building" = 101 }] # Hive
 
@@ -345,7 +348,7 @@ requirements = [{ "building" = 96 }] # Baneling nest
 [105.1390] # Zergling - BURROWDOWN_ZERGLING
 requirements = [{ "upgrade" = 64 }] # Burrow
 
-[105.4119] # Zergling - MORPHTOBANELING_BANELING
+[105.4121] # Zergling - MORPHTOBANELING_BANELING
 requirements = [{ "building" = 96 }] # Baneling nest
 
 [106.1448] # Overlord - MORPH_OVERSEER
@@ -364,7 +367,7 @@ requirements = [{ "upgrade" = 64 }] # Burrow
 requirements = [{ "building" = 504 }] # Lurker den (MP)
 
 [107.4109] # Hydralisk - AMORPHOUSARMORCLOUD_AMORPHOUSARMORCLOUD
-requirements = [{ "building" = 101 }] # Hive
+requirements = [{ "upgrade" = 304 }] # SecretedCoating
 
 [109.1512] # Ultralisk - BURROWDOWN_ULTRALISK
 requirements = [{ "upgrade" = 64 }] # Burrow

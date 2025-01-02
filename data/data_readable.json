@@ -2784,7 +2784,7 @@
             "target": {
                 "Research": {
                     "upgrade": 300,
-                    "upgrade_name": "SUNDERINGIMPACT"
+                    "upgrade_name": "INTERFERENCEMATRIX"
                 }
             }
         },
@@ -4470,7 +4470,7 @@
             "target": {
                 "Research": {
                     "upgrade": 304,
-                    "upgrade_name": "ENHANCEDSHOCKWAVES"
+                    "upgrade_name": "SECRETEDCOATING"
                 }
             }
         },
@@ -4680,6 +4680,23 @@
                 "Research": {
                     "upgrade": 135,
                     "upgrade_name": "EVOLVEMUSCULARAUGMENTS"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 1284,
+            "name": "HYDRALISKDENRESEARCH_RESEARCHFRENZY",
+            "target": {
+                "Research": {
+                    "upgrade": 298,
+                    "upgrade_name": "FRENZY"
                 }
             }
         },
@@ -5713,7 +5730,7 @@
             "target": {
                 "Research": {
                     "upgrade": 299,
-                    "upgrade_name": "INTERFERENCEMATRIX"
+                    "upgrade_name": "MICROBIALSHROUD"
                 }
             }
         },
@@ -6255,7 +6272,7 @@
             "target": {
                 "Research": {
                     "upgrade": 301,
-                    "upgrade_name": "AMPLIFIEDSHIELDING"
+                    "upgrade_name": "SUNDERINGIMPACT"
                 }
             }
         },
@@ -6272,7 +6289,7 @@
             "target": {
                 "Research": {
                     "upgrade": 302,
-                    "upgrade_name": "PSIONICAMPLIFIERS"
+                    "upgrade_name": "AMPLIFIEDSHIELDING"
                 }
             }
         },
@@ -6289,7 +6306,7 @@
             "target": {
                 "Research": {
                     "upgrade": 303,
-                    "upgrade_name": "SECRETEDCOATING"
+                    "upgrade_name": "PSIONICAMPLIFIERS"
                 }
             }
         },
@@ -9558,25 +9575,25 @@
             "allow_autocast": false,
             "allow_minimap": false,
             "buff": [],
-            "cast_range": 0.0,
-            "cooldown": 0,
-            "effect": [],
-            "energy_cost": 0,
-            "id": 4109,
-            "name": "AMORPHOUSARMORCLOUD_AMORPHOUSARMORCLOUD",
-            "target": "None"
-        },
-        {
-            "allow_autocast": false,
-            "allow_minimap": false,
-            "buff": [],
             "cast_range": 9.0,
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
             "id": 4111,
-            "name": "SHIELDBATTERYRECHARGEEX5_SHIELDBATTERYRECHARGE",
+            "name": "AMORPHOUSARMORCLOUD_AMORPHOUSARMORCLOUD",
             "target": "Point"
+        },
+        {
+            "allow_autocast": true,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 6.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 4113,
+            "name": "SHIELDBATTERYRECHARGEEX5_SHIELDBATTERYRECHARGE",
+            "target": "Unit"
         },
         {
             "allow_autocast": false,
@@ -9586,7 +9603,7 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
-            "id": 4112,
+            "id": 4114,
             "name": "SHIELDBATTERYRECHARGEEX5_STOP",
             "remaps_to_ability_id": 3659,
             "target": "None"
@@ -9599,24 +9616,8 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
-            "id": 4119,
+            "id": 4121,
             "name": "MORPHTOBANELING_BANELING",
-            "target": {
-                "Morph": {
-                    "produces": 9
-                }
-            }
-        },
-        {
-            "allow_autocast": false,
-            "allow_minimap": false,
-            "buff": [],
-            "cast_range": 0.0,
-            "cooldown": 0,
-            "effect": [],
-            "energy_cost": 0,
-            "id": 4120,
-            "name": "MORPHTOBANELING_CANCEL",
             "target": {
                 "Morph": {
                     "produces": 0,
@@ -9633,9 +9634,57 @@
             "effect": [],
             "energy_cost": 0,
             "id": 4122,
-            "name": "MOTHERSHIPCLOAK_ORACLECLOAKFIELD",
+            "name": "MORPHTOBANELING_CANCEL",
             "remaps_to_ability_id": 3659,
             "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 4124,
+            "name": "MOTHERSHIPCLOAK_ORACLECLOAKFIELD",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 500.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 4126,
+            "name": "ENERGYRECHARGE_ENERGYRECHARGE",
+            "target": "Unit"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 4128,
+            "name": "SALVAGEEFFECT_SALVAGE",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.300048828125,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 4132,
+            "name": "WORKERSTOPIDLEABILITYVESPENE_GATHER",
+            "target": "Unit"
         }
     ],
     "Unit": [
@@ -10038,6 +10087,9 @@
                 },
                 {
                     "ability": 2244
+                },
+                {
+                    "ability": 4124
                 },
                 {
                     "ability": 1
@@ -10852,6 +10904,9 @@
                     "ability": 407
                 },
                 {
+                    "ability": 4128
+                },
+                {
                     "ability": 1
                 }
             ],
@@ -10888,7 +10943,11 @@
             "weapons": []
         },
         {
-            "abilities": [],
+            "abilities": [
+                {
+                    "ability": 4128
+                }
+            ],
             "accepts_addon": false,
             "armor": 0.0,
             "attributes": [
@@ -13084,6 +13143,9 @@
                     "ability": 3757
                 },
                 {
+                    "ability": 4126
+                },
+                {
                     "ability": 1
                 },
                 {
@@ -14970,14 +15032,7 @@
             "weapons": []
         },
         {
-            "abilities": [
-                {
-                    "ability": 1733
-                },
-                {
-                    "ability": 1
-                }
-            ],
+            "abilities": [],
             "accepts_addon": false,
             "armor": 0.0,
             "attributes": [
@@ -15203,6 +15258,14 @@
                 },
                 {
                     "ability": 1283
+                },
+                {
+                    "ability": 1284,
+                    "requirements": [
+                        {
+                            "building": 101
+                        }
+                    ]
                 }
             ],
             "accepts_addon": false,
@@ -16130,6 +16193,14 @@
                             "upgrade": 64
                         }
                     ]
+                },
+                {
+                    "ability": 4121,
+                    "requirements": [
+                        {
+                            "building": 96
+                        }
+                    ]
                 }
             ],
             "accepts_addon": false,
@@ -16283,14 +16354,6 @@
                     "requirements": [
                         {
                             "building": 504
-                        }
-                    ]
-                },
-                {
-                    "ability": 4109,
-                    "requirements": [
-                        {
-                            "building": 101
                         }
                     ]
                 }
@@ -18139,20 +18202,7 @@
             ]
         },
         {
-            "abilities": [
-                {
-                    "ability": 16
-                },
-                {
-                    "ability": 17
-                },
-                {
-                    "ability": 18
-                },
-                {
-                    "ability": 1
-                }
-            ],
+            "abilities": [],
             "accepts_addon": false,
             "armor": 2.0,
             "attributes": [
@@ -21478,6 +21528,9 @@
         },
         {
             "abilities": [
+                {
+                    "ability": 4113
+                },
                 {
                     "ability": 1
                 }

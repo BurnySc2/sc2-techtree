@@ -18,196 +18,233 @@ ability = 1731
 
 [[63]] # Forge FORGERESEARCH_PROTOSSGROUNDWEAPONSLEVEL2
 ability = 1063
-requirements = [ { "upgrade" = 39 }, { "building" = 65 } ] # Previous level, TwilightCouncil
+requirements = [
+  { "upgrade" = 39 },
+  { "building" = 65 },
+] # Previous level, TwilightCouncil
 
 [[63]] # Forge FORGERESEARCH_PROTOSSGROUNDWEAPONSLEVEL3
 ability = 1064
-requirements = [ { "upgrade" = 40 }, { "building" = 65 } ] # Previous level, TwilightCouncil
+requirements = [
+  { "upgrade" = 40 },
+  { "building" = 65 },
+] # Previous level, TwilightCouncil
 
 [[63]] # Forge FORGERESEARCH_PROTOSSGROUNDARMORLEVEL2
 ability = 1066
-requirements = [ { "upgrade" = 42 }, { "building" = 65 } ] # Previous level, TwilightCouncil
+requirements = [
+  { "upgrade" = 42 },
+  { "building" = 65 },
+] # Previous level, TwilightCouncil
 
 [[63]] # Forge FORGERESEARCH_PROTOSSGROUNDARMORLEVEL3
 ability = 1067
-requirements = [ { "upgrade" = 43 }, { "building" = 65 } ] # Previous level, TwilightCouncil
+requirements = [
+  { "upgrade" = 43 },
+  { "building" = 65 },
+] # Previous level, TwilightCouncil
 
 [[63]] # Forge FORGERESEARCH_PROTOSSSHIELDSLEVEL2
 ability = 1069
-requirements = [ { "upgrade" = 45 }, { "building" = 65 } ] # Previous level, TwilightCouncil
+requirements = [
+  { "upgrade" = 45 },
+  { "building" = 65 },
+] # Previous level, TwilightCouncil
 
 [[63]] # Forge FORGERESEARCH_PROTOSSSHIELDSLEVEL3
 ability = 1070
-requirements = [ { "upgrade" = 46 }, { "building" = 65 } ] # Previous level, TwilightCouncil
+requirements = [
+  { "upgrade" = 46 },
+  { "building" = 65 },
+] # Previous level, TwilightCouncil
 
 [[72]] # CyberneticsCore CYBERNETICSCORERESEARCH_PROTOSSAIRWEAPONSLEVEL2
 ability = 1563
-requirements = [ { "upgrade" = 78 }, { "building" = 64 } ] # Previous level, FleetBeacon
+requirements = [
+  { "upgrade" = 78 },
+  { "building" = 64 },
+] # Previous level, FleetBeacon
 
 [[72]] # CyberneticsCore CYBERNETICSCORERESEARCH_PROTOSSAIRWEAPONSLEVEL3
 ability = 1564
-requirements = [ { "upgrade" = 79 }, { "building" = 64 } ] # Previous level, FleetBeacon
+requirements = [
+  { "upgrade" = 79 },
+  { "building" = 64 },
+] # Previous level, FleetBeacon
 
 [[72]] # CyberneticsCore CYBERNETICSCORERESEARCH_PROTOSSAIRARMORLEVEL2
 ability = 1566
-requirements = [ { "upgrade" = 81 }, { "building" = 64 } ] # Previous level, FleetBeacon
+requirements = [
+  { "upgrade" = 81 },
+  { "building" = 64 },
+] # Previous level, FleetBeacon
 
 [[72]] # CyberneticsCore CYBERNETICSCORERESEARCH_PROTOSSAIRARMORLEVEL3
 ability = 1567
-requirements = [ { "upgrade" = 82 }, { "building" = 64 } ] # Previous level, FleetBeacon
+requirements = [
+  { "upgrade" = 82 },
+  { "building" = 64 },
+] # Previous level, FleetBeacon
 
 [[22]] # EngineeringBay TERRANINFANTRYWEAPONSLEVEL2
 ability = 653
-requirements = [ { "upgrade" = 7 }, { "building" = 29 } ] # Previous level, Armory
+requirements = [{ "upgrade" = 7 }, { "building" = 29 }] # Previous level, Armory
 
 [[22]] # EngineeringBay TERRANINFANTRYWEAPONSLEVEL3
 ability = 654
-requirements = [ { "upgrade" = 8 }, { "building" = 29 } ] # Previous level, Armory
+requirements = [{ "upgrade" = 8 }, { "building" = 29 }] # Previous level, Armory
 
 [[22]] # EngineeringBay TERRANINFANTRYARMORSLEVEL2
 ability = 657
-requirements = [ { "upgrade" = 11 }, { "building" = 29 } ] # Previous level, Armory
+requirements = [
+  { "upgrade" = 11 },
+  { "building" = 29 },
+] # Previous level, Armory
 
 [[22]] # EngineeringBay TERRANINFANTRYARMORSLEVEL3
 ability = 658
-requirements = [ { "upgrade" = 12 }, { "building" = 29 } ] # Previous level, Armory
+requirements = [
+  { "upgrade" = 12 },
+  { "building" = 29 },
+] # Previous level, Armory
 
 [[29]] # Armory TERRANVEHICLEWEAPONSLEVEL2
 ability = 856
-requirements = [ { "upgrade" = 30 } ] # Previous level
+requirements = [{ "upgrade" = 30 }] # Previous level
 
 [[29]] # Armory TERRANVEHICLEWEAPONSLEVEL3
 ability = 857
-requirements = [ { "upgrade" = 31 } ] # Previous level
+requirements = [{ "upgrade" = 31 }] # Previous level
 
 [[29]] # Armory TERRANSHIPWEAPONSLEVEL2
 ability = 862
-requirements = [ { "upgrade" = 36 } ] # Previous level
+requirements = [{ "upgrade" = 36 }] # Previous level
 
 [[29]] # Armory TERRANSHIPWEAPONSLEVEL3
 ability = 863
-requirements = [ { "upgrade" = 37 } ] # Previous level
+requirements = [{ "upgrade" = 37 }] # Previous level
 
 [[29]] # Armory TERRANVEHICLEANDSHIPARMORSLEVEL2 ARMORYRESEARCH_TERRANVEHICLEANDSHIPPLATINGLEVEL2
-ability = 865 # NOTE: Using id only for vehicle armor upgrade here
-requirements = [ { "upgrade" = 116 } ] # Previous level
+ability = 865                        # NOTE: Using id only for vehicle armor upgrade here
+requirements = [{ "upgrade" = 116 }] # Previous level
 
 [[29]] # Armory TERRANVEHICLEANDSHIPARMORSLEVEL3 ARMORYRESEARCH_TERRANVEHICLEANDSHIPPLATINGLEVEL3
-ability = 866 # NOTE: Using id only for vehicle armor upgrade here
-requirements = [ { "upgrade" = 117 } ] # Previous level
+ability = 866                        # NOTE: Using id only for vehicle armor upgrade here
+requirements = [{ "upgrade" = 117 }] # Previous level
 
 [[5]] # TechLab BARRACKSTECHLABRESEARCH_STIMPACK
 ability = 730
-requirements = [ { "addon_to" = 21 } ] # Add-on to barracks
+requirements = [{ "addon_to" = 21 }] # Add-on to barracks
 
 [[5]] # TechLab RESEARCH_COMBATSHIELD
 ability = 731
-requirements = [ { "addon_to" = 21 } ] # Add-on to barracks
+requirements = [{ "addon_to" = 21 }] # Add-on to barracks
 
 [[5]] # TechLab RESEARCH_CONCUSSIVESHELLS
 ability = 732
-requirements = [ { "addon_to" = 21 } ] # Add-on to barracks
+requirements = [{ "addon_to" = 21 }] # Add-on to barracks
 
 [[5]] # TechLab RESEARCH_INFERNALPREIGNITER
 ability = 761
-requirements = [ { "addon_to" = 27 } ] # Add-on to factory
+requirements = [{ "addon_to" = 27 }] # Add-on to factory
 
 [[5]] # TechLab RESEARCH_DRILLINGCLAWS
 ability = 764
-requirements = [ { "addon_to" = 27 } ] # Add-on to factory
+requirements = [{ "addon_to" = 27 }] # Add-on to factory
 
 [[5]] # TechLab RESEARCH_RAVENCORVIDREACTOR
 ability = 793
-requirements = [ { "addon_to" = 28 } ] # Add-on to starport
+requirements = [{ "addon_to" = 28 }] # Add-on to starport
 
 [[5]] # TechLab RESEARCH_BANSHEECLOAKINGFIELD
 ability = 790
-requirements = [ { "addon_to" = 28 } ] # Add-on to starport
+requirements = [{ "addon_to" = 28 }] # Add-on to starport
 
 [[39]] # FactoryTechlab RESEARCH_DRILLINGCLAWS
 ability = 764
-requirements = [ { "building" = 29 } ] # ARMORY
+requirements = [{ "building" = 29 }] # ARMORY
 
 [[39]] # FactoryTechlab RESEARCH_SMARTSERVOS
 ability = 766
-requirements = [ { "building" = 29 } ] # ARMORY
+requirements = [{ "building" = 29 }] # ARMORY
 
 [[89]] # SpawningPool RESEARCH_ZERGLINGADRENALGLANDS
 ability = 1252
-requirements = [ { "building" = 101 } ] # Hive
+requirements = [{ "building" = 101 }] # Hive
 
 [[90]] # EvolutionChamber RESEARCH_ZERGMELEEWEAPONSLEVEL2
 ability = 1187
-requirements = [ { "upgrade" = 53 }, { "building" = 100 } ] # Previous level, Lair
+requirements = [{ "upgrade" = 53 }, { "building" = 100 }] # Previous level, Lair
 
 [[90]] # EvolutionChamber RESEARCH_ZERGMELEEWEAPONSLEVEL3
 ability = 1188
-requirements = [ { "upgrade" = 54 }, { "building" = 101 } ] # Previous level, Hive
+requirements = [{ "upgrade" = 54 }, { "building" = 101 }] # Previous level, Hive
 
 [[90]] # EvolutionChamber RESEARCH_ZERGGROUNDARMORLEVEL2
 ability = 1190
-requirements = [ { "upgrade" = 56 }, { "building" = 100 } ] # Previous level, Lair
+requirements = [{ "upgrade" = 56 }, { "building" = 100 }] # Previous level, Lair
 
 [[90]] # EvolutionChamber RESEARCH_ZERGGROUNDARMORLEVEL3
 ability = 1191
-requirements = [ { "upgrade" = 57 }, { "building" = 101 } ] # Previous level, Hive
+requirements = [{ "upgrade" = 57 }, { "building" = 101 }] # Previous level, Hive
 
 [[90]] # EvolutionChamber RESEARCH_ZERGMISSILEWEAPONSLEVEL2
 ability = 1193
-requirements = [ { "upgrade" = 59 }, { "building" = 100 } ] # Previous level, Lair
+requirements = [{ "upgrade" = 59 }, { "building" = 100 }] # Previous level, Lair
+
 
 [[90]] # EvolutionChamber RESEARCH_ZERGMISSILEWEAPONSLEVEL3
 ability = 1194
-requirements = [ { "upgrade" = 60 }, { "building" = 101 } ] # Previous level, Hive
+requirements = [{ "upgrade" = 60 }, { "building" = 101 }] # Previous level, Hive
 
 [[92]] # Spire RESEARCH_ZERGFLYERATTACKLEVEL2
 ability = 1313
-requirements = [ { "upgrade" = 68 }, { "building" = 100 } ] # Previous level, Lair
+requirements = [{ "upgrade" = 68 }, { "building" = 100 }] # Previous level, Lair
 
 [[92]] # Spire RESEARCH_ZERGFLYERATTACKLEVEL3
 ability = 1314
-requirements = [ { "upgrade" = 69 }, { "building" = 101 } ] # Previous level, Hive
+requirements = [{ "upgrade" = 69 }, { "building" = 101 }] # Previous level, Hive
 
 [[92]] # Spire RESEARCH_ZERGFLYERARMORLEVEL2
 ability = 1316
-requirements = [ { "upgrade" = 71 }, { "building" = 100 } ] # Previous level, Lair
+requirements = [{ "upgrade" = 71 }, { "building" = 100 }] # Previous level, Lair
 
 [[92]] # Spire RESEARCH_ZERGFLYERARMORLEVEL3
 ability = 1317
-requirements = [ { "upgrade" = 72 }, { "building" = 101 } ] # Previous level, Hive
+requirements = [{ "upgrade" = 72 }, { "building" = 101 }] # Previous level, Hive
 
 [[96]] # BanelingNest RESEARCH_CENTRIFUGALHOOKS
 ability = 1482
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [[97]] # RoachWarren RESEARCH_GLIALREGENERATION
 ability = 216
-requirements = [ { "building" = 100 } ] # Lair
+requirements = [{ "building" = 100 }] # Lair
 
 [[97]] # RoachWarren RESEARCH_TUNNELINGCLAWS
 ability = 217
-requirements = [ { "building" = 100 } ] # Previous level, Lair
+requirements = [{ "building" = 100 }] # Previous level, Lair
 
 [[102]] # GreaterSpire RESEARCH_ZERGFLYERATTACKLEVEL2
 ability = 1313
-requirements = [ { "upgrade" = 68 }, { "building" = 100 } ] # Previous level, Lair
+requirements = [{ "upgrade" = 68 }, { "building" = 100 }] # Previous level, Lair
 
 [[102]] # GreaterSpire RESEARCH_ZERGFLYERATTACKLEVEL3
 ability = 1314
-requirements = [ { "upgrade" = 69 }, { "building" = 101 } ] # Previous level, Hive
+requirements = [{ "upgrade" = 69 }, { "building" = 101 }] # Previous level, Hive
 
 [[102]] # GreaterSpire RESEARCH_ZERGFLYERARMORLEVEL2
 ability = 1316
-requirements = [ { "upgrade" = 71 }, { "building" = 100 } ] # Previous level, Lair
+requirements = [{ "upgrade" = 71 }, { "building" = 100 }] # Previous level, Lair
 
 [[102]] # GreaterSpire RESEARCH_ZERGFLYERARMORLEVEL3
 ability = 1317
-requirements = [ { "upgrade" = 72 }, { "building" = 101 } ] # Previous level, Hive
+requirements = [{ "upgrade" = 72 }, { "building" = 101 }] # Previous level, Hive
 
 [[504]] # LurkerDenMP RESEARCH_ADAPTIVETALONS
 ability = 3709
-requirements = [ { "building" = 101 } ] # Hive
+requirements = [{ "building" = 101 }] # Hive
 
 [[504]] # LurkerDenMP LURKERDENRESEARCH_RESEARCHLURKERRANGE
 ability = 3710
-requirements = [ { "building" = 101 } ] # Hive
+requirements = [{ "building" = 101 }] # Hive
