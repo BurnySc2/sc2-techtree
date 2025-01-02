@@ -224,18 +224,6 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
-            "id": 32,
-            "name": "EFFECT_SALVAGE",
-            "target": "None"
-        },
-        {
-            "allow_autocast": false,
-            "allow_minimap": false,
-            "buff": [],
-            "cast_range": 0.0,
-            "cooldown": 0,
-            "effect": [],
-            "energy_cost": 0,
             "id": 36,
             "name": "BEHAVIOR_HOLDFIREON_GHOST",
             "remaps_to_ability_id": 3688,
@@ -2795,8 +2783,8 @@
             "name": "STARPORTTECHLABRESEARCH_RESEARCHRAVENINTERFERENCEMATRIX",
             "target": {
                 "Research": {
-                    "upgrade": 299,
-                    "upgrade_name": "INTERFERENCEMATRIX"
+                    "upgrade": 300,
+                    "upgrade_name": "SUNDERINGIMPACT"
                 }
             }
         },
@@ -4481,8 +4469,8 @@
             "name": "EVOLUTIONCHAMBERRESEARCH_EVOLVEPROPULSIVEPERISTALSIS",
             "target": {
                 "Research": {
-                    "upgrade": 303,
-                    "upgrade_name": "SECRETEDCOATING"
+                    "upgrade": 304,
+                    "upgrade_name": "ENHANCEDSHOCKWAVES"
                 }
             }
         },
@@ -5724,8 +5712,8 @@
             "name": "INFESTATIONPITRESEARCH_EVOLVEAMORPHOUSARMORCLOUD",
             "target": {
                 "Research": {
-                    "upgrade": 298,
-                    "upgrade_name": "MICROBIALSHROUD"
+                    "upgrade": 299,
+                    "upgrade_name": "INTERFERENCEMATRIX"
                 }
             }
         },
@@ -6266,8 +6254,8 @@
             "name": "TWILIGHTCOUNCILRESEARCH_RESEARCHPSIONICSURGE",
             "target": {
                 "Research": {
-                    "upgrade": 300,
-                    "upgrade_name": "SUNDERINGIMPACT"
+                    "upgrade": 301,
+                    "upgrade_name": "AMPLIFIEDSHIELDING"
                 }
             }
         },
@@ -6283,8 +6271,8 @@
             "name": "TWILIGHTCOUNCILRESEARCH_RESEARCHAMPLIFIEDSHIELDING",
             "target": {
                 "Research": {
-                    "upgrade": 301,
-                    "upgrade_name": "AMPLIFIEDSHIELDING"
+                    "upgrade": 302,
+                    "upgrade_name": "PSIONICAMPLIFIERS"
                 }
             }
         },
@@ -6300,8 +6288,8 @@
             "name": "TWILIGHTCOUNCILRESEARCH_RESEARCHPSIONICAMPLIFIERS",
             "target": {
                 "Research": {
-                    "upgrade": 302,
-                    "upgrade_name": "PSIONICAMPLIFIERS"
+                    "upgrade": 303,
+                    "upgrade_name": "SECRETEDCOATING"
                 }
             }
         },
@@ -6328,18 +6316,6 @@
             "id": 1623,
             "name": "CANCEL_NUKE",
             "remaps_to_ability_id": 3659,
-            "target": "None"
-        },
-        {
-            "allow_autocast": false,
-            "allow_minimap": false,
-            "buff": [],
-            "cast_range": 0.0,
-            "cooldown": 0,
-            "effect": [],
-            "energy_cost": 0,
-            "id": 1624,
-            "name": "SALVAGEBUNKERREFUND_SALVAGE",
             "target": "None"
         },
         {
@@ -7872,7 +7848,7 @@
             "allow_autocast": true,
             "allow_minimap": false,
             "buff": [],
-            "cast_range": 6.0,
+            "cast_range": 7.0,
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
@@ -9582,13 +9558,13 @@
             "allow_autocast": false,
             "allow_minimap": false,
             "buff": [],
-            "cast_range": 500.0,
+            "cast_range": 0.0,
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
-            "id": 4107,
-            "name": "BATTERYOVERCHARGE_BATTERYOVERCHARGE",
-            "target": "Unit"
+            "id": 4109,
+            "name": "AMORPHOUSARMORCLOUD_AMORPHOUSARMORCLOUD",
+            "target": "None"
         },
         {
             "allow_autocast": false,
@@ -9598,21 +9574,9 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
-            "id": 4109,
-            "name": "AMORPHOUSARMORCLOUD_AMORPHOUSARMORCLOUD",
-            "target": "Point"
-        },
-        {
-            "allow_autocast": true,
-            "allow_minimap": false,
-            "buff": [],
-            "cast_range": 6.0,
-            "cooldown": 0,
-            "effect": [],
-            "energy_cost": 0,
             "id": 4111,
             "name": "SHIELDBATTERYRECHARGEEX5_SHIELDBATTERYRECHARGE",
-            "target": "Unit"
+            "target": "Point"
         },
         {
             "allow_autocast": false,
@@ -9653,8 +9617,12 @@
             "energy_cost": 0,
             "id": 4120,
             "name": "MORPHTOBANELING_CANCEL",
-            "remaps_to_ability_id": 3659,
-            "target": "None"
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
+                }
+            }
         },
         {
             "allow_autocast": false,
@@ -9666,6 +9634,7 @@
             "energy_cost": 0,
             "id": 4122,
             "name": "MOTHERSHIPCLOAK_ORACLECLOAKFIELD",
+            "remaps_to_ability_id": 3659,
             "target": "None"
         }
     ],
@@ -9706,8 +9675,8 @@
             "is_structure": false,
             "is_townhall": false,
             "is_worker": false,
-            "max_health": 200.0,
-            "max_shield": 150.0,
+            "max_health": 250.0,
+            "max_shield": 100.0,
             "minerals": 300,
             "name": "Colossus",
             "needs_creep": false,
@@ -10071,9 +10040,6 @@
                     "ability": 2244
                 },
                 {
-                    "ability": 4122
-                },
-                {
                     "ability": 1
                 }
             ],
@@ -10086,33 +10052,33 @@
                 "Massive",
                 "Heroic"
             ],
-            "gas": 300,
+            "gas": 400,
             "id": 10,
             "is_addon": false,
             "is_flying": true,
             "is_structure": false,
             "is_townhall": false,
             "is_worker": false,
-            "max_health": 250.0,
-            "max_shield": 250.0,
-            "minerals": 300,
+            "max_health": 350.0,
+            "max_shield": 350.0,
+            "minerals": 400,
             "name": "Mothership",
             "needs_creep": false,
             "needs_geyser": false,
             "needs_power": false,
             "race": "Protoss",
-            "radius": 1.25,
+            "radius": 1.375,
             "sight": 14.0,
             "size": 0,
             "speed": 2.015625,
             "speed_creep_mul": 1.0,
-            "supply": 6.0,
+            "supply": 8.0,
             "tech_alias": [],
             "time": 2000.0,
             "unit_alias": 0,
             "weapons": [
                 {
-                    "attacks": 6,
+                    "attacks": 4,
                     "bonuses": [],
                     "cooldown": 2.2099609375,
                     "damage_per_hit": 6.0,
@@ -10880,9 +10846,6 @@
         {
             "abilities": [
                 {
-                    "ability": 32
-                },
-                {
                     "ability": 195
                 },
                 {
@@ -10933,7 +10896,7 @@
                 "Mechanical",
                 "Structure"
             ],
-            "gas": 100,
+            "gas": 50,
             "id": 25,
             "is_addon": false,
             "is_flying": false,
@@ -10941,7 +10904,7 @@
             "is_townhall": false,
             "is_worker": false,
             "max_health": 200.0,
-            "minerals": 125,
+            "minerals": 100,
             "name": "SensorTower",
             "needs_creep": false,
             "needs_geyser": false,
@@ -11020,9 +10983,6 @@
                     "ability": 595
                 },
                 {
-                    "ability": 597
-                },
-                {
                     "ability": 614
                 },
                 {
@@ -11052,6 +11012,14 @@
                     "requirements": [
                         {
                             "building": 29
+                        }
+                    ]
+                },
+                {
+                    "ability": 597,
+                    "requirements": [
+                        {
+                            "addon": 5
                         }
                     ]
                 }
@@ -11787,7 +11755,7 @@
                     "ability": 761
                 },
                 {
-                    "ability": 770
+                    "ability": 769
                 },
                 {
                     "ability": 764,
@@ -12549,7 +12517,7 @@
             "speed": 2.8125,
             "speed_creep_mul": 1.0,
             "start_energy": 75,
-            "supply": 2.0,
+            "supply": 3.0,
             "tech_alias": [],
             "time": 640.0,
             "unit_alias": 0,
@@ -13108,9 +13076,6 @@
                 },
                 {
                     "ability": 1006
-                },
-                {
-                    "ability": 4107
                 },
                 {
                     "ability": 3755
@@ -14045,7 +14010,7 @@
             "speed_creep_mul": 1.0,
             "supply": 2.0,
             "tech_alias": [],
-            "time": 672.0,
+            "time": 608.0,
             "unit_alias": 0,
             "weapons": [
                 {
@@ -14669,7 +14634,7 @@
             "is_worker": false,
             "max_health": 200.0,
             "max_shield": 100.0,
-            "minerals": 275,
+            "minerals": 250,
             "name": "Immortal",
             "needs_creep": false,
             "needs_geyser": false,
@@ -14693,7 +14658,7 @@
                             "damage": 30.0
                         }
                     ],
-                    "cooldown": 1.449951171875,
+                    "cooldown": 1.60009765625,
                     "damage_per_hit": 20.0,
                     "damage_splash": 0,
                     "range": 6.0,
@@ -14988,7 +14953,7 @@
             "is_townhall": true,
             "is_worker": false,
             "max_health": 1500.0,
-            "minerals": 350,
+            "minerals": 325,
             "name": "Hatchery",
             "needs_creep": false,
             "needs_geyser": false,
@@ -15673,7 +15638,7 @@
             "is_structure": true,
             "is_townhall": false,
             "is_worker": false,
-            "max_health": 400.0,
+            "max_health": 300.0,
             "minerals": 125,
             "name": "SporeCrawler",
             "needs_creep": true,
@@ -15694,11 +15659,11 @@
                     "bonuses": [
                         {
                             "against": "Biological",
-                            "damage": 15.0
+                            "damage": 10.0
                         }
                     ],
                     "cooldown": 0.86083984375,
-                    "damage_per_hit": 15.0,
+                    "damage_per_hit": 20.0,
                     "damage_splash": 0,
                     "range": 7.0,
                     "target_type": "Air"
@@ -15754,7 +15719,7 @@
             "is_townhall": true,
             "is_worker": false,
             "max_health": 2000.0,
-            "minerals": 500,
+            "minerals": 475,
             "name": "Lair",
             "needs_creep": false,
             "needs_geyser": false,
@@ -15814,7 +15779,7 @@
             "is_townhall": true,
             "is_worker": false,
             "max_health": 2500.0,
-            "minerals": 700,
+            "minerals": 675,
             "name": "Hive",
             "needs_creep": false,
             "needs_geyser": false,
@@ -16165,14 +16130,6 @@
                             "upgrade": 64
                         }
                     ]
-                },
-                {
-                    "ability": 4119,
-                    "requirements": [
-                        {
-                            "building": 96
-                        }
-                    ]
                 }
             ],
             "accepts_addon": false,
@@ -16326,6 +16283,14 @@
                     "requirements": [
                         {
                             "building": 504
+                        }
+                    ]
+                },
+                {
+                    "ability": 4109,
+                    "requirements": [
+                        {
+                            "building": 101
                         }
                     ]
                 }
@@ -16485,7 +16450,7 @@
             "needs_geyser": false,
             "needs_power": false,
             "race": "Zerg",
-            "radius": 0.875,
+            "radius": 1.0,
             "sight": 9.0,
             "size": 0,
             "speed": 2.953125,
@@ -16606,7 +16571,7 @@
                     "ability": 74
                 },
                 {
-                    "ability": 4109
+                    "ability": 4111
                 },
                 {
                     "ability": 1
@@ -17133,7 +17098,7 @@
             "is_worker": false,
             "max_energy": 200.0,
             "max_health": 175.0,
-            "minerals": 150,
+            "minerals": 175,
             "name": "QueenBurrowed",
             "needs_creep": false,
             "needs_geyser": false,
@@ -17210,7 +17175,7 @@
             "is_worker": false,
             "max_energy": 200.0,
             "max_health": 175.0,
-            "minerals": 150,
+            "minerals": 175,
             "name": "Queen",
             "needs_creep": false,
             "needs_geyser": false,
@@ -17438,7 +17403,7 @@
                 }
             ],
             "accepts_addon": false,
-            "armor": 3.0,
+            "armor": 2.0,
             "attributes": [
                 "Armored",
                 "Mechanical",
@@ -17510,7 +17475,7 @@
             "needs_power": false,
             "normal_mode": 109,
             "race": "Zerg",
-            "radius": 0.875,
+            "radius": 1.0,
             "sight": 5.0,
             "size": 0,
             "speed_creep_mul": 1.0,
@@ -17824,14 +17789,7 @@
             "weapons": []
         },
         {
-            "abilities": [
-                {
-                    "ability": 1733
-                },
-                {
-                    "ability": 1
-                }
-            ],
+            "abilities": [],
             "accepts_addon": false,
             "armor": 0.0,
             "attributes": [
@@ -17961,7 +17919,7 @@
             "is_structure": true,
             "is_townhall": false,
             "is_worker": false,
-            "max_health": 400.0,
+            "max_health": 300.0,
             "minerals": 125,
             "name": "SporeCrawlerUprooted",
             "needs_creep": false,
@@ -18159,7 +18117,7 @@
             "speed": 2.8125,
             "speed_creep_mul": 1.0,
             "start_energy": 75,
-            "supply": 2.0,
+            "supply": 3.0,
             "tech_alias": [],
             "time": 0.0,
             "unit_alias": 50,
@@ -19089,7 +19047,7 @@
             "size": 0,
             "speed": 2.25,
             "speed_creep_mul": 1.0,
-            "supply": 5.0,
+            "supply": 4.0,
             "tech_alias": [],
             "time": 960.0,
             "unit_alias": 0,
@@ -19105,7 +19063,7 @@
                     "cooldown": 3.300048828125,
                     "damage_per_hit": 30.0,
                     "damage_splash": 0,
-                    "range": 14.0,
+                    "range": 13.0,
                     "target_type": "Air"
                 },
                 {
@@ -19433,7 +19391,7 @@
             "is_structure": false,
             "is_townhall": false,
             "is_worker": false,
-            "max_health": 200.0,
+            "max_health": 190.0,
             "minerals": 150,
             "name": "LurkerMP",
             "needs_creep": false,
@@ -19441,7 +19399,7 @@
             "needs_power": false,
             "race": "Zerg",
             "radius": 0.9375,
-            "sight": 10.0,
+            "sight": 11.0,
             "size": 0,
             "speed": 2.953125,
             "speed_creep_mul": 1.0,
@@ -19482,7 +19440,7 @@
             "is_structure": false,
             "is_townhall": false,
             "is_worker": false,
-            "max_health": 200.0,
+            "max_health": 190.0,
             "minerals": 150,
             "name": "LurkerMPBurrowed",
             "needs_creep": false,
@@ -19491,7 +19449,7 @@
             "normal_mode": 502,
             "race": "Zerg",
             "radius": 0.75,
-            "sight": 10.0,
+            "sight": 11.0,
             "size": 0,
             "speed_creep_mul": 1.0,
             "supply": 3.0,
@@ -20004,21 +19962,21 @@
                 }
             ],
             "accepts_addon": false,
-            "armor": 0.0,
+            "armor": 1.0,
             "attributes": [
                 "Armored",
                 "Mechanical"
             ],
             "cargo_size": 4,
-            "gas": 50,
+            "gas": 100,
             "id": 692,
             "is_addon": false,
             "is_flying": false,
             "is_structure": false,
             "is_townhall": false,
             "is_worker": false,
-            "max_health": 130.0,
-            "minerals": 125,
+            "max_health": 120.0,
+            "minerals": 150,
             "name": "Cyclone",
             "needs_creep": false,
             "needs_geyser": false,
@@ -20027,25 +19985,20 @@
             "radius": 0.75,
             "sight": 11.0,
             "size": 0,
-            "speed": 2.8125,
+            "speed": 3.375,
             "speed_creep_mul": 1.0,
-            "supply": 2.0,
+            "supply": 3.0,
             "tech_alias": [],
             "time": 720.0,
             "unit_alias": 0,
             "weapons": [
                 {
                     "attacks": 1,
-                    "bonuses": [
-                        {
-                            "against": "Mechanical",
-                            "damage": 3.0
-                        }
-                    ],
-                    "cooldown": 0.81201171875,
-                    "damage_per_hit": 11.0,
+                    "bonuses": [],
+                    "cooldown": 1.0,
+                    "damage_per_hit": 18.0,
                     "damage_splash": 0,
-                    "range": 6.0,
+                    "range": 5.0,
                     "target_type": "Any"
                 }
             ]
@@ -21526,9 +21479,6 @@
         {
             "abilities": [
                 {
-                    "ability": 4111
-                },
-                {
                     "ability": 1
                 }
             ],
@@ -21546,8 +21496,8 @@
             "is_townhall": false,
             "is_worker": false,
             "max_energy": 100.0,
-            "max_health": 150.0,
-            "max_shield": 150.0,
+            "max_health": 200.0,
+            "max_shield": 200.0,
             "minerals": 100,
             "name": "ShieldBattery",
             "needs_creep": false,
@@ -22893,11 +22843,20 @@
         },
         {
             "cost": {
+                "gas": 100,
+                "minerals": 100,
+                "time": 1440.0
+            },
+            "id": 298,
+            "name": "Frenzy"
+        },
+        {
+            "cost": {
                 "gas": 150,
                 "minerals": 150,
                 "time": 1760.0
             },
-            "id": 298,
+            "id": 299,
             "name": "MicrobialShroud"
         },
         {
@@ -22906,7 +22865,7 @@
                 "minerals": 50,
                 "time": 1280.0
             },
-            "id": 299,
+            "id": 300,
             "name": "InterferenceMatrix"
         },
         {
@@ -22915,7 +22874,7 @@
                 "minerals": 100,
                 "time": 2240.0
             },
-            "id": 300,
+            "id": 301,
             "name": "SunderingImpact"
         },
         {
@@ -22924,7 +22883,7 @@
                 "minerals": 100,
                 "time": 2240.0
             },
-            "id": 301,
+            "id": 302,
             "name": "AmplifiedShielding"
         },
         {
@@ -22933,7 +22892,7 @@
                 "minerals": 100,
                 "time": 2240.0
             },
-            "id": 302,
+            "id": 303,
             "name": "PsionicAmplifiers"
         },
         {
@@ -22942,7 +22901,7 @@
                 "minerals": 100,
                 "time": 1280.0
             },
-            "id": 303,
+            "id": 304,
             "name": "SecretedCoating"
         }
     ]

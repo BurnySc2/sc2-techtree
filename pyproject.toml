@@ -1,21 +1,18 @@
-[tool.poetry]
+[project]
 name = "sc2-techtree"
 version = "0.1.0"
 description = ""
-authors = ["BurnySc2 <gamingburny@gmail.com>"]
+authors = [{ name = "BurnySc2", email = "gamingburny@gmail.com" }]
+requires-python = ">=3.9, <3.13"
 
-[tool.poetry.dependencies]
-python = ">=3.9 <3.13"
-burnysc2 = "^6.0.0"
-toml = "^0.10.2"
-loguru = "^0.6.0"
+dependencies = [
+  "burnysc2>=7.0.3",
+  "loguru>=0.7.3",
+  "toml>=0.10.2",
+]
 
-[tool.poetry.dev-dependencies]
-yapf = "^0.32.0"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = ["pyre-check>=0.9.23", "pyright>=1.1.391", "ruff>=0.8.4"]
 
 [tool.yapf]
 based_on_style = "pep8"
@@ -24,3 +21,28 @@ split_arguments_when_comma_terminated = true
 dedent_closing_brackets = true
 allow_split_before_dict_value = false
 
+[tool.ruff]
+target-version = 'py310'
+line-length = 120
+
+[tool.ruff.lint]
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+select = [
+  "C4",  # flake8-comprehensions
+  "E",   # Error
+  "F",   # pyflakes
+  "BLE", # flake8-blind-except
+  # "I",   # isort
+  "N",   # pep8-naming
+  "PGH", # pygrep-hooks
+  "PTH", # flake8-use-pathlib
+  "SIM", # flake8-simplify
+  "W",   # Warning
+  "Q",   # flake8-quotes
+  "YTT", # flake8-2020
+  "UP",  # pyupgrade
+  #    "A",  # flake8-builtins
+]
+# Allow Pydantic's `@validator` decorator to trigger class method treatment.
+pep8-naming.classmethod-decorators = ["pydantic.validator", "classmethod"]

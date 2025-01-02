@@ -18,3 +18,4 @@ generated/
 # Misc
 
 sc2
+.env*

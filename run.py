@@ -1,5 +1,6 @@
 from generate.collect import collect
 from generate.patch import patch
+
 """
 To be able to run this, you need to have the "Empty128" map downloaded and in your SC2/maps folder.
 You can download the map from here ("Melee" link):
