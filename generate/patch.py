@@ -19,6 +19,11 @@ def patch() -> None:
     with (SOURCE_DIR / "ability.toml").open() as f:
         c_ability = toml.load(f)
 
+    with (Path("generate") / "patches" / "ability_missing.toml").open() as f:
+        ability_missing = toml.load(f)
+        for a in ability_missing["Ability"]:
+            c_ability["Ability"].append(a)
+
     with (SOURCE_DIR / "unit.toml").open() as f:
         c_unit = toml.load(f)
 

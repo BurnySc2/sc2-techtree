@@ -248,3 +248,7 @@ requirements = [{ "building" = 101 }] # Hive
 [[504]] # LurkerDenMP LURKERDENRESEARCH_RESEARCHLURKERRANGE
 ability = 3710
 requirements = [{ "building" = 101 }] # Hive
+
+[[107]] # Hydralisk FRENZY
+ability = 4109
+requirements = [{ "upgrade" = 298 }]  # Frenzy

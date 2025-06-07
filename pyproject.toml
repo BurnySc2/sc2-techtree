@@ -6,7 +6,7 @@ authors = [{ name = "BurnySc2", email = "gamingburny@gmail.com" }]
 requires-python = ">=3.9, <3.13"
 
 dependencies = [
-  "burnysc2>=7.0.3",
+  "burnysc2>=7.0.5",
   "loguru>=0.7.3",
   "toml>=0.10.2",
 ]
