@@ -366,8 +366,8 @@ requirements = [{ "upgrade" = 64 }] # Burrow
 [107.2332] # Hydralisk - MORPH_LURKER
 requirements = [{ "building" = 504 }] # Lurker den (MP)
 
-[107.4109] # Hydralisk - AMORPHOUSARMORCLOUD_AMORPHOUSARMORCLOUD
-requirements = [{ "upgrade" = 304 }] # SecretedCoating
+[107.4109] # Hydralisk - HYDRALISKFRENZY_HYDRALISKFRENZY
+requirements = [{ "upgrade" = 298 }] # FRENZY
 
 [109.1512] # Ultralisk - BURROWDOWN_ULTRALISK
 requirements = [{ "upgrade" = 64 }] # Burrow
