@@ -6,7 +6,7 @@ To be able to run this, you need to have the "Empty128" map downloaded and in yo
 You can download the map from here ("Melee" link):
 https://github.com/Blizzard/s2client-proto#map-packs
 
-Direct link: 
+Direct link:
 http://blzdistsc2-a.akamaihd.net/MapPacks/Melee.zip
 """
 
