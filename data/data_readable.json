@@ -1604,6 +1604,19 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
+            "id": 412,
+            "name": "COMMANDCENTERTRANSPORT_COMMANDCENTERTRANSPORT",
+            "remaps_to_ability_id": 3668,
+            "target": "Unit"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
             "id": 413,
             "name": "UNLOADALL_COMMANDCENTER",
             "remaps_to_ability_id": 3664,
@@ -2036,6 +2049,23 @@
                 "Train": {
                     "produces": 51,
                     "produces_name": "MARAUDER"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 590,
+            "name": "FACTORYTRAIN_FACTORYTRAIN",
+            "target": {
+                "Train": {
+                    "produces": 0,
+                    "produces_name": "Unknown"
                 }
             }
         },
@@ -6401,6 +6431,23 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
+            "id": 1666,
+            "name": "TECHLABMORPH_TECHLABMORPH",
+            "target": {
+                "Morph": {
+                    "produces": 5,
+                    "produces_name": "TECHLAB"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
             "id": 1668,
             "name": "BARRACKSTECHLABMORPH_TECHLABBARRACKS",
             "target": {
@@ -6441,6 +6488,23 @@
                 "Morph": {
                     "produces": 5,
                     "produces_name": "TECHLAB"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 1674,
+            "name": "REACTORMORPH_REACTORMORPH",
+            "target": {
+                "Morph": {
+                    "produces": 6,
+                    "produces_name": "REACTOR"
                 }
             }
         },
@@ -6858,8 +6922,32 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
+            "id": 1799,
+            "name": "BROODLORDHANGAR_BROODLORDHANGAR",
+            "target": "None"
+        },
+        {
+            "allow_autocast": true,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
             "id": 1819,
             "name": "EFFECT_CHARGE",
+            "target": "Unit"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 1820,
+            "name": "TOWERCAPTURE_TOWERCAPTURE",
             "target": "Unit"
         },
         {
@@ -6884,6 +6972,18 @@
             "energy_cost": 0,
             "id": 1825,
             "name": "CONTAMINATE_CONTAMINATE",
+            "target": "Unit"
+        },
+        {
+            "allow_autocast": true,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.10009765625,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 1827,
+            "name": "SHATTER_SHATTER",
             "target": "Unit"
         },
         {
@@ -6975,6 +7075,23 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
+            "id": 1841,
+            "name": "MORPHTOCOLLAPSIBLETERRANTOWERDEBRIS_MORPHTOCOLLAPSIBLETERRANTOWERDEBRIS",
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
             "id": 1842,
             "name": "MORPHTOCOLLAPSIBLETERRANTOWERDEBRIS_CANCEL",
             "remaps_to_ability_id": 3659,
@@ -6988,10 +7105,44 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
+            "id": 1843,
+            "name": "MORPHTOCOLLAPSIBLETERRANTOWERDEBRISRAMPLEFT_MORPHTOCOLLAPSIBLETERRANTOWERDEBRISRAMPLEFT",
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
             "id": 1844,
             "name": "MORPHTOCOLLAPSIBLETERRANTOWERDEBRISRAMPLEFT_CANCEL",
             "remaps_to_ability_id": 3659,
             "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 1845,
+            "name": "MORPHTOCOLLAPSIBLETERRANTOWERDEBRISRAMPRIGHT_MORPHTOCOLLAPSIBLETERRANTOWERDEBRISRAMPRIGHT",
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
+                }
+            }
         },
         {
             "allow_autocast": false,
@@ -7087,6 +7238,23 @@
                 "Morph": {
                     "produces": 53,
                     "produces_name": "HELLION"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 1996,
+            "name": "MORPHTOCOLLAPSIBLEROCKTOWERDEBRIS_MORPHTOCOLLAPSIBLEROCKTOWERDEBRIS",
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
                 }
             }
         },
@@ -7290,6 +7458,18 @@
             "id": 2073,
             "name": "VIPERCONSUMESTRUCTURE_VIPERCONSUME",
             "target": "Unit"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 10.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2079,
+            "name": "TESTZERG_TESTZERG",
+            "target": "Point"
         },
         {
             "allow_autocast": false,
@@ -7566,10 +7746,44 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
+            "id": 2152,
+            "name": "MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPRIGHT_MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPRIGHT",
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
             "id": 2153,
             "name": "MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPRIGHT_CANCEL",
             "remaps_to_ability_id": 3659,
             "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2154,
+            "name": "MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPLEFT_MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPLEFT",
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
+                }
+            }
         },
         {
             "allow_autocast": false,
@@ -7703,6 +7917,198 @@
             "id": 2244,
             "name": "EFFECT_TIMEWARP",
             "target": "Point"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2262,
+            "name": "TARSONIS_DOORN_TARSONIS_DOORN",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2264,
+            "name": "TARSONIS_DOORNLOWERED_TARSONIS_DOORNLOWERED",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2266,
+            "name": "TARSONIS_DOORNE_TARSONIS_DOORNE",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2268,
+            "name": "TARSONIS_DOORNELOWERED_TARSONIS_DOORNELOWERED",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2270,
+            "name": "TARSONIS_DOORE_TARSONIS_DOORE",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2272,
+            "name": "TARSONIS_DOORELOWERED_TARSONIS_DOORELOWERED",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2274,
+            "name": "TARSONIS_DOORNW_TARSONIS_DOORNW",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2276,
+            "name": "TARSONIS_DOORNWLOWERED_TARSONIS_DOORNWLOWERED",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2278,
+            "name": "COMPOUNDMANSION_DOORN_COMPOUNDMANSION_DOORN",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2280,
+            "name": "COMPOUNDMANSION_DOORNLOWERED_COMPOUNDMANSION_DOORNLOWERED",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2282,
+            "name": "COMPOUNDMANSION_DOORNE_COMPOUNDMANSION_DOORNE",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2284,
+            "name": "COMPOUNDMANSION_DOORNELOWERED_COMPOUNDMANSION_DOORNELOWERED",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2286,
+            "name": "COMPOUNDMANSION_DOORE_COMPOUNDMANSION_DOORE",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2288,
+            "name": "COMPOUNDMANSION_DOORELOWERED_COMPOUNDMANSION_DOORELOWERED",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2290,
+            "name": "COMPOUNDMANSION_DOORNW_COMPOUNDMANSION_DOORNW",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2292,
+            "name": "COMPOUNDMANSION_DOORNWLOWERED_COMPOUNDMANSION_DOORNWLOWERED",
+            "target": "None"
         },
         {
             "allow_autocast": false,
@@ -8088,6 +8494,18 @@
             "energy_cost": 0,
             "id": 2393,
             "name": "EFFECT_VOIDRAYPRISMATICALIGNMENT",
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 500.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2395,
+            "name": "SEEKERDUMMYCHANNEL_SEEKERDUMMYCHANNEL",
             "target": "None"
         },
         {
@@ -8545,6 +8963,23 @@
             "id": 2598,
             "name": "SLAYNELEMENTALGRAB_SLAYNELEMENTALGRAB",
             "target": "Unit"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 2600,
+            "name": "MORPHTOCOLLAPSIBLEPURIFIERTOWERDEBRIS_MORPHTOCOLLAPSIBLEPURIFIERTOWERDEBRIS",
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
+                }
+            }
         },
         {
             "allow_autocast": false,
@@ -9553,6 +9988,23 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
+            "id": 3966,
+            "name": "MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPLEFTGREEN_MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPLEFTGREEN",
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
             "id": 3967,
             "name": "MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPLEFTGREEN_CANCEL",
             "remaps_to_ability_id": 3659,
@@ -9566,9 +10018,38 @@
             "cooldown": 0,
             "effect": [],
             "energy_cost": 0,
+            "id": 3969,
+            "name": "MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPRIGHTGREEN_MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPRIGHTGREEN",
+            "target": {
+                "Morph": {
+                    "produces": 0,
+                    "produces_name": "NOTAUNIT"
+                }
+            }
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
             "id": 3970,
             "name": "MORPHTOCOLLAPSIBLEROCKTOWERDEBRISRAMPRIGHTGREEN_CANCEL",
             "remaps_to_ability_id": 3659,
+            "target": "None"
+        },
+        {
+            "allow_autocast": false,
+            "allow_minimap": false,
+            "buff": [],
+            "cast_range": 0.0,
+            "cooldown": 0,
+            "effect": [],
+            "energy_cost": 0,
+            "id": 4109,
+            "name": "HYDRALISKFRENZY_HYDRALISKFRENZY",
             "target": "None"
         },
         {
@@ -16356,6 +16837,14 @@
                             "building": 504
                         }
                     ]
+                },
+                {
+                    "ability": 4109,
+                    "requirements": [
+                        {
+                            "upgrade": 298
+                        }
+                    ]
                 }
             ],
             "accepts_addon": false,
@@ -18222,7 +18711,7 @@
             "needs_geyser": false,
             "needs_power": false,
             "race": "Zerg",
-            "radius": 0.375,
+            "radius": 0.5,
             "sight": 0.0,
             "size": 0,
             "speed_creep_mul": 1.0,
