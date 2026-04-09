@@ -1,0 +1,1721 @@
+{
+  "_meta": {
+    "patch": "unknown",
+    "generated_at": "2026-04-08T23:46:42.572433+00:00"
+  },
+  "abilities": {
+    "SimpleTargetAbil": {
+      "id": "SimpleTargetAbil"
+    },
+    "WizSimpleSkillshot": {
+      "id": "WizSimpleSkillshot",
+      "range": 500.0,
+      "flags": "0"
+    },
+    "WizSimpleChain": {
+      "id": "WizSimpleChain",
+      "range": 5.0,
+      "flags": "0"
+    },
+    "WizSimpleGrenade": {
+      "id": "WizSimpleGrenade",
+      "range": 7.0,
+      "flags": "0"
+    },
+    "SprayParent": {
+      "id": "SprayParent",
+      "range": 1.0,
+      "editor_categories": "AbilityorEffectType:Units,Race:Terran"
+    },
+    "SprayTerran": {
+      "id": "SprayTerran"
+    },
+    "SprayZerg": {
+      "id": "SprayZerg"
+    },
+    "SprayProtoss": {
+      "id": "SprayProtoss"
+    },
+    "Corruption": {
+      "id": "Corruption",
+      "range": 6.0,
+      "target_filters": "Visible;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Invulnerable",
+      "flags": "1",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "FungalGrowth": {
+      "id": "FungalGrowth",
+      "range": 8.0,
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "MULERepair": {
+      "id": "MULERepair",
+      "abil_set_id": "Repair",
+      "auto_cast_range": 7.0,
+      "target_filters": "Mechanical,Visible;Self,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Hallucination",
+      "default_error": "RequiresRepairTarget",
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "range_slop": 0.2
+    },
+    "Feedback": {
+      "id": "Feedback",
+      "range": 10.0,
+      "target_filters": "CanHaveEnergy,Visible,HasEnergy;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "flags": "1",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "MassRecall": {
+      "id": "MassRecall",
+      "range": 500.0,
+      "arc": 360.0,
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "PlacePointDefenseDrone": {
+      "id": "PlacePointDefenseDrone",
+      "range": 3.0,
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "info_tooltip_priority": 11
+    },
+    "SeekerMissile": {
+      "id": "SeekerMissile",
+      "range": 6.0,
+      "arc": 29.9926,
+      "arc_slop": 0.0,
+      "target_filters": "Visible;Self,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "info_tooltip_priority": 1
+    },
+    "CalldownMULE": {
+      "id": "CalldownMULE",
+      "range": 500.0,
+      "arc": 360.0,
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "flags": "1"
+    },
+    "GravitonBeam": {
+      "id": "GravitonBeam",
+      "abil_set_id": "Graviton",
+      "range": 4.0,
+      "range_slop": 4.0,
+      "target_filters": "Ground,Visible;Self,Neutral,Massive,Structure,Destructible,Invulnerable",
+      "flags": "1",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "Siphon": {
+      "id": "Siphon",
+      "range": 9.0,
+      "auto_cast_range": 9.0,
+      "target_filters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "flags": "1",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "Leech": {
+      "id": "Leech",
+      "range": 9.0,
+      "target_filters": "CanHaveEnergy,Visible;Self,Player,Ally,Neutral,Missile,Hidden,Invulnerable",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "PhaseShift": {
+      "id": "PhaseShift",
+      "range": 9.0,
+      "target_filters": "-;Self,Player,Ally,Neutral,Structure,RawResource,HarvestableResource,Destructible,Stasis,Hidden,Invulnerable",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "SapStructure": {
+      "id": "SapStructure",
+      "range": 0.25,
+      "auto_cast_range": 5.0,
+      "target_filters": "Ground,Structure,Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "flags": "1",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "InfestedTerrans": {
+      "id": "InfestedTerrans",
+      "cast_intro_time": 0,
+      "cast_outro_time": 0,
+      "range": 8.0,
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "NeuralParasite": {
+      "id": "NeuralParasite",
+      "range": 8.0,
+      "range_slop": 5.0,
+      "target_filters": "Visible;Self,Player,Ally,Neutral,Structure,Heroic,Stasis,Invulnerable",
+      "flags": "0",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "SpawnLarva": {
+      "id": "SpawnLarva",
+      "cast_outro_time": 2,
+      "range": 0.1,
+      "target_filters": "Visible;Neutral,Enemy,UnderConstruction",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "SupplyDrop": {
+      "id": "SupplyDrop",
+      "range": 500.0,
+      "arc": 360.0,
+      "target_filters": "Structure,Visible;Neutral,Enemy,UnderConstruction",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "flags": "1"
+    },
+    "250mmStrikeCannons": {
+      "id": "250mmStrikeCannons",
+      "finish_time": 2,
+      "cast_intro_time": 2,
+      "range": 7.0,
+      "range_slop": 4.0,
+      "target_filters": "Ground,Visible;Self,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "info_tooltip_priority": 1
+    },
+    "TemporalRift": {
+      "id": "TemporalRift",
+      "range": 9.0,
+      "arc": 360.0,
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "TimeWarp": {
+      "id": "TimeWarp",
+      "range": 500.0,
+      "arc": 360.0,
+      "target_filters": "Structure;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "editor_categories": "AbilityorEffectType:Units,Race:Terran",
+      "flags": "1"
+    },
+    "WormholeTransit": {
+      "id": "WormholeTransit",
+      "prep_time": 0,
+      "finish_time": 0,
+      "cast_intro_time": 0,
+      "range": 500.0,
+      "arc": 360.0,
+      "target_filters": "Structure,Visible;Self,Ally,Neutral,Enemy,UnderConstruction",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "Repair": {
+      "id": "Repair",
+      "abil_set_id": "Repair",
+      "auto_cast_range": 7.0,
+      "target_filters": "Mechanical,Visible;Self,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Hallucination",
+      "default_error": "RequiresRepairTarget",
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "range_slop": 0.2
+    },
+    "Snipe": {
+      "id": "Snipe",
+      "cast_intro_time": 0,
+      "range": 10.0,
+      "target_filters": "Biological,Visible;Self,Structure,Destructible,Stasis,Dead,Hidden,Invulnerable",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "MedivacHeal": {
+      "id": "MedivacHeal",
+      "range": 4.0,
+      "arc": 14.9963,
+      "auto_cast_range": 6.0,
+      "target_filters": "Biological,Visible;Self,Enemy,Structure,Missile,Dead,Hidden,Invulnerable",
+      "default_error": "RequiresHealTarget",
+      "flags": "1",
+      "acquire_attackers": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "ScannerSweep": {
+      "id": "ScannerSweep",
+      "range": 500.0,
+      "arc": 360.0,
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "Yamato": {
+      "id": "Yamato",
+      "prep_time": 3,
+      "range": 10.0,
+      "range_slop": 10.0,
+      "flags": "0",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "PsiStorm": {
+      "id": "PsiStorm",
+      "cast_outro_time": 0,
+      "range": 8.0,
+      "flags": "1",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "Blink": {
+      "id": "Blink",
+      "abil_set_id": "Blnk",
+      "range": 500.0,
+      "arc": 360.0,
+      "flags": "0",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "ForceField": {
+      "id": "ForceField",
+      "range": 9.0,
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "TacNukeStrike": {
+      "id": "TacNukeStrike",
+      "tech_player": "Owner",
+      "finish_time": 2,
+      "range": 12.0,
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "EMP": {
+      "id": "EMP",
+      "prep_time": 0,
+      "finish_time": 0,
+      "range": 10.0,
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "Vortex": {
+      "id": "Vortex",
+      "range": 9.0,
+      "arc": 360.0,
+      "flags": "0",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "Transfusion": {
+      "id": "Transfusion",
+      "finish_time": 0,
+      "cast_intro_time": 0,
+      "range": 7.0,
+      "target_filters": "Biological,Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden,Invulnerable",
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "BuildAutoTurret": {
+      "id": "BuildAutoTurret",
+      "range": 2.0,
+      "error_alert": "Error",
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "info_tooltip_priority": 21
+    },
+    "HerdInteract": {
+      "id": "HerdInteract",
+      "range": 6.0,
+      "auto_cast_range": 6.0,
+      "flags": "1"
+    },
+    "Frenzy": {
+      "id": "Frenzy",
+      "range": 9.0,
+      "target_filters": "Biological,Visible;Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "Contaminate": {
+      "id": "Contaminate",
+      "range": 3.0,
+      "target_filters": "Structure,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "flags": "1",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "Shatter": {
+      "id": "Shatter",
+      "range": 0.1,
+      "arc": 360.0,
+      "auto_cast_range": 1.0,
+      "flags": "1"
+    },
+    "FleetBeaconResearch": {
+      "id": "FleetBeaconResearch",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units",
+      "info_arrays": {
+        "Research5": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 80,
+          "upgrade": "VoidRaySpeedUpgrade"
+        },
+        "Research6": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 140,
+          "upgrade": "TempestGroundAttackUpgrade"
+        }
+      }
+    },
+    "RoachWarrenResearch": {
+      "id": "RoachWarrenResearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research3": {
+          "minerals": 100,
+          "vespene": 100
+        }
+      }
+    },
+    "UltraliskCavernResearch": {
+      "id": "UltraliskCavernResearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units",
+      "info_arrays": {
+        "Research1": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 60,
+          "upgrade": "AnabolicSynthesis"
+        }
+      }
+    },
+    "EngineeringBayResearch": {
+      "id": "EngineeringBayResearch",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research4": {
+          "minerals": 150,
+          "vespene": 150
+        },
+        "Research5": {
+          "minerals": 200,
+          "vespene": 200
+        },
+        "Research8": {
+          "minerals": 150,
+          "vespene": 150
+        },
+        "Research9": {
+          "minerals": 200,
+          "vespene": 200
+        }
+      }
+    },
+    "MercCompoundResearch": {
+      "id": "MercCompoundResearch",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research4": {
+          "minerals": 50,
+          "vespene": 50
+        }
+      }
+    },
+    "BarracksTechLabResearch": {
+      "id": "BarracksTechLabResearch",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "time": 140
+        }
+      }
+    },
+    "FactoryTechLabResearch": {
+      "id": "FactoryTechLabResearch",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research2": {
+          "minerals": 100,
+          "vespene": 100
+        },
+        "Research5": {
+          "minerals": 75,
+          "vespene": 75
+        },
+        "Research7": {
+          "time": 110,
+          "upgrade": "SmartServos"
+        },
+        "Research8": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 110,
+          "upgrade": "ArmorPiercingRockets"
+        },
+        "Research9": {
+          "minerals": 75,
+          "vespene": 75,
+          "time": 110,
+          "upgrade": "CycloneRapidFireLaunchers"
+        },
+        "Research10": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 140,
+          "upgrade": "CycloneLockOnDamageUpgrade"
+        },
+        "Research11": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 140,
+          "upgrade": "HurricaneThrusters"
+        }
+      }
+    },
+    "StarportTechLabResearch": {
+      "id": "StarportTechLabResearch",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "minerals": 100,
+          "vespene": 100
+        },
+        "Research10": {
+          "minerals": 125,
+          "vespene": 125,
+          "time": 110,
+          "upgrade": "BansheeSpeed"
+        },
+        "Research11": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 110
+        },
+        "Research13": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 120,
+          "upgrade": "MedivacRapidDeployment"
+        },
+        "Research14": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 110,
+          "upgrade": "RavenRecalibratedExplosives"
+        },
+        "Research15": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 80,
+          "upgrade": "MedivacIncreaseSpeedBoost"
+        },
+        "Research16": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 110,
+          "upgrade": "LiberatorAGRangeUpgrade"
+        },
+        "Research17": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 110,
+          "upgrade": "RavenEnhancedMunitions"
+        },
+        "Research18": {
+          "minerals": 50,
+          "vespene": 50,
+          "time": 80,
+          "upgrade": "InterferenceMatrix"
+        }
+      }
+    },
+    "GhostAcademyResearch": {
+      "id": "GhostAcademyResearch",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research2": {
+          "minerals": 0,
+          "vespene": 0,
+          "time": 0,
+          "upgrade": ""
+        }
+      }
+    },
+    "ArmoryResearch": {
+      "id": "ArmoryResearch",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research9": {
+          "minerals": 100,
+          "vespene": 100
+        },
+        "Research10": {
+          "minerals": 175,
+          "vespene": 175
+        },
+        "Research11": {
+          "minerals": 250,
+          "vespene": 250
+        },
+        "Research15": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 160,
+          "upgrade": "TerranVehicleAndShipArmorsLevel1"
+        },
+        "Research16": {
+          "minerals": 175,
+          "vespene": 175,
+          "time": 190,
+          "upgrade": "TerranVehicleAndShipArmorsLevel2"
+        },
+        "Research17": {
+          "minerals": 250,
+          "vespene": 250,
+          "time": 220,
+          "upgrade": "TerranVehicleAndShipArmorsLevel3"
+        }
+      }
+    },
+    "ForgeResearch": {
+      "id": "ForgeResearch",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "time": 170
+        },
+        "Research2": {
+          "time": 202
+        },
+        "Research3": {
+          "time": 235
+        },
+        "Research4": {
+          "time": 170
+        },
+        "Research5": {
+          "time": 202
+        },
+        "Research6": {
+          "time": 235
+        },
+        "Research7": {
+          "time": 170
+        },
+        "Research8": {
+          "minerals": 200,
+          "vespene": 200,
+          "time": 202
+        },
+        "Research9": {
+          "minerals": 250,
+          "vespene": 250,
+          "time": 235
+        }
+      }
+    },
+    "RoboticsBayResearch": {
+      "id": "RoboticsBayResearch",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research6": {
+          "minerals": 150,
+          "vespene": 150
+        }
+      }
+    },
+    "TemplarArchivesResearch": {
+      "id": "TemplarArchivesResearch",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "minerals": 0,
+          "vespene": 0,
+          "time": 0,
+          "upgrade": ""
+        }
+      }
+    },
+    "evolutionchamberresearch": {
+      "id": "evolutionchamberresearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research5": {
+          "minerals": 200,
+          "vespene": 200
+        },
+        "Research6": {
+          "minerals": 250,
+          "vespene": 250
+        },
+        "Research10": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 80,
+          "upgrade": "SecretedCoating"
+        }
+      }
+    },
+    "LairResearch": {
+      "id": "LairResearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research2": {
+          "minerals": 100,
+          "vespene": 100
+        }
+      }
+    },
+    "SpawningPoolResearch": {
+      "id": "SpawningPoolResearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "minerals": 200,
+          "vespene": 200,
+          "time": 130,
+          "upgrade": "zerglingattackspeed"
+        },
+        "Research2": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 110,
+          "upgrade": "zerglingmovementspeed"
+        }
+      }
+    },
+    "HydraliskDenResearch": {
+      "id": "HydraliskDenResearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "minerals": 75,
+          "vespene": 75,
+          "time": 70,
+          "upgrade": "EvolveGroovedSpines"
+        },
+        "Research2": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 90,
+          "upgrade": "EvolveMuscularAugments"
+        },
+        "Research3": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 90,
+          "upgrade": "Frenzy"
+        },
+        "Research4": {
+          "minerals": 0,
+          "vespene": 0,
+          "time": 0,
+          "upgrade": ""
+        }
+      }
+    },
+    "SpireResearch": {
+      "id": "SpireResearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research4": {
+          "minerals": 100,
+          "vespene": 100
+        },
+        "Research5": {
+          "minerals": 175,
+          "vespene": 175
+        },
+        "Research6": {
+          "minerals": 250,
+          "vespene": 250
+        }
+      }
+    },
+    "InfestationPitResearch": {
+      "id": "InfestationPitResearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research3": {
+          "upgrade": ""
+        },
+        "Research6": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 110,
+          "upgrade": "MicrobialShroud"
+        }
+      }
+    },
+    "BanelingNestResearch": {
+      "id": "BanelingNestResearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 100
+        }
+      }
+    },
+    "FusionCoreResearch": {
+      "id": "FusionCoreResearch",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "time": 140
+        },
+        "Research2": {
+          "time": 110,
+          "upgrade": "LiberatorAGRangeUpgrade"
+        },
+        "Research3": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 80,
+          "upgrade": "MedivacIncreaseSpeedBoost"
+        },
+        "Research4": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 70,
+          "upgrade": "MedivacCaduceusReactor"
+        }
+      }
+    },
+    "CyberneticsCoreResearch": {
+      "id": "CyberneticsCoreResearch",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "time": 180
+        },
+        "Research2": {
+          "time": 215
+        },
+        "Research3": {
+          "time": 250
+        },
+        "Research4": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 180
+        },
+        "Research5": {
+          "minerals": 175,
+          "vespene": 175,
+          "time": 215
+        },
+        "Research6": {
+          "minerals": 250,
+          "vespene": 250,
+          "time": 250
+        },
+        "Research7": {
+          "time": 140
+        }
+      }
+    },
+    "TwilightCouncilResearch": {
+      "id": "TwilightCouncilResearch",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "minerals": 100,
+          "vespene": 100
+        },
+        "Research3": {
+          "upgrade": "AdeptPiercingAttack"
+        },
+        "Research4": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 140,
+          "upgrade": "SunderingImpact"
+        },
+        "Research5": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 140,
+          "upgrade": "AmplifiedShielding"
+        },
+        "Research6": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 140,
+          "upgrade": "PsionicAmplifiers"
+        }
+      }
+    },
+    "MorphZerglingToBaneling": {
+      "id": "MorphZerglingToBaneling",
+      "flags": "1",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 20,
+          "units": [
+            "Baneling"
+          ],
+          "button_face": "Baneling",
+          "requirement_id": "HaveBanelingNest",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitBanelingNestCompleteOnlyTechTreeCheat"
+            }
+          }
+        }
+      ]
+    },
+    "NexusTrainMothership": {
+      "id": "NexusTrainMothership",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 160,
+          "units": [
+            "Mothership"
+          ],
+          "button_face": "Mothership",
+          "button_state": "Restricted",
+          "requirement_id": "MothershipRequirements",
+          "requirement": {
+            "categories": "Race:Protoss,TechType:Unit",
+            "links": {
+              "Use": "AndCountUnitFleetBeaconCompleteOnlyTechTreeCheatEq1228785331CountUnitMothershipQueuedOrBetter0"
+            }
+          }
+        }
+      ]
+    },
+    "CommandCenterTrain": {
+      "id": "CommandCenterTrain",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 17,
+          "units": [
+            "SCV"
+          ],
+          "button_face": "SCV",
+          "button_state": "Restricted"
+        }
+      ]
+    },
+    "BarracksTrain": {
+      "id": "BarracksTrain",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 25,
+          "units": [
+            "Marine"
+          ],
+          "button_face": "Marine",
+          "button_state": "Restricted"
+        },
+        {
+          "index": "Train2",
+          "time": 40,
+          "units": [
+            "Reaper"
+          ],
+          "button_face": "Reaper",
+          "button_state": "Restricted",
+          "requirement_id": "HaveAttachedTechLab",
+          "requirement": {
+            "categories": "Race:Terran,TechType:Unit",
+            "links": {
+              "Use": "CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train3",
+          "time": 40,
+          "units": [
+            "Ghost"
+          ],
+          "button_face": "Ghost",
+          "button_state": "Restricted",
+          "requirement_id": "HaveAttachedBarrTechLabAndShadowOps",
+          "requirement": {
+            "categories": "Race:Terran,TechType:Unit",
+            "links": {
+              "Use": "AndCountUnitBarracksTechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUnitGhostAcademyCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train4",
+          "time": 30,
+          "units": [
+            "Marauder"
+          ],
+          "button_face": "Marauder",
+          "button_state": "Restricted",
+          "requirement_id": "HaveAttachedTechLab",
+          "requirement": {
+            "categories": "Race:Terran,TechType:Unit",
+            "links": {
+              "Use": "CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"
+            }
+          }
+        }
+      ]
+    },
+    "FactoryTrain": {
+      "id": "FactoryTrain",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train2",
+          "time": 45,
+          "units": [
+            "SiegeTank"
+          ],
+          "button_face": "SiegeTank",
+          "button_state": "Restricted",
+          "requirement_id": "HaveAttachedTechLab",
+          "requirement": {
+            "categories": "Race:Terran,TechType:Unit",
+            "links": {
+              "Use": "CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train5",
+          "time": 60,
+          "units": [
+            "Thor"
+          ],
+          "button_face": "Thor",
+          "button_state": "Restricted",
+          "requirement_id": "HaveArmoryAndAttachedTechLab",
+          "requirement": {
+            "categories": "Race:Terran,TechType:Unit",
+            "links": {
+              "Use": "AndCountUnitFactoryTechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUnitArmoryCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train6",
+          "time": 30,
+          "units": [
+            "Hellion"
+          ],
+          "button_face": "Hellion",
+          "button_state": "Restricted"
+        }
+      ],
+      "range": 3.0
+    },
+    "StarportTrain": {
+      "id": "StarportTrain",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 42,
+          "units": [
+            "Medivac"
+          ],
+          "button_face": "Medivac",
+          "button_state": "Restricted"
+        },
+        {
+          "index": "Train2",
+          "time": 60,
+          "units": [
+            "Banshee"
+          ],
+          "button_face": "Banshee",
+          "button_state": "Restricted",
+          "requirement_id": "HaveAttachedTechLab",
+          "requirement": {
+            "categories": "Race:Terran,TechType:Unit",
+            "links": {
+              "Use": "CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train3",
+          "time": 60,
+          "units": [
+            "Raven"
+          ],
+          "button_face": "Raven",
+          "button_state": "Restricted",
+          "requirement_id": "HaveAttachedTechLab",
+          "requirement": {
+            "categories": "Race:Terran,TechType:Unit",
+            "links": {
+              "Use": "CountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train4",
+          "time": 110,
+          "units": [
+            "Battlecruiser"
+          ],
+          "button_face": "Battlecruiser",
+          "button_state": "Restricted",
+          "requirement_id": "HaveAttachedStarportTechLabAndFusionCore",
+          "requirement": {
+            "categories": "Race:Terran,TechType:Unit",
+            "links": {
+              "Use": "AndCountUnitAlias_TechLabCompleteOnlyAtUnit2589852481TechTreeCheatCountUnitFusionCoreCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train5",
+          "time": 42,
+          "units": [
+            "VikingFighter"
+          ],
+          "button_face": "VikingFighter",
+          "button_state": "Restricted"
+        }
+      ]
+    },
+    "GatewayTrain": {
+      "id": "GatewayTrain",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 33,
+          "units": [
+            "Zealot"
+          ],
+          "button_face": "Zealot",
+          "button_state": "Restricted"
+        },
+        {
+          "index": "Train2",
+          "time": 42,
+          "units": [
+            "Stalker"
+          ],
+          "button_face": "Stalker",
+          "button_state": "Restricted",
+          "requirement_id": "HaveCyberneticsCore",
+          "requirement": {
+            "categories": "Race:Protoss,TechType:Unit",
+            "links": {
+              "Use": "CountUnitCyberneticsCoreCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train4",
+          "time": 55,
+          "units": [
+            "HighTemplar"
+          ],
+          "button_face": "HighTemplar",
+          "button_state": "Restricted",
+          "requirement_id": "HaveTemplarArchives",
+          "requirement": {
+            "categories": "Race:Protoss,TechType:Unit",
+            "links": {
+              "Use": "CountUnitTemplarArchiveCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train5",
+          "time": 55,
+          "units": [
+            "DarkTemplar"
+          ],
+          "button_face": "DarkTemplar",
+          "button_state": "Restricted",
+          "requirement_id": "HaveDarkShrine",
+          "requirement": {
+            "categories": "Race:Protoss,TechType:Unit",
+            "links": {
+              "Use": "CountUnitDarkShrineCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train6",
+          "time": 42,
+          "units": [
+            "Sentry"
+          ],
+          "button_face": "Sentry",
+          "button_state": "Restricted",
+          "requirement_id": "HaveCyberneticsCore",
+          "requirement": {
+            "categories": "Race:Protoss,TechType:Unit",
+            "links": {
+              "Use": "CountUnitCyberneticsCoreCompleteOnlyTechTreeCheat"
+            }
+          }
+        }
+      ]
+    },
+    "StargateTrain": {
+      "id": "StargateTrain",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 45,
+          "units": [
+            "Phoenix"
+          ],
+          "button_face": "Phoenix",
+          "button_state": "Restricted"
+        },
+        {
+          "index": "Train3",
+          "time": 120,
+          "units": [
+            "Carrier"
+          ],
+          "button_face": "Carrier",
+          "button_state": "Restricted",
+          "requirement_id": "HaveFleetBeacon",
+          "requirement": {
+            "categories": "Race:Protoss,TechType:Unit",
+            "links": {
+              "Use": "CountUnitFleetBeaconCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train5",
+          "time": 60,
+          "units": [
+            "VoidRay"
+          ],
+          "button_face": "VoidRay",
+          "button_state": "Restricted"
+        }
+      ]
+    },
+    "RoboticsFacilityTrain": {
+      "id": "RoboticsFacilityTrain",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 50,
+          "units": [
+            "WarpPrism"
+          ],
+          "button_face": "WarpPrism",
+          "button_state": "Restricted"
+        },
+        {
+          "index": "Train19",
+          "time": 50,
+          "requirement_id": "HaveRoboticsBay",
+          "requirement": {
+            "categories": "Race:Protoss,TechType:Unit",
+            "links": {
+              "Use": "CountUnitRoboticsBayCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train2",
+          "time": 40,
+          "units": [
+            "Observer"
+          ],
+          "button_face": "Observer",
+          "button_state": "Restricted"
+        },
+        {
+          "index": "Train20",
+          "time": 20
+        },
+        {
+          "index": "Train3",
+          "time": 75,
+          "units": [
+            "Colossus"
+          ],
+          "button_face": "Colossus",
+          "button_state": "Restricted",
+          "requirement_id": "HaveRoboticsBay",
+          "requirement": {
+            "categories": "Race:Protoss,TechType:Unit",
+            "links": {
+              "Use": "CountUnitRoboticsBayCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train4",
+          "time": 40,
+          "units": [
+            "Immortal"
+          ],
+          "button_face": "Immortal",
+          "button_state": "Restricted"
+        }
+      ]
+    },
+    "NexusTrain": {
+      "id": "NexusTrain",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 17,
+          "units": [
+            "Probe"
+          ],
+          "button_face": "Probe"
+        }
+      ]
+    },
+    "LarvaTrain": {
+      "id": "LarvaTrain",
+      "range": 4.0,
+      "flags": "1",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 17,
+          "units": [
+            "Drone"
+          ],
+          "button_face": "Drone"
+        },
+        {
+          "index": "Train2",
+          "time": 24,
+          "units": [
+            "Zergling",
+            "Zergling"
+          ],
+          "button_face": "Zergling",
+          "requirement_id": "HaveSpawningPool",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitSpawningPoolCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train3",
+          "time": 25,
+          "units": [
+            "Overlord"
+          ],
+          "button_face": "Overlord"
+        },
+        {
+          "index": "Train4",
+          "time": 33,
+          "units": [
+            "Hydralisk"
+          ],
+          "button_face": "Hydralisk",
+          "requirement_id": "HaveHydraliskDen",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitAlias_HydraliskDenCompleteOnly4037297345TechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train5",
+          "time": 33,
+          "units": [
+            "Mutalisk"
+          ],
+          "button_face": "Mutalisk",
+          "requirement_id": "HaveSpire",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitAlias_SpireCompleteOnly836078744TechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train7",
+          "time": 70,
+          "units": [
+            "Ultralisk"
+          ],
+          "button_face": "Ultralisk",
+          "requirement_id": "HaveUltraliskCavern",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitUltraliskCavernCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train8",
+          "time": 35,
+          "units": [
+            "Baneling"
+          ],
+          "button_face": "Baneling",
+          "requirement_id": "HaveBanelingNest",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitBanelingNestCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train10",
+          "time": 27,
+          "units": [
+            "Roach"
+          ],
+          "button_face": "Roach",
+          "requirement_id": "HaveBanelingNest2",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitRoachWarrenCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train11",
+          "time": 50,
+          "units": [
+            "Infestor"
+          ],
+          "button_face": "Infestor",
+          "requirement_id": "HaveInfestationPit",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitInfestationPitCompleteOnlyTechTreeCheat"
+            }
+          }
+        },
+        {
+          "index": "Train12",
+          "time": 40,
+          "units": [
+            "Corruptor"
+          ],
+          "button_face": "Corruptor",
+          "requirement_id": "HaveSpire",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitAlias_SpireCompleteOnly836078744TechTreeCheat"
+            }
+          }
+        }
+      ]
+    },
+    "TrainQueen": {
+      "id": "TrainQueen",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "train_entries": [
+        {
+          "index": "Train1",
+          "time": 50,
+          "units": [
+            "Queen"
+          ],
+          "button_face": "Queen",
+          "requirement_id": "HaveSpawningPool",
+          "requirement": {
+            "categories": "Race:Zerg,TechType:Unit",
+            "links": {
+              "Use": "CountUnitSpawningPoolCompleteOnlyTechTreeCheat"
+            }
+          }
+        }
+      ]
+    },
+    "BattlecruiserAttackEvaluator": {
+      "id": "BattlecruiserAttackEvaluator",
+      "abil_set_id": "Attack",
+      "range": 500.0,
+      "arc": 360.0,
+      "flags": "0",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "BatteryOvercharge": {
+      "id": "BatteryOvercharge",
+      "range": 500.0,
+      "arc": 360.0,
+      "target_filters": "Visible;Self,Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "Hyperjump": {
+      "id": "Hyperjump",
+      "finish_time": 6,
+      "cast_outro_time": 1
+    },
+    "KD8Charge": {
+      "id": "KD8Charge"
+    },
+    "LaunchInterceptors": {
+      "id": "LaunchInterceptors",
+      "range": 9.0,
+      "editor_categories": "AbilityorEffectType:Units"
+    },
+    "LiberatorAGTarget": {
+      "id": "LiberatorAGTarget",
+      "range": 5.0,
+      "arc": 0.0,
+      "flags": "1"
+    },
+    "LockOn": {
+      "id": "LockOn",
+      "auto_cast_range": 7.5
+    },
+    "LocustMPFlyingSwoop": {
+      "id": "LocustMPFlyingSwoop",
+      "range": 6.0
+    },
+    "MothershipCoreMassRecall": {
+      "id": "MothershipCoreMassRecall"
+    },
+    "MothershipCorePurifyNexus": {
+      "id": "MothershipCorePurifyNexus",
+      "default_error": "CantTargetThatUnit"
+    },
+    "MothershipMassRecall": {
+      "id": "MothershipMassRecall",
+      "flags": "1"
+    },
+    "OraclePhaseShift": {
+      "id": "OraclePhaseShift",
+      "arc": 360.0
+    },
+    "OracleRevelation": {
+      "id": "OracleRevelation",
+      "range": 12.0
+    },
+    "ParasiticBomb": {
+      "id": "ParasiticBomb",
+      "target_filters": "Air,Visible;Self,Player,Ally,Neutral,Structure,Stasis,Invulnerable"
+    },
+    "AmorphousArmorcloud": {
+      "id": "AmorphousArmorcloud",
+      "range": 9.0,
+      "flags": "1",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units",
+      "cast_outro_time": 0
+    },
+    "ReleaseInterceptors": {
+      "id": "ReleaseInterceptors"
+    },
+    "ShieldBatteryRechargeEx5": {
+      "id": "ShieldBatteryRechargeEx5",
+      "range": 6.0,
+      "arc": 360.0,
+      "auto_cast_range": 6.0,
+      "target_filters": "Visible;Self,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Invulnerable",
+      "default_error": "RequiresHealTarget",
+      "flags": "1",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "SpawnLocustsTargeted": {
+      "id": "SpawnLocustsTargeted",
+      "range": 500.0,
+      "arc": 360.0,
+      "flags": "0",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "TemporalField": {
+      "id": "TemporalField"
+    },
+    "ViperConsumeStructure": {
+      "id": "ViperConsumeStructure",
+      "flags": "0"
+    },
+    "ViperParasiticBombRelay": {
+      "id": "ViperParasiticBombRelay",
+      "range": 500.0,
+      "arc": 360.0,
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "ParasiticBombRelayDodge": {
+      "id": "ParasiticBombRelayDodge",
+      "range": 500.0,
+      "arc": 360.0,
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "WidowMineAttack": {
+      "id": "WidowMineAttack"
+    },
+    "LocustMPFlyingSwoopAttack": {
+      "id": "LocustMPFlyingSwoopAttack",
+      "range": 6.0,
+      "target_filters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+      "flags": "0",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Units"
+    },
+    "BypassArmor": {
+      "id": "BypassArmor",
+      "range": 6.0,
+      "arc": 360.0,
+      "auto_cast_range": 6.0,
+      "flags": "1",
+      "editor_categories": "AbilityorEffectType:Units,Race:Terran"
+    },
+    "BypassArmorDroneCU": {
+      "id": "BypassArmorDroneCU",
+      "range": 9.0,
+      "target_filters": "-;Player,Ally,Neutral,RawResource,HarvestableResource,Destructible,Dead,Hidden,Invulnerable",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "ChannelSnipe": {
+      "id": "ChannelSnipe",
+      "range": 10.0,
+      "range_slop": 20.0,
+      "target_filters": "Biological,Visible;Self,Player,Ally,Structure,Destructible,Stasis,Dead,Hidden,Invulnerable",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "TempestDisruptionBlast": {
+      "id": "TempestDisruptionBlast",
+      "cast_intro_time": 6,
+      "range": 10.0,
+      "flags": "1",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "DarkTemplarBlink": {
+      "id": "DarkTemplarBlink",
+      "abil_set_id": "Blnk",
+      "range": 500.0,
+      "flags": "0",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "RavenScramblerMissile": {
+      "id": "RavenScramblerMissile",
+      "range": 9.0,
+      "target_filters": "Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Invulnerable",
+      "default_error": "MustTargetUnit,Error/MustTargetMechanicalorPsionic",
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "info_tooltip_priority": 1
+    },
+    "RavenRepairDrone": {
+      "id": "RavenRepairDrone",
+      "range": 3.0,
+      "error_alert": "Error",
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "RavenRepairDroneHeal": {
+      "id": "RavenRepairDroneHeal",
+      "range": 6.0,
+      "arc": 360.0,
+      "auto_cast_range": 6.0,
+      "target_filters": "Mechanical,Visible;Self,Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable",
+      "default_error": "RequiresHealTarget",
+      "flags": "1",
+      "acquire_attackers": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "RavenShredderMissile": {
+      "id": "RavenShredderMissile",
+      "range": 10.0,
+      "arc": 29.9926,
+      "arc_slop": 0.0,
+      "target_filters": "Visible;Self,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units",
+      "info_tooltip_priority": 1
+    },
+    "ChronoBoostEnergyCost": {
+      "id": "ChronoBoostEnergyCost",
+      "range": 500.0,
+      "arc": 360.0,
+      "target_filters": "Structure;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable"
+    },
+    "NexusMassRecall": {
+      "id": "NexusMassRecall",
+      "range": 500.0,
+      "arc": 360.0,
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "NexusShieldRecharge": {
+      "id": "NexusShieldRecharge",
+      "range": 8.0,
+      "arc": 360.0,
+      "auto_cast_range": 8.0,
+      "target_filters": "Visible;Self,Enemy,Missile,UnderConstruction,Dead,Hidden",
+      "flags": "1",
+      "editor_categories": "Race:Protoss,AbilityorEffectType:Units"
+    },
+    "NexusShieldRechargeOnPylon": {
+      "id": "NexusShieldRechargeOnPylon",
+      "range": 13.0,
+      "arc": 360.0,
+      "range_slop": 0.0,
+      "target_filters": "-;Ally,Neutral,Enemy",
+      "default_error": "CantTargetThatUnit",
+      "flags": "1",
+      "editor_categories": "AbilityorEffectType:Units,Race:Protoss"
+    },
+    "InfestorEnsnare": {
+      "id": "InfestorEnsnare",
+      "range": 8.0,
+      "target_filters": "Air,Visible;Ground,Structure,Heroic,Missile,Stasis,Dead,Invulnerable,Unstoppable",
+      "editor_categories": "AbilityorEffectType:Units"
+    },
+    "ShieldBatteryRechargeChanneled": {
+      "id": "ShieldBatteryRechargeChanneled",
+      "range": 6.0,
+      "arc": 360.0,
+      "auto_cast_range": 6.0,
+      "target_filters": "Visible;Self,Enemy,Missile,UnderConstruction,Dead,Hidden",
+      "default_error": "RequiresHealTarget",
+      "flags": "1",
+      "editor_categories": "Race:Terran,AbilityorEffectType:Units"
+    },
+    "DarkShrineResearch": {
+      "id": "DarkShrineResearch",
+      "editor_categories": "AbilityorEffectType:Units,Race:Protoss",
+      "info_arrays": {
+        "Research1": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 140,
+          "upgrade": "DarkTemplarBlinkUpgrade"
+        }
+      }
+    },
+    "LurkerDenResearch": {
+      "id": "LurkerDenResearch",
+      "editor_categories": "Race:Zerg,AbilityorEffectType:Structures",
+      "info_arrays": {
+        "Research1": {
+          "minerals": 100,
+          "vespene": 100,
+          "time": 80,
+          "upgrade": "DiggingClaws"
+        },
+        "Research2": {
+          "minerals": 150,
+          "vespene": 150,
+          "time": 80,
+          "upgrade": "LurkerRange"
+        }
+      }
+    },
+    "PurificationNovaTargeted": {
+      "id": "PurificationNovaTargeted"
+    },
+    "Yoink": {
+      "id": "Yoink",
+      "cast_outro_time": 0,
+      "target_filters": "-;Self,Neutral,Structure,Heroic,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"
+    },
+    "EnergyRecharge": {
+      "id": "EnergyRecharge",
+      "range": 500.0,
+      "arc": 360.0,
+      "target_filters": "CanHaveEnergy;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Hallucination,Invulnerable"
+    },
+    "WorkerStopIdleAbilityVespene": {
+      "id": "WorkerStopIdleAbilityVespene",
+      "range": 0.3,
+      "range_slop": 0.05,
+      "target_filters": "Visible,UnderConstruction;Self,Ally,Neutral,Enemy,Dead,Hidden",
+      "flags": "1"
+    }
+  }
+}
