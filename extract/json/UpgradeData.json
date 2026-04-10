@@ -1,51 +1,435 @@
 {
-  "TerranInfantryWeapons": {
+  "AbdominalFortitude": {
     "AffectedUnitArray": [
-      "Ghost",
-      "Marauder",
-      "Marine",
-      "Reaper"
+      "Baneling",
+      "BanelingBurrowed"
     ],
-    "InfoTooltipPriority": 61,
-    "WebPriority": 0,
-    "ScoreValue": "WeaponTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "LeaderAlias": "TechInfantryWeapons",
-    "Name": "Upgrade/Name/TerranInfantryWeapons",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "WeaponTechnologyCount",
-    "EditorCategories": "Race:Terran,UpgradeType:AttackBonus"
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "Flags": 0,
+    "ScoreResult": "BuildOrder"
   },
-  "TerranInfantryArmors": {
-    "AffectedUnitArray": [
-      "Ghost",
-      "Marauder",
-      "Marine",
-      "Reaper",
-      "SCV"
-    ],
-    "InfoTooltipPriority": 51,
-    "WebPriority": 0,
-    "ScoreValue": "ArmorTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "LeaderAlias": "TechInfantryArmors",
-    "Name": "Upgrade/Name/TerranInfantryArmors",
+  "AnabolicSynthesis": {
+    "AffectedUnitArray": "Ultralisk",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
     "EffectArray": [
+      null,
+      null
+    ],
+    "Flags": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-anabolicsynthesis.dds",
+    "Race": "Zerg",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "BansheeCloak": {
+    "AffectedUnitArray": "Banshee",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
+    "Icon": "Assets\\Textures\\btn-ability-terran-cloak-color.dds",
+    "Race": "Terr",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "BattlecruiserBehemothReactor": {
+    "AffectedUnitArray": "Battlecruiser",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-behemothreactor.dds",
+    "InfoTooltipPriority": 11,
+    "Race": "Terr",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "BattlecruiserEnableSpecializations": {
+    "AffectedUnitArray": "Battlecruiser",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "Icon": "Assets\\Textures\\btn-ability-terran-yamatogun-color.dds",
+    "InfoTooltipPriority": 1,
+    "Race": "Terr",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "BlinkTech": {
+    "AffectedUnitArray": "Stalker",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
+    "Icon": "Assets\\Textures\\btn-ability-protoss-blink-color.dds",
+    "Race": "Prot",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "Burrow": {
+    "AffectedUnitArray": "RavagerBurrowed",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "Icon": "Assets\\Textures\\btn-ability-zerg-burrow-color.dds",
+    "Race": "Zerg",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "CarrierLaunchSpeedUpgrade": {
+    "AffectedUnitArray": "Carrier",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-gravitoncatapult.dds",
+    "Race": "Prot",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "CentrificalHooks": {
+    "AffectedUnitArray": [
+      "BanelingBurrowed",
+      "BanelingBurrowed"
+    ],
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-centrifugalhooks.dds",
+    "InfoTooltipPriority": 1,
+    "Race": "Zerg",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "Charge": {
+    "AffectedUnitArray": "Zealot",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-ability-protoss-charge-color.dds",
+    "Race": "Prot",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "ChitinousPlating": {
+    "AffectedUnitArray": "UltraliskBurrowed",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-chitinousplating.dds",
+    "Race": "Zerg",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "CollectionSkinDeluxe": {
+    "EditorCategories": "Race:##race##",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "Flags": 0,
+    "LeaderAlias": ""
+  },
+  "CollectionSkinDeluxeProtoss": {
+    "EffectArray": [
+      null,
+      null,
+      null
+    ]
+  },
+  "Confetti": {
+    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
+    "Flags": 0,
+    "LeaderAlias": ""
+  },
+  "DurableMaterials": {
+    "AffectedUnitArray": "Raven",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-durablematerials.dds",
+    "Race": "Terr",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "ExtendedThermalLance": {
+    "AffectedUnitArray": "Colossus",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-extendedthermallance.dds",
+    "Race": "Prot",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "GhostAlternate": {
+    "AffectedUnitArray": "Ghost",
+    "Flags": 0,
+    "LeaderAlias": ""
+  },
+  "GhostMoebiusReactor": {
+    "AffectedUnitArray": "GhostNova",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-moebiusreactor.dds",
+    "Race": "Terr",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "GhostSkinJunker": {
+    "AffectedUnitArray": "Ghost",
+    "Flags": 0,
+    "LeaderAlias": ""
+  },
+  "GhostSkinNova": {
+    "AffectedUnitArray": "Ghost",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Flags": 0,
+    "LeaderAlias": ""
+  },
+  "GlialReconstitution": {
+    "AffectedUnitArray": "RoachBurrowed",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-glialreconstitution.dds",
+    "Race": "Zerg",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "GraviticDrive": {
+    "AffectedUnitArray": [
+      "WarpPrismPhasing",
+      "WarpPrism"
+    ],
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-graviticdrive.dds",
+    "Race": "Prot",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "HiSecAutoTracking": {
+    "AffectedUnitArray": [
+      "PointDefenseDrone",
+      "MissileTurret",
+      "PlanetaryFortress"
+    ],
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\BTN-Upgrade-Terran-hisecautotracking.dds",
+    "InfoTooltipPriority": 31,
+    "Race": "Terr",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "HighCapacityBarrels": {
+    "AffectedUnitArray": "HellionTank",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
+    "EffectArray": [
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infernalpreigniter.dds",
+    "Race": "Terr",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "HighTemplarKhaydarinAmulet": {
+    "AffectedUnitArray": "HighTemplar",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:Talents",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-khaydarinamulet.dds",
+    "Race": "Prot",
+    "ScoreAmount": 299,
+    "ScoreResult": "BuildOrder"
+  },
+  "HunterSeeker": {
+    "AffectedUnitArray": "Raven",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
+    "Icon": "Assets\\Textures\\btn-ability-terran-huntermissile-color.dds",
+    "Race": "Terr",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "InfestorEnergyUpgrade": {
+    "AffectedUnitArray": "InfestorBurrowed",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-pathogenglands.dds",
+    "Race": "Zerg",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "InfestorPeristalsis": {
+    "AffectedUnitArray": "InfestorBurrowed",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:SpellResearch",
+    "EffectArray": null,
+    "Flags": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-peristalsis.dds",
+    "Race": "Zerg",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "MarineSkin": {
+    "AffectedUnitArray": "Marine",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-terran-marine.dds",
+    "LeaderAlias": ""
+  },
+  "MedivacCaduceusReactor": {
+    "AffectedUnitArray": "Medivac",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-caduceusreactor.dds",
+    "Race": "Terr",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "NeosteelFrame": {
+    "AffectedUnitArray": [
+      "Bunker",
+      "CommandCenter",
+      "CommandCenterFlying"
+    ],
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-neosteelframe.dds",
+    "InfoTooltipPriority": 21,
+    "Race": "Terr",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "ObserverGraviticBooster": {
+    "AffectedUnitArray": "Observer",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-graviticbooster.dds",
+    "Race": "Prot",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "ObverseIncubation": {
+    "AffectedUnitArray": "Zergling",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "Flags": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-enduringcorruption.dds",
+    "Race": "Zerg"
+  },
+  "OrganicCarapace": {
+    "AffectedUnitArray": [
+      "Roach",
+      "RoachBurrowed"
+    ],
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-organiccarapace.dds",
+    "Race": "Zerg",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "OverlordSkin": {
+    "AffectedUnitArray": "Overlord",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-zerg-overlord.dds",
+    "LeaderAlias": ""
+  },
+  "PersonalCloaking": {
+    "AffectedUnitArray": "GhostNova",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
+    "Icon": "Assets\\Textures\\btn-ability-terran-cloak-color.dds",
+    "Race": "Terr",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "ProtossAirArmors": {
+    "AffectedUnitArray": [
+      "Carrier",
+      "Interceptor",
+      "Mothership",
+      "Observer",
+      "Phoenix",
+      "VoidRay",
+      "WarpPrismPhasing",
+      "WarpPrism"
+    ],
+    "EditorCategories": "Race:Protoss,UpgradeType:ArmorBonus",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
       null,
       null,
       null,
@@ -59,27 +443,77 @@
       null,
       null
     ],
+    "LeaderAlias": "ProtossAirArmors",
+    "Name": "Upgrade/Name/ProtossAirArmors",
+    "Race": "Prot",
     "ScoreCount": "ArmorTechnologyCount",
-    "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus"
-  },
-  "TerranVehicleWeapons": {
-    "AffectedUnitArray": [
-      "Hellion",
-      "SiegeTankSieged",
-      "SiegeTank",
-      "Thor"
-    ],
-    "WebPriority": 0,
-    "ScoreValue": "WeaponTechnologyValue",
     "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "LeaderAlias": "TechVehicleWeapons",
-    "Name": "Upgrade/Name/TerranVehicleWeapons",
+    "ScoreValue": "ArmorTechnologyCount",
+    "WebPriority": 0
+  },
+  "ProtossAirArmorsLevel1": {
+    "AffectedUnitArray": "ObserverSiegeMode",
     "EffectArray": [
       null,
       null,
       null,
       null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ProtossAirArmorsLevel1",
+    "ScoreAmount": 200,
+    "ScoreValue": "ArmorTechnologyValue"
+  },
+  "ProtossAirArmorsLevel2": {
+    "AffectedUnitArray": "ObserverSiegeMode",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ProtossAirArmorsLevel2",
+    "ScoreAmount": 350,
+    "ScoreValue": "ArmorTechnologyValue"
+  },
+  "ProtossAirArmorsLevel3": {
+    "AffectedUnitArray": "ObserverSiegeMode",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds",
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/ProtossAirArmorsLevel3",
+    "ScoreAmount": 500,
+    "ScoreValue": "ArmorTechnologyValue"
+  },
+  "ProtossAirWeapons": {
+    "AffectedUnitArray": [
+      "Interceptor",
+      "Mothership",
+      "Phoenix",
+      "VoidRay"
+    ],
+    "EditorCategories": "Race:Protoss,UpgradeType:AttackBonus",
+    "EffectArray": [
       null,
       null,
       null,
@@ -95,82 +529,22 @@
       null,
       null
     ],
+    "LeaderAlias": "ProtossAirWeapons",
+    "Name": "Upgrade/Name/ProtossAirWeapons",
+    "Race": "Prot",
     "ScoreCount": "WeaponTechnologyCount",
-    "EditorCategories": "Race:Terran,UpgradeType:AttackBonus"
-  },
-  "TerranVehicleArmors": {
-    "AffectedUnitArray": [
-      "Hellion",
-      "SiegeTankSieged",
-      "SiegeTank",
-      "Thor"
-    ],
-    "WebPriority": 0,
-    "ScoreValue": "ArmorTechnologyValue",
     "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "LeaderAlias": "TerranVehicleArmors",
-    "Name": "Upgrade/Name/TerranVehicleArmors",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "ArmorTechnologyCount",
-    "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus"
-  },
-  "TerranShipWeapons": {
-    "AffectedUnitArray": [
-      "Banshee",
-      "Battlecruiser",
-      "BattlecruiserDefensiveMatrix",
-      "BattlecruiserHurricane",
-      "BattlecruiserYamato",
-      "VikingAssault",
-      "VikingFighter"
-    ],
-    "WebPriority": 0,
     "ScoreValue": "WeaponTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "LeaderAlias": "TerranShipWeapons",
-    "Name": "Upgrade/Name/TerranShipWeapons",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "WeaponTechnologyCount",
-    "EditorCategories": "Race:Terran,UpgradeType:AttackBonus"
+    "WebPriority": 0
   },
-  "TerranShipArmors": {
-    "AffectedUnitArray": [
-      "Banshee",
-      "Battlecruiser",
-      "Medivac",
-      "Raven",
-      "VikingAssault",
-      "VikingFighter"
-    ],
-    "WebPriority": 0,
-    "ScoreValue": "ArmorTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "LeaderAlias": "TerranShipArmors",
-    "Name": "Upgrade/Name/TerranShipArmors",
+  "ProtossAirWeaponsLevel1": {
     "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
       null,
       null,
       null,
@@ -184,8 +558,62 @@
       null,
       null
     ],
-    "ScoreCount": "ArmorTechnologyCount",
-    "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus"
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ProtossAirWeaponsLevel1",
+    "ScoreAmount": 200
+  },
+  "ProtossAirWeaponsLevel2": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ProtossAirWeaponsLevel2",
+    "ScoreAmount": 350
+  },
+  "ProtossAirWeaponsLevel3": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/ProtossAirWeaponsLevel3",
+    "ScoreAmount": 500
   },
   "ProtossGroundArmors": {
     "AffectedUnitArray": [
@@ -199,12 +627,7 @@
       "Stalker",
       "Zealot"
     ],
-    "WebPriority": 0,
-    "ScoreValue": "ArmorTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "LeaderAlias": "ProtossGroundArmors",
-    "Name": "Upgrade/Name/ProtossGroundArmors",
+    "EditorCategories": "Race:Protoss,UpgradeType:ArmorBonus",
     "EffectArray": [
       null,
       null,
@@ -225,8 +648,64 @@
       null,
       null
     ],
+    "LeaderAlias": "ProtossGroundArmors",
+    "Name": "Upgrade/Name/ProtossGroundArmors",
+    "Race": "Prot",
     "ScoreCount": "ArmorTechnologyCount",
-    "EditorCategories": "Race:Protoss,UpgradeType:ArmorBonus"
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "ArmorTechnologyValue",
+    "WebPriority": 0
+  },
+  "ProtossGroundArmorsLevel1": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ProtossGroundArmorsLevel1",
+    "ScoreAmount": 200
+  },
+  "ProtossGroundArmorsLevel2": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ProtossGroundArmorsLevel2",
+    "ScoreAmount": 300
+  },
+  "ProtossGroundArmorsLevel3": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds",
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/ProtossGroundArmorsLevel3",
+    "ScoreAmount": 400
   },
   "ProtossGroundWeapons": {
     "AffectedUnitArray": [
@@ -239,12 +718,7 @@
       "Stalker",
       "Zealot"
     ],
-    "WebPriority": 0,
-    "ScoreValue": "WeaponTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "LeaderAlias": "ProtossGroundWeapons",
-    "Name": "Upgrade/Name/ProtossGroundWeapons",
+    "EditorCategories": "Race:Protoss,UpgradeType:AttackBonus",
     "EffectArray": [
       null,
       null,
@@ -263,8 +737,67 @@
       null,
       null
     ],
+    "LeaderAlias": "ProtossGroundWeapons",
+    "Name": "Upgrade/Name/ProtossGroundWeapons",
+    "Race": "Prot",
     "ScoreCount": "WeaponTechnologyCount",
-    "EditorCategories": "Race:Protoss,UpgradeType:AttackBonus"
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "WeaponTechnologyValue",
+    "WebPriority": 0
+  },
+  "ProtossGroundWeaponsLevel1": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ProtossGroundWeaponsLevel1",
+    "ScoreAmount": 200
+  },
+  "ProtossGroundWeaponsLevel2": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ProtossGroundWeaponsLevel2",
+    "ScoreAmount": 300
+  },
+  "ProtossGroundWeaponsLevel3": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds",
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/ProtossGroundWeaponsLevel3",
+    "ScoreAmount": 400
   },
   "ProtossShields": {
     "AffectedUnitArray": [
@@ -301,445 +834,338 @@
       "WarpPrism",
       "Zealot"
     ],
-    "WebPriority": 0,
-    "ScoreValue": "ArmorTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
+    "EditorCategories": "Race:Protoss,UpgradeType:ArmorBonus",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "LeaderAlias": "ProtossShields",
     "Name": "Upgrade/Name/ProtossShields",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "ArmorTechnologyCount",
-    "EditorCategories": "Race:Protoss,UpgradeType:ArmorBonus"
-  },
-  "ProtossAirArmors": {
-    "AffectedUnitArray": [
-      "Carrier",
-      "Interceptor",
-      "Mothership",
-      "Observer",
-      "Phoenix",
-      "VoidRay",
-      "WarpPrismPhasing",
-      "WarpPrism"
-    ],
-    "WebPriority": 0,
-    "ScoreValue": "ArmorTechnologyCount",
-    "ScoreResult": "BuildOrder",
     "Race": "Prot",
-    "LeaderAlias": "ProtossAirArmors",
-    "Name": "Upgrade/Name/ProtossAirArmors",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
     "ScoreCount": "ArmorTechnologyCount",
-    "EditorCategories": "Race:Protoss,UpgradeType:ArmorBonus"
-  },
-  "ProtossAirWeapons": {
-    "AffectedUnitArray": [
-      "Interceptor",
-      "Mothership",
-      "Phoenix",
-      "VoidRay"
-    ],
-    "WebPriority": 0,
-    "ScoreValue": "WeaponTechnologyValue",
     "ScoreResult": "BuildOrder",
+    "ScoreValue": "ArmorTechnologyValue",
+    "WebPriority": 0
+  },
+  "ProtossShieldsLevel1": {
+    "AffectedUnitArray": "AssimilatorRich",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ProtossShieldsLevel1",
+    "ScoreAmount": 300
+  },
+  "ProtossShieldsLevel2": {
+    "AffectedUnitArray": "AssimilatorRich",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ProtossShieldsLevel2",
+    "ScoreAmount": 400
+  },
+  "ProtossShieldsLevel3": {
+    "AffectedUnitArray": "AssimilatorRich",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds",
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/ProtossShieldsLevel3",
+    "ScoreAmount": 500
+  },
+  "PsiStormTech": {
+    "AffectedUnitArray": "HighTemplar",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
+    "Icon": "Assets\\Textures\\btn-ability-protoss-psistorm-color.dds",
     "Race": "Prot",
-    "LeaderAlias": "ProtossAirWeapons",
-    "Name": "Upgrade/Name/ProtossAirWeapons",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "WeaponTechnologyCount",
-    "EditorCategories": "Race:Protoss,UpgradeType:AttackBonus"
+    "ScoreAmount": 400,
+    "ScoreResult": "BuildOrder"
   },
-  "ZergMeleeWeapons": {
-    "AffectedUnitArray": [
-      "Baneling",
-      "BanelingBurrowed",
-      "Broodling",
-      "Ultralisk",
-      "UltraliskBurrowed",
-      "Zergling",
-      "ZerglingBurrowed"
-    ],
-    "WebPriority": 0,
-    "ScoreValue": "WeaponTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "LeaderAlias": "ZergMeleeArmors",
-    "Name": "Upgrade/Name/ZergMeleeWeapons",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "WeaponTechnologyCount",
-    "EditorCategories": "Race:Zerg,UpgradeType:AttackBonus"
+  "PunisherGrenades": {
+    "AffectedUnitArray": "Marauder",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "Icon": "Assets\\Textures\\btn-ability-terran-punishergrenade-color.dds",
+    "Race": "Terr",
+    "ScoreAmount": 100,
+    "ScoreResult": "BuildOrder"
   },
-  "ZergMissileWeapons": {
+  "PylonSkin": {
+    "AffectedUnitArray": "Pylon",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-building-protoss-pylon.dds",
+    "LeaderAlias": ""
+  },
+  "RavenCorvidReactor": {
+    "AffectedUnitArray": "Raven",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-corvidreactor.dds",
+    "Race": "Terr",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "ReaperSpeed": {
+    "AffectedUnitArray": "Reaper",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-reapernitropacks.dds",
+    "Race": "Terr",
+    "ScoreAmount": 100,
+    "ScoreResult": "BuildOrder"
+  },
+  "RewardDanceColossus": {
+    "AffectedUnitArray": "Colossus",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-protoss-Colossus.dds",
+    "LeaderAlias": ""
+  },
+  "RewardDanceGhost": {
+    "AffectedUnitArray": "GhostNova",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-terran-ghost.dds",
+    "LeaderAlias": ""
+  },
+  "RewardDanceInfestor": {
     "AffectedUnitArray": [
-      "Hydralisk",
-      "HydraliskBurrowed",
-      "Queen",
-      "QueenBurrowed",
+      "Infestor",
+      "InfestorBurrowed"
+    ],
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-zerg-infestor.dds",
+    "LeaderAlias": ""
+  },
+  "RewardDanceMule": {
+    "AffectedUnitArray": "MULE",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-terran-mule.dds",
+    "LeaderAlias": ""
+  },
+  "RewardDanceOracle": {
+    "Icon": "Assets\\Textures\\btn-unit-protoss-oracle.dds",
+    "LeaderAlias": ""
+  },
+  "RewardDanceOverlord": {
+    "AffectedUnitArray": "Overlord",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-zerg-Overlord.dds",
+    "LeaderAlias": ""
+  },
+  "RewardDanceRoach": {
+    "AffectedUnitArray": [
       "Roach",
       "RoachBurrowed"
     ],
-    "WebPriority": 0,
-    "ScoreValue": "WeaponTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "LeaderAlias": "ZergMissileWeapons",
-    "Name": "Upgrade/Name/ZergMissileWeapons",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "WeaponTechnologyCount",
-    "EditorCategories": "Race:Zerg,UpgradeType:AttackBonus"
-  },
-  "ZergGroundArmors": {
-    "AffectedUnitArray": [
-      "Baneling",
-      "BanelingBurrowed",
-      "Broodling",
-      "Drone",
-      "DroneBurrowed",
-      "Hydralisk",
-      "HydraliskBurrowed",
-      "Infestor",
-      "InfestorBurrowed",
-      "Queen",
-      "QueenBurrowed",
-      "Roach",
-      "RoachBurrowed",
-      "Ultralisk",
-      "UltraliskBurrowed",
-      "Zergling",
-      "ZerglingBurrowed"
-    ],
-    "WebPriority": 0,
-    "ScoreValue": "ArmorTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "LeaderAlias": "ZergGroundArmors",
-    "Name": "Upgrade/Name/ZergGroundArmors",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "ArmorTechnologyCount",
-    "EditorCategories": "Race:Zerg,UpgradeType:ArmorBonus"
-  },
-  "ZergFlyerArmors": {
-    "AffectedUnitArray": [
-      "BroodLord",
-      "Corruptor",
-      "Mutalisk",
-      "Overlord",
-      "Overseer"
-    ],
-    "WebPriority": 0,
-    "ScoreValue": "ArmorTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "LeaderAlias": "ZergFlyerArmors",
-    "Name": "Upgrade/Name/Zerg Flyer Armors",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "ArmorTechnologyCount",
-    "EditorCategories": "Race:Zerg,UpgradeType:ArmorBonus"
-  },
-  "ZergFlyerWeapons": {
-    "AffectedUnitArray": [
-      "BroodLord",
-      "Corruptor",
-      "Mutalisk"
-    ],
-    "WebPriority": 0,
-    "ScoreValue": "WeaponTechnologyValue",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "LeaderAlias": "ZergFlyerWeapons",
-    "Name": "Upgrade/Name/ZergFlyerWeapons",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreCount": "WeaponTechnologyCount",
-    "EditorCategories": "Race:Zerg,UpgradeType:AttackBonus"
-  },
-  "CollectionSkinDeluxe": {
-    "LeaderAlias": "",
-    "EditorCategories": "Race:##race##",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "Flags": 0
-  },
-  "CollectionSkinDeluxeProtoss": {
-    "EffectArray": [
-      null,
-      null,
-      null
-    ]
-  },
-  "BattlecruiserEnableSpecializations": {
-    "AffectedUnitArray": "Battlecruiser",
-    "InfoTooltipPriority": 1,
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-terran-yamatogun-color.dds",
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
-  },
-  "BattlecruiserBehemothReactor": {
-    "AffectedUnitArray": "Battlecruiser",
-    "InfoTooltipPriority": 11,
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-behemothreactor.dds",
     "EffectArray": null,
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
+    "Icon": "Assets\\Textures\\btn-unit-zerg-roach.dds",
+    "LeaderAlias": ""
   },
-  "CarrierLaunchSpeedUpgrade": {
-    "AffectedUnitArray": "Carrier",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-gravitoncatapult.dds",
+  "RewardDanceStalker": {
+    "AffectedUnitArray": "Stalker",
     "EffectArray": null,
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Protoss,UpgradeType:Talents"
+    "Icon": "Assets\\Textures\\btn-unit-protoss-stalker.dds",
+    "LeaderAlias": ""
   },
-  "AnabolicSynthesis": {
-    "AffectedUnitArray": "Ultralisk",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": 0,
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-anabolicsynthesis.dds",
+  "RewardDanceViking": {
+    "AffectedUnitArray": [
+      "VikingFighter",
+      "VikingAssault"
+    ],
     "EffectArray": [
       null,
       null
     ],
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
+    "Icon": "Assets\\Textures\\btn-unit-terran-ghost.dds",
+    "LeaderAlias": ""
   },
-  "Confetti": {
-    "LeaderAlias": "",
-    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
-    "Flags": 0
-  },
-  "GhostMoebiusReactor": {
-    "AffectedUnitArray": "GhostNova",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
+  "ShieldWall": {
+    "AffectedUnitArray": "Marine",
+    "EditorCategories": "Race:Terran,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null
+    ],
     "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-moebiusreactor.dds",
-    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-techupgrade-terran-combatshield-color.dds",
+    "InfoTooltipPriority": 2,
+    "Race": "Terr",
     "ScoreAmount": 200,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
+    "ScoreResult": "BuildOrder"
   },
-  "ObverseIncubation": {
-    "AffectedUnitArray": "Zergling",
-    "Race": "Zerg",
-    "Flags": 0,
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-enduringcorruption.dds",
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
+  "SiegeTech": {
+    "AffectedUnitArray": "SiegeTank",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
+    "Icon": "Assets\\Textures\\btn-unit-terran-siegetanksiegemode.dds",
+    "Race": "Terr",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
   },
   "SnowVisualMP": {
     "AffectedUnitArray": [
@@ -752,77 +1178,34 @@
     "Flags": 0,
     "LeaderAlias": ""
   },
-  "TunnelingClaws": {
-    "AffectedUnitArray": "RoachBurrowed",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-tunnelingclaws.dds",
-    "EffectArray": [
-      null,
-      null,
-      null
-    ],
+  "SprayProtoss": {
+    "AffectedUnitArray": "Probe",
+    "Flags": 0,
+    "LeaderAlias": ""
+  },
+  "SprayTerran": {
+    "AffectedUnitArray": "SCV",
+    "Flags": 0,
+    "LeaderAlias": ""
+  },
+  "SprayZerg": {
+    "AffectedUnitArray": "Drone",
+    "Flags": 0,
+    "LeaderAlias": ""
+  },
+  "Stimpack": {
+    "AffectedUnitArray": "Marauder",
+    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
+    "Icon": "Assets\\Textures\\btn-ability-terran-stimpack-color.dds",
+    "Race": "Terr",
     "ScoreAmount": 200,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
+    "ScoreResult": "BuildOrder"
   },
-  "HighTemplarKhaydarinAmulet": {
-    "AffectedUnitArray": "HighTemplar",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-khaydarinamulet.dds",
+  "SupplyDepotSkin": {
+    "AffectedUnitArray": "SupplyDepotLowered",
     "EffectArray": null,
-    "ScoreAmount": 299,
-    "EditorCategories": "Race:Protoss,UpgradeType:Talents"
-  },
-  "InfestorEnergyUpgrade": {
-    "AffectedUnitArray": "InfestorBurrowed",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-pathogenglands.dds",
-    "EffectArray": null,
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
-  },
-  "MedivacCaduceusReactor": {
-    "AffectedUnitArray": "Medivac",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-caduceusreactor.dds",
-    "EffectArray": [
-      null,
-      null
-    ],
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
-  },
-  "RavenCorvidReactor": {
-    "AffectedUnitArray": "Raven",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-corvidreactor.dds",
-    "EffectArray": null,
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
-  },
-  "ReaperSpeed": {
-    "AffectedUnitArray": "Reaper",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-reapernitropacks.dds",
-    "EffectArray": null,
-    "ScoreAmount": 100,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
+    "Icon": "Assets\\Textures\\btn-building-terran-supplydepot.dds",
+    "LeaderAlias": ""
   },
   "TerranBuildingArmor": {
     "AffectedUnitArray": [
@@ -860,303 +1243,116 @@
       "PointDefenseDrone",
       "BypassArmorDrone"
     ],
-    "InfoTooltipPriority": 41,
-    "ScoreValue": "ArmorTechnologyValue",
-    "ScoreResult": "BuildOrder",
+    "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-buildingarmor.dds",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
+    "InfoTooltipPriority": 41,
+    "ScoreAmount": 300,
     "ScoreCount": "ArmorTechnologyCount",
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus"
-  },
-  "DurableMaterials": {
-    "AffectedUnitArray": "Raven",
     "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-durablematerials.dds",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
+    "ScoreValue": "ArmorTechnologyValue"
   },
-  "HunterSeeker": {
-    "AffectedUnitArray": "Raven",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-terran-huntermissile-color.dds",
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch"
-  },
-  "NeosteelFrame": {
+  "TerranInfantryArmors": {
     "AffectedUnitArray": [
-      "Bunker",
-      "CommandCenter",
-      "CommandCenterFlying"
+      "Ghost",
+      "Marauder",
+      "Marine",
+      "Reaper",
+      "SCV"
     ],
-    "InfoTooltipPriority": 21,
-    "ScoreResult": "BuildOrder",
+    "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "InfoTooltipPriority": 51,
+    "LeaderAlias": "TechInfantryArmors",
+    "Name": "Upgrade/Name/TerranInfantryArmors",
     "Race": "Terr",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-neosteelframe.dds",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
-  },
-  "PunisherGrenades": {
-    "AffectedUnitArray": "Marauder",
+    "ScoreCount": "ArmorTechnologyCount",
     "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-terran-punishergrenade-color.dds",
-    "ScoreAmount": 100,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
-  },
-  "ChitinousPlating": {
-    "AffectedUnitArray": "UltraliskBurrowed",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-chitinousplating.dds",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
-  },
-  "VikingJotunBoosters": {
-    "AffectedUnitArray": "VikingFighter",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Flags": 0,
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-jotunboosters.dds",
-    "EffectArray": null,
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Terran,UpgradeType:AttackBonus"
-  },
-  "VoidRaySpeedUpgrade": {
-    "AffectedUnitArray": "VoidRay",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-fluxvanes.dds",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Protoss,UpgradeType:Talents"
-  },
-  "haltech": {
-    "AffectedUnitArray": "Sentry",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-protoss-hallucination-color.dds",
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch"
-  },
-  "CentrificalHooks": {
-    "AffectedUnitArray": [
-      "BanelingBurrowed",
-      "BanelingBurrowed"
-    ],
-    "InfoTooltipPriority": 1,
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-centrifugalhooks.dds",
-    "EffectArray": null,
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
-  },
-  "ExtendedThermalLance": {
-    "AffectedUnitArray": "Colossus",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-extendedthermallance.dds",
-    "EffectArray": [
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Protoss,UpgradeType:Talents"
-  },
-  "HighCapacityBarrels": {
-    "AffectedUnitArray": "HellionTank",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-infernalpreigniter.dds",
-    "EffectArray": [
-      null,
-      null
-    ],
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch"
-  },
-  "HiSecAutoTracking": {
-    "AffectedUnitArray": [
-      "PointDefenseDrone",
-      "MissileTurret",
-      "PlanetaryFortress"
-    ],
-    "InfoTooltipPriority": 31,
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Flags": "TechTreeCheat",
-    "Icon": "Assets\\Textures\\BTN-Upgrade-Terran-hisecautotracking.dds",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
-  },
-  "TerranInfantryWeaponsLevel1": {
-    "InfoTooltipPriority": 0,
-    "Name": "Upgrade/Name/TerranInfantryWeaponsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds",
-    "LeaderLevel": 1,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 200
-  },
-  "TerranInfantryWeaponsLevel2": {
-    "InfoTooltipPriority": 0,
-    "Name": "Upgrade/Name/TerranInfantryWeaponsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds",
-    "LeaderLevel": 2,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 300
-  },
-  "TerranInfantryWeaponsLevel3": {
-    "InfoTooltipPriority": 0,
-    "Name": "Upgrade/Name/TerranInfantryWeaponsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds",
-    "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 400
+    "ScoreValue": "ArmorTechnologyValue",
+    "WebPriority": 0
   },
   "TerranInfantryArmorsLevel1": {
     "AffectedUnitArray": "GhostNova",
-    "InfoTooltipPriority": 0,
-    "Name": "Upgrade/Name/TerranInfantryArmorsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel1.dds",
-    "LeaderLevel": 1,
     "EffectArray": [
       null,
       null,
@@ -1165,14 +1361,14 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel1.dds",
+    "InfoTooltipPriority": 0,
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/TerranInfantryArmorsLevel1",
     "ScoreAmount": 200
   },
   "TerranInfantryArmorsLevel2": {
     "AffectedUnitArray": "GhostNova",
-    "InfoTooltipPriority": 0,
-    "Name": "Upgrade/Name/TerranInfantryArmorsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel2.dds",
-    "LeaderLevel": 2,
     "EffectArray": [
       null,
       null,
@@ -1181,14 +1377,14 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel2.dds",
+    "InfoTooltipPriority": 0,
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/TerranInfantryArmorsLevel2",
     "ScoreAmount": 300
   },
   "TerranInfantryArmorsLevel3": {
     "AffectedUnitArray": "GhostNova",
-    "InfoTooltipPriority": 0,
-    "Name": "Upgrade/Name/TerranInfantryArmorsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel3.dds",
-    "LeaderLevel": 3,
     "EffectArray": [
       null,
       null,
@@ -1197,19 +1393,21 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel3.dds",
+    "InfoTooltipPriority": 0,
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/TerranInfantryArmorsLevel3",
     "ScoreAmount": 400
   },
-  "TerranVehicleWeaponsLevel1": {
-    "Name": "Upgrade/Name/TerranVehicleWeaponsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
-    "LeaderLevel": 1,
+  "TerranInfantryWeapons": {
+    "AffectedUnitArray": [
+      "Ghost",
+      "Marauder",
+      "Marine",
+      "Reaper"
+    ],
+    "EditorCategories": "Race:Terran,UpgradeType:AttackBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
       null,
       null,
       null,
@@ -1223,139 +1421,90 @@
       null,
       null
     ],
+    "InfoTooltipPriority": 61,
+    "LeaderAlias": "TechInfantryWeapons",
+    "Name": "Upgrade/Name/TerranInfantryWeapons",
+    "Race": "Terr",
+    "ScoreCount": "WeaponTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "WeaponTechnologyValue",
+    "WebPriority": 0
+  },
+  "TerranInfantryWeaponsLevel1": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds",
+    "InfoTooltipPriority": 0,
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/TerranInfantryWeaponsLevel1",
     "ScoreAmount": 200
   },
-  "TerranVehicleWeaponsLevel2": {
-    "Name": "Upgrade/Name/TerranVehicleWeaponsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
+  "TerranInfantryWeaponsLevel2": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds",
+    "InfoTooltipPriority": 0,
     "LeaderLevel": 2,
+    "Name": "Upgrade/Name/TerranInfantryWeaponsLevel2",
+    "ScoreAmount": 300
+  },
+  "TerranInfantryWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
       null,
       null,
       null,
       null,
       null
     ],
-    "ScoreAmount": 350
-  },
-  "TerranVehicleWeaponsLevel3": {
-    "Name": "Upgrade/Name/TerranVehicleWeaponsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds",
+    "InfoTooltipPriority": 0,
     "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 500
+    "Name": "Upgrade/Name/TerranInfantryWeaponsLevel3",
+    "ScoreAmount": 400
   },
-  "TerranVehicleArmorsLevel1": {
-    "Name": "Upgrade/Name/TerranVehicleArmorsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel1.dds",
-    "LeaderLevel": 1,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null
+  "TerranShipArmors": {
+    "AffectedUnitArray": [
+      "Banshee",
+      "Battlecruiser",
+      "Medivac",
+      "Raven",
+      "VikingAssault",
+      "VikingFighter"
     ],
-    "ScoreAmount": 200
-  },
-  "TerranVehicleArmorsLevel2": {
-    "Name": "Upgrade/Name/TerranVehicleArmorsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel2.dds",
-    "LeaderLevel": 2,
+    "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
     "EffectArray": [
       null,
       null,
       null,
-      null
-    ],
-    "ScoreAmount": 350
-  },
-  "TerranVehicleArmorsLevel3": {
-    "Name": "Upgrade/Name/TerranVehicleArmorsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel3.dds",
-    "LeaderLevel": 3,
-    "EffectArray": [
       null,
       null,
       null,
-      null
-    ],
-    "ScoreAmount": 500
-  },
-  "TerranShipWeaponsLevel1": {
-    "Name": "Upgrade/Name/TerranShipWeaponsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel1.dds",
-    "LeaderLevel": 1,
-    "EffectArray": [
+      null,
       null,
       null,
       null,
       null,
       null
     ],
-    "ScoreAmount": 200
-  },
-  "TerranShipWeaponsLevel2": {
-    "Name": "Upgrade/Name/TerranShipWeaponsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel2.dds",
-    "LeaderLevel": 2,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 350
-  },
-  "TerranShipWeaponsLevel3": {
-    "Name": "Upgrade/Name/TerranShipWeaponsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel3.dds",
-    "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 500
+    "LeaderAlias": "TerranShipArmors",
+    "Name": "Upgrade/Name/TerranShipArmors",
+    "Race": "Terr",
+    "ScoreCount": "ArmorTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "ArmorTechnologyValue",
+    "WebPriority": 0
   },
   "TerranShipArmorsLevel1": {
-    "Name": "Upgrade/Name/TerranShipArmorsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel1.dds",
-    "LeaderLevel": 1,
     "EffectArray": [
       null,
       null,
@@ -1364,12 +1513,12 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/TerranShipArmorsLevel1",
     "ScoreAmount": 300
   },
   "TerranShipArmorsLevel2": {
-    "Name": "Upgrade/Name/TerranShipArmorsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel2.dds",
-    "LeaderLevel": 2,
     "EffectArray": [
       null,
       null,
@@ -1378,27 +1527,38 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/TerranShipArmorsLevel2",
     "ScoreAmount": 450
   },
   "TerranShipArmorsLevel3": {
-    "Name": "Upgrade/Name/TerranShipArmorsLevel3",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel3.dds",
     "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
+    "Name": "Upgrade/Name/TerranShipArmorsLevel3",
     "ScoreAmount": 600
   },
-  "ProtossGroundArmorsLevel1": {
-    "Name": "Upgrade/Name/ProtossGroundArmorsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds",
-    "LeaderLevel": 1,
+  "TerranShipWeapons": {
+    "AffectedUnitArray": [
+      "Banshee",
+      "Battlecruiser",
+      "BattlecruiserDefensiveMatrix",
+      "BattlecruiserHurricane",
+      "BattlecruiserYamato",
+      "VikingAssault",
+      "VikingFighter"
+    ],
+    "EditorCategories": "Race:Terran,UpgradeType:AttackBonus",
     "EffectArray": [
+      null,
       null,
       null,
       null,
@@ -1409,288 +1569,62 @@
       null,
       null
     ],
+    "LeaderAlias": "TerranShipWeapons",
+    "Name": "Upgrade/Name/TerranShipWeapons",
+    "Race": "Terr",
+    "ScoreCount": "WeaponTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "WeaponTechnologyValue",
+    "WebPriority": 0
+  },
+  "TerranShipWeaponsLevel1": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/TerranShipWeaponsLevel1",
     "ScoreAmount": 200
   },
-  "ProtossGroundArmorsLevel2": {
-    "Name": "Upgrade/Name/ProtossGroundArmorsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds",
+  "TerranShipWeaponsLevel2": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel2.dds",
     "LeaderLevel": 2,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 300
-  },
-  "ProtossGroundArmorsLevel3": {
-    "Name": "Upgrade/Name/ProtossGroundArmorsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds",
-    "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 400
-  },
-  "ProtossGroundWeaponsLevel1": {
-    "Name": "Upgrade/Name/ProtossGroundWeaponsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds",
-    "LeaderLevel": 1,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 200
-  },
-  "ProtossGroundWeaponsLevel2": {
-    "Name": "Upgrade/Name/ProtossGroundWeaponsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds",
-    "LeaderLevel": 2,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 300
-  },
-  "ProtossGroundWeaponsLevel3": {
-    "Name": "Upgrade/Name/ProtossGroundWeaponsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds",
-    "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 400
-  },
-  "ProtossShieldsLevel1": {
-    "AffectedUnitArray": "AssimilatorRich",
-    "Name": "Upgrade/Name/ProtossShieldsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds",
-    "LeaderLevel": 1,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 300
-  },
-  "ProtossShieldsLevel2": {
-    "AffectedUnitArray": "AssimilatorRich",
-    "Name": "Upgrade/Name/ProtossShieldsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds",
-    "LeaderLevel": 2,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 400
-  },
-  "ProtossShieldsLevel3": {
-    "AffectedUnitArray": "AssimilatorRich",
-    "Name": "Upgrade/Name/ProtossShieldsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds",
-    "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 500
-  },
-  "ProtossAirArmorsLevel1": {
-    "AffectedUnitArray": "ObserverSiegeMode",
-    "ScoreValue": "ArmorTechnologyValue",
-    "Name": "Upgrade/Name/ProtossAirArmorsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds",
-    "LeaderLevel": 1,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 200
-  },
-  "ProtossAirArmorsLevel2": {
-    "AffectedUnitArray": "ObserverSiegeMode",
-    "ScoreValue": "ArmorTechnologyValue",
-    "Name": "Upgrade/Name/ProtossAirArmorsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds",
-    "LeaderLevel": 2,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
+    "Name": "Upgrade/Name/TerranShipWeaponsLevel2",
     "ScoreAmount": 350
   },
-  "ProtossAirArmorsLevel3": {
-    "AffectedUnitArray": "ObserverSiegeMode",
-    "ScoreValue": "ArmorTechnologyValue",
-    "Name": "Upgrade/Name/ProtossAirArmorsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds",
-    "LeaderLevel": 3,
+  "TerranShipWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
       null,
       null,
       null,
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel3.dds",
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/TerranShipWeaponsLevel3",
     "ScoreAmount": 500
   },
-  "ProtossAirWeaponsLevel1": {
-    "Name": "Upgrade/Name/ProtossAirWeaponsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
-    "LeaderLevel": 1,
+  "TerranVehicleArmors": {
+    "AffectedUnitArray": [
+      "Hellion",
+      "SiegeTankSieged",
+      "SiegeTank",
+      "Thor"
+    ],
+    "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
       null,
       null,
       null,
@@ -1700,38 +1634,58 @@
       null,
       null
     ],
+    "LeaderAlias": "TerranVehicleArmors",
+    "Name": "Upgrade/Name/TerranVehicleArmors",
+    "Race": "Terr",
+    "ScoreCount": "ArmorTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "ArmorTechnologyValue",
+    "WebPriority": 0
+  },
+  "TerranVehicleArmorsLevel1": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/TerranVehicleArmorsLevel1",
     "ScoreAmount": 200
   },
-  "ProtossAirWeaponsLevel2": {
-    "Name": "Upgrade/Name/ProtossAirWeaponsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
-    "LeaderLevel": 2,
+  "TerranVehicleArmorsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
       null,
       null,
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/TerranVehicleArmorsLevel2",
     "ScoreAmount": 350
   },
-  "ProtossAirWeaponsLevel3": {
-    "Name": "Upgrade/Name/ProtossAirWeaponsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
+  "TerranVehicleArmorsLevel3": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel3.dds",
     "LeaderLevel": 3,
+    "Name": "Upgrade/Name/TerranVehicleArmorsLevel3",
+    "ScoreAmount": 500
+  },
+  "TerranVehicleWeapons": {
+    "AffectedUnitArray": [
+      "Hellion",
+      "SiegeTankSieged",
+      "SiegeTank",
+      "Thor"
+    ],
+    "EditorCategories": "Race:Terran,UpgradeType:AttackBonus",
     "EffectArray": [
       null,
       null,
@@ -1752,24 +1706,42 @@
       null,
       null
     ],
-    "ScoreAmount": 500
+    "LeaderAlias": "TechVehicleWeapons",
+    "Name": "Upgrade/Name/TerranVehicleWeapons",
+    "Race": "Terr",
+    "ScoreCount": "WeaponTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "WeaponTechnologyValue",
+    "WebPriority": 0
   },
-  "ZergGroundArmorsLevel1": {
-    "AffectedUnitArray": "InfestorTerranBurrowed",
-    "Name": "Upgrade/Name/ZergGroundArmorsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+  "TerranVehicleWeaponsLevel1": {
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
     "LeaderLevel": 1,
+    "Name": "Upgrade/Name/TerranVehicleWeaponsLevel1",
+    "ScoreAmount": 200
+  },
+  "TerranVehicleWeaponsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
       null,
       null,
       null,
@@ -1789,61 +1761,13 @@
       null,
       null
     ],
-    "ScoreAmount": 300
-  },
-  "ZergGroundArmorsLevel2": {
-    "AffectedUnitArray": "InfestorTerranBurrowed",
-    "Name": "Upgrade/Name/ZergGroundArmorsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
     "LeaderLevel": 2,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 400
+    "Name": "Upgrade/Name/TerranVehicleWeaponsLevel2",
+    "ScoreAmount": 350
   },
-  "ZergGroundArmorsLevel3": {
-    "AffectedUnitArray": "InfestorTerranBurrowed",
-    "Name": "Upgrade/Name/ZergGroundArmorsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
-    "LeaderLevel": 3,
+  "TerranVehicleWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
       null,
       null,
       null,
@@ -1863,13 +1787,116 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/TerranVehicleWeaponsLevel3",
     "ScoreAmount": 500
+  },
+  "ThorSkin": {
+    "AffectedUnitArray": "Thor",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-terran-thor.dds",
+    "LeaderAlias": "",
+    "Race": "Terr"
+  },
+  "TunnelingClaws": {
+    "AffectedUnitArray": "RoachBurrowed",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-tunnelingclaws.dds",
+    "Race": "Zerg",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "UltraliskSkin": {
+    "AffectedUnitArray": "UltraliskBurrowed",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-zerg-ultralisk.dds",
+    "LeaderAlias": ""
+  },
+  "VikingJotunBoosters": {
+    "AffectedUnitArray": "VikingFighter",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Terran,UpgradeType:AttackBonus",
+    "EffectArray": null,
+    "Flags": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-jotunboosters.dds",
+    "Race": "Terr",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "VoidRaySpeedUpgrade": {
+    "AffectedUnitArray": "VoidRay",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-fluxvanes.dds",
+    "Race": "Prot",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "WarpGateResearch": {
+    "AffectedUnitArray": "Gateway",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
+    "Icon": "Assets\\Textures\\BTN-Building-Protoss-WarpGate.dds",
+    "Race": "Prot",
+    "ScoreAmount": 100,
+    "ScoreResult": "BuildOrder"
+  },
+  "ZealotSkin": {
+    "AffectedUnitArray": "Zealot",
+    "EffectArray": null,
+    "Icon": "Assets\\Textures\\btn-unit-protoss-zealot.dds",
+    "LeaderAlias": ""
+  },
+  "ZergFlyerArmors": {
+    "AffectedUnitArray": [
+      "BroodLord",
+      "Corruptor",
+      "Mutalisk",
+      "Overlord",
+      "Overseer"
+    ],
+    "EditorCategories": "Race:Zerg,UpgradeType:ArmorBonus",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "LeaderAlias": "ZergFlyerArmors",
+    "Name": "Upgrade/Name/Zerg Flyer Armors",
+    "Race": "Zerg",
+    "ScoreCount": "ArmorTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "ArmorTechnologyValue",
+    "WebPriority": 0
   },
   "ZergFlyerArmorsLevel1": {
     "AffectedUnitArray": "OverseerSiegeMode",
-    "Name": "Upgrade/Name/ZergFlyerArmorsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level1.dds",
-    "LeaderLevel": 1,
     "EffectArray": [
       null,
       null,
@@ -1879,13 +1906,13 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ZergFlyerArmorsLevel1",
     "ScoreAmount": 200
   },
   "ZergFlyerArmorsLevel2": {
     "AffectedUnitArray": "OverseerSiegeMode",
-    "Name": "Upgrade/Name/ZergFlyerArmorsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds",
-    "LeaderLevel": 2,
     "EffectArray": [
       null,
       null,
@@ -1895,28 +1922,55 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ZergFlyerArmorsLevel2",
     "ScoreAmount": 350
   },
   "ZergFlyerArmorsLevel3": {
     "AffectedUnitArray": "OverseerSiegeMode",
-    "Name": "Upgrade/Name/ZergFlyerArmorsLevel3",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level3.dds",
     "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
+    "Name": "Upgrade/Name/ZergFlyerArmorsLevel3",
     "ScoreAmount": 500
   },
+  "ZergFlyerWeapons": {
+    "AffectedUnitArray": [
+      "BroodLord",
+      "Corruptor",
+      "Mutalisk"
+    ],
+    "EditorCategories": "Race:Zerg,UpgradeType:AttackBonus",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "LeaderAlias": "ZergFlyerWeapons",
+    "Name": "Upgrade/Name/ZergFlyerWeapons",
+    "Race": "Zerg",
+    "ScoreCount": "WeaponTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "WeaponTechnologyValue",
+    "WebPriority": 0
+  },
   "ZergFlyerWeaponsLevel1": {
-    "Name": "Upgrade/Name/ZergFlyerWeaponsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level1.dds",
-    "LeaderLevel": 1,
     "EffectArray": [
       null,
       null,
@@ -1924,12 +1978,12 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ZergFlyerWeaponsLevel1",
     "ScoreAmount": 200
   },
   "ZergFlyerWeaponsLevel2": {
-    "Name": "Upgrade/Name/ZergFlyerWeaponsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level2.dds",
-    "LeaderLevel": 2,
     "EffectArray": [
       null,
       null,
@@ -1937,25 +1991,249 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ZergFlyerWeaponsLevel2",
     "ScoreAmount": 350
   },
   "ZergFlyerWeaponsLevel3": {
-    "Name": "Upgrade/Name/ZergFlyerWeaponsLevel3",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level3.dds",
     "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
+    "Name": "Upgrade/Name/ZergFlyerWeaponsLevel3",
     "ScoreAmount": 500
   },
-  "ZergMeleeWeaponsLevel1": {
-    "Name": "Upgrade/Name/ZergMeleeWeaponsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds",
+  "ZergGroundArmors": {
+    "AffectedUnitArray": [
+      "Baneling",
+      "BanelingBurrowed",
+      "Broodling",
+      "Drone",
+      "DroneBurrowed",
+      "Hydralisk",
+      "HydraliskBurrowed",
+      "Infestor",
+      "InfestorBurrowed",
+      "Queen",
+      "QueenBurrowed",
+      "Roach",
+      "RoachBurrowed",
+      "Ultralisk",
+      "UltraliskBurrowed",
+      "Zergling",
+      "ZerglingBurrowed"
+    ],
+    "EditorCategories": "Race:Zerg,UpgradeType:ArmorBonus",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "LeaderAlias": "ZergGroundArmors",
+    "Name": "Upgrade/Name/ZergGroundArmors",
+    "Race": "Zerg",
+    "ScoreCount": "ArmorTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "ArmorTechnologyValue",
+    "WebPriority": 0
+  },
+  "ZergGroundArmorsLevel1": {
+    "AffectedUnitArray": "InfestorTerranBurrowed",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
     "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ZergGroundArmorsLevel1",
+    "ScoreAmount": 300
+  },
+  "ZergGroundArmorsLevel2": {
+    "AffectedUnitArray": "InfestorTerranBurrowed",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ZergGroundArmorsLevel2",
+    "ScoreAmount": 400
+  },
+  "ZergGroundArmorsLevel3": {
+    "AffectedUnitArray": "InfestorTerranBurrowed",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/ZergGroundArmorsLevel3",
+    "ScoreAmount": 500
+  },
+  "ZergMeleeWeapons": {
+    "AffectedUnitArray": [
+      "Baneling",
+      "BanelingBurrowed",
+      "Broodling",
+      "Ultralisk",
+      "UltraliskBurrowed",
+      "Zergling",
+      "ZerglingBurrowed"
+    ],
+    "EditorCategories": "Race:Zerg,UpgradeType:AttackBonus",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "LeaderAlias": "ZergMeleeArmors",
+    "Name": "Upgrade/Name/ZergMeleeWeapons",
+    "Race": "Zerg",
+    "ScoreCount": "WeaponTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "WeaponTechnologyValue",
+    "WebPriority": 0
+  },
+  "ZergMeleeWeaponsLevel1": {
     "EffectArray": [
       null,
       null,
@@ -1970,12 +2248,12 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ZergMeleeWeaponsLevel1",
     "ScoreAmount": 200
   },
   "ZergMeleeWeaponsLevel2": {
-    "Name": "Upgrade/Name/ZergMeleeWeaponsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds",
-    "LeaderLevel": 2,
     "EffectArray": [
       null,
       null,
@@ -1990,12 +2268,12 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ZergMeleeWeaponsLevel2",
     "ScoreAmount": 300
   },
   "ZergMeleeWeaponsLevel3": {
-    "Name": "Upgrade/Name/ZergMeleeWeaponsLevel3",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds",
-    "LeaderLevel": 3,
     "EffectArray": [
       null,
       null,
@@ -2010,13 +2288,47 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds",
+    "LeaderLevel": 3,
+    "Name": "Upgrade/Name/ZergMeleeWeaponsLevel3",
     "ScoreAmount": 400
+  },
+  "ZergMissileWeapons": {
+    "AffectedUnitArray": [
+      "Hydralisk",
+      "HydraliskBurrowed",
+      "Queen",
+      "QueenBurrowed",
+      "Roach",
+      "RoachBurrowed"
+    ],
+    "EditorCategories": "Race:Zerg,UpgradeType:AttackBonus",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "LeaderAlias": "ZergMissileWeapons",
+    "Name": "Upgrade/Name/ZergMissileWeapons",
+    "Race": "Zerg",
+    "ScoreCount": "WeaponTechnologyCount",
+    "ScoreResult": "BuildOrder",
+    "ScoreValue": "WeaponTechnologyValue",
+    "WebPriority": 0
   },
   "ZergMissileWeaponsLevel1": {
     "AffectedUnitArray": "InfestorTerranBurrowed",
-    "Name": "Upgrade/Name/ZergMissileWeaponsLevel1",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
-    "LeaderLevel": 1,
     "EffectArray": [
       null,
       null,
@@ -2031,13 +2343,13 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
+    "LeaderLevel": 1,
+    "Name": "Upgrade/Name/ZergMissileWeaponsLevel1",
     "ScoreAmount": 200
   },
   "ZergMissileWeaponsLevel2": {
     "AffectedUnitArray": "InfestorTerranBurrowed",
-    "Name": "Upgrade/Name/ZergMissileWeaponsLevel2",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
-    "LeaderLevel": 2,
     "EffectArray": [
       null,
       null,
@@ -2052,421 +2364,109 @@
       null,
       null
     ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
+    "LeaderLevel": 2,
+    "Name": "Upgrade/Name/ZergMissileWeaponsLevel2",
     "ScoreAmount": 300
   },
   "ZergMissileWeaponsLevel3": {
     "AffectedUnitArray": "InfestorTerranBurrowed",
-    "Name": "Upgrade/Name/ZergMissileWeaponsLevel3",
+    "EffectArray": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
     "LeaderLevel": 3,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
+    "Name": "Upgrade/Name/ZergMissileWeaponsLevel3",
     "ScoreAmount": 400
   },
-  "OrganicCarapace": {
-    "AffectedUnitArray": [
-      "Roach",
-      "RoachBurrowed"
-    ],
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": 0,
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-organiccarapace.dds",
+  "ZerglingSkin": {
+    "AffectedUnitArray": "ZerglingBurrowed",
     "EffectArray": null,
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
+    "Icon": "Assets\\Textures\\btn-unit-zerg-zergling.dds",
+    "LeaderAlias": ""
   },
-  "Stimpack": {
-    "AffectedUnitArray": "Marauder",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Icon": "Assets\\Textures\\btn-ability-terran-stimpack-color.dds",
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch"
-  },
-  "PersonalCloaking": {
-    "AffectedUnitArray": "GhostNova",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
+  "haltech": {
+    "AffectedUnitArray": "Sentry",
     "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-terran-cloak-color.dds",
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch"
-  },
-  "SiegeTech": {
-    "AffectedUnitArray": "SiegeTank",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-unit-terran-siegetanksiegemode.dds",
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch"
-  },
-  "BansheeCloak": {
-    "AffectedUnitArray": "Banshee",
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-terran-cloak-color.dds",
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Terran,UpgradeType:SpellResearch"
-  },
-  "ObserverGraviticBooster": {
-    "AffectedUnitArray": "Observer",
-    "ScoreResult": "BuildOrder",
+    "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
+    "Icon": "Assets\\Textures\\btn-ability-protoss-hallucination-color.dds",
     "Race": "Prot",
-    "Flags": "TechTreeCheat",
+    "ScoreAmount": 200,
+    "ScoreResult": "BuildOrder"
+  },
+  "hydraliskspeed": {
+    "AffectedUnitArray": "HydraliskBurrowed",
     "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-graviticbooster.dds",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-groovedspines.dds",
+    "Race": "Zerg",
+    "ScoreAmount": 300,
+    "ScoreResult": "BuildOrder"
+  },
+  "overlordspeed": {
+    "AffectedUnitArray": "OverseerSiegeMode",
+    "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
     "EffectArray": [
       null,
       null,
       null
     ],
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-pneumatizedcarapace.dds",
+    "Race": "Zerg",
     "ScoreAmount": 200,
-    "EditorCategories": "Race:Protoss,UpgradeType:Talents"
+    "ScoreResult": "BuildOrder"
   },
-  "PsiStormTech": {
-    "AffectedUnitArray": "HighTemplar",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
+  "overlordtransport": {
+    "AffectedUnitArray": "Overlord",
     "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-protoss-psistorm-color.dds",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-ventralsacs.dds",
+    "Race": "Zerg",
     "ScoreAmount": 400,
-    "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch"
-  },
-  "GraviticDrive": {
-    "AffectedUnitArray": [
-      "WarpPrismPhasing",
-      "WarpPrism"
-    ],
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-protoss-graviticdrive.dds",
-    "EffectArray": [
-      null,
-      null
-    ],
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Protoss,UpgradeType:Talents"
-  },
-  "Charge": {
-    "AffectedUnitArray": "Zealot",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-protoss-charge-color.dds",
-    "ScoreAmount": 200,
-    "EffectArray": [
-      null,
-      null
-    ],
-    "EditorCategories": "Race:Protoss,UpgradeType:Talents"
+    "ScoreResult": "BuildOrder"
   },
   "zerglingattackspeed": {
     "AffectedUnitArray": "ZerglingBurrowed",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": "TechTreeCheat",
     "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-adrenalglands.dds",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
     "EffectArray": null,
+    "Flags": "TechTreeCheat",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-adrenalglands.dds",
+    "Race": "Zerg",
     "ScoreAmount": 400,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
+    "ScoreResult": "BuildOrder"
   },
   "zerglingmovementspeed": {
     "AffectedUnitArray": [
       "ZerglingBurrowed",
       "ZerglingBurrowed"
     ],
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": "TechTreeCheat",
     "Alert": "ResearchComplete",
+    "EditorCategories": "Race:Zerg,UpgradeType:Talents",
+    "EffectArray": [
+      null,
+      null,
+      null
+    ],
+    "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-metabolicboost.dds",
-    "EffectArray": [
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
-  },
-  "hydraliskspeed": {
-    "AffectedUnitArray": "HydraliskBurrowed",
-    "ScoreResult": "BuildOrder",
     "Race": "Zerg",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-groovedspines.dds",
-    "EffectArray": null,
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
-  },
-  "Burrow": {
-    "AffectedUnitArray": "RavagerBurrowed",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-zerg-burrow-color.dds",
     "ScoreAmount": 200,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
-  },
-  "overlordtransport": {
-    "AffectedUnitArray": "Overlord",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-ventralsacs.dds",
-    "ScoreAmount": 400,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
-  },
-  "overlordspeed": {
-    "AffectedUnitArray": "OverseerSiegeMode",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-pneumatizedcarapace.dds",
-    "EffectArray": [
-      null,
-      null,
-      null
-    ],
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
-  },
-  "InfestorPeristalsis": {
-    "AffectedUnitArray": "InfestorBurrowed",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": 0,
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-peristalsis.dds",
-    "EffectArray": null,
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Zerg,UpgradeType:SpellResearch"
-  },
-  "BlinkTech": {
-    "AffectedUnitArray": "Stalker",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-ability-protoss-blink-color.dds",
-    "ScoreAmount": 300,
-    "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch"
-  },
-  "GlialReconstitution": {
-    "AffectedUnitArray": "RoachBurrowed",
-    "ScoreResult": "BuildOrder",
-    "Race": "Zerg",
-    "Flags": "TechTreeCheat",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\btn-upgrade-zerg-glialreconstitution.dds",
-    "EffectArray": null,
-    "ScoreAmount": 200,
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
-  },
-  "AbdominalFortitude": {
-    "AffectedUnitArray": [
-      "Baneling",
-      "BanelingBurrowed"
-    ],
-    "ScoreResult": "BuildOrder",
-    "Flags": 0,
-    "Alert": "ResearchComplete",
-    "EditorCategories": "Race:Zerg,UpgradeType:Talents"
-  },
-  "ShieldWall": {
-    "AffectedUnitArray": "Marine",
-    "InfoTooltipPriority": 2,
-    "ScoreResult": "BuildOrder",
-    "Race": "Terr",
-    "Flags": "TechTreeCheat",
-    "Icon": "Assets\\Textures\\btn-techupgrade-terran-combatshield-color.dds",
-    "ScoreAmount": 200,
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "EditorCategories": "Race:Terran,UpgradeType:Talents"
-  },
-  "WarpGateResearch": {
-    "AffectedUnitArray": "Gateway",
-    "ScoreResult": "BuildOrder",
-    "Race": "Prot",
-    "Alert": "ResearchComplete",
-    "Icon": "Assets\\Textures\\BTN-Building-Protoss-WarpGate.dds",
-    "ScoreAmount": 100,
-    "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch"
-  },
-  "ThorSkin": {
-    "AffectedUnitArray": "Thor",
-    "Race": "Terr",
-    "LeaderAlias": "",
-    "Icon": "Assets\\Textures\\btn-unit-terran-thor.dds",
-    "EffectArray": null
-  },
-  "GhostAlternate": {
-    "AffectedUnitArray": "Ghost",
-    "Flags": 0,
-    "LeaderAlias": ""
-  },
-  "SprayTerran": {
-    "AffectedUnitArray": "SCV",
-    "Flags": 0,
-    "LeaderAlias": ""
-  },
-  "SprayZerg": {
-    "AffectedUnitArray": "Drone",
-    "Flags": 0,
-    "LeaderAlias": ""
-  },
-  "SprayProtoss": {
-    "AffectedUnitArray": "Probe",
-    "Flags": 0,
-    "LeaderAlias": ""
-  },
-  "GhostSkinNova": {
-    "AffectedUnitArray": "Ghost",
-    "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "Flags": 0,
-    "LeaderAlias": ""
-  },
-  "GhostSkinJunker": {
-    "AffectedUnitArray": "Ghost",
-    "Flags": 0,
-    "LeaderAlias": ""
-  },
-  "ZerglingSkin": {
-    "Icon": "Assets\\Textures\\btn-unit-zerg-zergling.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "ZerglingBurrowed",
-    "LeaderAlias": ""
-  },
-  "OverlordSkin": {
-    "Icon": "Assets\\Textures\\btn-unit-zerg-overlord.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "Overlord",
-    "LeaderAlias": ""
-  },
-  "MarineSkin": {
-    "Icon": "Assets\\Textures\\btn-unit-terran-marine.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "Marine",
-    "LeaderAlias": ""
-  },
-  "SupplyDepotSkin": {
-    "Icon": "Assets\\Textures\\btn-building-terran-supplydepot.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "SupplyDepotLowered",
-    "LeaderAlias": ""
-  },
-  "ZealotSkin": {
-    "Icon": "Assets\\Textures\\btn-unit-protoss-zealot.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "Zealot",
-    "LeaderAlias": ""
-  },
-  "PylonSkin": {
-    "Icon": "Assets\\Textures\\btn-building-protoss-pylon.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "Pylon",
-    "LeaderAlias": ""
-  },
-  "UltraliskSkin": {
-    "Icon": "Assets\\Textures\\btn-unit-zerg-ultralisk.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "UltraliskBurrowed",
-    "LeaderAlias": ""
-  },
-  "RewardDanceOracle": {
-    "Icon": "Assets\\Textures\\btn-unit-protoss-oracle.dds",
-    "LeaderAlias": ""
-  },
-  "RewardDanceStalker": {
-    "Icon": "Assets\\Textures\\btn-unit-protoss-stalker.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "Stalker",
-    "LeaderAlias": ""
-  },
-  "RewardDanceColossus": {
-    "Icon": "Assets\\Textures\\btn-unit-protoss-Colossus.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "Colossus",
-    "LeaderAlias": ""
-  },
-  "RewardDanceOverlord": {
-    "Icon": "Assets\\Textures\\btn-unit-zerg-Overlord.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "Overlord",
-    "LeaderAlias": ""
-  },
-  "RewardDanceRoach": {
-    "Icon": "Assets\\Textures\\btn-unit-zerg-roach.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": [
-      "Roach",
-      "RoachBurrowed"
-    ],
-    "LeaderAlias": ""
-  },
-  "RewardDanceInfestor": {
-    "Icon": "Assets\\Textures\\btn-unit-zerg-infestor.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": [
-      "Infestor",
-      "InfestorBurrowed"
-    ],
-    "LeaderAlias": ""
-  },
-  "RewardDanceMule": {
-    "Icon": "Assets\\Textures\\btn-unit-terran-mule.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "MULE",
-    "LeaderAlias": ""
-  },
-  "RewardDanceGhost": {
-    "Icon": "Assets\\Textures\\btn-unit-terran-ghost.dds",
-    "EffectArray": null,
-    "AffectedUnitArray": "GhostNova",
-    "LeaderAlias": ""
-  },
-  "RewardDanceViking": {
-    "Icon": "Assets\\Textures\\btn-unit-terran-ghost.dds",
-    "EffectArray": [
-      null,
-      null
-    ],
-    "AffectedUnitArray": [
-      "VikingFighter",
-      "VikingAssault"
-    ],
-    "LeaderAlias": ""
+    "ScoreResult": "BuildOrder"
   }
 }

@@ -13,7 +13,7 @@ RACE_MAP = {
 
 
 def load_json(filename: str) -> dict:
-    with open(DATA_DIR / filename) as f:
+    with (DATA_DIR / filename).open() as f:
         return json.load(f)
 
 
@@ -175,7 +175,7 @@ def main():
         "abilities": abilities,
     }
 
-    with open(OUTPUT_FILE, "w") as f:
+    with OUTPUT_FILE.open("w") as f:
         json.dump(tech_tree, f, indent=2)
 
     print(f"Generated {OUTPUT_FILE}")
