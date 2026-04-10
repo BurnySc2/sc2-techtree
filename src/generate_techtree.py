@@ -101,6 +101,77 @@ def extract_build_requirements(abil_data: dict) -> dict[str, list[str]]:
     return result
 
 
+def extract_morph_info(abil_data: dict, ability_name: str) -> tuple[dict[str, str], dict[str, list[str]]]:
+    """Extract morph ability -> primary target unit and requirements from CmdButtonArray.
+    Returns (morphsto_map, requires_map) for MorphTo* abilities."""
+    morphsto_map: dict[str, str] = {}
+    requires_map: dict[str, list[str]] = {}
+
+    cmd_button_array = abil_data.get("CmdButtonArray", [])
+    if isinstance(cmd_button_array, dict):
+        cmd_button_array = [cmd_button_array]
+
+    # Get requirement from Execute button
+    ability_requires: list[str] = []
+    for button in cmd_button_array:
+        if not isinstance(button, dict):
+            continue
+        index = button.get("index", "")
+        if index != "Execute":
+            continue
+        requirements = button.get("Requirements", "")
+        if requirements and isinstance(requirements, str):
+            match = re.match(r"Have(\w+)", requirements)
+            if match:
+                for part in match.group(1).split("And"):
+                    if part.startswith("Attached") and part.endswith("TechLab"):
+                        part = "AttachedTechLab"
+                    ability_requires.append(part)
+
+    # Find primary morph target (unit with Score=1, skip intermediate cocoons/eggs)
+    info_array = abil_data.get("InfoArray", [])
+    # Handle InfoArray being either a dict or list
+    if isinstance(info_array, dict):
+        info_array = [info_array] if info_array else []
+    primary_unit = None
+    if isinstance(info_array, list):
+        # First pass: find unit with Score=1 (the actual morph result)
+        for item in info_array:
+            if isinstance(item, dict):
+                unit = item.get("Unit", "")
+                score = item.get("Score")
+                if unit and isinstance(unit, str) and score == 1:
+                    primary_unit = unit
+                    break
+        # Second pass: if no Score=1, take first non-egg, non-cocoon unit
+        if not primary_unit:
+            for item in info_array:
+                if isinstance(item, dict):
+                    unit = item.get("Unit", "")
+                    if unit and isinstance(unit, str) and not unit.endswith("Cocoon") and not unit.endswith("Egg"):
+                        primary_unit = unit
+                        break
+    if primary_unit:
+        morphsto_map[ability_name] = primary_unit
+        requires_map[ability_name] = ability_requires
+    return morphsto_map, requires_map
+
+
+def extract_all_morph_info(abil_data: dict) -> tuple[dict[str, str], dict[str, list[str]]]:
+    """Extract all MorphTo* abilities' morph target and requirements."""
+    morphsto_map: dict[str, str] = {}
+    morph_requires: dict[str, list[str]] = {}
+    for name, data in abil_data.items():
+        if not isinstance(data, dict):
+            continue
+        if not name.startswith("MorphTo"):
+            continue
+        ms, mr = extract_morph_info(data, name)
+        morphsto_map.update(ms)
+        morph_requires.update(mr)
+    return morphsto_map, morph_requires
+
+
 def extract_buildable_units(abil_data: dict) -> dict[str, list[str]]:
     """Extract build ability -> list of buildable units from *Build and *AddOns abilities in AbilData."""
     result = {}
@@ -255,6 +326,7 @@ def main():
     researchable_upgrades = extract_researchable_upgrades(abil_data)
     buildable_units = extract_buildable_units(abil_data)
     morphable_units = extract_morphable_units(abil_data)
+    morphsto_map, morph_requires = extract_all_morph_info(abil_data)
 
     for name, data in unit_data.items():
         if not isinstance(data, dict):
@@ -368,8 +440,9 @@ def main():
             if name == "LarvaTrain" and name in trainable_units_by_ability:
                 abilities[name]["morphs"] = trainable_units_by_ability[name]
 
-            if name.startswith("MorphTo") and name in morphable_units:
-                abilities[name]["morphs"] = morphable_units[name]
+            if name.startswith("MorphTo") and name in morphsto_map:
+                abilities[name]["morphsto"] = morphsto_map[name]
+                abilities[name]["requires"] = morph_requires.get(name, [])
 
     tech_tree = {
         "structures": structures,
