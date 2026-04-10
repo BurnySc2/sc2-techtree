@@ -20,4 +20,4 @@ sc2
 .env*
 
 # Extracted xml files
-.xml
+*.xml

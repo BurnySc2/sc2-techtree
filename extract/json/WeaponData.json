@@ -1,0 +1,735 @@
+{
+  "WizWeapon": {
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Effect": "##id##Damage",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel0.dds",
+    "DisplayEffect": "##id##Damage"
+  },
+  "RenegadeLongboltMissile": {
+    "EditorCategories": "Race:Terran",
+    "DisplayEffect": "RenegadeLongboltMissileU",
+    "Period": 0.8608,
+    "Effect": "RenegadeLongboltMissileCP",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-hisecautotracking.dds",
+    "TargetFilters": "Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "RangeSlop": 0,
+    "Range": 7,
+    "DisplayAttackCount": 2
+  },
+  "VolatileBurstDummy": {
+    "EditorCategories": "Race:Zerg",
+    "DisplayEffect": "VolatileBurstU",
+    "Period": 0.833,
+    "Effect": "",
+    "DamagePoint": 0,
+    "Icon": "Assets\\Textures\\btn-ability-zerg-banelingspooge.dds",
+    "Options": "Melee",
+    "AllowedMovement": "Moving",
+    "TargetFilters": "Ground,Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.25,
+    "Cost": {
+      "Cooldown": "Weapon/VolatileBurst"
+    },
+    "LegacyOptions": "NoDeceleration"
+  },
+  "HydraliskMelee": {
+    "EditorCategories": "Race:Zerg",
+    "Period": 0.825,
+    "DamagePoint": 0.14,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level0.dds",
+    "Options": [
+      "Hidden",
+      "Melee"
+    ],
+    "Backswing": 0.5607,
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.5,
+    "Marker": "Weapon/NeedleSpines",
+    "Cost": {
+      "Cooldown": "Weapon/NeedleSpines"
+    }
+  },
+  "InfestedGuassRifle": {
+    "EditorCategories": "Race:Terran",
+    "Period": 0.8608,
+    "MinScanRange": 5.5,
+    "DamagePoint": 0.25,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+    "Backswing": 0.75,
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"
+  },
+  "PointDefenseLaser": {
+    "EditorCategories": "Race:Terran",
+    "RandomDelayMin": 0,
+    "Period": 0,
+    "RandomDelayMax": 0,
+    "Effect": "PointDefenseLaserInitialSet",
+    "DamagePoint": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel0.dds",
+    "Options": [
+      "Hidden",
+      "ContinuousScan"
+    ],
+    "Backswing": 0,
+    "TargetFilters": "Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 8,
+    "Marker": {
+      "MatchFlags": "Link"
+    },
+    "AcquireFilters": "Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"
+  },
+  "RoachMelee": {
+    "EditorCategories": "Race:Zerg",
+    "DisplayEffect": "RoachUMelee",
+    "Period": 2,
+    "Effect": "RoachUMelee",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level0.dds",
+    "Options": [
+      "Hidden",
+      "Melee"
+    ],
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.5,
+    "Marker": "Weapon/AcidSaliva",
+    "Cost": {
+      "Cooldown": "Weapon/AcidSaliva"
+    }
+  },
+  "AcidSpines": {
+    "EditorCategories": "Race:Zerg",
+    "Period": 1,
+    "Effect": "AcidSpinesLM",
+    "MinScanRange": 8.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+    "TargetFilters": "Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 7
+  },
+  "NeedleClaws": {
+    "EditorCategories": "Race:Zerg",
+    "Period": 0.8,
+    "MinScanRange": 15,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level0.dds",
+    "Options": "Melee",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.1
+  },
+  "PrismaticBeam": {
+    "EditorCategories": "Race:Protoss",
+    "ArcSlop": 39.9902,
+    "DisplayEffect": "PrismaticBeamMUx1",
+    "Period": 0.6,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel0.dds",
+    "Options": [
+      0,
+      0
+    ],
+    "AllowedMovement": "Moving",
+    "Backswing": 0.75,
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "RangeSlop": 2,
+    "Range": 6,
+    "LegacyOptions": "CanRetargetWhileChanneling"
+  },
+  "TwinIbiksCannon": {
+    "EditorCategories": "Race:Terran",
+    "Period": 2,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-hisecautotracking.dds",
+    "Options": 0,
+    "TargetFilters": "Ground,Visible;Self,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6,
+    "Arc": 90
+  },
+  "ParticleBeam": {
+    "EditorCategories": "Race:Protoss",
+    "Period": 1.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel0.dds",
+    "Options": "Melee",
+    "AllowedMovement": "Slowing",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.2,
+    "LegacyOptions": "NoDeceleration"
+  },
+  "PsiBlades": {
+    "EditorCategories": "Race:Protoss",
+    "Period": 1.2,
+    "Effect": "PsiBladesBurst",
+    "DamagePoint": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel0.dds",
+    "Options": "Melee",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.1,
+    "DisplayAttackCount": 2
+  },
+  "WarpBlades": {
+    "EditorCategories": "Race:Protoss",
+    "Period": 1.694,
+    "DamagePoint": 0.361,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel0.dds",
+    "Options": "Melee",
+    "Backswing": 1.333,
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.1
+  },
+  "PsionicShockwave": {
+    "EditorCategories": "Race:Protoss",
+    "DisplayEffect": "PsionicShockwaveDamage",
+    "Period": 1.754,
+    "Effect": "PsionicShockwaveDamage",
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel0.dds",
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 3,
+    "Cost": {
+      "Cooldown": null
+    },
+    "TeleportResetRange": 0
+  },
+  "IonCannons": {
+    "EditorCategories": "Race:Protoss",
+    "ArcSlop": 0,
+    "DisplayEffect": "IonCannonsU",
+    "Period": 1.1,
+    "MinScanRange": 4,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel0.dds",
+    "Options": [
+      0,
+      0
+    ],
+    "AllowedMovement": "Moving",
+    "TargetFilters": "Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 4,
+    "Arc": 4.9987,
+    "DisplayAttackCount": 2
+  },
+  "FusionCutter": {
+    "EditorCategories": "Race:Terran",
+    "Period": 1.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel0.dds",
+    "Options": "Melee",
+    "AllowedMovement": "Slowing",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.2,
+    "LegacyOptions": "NoDeceleration"
+  },
+  "GuassRifle": {
+    "EditorCategories": "Race:Terran",
+    "Period": 0.8608,
+    "MinScanRange": 5.5,
+    "DamagePoint": 0.05,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel0.dds",
+    "Backswing": 0.75,
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable"
+  },
+  "JavelinMissileLaunchers": {
+    "EditorCategories": "Race:Terran",
+    "AcquirePrioritization": "ByAngle",
+    "DisplayEffect": "JavelinMissileLaunchersDamage",
+    "Period": 3,
+    "Effect": "JavelinMissileLaunchersPersistent",
+    "MinScanRange": 10.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel0.dds",
+    "TargetFilters": "Air,Visible;Ground,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 10,
+    "Arc": 5.625,
+    "DisplayAttackCount": 4,
+    "LegacyOptions": "KeepChanneling"
+  },
+  "ThorsHammer": {
+    "EditorCategories": "Race:Terran",
+    "AcquirePrioritization": "ByAngle",
+    "DisplayEffect": "ThorsHammerDamage",
+    "Period": 1.28,
+    "MinScanRange": 7.5,
+    "DamagePoint": 0.831,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel0.dds",
+    "Backswing": 0.25,
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 7,
+    "DisplayAttackCount": 2,
+    "LegacyOptions": "KeepChanneling"
+  },
+  "90mmCannons": {
+    "EditorCategories": "Race:Terran",
+    "Period": 1.04,
+    "MinScanRange": 7.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel0.dds",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 7,
+    "Arc": 360
+  },
+  "PunisherGrenades": {
+    "EditorCategories": "Race:Terran",
+    "DisplayEffect": "PunisherGrenadesU",
+    "Period": 1.5,
+    "Effect": "PunisherGrenadesLM",
+    "DamagePoint": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel0.dds",
+    "MinScanRange": 6.5,
+    "Backswing": 0,
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6
+  },
+  "CrucioShockCannon": {
+    "EditorCategories": "Race:Terran",
+    "MinimumRange": 2,
+    "DisplayEffect": "CrucioShockCannonDummy",
+    "Period": 3,
+    "Effect": "CrucioShockCannonSwitch",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel0.dds",
+    "Options": "DisplayCooldown",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 13
+  },
+  "LanzerTorpedoes": {
+    "EditorCategories": "Race:Terran",
+    "DisplayEffect": "LanzerTorpedoesDamage",
+    "Period": 2,
+    "DamagePoint": 0.05,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel0.dds",
+    "AllowedMovement": "Slowing",
+    "TargetFilters": "Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 9,
+    "DisplayAttackCount": 2
+  },
+  "ATSLaserBattery": {
+    "AcquirePrioritization": "ByAngle",
+    "EditorCategories": "Race:Terran",
+    "RandomDelayMin": 0,
+    "DisplayEffect": "ATSLaserBatteryU",
+    "Period": 0.225,
+    "RandomDelayMax": 0,
+    "Effect": "ATSLaserBatteryLM",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel0.dds",
+    "Options": [
+      0,
+      0
+    ],
+    "AllowedMovement": "Moving",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6,
+    "Cost": {
+      "Cooldown": null
+    }
+  },
+  "ATALaserBattery": {
+    "AcquirePrioritization": "ByAngle",
+    "EditorCategories": "Race:Terran",
+    "RandomDelayMin": 0,
+    "DisplayEffect": "ATALaserBatteryU",
+    "Period": 0.225,
+    "RandomDelayMax": 0,
+    "Effect": "ATALaserBatteryLM",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel0.dds",
+    "Options": [
+      0,
+      0
+    ],
+    "AllowedMovement": "Moving",
+    "TargetFilters": "Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6,
+    "Arc": 360,
+    "Cost": {
+      "Cooldown": null
+    }
+  },
+  "LongboltMissile": {
+    "EditorCategories": "Race:Terran",
+    "DisplayEffect": "LongboltMissileU",
+    "Period": 0.8608,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-hisecautotracking.dds",
+    "TargetFilters": "Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "RangeSlop": 0,
+    "Range": 7,
+    "DisplayAttackCount": 2
+  },
+  "AutoTurret": {
+    "EditorCategories": "Race:Terran",
+    "Period": 0.8,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-hisecautotracking.dds",
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6
+  },
+  "P38ScytheGuassPistol": {
+    "EditorCategories": "Race:Terran",
+    "Period": 1.1,
+    "MinScanRange": 5.5,
+    "DamagePoint": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel0.dds",
+    "Effect": "P38ScytheGuassPistolBurst",
+    "Backswing": 0.75,
+    "TargetFilters": "Ground,Visible;Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 4.5,
+    "DisplayAttackCount": 2
+  },
+  "D8Charge": {
+    "EditorCategories": "Race:Terran",
+    "RandomDelayMin": 0.1,
+    "DisplayEffect": "D8ChargeDamage",
+    "Period": 1.8,
+    "RandomDelayMax": 0.5,
+    "Effect": "D8ChargeLaunchMissile",
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel0.dds",
+    "TargetFilters": "Ground,Structure,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"
+  },
+  "AcidSaliva": {
+    "EditorCategories": "Race:Zerg",
+    "MinimumRange": 0.6,
+    "DisplayEffect": "AcidSalivaU",
+    "Period": 2,
+    "Effect": "AcidSalivaLM",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 4
+  },
+  "Spines": {
+    "EditorCategories": "Race:Zerg",
+    "Period": 1.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level0.dds",
+    "Options": "Melee",
+    "AllowedMovement": "Slowing",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.2,
+    "LegacyOptions": "NoDeceleration"
+  },
+  "Claws": {
+    "EditorCategories": "Race:Zerg",
+    "Period": 0.696,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level0.dds",
+    "Options": "Melee",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.1
+  },
+  "ImpalerTentacle": {
+    "EditorCategories": "Race:Zerg",
+    "DisplayEffect": "ImpalerTentacleU",
+    "Period": 1.85,
+    "Effect": "ImpalerTentacleLM",
+    "DamagePoint": 0.3332,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-seismicspines.dds",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "RangeSlop": 0,
+    "Range": 7
+  },
+  "AcidSpew": {
+    "EditorCategories": "Race:Zerg",
+    "DisplayEffect": "SporeCrawlerU",
+    "Period": 0.8608,
+    "Effect": "SporeCrawler",
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+    "TargetFilters": "Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "RangeSlop": 0,
+    "Range": 7
+  },
+  "NeedleSpines": {
+    "EditorCategories": "Race:Zerg",
+    "DisplayEffect": "NeedleSpinesDamage",
+    "Period": 0.825,
+    "Effect": "NeedleSpinesLaunchMissile",
+    "DamagePoint": 0.14,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+    "MinScanRange": 5.5,
+    "Backswing": 0.5607,
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable"
+  },
+  "GlaiveWurm": {
+    "EditorCategories": "Race:Zerg",
+    "ArcSlop": 45,
+    "DisplayEffect": "GlaiveWurmU1",
+    "Period": 1.5246,
+    "DamagePoint": 0,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level0.dds",
+    "AllowedMovement": "Slowing",
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "RangeSlop": 2,
+    "Range": 3,
+    "Marker": {
+      "MatchFlags": "Id"
+    },
+    "LegacyOptions": "NoDeceleration"
+  },
+  "BroodlingStrike": {
+    "EditorCategories": "Race:Zerg",
+    "ArcSlop": 360,
+    "RandomDelayMin": -2.5,
+    "DisplayEffect": "BroodlingEscortDamage",
+    "Period": 2.5,
+    "RandomDelayMax": -2.5,
+    "Effect": "BroodlordIterateBroodlingEscort",
+    "MinScanRange": 10.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level0.dds",
+    "DamagePoint": 0,
+    "AllowedMovement": "Slowing",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 10
+  },
+  "BroodlingEscort": {
+    "EditorCategories": "Race:Zerg",
+    "Period": 10,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level0.dds",
+    "Options": "Hidden",
+    "AllowedMovement": "Moving",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 12,
+    "Arc": 360
+  },
+  "KaiserBlades": {
+    "AcquirePrioritization": "ByAngle",
+    "EditorCategories": "Race:Zerg",
+    "DisplayEffect": "KaiserBladesDamage",
+    "Period": 0.861,
+    "Effect": "KaiserBladesDamage",
+    "DamagePoint": 0.3332,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level0.dds",
+    "Options": "Melee",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "RangeSlop": 1.25,
+    "Range": 1
+  },
+  "Ram": {
+    "EditorCategories": "Race:Zerg",
+    "AcquirePrioritization": "ByAngle",
+    "Period": 1.6665,
+    "DamagePoint": 0.6665,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level0.dds",
+    "Options": "Melee",
+    "Backswing": 1,
+    "TargetFilters": "Ground,Structure,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 1,
+    "LegacyOptions": "KeepChanneling"
+  },
+  "TwinGatlingCannon": {
+    "EditorCategories": "Race:Terran",
+    "DisplayEffect": "TwinGatlingCannons",
+    "Period": 1,
+    "Effect": "TwinGatlingCannons",
+    "MinScanRange": 6.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel0.dds",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6,
+    "Arc": 5.625
+  },
+  "VolatileBurst": {
+    "EditorCategories": "Race:Zerg",
+    "Period": 0.833,
+    "DamagePoint": 0,
+    "Icon": "Assets\\Textures\\btn-ability-zerg-explode.dds",
+    "Options": [
+      "Hidden",
+      "Melee"
+    ],
+    "AllowedMovement": "Moving",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.25,
+    "Marker": {
+      "MatchFlags": "Id"
+    },
+    "AcquireFilters": "Ground,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "LegacyOptions": "NoDeceleration"
+  },
+  "Talons": {
+    "EditorCategories": "Race:Zerg",
+    "DisplayEffect": "TalonsMissileDamage",
+    "Period": 1,
+    "Effect": "TalonsBurst",
+    "MinScanRange": 5.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 5,
+    "DisplayAttackCount": 2
+  },
+  "ParticleDisruptors": {
+    "EditorCategories": "Race:Protoss",
+    "DisplayEffect": "ParticleDisruptorsU",
+    "Period": 1.87,
+    "MinScanRange": 6.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel0.dds",
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6
+  },
+  "ThermalLances": {
+    "AcquirePrioritization": "ByDistanceFromTarget",
+    "EditorCategories": "Race:Protoss",
+    "DisplayEffect": "ThermalLancesMU",
+    "Period": 1.5,
+    "MinScanRange": 7.5,
+    "DamagePoint": 0.0832,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel0.dds",
+    "Options": [
+      0,
+      0
+    ],
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "RangeSlop": 0,
+    "Range": 7,
+    "Arc": 90,
+    "DisplayAttackCount": 2,
+    "LegacyOptions": "KeepChanneling"
+  },
+  "PhaseDisruptors": {
+    "EditorCategories": "Race:Protoss",
+    "Period": 1.6,
+    "MinScanRange": 6.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel0.dds",
+    "Options": [
+      0,
+      0
+    ],
+    "AllowedMovement": "Slowing",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6
+  },
+  "MothershipBeam": {
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel0.dds",
+    "AllowedMovement": "Moving",
+    "Range": 7,
+    "RandomDelayMin": 0,
+    "Period": 2.21,
+    "DamagePoint": 0,
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "EditorCategories": "Race:Protoss",
+    "Effect": "MothershipBeamSetCustom",
+    "RangeSlop": 4,
+    "DisplayAttackCount": 4,
+    "LegacyOptions": [
+      "CanRetargetWhileChanneling",
+      "KeepChanneling"
+    ],
+    "DisplayEffect": "MothershipBeamDamage",
+    "RandomDelayMax": 0,
+    "Options": [
+      0,
+      0,
+      0,
+      "DisplayCooldown"
+    ],
+    "Backswing": 0,
+    "Arc": 360,
+    "AcquireScanFilters": "-;Player,Ally,Neutral",
+    "TeleportResetRange": 0
+  },
+  "PhotonCannon": {
+    "EditorCategories": "Race:Protoss",
+    "DisplayEffect": "PhotonCannonU",
+    "Period": 1.25,
+    "Effect": "PhotonCannonLM",
+    "Icon": "Assets\\Textures\\btn-building-protoss-photoncannon.dds",
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "RangeSlop": 0,
+    "Range": 7
+  },
+  "DisruptionBeam": {
+    "EditorCategories": "Race:Protoss",
+    "DisplayEffect": "DisruptionBeamDamage",
+    "Period": 1,
+    "TeleportResetRange": 0,
+    "MinScanRange": 5.5,
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel0.dds",
+    "Options": "Hidden",
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Cost": {
+      "Cooldown": null
+    },
+    "LegacyOptions": "CanRetargetWhileChanneling"
+  },
+  "BacklashRockets": {
+    "EditorCategories": "Race:Terran",
+    "DisplayEffect": "BacklashRocketsU",
+    "Period": 1.25,
+    "MinScanRange": 6,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel0.dds",
+    "AllowedMovement": "Slowing",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6,
+    "Marker": {
+      "MatchFlags": "Id"
+    },
+    "DisplayAttackCount": 2,
+    "LegacyOptions": "KeepChanneling"
+  },
+  "ParasiteSpore": {
+    "EditorCategories": "Race:Zerg",
+    "DisplayEffect": "ParasiteSporeDamage",
+    "Period": 1.9,
+    "Effect": "ParasiteSporeLaunchMissile",
+    "DamagePoint": 0.0625,
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level0.dds",
+    "AllowedMovement": "Slowing",
+    "TargetFilters": "Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6
+  },
+  "C10CanisterRifle": {
+    "EditorCategories": "Race:Terran",
+    "Period": 1.5,
+    "MinScanRange": 6.5,
+    "DamagePoint": 0.083,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel0.dds",
+    "Backswing": 1.167,
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 6
+  },
+  "InfernalFlameThrower": {
+    "EditorCategories": "Race:Terran",
+    "Period": 2.5,
+    "Effect": "InfernalFlameThrowerCP",
+    "DamagePoint": 0.25,
+    "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel0.dds",
+    "MinScanRange": 5.5,
+    "Backswing": 0.75,
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Marker": {
+      "MatchFlags": "Id"
+    },
+    "LegacyOptions": "LockTurretWhileFiring"
+  },
+  "AutoTestAttackerWeapon": {
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 10,
+    "Period": 0.2
+  },
+  "InterceptorLaunch": {
+    "EditorCategories": "Race:Protoss",
+    "DisplayEffect": "Carrier",
+    "Period": 0.5,
+    "Effect": "InterceptorLaunchPersistent",
+    "DamagePoint": 0,
+    "Icon": "Assets\\Textures\\btn-unit-protoss-interceptor.dds",
+    "Options": "Hidden",
+    "AllowedMovement": "Slowing",
+    "Backswing": 0,
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 8,
+    "Arc": 360
+  },
+  "InterceptorsDummy": {
+    "EditorCategories": "Race:Protoss",
+    "DisplayEffect": "InterceptorBeamDamage",
+    "Period": 3,
+    "Effect": "CarrierInterceptor",
+    "Icon": "Assets\\Textures\\btn-unit-protoss-interceptor.dds",
+    "TargetFilters": "Visible;Player,Ally,Neutral,Enemy",
+    "Range": 8,
+    "Arc": 360,
+    "DisplayAttackCount": 2
+  },
+  "InterceptorBeam": {
+    "EditorCategories": "Race:Protoss",
+    "DisplayEffect": "InterceptorBeamDamage",
+    "Period": 3,
+    "Effect": "InterceptorBeamPersistent",
+    "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel0.dds",
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 2,
+    "Arc": 19.6875,
+    "DisplayAttackCount": 2,
+    "TeleportResetRange": 0
+  },
+  "Sheep": {
+    "Period": 1,
+    "Options": [
+      "Hidden",
+      "Melee"
+    ],
+    "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level0.dds",
+    "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.1
+  }
+}

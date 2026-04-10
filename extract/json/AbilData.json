@@ -1,0 +1,5460 @@
+{
+  "SimpleTargetAbil": {
+    "CmdButtonArray": null,
+    "CursorEffect": "##id##Search"
+  },
+  "WizSimpleSkillshot": {
+    "CursorEffect": "##id##MissileScan",
+    "Effect": "##id##InitialSet",
+    "Range": 500,
+    "Cost": null,
+    "CmdButtonArray": null,
+    "Flags": [
+      0,
+      0
+    ]
+  },
+  "WizSimpleChain": {
+    "Effect": "##id##InitialSet",
+    "Range": 5,
+    "Cost": null,
+    "CmdButtonArray": null,
+    "Flags": 0
+  },
+  "WizSimpleGrenade": {
+    "CursorEffect": "##id##Damage",
+    "Effect": "##id##LaunchMissile",
+    "Range": 7,
+    "Cost": null,
+    "CmdButtonArray": null,
+    "Flags": 0
+  },
+  "MetalGateDefaultLower": {
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 3.466
+        },
+        {
+          "DurationArray": 3.466
+        },
+        {
+          "DurationArray": 3.466
+        }
+      ]
+    },
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "CmdButtonArray": null,
+    "AbilSetId": "mgdn"
+  },
+  "MetalGateDefaultRaise": {
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 3.967
+        },
+        {
+          "DurationArray": 3.967
+        },
+        {
+          "DurationArray": 3.967
+        }
+      ]
+    },
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "CmdButtonArray": null,
+    "AbilSetId": "mgup"
+  },
+  "TerranAddOns": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "Type": "AddOn",
+    "InfoArray": [
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      }
+    ],
+    "FlagArray": [
+      "InstantPlacement",
+      "PeonDisableAbils",
+      "ShowProgress"
+    ],
+    "Alert": "AddOnComplete",
+    "Name": "Abil/Name/TerranAddOns"
+  },
+  "TerranBuildingLiftOff": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "LiftOffLand",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.5
+        },
+        {
+          "DurationArray": 1.6333
+        },
+        {
+          "DurationArray": 2
+        }
+      ]
+    },
+    "Name": "Abil/Name/TerranBuildingLiftOff",
+    "CmdButtonArray": null,
+    "Flags": [
+      "IgnoreFacing",
+      "RallyReset"
+    ]
+  },
+  "TerranBuildingLand": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "LiftOffLand",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 0.5
+        },
+        {
+          "DurationArray": [
+            0.5,
+            1.5
+          ]
+        },
+        {
+          "DurationArray": 0.5
+        },
+        {
+          "DurationArray": [
+            0.5,
+            0.733
+          ]
+        },
+        {
+          "DurationArray": 2
+        }
+      ]
+    },
+    "Name": "Abil/Name/TerranBuildingLand",
+    "CmdButtonArray": null,
+    "Flags": [
+      0,
+      "RallyReset",
+      "SuppressMovement"
+    ]
+  },
+  "Refund": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "UninterruptibleArray": [
+      "Approach",
+      "Prep",
+      "Cast",
+      "Channel",
+      "Finish"
+    ],
+    "Effect": "SalvageDeath",
+    "CmdButtonArray": null,
+    "Name": "Abil/Name/Refund"
+  },
+  "Salvage": {
+    "ValidatorArray": "HasNoCargo",
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "BehaviorArray": [
+      "##id##"
+    ],
+    "Name": "Abil/Name/Salvage",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": [
+      "BestUnit",
+      "Transient"
+    ]
+  },
+  "DisguiseChangeling": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "Name": "Abil/Name/DisguiseChangeling"
+  },
+  "SprayParent": {
+    "Cost": {
+      "Charge": {
+        "Location": "Player",
+        "CountStart": 1,
+        "TimeUse": 300,
+        "CountMax": 5,
+        "Link": "Spray",
+        "TimeStart": 300,
+        "CountUse": 1
+      }
+    },
+    "EditorCategories": "AbilityorEffectType:Units,Race:Terran",
+    "Range": 1,
+    "CmdButtonArray": null
+  },
+  "LoadOutSpray": {
+    "InfoArray": [
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      },
+      {
+        "Charge": {
+          "Location": "Player",
+          "CountStart": 1,
+          "TimeUse": 20,
+          "CountMax": 3,
+          "TimeStart": 20,
+          "CountUse": 1
+        },
+        "Button": {
+          "Flags": [
+            "UseDefaultButton",
+            "CreateDefaultButton"
+          ]
+        }
+      }
+    ],
+    "AbilityCategories": "Physical",
+    "Alert": "",
+    "Flags": "UnitOrderQueue",
+    "DefaultButtonCardId": "Spry"
+  },
+  "SprayTerran": {
+    "CmdButtonArray": null
+  },
+  "SprayZerg": {
+    "CmdButtonArray": null
+  },
+  "SprayProtoss": {
+    "CmdButtonArray": null
+  },
+  "SalvageShared": {
+    "ValidatorArray": "HasNoCargo",
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "BehaviorArray": [
+      "SalvageShared"
+    ],
+    "Name": "Abil/Name/Salvage",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": [
+      "BestUnit",
+      "Transient"
+    ]
+  },
+  "Corruption": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CancelableArray": "Channel",
+    "UninterruptibleArray": "Channel",
+    "TargetFilters": [
+      "Structure,Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Invulnerable",
+      "Visible;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Invulnerable"
+    ],
+    "Range": [
+      3,
+      6
+    ],
+    "Cost": [
+      {
+        "Cooldown": null,
+        "Vital": 75
+      },
+      {
+        "Vital": 0
+      }
+    ],
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "AllowMovement",
+      "NoDeceleration",
+      "AutoCast",
+      "AutoCastOn"
+    ]
+  },
+  "GhostHoldFire": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "Flags": "Transient",
+    "CmdButtonArray": {
+      "Flags": [
+        0,
+        "ToSelection"
+      ]
+    }
+  },
+  "GhostWeaponsFree": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "Flags": "Transient",
+    "CmdButtonArray": {
+      "Flags": [
+        0,
+        "ToSelection"
+      ]
+    }
+  },
+  "MorphToInfestedTerran": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "EffectArray": "InfestedTerransTimedLife",
+          "DurationArray": 4.875
+        },
+        {
+          "DurationArray": 4.875
+        },
+        {
+          "DurationArray": 4.875
+        }
+      ]
+    },
+    "CmdButtonArray": null,
+    "Flags": [
+      "DisableAbils",
+      "IgnoreFacing",
+      "ShowProgress",
+      "SuppressMovement"
+    ],
+    "AbilClassEnableArray": [
+      "CAbilMove",
+      "CAbilStop"
+    ]
+  },
+  "Explode": {
+    "Effect": "VolatileBurst",
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": null
+  },
+  "FleetBeaconResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          0,
+          0
+        ],
+        "Button": {
+          "Flags": 0
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units"
+  },
+  "FungalGrowth": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CursorEffect": "FungalGrowthSearch",
+    "Effect": "FungalGrowthInitialSet",
+    "Range": [
+      9,
+      8
+    ],
+    "Cost": {
+      "Cooldown": null,
+      "Vital": 75
+    },
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    }
+  },
+  "GuardianShield": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "GuardianShieldPersistent",
+    "Cost": [
+      {
+        "Cooldown": null,
+        "Vital": 75
+      },
+      {
+        "Cooldown": null
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": [
+      "AllowMovement",
+      "BestUnit",
+      "NoDeceleration",
+      "Transient"
+    ],
+    "AINotifyEffect": ""
+  },
+  "MULERepair": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "InheritAttackPriorityArray": [
+      "Prep",
+      "Cast",
+      "Channel"
+    ],
+    "AINotifyEffect": "Repair",
+    "Effect": "Repair",
+    "AutoCastAcquireLevel": "Defensive",
+    "TargetFilters": [
+      "Mechanical,Visible;Self,Enemy,Missile,UnderConstruction,Dead,Hidden",
+      "Mechanical,Visible;Self,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Hallucination"
+    ],
+    "RangeSlop": 0.2,
+    "AutoCastRange": 7,
+    "AbilSetId": "Repair",
+    "Marker": "Abil/Repair",
+    "UseMarkerArray": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "AutoCastValidatorArray": "HackingTRace",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": [
+      "AutoCast",
+      "AutoCastOffOwnerLeave",
+      0,
+      "ReExecutable",
+      "Smart",
+      "PassengerAcquirePassengers"
+    ],
+    "DefaultError": "RequiresRepairTarget",
+    "AutoCastFilters": "Visible;Neutral,Enemy"
+  },
+  "MorphZerglingToBaneling": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "ActorKey": "BanelingAspect",
+    "InfoArray": {
+      "Flags": "IgnorePlacement",
+      "Unit": "Baneling",
+      "Button": {
+        "Flags": "ShowInGlossary"
+      }
+    },
+    "MorphUnit": "BanelingCocoon",
+    "Activity": "UI/Morphing",
+    "RefundFraction": {
+      "Resource": [
+        -0.75,
+        -0.75,
+        -0.75,
+        -0.75
+      ]
+    },
+    "Alert": "MorphComplete_Zerg",
+    "Flags": [
+      "KillOnFinish",
+      "Select"
+    ]
+  },
+  "NexusTrainMothership": {
+    "InfoArray": {
+      "Unit": "Mothership",
+      "Button": null
+    },
+    "Alert": "MothershipComplete",
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+    "Activity": "UI/Warping"
+  },
+  "Feedback": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "Effect": "FeedbackSet",
+    "TargetFilters": [
+      "Visible,HasEnergy;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "CanHaveEnergy,Visible,HasEnergy;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"
+    ],
+    "Range": [
+      9,
+      10
+    ],
+    "Cost": {
+      "Cooldown": "",
+      "Charge": "",
+      "Vital": 50
+    },
+    "Flags": "AllowMovement",
+    "AINotifyEffect": ""
+  },
+  "MassRecall": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "CursorEffect": [
+      "MassRecallSearchCursor",
+      "MothershipStrategicRecallSearch"
+    ],
+    "Effect": "MothershipStrategicRecallSearch",
+    "Range": 500,
+    "Arc": 360,
+    "Cost": [
+      {
+        "Cooldown": "",
+        "Charge": "",
+        "Vital": 100
+      },
+      {
+        "Cooldown": null,
+        "Vital": 0
+      }
+    ],
+    "AINotifyEffect": ""
+  },
+  "PlacePointDefenseDrone": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "Effect": "PointDefenseDroneReleaseCreateUnit",
+    "InfoTooltipPriority": 11,
+    "Placeholder": "PointDefenseDrone",
+    "Range": 3,
+    "ProducedUnitArray": "PointDefenseDrone",
+    "PlaceUnit": "PointDefenseDrone",
+    "Cost": {
+      "Cooldown": null,
+      "Vital": 100
+    },
+    "Flags": "AllowMovement"
+  },
+  "HallucinationArchon": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "HallucinationCreateArchon",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "HallucinationColossus": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "HallucinationCreateColossus",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "HallucinationHighTemplar": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "HallucinationCreateHighTemplar",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "HallucinationImmortal": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "HallucinationCreateImmortal",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "HallucinationPhoenix": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "HallucinationCreatePhoenix",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "HallucinationProbe": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "HallucinationCreateProbe",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "HallucinationStalker": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "HallucinationCreateStalker",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "HallucinationVoidRay": {
+    "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
+    "Effect": "HallucinationCreateVoidRay",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "HallucinationWarpPrism": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "HallucinationCreateWarpPrism",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "HallucinationZealot": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Effect": "HallucinationCreateZealot",
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 75
+      }
+    ],
+    "CmdButtonArray": null,
+    "Flags": "BestUnit"
+  },
+  "MULEGather": {
+    "ResourceQueueIndex": 1,
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "ResourceAmountRequest": 25,
+    "ResourceAllowed": [
+      0,
+      0,
+      0
+    ],
+    "ReservedMarker": "Abil/MULEGather",
+    "FlagArray": [
+      0
+    ],
+    "ResourceAmountMultiplier": "Minerals",
+    "Range": 0.5,
+    "ResourceTimeMultiplier": 2.05,
+    "CmdButtonArray": null
+  },
+  "SeekerMissile": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "ArcSlop": 0,
+    "CmdButtonArray": null,
+    "Effect": "SeekerMissileLaunchMissile",
+    "InfoTooltipPriority": 1,
+    "TargetFilters": "Visible;Self,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": [
+      9,
+      6
+    ],
+    "Arc": 29.9926,
+    "Marker": "Abil/HunterSeekerMissile",
+    "Cost": [
+      {
+        "Cooldown": "Abil/HunterSeekerMissile",
+        "Charge": "Abil/HunterSeekerMissile",
+        "Vital": 125
+      },
+      {
+        "Vital": 125
+      }
+    ],
+    "Flags": "AllowMovement",
+    "AINotifyEffect": "HunterSeekerMissile"
+  },
+  "CalldownMULE": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "Effect": "OrbitalCommandCreateMuleSwitch",
+    "Range": 500,
+    "Arc": 360,
+    "Cost": {
+      "Vital": 50
+    },
+    "CmdButtonArray": null,
+    "Flags": "Transient"
+  },
+  "GravitonBeam": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": [
+      {
+        "Flags": "ToSelection"
+      },
+      {
+        "Flags": "ToSelection"
+      }
+    ],
+    "CancelableArray": "Channel",
+    "UninterruptibleArray": "Channel",
+    "TargetFilters": "Ground,Visible;Self,Neutral,Massive,Structure,Destructible,Invulnerable",
+    "RangeSlop": 4,
+    "Range": 4,
+    "AbilSetId": "Graviton",
+    "Cost": {
+      "Vital": 50
+    },
+    "Flags": [
+      "AllowMovement",
+      "NoDeceleration",
+      "ReExecutable"
+    ]
+  },
+  "BuildinProgressNydusCanal": {
+    "Cancelable": 0,
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "VitalStartFactor": [
+      "Life",
+      "Shields"
+    ]
+  },
+  "Siphon": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CancelableArray": "Channel",
+    "Effect": "SiphonLaunchMissile",
+    "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "TargetFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 9,
+    "AutoCastRange": 9,
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": "AutoCast",
+    "AINotifyEffect": ""
+  },
+  "Leech": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "Effect": "LeechCastSet",
+    "TargetFilters": "CanHaveEnergy,Visible;Self,Player,Ally,Neutral,Missile,Hidden,Invulnerable",
+    "Range": 9,
+    "Cost": {
+      "Cooldown": null
+    }
+  },
+  "SpawnChangeling": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "ProducedUnitArray": "Changeling",
+    "Cost": [
+      {
+        "Vital": 75
+      },
+      {
+        "Vital": 50
+      }
+    ],
+    "Flags": "BestUnit"
+  },
+  "DisguiseAsZealot": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": "Delay"
+      }
+    },
+    "CmdButtonArray": null,
+    "Name": "Abil/Name/DisguiseAsZealot"
+  },
+  "DisguiseAsMarineWithShield": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": "Delay"
+      }
+    },
+    "CmdButtonArray": null,
+    "Name": "Abil/Name/DisguiseAsMarineWithShield"
+  },
+  "DisguiseAsMarineWithoutShield": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": "Delay"
+      }
+    },
+    "CmdButtonArray": null,
+    "Name": "Abil/Name/DisguiseAsMarineWithoutShield"
+  },
+  "DisguiseAsZerglingWithWings": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": "Delay"
+      }
+    },
+    "CmdButtonArray": null,
+    "Name": "Abil/Name/DisguiseAsZerglingWithWings"
+  },
+  "DisguiseAsZerglingWithoutWings": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": "Delay"
+      }
+    },
+    "CmdButtonArray": null,
+    "Name": "Abil/Name/DisguiseAsZerglingWithoutWings"
+  },
+  "PhaseShift": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "Effect": "PhaseShiftSet",
+    "TargetFilters": "-;Self,Player,Ally,Neutral,Structure,RawResource,HarvestableResource,Destructible,Stasis,Hidden,Invulnerable",
+    "Range": 9,
+    "Cost": {
+      "Vital": 50
+    },
+    "AutoCastFilters": "Visible;Player,Ally,Neutral,Massive"
+  },
+  "Rally": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures"
+  },
+  "ProgressRally": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "Flags": [
+      "ShowWhileMerging",
+      "ShowWhileWarping"
+    ]
+  },
+  "RallyCommand": {
+    "OrderArray": {
+      "Model": "Assets\\UI\\Feedback\\WayPointRally\\WayPointRally.m3",
+      "DisplayType": "Rally",
+      "Color": "255,245,140,70",
+      "LineTexture": "Assets\\Textures\\WayPointLine.dds"
+    },
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "RallyNexus": {
+    "OrderArray": {
+      "Model": "Assets\\UI\\Feedback\\WayPointRally\\WayPointRally.m3",
+      "DisplayType": "Rally",
+      "Color": "255,245,140,70",
+      "LineTexture": "Assets\\Textures\\WayPointLine.dds"
+    },
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures"
+  },
+  "RallyHatchery": {
+    "InfoArray": [
+      {
+        "SetValidators": "NotResourcesOrEnemyTargetType",
+        "UseValidators": "NotQueen"
+      },
+      {
+        "UseValidators": "NotQueen"
+      },
+      {
+        "SetValidators": "Failure"
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures"
+  },
+  "RoachWarrenResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures"
+  },
+  "SapStructure": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "Effect": "SapStructureIssueAttackOrder",
+    "TargetSorts": {
+      "SortArray": [
+        "TSMarker",
+        "TSDistance"
+      ]
+    },
+    "TargetFilters": "Ground,Structure,Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 0.25,
+    "AutoCastRange": 5,
+    "CmdButtonArray": null,
+    "Flags": [
+      "AllowMovement",
+      "AutoCast"
+    ],
+    "AutoCastFilters": "Ground,Structure,Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"
+  },
+  "InfestedTerrans": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "UninterruptibleArray": [
+      "Prep",
+      "Cast",
+      "Channel",
+      "Finish"
+    ],
+    "Effect": "InfestedTerransCreateEgg",
+    "CastIntroTime": 0,
+    "CastOutroTime": 0,
+    "Range": [
+      9,
+      8
+    ],
+    "ProducedUnitArray": "InfestedTerran",
+    "Cost": [
+      {
+        "Vital": 25
+      },
+      {
+        "Vital": 50
+      }
+    ]
+  },
+  "NeuralParasite": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": [
+      {
+        "Flags": "ToSelection"
+      },
+      {
+        "Flags": "ToSelection"
+      }
+    ],
+    "CancelableArray": "Channel",
+    "UninterruptibleArray": [
+      "Cast",
+      "Channel",
+      "Finish"
+    ],
+    "Effect": "NeuralParasiteLaunchMissile",
+    "TargetFilters": [
+      "Ground,Visible;Self,Player,Ally,Neutral,Structure,Heroic,Stasis,Invulnerable",
+      "Visible;Self,Player,Ally,Neutral,Structure,Heroic,Stasis,Invulnerable"
+    ],
+    "RangeSlop": 5,
+    "Range": [
+      7,
+      8
+    ],
+    "Cost": [
+      {
+        "Cooldown": null,
+        "Vital": 50
+      },
+      {
+        "Vital": 100
+      }
+    ],
+    "Flags": 0
+  },
+  "SpawnLarva": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "UninterruptibleArray": [
+      "Prep",
+      "Cast",
+      "Channel",
+      "Finish"
+    ],
+    "Effect": "SpawnLarvaSet",
+    "CastOutroTime": 2.3,
+    "TargetFilters": "Visible;Neutral,Enemy,UnderConstruction",
+    "Range": 0.1,
+    "Marker": "Abil/SpawnMutantLarva",
+    "Cost": {
+      "Cooldown": "Abil/SpawnMutantLarva",
+      "Charge": "Abil/SpawnMutantLarva",
+      "Vital": 25
+    },
+    "AINotifyEffect": "SpawnMutantLarva"
+  },
+  "StimpackMarauder": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "InfoTooltipPriority": 1,
+    "Marker": "Abil/Stimpack",
+    "AbilSetId": "Stimpack",
+    "Cost": [
+      {
+        "Cooldown": "Abil/Stimpack",
+        "Charge": "Abil/Stimpack",
+        "Vital": 20
+      },
+      {
+        "Cooldown": null
+      }
+    ],
+    "Flags": "Transient",
+    "AINotifyEffect": "Stimpack"
+  },
+  "SupplyDrop": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "Effect": "SupplyDropApplyTempBehavior",
+    "TargetFilters": "Structure,Visible;Neutral,Enemy,UnderConstruction",
+    "Range": 500,
+    "Arc": 360,
+    "Cost": {
+      "Cooldown": "SupplyDrop",
+      "Vital": 50
+    },
+    "Flags": "Transient"
+  },
+  "250mmStrikeCannons": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CancelableArray": [
+      "Prep",
+      "Cast",
+      "Channel"
+    ],
+    "UninterruptibleArray": [
+      "Cast",
+      "Channel",
+      "Finish"
+    ],
+    "Effect": "250mmStrikeCannonsCreatePersistent",
+    "InfoTooltipPriority": 1,
+    "CastIntroTime": 2,
+    "RangeSlop": 4,
+    "TargetFilters": "Ground,Visible;Self,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 7,
+    "Cost": [
+      {
+        "Vital": 100
+      },
+      {
+        "Vital": 150
+      }
+    ],
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "FinishTime": 2
+  },
+  "TemporalRift": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "CursorEffect": "TemporalRiftUnitSearchArea",
+    "Effect": "TemporalRiftCreatePersistent",
+    "Range": 9,
+    "Arc": 360,
+    "Cost": {
+      "Cooldown": "TemporalRift",
+      "Vital": 50
+    },
+    "AINotifyEffect": "TemporalRiftCreatePersistent"
+  },
+  "TimeWarp": {
+    "EditorCategories": "AbilityorEffectType:Units,Race:Terran",
+    "CmdButtonArray": null,
+    "UninterruptibleArray": [
+      "Approach",
+      "Prep",
+      "Cast",
+      "Channel",
+      "Finish"
+    ],
+    "Effect": "ChronoBoost",
+    "TargetFilters": "Structure;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 500,
+    "Arc": 360,
+    "Cost": {
+      "Vital": 25
+    },
+    "Flags": "Transient",
+    "AINotifyEffect": "ChronoBoost"
+  },
+  "UltraliskCavernResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units"
+  },
+  "WormholeTransit": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "UninterruptibleArray": [
+      "Approach",
+      "Prep",
+      "Cast",
+      "Channel",
+      "Finish"
+    ],
+    "PrepTime": 0.5,
+    "Effect": "WormholeTransitTeleportMove",
+    "CastIntroTime": 0.5,
+    "TargetFilters": "Structure,Visible;Self,Ally,Neutral,Enemy,UnderConstruction",
+    "Range": 500,
+    "Arc": 360,
+    "Cost": null,
+    "FinishTime": 0.5
+  },
+  "attack": {
+    "TargetMessage": "Abil/TargetMessage/attack",
+    "MaxAttackSpeedMultiplier": 128,
+    "MinAttackSpeedMultiplier": 0.25
+  },
+  "SCVHarvest": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CancelableArray": [
+      "ApproachResource",
+      "WaitAtResource"
+    ]
+  },
+  "ProbeHarvest": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CancelableArray": [
+      "ApproachResource",
+      "WaitAtResource"
+    ]
+  },
+  "AttackWarpPrism": {
+    "SmartFilters": "-;Self,Player,Ally,Neutral,Enemy",
+    "TargetMessage": "Abil/TargetMessage/AttackWarpPrism",
+    "MaxAttackSpeedMultiplier": 128,
+    "AbilSetId": "",
+    "MinAttackSpeedMultiplier": 0.25,
+    "CmdButtonArray": {
+      "Flags": 0
+    },
+    "AcquireFilters": "-;Self,Player,Ally,Neutral,Enemy"
+  },
+  "que1": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "QueueSize": 1
+  },
+  "que5": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "QueueSize": 5
+  },
+  "que5CancelToSelection": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "AbilSetId": "QueueCancelToSelection",
+    "QueueSize": 5
+  },
+  "que5LongBlend": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "QueueSize": 5
+  },
+  "que5Addon": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "QueueSize": 5
+  },
+  "BuildInProgress": null,
+  "Repair": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "InheritAttackPriorityArray": [
+      "Prep",
+      "Cast",
+      "Channel"
+    ],
+    "AutoCastAcquireLevel": "Defensive",
+    "TargetFilters": [
+      "Mechanical,Visible;Self,Enemy,Missile,UnderConstruction,Dead,Hidden",
+      "Mechanical,Visible;Self,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Hallucination"
+    ],
+    "RangeSlop": 0.2,
+    "AutoCastRange": 7,
+    "AbilSetId": "Repair",
+    "Marker": {
+      "MismatchFlags": 0,
+      "MatchFlags": 0
+    },
+    "UseMarkerArray": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": [
+      "AutoCast",
+      "AutoCastOffOwnerLeave",
+      0,
+      "ReExecutable",
+      "Smart",
+      "PassengerAcquirePassengers"
+    ],
+    "DefaultError": "RequiresRepairTarget",
+    "AutoCastFilters": "Visible;Neutral,Enemy"
+  },
+  "TerranBuild": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "FidgetDelayMax": 8.5,
+    "FidgetDelayMin": 6.5,
+    "InfoArray": [
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "ValidatorArray": "HasVespene",
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "ValidatorArray": "HasVespene",
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      }
+    ],
+    "ConstructionMover": "Construction",
+    "FlagArray": [
+      "Interruptible",
+      "PeonDisableCollision"
+    ]
+  },
+  "RavenBuild": {
+    "InfoArray": {
+      "Cooldown": null,
+      "Button": null
+    },
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "Range": 5,
+    "FlagArray": [
+      0
+    ]
+  },
+  "Stimpack": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "InfoTooltipPriority": 1,
+    "AbilSetId": "Stimpack",
+    "Cost": [
+      {
+        "Vital": 10
+      },
+      {
+        "Cooldown": null
+      }
+    ],
+    "Flags": "Transient"
+  },
+  "GhostCloak": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": [
+      {
+        "Flags": "ToSelection"
+      },
+      {
+        "Flags": "ToSelection"
+      }
+    ],
+    "AbilSetId": "Clok",
+    "BehaviorArray": [
+      "GhostCloak"
+    ],
+    "Cost": {
+      "Vital": 25
+    },
+    "Flags": [
+      "Toggle",
+      "Transient"
+    ]
+  },
+  "Snipe": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "Effect": "SnipeDamage",
+    "CastIntroTime": 0.5,
+    "TargetFilters": "Biological,Visible;Self,Structure,Destructible,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 10,
+    "Marker": {
+      "MatchFlags": [
+        0,
+        "CasterUnit"
+      ]
+    },
+    "Cost": {
+      "Vital": 25
+    }
+  },
+  "MedivacHeal": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "AcquireAttackers": 1,
+    "TargetSorts": {
+      "SortArray": [
+        "TSAlliancePassive",
+        "TSLifeFraction",
+        "TSDistance"
+      ]
+    },
+    "AutoCastAcquireLevel": "Defensive",
+    "TargetFilters": [
+      "Biological,Visible;Self,Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable",
+      "Biological,Visible;Self,Enemy,Structure,Missile,Dead,Hidden,Invulnerable"
+    ],
+    "Range": 4,
+    "Arc": 14.9963,
+    "AutoCastRange": 6,
+    "SmartValidatorArray": [
+      "healSmartTargetFilters",
+      "NotWarpingIn"
+    ],
+    "UseMarkerArray": [
+      0,
+      0
+    ],
+    "AutoCastValidatorArray": [
+      "healCasterMinEnergy",
+      "NotWarpingIn"
+    ],
+    "CmdButtonArray": null,
+    "Flags": [
+      "AllowMovement",
+      "AutoCast",
+      "AutoCastOn",
+      "NoDeceleration",
+      "ReExecutable",
+      "Smart"
+    ],
+    "DefaultError": "RequiresHealTarget",
+    "AutoCastFilters": "Visible;Neutral,Enemy,Missile,Stasis,Dead,Invulnerable"
+  },
+  "SiegeMode": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "InfoArray": [
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 0.5
+          },
+          {
+            "DurationArray": [
+              0.5,
+              3.5417
+            ]
+          },
+          {
+            "DurationArray": 0.5
+          },
+          {
+            "DurationArray": 0.5
+          },
+          {
+            "DurationArray": [
+              0.5,
+              3.5417
+            ]
+          }
+        ]
+      },
+      {
+        "SectionArray": {
+          "EffectArray": "SiegeTankMorphDisableDummyWeaponAB"
+        }
+      }
+    ],
+    "AbilSetId": "SiegeMode",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": [
+      "SuppressMovement",
+      0
+    ]
+  },
+  "Unsiege": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "InfoArray": [
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 3.5417
+          },
+          {
+            "DurationArray": 3.5417
+          }
+        ]
+      },
+      {
+        "SectionArray": {
+          "EffectArray": "SiegeTankUnmorphDisableDummyWeaponAB"
+        }
+      }
+    ],
+    "AbilSetId": "Unsieged",
+    "CmdButtonArray": null,
+    "Flags": [
+      "IgnoreFacing",
+      "SuppressMovement"
+    ]
+  },
+  "BansheeCloak": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": [
+      {
+        "Flags": "ToSelection"
+      },
+      {
+        "Flags": "ToSelection"
+      }
+    ],
+    "AbilSetId": "Clok",
+    "BehaviorArray": [
+      "BansheeCloak"
+    ],
+    "Cost": {
+      "Vital": 25
+    },
+    "Flags": [
+      "Toggle",
+      "Transient"
+    ]
+  },
+  "MedivacTransport": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
+    "Flags": "CargoDeath",
+    "MaxCargoCount": 8,
+    "TargetFilters": "Visible;Self,Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden",
+    "AbilSetId": "ULdM",
+    "TotalCargoSpace": 8,
+    "CmdButtonArray": [
+      null,
+      {
+        "Flags": [
+          "Hidden",
+          "ToSelection"
+        ]
+      },
+      null,
+      {
+        "Flags": "Hidden"
+      },
+      {
+        "Flags": "Hidden"
+      }
+    ],
+    "MaxCargoSize": 8,
+    "UnloadPeriod": 1
+  },
+  "ScannerSweep": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "CursorEffect": "ScannerSweep",
+    "Range": 500,
+    "Arc": 360,
+    "Cost": {
+      "Vital": 50
+    },
+    "Flags": [
+      0,
+      "Transient"
+    ]
+  },
+  "Yamato": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "UninterruptibleArray": [
+      "Prep",
+      "Cast",
+      "Channel",
+      "Finish"
+    ],
+    "PrepTime": 3,
+    "ValidatedArray": [
+      0,
+      0
+    ],
+    "InterruptCost": {
+      "Cooldown": null
+    },
+    "ProgressButtonArray": "YamatoGun",
+    "RangeSlop": 10,
+    "Range": 10,
+    "ShowProgressArray": "Prep",
+    "CancelEffect": "BattlecruiserYamatoCD",
+    "Cost": [
+      {
+        "Cooldown": null,
+        "Vital": 125
+      },
+      {
+        "Cooldown": null,
+        "Vital": 0
+      }
+    ],
+    "Flags": [
+      "AllowMovement",
+      "NoDeceleration",
+      0,
+      "IgnoreOrderPlayerIdInStageValidate"
+    ]
+  },
+  "AssaultMode": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 2.34
+        },
+        {
+          "DurationArray": [
+            0.533,
+            1.2
+          ]
+        },
+        {
+          "DurationArray": 2.34
+        }
+      ]
+    },
+    "AbilSetId": "AssaultMode",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": [
+      "IgnoreFacing",
+      0,
+      0
+    ]
+  },
+  "FighterMode": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 2.333
+        },
+        {
+          "DurationArray": 1.5
+        },
+        {
+          "DurationArray": [
+            0.6,
+            0.85
+          ]
+        },
+        {
+          "DurationArray": 2.333
+        }
+      ]
+    },
+    "AbilSetId": "FighterMode",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": "IgnoreFacing"
+  },
+  "BunkerTransport": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "LoadValidatorArray": "RequiresTerran",
+    "TargetFilters": "Biological,Visible;Ally,Neutral,Enemy,Dead,Hidden",
+    "Range": 0,
+    "LoadCargoBehavior": "BunkerWeaponRangeBonus",
+    "AbilSetId": "ULdS",
+    "TotalCargoSpace": 4,
+    "CmdButtonArray": [
+      null,
+      {
+        "Flags": "ToSelection"
+      },
+      {
+        "Flags": "Hidden"
+      },
+      {
+        "Flags": "Hidden"
+      },
+      {
+        "Flags": "Hidden"
+      }
+    ],
+    "MaxCargoSize": 2,
+    "MaxCargoCount": 4
+  },
+  "CommandCenterTransport": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "DeathUnloadEffect": "RemoveCommandCenterCargo",
+    "UnloadCargoEffect": "CCUnloadDummy",
+    "SearchRadius": 8,
+    "Flags": [
+      0,
+      0
+    ],
+    "LoadValidatorArray": "CommandCenterTransportCombine",
+    "LoadCargoEffect": "CCLoadDummy",
+    "LoadCargoBehavior": "CCTransportDummy",
+    "AbilSetId": "ULdS",
+    "TotalCargoSpace": 5,
+    "CmdButtonArray": [
+      {
+        "Flags": "Hidden"
+      },
+      {
+        "Flags": "ToSelection"
+      },
+      {
+        "Flags": "Hidden"
+      },
+      {
+        "Flags": "Hidden"
+      },
+      null
+    ],
+    "MaxCargoSize": 1,
+    "MaxCargoCount": 5
+  },
+  "CommandCenterLiftOff": {
+    "Name": "Abil/Name/CommandCenterLiftOff"
+  },
+  "CommandCenterLand": {
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 2
+        },
+        {
+          "EffectArray": "CommandStructureAutoRally"
+        }
+      ]
+    },
+    "Name": "Abil/Name/CommandCenterLand"
+  },
+  "BarracksAddOns": {
+    "InfoArray": [
+      {
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      },
+      {
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      }
+    ],
+    "BuildMorphAbil": "BarracksLiftOff",
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Name": "Abil/Name/BarracksAddOns"
+  },
+  "FactoryAddOns": {
+    "InfoArray": [
+      {
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      },
+      {
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      }
+    ],
+    "BuildMorphAbil": "FactoryLiftOff",
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Name": "Abil/Name/FactoryAddOns"
+  },
+  "StarportAddOns": {
+    "InfoArray": [
+      {
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      },
+      {
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      }
+    ],
+    "BuildMorphAbil": "StarportLiftOff",
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Name": "Abil/Name/StarportAddOns"
+  },
+  "FactoryLiftOff": {
+    "ValidatorArray": "AddonIsNotWorking",
+    "Name": "Abil/Name/FactoryLiftOff"
+  },
+  "FactoryLand": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": 2
+      }
+    },
+    "Name": "Abil/Name/FactoryLand"
+  },
+  "StarportLiftOff": {
+    "ValidatorArray": "AddonIsNotWorking",
+    "Name": "Abil/Name/StarportLiftOff"
+  },
+  "StarportLand": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": 2
+      }
+    },
+    "Name": "Abil/Name/StarportLand"
+  },
+  "CommandCenterTrain": {
+    "InfoArray": {
+      "Unit": "SCV",
+      "Button": {
+        "Flags": "ToSelection"
+      }
+    },
+    "Alert": "TrainWorkerComplete",
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "BarracksLiftOff": {
+    "ValidatorArray": "AddonIsNotWorking",
+    "Name": "Abil/Name/BarracksLiftOff"
+  },
+  "BarracksLand": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": 2
+      }
+    },
+    "Name": "Abil/Name/BarracksLand"
+  },
+  "SupplyDepotLower": {
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "EffectArray": "SupplyDepotMorphingApplyBehavior"
+        },
+        {
+          "DurationArray": 1.3
+        },
+        {
+          "DurationArray": 1.3
+        },
+        {
+          "DurationArray": 1.3
+        },
+        {
+          "DurationArray": 1.3
+        }
+      ]
+    },
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "CmdButtonArray": null
+  },
+  "SupplyDepotRaise": {
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "EffectArray": "SupplyDepotMorphingApplyBehavior"
+        },
+        {
+          "DurationArray": 1.3
+        },
+        {
+          "DurationArray": 1.3
+        },
+        {
+          "DurationArray": 1.3
+        }
+      ]
+    },
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Flags": [
+      0,
+      "MoveBlockers"
+    ],
+    "CmdButtonArray": null
+  },
+  "BarracksTrain": {
+    "InfoArray": [
+      {
+        "Unit": "Marine",
+        "Button": null
+      },
+      {
+        "Unit": "Reaper",
+        "Button": null
+      },
+      {
+        "Unit": "Ghost",
+        "Button": null
+      },
+      {
+        "Unit": "Marauder",
+        "Button": null
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "FactoryTrain": {
+    "InfoArray": [
+      {
+        "Unit": "SiegeTank",
+        "Button": null
+      },
+      {
+        "Unit": "Thor",
+        "Button": null
+      },
+      {
+        "Unit": "Hellion",
+        "Button": null
+      },
+      null
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Range": 3,
+    "Activity": "UI/Building"
+  },
+  "StarportTrain": {
+    "InfoArray": [
+      {
+        "Unit": "Medivac",
+        "Button": null
+      },
+      {
+        "Unit": "Banshee",
+        "Button": null
+      },
+      {
+        "Unit": "Raven",
+        "Button": null
+      },
+      {
+        "Unit": "Battlecruiser",
+        "Button": null
+      },
+      {
+        "Unit": "VikingFighter",
+        "Button": null
+      },
+      {
+        "Button": null
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Activity": "UI/Building"
+  },
+  "EngineeringBayResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": null
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "MercCompoundResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          50,
+          50
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "ArmSiloWithNuke": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Launch": "ReleaseAtSource",
+    "InfoArray": {
+      "Button": null
+    },
+    "CalldownEffect": "Nuke",
+    "Flags": "BestUnit"
+  },
+  "BarracksTechLabResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          50,
+          50
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "FactoryTechLabResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          75,
+          75
+        ]
+      },
+      {
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          75,
+          75
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "StarportTechLabResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          125,
+          125
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          50,
+          50
+        ],
+        "Button": null
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "GhostAcademyResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          0,
+          0
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "ArmoryResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          175,
+          175
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          175,
+          175
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          175,
+          175
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          175,
+          175
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          175,
+          175
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": null
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "ProtossBuild": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "InfoArray": [
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "ValidatorArray": "HasVespene",
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      null,
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      }
+    ],
+    "ConstructionMover": "Construction",
+    "FlagArray": [
+      "PeonDisableCollision",
+      0
+    ],
+    "EffectArray": [
+      "WorkerVespeneBugOnProbeAB"
+    ]
+  },
+  "WarpPrismTransport": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "UnloadCargoEffect": "WarpPrismUnloadCargoSetEffect",
+    "Flags": "CargoDeath",
+    "LoadCargoEffect": "WarpPrismLoadDummy",
+    "MaxCargoCount": 8,
+    "Range": 5,
+    "AbilSetId": "ULdM",
+    "TotalCargoSpace": 8,
+    "CmdButtonArray": [
+      null,
+      {
+        "Flags": "ToSelection"
+      },
+      null,
+      {
+        "Flags": "Hidden"
+      },
+      {
+        "Flags": "Hidden"
+      }
+    ],
+    "MaxCargoSize": 8,
+    "UnloadPeriod": 1
+  },
+  "GatewayTrain": {
+    "InfoArray": [
+      {
+        "Unit": "Zealot",
+        "Button": null
+      },
+      {
+        "Unit": "Stalker",
+        "Button": null
+      },
+      {
+        "Unit": "HighTemplar",
+        "Button": null
+      },
+      {
+        "Unit": "DarkTemplar",
+        "Button": null
+      },
+      {
+        "Unit": "Sentry",
+        "Button": null
+      },
+      null
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+    "Activity": "UI/Warping"
+  },
+  "StargateTrain": {
+    "InfoArray": [
+      {
+        "Unit": "Phoenix",
+        "Button": null
+      },
+      {
+        "Unit": "Carrier",
+        "Button": null
+      },
+      {
+        "Unit": "VoidRay",
+        "Button": null
+      },
+      null
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+    "Activity": "UI/Warping"
+  },
+  "RoboticsFacilityTrain": {
+    "InfoArray": [
+      {
+        "Unit": "WarpPrism",
+        "Button": null
+      },
+      {
+        "Unit": "Observer",
+        "Button": null
+      },
+      {
+        "Unit": "Colossus",
+        "Button": null
+      },
+      {
+        "Unit": "Immortal",
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      null
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+    "Activity": "UI/Warping"
+  },
+  "NexusTrain": {
+    "InfoArray": {
+      "Unit": "Probe",
+      "Button": null
+    },
+    "Alert": "TrainWorkerComplete",
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+    "Activity": "UI/Warping"
+  },
+  "PsiStorm": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "CursorEffect": "PsiStormSearch",
+    "Effect": "PsiStormPersistent",
+    "CastOutroTime": 0.5,
+    "Range": [
+      9,
+      8
+    ],
+    "Cost": [
+      {
+        "Cooldown": null,
+        "Vital": 75
+      },
+      {
+        "Cooldown": null,
+        "Vital": 75
+      }
+    ],
+    "Flags": "AllowMovement"
+  },
+  "HangarQueue5": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "Flags": "Passive",
+    "QueueSize": 5
+  },
+  "BroodLordQueue2": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+    "Flags": [
+      "Hidden",
+      "Passive"
+    ],
+    "QueueSize": 2
+  },
+  "CarrierHangar": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "InfoArray": {
+      "Charge": null,
+      "Flags": [
+        "AutoBuild",
+        "LeashRetarget",
+        "AutoBuildOn"
+      ],
+      "Button": {
+        "Flags": "ToSelection"
+      }
+    },
+    "EffectArray": [
+      "InterceptorFate"
+    ],
+    "Leash": 12,
+    "AbilSetId": "CarrierHanger",
+    "Alert": "TrainComplete",
+    "Flags": "Retarget"
+  },
+  "ForgeResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": null
+      }
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures"
+  },
+  "RoboticsBayResearch": {
+    "InfoArray": [
+      null,
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      null,
+      null,
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures"
+  },
+  "TemplarArchivesResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          0,
+          0
+        ],
+        "Button": {
+          "Flags": 0
+        }
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures"
+  },
+  "ZergBuild": {
+    "InfoArray": [
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "ValidatorArray": "HasVespene",
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      null,
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      },
+      {
+        "Button": null
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "FlagArray": [
+      "PeonHide",
+      "PeonKillFinish",
+      0
+    ]
+  },
+  "DroneHarvest": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CancelableArray": [
+      "ApproachResource",
+      "WaitAtResource"
+    ]
+  },
+  "evolutionchamberresearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures"
+  },
+  "UpgradeToLair": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "LairUpgrade",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 80
+        },
+        {
+          "DurationArray": 80
+        },
+        {
+          "DurationArray": 80
+        }
+      ]
+    },
+    "Activity": "UI/Mutating",
+    "Alert": "MorphComplete_Zerg",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "BestUnit",
+      "Birth",
+      "DisableAbils",
+      "FastBuild",
+      "Interruptible",
+      "Produce",
+      "ShowProgress"
+    ]
+  },
+  "UpgradeToHive": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "HiveUpgrade",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 100
+        },
+        {
+          "DurationArray": 100
+        },
+        {
+          "DurationArray": 100
+        }
+      ]
+    },
+    "Activity": "UI/Mutating",
+    "Alert": "MorphComplete_Zerg",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "BestUnit",
+      "Birth",
+      "DisableAbils",
+      "FastBuild",
+      "Interruptible",
+      "Produce",
+      "ShowProgress"
+    ]
+  },
+  "UpgradeToGreaterSpire": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 100
+        },
+        {
+          "DurationArray": 100
+        },
+        {
+          "DurationArray": 5
+        },
+        {
+          "DurationArray": 100
+        }
+      ]
+    },
+    "Activity": "UI/Mutating",
+    "Alert": "MorphComplete_Zerg",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "BestUnit",
+      "DisableAbils",
+      "FastBuild",
+      "Interruptible",
+      "Produce",
+      "ShowProgress"
+    ]
+  },
+  "LairResearch": {
+    "InfoArray": [
+      null,
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": [
+            "ShowInGlossary",
+            "ToSelection"
+          ]
+        }
+      },
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": {
+          "Flags": [
+            "ShowInGlossary",
+            "ToSelection"
+          ]
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": [
+            "ShowInGlossary",
+            "ToSelection"
+          ]
+        }
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures"
+  },
+  "SpawningPoolResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          200,
+          200
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures"
+  },
+  "HydraliskDenResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": 0
+        }
+      },
+      {
+        "Resource": [
+          75,
+          75
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          0,
+          0
+        ],
+        "Button": {
+          "Flags": 0
+        }
+      },
+      {
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures"
+  },
+  "SpireResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      },
+      {
+        "Resource": [
+          175,
+          175
+        ],
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      },
+      {
+        "Resource": [
+          175,
+          175
+        ],
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": {
+          "Flags": "ToSelection"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures"
+  },
+  "LarvaTrain": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "InfoArray": [
+      {
+        "Unit": "Drone",
+        "Button": null
+      },
+      {
+        "Unit": [
+          "Zergling",
+          "Zergling"
+        ],
+        "Button": null
+      },
+      {
+        "Unit": "Overlord",
+        "Button": null
+      },
+      {
+        "Unit": "Hydralisk",
+        "Button": null
+      },
+      {
+        "Unit": "Mutalisk",
+        "Button": null
+      },
+      {
+        "Unit": "Ultralisk",
+        "Button": null
+      },
+      {
+        "Unit": [
+          "Baneling",
+          null
+        ],
+        "Button": null
+      },
+      {
+        "Unit": "Roach",
+        "Button": null
+      },
+      {
+        "Unit": "Infestor",
+        "Button": null
+      },
+      {
+        "Unit": "Corruptor",
+        "Button": null
+      }
+    ],
+    "MorphUnit": "Egg",
+    "Range": 4,
+    "Activity": "UI/Morphing",
+    "Flags": [
+      "DisableCollision",
+      "KillOnCancel",
+      "KillOnFinish",
+      "Select",
+      0
+    ]
+  },
+  "MorphToBroodLord": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "GuardianAspect",
+    "InfoArray": [
+      null,
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 33.8332
+          },
+          {
+            "DurationArray": 33.8332
+          },
+          {
+            "EffectArray": "PostMorphHeal",
+            "DurationArray": 33.8332
+          }
+        ]
+      }
+    ],
+    "Alert": "MorphComplete_Zerg",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "BestUnit",
+      "Birth",
+      "DisableAbils",
+      "FastBuild",
+      "Interruptible",
+      "Produce",
+      "ShowProgress",
+      "SuppressMovement",
+      "IgnoreFacing",
+      0
+    ],
+    "AbilClassEnableArray": [
+      "CAbilMove",
+      "CAbilStop"
+    ]
+  },
+  "BurrowBanelingDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": "Duration"
+        },
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": "Delay"
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "CmdButtonArray": [
+      {
+        "Flags": [
+          "ToSelection",
+          0
+        ]
+      },
+      null
+    ],
+    "Flags": [
+      "Interruptible",
+      "IgnoreFacing",
+      0,
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowBanelingUp": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": "Duration"
+      }
+    },
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 1,
+    "AbilSetId": "BrwU",
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "AutoCast",
+      "IgnoreFacing",
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ],
+    "AutoCastFilters": "Ground,Visible;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden"
+  },
+  "BurrowDroneDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.333
+        },
+        {
+          "DurationArray": 0.8332
+        },
+        {
+          "DurationArray": 1.1665
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "CmdButtonArray": [
+      {
+        "Flags": [
+          "ToSelection",
+          0
+        ]
+      },
+      null
+    ],
+    "Flags": [
+      "Interruptible",
+      "IgnoreFacing",
+      0,
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowDroneUp": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": "Duration"
+        },
+        {
+          "DurationArray": 0.4443
+        }
+      ]
+    },
+    "AbilSetId": "BrwU",
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "IgnoreFacing",
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowHydraliskDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.333
+        },
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": 1.166
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "CmdButtonArray": [
+      {
+        "Flags": [
+          "ToSelection",
+          0
+        ]
+      },
+      null
+    ],
+    "Flags": [
+      "Interruptible",
+      "IgnoreFacing",
+      0,
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowHydraliskUp": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": [
+      {
+        "SectionArray": [
+          {
+            "DurationArray": "Duration"
+          },
+          {
+            "DurationArray": 0.4443
+          }
+        ]
+      },
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 0.5
+          },
+          {
+            "DurationArray": 0.2221
+          }
+        ]
+      }
+    ],
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 5,
+    "AbilSetId": "BrwU",
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "AutoCast",
+      "IgnoreFacing",
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ],
+    "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"
+  },
+  "BurrowRoachDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": 0.5556
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "CmdButtonArray": [
+      {
+        "Flags": [
+          "ToSelection",
+          0
+        ]
+      },
+      null
+    ],
+    "Flags": [
+      "Interruptible",
+      "IgnoreFacing",
+      0,
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowRoachUp": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 0.4443
+        },
+        {
+          "DurationArray": 0.4443
+        }
+      ]
+    },
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 2,
+    "AbilSetId": "BrwU",
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "AutoCast",
+      "IgnoreFacing",
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ],
+    "AutoCastFilters": "Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"
+  },
+  "BurrowZerglingDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.333
+        },
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": "Delay"
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "CmdButtonArray": [
+      {
+        "Flags": "ToSelection"
+      },
+      null
+    ],
+    "Flags": [
+      "Interruptible",
+      "IgnoreFacing",
+      0,
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowZerglingUp": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": [
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 1.0625
+          },
+          {
+            "DurationArray": "Duration"
+          }
+        ]
+      },
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 0
+          },
+          {
+            "DurationArray": 0.5
+          }
+        ]
+      }
+    ],
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 2,
+    "AbilSetId": "BrwU",
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "AutoCast",
+      "IgnoreFacing",
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ],
+    "AutoCastFilters": "Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"
+  },
+  "BurrowInfestorTerranDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.333
+        },
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": "Delay"
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "Interruptible",
+      "IgnoreFacing",
+      0,
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowInfestorTerranUp": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": "Duration"
+      }
+    },
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 5,
+    "AbilSetId": "BrwU",
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "AutoCast",
+      "IgnoreFacing",
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ],
+    "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"
+  },
+  "RedstoneLavaCritterBurrow": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.333
+        },
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": "Delay"
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "Cost": {
+      "Cooldown": "Abil/BurrowZerglingDown",
+      "Charge": "Abil/BurrowZerglingDown"
+    },
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": [
+      "IgnoreFacing",
+      0,
+      "SuppressMovement"
+    ]
+  },
+  "RedstoneLavaCritterInjuredBurrow": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.333
+        },
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": "Delay"
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "Cost": {
+      "Cooldown": "Abil/BurrowZerglingDown",
+      "Charge": "Abil/BurrowZerglingDown"
+    },
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": [
+      "IgnoreFacing",
+      0,
+      "SuppressMovement"
+    ]
+  },
+  "RedstoneLavaCritterUnburrow": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.333
+        },
+        {
+          "DurationArray": 0.0556
+        }
+      ]
+    },
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 2,
+    "AbilSetId": "BrwU",
+    "Cost": {
+      "Cooldown": "Abil/BurrowZerglingUp",
+      "Charge": "Abil/BurrowZerglingUp"
+    },
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": "IgnoreFacing"
+  },
+  "RedstoneLavaCritterInjuredUnburrow": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.333
+        },
+        {
+          "DurationArray": 0.0556
+        }
+      ]
+    },
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 2,
+    "AbilSetId": "BrwU",
+    "Cost": {
+      "Cooldown": "Abil/BurrowZerglingUp",
+      "Charge": "Abil/BurrowZerglingUp"
+    },
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": "IgnoreFacing"
+  },
+  "OverlordTransport": {
+    "LoadTransportBehavior": "OverlordTransport",
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
+    "Flags": "CargoDeath",
+    "AbilSetId": "ULdM",
+    "TotalCargoSpace": 8,
+    "CmdButtonArray": [
+      null,
+      {
+        "Flags": [
+          "Hidden",
+          "ToSelection"
+        ]
+      },
+      null,
+      {
+        "Flags": "Hidden"
+      },
+      {
+        "Flags": "Hidden"
+      }
+    ],
+    "MaxCargoSize": 8,
+    "UnloadPeriod": 1,
+    "MaxCargoCount": 8
+  },
+  "Mergeable": {
+    "Cancelable": 0,
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units"
+  },
+  "Warpable": {
+    "PowerUserBehavior": "PowerUserWarpable",
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units"
+  },
+  "WarpGateTrain": {
+    "InfoArray": [
+      {
+        "Cooldown": [
+          null,
+          null
+        ],
+        "Button": null
+      },
+      {
+        "Cooldown": null,
+        "Button": null
+      },
+      {
+        "Cooldown": null,
+        "Button": null
+      },
+      {
+        "Cooldown": null,
+        "Button": null
+      },
+      {
+        "Cooldown": null,
+        "Button": null
+      },
+      null
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+    "Flags": 0
+  },
+  "BurrowQueenDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 0.8332
+        },
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": 0.6665
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "CmdButtonArray": [
+      {
+        "Flags": [
+          "ToSelection",
+          0
+        ]
+      },
+      null
+    ],
+    "Flags": [
+      "Interruptible",
+      "IgnoreFacing",
+      0,
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowQueenUp": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": "Duration"
+        },
+        {
+          "DurationArray": 0.4443
+        }
+      ]
+    },
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 5,
+    "AbilSetId": "BrwU",
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "AutoCast",
+      "IgnoreFacing",
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ],
+    "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"
+  },
+  "NydusCanalTransport": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
+    "Flags": [
+      "CargoDeath",
+      "PlayerHold",
+      0
+    ],
+    "LoadValidatorArray": "NotSpawnling",
+    "UnloadPeriod": 0.5,
+    "LoadPeriod": 0.25,
+    "Range": 0.5,
+    "AbilSetId": "ULdS",
+    "TotalCargoSpace": 1020,
+    "CmdButtonArray": [
+      null,
+      {
+        "Flags": "ToSelection"
+      },
+      {
+        "Flags": "Hidden"
+      },
+      {
+        "Flags": "Hidden"
+      },
+      {
+        "Flags": "Hidden"
+      }
+    ],
+    "MaxCargoSize": 8,
+    "InitialUnloadDelay": 0.5,
+    "MaxCargoCount": 255,
+    "MaxUnloadRange": 4
+  },
+  "Blink": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Range": 500,
+    "Arc": 360,
+    "AbilSetId": "Blnk",
+    "Cost": {
+      "Cooldown": null
+    },
+    "Flags": [
+      0,
+      0
+    ]
+  },
+  "BurrowInfestorDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 0.5
+        },
+        {
+          "DurationArray": 0.5
+        },
+        {
+          "DurationArray": 0.5
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "CmdButtonArray": [
+      {
+        "Flags": [
+          "ToSelection",
+          0
+        ]
+      },
+      null
+    ],
+    "Flags": [
+      "Interruptible",
+      "IgnoreFacing",
+      0,
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowInfestorUp": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": [
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 0.5
+          },
+          {
+            "DurationArray": 0.5
+          }
+        ]
+      },
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 0.875
+          },
+          {
+            "DurationArray": 0.875
+          }
+        ]
+      }
+    ],
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 5,
+    "AbilSetId": "BrwU",
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "IgnoreFacing",
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ],
+    "AutoCastFilters": "Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"
+  },
+  "MorphToOverseer": {
+    "ValidatorArray": "HasNoCargo",
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "OverseerMut",
+    "InfoArray": [
+      null,
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 16.6665
+          },
+          {
+            "DurationArray": 16.6665
+          },
+          {
+            "EffectArray": "PostMorphHeal",
+            "DurationArray": 16.6665
+          }
+        ]
+      }
+    ],
+    "Cost": {
+      "Cooldown": "Abil/OverseerMut",
+      "Charge": "Abil/OverseerMut"
+    },
+    "Alert": "MorphComplete_Zerg",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "BestUnit",
+      "DisableAbils",
+      "FastBuild",
+      "Interruptible",
+      "Produce",
+      "ShowProgress",
+      "SuppressMovement",
+      "IgnoreFacing",
+      0
+    ],
+    "AbilClassEnableArray": [
+      "CAbilMove",
+      "CAbilStop"
+    ]
+  },
+  "UpgradeToPlanetaryFortress": {
+    "ValidatorArray": "HasNoCargo",
+    "EditorCategories": "Race:Terran,AbilityorEffectType:MorphsandBurrows",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 50
+        },
+        {
+          "DurationArray": 50
+        },
+        {
+          "DurationArray": 50
+        }
+      ]
+    },
+    "Alert": "UpgradeComplete",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "BestUnit",
+      "Birth",
+      "DisableAbils",
+      "FastBuild",
+      "Interruptible",
+      "Produce",
+      "ShowProgress"
+    ]
+  },
+  "InfestationPitResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures"
+  },
+  "BanelingNestResearch": {
+    "InfoArray": {
+      "Resource": [
+        100,
+        100
+      ],
+      "Button": {
+        "Flags": "ShowInGlossary"
+      }
+    },
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures"
+  },
+  "BurrowUltraliskDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": [
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 2
+          },
+          {
+            "DurationArray": 1.5
+          },
+          {
+            "DurationArray": 1.8332
+          }
+        ]
+      },
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 1.25
+          },
+          {
+            "DurationArray": 0.9375
+          },
+          {
+            "DurationArray": 1.1457
+          }
+        ]
+      }
+    ],
+    "AbilSetId": "BrwD",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "IgnoreFacing",
+      0,
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ]
+  },
+  "BurrowUltraliskUp": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowUp",
+    "InfoArray": [
+      {
+        "SectionArray": {
+          "DurationArray": 2
+        }
+      },
+      {
+        "SectionArray": {
+          "DurationArray": 1.25
+        }
+      }
+    ],
+    "AutoCastCountMin": 1,
+    "AutoCastRange": 2,
+    "AbilSetId": "BrwU",
+    "AutoCastValidatorArray": "TargetNotChangeling",
+    "CmdButtonArray": {
+      "Flags": [
+        "ToSelection",
+        0
+      ]
+    },
+    "Flags": [
+      "AutoCast",
+      "IgnoreFacing",
+      "SuppressMovement",
+      "IgnoreFood",
+      "IgnoreUnitCost"
+    ],
+    "AutoCastFilters": "Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"
+  },
+  "UpgradeToOrbital": {
+    "ValidatorArray": "HasNoCargo",
+    "EditorCategories": "Race:Terran,AbilityorEffectType:MorphsandBurrows",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 35
+        },
+        {
+          "DurationArray": 35
+        },
+        {
+          "DurationArray": 35
+        }
+      ]
+    },
+    "Alert": "UpgradeComplete",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "BestUnit",
+      "Birth",
+      "DisableAbils",
+      "FastBuild",
+      "Interruptible",
+      "Produce",
+      "ShowProgress"
+    ]
+  },
+  "UpgradeToWarpGate": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 10
+        },
+        {
+          "DurationArray": 10
+        },
+        {
+          "DurationArray": 10
+        }
+      ]
+    },
+    "AutoCastCountMax": 500,
+    "AutoCastRange": 5,
+    "AutoCastValidatorArray": "NotHaveUpgradeToWarpGateAutoCastDisabler",
+    "Alert": "MorphComplete",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "BestUnit",
+      "Birth",
+      "DisableAbils",
+      "FastBuild",
+      "Produce",
+      "ShowProgress",
+      "AutoCast",
+      "AutoCastOn"
+    ]
+  },
+  "MorphBackToGateway": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
+    "InfoArray": [
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 10
+          },
+          {
+            "DurationArray": 10
+          },
+          {
+            "DurationArray": 10
+          }
+        ]
+      },
+      {
+        "SectionArray": {
+          "EffectArray": "UpgradeToWarpGateAutoCastDisabler"
+        }
+      }
+    ],
+    "Cost": {
+      "Cooldown": null
+    },
+    "Alert": "TransformationComplete",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "BestUnit",
+      "Birth",
+      "DisableAbils",
+      "FastBuild",
+      "ShowProgress"
+    ]
+  },
+  "OrbitalLiftOff": {
+    "Name": "Abil/Name/OrbitalLiftOff"
+  },
+  "OrbitalCommandLand": {
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 2
+        },
+        {
+          "EffectArray": "CommandStructureAutoRally"
+        }
+      ]
+    },
+    "Name": "Abil/Name/OrbitalCommandLand"
+  },
+  "ForceField": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "CursorEffect": "ForceFieldPlacement",
+    "Range": 9,
+    "Marker": {
+      "MatchFlags": [
+        0,
+        "CasterUnit"
+      ]
+    },
+    "PlaceUnit": "ForceField",
+    "Cost": {
+      "Vital": 50
+    }
+  },
+  "PhasingMode": {
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.5
+        },
+        {
+          "DurationArray": 1.5
+        }
+      ]
+    },
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
+    "Flags": [
+      "BestUnit",
+      "IgnoreFacing"
+    ],
+    "CmdButtonArray": [
+      null,
+      null
+    ]
+  },
+  "TransportMode": {
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": 1.5
+        },
+        {
+          "DurationArray": 1.5
+        }
+      ]
+    },
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
+    "Flags": [
+      "BestUnit",
+      "IgnoreFacing"
+    ],
+    "CmdButtonArray": [
+      null,
+      null
+    ]
+  },
+  "FusionCoreResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      }
+    ],
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures"
+  },
+  "CyberneticsCoreResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          175,
+          175
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          175,
+          175
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          250,
+          250
+        ],
+        "Button": null
+      },
+      {
+        "Resource": [
+          50,
+          50
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      null
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures"
+  },
+  "TwilightCouncilResearch": {
+    "InfoArray": [
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          150,
+          150
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Button": null
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      {
+        "Resource": [
+          100,
+          100
+        ],
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      }
+    ],
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures"
+  },
+  "TacNukeStrike": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CancelableArray": "Channel",
+    "CursorEffect": "NukeDamage",
+    "UninterruptibleArray": "Channel",
+    "ValidatedArray": 0,
+    "CalldownEffect": "Nuke",
+    "Effect": "Nuke",
+    "TechPlayer": "Owner",
+    "Range": 12,
+    "AlertArray": "CalldownLaunch",
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "FinishTime": 2.5,
+    "AINotifyEffect": "Nuke"
+  },
+  "SalvageBunkerRefund": {
+    "Cost": [
+      {
+        "Resource": -100
+      },
+      {
+        "Resource": -75
+      }
+    ],
+    "Name": "Abil/Name/SalvageBunkerRefund"
+  },
+  "SalvageBunker": {
+    "Name": "Abil/Name/SalvageBunker"
+  },
+  "EMP": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "CursorEffect": "EMPSearch",
+    "UninterruptibleArray": [
+      "Prep",
+      "Finish"
+    ],
+    "PrepTime": 0.01,
+    "Effect": "EMPLaunchMissile",
+    "Range": 10,
+    "Cost": {
+      "Vital": 75
+    },
+    "FinishTime": [
+      2.5,
+      0.0625
+    ],
+    "AINotifyEffect": "EMPLaunchMissile"
+  },
+  "Vortex": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "CursorEffect": "VortexSearchArea",
+    "Effect": "VortexCreatePersistentInitial",
+    "Range": 9,
+    "Arc": 360,
+    "Cost": {
+      "Cooldown": "Vortex",
+      "Vital": 100
+    },
+    "Flags": 0,
+    "AutoCastFilters": "Visible;Self,Player,Ally"
+  },
+  "TrainQueen": {
+    "InfoArray": {
+      "Unit": "Queen",
+      "Button": {
+        "Flags": "ToSelection"
+      }
+    },
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+    "Activity": "UI/Spawning"
+  },
+  "BurrowCreepTumorDown": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "BurrowDown",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": "Duration"
+        },
+        {
+          "DurationArray": 0.5556
+        },
+        {
+          "DurationArray": "Delay"
+        }
+      ]
+    },
+    "AbilSetId": "BrwD",
+    "Cost": {
+      "Cooldown": null
+    },
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": [
+      "Automatic",
+      "IgnoreFacing",
+      "SuppressMovement"
+    ]
+  },
+  "Transfusion": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "UninterruptibleArray": "Finish",
+    "Effect": "TransfusionImpactSet",
+    "Flags": [
+      "AllowMovement",
+      "NoDeceleration"
+    ],
+    "CastIntroTime": 0.2,
+    "TargetFilters": "Biological,Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden,Invulnerable",
+    "Range": 7,
+    "Cost": {
+      "Cooldown": null,
+      "Vital": 50
+    },
+    "FinishTime": 0.8
+  },
+  "TechLabMorph": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": 0.125
+      }
+    },
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Flags": "Automatic",
+    "CmdButtonArray": null
+  },
+  "BarracksTechLabMorph": {
+    "InfoArray": null,
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Flags": [
+      "Automatic",
+      "Produce"
+    ],
+    "CmdButtonArray": null
+  },
+  "FactoryTechLabMorph": {
+    "InfoArray": null,
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Flags": [
+      "Automatic",
+      "Produce"
+    ],
+    "CmdButtonArray": null
+  },
+  "StarportTechLabMorph": {
+    "InfoArray": null,
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Flags": [
+      "Automatic",
+      "Produce"
+    ],
+    "CmdButtonArray": null
+  },
+  "ReactorMorph": {
+    "InfoArray": {
+      "SectionArray": {
+        "DurationArray": 0.125
+      }
+    },
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Flags": "Automatic",
+    "CmdButtonArray": null
+  },
+  "BarracksReactorMorph": {
+    "InfoArray": null,
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Flags": [
+      "Automatic",
+      "Produce"
+    ],
+    "CmdButtonArray": null
+  },
+  "FactoryReactorMorph": {
+    "InfoArray": null,
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Flags": [
+      "Automatic",
+      "Produce"
+    ],
+    "CmdButtonArray": null
+  },
+  "StarportReactorMorph": {
+    "InfoArray": null,
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+    "Flags": [
+      "Automatic",
+      "Produce"
+    ],
+    "CmdButtonArray": null
+  },
+  "AttackRedirect": {
+    "Abil": "attack",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    }
+  },
+  "StimpackRedirect": {
+    "Abil": "Stimpack",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "AbilSetId": "Stimpack"
+  },
+  "StimpackMarauderRedirect": {
+    "Abil": "StimpackMarauder",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "AbilSetId": "Stimpack"
+  },
+  "burrowedStop": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "StopRedirect": {
+    "Abil": "stop",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    }
+  },
+  "GenerateCreep": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "Flags": [
+      "Toggle",
+      "Transient"
+    ],
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "BehaviorArray": [
+      "makeCreep2x2Overlord"
+    ]
+  },
+  "QueenBuild": {
+    "InfoArray": [
+      {
+        "Vital": 25,
+        "Button": {
+          "Flags": "ShowInGlossary"
+        }
+      },
+      null,
+      null
+    ],
+    "Alert": "BuildComplete_Zerg",
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "FlagArray": [
+      0,
+      0
+    ]
+  },
+  "SpineCrawlerUproot": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "Uproot",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": "Duration"
+        },
+        {
+          "DurationArray": "Duration"
+        },
+        {
+          "DurationArray": "Delay"
+        }
+      ]
+    },
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": "FastBuild"
+  },
+  "SporeCrawlerUproot": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "Uproot",
+    "InfoArray": {
+      "SectionArray": [
+        {
+          "DurationArray": "Duration"
+        },
+        {
+          "DurationArray": "Duration"
+        },
+        {
+          "DurationArray": "Delay"
+        }
+      ]
+    },
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": "FastBuild"
+  },
+  "SpineCrawlerRoot": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "Root",
+    "ProgressButton": "SpineCrawlerRoot",
+    "InfoArray": [
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 6
+          },
+          {
+            "DurationArray": 6
+          },
+          {
+            "DurationArray": 6
+          },
+          {
+            "DurationArray": 6
+          }
+        ]
+      },
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 12
+          },
+          {
+            "DurationArray": 12
+          },
+          {
+            "DurationArray": 12
+          },
+          {
+            "DurationArray": 12
+          }
+        ]
+      }
+    ],
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "DisableAbils",
+      "FastBuild",
+      "Interruptible",
+      0,
+      "ShowProgress"
+    ]
+  },
+  "SporeCrawlerRoot": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
+    "ActorKey": "Root",
+    "ProgressButton": "SporeCrawlerRoot",
+    "InfoArray": [
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 6
+          },
+          {
+            "DurationArray": 6
+          },
+          {
+            "DurationArray": 6
+          },
+          {
+            "DurationArray": 6
+          }
+        ]
+      },
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 4
+          },
+          {
+            "DurationArray": 4
+          },
+          {
+            "DurationArray": 4
+          },
+          {
+            "DurationArray": 4
+          }
+        ]
+      }
+    ],
+    "CmdButtonArray": [
+      null,
+      null
+    ],
+    "Flags": [
+      "DisableAbils",
+      "FastBuild",
+      "Interruptible",
+      0,
+      "ShowProgress"
+    ]
+  },
+  "CreepTumorBuild": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "InfoArray": {
+      "Cooldown": null,
+      "Charge": {
+        "CountMax": 1,
+        "Location": "Unit",
+        "CountStart": 1,
+        "CountUse": 1
+      },
+      "Button": null
+    },
+    "Range": 10,
+    "Alert": "BuildComplete_Zerg",
+    "SharedFlags": [
+      "RegisterChargeEvent",
+      "RegisterCooldownEvent"
+    ]
+  },
+  "BuildAutoTurret": {
+    "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "ErrorAlert": "Error",
+    "Effect": "AutoTurretRelease",
+    "InfoTooltipPriority": 21,
+    "Placeholder": "AutoTurret",
+    "Range": [
+      3,
+      2
+    ],
+    "Marker": "Abil/AutoTurret",
+    "ProducedUnitArray": "AutoTurret",
+    "PlaceUnit": "AutoTurret",
+    "Cost": {
+      "Cooldown": null,
+      "Charge": "Abil/AutoTurret",
+      "Vital": 50
+    },
+    "Flags": "AllowMovement",
+    "AINotifyEffect": "AutoTurret"
+  },
+  "ArchonWarp": {
+    "Info": {
+      "Resource": [
+        0,
+        0
+      ]
+    },
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "Flags": "IgnoreUnitCost",
+    "CmdButtonArray": [
+      {
+        "Flags": "ToSelection"
+      },
+      null
+    ]
+  },
+  "BuildNydusCanal": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "InfoArray": {
+      "Cooldown": null,
+      "Button": null
+    },
+    "FlagArray": [
+      0
+    ],
+    "EffectArray": [
+      "NydusAlertDummy"
+    ],
+    "Range": 500
+  },
+  "BroodLordHangar": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "InfoArray": {
+      "Flags": [
+        "AutoBuild",
+        "AutoBuildOn",
+        "External"
+      ],
+      "Button": null
+    },
+    "EffectArray": [
+      "InterceptorFate",
+      "KillsToCaster"
+    ],
+    "Leash": 9,
+    "ExternalAngle": [
+      -149.9853,
+      149.9853
+    ],
+    "Alert": "",
+    "Flags": [
+      0,
+      "Retarget"
+    ]
+  },
+  "Charge": {
+    "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "AbilCmd": "attack,Execute",
+    "AutoCastValidatorArray": "CasterNotHoldingPosition",
+    "Cost": {
+      "Cooldown": null
+    },
+    "Flags": [
+      "AutoCast",
+      "AutoCastOn"
+    ]
+  },
+  "TowerCapture": {
+    "TargetFilters": "Ground;Self,Structure,Missile,Uncommandable,Buried,Dead,Hidden",
+    "Range": 2.5,
+    "AutoCastRange": 2.5,
+    "CmdButtonArray": null,
+    "Flags": [
+      "AutoCast",
+      "Exclusive",
+      "SameCliffLevel",
+      "ShareVision"
+    ]
+  },
+  "HerdInteract": {
+    "Effect": "HerdInteractSet",
+    "TargetSorts": {
+      "SortArray": "TSRandom"
+    },
+    "Range": 6,
+    "AutoCastRange": 6,
+    "Cost": {
+      "Cooldown": null
+    },
+    "CmdButtonArray": null,
+    "Flags": [
+      "AutoCast",
+      "AutoCastOn",
+      "ReExecutable"
+    ],
+    "AutoCastFilters": "Ground;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"
+  },
+  "Frenzy": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "Effect": "FrenzyLaunchMissile",
+    "TargetFilters": "Biological,Visible;Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 9,
+    "Cost": [
+      {
+        "Cooldown": "",
+        "Charge": "",
+        "Vital": 50
+      },
+      {
+        "Vital": 25
+      }
+    ],
+    "AINotifyEffect": ""
+  },
+  "Contaminate": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "TargetFilters": "Structure,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "Range": 3,
+    "Cost": [
+      {
+        "Cooldown": "",
+        "Charge": "",
+        "Vital": 75
+      },
+      {
+        "Vital": 125
+      }
+    ],
+    "Flags": [
+      "AllowMovement",
+      "NoDeceleration"
+    ],
+    "AINotifyEffect": ""
+  },
+  "Shatter": {
+    "Effect": "Suicide",
+    "Range": 0.1,
+    "AutoCastRange": 1,
+    "Arc": 360,
+    "CmdButtonArray": null,
+    "Flags": [
+      "AutoCast",
+      "AutoCastOn",
+      "ReExecutable"
+    ],
+    "AutoCastFilters": "Ground,Massive;Structure,Missile,Destructible,Stasis,Dead,Hidden,Hallucination"
+  },
+  "InfestedTerransLayEgg": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+    "CmdButtonArray": null,
+    "Effect": "InfestedTerransLayEggPersistant",
+    "ProducedUnitArray": "InfestedTerran",
+    "Cost": {
+      "Vital": 100
+    },
+    "Flags": [
+      "AllowMovement",
+      "BestUnit",
+      "NoDeceleration"
+    ]
+  },
+  "que5Passive": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "Flags": "Passive",
+    "QueueSize": 5
+  },
+  "que5PassiveCancelToSelection": {
+    "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+    "AbilSetId": "QueueCancelToSelection",
+    "CmdButtonArray": {
+      "Flags": "ToSelection"
+    },
+    "Flags": "Passive",
+    "QueueSize": 5
+  },
+  "MorphToGhostAlternate": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "InfoArray": null,
+    "Alert": "NoAlert",
+    "CmdButtonArray": null,
+    "Flags": [
+      "Transient",
+      0
+    ]
+  },
+  "MorphToGhostNova": {
+    "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+    "InfoArray": null,
+    "Alert": "NoAlert",
+    "CmdButtonArray": null,
+    "Flags": [
+      "Transient",
+      0
+    ]
+  }
+}
