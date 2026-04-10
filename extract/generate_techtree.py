@@ -31,6 +31,21 @@ def parse_race(categories: str, race_field: str | None = None) -> str | None:
     return None
 
 
+def extract_unit_build_ability(abil_array: list) -> str | None:
+    """Extract build ability name from unit's AbilArray."""
+    if not abil_array:
+        return None
+    for abil in abil_array:
+        if not abil:
+            continue
+        name = abil if isinstance(abil, str) else abil.get("Link")
+        if not name:
+            continue
+        if name.endswith("Build") or name.endswith("AddOns"):
+            return name
+    return None
+
+
 def extract_train_building(abil_array: list) -> str | None:
     if not abil_array:
         return None
@@ -81,6 +96,28 @@ def extract_build_requirements(abil_data: dict) -> dict[str, list[str]]:
                         part = "AttachedTechLab"
                     reqs.append(part)
                 result[unit] = reqs
+    return result
+
+
+def extract_buildable_units(abil_data: dict) -> dict[str, list[str]]:
+    """Extract build ability -> list of buildable units from *Build and *AddOns abilities in AbilData."""
+    result = {}
+    for name, data in abil_data.items():
+        if not isinstance(data, dict):
+            continue
+        if not (name.endswith("Build") or name.endswith("AddOns")):
+            continue
+        info_array = data.get("InfoArray", [])
+        if isinstance(info_array, dict):
+            info_array = [info_array] if info_array else []
+        buildables = []
+        for item in info_array:
+            if isinstance(item, dict) and "Unit" in item:
+                unit = item.get("Unit")
+                if unit and isinstance(unit, str):
+                    buildables.append(unit)
+        if buildables:
+            result[name] = sorted(set(buildables))
     return result
 
 
@@ -169,6 +206,7 @@ def main():
 
     trainable_units = extract_trainable_units(abil_data)
     researchable_upgrades = extract_researchable_upgrades(abil_data)
+    buildable_units = extract_buildable_units(abil_data)
 
     for name, data in unit_data.items():
         if not isinstance(data, dict):
@@ -215,6 +253,7 @@ def main():
         elif is_unit:
             abil_array = data.get("AbilArray", [])
             train_building = extract_train_building(abil_array)
+            build_ability = extract_unit_build_ability(abil_array)
             requires = set()
 
             if train_building:
@@ -233,6 +272,9 @@ def main():
                 "requires": sorted(requires),
                 "race": race,
             }
+
+            if build_ability and build_ability in buildable_units:
+                units[name]["builds"] = buildable_units[build_ability]
 
     for name, data in upgrade_data.items():
         if not isinstance(data, dict):
@@ -271,6 +313,9 @@ def main():
                 "requires": requires,
                 "race": race,
             }
+
+            if name in buildable_units:
+                abilities[name]["builds"] = buildable_units[name]
 
     tech_tree = {
         "structures": structures,

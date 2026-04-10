@@ -29,6 +29,10 @@
       "requires": []
     },
     "BarracksAddOns": {
+      "builds": [
+        "BarracksReactor",
+        "BarracksTechLab"
+      ],
       "race": "Terran",
       "requires": []
     },
@@ -219,6 +223,9 @@
       "requires": []
     },
     "CreepTumorBuild": {
+      "builds": [
+        "CreepTumor"
+      ],
       "race": "Zerg",
       "requires": []
     },
@@ -247,6 +254,10 @@
       "requires": []
     },
     "FactoryAddOns": {
+      "builds": [
+        "FactoryReactor",
+        "FactoryTechLab"
+      ],
       "race": "Terran",
       "requires": []
     },
@@ -507,6 +518,23 @@
       "requires": []
     },
     "ProtossBuild": {
+      "builds": [
+        "Assimilator",
+        "CyberneticsCore",
+        "DarkShrine",
+        "FleetBeacon",
+        "Forge",
+        "Gateway",
+        "Nexus",
+        "PhotonCannon",
+        "Pylon",
+        "RoboticsBay",
+        "RoboticsFacility",
+        "ShieldBattery",
+        "Stargate",
+        "TemplarArchive",
+        "TwilightCouncil"
+      ],
       "race": "Protoss",
       "requires": []
     },
@@ -515,6 +543,9 @@
       "requires": []
     },
     "QueenBuild": {
+      "builds": [
+        "CreepTumorQueen"
+      ],
       "race": "Zerg",
       "requires": []
     },
@@ -535,6 +566,9 @@
       "requires": []
     },
     "RavenBuild": {
+      "builds": [
+        "AutoTurret"
+      ],
       "race": "Terran",
       "requires": []
     },
@@ -659,6 +693,10 @@
       "requires": []
     },
     "StarportAddOns": {
+      "builds": [
+        "StarportReactor",
+        "StarportTechLab"
+      ],
       "race": "Terran",
       "requires": []
     },
@@ -715,10 +753,31 @@
       "requires": []
     },
     "TerranAddOns": {
+      "builds": [
+        "Reactor",
+        "TechLab"
+      ],
       "race": "Terran",
       "requires": []
     },
     "TerranBuild": {
+      "builds": [
+        "Armory",
+        "Barracks",
+        "Bunker",
+        "CommandCenter",
+        "EngineeringBay",
+        "Factory",
+        "FusionCore",
+        "GhostAcademy",
+        "MercCompound",
+        "MissileTurret",
+        "Refinery",
+        "RefineryRich",
+        "SensorTower",
+        "Starport",
+        "SupplyDepot"
+      ],
       "race": "Terran",
       "requires": []
     },
@@ -807,6 +866,23 @@
       "requires": []
     },
     "ZergBuild": {
+      "builds": [
+        "BanelingNest",
+        "CreepTumor",
+        "EvolutionChamber",
+        "Extractor",
+        "Hatchery",
+        "HydraliskDen",
+        "InfestationPit",
+        "LurkerDenMP",
+        "NydusNetwork",
+        "RoachWarren",
+        "SpawningPool",
+        "SpineCrawler",
+        "Spire",
+        "SporeCrawler",
+        "UltraliskCavern"
+      ],
       "race": "Zerg",
       "requires": []
     },
@@ -1566,6 +1642,23 @@
       ]
     },
     "Drone": {
+      "builds": [
+        "BanelingNest",
+        "CreepTumor",
+        "EvolutionChamber",
+        "Extractor",
+        "Hatchery",
+        "HydraliskDen",
+        "InfestationPit",
+        "LurkerDenMP",
+        "NydusNetwork",
+        "RoachWarren",
+        "SpawningPool",
+        "SpineCrawler",
+        "Spire",
+        "SporeCrawler",
+        "UltraliskCavern"
+      ],
       "race": "Zerg",
       "requires": []
     },
@@ -1729,10 +1822,30 @@
       "requires": []
     },
     "Probe": {
+      "builds": [
+        "Assimilator",
+        "CyberneticsCore",
+        "DarkShrine",
+        "FleetBeacon",
+        "Forge",
+        "Gateway",
+        "Nexus",
+        "PhotonCannon",
+        "Pylon",
+        "RoboticsBay",
+        "RoboticsFacility",
+        "ShieldBattery",
+        "Stargate",
+        "TemplarArchive",
+        "TwilightCouncil"
+      ],
       "race": "Protoss",
       "requires": []
     },
     "Queen": {
+      "builds": [
+        "CreepTumorQueen"
+      ],
       "race": "Zerg",
       "requires": [
         "SpawningPool"
@@ -1782,6 +1895,23 @@
       "requires": []
     },
     "SCV": {
+      "builds": [
+        "Armory",
+        "Barracks",
+        "Bunker",
+        "CommandCenter",
+        "EngineeringBay",
+        "Factory",
+        "FusionCore",
+        "GhostAcademy",
+        "MercCompound",
+        "MissileTurret",
+        "Refinery",
+        "RefineryRich",
+        "SensorTower",
+        "Starport",
+        "SupplyDepot"
+      ],
       "race": "Terran",
       "requires": []
     },
