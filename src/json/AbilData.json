@@ -397,8 +397,8 @@
           100
         ],
         "Time": 160,
-        "Upgrade": "TerranVehicleArmorsLevel1",
-        "index": "Research3"
+        "Upgrade": "TerranShipArmorsLevel1",
+        "index": "Research9"
       },
       {
         "Button": {
@@ -411,8 +411,8 @@
           100
         ],
         "Time": 160,
-        "Upgrade": "TerranShipArmorsLevel1",
-        "index": "Research9"
+        "Upgrade": "TerranVehicleArmorsLevel1",
+        "index": "Research3"
       },
       {
         "Button": {
@@ -887,6 +887,20 @@
     "InfoArray": [
       {
         "Button": {
+          "DefaultButtonFace": "ResearchCombatDrugs",
+          "Flags": 0,
+          "Requirements": "LearnCombatDrugs"
+        },
+        "Resource": [
+          0,
+          0
+        ],
+        "Time": 80,
+        "Upgrade": "CombatDrugs",
+        "index": "Research4"
+      },
+      {
+        "Button": {
           "DefaultButtonFace": "ResearchPunisherGrenades",
           "Flags": "ShowInGlossary",
           "Requirements": "LearnPunisherGrenades",
@@ -929,20 +943,6 @@
         "Time": 140,
         "Upgrade": "Stimpack",
         "index": "Research1"
-      },
-      {
-        "Button": {
-          "DefaultButtonFace": "ResearchCombatDrugs",
-          "Flags": 0,
-          "Requirements": "LearnCombatDrugs"
-        },
-        "Resource": [
-          0,
-          0
-        ],
-        "Time": 80,
-        "Upgrade": "CombatDrugs",
-        "index": "Research4"
       }
     ]
   },
@@ -1063,12 +1063,12 @@
   "Beacon": {
     "CmdButtonArray": [
       {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
-      },
-      {
         "DefaultButtonFace": "BeaconMove",
         "index": "Move"
+      },
+      {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
       }
     ]
   },
@@ -1323,6 +1323,15 @@
     "AbilSetId": "ULdS",
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "BunkerLoad",
+        "index": "Load"
+      },
+      {
+        "DefaultButtonFace": "BunkerUnloadAll",
+        "Flags": "ToSelection",
+        "index": "UnloadAll"
+      },
+      {
         "Flags": "Hidden",
         "index": "LoadAll"
       },
@@ -1333,15 +1342,6 @@
       {
         "Flags": "Hidden",
         "index": "UnloadUnit"
-      },
-      {
-        "DefaultButtonFace": "BunkerUnloadAll",
-        "Flags": "ToSelection",
-        "index": "UnloadAll"
-      },
-      {
-        "DefaultButtonFace": "BunkerLoad",
-        "index": "Load"
       }
     ],
     "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
@@ -1360,8 +1360,8 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          "ToSelection",
-          0
+          0,
+          "ToSelection"
         ],
         "Requirements": "UseBurrow",
         "index": "Execute"
@@ -1535,8 +1535,8 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          "ToSelection",
-          0
+          0,
+          "ToSelection"
         ],
         "Requirements": "UseBurrow",
         "index": "Execute"
@@ -1615,8 +1615,8 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          "ToSelection",
-          0
+          0,
+          "ToSelection"
         ],
         "Requirements": "UseBurrow",
         "index": "Execute"
@@ -1679,6 +1679,20 @@
     ],
     "InfoArray": [
       {
+        "RandomDelayMax": 0.1125,
+        "SectionArray": [
+          {
+            "DurationArray": 0.2221,
+            "index": "Stats"
+          },
+          {
+            "DurationArray": 0.5,
+            "index": "Actor"
+          }
+        ],
+        "index": 0
+      },
+      {
         "RandomDelayMax": 0.5,
         "SectionArray": [
           {
@@ -1691,20 +1705,6 @@
           }
         ],
         "Unit": "Hydralisk"
-      },
-      {
-        "RandomDelayMax": 0.1125,
-        "SectionArray": [
-          {
-            "DurationArray": 0.5,
-            "index": "Actor"
-          },
-          {
-            "DurationArray": 0.2221,
-            "index": "Stats"
-          }
-        ],
-        "index": 0
       }
     ]
   },
@@ -1715,8 +1715,8 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          "ToSelection",
-          0
+          0,
+          "ToSelection"
         ],
         "Requirements": "UseBurrow",
         "index": "Execute"
@@ -1849,20 +1849,6 @@
     ],
     "InfoArray": [
       {
-        "RandomDelayMax": 0.5,
-        "SectionArray": [
-          {
-            "DurationArray": 0.5,
-            "index": "Actor"
-          },
-          {
-            "DurationArray": 0.5,
-            "index": "Stats"
-          }
-        ],
-        "Unit": "Infestor"
-      },
-      {
         "RandomDelayMax": 0.125,
         "SectionArray": [
           {
@@ -1875,6 +1861,20 @@
           }
         ],
         "index": 0
+      },
+      {
+        "RandomDelayMax": 0.5,
+        "SectionArray": [
+          {
+            "DurationArray": 0.5,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 0.5,
+            "index": "Stats"
+          }
+        ],
+        "Unit": "Infestor"
       }
     ]
   },
@@ -1882,12 +1882,12 @@
     "ActorKey": "BurrowDown",
     "CmdButtonArray": [
       {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
-      },
-      {
         "DefaultButtonFace": "BurrowDown",
         "index": "Execute"
+      },
+      {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -1902,16 +1902,16 @@
         "RandomDelayMax": 0.25,
         "SectionArray": [
           {
-            "DurationArray": 2,
-            "index": "Actor"
-          },
-          {
             "DurationArray": 1.8332,
             "index": "Collide"
           },
           {
             "DurationArray": 1.8332,
             "index": "Stats"
+          },
+          {
+            "DurationArray": 2,
+            "index": "Actor"
           }
         ],
         "Unit": "LurkerMPBurrowed"
@@ -1962,8 +1962,8 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          "ToSelection",
-          0
+          0,
+          "ToSelection"
         ],
         "Requirements": "UseBurrow",
         "index": "Execute"
@@ -2046,8 +2046,8 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          "ToSelection",
-          0
+          0,
+          "ToSelection"
         ],
         "Requirements": "UseBurrow",
         "index": "Execute"
@@ -2129,8 +2129,8 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          "ToSelection",
-          0
+          0,
+          "ToSelection"
         ],
         "Requirements": "UseBurrow",
         "index": "Execute"
@@ -2227,29 +2227,8 @@
     ],
     "InfoArray": [
       {
-        "SectionArray": [
-          {
-            "DurationArray": 1.25,
-            "index": "Actor"
-          },
-          {
-            "DurationArray": 0.9375,
-            "index": "Collide"
-          },
-          {
-            "DurationArray": 1.1457,
-            "index": "Stats"
-          }
-        ],
-        "index": 0
-      },
-      {
         "RandomDelayMax": 0.25,
         "SectionArray": [
-          {
-            "DurationArray": 2,
-            "index": "Actor"
-          },
           {
             "DurationArray": 1.5,
             "index": "Collide"
@@ -2257,9 +2236,30 @@
           {
             "DurationArray": 1.8332,
             "index": "Stats"
+          },
+          {
+            "DurationArray": 2,
+            "index": "Actor"
           }
         ],
         "Unit": "UltraliskBurrowed"
+      },
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 0.9375,
+            "index": "Collide"
+          },
+          {
+            "DurationArray": 1.1457,
+            "index": "Stats"
+          },
+          {
+            "DurationArray": 1.25,
+            "index": "Actor"
+          }
+        ],
+        "index": 0
       }
     ]
   },
@@ -2288,19 +2288,19 @@
     ],
     "InfoArray": [
       {
-        "SectionArray": {
-          "DurationArray": 1.25,
-          "index": "Actor"
-        },
-        "index": 0
-      },
-      {
         "RandomDelayMax": 0.5,
         "SectionArray": {
           "DurationArray": 2,
           "index": "Actor"
         },
         "Unit": "Ultralisk"
+      },
+      {
+        "SectionArray": {
+          "DurationArray": 1.25,
+          "index": "Actor"
+        },
+        "index": 0
       }
     ]
   },
@@ -2375,12 +2375,12 @@
         "RandomDelayMax": 0.1125,
         "SectionArray": [
           {
-            "DurationArray": 0.5625,
-            "index": "Abils"
-          },
-          {
             "DurationArray": 0.5,
             "index": "Actor"
+          },
+          {
+            "DurationArray": 0.5625,
+            "index": "Abils"
           }
         ],
         "index": 0
@@ -2389,12 +2389,12 @@
         "RandomDelayMax": 0.5,
         "SectionArray": [
           {
-            "DurationArray": 1.0625,
-            "index": "Abils"
-          },
-          {
             "DurationArray": "Duration",
             "index": "Actor"
+          },
+          {
+            "DurationArray": 1.0625,
+            "index": "Abils"
           }
         ],
         "Unit": "Zergling"
@@ -2635,6 +2635,15 @@
     "AbilSetId": "ULdS",
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "CommandCenterLoad",
+        "index": "LoadAll"
+      },
+      {
+        "DefaultButtonFace": "CommandCenterUnloadAll",
+        "Flags": "ToSelection",
+        "index": "UnloadAll"
+      },
+      {
         "Flags": "Hidden",
         "index": "Load"
       },
@@ -2645,15 +2654,6 @@
       {
         "Flags": "Hidden",
         "index": "UnloadUnit"
-      },
-      {
-        "DefaultButtonFace": "CommandCenterUnloadAll",
-        "Flags": "ToSelection",
-        "index": "UnloadAll"
-      },
-      {
-        "DefaultButtonFace": "CommandCenterLoad",
-        "index": "LoadAll"
       }
     ],
     "DeathUnloadEffect": "RemoveCommandCenterCargo",
@@ -3160,6 +3160,10 @@
   "DigesterTransport": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "LoadDigester",
+        "index": "Load"
+      },
+      {
         "Flags": "Hidden",
         "State": "Restricted",
         "index": "LoadAll"
@@ -3178,10 +3182,6 @@
         "Flags": "Hidden",
         "State": "Restricted",
         "index": "UnloadUnit"
-      },
-      {
-        "DefaultButtonFace": "LoadDigester",
-        "index": "Load"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
@@ -3385,6 +3385,36 @@
     "InfoArray": [
       {
         "Button": {
+          "DefaultButtonFace": "ResearchHiSecAutoTracking",
+          "Flags": "ShowInGlossary",
+          "Requirements": "LearnTerranDefenseRangeBonus",
+          "State": "Restricted"
+        },
+        "Resource": [
+          100,
+          100
+        ],
+        "Time": 80,
+        "Upgrade": "HiSecAutoTracking",
+        "index": "Research1"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "ResearchNeosteelFrame",
+          "Flags": "ShowInGlossary",
+          "Requirements": "LearnNeosteelFrame",
+          "State": "Restricted"
+        },
+        "Resource": [
+          100,
+          100
+        ],
+        "Time": 110,
+        "Upgrade": "NeosteelFrame",
+        "index": "Research6"
+      },
+      {
+        "Button": {
           "DefaultButtonFace": "TerranInfantryArmorLevel1",
           "Requirements": "LearnTerranInfantryArmor1",
           "State": "Restricted"
@@ -3466,36 +3496,6 @@
         "Time": 220,
         "Upgrade": "TerranInfantryWeaponsLevel3",
         "index": "Research5"
-      },
-      {
-        "Button": {
-          "DefaultButtonFace": "ResearchHiSecAutoTracking",
-          "Flags": "ShowInGlossary",
-          "Requirements": "LearnTerranDefenseRangeBonus",
-          "State": "Restricted"
-        },
-        "Resource": [
-          100,
-          100
-        ],
-        "Time": 80,
-        "Upgrade": "HiSecAutoTracking",
-        "index": "Research1"
-      },
-      {
-        "Button": {
-          "DefaultButtonFace": "ResearchNeosteelFrame",
-          "Flags": "ShowInGlossary",
-          "Requirements": "LearnNeosteelFrame",
-          "State": "Restricted"
-        },
-        "Resource": [
-          100,
-          100
-        ],
-        "Time": 110,
-        "Upgrade": "NeosteelFrame",
-        "index": "Research6"
       },
       {
         "Button": {
@@ -3957,19 +3957,6 @@
     "InfoArray": [
       {
         "Button": {
-          "DefaultButtonFace": "TempestRangeUpgrade",
-          "Requirements": "LearnTempestRangeUpgrade"
-        },
-        "Resource": [
-          200,
-          200
-        ],
-        "Time": 110,
-        "Upgrade": "TempestRangeUpgrade",
-        "index": "Research4"
-      },
-      {
-        "Button": {
           "DefaultButtonFace": "AnionPulseCrystals",
           "Flags": "ShowInGlossary",
           "Requirements": "LearnAnionPulseCrystals"
@@ -4013,20 +4000,6 @@
       },
       {
         "Button": {
-          "DefaultButtonFace": "TempestResearchGroundAttackUpgrade",
-          "Flags": "ShowInGlossary",
-          "Requirements": "LearnTempestGroundAttackUpgrade"
-        },
-        "Resource": [
-          150,
-          150
-        ],
-        "Time": 140,
-        "Upgrade": "TempestGroundAttackUpgrade",
-        "index": "Research6"
-      },
-      {
-        "Button": {
           "DefaultButtonFace": "ResearchVoidRaySpeedUpgrade",
           "Flags": 0,
           "Requirements": "LearnVoidRaySpeedUpgrade",
@@ -4039,6 +4012,33 @@
         "Time": 80,
         "Upgrade": "VoidRaySpeedUpgrade",
         "index": "Research1"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "TempestRangeUpgrade",
+          "Requirements": "LearnTempestRangeUpgrade"
+        },
+        "Resource": [
+          200,
+          200
+        ],
+        "Time": 110,
+        "Upgrade": "TempestRangeUpgrade",
+        "index": "Research4"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "TempestResearchGroundAttackUpgrade",
+          "Flags": "ShowInGlossary",
+          "Requirements": "LearnTempestGroundAttackUpgrade"
+        },
+        "Resource": [
+          150,
+          150
+        ],
+        "Time": 140,
+        "Upgrade": "TempestGroundAttackUpgrade",
+        "index": "Research6"
       }
     ]
   },
@@ -4264,19 +4264,6 @@
     "InfoArray": [
       {
         "Button": {
-          "DefaultButtonFace": "ResearchMedivacEnergyUpgrade",
-          "Requirements": "LearnCaduceusReactor"
-        },
-        "Resource": [
-          100,
-          100
-        ],
-        "Time": 70,
-        "Upgrade": "MedivacCaduceusReactor",
-        "index": "Research4"
-      },
-      {
-        "Button": {
           "DefaultButtonFace": "ResearchBattlecruiserEnergyUpgrade",
           "Flags": "ShowInGlossary",
           "Requirements": "LearnBattlecruiserEnergyUpgrade",
@@ -4304,6 +4291,19 @@
         "Time": 60,
         "Upgrade": "BattlecruiserEnableSpecializations",
         "index": "Research1"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "ResearchMedivacEnergyUpgrade",
+          "Requirements": "LearnCaduceusReactor"
+        },
+        "Resource": [
+          100,
+          100
+        ],
+        "Time": 70,
+        "Upgrade": "MedivacCaduceusReactor",
+        "index": "Research4"
       },
       {
         "Button": {
@@ -4392,13 +4392,13 @@
     ],
     "CmdButtonArray": [
       {
-        "DefaultButtonFace": "StopGenerateCreep",
-        "index": "Off"
-      },
-      {
         "DefaultButtonFace": "GenerateCreep",
         "Requirements": "HaveLair",
         "index": "On"
+      },
+      {
+        "DefaultButtonFace": "StopGenerateCreep",
+        "index": "Off"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
@@ -4901,20 +4901,6 @@
       },
       {
         "Button": {
-          "DefaultButtonFace": "ResearchLurkerRange",
-          "Flags": "ShowInGlossary",
-          "Requirements": "LearnLurkerRange"
-        },
-        "Resource": [
-          200,
-          200
-        ],
-        "Time": 110,
-        "Upgrade": "LurkerRange",
-        "index": "Research5"
-      },
-      {
-        "Button": {
           "DefaultButtonFace": "MuscularAugments",
           "Flags": 0,
           "Requirements": "LearnHydraliskSpeedUpgrade"
@@ -4926,6 +4912,20 @@
         "Time": 100,
         "Upgrade": "HydraliskSpeedUpgrade",
         "index": "Research4"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "ResearchLurkerRange",
+          "Flags": "ShowInGlossary",
+          "Requirements": "LearnLurkerRange"
+        },
+        "Resource": [
+          200,
+          200
+        ],
+        "Time": 110,
+        "Upgrade": "LurkerRange",
+        "index": "Research5"
       },
       {
         "Button": {
@@ -5290,6 +5290,15 @@
     ],
     "InfoArray": [
       {
+        "Alert": "TrainWorkerComplete",
+        "Button": {
+          "DefaultButtonFace": "Drone"
+        },
+        "Time": 17,
+        "Unit": "Drone",
+        "index": "Train1"
+      },
+      {
         "Button": {
           "DefaultButtonFace": ""
         },
@@ -5311,15 +5320,6 @@
         "Time": 40,
         "Unit": "Corruptor",
         "index": "Train12"
-      },
-      {
-        "Alert": "TrainWorkerComplete",
-        "Button": {
-          "DefaultButtonFace": "Drone"
-        },
-        "Time": 17,
-        "Unit": "Drone",
-        "index": "Train1"
       },
       {
         "Button": {
@@ -5525,15 +5525,15 @@
             "index": "Abils"
           },
           {
+            "DurationArray": 0.5,
+            "index": "Mover"
+          },
+          {
             "DurationArray": [
               0.5,
               1.5417
             ],
             "index": "Actor"
-          },
-          {
-            "DurationArray": 0.5,
-            "index": "Mover"
           },
           {
             "DurationArray": [
@@ -5566,15 +5566,15 @@
             "index": "Abils"
           },
           {
+            "DurationArray": 0.5,
+            "index": "Facing"
+          },
+          {
             "DurationArray": [
               0.5,
               3.5417
             ],
             "index": "Actor"
-          },
-          {
-            "DurationArray": 0.5,
-            "index": "Facing"
           },
           {
             "DurationArray": [
@@ -5638,8 +5638,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@1",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5657,8 +5657,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@10",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5676,8 +5676,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@11",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5695,8 +5695,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@12",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5714,8 +5714,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@13",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5733,8 +5733,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@14",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5752,8 +5752,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@2",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5771,8 +5771,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@3",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5790,8 +5790,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@4",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5809,8 +5809,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@5",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5828,8 +5828,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@6",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5847,8 +5847,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@7",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5866,8 +5866,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@8",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -5885,8 +5885,8 @@
         "Button": {
           "DefaultButtonFace": "LoadOutSpray@9",
           "Flags": [
-            "UseDefaultButton",
-            "CreateDefaultButton"
+            "CreateDefaultButton",
+            "UseDefaultButton"
           ]
         },
         "Charge": {
@@ -6108,8 +6108,17 @@
     ],
     "InfoArray": [
       {
+        "RandomDelayMax": "0.5",
+        "Unit": "LurkerMPEgg"
+      },
+      {
         "Score": 1,
         "SectionArray": [
+          {
+            "DurationArray": 33,
+            "EffectArray": "PostMorphHeal",
+            "index": "Stats"
+          },
           {
             "DurationArray": 33,
             "index": "Abils"
@@ -6117,18 +6126,9 @@
           {
             "DurationArray": 33,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 33,
-            "EffectArray": "PostMorphHeal",
-            "index": "Stats"
           }
         ],
         "Unit": "LurkerMP"
-      },
-      {
-        "RandomDelayMax": "0.5",
-        "Unit": "LurkerMPEgg"
       }
     ]
   },
@@ -6166,12 +6166,12 @@
         "RandomDelayMax": 0.5,
         "SectionArray": [
           {
-            "DurationArray": 1.333,
-            "index": "Actor"
-          },
-          {
             "DurationArray": 0.0556,
             "index": "Collide"
+          },
+          {
+            "DurationArray": 1.333,
+            "index": "Actor"
           }
         ],
         "Unit": "Hydralisk"
@@ -6181,16 +6181,16 @@
         "SectionArray": [
           {
             "DurationArray": 33,
+            "EffectArray": "PostMorphHeal",
+            "index": "Stats"
+          },
+          {
+            "DurationArray": 33,
             "index": "Abils"
           },
           {
             "DurationArray": 33,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 33,
-            "EffectArray": "PostMorphHeal",
-            "index": "Stats"
           }
         ],
         "Unit": "LurkerMP"
@@ -6471,6 +6471,14 @@
     "AbilSetId": "ULdM",
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "MedivacLoad",
+        "index": "Load"
+      },
+      {
+        "DefaultButtonFace": "MedivacUnloadAll",
+        "index": "UnloadAt"
+      },
+      {
         "Flags": "Hidden",
         "index": "LoadAll"
       },
@@ -6484,14 +6492,6 @@
           "ToSelection"
         ],
         "index": "UnloadAll"
-      },
-      {
-        "DefaultButtonFace": "MedivacLoad",
-        "index": "Load"
-      },
-      {
-        "DefaultButtonFace": "MedivacUnloadAll",
-        "index": "UnloadAt"
       }
     ],
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -6648,13 +6648,13 @@
     "Alert": "MorphComplete_Zerg",
     "CmdButtonArray": [
       {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
-      },
-      {
         "DefaultButtonFace": "Baneling",
         "Requirements": "HaveBanelingNest",
         "index": "Execute"
+      },
+      {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6678,16 +6678,16 @@
         "SectionArray": [
           {
             "DurationArray": 20,
+            "EffectArray": "PostMorphHeal",
+            "index": "Stats"
+          },
+          {
+            "DurationArray": 20,
             "index": "Abils"
           },
           {
             "DurationArray": 20,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 20,
-            "EffectArray": "PostMorphHeal",
-            "index": "Stats"
           }
         ],
         "Unit": "Baneling"
@@ -6706,13 +6706,13 @@
     "Alert": "MorphComplete_Zerg",
     "CmdButtonArray": [
       {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
-      },
-      {
         "DefaultButtonFace": "BroodLord",
         "Requirements": "HaveGreaterSpire",
         "index": "Execute"
+      },
+      {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6731,8 +6731,18 @@
     ],
     "InfoArray": [
       {
+        "RandomDelayMax": "0.001",
+        "RandomDelayMin": "0.001",
+        "Unit": "BroodLordCocoon"
+      },
+      {
         "Score": 1,
         "SectionArray": [
+          {
+            "DurationArray": 33.8332,
+            "EffectArray": "PostMorphHeal",
+            "index": "Stats"
+          },
           {
             "DurationArray": 33.8332,
             "index": "Abils"
@@ -6740,32 +6750,22 @@
           {
             "DurationArray": 33.8332,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 33.8332,
-            "EffectArray": "PostMorphHeal",
-            "index": "Stats"
           }
         ],
         "Unit": "BroodLord"
-      },
-      {
-        "RandomDelayMax": "0.001",
-        "RandomDelayMin": "0.001",
-        "Unit": "BroodLordCocoon"
       }
     ]
   },
   "MorphToCollapsiblePurifierTowerDebris": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "CollapsibleTowerDebris",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6781,13 +6781,13 @@
   "MorphToCollapsibleRockTowerDebris": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "CollapsibleTowerDebris",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6803,13 +6803,13 @@
   "MorphToCollapsibleRockTowerDebrisRampLeft": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "CollapsibleTowerDebris",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6825,13 +6825,13 @@
   "MorphToCollapsibleRockTowerDebrisRampLeftGreen": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "CollapsibleTowerDebris",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6847,13 +6847,13 @@
   "MorphToCollapsibleRockTowerDebrisRampRight": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "CollapsibleTowerDebris",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6869,13 +6869,13 @@
   "MorphToCollapsibleRockTowerDebrisRampRightGreen": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "CollapsibleTowerDebris",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6891,13 +6891,13 @@
   "MorphToCollapsibleTerranTowerDebris": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "CollapsibleTowerDebris",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6913,13 +6913,13 @@
   "MorphToCollapsibleTerranTowerDebrisRampLeft": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "CollapsibleTowerDebris",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6935,13 +6935,13 @@
   "MorphToCollapsibleTerranTowerDebrisRampRight": {
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "CollapsibleTowerDebris",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -6989,8 +6989,18 @@
     ],
     "InfoArray": [
       {
+        "RandomDelayMax": "0.001",
+        "RandomDelayMin": "0.001",
+        "Unit": "DevourerCocoonMP"
+      },
+      {
         "Score": 1,
         "SectionArray": [
+          {
+            "DurationArray": 40,
+            "EffectArray": "PostMorphHeal",
+            "index": "Stats"
+          },
           {
             "DurationArray": 40,
             "index": "Abils"
@@ -6998,19 +7008,9 @@
           {
             "DurationArray": 40,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 40,
-            "EffectArray": "PostMorphHeal",
-            "index": "Stats"
           }
         ],
         "Unit": "DevourerMP"
-      },
-      {
-        "RandomDelayMax": "0.001",
-        "RandomDelayMin": "0.001",
-        "Unit": "DevourerCocoonMP"
       }
     ]
   },
@@ -7079,8 +7079,18 @@
     ],
     "InfoArray": [
       {
+        "RandomDelayMax": "0.001",
+        "RandomDelayMin": "0.001",
+        "Unit": "GuardianCocoonMP"
+      },
+      {
         "Score": 1,
         "SectionArray": [
+          {
+            "DurationArray": 40,
+            "EffectArray": "PostMorphHeal",
+            "index": "Stats"
+          },
           {
             "DurationArray": 40,
             "index": "Abils"
@@ -7088,19 +7098,9 @@
           {
             "DurationArray": 40,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 40,
-            "EffectArray": "PostMorphHeal",
-            "index": "Stats"
           }
         ],
         "Unit": "GuardianMP"
-      },
-      {
-        "RandomDelayMax": "0.001",
-        "RandomDelayMin": "0.001",
-        "Unit": "GuardianCocoonMP"
       }
     ]
   },
@@ -7194,16 +7194,16 @@
       "SectionArray": [
         {
           "DurationArray": 4.875,
+          "EffectArray": "InfestedTerransTimedLife",
+          "index": "Abils"
+        },
+        {
+          "DurationArray": 4.875,
           "index": "Actor"
         },
         {
           "DurationArray": 4.875,
           "index": "Stats"
-        },
-        {
-          "DurationArray": 4.875,
-          "EffectArray": "InfestedTerransTimedLife",
-          "index": "Abils"
         }
       ],
       "Unit": "InfestorTerran"
@@ -7239,8 +7239,21 @@
     ],
     "InfoArray": [
       {
+        "RandomDelayMax": "0",
+        "index": "0"
+      },
+      {
+        "RandomDelayMax": "0.5",
+        "Unit": "LurkerMPEgg"
+      },
+      {
         "Score": 1,
         "SectionArray": [
+          {
+            "DurationArray": 25,
+            "EffectArray": "PostMorphHeal",
+            "index": "Stats"
+          },
           {
             "DurationArray": 25,
             "index": "Abils"
@@ -7248,11 +7261,6 @@
           {
             "DurationArray": 25,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 25,
-            "EffectArray": "PostMorphHeal",
-            "index": "Stats"
           }
         ],
         "Unit": "LurkerMP"
@@ -7273,14 +7281,6 @@
           }
         ],
         "index": 1
-      },
-      {
-        "RandomDelayMax": "0.5",
-        "Unit": "LurkerMPEgg"
-      },
-      {
-        "RandomDelayMax": "0",
-        "index": "0"
       }
     ]
   },
@@ -7369,8 +7369,18 @@
     ],
     "InfoArray": [
       {
+        "RandomDelayMax": "0.001",
+        "RandomDelayMin": "0.001",
+        "Unit": "OverlordCocoon"
+      },
+      {
         "Score": 1,
         "SectionArray": [
+          {
+            "DurationArray": 16.6665,
+            "EffectArray": "PostMorphHeal",
+            "index": "Stats"
+          },
           {
             "DurationArray": 16.6665,
             "index": "Abils"
@@ -7378,19 +7388,9 @@
           {
             "DurationArray": 16.6665,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 16.6665,
-            "EffectArray": "PostMorphHeal",
-            "index": "Stats"
           }
         ],
         "Unit": "Overseer"
-      },
-      {
-        "RandomDelayMax": "0.001",
-        "RandomDelayMin": "0.001",
-        "Unit": "OverlordCocoon"
       }
     ],
     "ValidatorArray": "HasNoCargo"
@@ -7425,8 +7425,21 @@
     ],
     "InfoArray": [
       {
+        "RandomDelayMax": "0",
+        "index": "0"
+      },
+      {
+        "RandomDelayMax": "0.5",
+        "Unit": "RavagerCocoon"
+      },
+      {
         "Score": 1,
         "SectionArray": [
+          {
+            "DurationArray": 12,
+            "EffectArray": "PostMorphHeal",
+            "index": "Stats"
+          },
           {
             "DurationArray": 12,
             "index": "Abils"
@@ -7434,11 +7447,6 @@
           {
             "DurationArray": 12,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 12,
-            "EffectArray": "PostMorphHeal",
-            "index": "Stats"
           }
         ],
         "Unit": "Ravager"
@@ -7459,14 +7467,6 @@
           }
         ],
         "index": 1
-      },
-      {
-        "RandomDelayMax": "0.5",
-        "Unit": "RavagerCocoon"
-      },
-      {
-        "RandomDelayMax": "0",
-        "index": "0"
       }
     ]
   },
@@ -7475,16 +7475,16 @@
     "ActorKey": "BurrowDown",
     "CmdButtonArray": [
       {
-        "DefaultButtonFace": "MorphToSwarmHostBurrowedMP",
-        "Flags": [
-          "ToSelection",
-          0
-        ],
-        "index": "Execute"
-      },
-      {
         "DefaultButtonFace": "Cancel",
         "index": "Cancel"
+      },
+      {
+        "DefaultButtonFace": "MorphToSwarmHostBurrowedMP",
+        "Flags": [
+          0,
+          "ToSelection"
+        ],
+        "index": "Execute"
       }
     ],
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -7534,19 +7534,6 @@
     ],
     "InfoArray": [
       {
-        "SectionArray": [
-          {
-            "DurationArray": 0,
-            "index": "Abils"
-          },
-          {
-            "DurationArray": 0,
-            "index": "Mover"
-          }
-        ],
-        "index": 0
-      },
-      {
         "RandomDelayMax": 0.5,
         "SectionArray": [
           {
@@ -7576,6 +7563,19 @@
           }
         ],
         "Unit": "SwarmHostMP"
+      },
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 0,
+            "index": "Abils"
+          },
+          {
+            "DurationArray": 0,
+            "index": "Mover"
+          }
+        ],
+        "index": 0
       }
     ]
   },
@@ -8096,6 +8096,15 @@
     "AbilSetId": "ULdS",
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "NydusCanalLoad",
+        "index": "Load"
+      },
+      {
+        "DefaultButtonFace": "NydusCanalUnloadAll",
+        "Flags": "ToSelection",
+        "index": "UnloadAll"
+      },
+      {
         "Flags": "Hidden",
         "index": "LoadAll"
       },
@@ -8106,15 +8115,6 @@
       {
         "Flags": "Hidden",
         "index": "UnloadUnit"
-      },
-      {
-        "DefaultButtonFace": "NydusCanalUnloadAll",
-        "Flags": "ToSelection",
-        "index": "UnloadAll"
-      },
-      {
-        "DefaultButtonFace": "NydusCanalLoad",
-        "index": "Load"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
@@ -8138,6 +8138,15 @@
     "AbilSetId": "ULdS",
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "NydusCanalLoad",
+        "index": "Load"
+      },
+      {
+        "DefaultButtonFace": "NydusCanalUnloadAll",
+        "Flags": "ToSelection",
+        "index": "UnloadAll"
+      },
+      {
         "Flags": "Hidden",
         "index": "LoadAll"
       },
@@ -8148,15 +8157,6 @@
       {
         "Flags": "Hidden",
         "index": "UnloadUnit"
-      },
-      {
-        "DefaultButtonFace": "NydusCanalUnloadAll",
-        "Flags": "ToSelection",
-        "index": "UnloadAll"
-      },
-      {
-        "DefaultButtonFace": "NydusCanalLoad",
-        "index": "Load"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
@@ -8542,6 +8542,10 @@
     "AbilSetId": "ULdM",
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "OverlordTransportUnload",
+        "index": "UnloadAt"
+      },
+      {
         "Flags": "Hidden",
         "index": "LoadAll"
       },
@@ -8559,10 +8563,6 @@
       {
         "Requirements": "UseSingleOverlordTransport",
         "index": "Load"
-      },
-      {
-        "DefaultButtonFace": "OverlordTransportUnload",
-        "index": "UnloadAt"
       }
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
@@ -10030,19 +10030,6 @@
     "InfoArray": [
       {
         "Button": {
-          "DefaultButtonFace": "RoachSupply",
-          "Requirements": "LearnRoachSupply"
-        },
-        "Resource": [
-          200,
-          200
-        ],
-        "Time": 130,
-        "Upgrade": "RoachSupply",
-        "index": "Research4"
-      },
-      {
-        "Button": {
           "DefaultButtonFace": "EvolveGlialRegeneration",
           "Flags": "ShowInGlossary",
           "Requirements": "LearnGlialReconstitution",
@@ -10069,25 +10056,25 @@
         "Time": 110,
         "Upgrade": "TunnelingClaws",
         "index": "Research3"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "RoachSupply",
+          "Requirements": "LearnRoachSupply"
+        },
+        "Resource": [
+          200,
+          200
+        ],
+        "Time": 130,
+        "Upgrade": "RoachSupply",
+        "index": "Research4"
       }
     ]
   },
   "RoboticsBayResearch": {
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
     "InfoArray": [
-      {
-        "Button": {
-          "DefaultButtonFace": "ResearchImmortalRevive",
-          "Requirements": "LearnImmortalRevive"
-        },
-        "Resource": [
-          100,
-          100
-        ],
-        "Time": 80,
-        "Upgrade": "ImmortalRevive",
-        "index": "Research8"
-      },
       {
         "Button": {
           "DefaultButtonFace": "ResearchExtendedThermalLance",
@@ -10134,8 +10121,17 @@
         "index": "Research3"
       },
       {
-        "Time": "70",
-        "index": "Research1"
+        "Button": {
+          "DefaultButtonFace": "ResearchImmortalRevive",
+          "Requirements": "LearnImmortalRevive"
+        },
+        "Resource": [
+          100,
+          100
+        ],
+        "Time": 80,
+        "Upgrade": "ImmortalRevive",
+        "index": "Research8"
       },
       {
         "Time": "140",
@@ -10144,6 +10140,10 @@
       {
         "Time": "140",
         "index": "Research5"
+      },
+      {
+        "Time": "70",
+        "index": "Research1"
       }
     ]
   },
@@ -10706,21 +10706,21 @@
     "CancelableArray": "Channel",
     "CmdButtonArray": [
       {
-        "DefaultButtonFace": "Stop",
-        "Flags": [
-          "ToSelection",
-          "UseDefaultButton",
-          "CreateDefaultButton"
-        ],
-        "index": "Cancel"
-      },
-      {
         "DefaultButtonFace": "ShieldBatteryRecharge",
         "Flags": [
-          "UseDefaultButton",
-          "CreateDefaultButton"
+          "CreateDefaultButton",
+          "UseDefaultButton"
         ],
         "index": "Execute"
+      },
+      {
+        "DefaultButtonFace": "Stop",
+        "Flags": [
+          "CreateDefaultButton",
+          "ToSelection",
+          "UseDefaultButton"
+        ],
+        "index": "Cancel"
       }
     ],
     "DefaultError": "RequiresHealTarget",
@@ -10770,19 +10770,19 @@
             "index": "Abils"
           },
           {
-            "DurationArray": [
-              0.5,
-              3.5417
-            ],
-            "index": "Actor"
-          },
-          {
             "DurationArray": 0.5,
             "index": "Facing"
           },
           {
             "DurationArray": 0.5,
             "index": "Mover"
+          },
+          {
+            "DurationArray": [
+              0.5,
+              3.5417
+            ],
+            "index": "Actor"
           },
           {
             "DurationArray": [
@@ -11303,27 +11303,6 @@
     ],
     "InfoArray": [
       {
-        "SectionArray": [
-          {
-            "DurationArray": 4,
-            "index": "Abils"
-          },
-          {
-            "DurationArray": 4,
-            "index": "Actor"
-          },
-          {
-            "DurationArray": 4,
-            "index": "Mover"
-          },
-          {
-            "DurationArray": 4,
-            "index": "Stats"
-          }
-        ],
-        "index": 0
-      },
-      {
         "CollideRange": 0,
         "SectionArray": [
           {
@@ -11344,6 +11323,27 @@
           }
         ],
         "Unit": "SporeCrawler"
+      },
+      {
+        "SectionArray": [
+          {
+            "DurationArray": 4,
+            "index": "Abils"
+          },
+          {
+            "DurationArray": 4,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 4,
+            "index": "Mover"
+          },
+          {
+            "DurationArray": 4,
+            "index": "Stats"
+          }
+        ],
+        "index": 0
       }
     ],
     "ProgressButton": "SporeCrawlerRoot"
@@ -11574,19 +11574,6 @@
     "InfoArray": [
       {
         "Button": {
-          "DefaultButtonFace": "ResearchRavenInterferenceMatrix",
-          "Requirements": "LearnRavenInterferenceMatrixUpgrade"
-        },
-        "Resource": [
-          50,
-          50
-        ],
-        "Time": 80,
-        "Upgrade": "InterferenceMatrix",
-        "index": "Research18"
-      },
-      {
-        "Button": {
           "DefaultButtonFace": "BansheeSpeed",
           "Flags": "ShowInGlossary",
           "Requirements": "LearnBansheeSpeed"
@@ -11728,6 +11715,19 @@
         "Time": 110,
         "Upgrade": "RavenCorvidReactor",
         "index": "Research4"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "ResearchRavenInterferenceMatrix",
+          "Requirements": "LearnRavenInterferenceMatrixUpgrade"
+        },
+        "Resource": [
+          50,
+          50
+        ],
+        "Time": 80,
+        "Upgrade": "InterferenceMatrix",
+        "index": "Research18"
       },
       {
         "Button": {
@@ -12172,21 +12172,6 @@
     "InfoArray": [
       {
         "Button": {
-          "DefaultButtonFace": "ResearchPsiStorm",
-          "Flags": "ShowInGlossary",
-          "Requirements": "LearnPsiStorm",
-          "State": "Restricted"
-        },
-        "Resource": [
-          200,
-          200
-        ],
-        "Time": 110,
-        "Upgrade": "PsiStormTech",
-        "index": "Research5"
-      },
-      {
-        "Button": {
           "DefaultButtonFace": "ResearchHighTemplarEnergyUpgrade",
           "Flags": 0,
           "Requirements": "LearnHighTemplarEnergyUpgrade",
@@ -12199,6 +12184,21 @@
         "Time": 110,
         "Upgrade": "HighTemplarKhaydarinAmulet",
         "index": "Research1"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "ResearchPsiStorm",
+          "Flags": "ShowInGlossary",
+          "Requirements": "LearnPsiStorm",
+          "State": "Restricted"
+        },
+        "Resource": [
+          200,
+          200
+        ],
+        "Time": 110,
+        "Upgrade": "PsiStormTech",
+        "index": "Research5"
       }
     ]
   },
@@ -12260,16 +12260,6 @@
     ],
     "InfoArray": [
       {
-        "AddOnParentCmdPriority": 1,
-        "Button": {
-          "DefaultButtonFace": "Reactor",
-          "State": "Restricted"
-        },
-        "Time": 40,
-        "Unit": "Reactor",
-        "index": "Build2"
-      },
-      {
         "AddOnParentCmdPriority": -1,
         "Button": {
           "DefaultButtonFace": "TechLabBarracks",
@@ -12278,6 +12268,16 @@
         "Time": 30,
         "Unit": "TechLab",
         "index": "Build1"
+      },
+      {
+        "AddOnParentCmdPriority": 1,
+        "Button": {
+          "DefaultButtonFace": "Reactor",
+          "State": "Restricted"
+        },
+        "Time": 40,
+        "Unit": "Reactor",
+        "index": "Build2"
       }
     ],
     "Name": "Abil/Name/TerranAddOns",
@@ -12604,16 +12604,16 @@
     "AbilSetId": "NormalMode",
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "ExplosiveMode",
         "Flags": [
           0,
           "ToSelection"
         ],
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -13174,16 +13174,16 @@
         "Score": 1,
         "SectionArray": [
           {
+            "DurationArray": 10,
+            "index": "Facing"
+          },
+          {
             "DurationArray": 100,
             "index": "Abils"
           },
           {
             "DurationArray": 100,
             "index": "Actor"
-          },
-          {
-            "DurationArray": 10,
-            "index": "Facing"
           },
           {
             "DurationArray": 100,
@@ -13467,6 +13467,11 @@
       "SectionArray": [
         {
           "DurationArray": 30,
+          "EffectArray": "VoidMPImmortalReviveSet",
+          "index": "Stats"
+        },
+        {
+          "DurationArray": 30,
           "index": "Abils"
         },
         {
@@ -13480,11 +13485,6 @@
         {
           "DurationArray": 30,
           "index": "Mover"
-        },
-        {
-          "DurationArray": 30,
-          "EffectArray": "VoidMPImmortalReviveSet",
-          "index": "Stats"
         }
       ],
       "Unit": "Immortal"
@@ -13607,8 +13607,8 @@
     "InfoArray": [
       {
         "Button": {
-          "DefaultButtonFace": "WarpInAdept",
-          "Requirements": "HaveCyberneticsCore",
+          "DefaultButtonFace": "DarkTemplar",
+          "Requirements": "HaveDarkShrine",
           "State": "Restricted"
         },
         "Charge": {
@@ -13617,39 +13617,47 @@
           "CountUse": 1,
           "Flags": "EnableChargeTimeQueuing",
           "Link": "WarpGateTrain",
-          "TimeUse": 28
-        },
-        "Cooldown": "WarpGateTrain",
-        "Time": 5,
-        "Unit": "Adept",
-        "index": "Train7"
-      },
-      {
-        "Button": {
-          "DefaultButtonFace": "Zealot",
-          "State": "Restricted"
-        },
-        "Charge": {
-          "CountMax": 1,
-          "CountStart": 1,
-          "CountUse": 1,
-          "Flags": "EnableChargeTimeQueuing",
-          "Link": "WarpGateTrain",
-          "TimeStart": 30,
-          "TimeUse": 28
+          "TimeUse": 45
         },
         "Cooldown": [
           {
             "Link": "WarpGateTrain",
-            "TimeUse": "23"
+            "TimeUse": "45"
           },
           {
             "TimeUse": "0"
           }
         ],
         "Time": 5,
-        "Unit": "Zealot",
-        "index": "Train1"
+        "Unit": "DarkTemplar",
+        "index": "Train5"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "HighTemplar",
+          "Requirements": "HaveTemplarArchives",
+          "State": "Restricted"
+        },
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "Flags": "EnableChargeTimeQueuing",
+          "Link": "WarpGateTrain",
+          "TimeUse": 45
+        },
+        "Cooldown": [
+          {
+            "Link": "WarpGateTrain",
+            "TimeUse": "45"
+          },
+          {
+            "TimeUse": "0"
+          }
+        ],
+        "Time": 5,
+        "Unit": "HighTemplar",
+        "index": "Train4"
       },
       {
         "Button": {
@@ -13707,8 +13715,8 @@
       },
       {
         "Button": {
-          "DefaultButtonFace": "DarkTemplar",
-          "Requirements": "HaveDarkShrine",
+          "DefaultButtonFace": "WarpInAdept",
+          "Requirements": "HaveCyberneticsCore",
           "State": "Restricted"
         },
         "Charge": {
@@ -13717,25 +13725,16 @@
           "CountUse": 1,
           "Flags": "EnableChargeTimeQueuing",
           "Link": "WarpGateTrain",
-          "TimeUse": 45
+          "TimeUse": 28
         },
-        "Cooldown": [
-          {
-            "Link": "WarpGateTrain",
-            "TimeUse": "45"
-          },
-          {
-            "TimeUse": "0"
-          }
-        ],
+        "Cooldown": "WarpGateTrain",
         "Time": 5,
-        "Unit": "DarkTemplar",
-        "index": "Train5"
+        "Unit": "Adept",
+        "index": "Train7"
       },
       {
         "Button": {
-          "DefaultButtonFace": "HighTemplar",
-          "Requirements": "HaveTemplarArchives",
+          "DefaultButtonFace": "Zealot",
           "State": "Restricted"
         },
         "Charge": {
@@ -13744,34 +13743,27 @@
           "CountUse": 1,
           "Flags": "EnableChargeTimeQueuing",
           "Link": "WarpGateTrain",
-          "TimeUse": 45
+          "TimeStart": 30,
+          "TimeUse": 28
         },
         "Cooldown": [
           {
             "Link": "WarpGateTrain",
-            "TimeUse": "45"
+            "TimeUse": "23"
           },
           {
             "TimeUse": "0"
           }
         ],
         "Time": 5,
-        "Unit": "HighTemplar",
-        "index": "Train4"
+        "Unit": "Zealot",
+        "index": "Train1"
       }
     ]
   },
   "WarpPrismTransport": {
     "AbilSetId": "ULdM",
     "CmdButtonArray": [
-      {
-        "Flags": "Hidden",
-        "index": "LoadAll"
-      },
-      {
-        "Flags": "Hidden",
-        "index": "UnloadUnit"
-      },
       {
         "DefaultButtonFace": "BunkerUnloadAll",
         "Flags": "ToSelection",
@@ -13784,6 +13776,14 @@
       {
         "DefaultButtonFace": "MedivacUnloadAll",
         "index": "UnloadAt"
+      },
+      {
+        "Flags": "Hidden",
+        "index": "LoadAll"
+      },
+      {
+        "Flags": "Hidden",
+        "index": "UnloadUnit"
       }
     ],
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -13839,13 +13839,13 @@
     "ActorKey": "BurrowDown",
     "CmdButtonArray": [
       {
+        "DefaultButtonFace": "Cancel",
+        "index": "Cancel"
+      },
+      {
         "DefaultButtonFace": "WidowMineBurrow",
         "Flags": "ToSelection",
         "index": "Execute"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
       }
     ],
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -13857,34 +13857,16 @@
     ],
     "InfoArray": [
       {
-        "RandomDelayMax": 0.5,
-        "SectionArray": [
-          {
-            "DurationArray": 3,
-            "index": "Actor"
-          },
-          {
-            "DurationArray": 0.5556,
-            "index": "Collide"
-          },
-          {
-            "DurationArray": 3,
-            "index": "Stats"
-          }
-        ],
-        "Unit": "WidowMineBurrowed"
-      },
-      {
         "RandomDelayMax": 0.25,
         "SectionArray": [
+          {
+            "DurationArray": 0.6806,
+            "index": "Collide"
+          },
           {
             "DurationArray": 3.125,
             "EffectArray": "WidowMineNotificationSearch",
             "index": "Actor"
-          },
-          {
-            "DurationArray": 0.6806,
-            "index": "Collide"
           },
           {
             "DurationArray": 3.125,
@@ -13892,6 +13874,24 @@
           }
         ],
         "index": 0
+      },
+      {
+        "RandomDelayMax": 0.5,
+        "SectionArray": [
+          {
+            "DurationArray": 0.5556,
+            "index": "Collide"
+          },
+          {
+            "DurationArray": 3,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 3,
+            "index": "Stats"
+          }
+        ],
+        "Unit": "WidowMineBurrowed"
       }
     ]
   },
@@ -13910,6 +13910,24 @@
     ],
     "InfoArray": [
       {
+        "RandomDelayMax": 0.25,
+        "SectionArray": [
+          {
+            "DurationArray": 0,
+            "index": "Mover"
+          },
+          {
+            "DurationArray": 1.125,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 1.125,
+            "index": "Stats"
+          }
+        ],
+        "index": 0
+      },
+      {
         "RandomDelayMax": 0.5,
         "SectionArray": [
           {
@@ -13926,24 +13944,6 @@
           }
         ],
         "Unit": "WidowMine"
-      },
-      {
-        "RandomDelayMax": 0.25,
-        "SectionArray": [
-          {
-            "DurationArray": 1.125,
-            "index": "Actor"
-          },
-          {
-            "DurationArray": 0,
-            "index": "Mover"
-          },
-          {
-            "DurationArray": 1.125,
-            "index": "Stats"
-          }
-        ],
-        "index": 0
       }
     ]
   },
@@ -14528,6 +14528,20 @@
     "InfoArray": [
       {
         "Button": {
+          "DefaultButtonFace": "EvolvePropulsivePeristalsis",
+          "Flags": "ShowInGlossary",
+          "Requirements": "LearnEvolveSecretedCoating",
+          "State": "Restricted"
+        },
+        "Resource": [
+          100,
+          100
+        ],
+        "Time": 90,
+        "index": "Research10"
+      },
+      {
+        "Button": {
           "DefaultButtonFace": "zerggroundarmor1",
           "Requirements": "LearnZergGroundArmor1",
           "State": "Restricted"
@@ -14651,20 +14665,6 @@
         "Time": 220,
         "Upgrade": "ZergMissileWeaponsLevel3",
         "index": "Research9"
-      },
-      {
-        "Button": {
-          "DefaultButtonFace": "EvolvePropulsivePeristalsis",
-          "Flags": "ShowInGlossary",
-          "Requirements": "LearnEvolveSecretedCoating",
-          "State": "Restricted"
-        },
-        "Resource": [
-          100,
-          100
-        ],
-        "Time": 90,
-        "index": "Research10"
       }
     ]
   },

@@ -622,6 +622,18 @@
       "requires": []
     },
     "LarvaTrain": {
+      "morphs": [
+        "Corruptor",
+        "Drone",
+        "Hydralisk",
+        "Infestor",
+        "Mutalisk",
+        "Overlord",
+        "Roach",
+        "SwarmHostMP",
+        "Ultralisk",
+        "Viper"
+      ],
       "race": "Zerg",
       "requires": []
     },
@@ -756,104 +768,187 @@
       "requires": []
     },
     "MorphToBaneling": {
+      "morphs": [
+        "Baneling",
+        "BanelingCocoon"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToBroodLord": {
+      "morphs": [
+        "BroodLord",
+        "BroodLordCocoon"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToCollapsiblePurifierTowerDebris": {
+      "morphs": [
+        "CollapsiblePurifierTowerDebris"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToCollapsibleRockTowerDebris": {
+      "morphs": [
+        "CollapsibleRockTowerDebris"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToCollapsibleRockTowerDebrisRampLeft": {
+      "morphs": [
+        "CollapsibleRockTowerDebrisRampLeft"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToCollapsibleRockTowerDebrisRampLeftGreen": {
+      "morphs": [
+        "CollapsibleRockTowerDebrisRampLeftGreen"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToCollapsibleRockTowerDebrisRampRight": {
+      "morphs": [
+        "CollapsibleRockTowerDebrisRampRight"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToCollapsibleRockTowerDebrisRampRightGreen": {
+      "morphs": [
+        "CollapsibleRockTowerDebrisRampRightGreen"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToCollapsibleTerranTowerDebris": {
+      "morphs": [
+        "CollapsibleTerranTowerDebris"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToCollapsibleTerranTowerDebrisRampLeft": {
+      "morphs": [
+        "DebrisRampLeft"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToCollapsibleTerranTowerDebrisRampRight": {
+      "morphs": [
+        "DebrisRampRight"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToDevourerMP": {
+      "morphs": [
+        "DevourerCocoonMP",
+        "DevourerMP"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToGhostAlternate": {
+      "morphs": [
+        "GhostAlternate"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToGhostNova": {
+      "morphs": [
+        "GhostNova"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToGuardianMP": {
+      "morphs": [
+        "GuardianCocoonMP",
+        "GuardianMP"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToHellion": {
+      "morphs": [
+        "Hellion"
+      ],
       "race": "Terran",
       "requires": []
     },
     "MorphToHellionTank": {
+      "morphs": [
+        "HellionTank"
+      ],
       "race": "Terran",
       "requires": []
     },
     "MorphToInfestedTerran": {
+      "morphs": [
+        "InfestorTerran"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToLurker": {
+      "morphs": [
+        "LurkerMP",
+        "LurkerMPEgg"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToMothership": {
+      "morphs": [
+        "Mothership"
+      ],
       "race": "Protoss",
       "requires": []
     },
     "MorphToOverseer": {
+      "morphs": [
+        "OverlordCocoon",
+        "Overseer"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToRavager": {
+      "morphs": [
+        "Ravager",
+        "RavagerCocoon"
+      ],
       "race": "Zerg",
       "requires": []
     },
     "MorphToSwarmHostBurrowedMP": {
+      "morphs": [
+        "SwarmHostBurrowedMP"
+      ],
       "race": "Terran",
       "requires": [
         "Burrow"
       ]
     },
     "MorphToSwarmHostMP": {
+      "morphs": [
+        "SwarmHostMP"
+      ],
       "race": "Terran",
       "requires": []
     },
     "MorphToTransportOverlord": {
+      "morphs": [
+        "OverlordTransport",
+        "TransportOverlordCocoon"
+      ],
       "race": "Zerg",
       "requires": []
     },

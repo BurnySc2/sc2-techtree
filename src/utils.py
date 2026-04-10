@@ -1,17 +1,17 @@
 import json
 
 
-def sort_lists(obj):
+def _recursive_sort(obj):
     if isinstance(obj, dict):
-        return {k: sort_lists(v) for k, v in sorted(obj.items())}
+        return {k: _recursive_sort(v) for k, v in sorted(obj.items())}
     elif isinstance(obj, list):
-        return sorted(obj, key=lambda x: (isinstance(x, dict), str(x)))
+        return sorted([_recursive_sort(item) for item in obj], key=str)
     return obj
 
 
 def dump_json(obj, fp, **kwargs):
-    json.dump(sort_lists(obj), fp, **kwargs)
+    json.dump(_recursive_sort(obj), fp, **kwargs)
 
 
 def dumps_json(obj, **kwargs) -> str:
-    return json.dumps(sort_lists(obj), **kwargs)
+    return json.dumps(_recursive_sort(obj), **kwargs)

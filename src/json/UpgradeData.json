@@ -131,14 +131,14 @@
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
     "EffectArray": [
       {
-        "Reference": "Unit,Ultralisk,Speed",
-        "Value": "0.589800"
-      },
-      {
         "Operation": "Subtract",
         "Reference": "Unit,Ultralisk,SpeedMultiplierCreep",
         "Value": "0.2165",
         "index": "0"
+      },
+      {
+        "Reference": "Unit,Ultralisk,Speed",
+        "Value": "0.589800"
       }
     ],
     "Flags": 0,
@@ -759,16 +759,16 @@
       },
       {
         "Reference": "Behavior,PointDefenseDroneTimedLife,Duration",
+        "Value": "10.000000",
+        "index": "1"
+      },
+      {
+        "Reference": "Behavior,PointDefenseDroneTimedLife,Duration",
         "Value": "60.000000"
       },
       {
         "Reference": "Behavior,SeekerMissileTimeout,Duration",
         "Value": "5.000000"
-      },
-      {
-        "Reference": "Behavior,PointDefenseDroneTimedLife,Duration",
-        "Value": "10.000000",
-        "index": "1"
       }
     ],
     "Flags": "TechTreeCheat",
@@ -848,6 +848,11 @@
     "EditorCategories": "Race:Protoss,UpgradeType:Talents",
     "EffectArray": [
       {
+        "Reference": "Weapon,ThermalLanceAir,Range",
+        "Value": "2",
+        "index": "1"
+      },
+      {
         "Reference": "Weapon,ThermalLances,MinScanRange",
         "Value": "2"
       },
@@ -855,11 +860,6 @@
         "Reference": "Weapon,ThermalLances,Range",
         "Value": "2",
         "index": "0"
-      },
-      {
-        "Reference": "Weapon,ThermalLanceAir,Range",
-        "Value": "2",
-        "index": "1"
       }
     ],
     "Flags": "TechTreeCheat",
@@ -968,11 +968,12 @@
     "EffectArray": [
       {
         "Reference": "Unit,WarpPrism,Acceleration",
-        "Value": "1.125"
+        "Value": "0.625000",
+        "index": "1"
       },
       {
-        "Reference": "Unit,WarpPrism,Speed",
-        "Value": "0.875000"
+        "Reference": "Unit,WarpPrism,Acceleration",
+        "Value": "1.125"
       },
       {
         "Reference": "Unit,WarpPrism,Speed",
@@ -980,9 +981,8 @@
         "index": "0"
       },
       {
-        "Reference": "Unit,WarpPrism,Acceleration",
-        "Value": "0.625000",
-        "index": "1"
+        "Reference": "Unit,WarpPrism,Speed",
+        "Value": "0.875000"
       }
     ],
     "Flags": "TechTreeCheat",
@@ -1301,14 +1301,14 @@
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
     "EffectArray": [
       {
-        "Reference": "Unit,Medivac,EnergyStart",
-        "Value": "25"
-      },
-      {
         "Operation": "Multiply",
         "Reference": "Unit,Medivac,EnergyRegenRate",
         "Value": "2.000000",
         "index": "0"
+      },
+      {
+        "Reference": "Unit,Medivac,EnergyStart",
+        "Value": "25"
       }
     ],
     "Flags": "TechTreeCheat",
@@ -1825,50 +1825,10 @@
   "ProtossAirWeaponsLevel1": {
     "EffectArray": [
       {
-        "Operation": "Set",
-        "Reference": "Weapon,InterceptorBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,MothershipBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,PrismaticBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds"
-      },
-      {
-        "Reference": "Weapon,VoidRaySwarmDisplayDummy,Level",
-        "Value": "1"
-      },
-      {
-        "Reference": "Weapon,InterceptorsDummy,Level",
+        "Operation": "Add",
+        "Reference": "Effect,IonCannonsULeft,Amount",
         "Value": "1",
-        "index": "10"
-      },
-      {
-        "Reference": "Weapon,MothershipBeam,Level",
-        "Value": "1",
-        "index": "11"
-      },
-      {
-        "Reference": "Effect,MothershipBeamDamage,Amount",
-        "Value": "1.000000",
-        "index": "12"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,IonCannons,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
-        "index": "13"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,PrismaticBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
-        "index": "14"
+        "index": "17"
       },
       {
         "Operation": "Set",
@@ -1878,15 +1838,36 @@
       },
       {
         "Operation": "Set",
+        "Reference": "Weapon,InterceptorBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,IonCannons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Set",
         "Reference": "Weapon,MothershipBeam,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
         "index": "16"
       },
       {
-        "Operation": "Add",
-        "Reference": "Effect,IonCannonsULeft,Amount",
-        "Value": "1",
-        "index": "17"
+        "Operation": "Set",
+        "Reference": "Weapon,MothershipBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
+        "index": "14"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds"
       },
       {
         "Operation": "Set",
@@ -1895,19 +1876,19 @@
         "index": "21"
       },
       {
-        "Reference": "Weapon,RepulsorCannon,Level",
+        "Reference": "Effect,InterceptorBeamDamage,Amount",
         "Value": "1",
-        "index": "22"
+        "index": "9"
+      },
+      {
+        "Reference": "Effect,MothershipBeamDamage,Amount",
+        "Value": "1.000000",
+        "index": "12"
       },
       {
         "Reference": "Effect,MothershipCoreRepulsorCannonDamage,Amount",
         "Value": "1",
         "index": "23"
-      },
-      {
-        "Reference": "Effect,TempestDamageGround,Amount",
-        "Value": "4",
-        "index": "32"
       },
       {
         "Reference": "Effect,PrismaticBeamMUx2,AttributeBonus[Armored]",
@@ -1925,14 +1906,33 @@
         "index": "7"
       },
       {
+        "Reference": "Effect,TempestDamageGround,Amount",
+        "Value": "4",
+        "index": "32"
+      },
+      {
         "Reference": "Weapon,InterceptorBeam,Level",
         "Value": "1",
         "index": "8"
       },
       {
-        "Reference": "Effect,InterceptorBeamDamage,Amount",
+        "Reference": "Weapon,InterceptorsDummy,Level",
         "Value": "1",
-        "index": "9"
+        "index": "10"
+      },
+      {
+        "Reference": "Weapon,MothershipBeam,Level",
+        "Value": "1",
+        "index": "11"
+      },
+      {
+        "Reference": "Weapon,RepulsorCannon,Level",
+        "Value": "1",
+        "index": "22"
+      },
+      {
+        "Reference": "Weapon,VoidRaySwarmDisplayDummy,Level",
+        "Value": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
@@ -1944,50 +1944,10 @@
   "ProtossAirWeaponsLevel2": {
     "EffectArray": [
       {
-        "Operation": "Set",
-        "Reference": "Weapon,InterceptorBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,MothershipBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,PrismaticBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds"
-      },
-      {
-        "Reference": "Weapon,VoidRaySwarmDisplayDummy,Level",
-        "Value": "1"
-      },
-      {
-        "Reference": "Weapon,InterceptorsDummy,Level",
+        "Operation": "Add",
+        "Reference": "Effect,IonCannonsULeft,Amount",
         "Value": "1",
-        "index": "10"
-      },
-      {
-        "Reference": "Weapon,MothershipBeam,Level",
-        "Value": "1",
-        "index": "11"
-      },
-      {
-        "Reference": "Effect,MothershipBeamDamage,Amount",
-        "Value": "1.000000",
-        "index": "12"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,IonCannons,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
-        "index": "13"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,PrismaticBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
-        "index": "14"
+        "index": "17"
       },
       {
         "Operation": "Set",
@@ -1997,15 +1957,36 @@
       },
       {
         "Operation": "Set",
+        "Reference": "Weapon,InterceptorBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,IonCannons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Set",
         "Reference": "Weapon,MothershipBeam,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
         "index": "16"
       },
       {
-        "Operation": "Add",
-        "Reference": "Effect,IonCannonsULeft,Amount",
-        "Value": "1",
-        "index": "17"
+        "Operation": "Set",
+        "Reference": "Weapon,MothershipBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
+        "index": "14"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds"
       },
       {
         "Operation": "Set",
@@ -2014,19 +1995,19 @@
         "index": "21"
       },
       {
-        "Reference": "Weapon,RepulsorCannon,Level",
+        "Reference": "Effect,InterceptorBeamDamage,Amount",
         "Value": "1",
-        "index": "22"
+        "index": "9"
+      },
+      {
+        "Reference": "Effect,MothershipBeamDamage,Amount",
+        "Value": "1.000000",
+        "index": "12"
       },
       {
         "Reference": "Effect,MothershipCoreRepulsorCannonDamage,Amount",
         "Value": "1",
         "index": "23"
-      },
-      {
-        "Reference": "Effect,TempestDamageGround,Amount",
-        "Value": "4",
-        "index": "32"
       },
       {
         "Reference": "Effect,PrismaticBeamMUx2,AttributeBonus[Armored]",
@@ -2044,14 +2025,33 @@
         "index": "7"
       },
       {
+        "Reference": "Effect,TempestDamageGround,Amount",
+        "Value": "4",
+        "index": "32"
+      },
+      {
         "Reference": "Weapon,InterceptorBeam,Level",
         "Value": "1",
         "index": "8"
       },
       {
-        "Reference": "Effect,InterceptorBeamDamage,Amount",
+        "Reference": "Weapon,InterceptorsDummy,Level",
         "Value": "1",
-        "index": "9"
+        "index": "10"
+      },
+      {
+        "Reference": "Weapon,MothershipBeam,Level",
+        "Value": "1",
+        "index": "11"
+      },
+      {
+        "Reference": "Weapon,RepulsorCannon,Level",
+        "Value": "1",
+        "index": "22"
+      },
+      {
+        "Reference": "Weapon,VoidRaySwarmDisplayDummy,Level",
+        "Value": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
@@ -2063,50 +2063,10 @@
   "ProtossAirWeaponsLevel3": {
     "EffectArray": [
       {
-        "Operation": "Set",
-        "Reference": "Weapon,InterceptorBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,MothershipBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,PrismaticBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds"
-      },
-      {
-        "Reference": "Weapon,VoidRaySwarmDisplayDummy,Level",
-        "Value": "1"
-      },
-      {
-        "Reference": "Weapon,InterceptorsDummy,Level",
+        "Operation": "Add",
+        "Reference": "Effect,IonCannonsULeft,Amount",
         "Value": "1",
-        "index": "10"
-      },
-      {
-        "Reference": "Weapon,MothershipBeam,Level",
-        "Value": "1",
-        "index": "11"
-      },
-      {
-        "Reference": "Effect,MothershipBeamDamage,Amount",
-        "Value": "1.000000",
-        "index": "12"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,IonCannons,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
-        "index": "13"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,PrismaticBeam,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
-        "index": "14"
+        "index": "17"
       },
       {
         "Operation": "Set",
@@ -2116,15 +2076,36 @@
       },
       {
         "Operation": "Set",
+        "Reference": "Weapon,InterceptorBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,IonCannons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Set",
         "Reference": "Weapon,MothershipBeam,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
         "index": "16"
       },
       {
-        "Operation": "Add",
-        "Reference": "Effect,IonCannonsULeft,Amount",
-        "Value": "1",
-        "index": "17"
+        "Operation": "Set",
+        "Reference": "Weapon,MothershipBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
+        "index": "14"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds"
       },
       {
         "Operation": "Set",
@@ -2133,19 +2114,19 @@
         "index": "21"
       },
       {
-        "Reference": "Weapon,RepulsorCannon,Level",
+        "Reference": "Effect,InterceptorBeamDamage,Amount",
         "Value": "1",
-        "index": "22"
+        "index": "9"
+      },
+      {
+        "Reference": "Effect,MothershipBeamDamage,Amount",
+        "Value": "1.000000",
+        "index": "12"
       },
       {
         "Reference": "Effect,MothershipCoreRepulsorCannonDamage,Amount",
         "Value": "1",
         "index": "23"
-      },
-      {
-        "Reference": "Effect,TempestDamageGround,Amount",
-        "Value": "4",
-        "index": "32"
       },
       {
         "Reference": "Effect,PrismaticBeamMUx2,AttributeBonus[Armored]",
@@ -2163,14 +2144,33 @@
         "index": "7"
       },
       {
+        "Reference": "Effect,TempestDamageGround,Amount",
+        "Value": "4",
+        "index": "32"
+      },
+      {
         "Reference": "Weapon,InterceptorBeam,Level",
         "Value": "1",
         "index": "8"
       },
       {
-        "Reference": "Effect,InterceptorBeamDamage,Amount",
+        "Reference": "Weapon,InterceptorsDummy,Level",
         "Value": "1",
-        "index": "9"
+        "index": "10"
+      },
+      {
+        "Reference": "Weapon,MothershipBeam,Level",
+        "Value": "1",
+        "index": "11"
+      },
+      {
+        "Reference": "Weapon,RepulsorCannon,Level",
+        "Value": "1",
+        "index": "22"
+      },
+      {
+        "Reference": "Weapon,VoidRaySwarmDisplayDummy,Level",
+        "Value": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
@@ -2558,17 +2558,17 @@
         "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds"
       },
       {
+        "Reference": "Effect,ThermalLancesFriendlyDamage,Amount",
+        "Value": "1",
+        "index": "23"
+      },
+      {
         "Reference": "Weapon,DisruptionBeamDisplayDummy,Level",
         "Value": "1"
       },
       {
         "Value": "1",
         "index": "14"
-      },
-      {
-        "Reference": "Effect,ThermalLancesFriendlyDamage,Amount",
-        "Value": "1",
-        "index": "23"
       },
       {
         "Value": "1",
@@ -2615,17 +2615,17 @@
         "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds"
       },
       {
+        "Reference": "Effect,ThermalLancesFriendlyDamage,Amount",
+        "Value": "1",
+        "index": "23"
+      },
+      {
         "Reference": "Weapon,DisruptionBeamDisplayDummy,Level",
         "Value": "1"
       },
       {
         "Value": "1",
         "index": "14"
-      },
-      {
-        "Reference": "Effect,ThermalLancesFriendlyDamage,Amount",
-        "Value": "1",
-        "index": "23"
       },
       {
         "Value": "1",
@@ -2672,17 +2672,17 @@
         "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds"
       },
       {
+        "Reference": "Effect,ThermalLancesFriendlyDamage,Amount",
+        "Value": "1",
+        "index": "23"
+      },
+      {
         "Reference": "Weapon,DisruptionBeamDisplayDummy,Level",
         "Value": "1"
       },
       {
         "Value": "1",
         "index": "14"
-      },
-      {
-        "Reference": "Effect,ThermalLancesFriendlyDamage,Amount",
-        "Value": "1",
-        "index": "23"
       },
       {
         "Value": "1",
@@ -3650,12 +3650,12 @@
     "EffectArray": [
       {
         "Reference": "Unit,Reaper,Speed",
-        "Value": "0.886700"
+        "Value": "0.875000",
+        "index": "0"
       },
       {
         "Reference": "Unit,Reaper,Speed",
-        "Value": "0.875000",
-        "index": "0"
+        "Value": "0.886700"
       }
     ],
     "Flags": "TechTreeCheat",
@@ -4248,6 +4248,14 @@
         "Value": "2"
       },
       {
+        "Reference": "Unit,BypassArmorDrone,LifeArmor",
+        "index": "61"
+      },
+      {
+        "Reference": "Unit,BypassArmorDrone,LifeArmorLevel",
+        "index": "60"
+      },
+      {
         "Reference": "Unit,CommandCenter,LifeArmorLevel",
         "Value": "2"
       },
@@ -4352,6 +4360,15 @@
         "Value": "2"
       },
       {
+        "Reference": "Unit,PointDefenseDrone,LifeArmor",
+        "index": "59"
+      },
+      {
+        "Reference": "Unit,PointDefenseDrone,LifeArmorLevel",
+        "Value": "2",
+        "index": "58"
+      },
+      {
         "Reference": "Unit,PointDefenseDrone,LifeArmorLevel",
         "Value": "2"
       },
@@ -4438,23 +4455,6 @@
       {
         "Reference": "Unit,TechLab,LifeArmorLevel",
         "Value": "2"
-      },
-      {
-        "Reference": "Unit,PointDefenseDrone,LifeArmorLevel",
-        "Value": "2",
-        "index": "58"
-      },
-      {
-        "Reference": "Unit,PointDefenseDrone,LifeArmor",
-        "index": "59"
-      },
-      {
-        "Reference": "Unit,BypassArmorDrone,LifeArmorLevel",
-        "index": "60"
-      },
-      {
-        "Reference": "Unit,BypassArmorDrone,LifeArmor",
-        "index": "61"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-buildingarmor.dds",
@@ -5758,13 +5758,13 @@
         "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds"
       },
       {
-        "Reference": "Weapon,LiberatorAGWeapon,Level",
-        "Value": "1"
-      },
-      {
         "Reference": "Effect,HellionTankDamage,Amount",
         "Value": "2",
         "index": "33"
+      },
+      {
+        "Reference": "Weapon,LiberatorAGWeapon,Level",
+        "Value": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
@@ -5836,13 +5836,13 @@
         "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds"
       },
       {
-        "Reference": "Weapon,LiberatorAGWeapon,Level",
-        "Value": "1"
-      },
-      {
         "Reference": "Effect,HellionTankDamage,Amount",
         "Value": "2",
         "index": "33"
+      },
+      {
+        "Reference": "Weapon,LiberatorAGWeapon,Level",
+        "Value": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
@@ -5914,13 +5914,13 @@
         "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds"
       },
       {
-        "Reference": "Weapon,LiberatorAGWeapon,Level",
-        "Value": "1"
-      },
-      {
         "Reference": "Effect,HellionTankDamage,Amount",
         "Value": "2",
         "index": "33"
+      },
+      {
+        "Reference": "Weapon,LiberatorAGWeapon,Level",
+        "Value": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
@@ -6086,11 +6086,26 @@
       },
       {
         "Reference": "Effect,CrucioShockCannonBlast,Amount",
+        "Value": "3",
+        "index": "7"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonBlast,Amount",
         "Value": "5.000000"
       },
       {
         "Reference": "Effect,CrucioShockCannonDirected,Amount",
+        "Value": "3",
+        "index": "8"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonDirected,Amount",
         "Value": "5.000000"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonDummy,Amount",
+        "Value": "3",
+        "index": "9"
       },
       {
         "Reference": "Effect,CrucioShockCannonDummy,Amount",
@@ -6135,21 +6150,6 @@
       {
         "Reference": "Weapon,JavelinMissileLaunchers,Level",
         "Value": "1"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonBlast,Amount",
-        "Value": "3",
-        "index": "7"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonDirected,Amount",
-        "Value": "3",
-        "index": "8"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonDummy,Amount",
-        "Value": "3",
-        "index": "9"
       }
     ],
     "LeaderAlias": "TechVehicleWeapons",
@@ -6165,6 +6165,18 @@
     "AffectedUnitArray": "ThorAP",
     "EffectArray": [
       {
+        "Operation": "Add",
+        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1",
+        "index": "40"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Weapon,TyphoonMissilePod,Level",
+        "Value": "1",
+        "index": "38"
+      },
+      {
         "Operation": "Set",
         "Reference": "Weapon,90mmCannons,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds"
@@ -6181,12 +6193,25 @@
       },
       {
         "Operation": "Set",
+        "Reference": "Weapon,LanceMissileLaunchers,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
+        "index": "37"
+      },
+      {
+        "Operation": "Set",
         "Reference": "Weapon,ThorsHammer,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds"
       },
       {
-        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
-        "Value": "1"
+        "Operation": "Set",
+        "Reference": "Weapon,TyphoonMissilePod,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
+        "index": "39"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonBlast,Amount",
+        "Value": "4",
+        "index": "7"
       },
       {
         "Reference": "Effect,CrucioShockCannonBlast,AttributeBonus[Armored]",
@@ -6194,9 +6219,19 @@
         "index": "20"
       },
       {
+        "Reference": "Effect,CrucioShockCannonDirected,Amount",
+        "Value": "4",
+        "index": "8"
+      },
+      {
         "Reference": "Effect,CrucioShockCannonDirected,AttributeBonus[Armored]",
         "Value": "1",
         "index": "21"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonDummy,Amount",
+        "Value": "4",
+        "index": "9"
       },
       {
         "Reference": "Effect,CrucioShockCannonDummy,AttributeBonus[Armored]",
@@ -6209,11 +6244,6 @@
         "index": "32"
       },
       {
-        "Reference": "Weapon,LanceMissileLaunchers,Level",
-        "Value": "1",
-        "index": "34"
-      },
-      {
         "Reference": "Effect,LanceMissileLaunchersDamage,Amount",
         "Value": "3",
         "index": "35"
@@ -6224,43 +6254,13 @@
         "index": "36"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,LanceMissileLaunchers,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
-        "index": "37"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Weapon,TyphoonMissilePod,Level",
-        "Value": "1",
-        "index": "38"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,TyphoonMissilePod,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
-        "index": "39"
-      },
-      {
-        "Operation": "Add",
         "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,LanceMissileLaunchers,Level",
         "Value": "1",
-        "index": "40"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonBlast,Amount",
-        "Value": "4",
-        "index": "7"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonDirected,Amount",
-        "Value": "4",
-        "index": "8"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonDummy,Amount",
-        "Value": "4",
-        "index": "9"
+        "index": "34"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
@@ -6273,6 +6273,18 @@
     "AffectedUnitArray": "ThorAP",
     "EffectArray": [
       {
+        "Operation": "Add",
+        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1",
+        "index": "40"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Weapon,TyphoonMissilePod,Level",
+        "Value": "1",
+        "index": "38"
+      },
+      {
         "Operation": "Set",
         "Reference": "Weapon,90mmCannons,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds"
@@ -6289,12 +6301,25 @@
       },
       {
         "Operation": "Set",
+        "Reference": "Weapon,LanceMissileLaunchers,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
+        "index": "37"
+      },
+      {
+        "Operation": "Set",
         "Reference": "Weapon,ThorsHammer,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds"
       },
       {
-        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
-        "Value": "1"
+        "Operation": "Set",
+        "Reference": "Weapon,TyphoonMissilePod,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
+        "index": "39"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonBlast,Amount",
+        "Value": "4",
+        "index": "7"
       },
       {
         "Reference": "Effect,CrucioShockCannonBlast,AttributeBonus[Armored]",
@@ -6302,9 +6327,19 @@
         "index": "20"
       },
       {
+        "Reference": "Effect,CrucioShockCannonDirected,Amount",
+        "Value": "4",
+        "index": "8"
+      },
+      {
         "Reference": "Effect,CrucioShockCannonDirected,AttributeBonus[Armored]",
         "Value": "1",
         "index": "21"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonDummy,Amount",
+        "Value": "4",
+        "index": "9"
       },
       {
         "Reference": "Effect,CrucioShockCannonDummy,AttributeBonus[Armored]",
@@ -6317,11 +6352,6 @@
         "index": "32"
       },
       {
-        "Reference": "Weapon,LanceMissileLaunchers,Level",
-        "Value": "1",
-        "index": "34"
-      },
-      {
         "Reference": "Effect,LanceMissileLaunchersDamage,Amount",
         "Value": "3",
         "index": "35"
@@ -6332,43 +6362,13 @@
         "index": "36"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,LanceMissileLaunchers,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
-        "index": "37"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Weapon,TyphoonMissilePod,Level",
-        "Value": "1",
-        "index": "38"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,TyphoonMissilePod,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
-        "index": "39"
-      },
-      {
-        "Operation": "Add",
         "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,LanceMissileLaunchers,Level",
         "Value": "1",
-        "index": "40"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonBlast,Amount",
-        "Value": "4",
-        "index": "7"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonDirected,Amount",
-        "Value": "4",
-        "index": "8"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonDummy,Amount",
-        "Value": "4",
-        "index": "9"
+        "index": "34"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
@@ -6381,6 +6381,18 @@
     "AffectedUnitArray": "ThorAP",
     "EffectArray": [
       {
+        "Operation": "Add",
+        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1",
+        "index": "40"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Weapon,TyphoonMissilePod,Level",
+        "Value": "1",
+        "index": "38"
+      },
+      {
         "Operation": "Set",
         "Reference": "Weapon,90mmCannons,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds"
@@ -6397,12 +6409,25 @@
       },
       {
         "Operation": "Set",
+        "Reference": "Weapon,LanceMissileLaunchers,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
+        "index": "37"
+      },
+      {
+        "Operation": "Set",
         "Reference": "Weapon,ThorsHammer,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds"
       },
       {
-        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
-        "Value": "1"
+        "Operation": "Set",
+        "Reference": "Weapon,TyphoonMissilePod,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
+        "index": "39"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonBlast,Amount",
+        "Value": "4",
+        "index": "7"
       },
       {
         "Reference": "Effect,CrucioShockCannonBlast,AttributeBonus[Armored]",
@@ -6410,9 +6435,19 @@
         "index": "20"
       },
       {
+        "Reference": "Effect,CrucioShockCannonDirected,Amount",
+        "Value": "4",
+        "index": "8"
+      },
+      {
         "Reference": "Effect,CrucioShockCannonDirected,AttributeBonus[Armored]",
         "Value": "1",
         "index": "21"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonDummy,Amount",
+        "Value": "4",
+        "index": "9"
       },
       {
         "Reference": "Effect,CrucioShockCannonDummy,AttributeBonus[Armored]",
@@ -6425,11 +6460,6 @@
         "index": "32"
       },
       {
-        "Reference": "Weapon,LanceMissileLaunchers,Level",
-        "Value": "1",
-        "index": "34"
-      },
-      {
         "Reference": "Effect,LanceMissileLaunchersDamage,Amount",
         "Value": "3",
         "index": "35"
@@ -6440,43 +6470,13 @@
         "index": "36"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,LanceMissileLaunchers,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
-        "index": "37"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Weapon,TyphoonMissilePod,Level",
-        "Value": "1",
-        "index": "38"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,TyphoonMissilePod,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
-        "index": "39"
-      },
-      {
-        "Operation": "Add",
         "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,LanceMissileLaunchers,Level",
         "Value": "1",
-        "index": "40"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonBlast,Amount",
-        "Value": "4",
-        "index": "7"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonDirected,Amount",
-        "Value": "4",
-        "index": "8"
-      },
-      {
-        "Reference": "Effect,CrucioShockCannonDummy,Amount",
-        "Value": "4",
-        "index": "9"
+        "index": "34"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
@@ -6516,14 +6516,14 @@
         "Value": "1000.000000"
       },
       {
-        "Reference": "Unit,RoachBurrowed,Speed",
-        "Value": "1.4062",
-        "index": "0"
-      },
-      {
         "Reference": "Unit,RoachBurrowed,LifeRegenRate",
         "Value": "0.000000",
         "index": "1"
+      },
+      {
+        "Reference": "Unit,RoachBurrowed,Speed",
+        "Value": "1.4062",
+        "index": "0"
       }
     ],
     "Flags": "TechTreeCheat",
@@ -6581,8 +6581,9 @@
         "Value": "0.7441"
       },
       {
-        "Reference": "Unit,VoidRay,Acceleration",
-        "Value": "0.687500"
+        "Operation": "Set",
+        "Value": "2.687500",
+        "index": "1"
       },
       {
         "Operation": "Set",
@@ -6590,9 +6591,8 @@
         "index": "0"
       },
       {
-        "Operation": "Set",
-        "Value": "2.687500",
-        "index": "1"
+        "Reference": "Unit,VoidRay,Acceleration",
+        "Value": "0.687500"
       }
     ],
     "Flags": "TechTreeCheat",
@@ -7078,7 +7078,17 @@
       },
       {
         "Reference": "Unit,BanelingCocoon,LifeArmor",
+        "Value": "1",
+        "index": "35"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmor",
         "Value": "1"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
+        "Value": "1",
+        "index": "34"
       },
       {
         "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
@@ -7221,16 +7231,6 @@
         "Value": "1"
       },
       {
-        "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
-        "Value": "1",
-        "index": "34"
-      },
-      {
-        "Reference": "Unit,BanelingCocoon,LifeArmor",
-        "Value": "1",
-        "index": "35"
-      },
-      {
         "index": "36",
         "removed": "1"
       },
@@ -7262,7 +7262,19 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Baneling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "40"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Baneling,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "45"
       },
       {
         "Operation": "Set",
@@ -7272,7 +7284,19 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Broodling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "44"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Broodling,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hydralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "38"
       },
       {
         "Operation": "Set",
@@ -7282,7 +7306,19 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Infestor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "43"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Infestor,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level0.dds",
+        "index": "49"
       },
       {
         "Operation": "Set",
@@ -7297,12 +7333,30 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Queen,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "42"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Queen,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
       },
       {
         "Operation": "Set",
         "Reference": "Actor,Roach,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "39"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Roach,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ultralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "41"
       },
       {
         "Operation": "Set",
@@ -7331,54 +7385,6 @@
         "index": "37"
       },
       {
-        "Operation": "Set",
-        "Reference": "Actor,Hydralisk,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
-        "index": "38"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Roach,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
-        "index": "39"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Baneling,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
-        "index": "40"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Ultralisk,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
-        "index": "41"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Queen,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
-        "index": "42"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Infestor,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
-        "index": "43"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Broodling,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
-        "index": "44"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
-        "index": "45"
-      },
-      {
         "index": "46",
         "removed": "1"
       },
@@ -7389,12 +7395,6 @@
       {
         "index": "48",
         "removed": "1"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level0.dds",
-        "index": "49"
       },
       {
         "index": "50",
@@ -7413,7 +7413,19 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Baneling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "40"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Baneling,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "45"
       },
       {
         "Operation": "Set",
@@ -7423,7 +7435,19 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Broodling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "44"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Broodling,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hydralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "38"
       },
       {
         "Operation": "Set",
@@ -7433,7 +7457,19 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Infestor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "43"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Infestor,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level0.dds",
+        "index": "49"
       },
       {
         "Operation": "Set",
@@ -7448,12 +7484,30 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Queen,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "42"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Queen,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
       },
       {
         "Operation": "Set",
         "Reference": "Actor,Roach,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "39"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Roach,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ultralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "41"
       },
       {
         "Operation": "Set",
@@ -7482,54 +7536,6 @@
         "index": "37"
       },
       {
-        "Operation": "Set",
-        "Reference": "Actor,Hydralisk,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
-        "index": "38"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Roach,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
-        "index": "39"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Baneling,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
-        "index": "40"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Ultralisk,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
-        "index": "41"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Queen,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
-        "index": "42"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Infestor,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
-        "index": "43"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Broodling,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
-        "index": "44"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
-        "index": "45"
-      },
-      {
         "index": "46",
         "removed": "1"
       },
@@ -7540,12 +7546,6 @@
       {
         "index": "48",
         "removed": "1"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level0.dds",
-        "index": "49"
       },
       {
         "index": "50",
@@ -7564,7 +7564,19 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Baneling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "40"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Baneling,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "45"
       },
       {
         "Operation": "Set",
@@ -7574,7 +7586,19 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Broodling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "44"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Broodling,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hydralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "38"
       },
       {
         "Operation": "Set",
@@ -7584,7 +7608,19 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Infestor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "43"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Infestor,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level0.dds",
+        "index": "49"
       },
       {
         "Operation": "Set",
@@ -7599,12 +7635,30 @@
       {
         "Operation": "Set",
         "Reference": "Actor,Queen,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "42"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Queen,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
       },
       {
         "Operation": "Set",
         "Reference": "Actor,Roach,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "39"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Roach,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ultralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "41"
       },
       {
         "Operation": "Set",
@@ -7633,54 +7687,6 @@
         "index": "37"
       },
       {
-        "Operation": "Set",
-        "Reference": "Actor,Hydralisk,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
-        "index": "38"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Roach,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
-        "index": "39"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Baneling,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
-        "index": "40"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Ultralisk,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
-        "index": "41"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Queen,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
-        "index": "42"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Infestor,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
-        "index": "43"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,Broodling,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
-        "index": "44"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
-        "index": "45"
-      },
-      {
         "index": "46",
         "removed": "1"
       },
@@ -7691,12 +7697,6 @@
       {
         "index": "48",
         "removed": "1"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level0.dds",
-        "index": "49"
       },
       {
         "index": "50",
@@ -7795,9 +7795,33 @@
     "AffectedUnitArray": "LocustMP",
     "EffectArray": [
       {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,Amount",
+        "Value": "2",
+        "index": "17"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]",
+        "Value": "2",
+        "index": "18"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Claws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds",
+        "index": "13"
+      },
+      {
         "Operation": "Set",
         "Reference": "Weapon,KaiserBlades,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleClaws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds",
+        "index": "14"
       },
       {
         "Operation": "Set",
@@ -7814,16 +7838,13 @@
         "Value": "2"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,Claws,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds",
-        "index": "13"
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount",
+        "Value": "5",
+        "index": "19"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,NeedleClaws,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds",
-        "index": "14"
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount",
+        "index": "20"
       },
       {
         "Reference": "Weapon,KaiserBlades,Icon",
@@ -7832,27 +7853,6 @@
       {
         "Reference": "Weapon,Ram,Icon",
         "index": "16"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Effect,BurrowChargeMPTargetDamage,Amount",
-        "Value": "2",
-        "index": "17"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]",
-        "Value": "2",
-        "index": "18"
-      },
-      {
-        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount",
-        "Value": "5",
-        "index": "19"
-      },
-      {
-        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount",
-        "index": "20"
       },
       {
         "Value": "3",
@@ -7869,9 +7869,33 @@
     "AffectedUnitArray": "LocustMP",
     "EffectArray": [
       {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,Amount",
+        "Value": "2",
+        "index": "17"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]",
+        "Value": "2",
+        "index": "18"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Claws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds",
+        "index": "13"
+      },
+      {
         "Operation": "Set",
         "Reference": "Weapon,KaiserBlades,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleClaws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds",
+        "index": "14"
       },
       {
         "Operation": "Set",
@@ -7888,16 +7912,13 @@
         "Value": "2"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,Claws,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds",
-        "index": "13"
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount",
+        "Value": "5",
+        "index": "19"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,NeedleClaws,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds",
-        "index": "14"
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount",
+        "index": "20"
       },
       {
         "Reference": "Weapon,KaiserBlades,Icon",
@@ -7906,27 +7927,6 @@
       {
         "Reference": "Weapon,Ram,Icon",
         "index": "16"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Effect,BurrowChargeMPTargetDamage,Amount",
-        "Value": "2",
-        "index": "17"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]",
-        "Value": "2",
-        "index": "18"
-      },
-      {
-        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount",
-        "Value": "5",
-        "index": "19"
-      },
-      {
-        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount",
-        "index": "20"
       },
       {
         "Value": "3",
@@ -7943,9 +7943,33 @@
     "AffectedUnitArray": "LocustMP",
     "EffectArray": [
       {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,Amount",
+        "Value": "2",
+        "index": "17"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]",
+        "Value": "2",
+        "index": "18"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Claws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds",
+        "index": "13"
+      },
+      {
         "Operation": "Set",
         "Reference": "Weapon,KaiserBlades,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleClaws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds",
+        "index": "14"
       },
       {
         "Operation": "Set",
@@ -7962,16 +7986,13 @@
         "Value": "2"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,Claws,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds",
-        "index": "13"
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount",
+        "Value": "5",
+        "index": "19"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,NeedleClaws,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds",
-        "index": "14"
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount",
+        "index": "20"
       },
       {
         "Reference": "Weapon,KaiserBlades,Icon",
@@ -7980,27 +8001,6 @@
       {
         "Reference": "Weapon,Ram,Icon",
         "index": "16"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Effect,BurrowChargeMPTargetDamage,Amount",
-        "Value": "2",
-        "index": "17"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]",
-        "Value": "2",
-        "index": "18"
-      },
-      {
-        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount",
-        "Value": "5",
-        "index": "19"
-      },
-      {
-        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount",
-        "index": "20"
       },
       {
         "Value": "3",
@@ -8094,9 +8094,27 @@
     "AffectedUnitArray": "InfestorTerranBurrowed",
     "EffectArray": [
       {
+        "Operation": "Add",
+        "Reference": "Effect,TalonsMissileDamage,Amount",
+        "Value": "1.000000",
+        "index": "14"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSaliva,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
+        "index": "12"
+      },
+      {
         "Operation": "Set",
         "Reference": "Weapon,AcidSaliva,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
+        "index": "13"
       },
       {
         "Operation": "Set",
@@ -8111,12 +8129,28 @@
       {
         "Operation": "Set",
         "Reference": "Weapon,InfestedGuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+        "index": "16"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfestedGuassRifle,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
       },
       {
         "Operation": "Set",
         "Reference": "Weapon,Talons,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
+      },
+      {
+        "Reference": "Effect,LocustMPDamage,Amount",
+        "Value": "1",
+        "index": "24"
+      },
+      {
+        "Reference": "Effect,LocustMPMeleeDamage,Amount",
+        "Value": "1",
+        "index": "23"
       },
       {
         "Value": "0",
@@ -8127,42 +8161,8 @@
         "index": "11"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,AcidSaliva,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
-        "index": "12"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,AcidSpines,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
-        "index": "13"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Effect,TalonsMissileDamage,Amount",
-        "Value": "1.000000",
-        "index": "14"
-      },
-      {
         "index": "15",
         "removed": "1"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,InfestedGuassRifle,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
-        "index": "16"
-      },
-      {
-        "Reference": "Effect,LocustMPMeleeDamage,Amount",
-        "Value": "1",
-        "index": "23"
-      },
-      {
-        "Reference": "Effect,LocustMPDamage,Amount",
-        "Value": "1",
-        "index": "24"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
@@ -8175,9 +8175,27 @@
     "AffectedUnitArray": "InfestorTerranBurrowed",
     "EffectArray": [
       {
+        "Operation": "Add",
+        "Reference": "Effect,TalonsMissileDamage,Amount",
+        "Value": "1.000000",
+        "index": "14"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSaliva,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
+        "index": "12"
+      },
+      {
         "Operation": "Set",
         "Reference": "Weapon,AcidSaliva,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
+        "index": "13"
       },
       {
         "Operation": "Set",
@@ -8192,12 +8210,28 @@
       {
         "Operation": "Set",
         "Reference": "Weapon,InfestedGuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+        "index": "16"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfestedGuassRifle,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
       },
       {
         "Operation": "Set",
         "Reference": "Weapon,Talons,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+      },
+      {
+        "Reference": "Effect,LocustMPDamage,Amount",
+        "Value": "1",
+        "index": "24"
+      },
+      {
+        "Reference": "Effect,LocustMPMeleeDamage,Amount",
+        "Value": "1",
+        "index": "23"
       },
       {
         "Value": "0",
@@ -8208,42 +8242,8 @@
         "index": "11"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,AcidSaliva,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
-        "index": "12"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,AcidSpines,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
-        "index": "13"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Effect,TalonsMissileDamage,Amount",
-        "Value": "1.000000",
-        "index": "14"
-      },
-      {
         "index": "15",
         "removed": "1"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,InfestedGuassRifle,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
-        "index": "16"
-      },
-      {
-        "Reference": "Effect,LocustMPMeleeDamage,Amount",
-        "Value": "1",
-        "index": "23"
-      },
-      {
-        "Reference": "Effect,LocustMPDamage,Amount",
-        "Value": "1",
-        "index": "24"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
@@ -8256,9 +8256,27 @@
     "AffectedUnitArray": "InfestorTerranBurrowed",
     "EffectArray": [
       {
+        "Operation": "Add",
+        "Reference": "Effect,TalonsMissileDamage,Amount",
+        "Value": "1.000000",
+        "index": "14"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSaliva,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
+        "index": "12"
+      },
+      {
         "Operation": "Set",
         "Reference": "Weapon,AcidSaliva,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
+        "index": "13"
       },
       {
         "Operation": "Set",
@@ -8273,12 +8291,28 @@
       {
         "Operation": "Set",
         "Reference": "Weapon,InfestedGuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+        "index": "16"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfestedGuassRifle,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
       },
       {
         "Operation": "Set",
         "Reference": "Weapon,Talons,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
+      },
+      {
+        "Reference": "Effect,LocustMPDamage,Amount",
+        "Value": "1",
+        "index": "24"
+      },
+      {
+        "Reference": "Effect,LocustMPMeleeDamage,Amount",
+        "Value": "1",
+        "index": "23"
       },
       {
         "Value": "0",
@@ -8289,42 +8323,8 @@
         "index": "11"
       },
       {
-        "Operation": "Set",
-        "Reference": "Weapon,AcidSaliva,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
-        "index": "12"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,AcidSpines,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
-        "index": "13"
-      },
-      {
-        "Operation": "Add",
-        "Reference": "Effect,TalonsMissileDamage,Amount",
-        "Value": "1.000000",
-        "index": "14"
-      },
-      {
         "index": "15",
         "removed": "1"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Weapon,InfestedGuassRifle,Icon",
-        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
-        "index": "16"
-      },
-      {
-        "Reference": "Effect,LocustMPMeleeDamage,Amount",
-        "Value": "1",
-        "index": "23"
-      },
-      {
-        "Reference": "Effect,LocustMPDamage,Amount",
-        "Value": "1",
-        "index": "24"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
@@ -8373,6 +8373,12 @@
     "EffectArray": [
       {
         "Operation": "Set",
+        "Reference": "Unit,Overlord,Speed",
+        "Value": "1.879000",
+        "index": "1"
+      },
+      {
+        "Operation": "Set",
         "Reference": "Unit,OverlordTransport,Speed",
         "Value": "1.879000"
       },
@@ -8384,12 +8390,6 @@
         "Reference": "Unit,Overseer,Speed",
         "Value": "1.500000",
         "index": "0"
-      },
-      {
-        "Operation": "Set",
-        "Reference": "Unit,Overlord,Speed",
-        "Value": "1.879000",
-        "index": "1"
       }
     ],
     "Flags": "TechTreeCheat",

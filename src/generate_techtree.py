@@ -145,6 +145,28 @@ def extract_trainable_units(abil_data: dict) -> dict[str, list[str]]:
     return result
 
 
+def extract_trainable_units_by_ability(abil_data: dict) -> dict[str, list[str]]:
+    """Extract ability name -> trainable unit mappings from *Train abilities in AbilData."""
+    result = {}
+    for name, data in abil_data.items():
+        if not isinstance(data, dict):
+            continue
+        if not name.endswith("Train"):
+            continue
+        info_array = data.get("InfoArray", [])
+        if not isinstance(info_array, list):
+            info_array = [info_array] if info_array else []
+        units = []
+        for item in info_array:
+            if isinstance(item, dict) and "Unit" in item:
+                unit = item.get("Unit")
+                if unit and isinstance(unit, str):
+                    units.append(unit)
+        if units:
+            result[name] = sorted(set(units))
+    return result
+
+
 def extract_researchable_upgrades(abil_data: dict) -> dict[str, list[str]]:
     """Extract research ability -> list of upgrade names from *Research abilities in AbilData."""
     result = {}
@@ -164,6 +186,28 @@ def extract_researchable_upgrades(abil_data: dict) -> dict[str, list[str]]:
                     upgrades.append(upgrade)
         if upgrades:
             result[name] = upgrades
+    return result
+
+
+def extract_morphable_units(abil_data: dict) -> dict[str, list[str]]:
+    """Extract morph ability -> list of morphable units from MorphTo* abilities in AbilData."""
+    result = {}
+    for name, data in abil_data.items():
+        if not isinstance(data, dict):
+            continue
+        if not name.startswith("MorphTo"):
+            continue
+        info_array = data.get("InfoArray", [])
+        if isinstance(info_array, dict):
+            info_array = [info_array] if info_array else []
+        morphables = []
+        for item in info_array:
+            if isinstance(item, dict) and "Unit" in item:
+                unit = item.get("Unit")
+                if unit and isinstance(unit, str):
+                    morphables.append(unit)
+        if morphables:
+            result[name] = sorted(set(morphables))
     return result
 
 
@@ -207,8 +251,10 @@ def main():
                 building_unlocks[name] = unlocked
 
     trainable_units = extract_trainable_units(abil_data)
+    trainable_units_by_ability = extract_trainable_units_by_ability(abil_data)
     researchable_upgrades = extract_researchable_upgrades(abil_data)
     buildable_units = extract_buildable_units(abil_data)
+    morphable_units = extract_morphable_units(abil_data)
 
     for name, data in unit_data.items():
         if not isinstance(data, dict):
@@ -318,6 +364,12 @@ def main():
 
             if name in buildable_units:
                 abilities[name]["builds"] = buildable_units[name]
+
+            if name == "LarvaTrain" and name in trainable_units_by_ability:
+                abilities[name]["morphs"] = trainable_units_by_ability[name]
+
+            if name.startswith("MorphTo") and name in morphable_units:
+                abilities[name]["morphs"] = morphable_units[name]
 
     tech_tree = {
         "structures": structures,

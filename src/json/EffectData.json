@@ -700,12 +700,12 @@
     "ImpactEffect": "ArbiterMPWeaponDamage",
     "Movers": [
       {
-        "IfRangeLTE": "4",
-        "Link": "ArbiterMPWeaponMissile"
-      },
-      {
         "IfRangeLTE": "1",
         "Link": "MissileDefault"
+      },
+      {
+        "IfRangeLTE": "4",
+        "Link": "ArbiterMPWeaponMissile"
       }
     ]
   },
@@ -1871,12 +1871,12 @@
         "Link": "CausticSprayMissile"
       },
       {
-        "IfRangeLTE": "5",
-        "Link": "CausticSprayMissileClose"
-      },
-      {
         "IfRangeLTE": "3",
         "Link": "MissileDefault"
+      },
+      {
+        "IfRangeLTE": "5",
+        "Link": "CausticSprayMissileClose"
       }
     ]
   },
@@ -1912,12 +1912,12 @@
         "Link": "CausticSprayMissile"
       },
       {
-        "IfRangeLTE": "5",
-        "Link": "CausticSprayMissileClose"
-      },
-      {
         "IfRangeLTE": "3",
         "Link": "MissileDefault"
+      },
+      {
+        "IfRangeLTE": "5",
+        "Link": "CausticSprayMissileClose"
       }
     ]
   },
@@ -3704,16 +3704,16 @@
     "Amount": 40,
     "AreaArray": [
       {
-        "Fraction": "1",
-        "Radius": "0.4687"
+        "Fraction": "0.25",
+        "Radius": "1.25"
       },
       {
         "Fraction": "0.5",
         "Radius": "0.7812"
       },
       {
-        "Fraction": "0.25",
-        "Radius": "1.25"
+        "Fraction": "1",
+        "Radius": "0.4687"
       }
     ],
     "AttributeBonus": "Armored",
@@ -3772,6 +3772,11 @@
     "CaseArray": [
       {
         "Effect": "CrucioShockCannonBlast",
+        "Validator": "IsSupplyDepotLowered",
+        "index": "1"
+      },
+      {
+        "Effect": "CrucioShockCannonBlast",
         "Validator": "IsSupplyDepotLowered"
       },
       {
@@ -3781,11 +3786,6 @@
       {
         "Effect": "CrucioShockCannonDirected",
         "Validator": "TargetRadiusLarge"
-      },
-      {
-        "Effect": "CrucioShockCannonBlast",
-        "Validator": "IsSupplyDepotLowered",
-        "index": "1"
       }
     ],
     "EditorCategories": "Race:Terran"
@@ -4329,12 +4329,12 @@
     "ImpactEffect": "DevourerMPWeaponSet",
     "Movers": [
       {
-        "IfRangeLTE": "4",
-        "Link": "DevourerMPWeaponMissile"
-      },
-      {
         "IfRangeLTE": "1",
         "Link": "MissileDefault"
+      },
+      {
+        "IfRangeLTE": "4",
+        "Link": "DevourerMPWeaponMissile"
       }
     ]
   },
@@ -4837,11 +4837,11 @@
   "DisguiseSearch": {
     "AreaArray": [
       {
-        "Effect": "DisguiseRemoveBehavior"
-      },
-      {
         "Effect": "Disguise",
         "Radius": "12"
+      },
+      {
+        "Effect": "DisguiseRemoveBehavior"
       }
     ],
     "EditorCategories": "Race:Zerg",
@@ -4999,12 +4999,12 @@
     "AreaArray": [
       {
         "Effect": "EMPSet",
-        "Radius": "2"
+        "Radius": "1.5",
+        "index": "0"
       },
       {
         "Effect": "EMPSet",
-        "Radius": "1.5",
-        "index": "0"
+        "Radius": "2"
       }
     ],
     "EditorCategories": "Race:Terran",
@@ -6066,15 +6066,15 @@
   "HellionTankSearch": {
     "AreaArray": [
       {
-        "Arc": "90",
-        "Effect": "HellionTankDamage",
-        "Radius": "2"
-      },
-      {
         "Arc": "45",
         "Effect": "HellionTankDamage",
         "Radius": "2",
         "index": "0"
+      },
+      {
+        "Arc": "90",
+        "Effect": "HellionTankDamage",
+        "Radius": "2"
       }
     ],
     "EditorCategories": "Race:Terran",
@@ -6364,23 +6364,23 @@
     "ImpactEffect": "ImpalerTentacleU",
     "Movers": [
       {
-        "IfRangeLTE": "7",
-        "Link": "SpineCrawlerTentacleExtendLong"
-      },
-      {
         "IfRangeLTE": "3",
         "Link": "SpineCrawlerTentacleExtendShort"
+      },
+      {
+        "IfRangeLTE": "7",
+        "Link": "SpineCrawlerTentacleExtendLong"
       }
     ],
     "ReturnDelay": 0.175,
     "ReturnMovers": [
       {
-        "IfRangeLTE": "7",
-        "Link": "SpineCrawlerTentacleRetractLong"
-      },
-      {
         "IfRangeLTE": "3",
         "Link": "SpineCrawlerTentacleRetractShort"
+      },
+      {
+        "IfRangeLTE": "7",
+        "Link": "SpineCrawlerTentacleRetractLong"
       }
     ],
     "ValidatorArray": "SpineCrawlerLMTargetFilters"
@@ -6860,12 +6860,12 @@
     "ImpactEffect": "IonCannonsULeft",
     "Movers": [
       {
-        "IfRangeLTE": "6",
-        "Link": "IonCannonsWeaponLeft"
-      },
-      {
         "IfRangeLTE": "1",
         "Link": "MissileDefault"
+      },
+      {
+        "IfRangeLTE": "6",
+        "Link": "IonCannonsWeaponLeft"
       }
     ],
     "parent": "IonCannonsLM"
@@ -6874,12 +6874,12 @@
     "ImpactEffect": "IonCannonsURight",
     "Movers": [
       {
-        "IfRangeLTE": "6",
-        "Link": "IonCannonsWeaponRight"
-      },
-      {
         "IfRangeLTE": "1",
         "Link": "MissileDefault"
+      },
+      {
+        "IfRangeLTE": "6",
+        "Link": "IonCannonsWeaponRight"
       }
     ],
     "parent": "IonCannonsLM"
@@ -7001,12 +7001,12 @@
     },
     "Movers": [
       {
-        "IfRangeLTE": "500",
-        "Link": "KD8ChargeWeapon"
-      },
-      {
         "IfRangeLTE": "1",
         "Link": "KD8ChargeWeaponCloseRange"
+      },
+      {
+        "IfRangeLTE": "500",
+        "Link": "KD8ChargeWeapon"
       }
     ]
   },
@@ -9485,16 +9485,16 @@
     "Amount": 300,
     "AreaArray": [
       {
-        "Fraction": "1",
-        "Radius": "4"
+        "Fraction": "0.25",
+        "Radius": "8"
       },
       {
         "Fraction": "0.5",
         "Radius": "6"
       },
       {
-        "Fraction": "0.25",
-        "Radius": "8"
+        "Fraction": "1",
+        "Radius": "4"
       }
     ],
     "AttributeBonus": "Structure",
@@ -10937,14 +10937,14 @@
         "Validator": "DoubleDamage"
       },
       {
-        "Effect": "PrismaticBeamMUx1",
-        "FallThrough": "1",
-        "Validator": "NotQuadAndNotDoubleDamage"
-      },
-      {
         "Effect": "PrismaticBeamDamageSet3",
         "FallThrough": "1",
         "Validator": "QuadDamage"
+      },
+      {
+        "Effect": "PrismaticBeamMUx1",
+        "FallThrough": "1",
+        "Validator": "NotQuadAndNotDoubleDamage"
       }
     ],
     "EditorCategories": "Race:Protoss"
@@ -11029,21 +11029,21 @@
     "Amount": 25,
     "AreaArray": [
       {
-        "Fraction": "0.5",
-        "Radius": "0.4"
+        "Fraction": "0.25",
+        "Radius": "0.8"
       },
       {
         "Fraction": "0.25",
-        "Radius": "0.8"
+        "Radius": "1",
+        "index": "2"
       },
       {
         "Fraction": "0.25",
         "Radius": "1"
       },
       {
-        "Fraction": "1",
-        "Radius": "0.25",
-        "index": "0"
+        "Fraction": "0.5",
+        "Radius": "0.4"
       },
       {
         "Fraction": "0.5",
@@ -11051,9 +11051,9 @@
         "index": "1"
       },
       {
-        "Fraction": "0.25",
-        "Radius": "1",
-        "index": "2"
+        "Fraction": "1",
+        "Radius": "0.25",
+        "index": "0"
       }
     ],
     "AttributeBonus": "Biological",
@@ -11790,16 +11790,16 @@
     ],
     "AreaArray": [
       {
+        "Fraction": "0.25",
+        "Radius": "2.88"
+      },
+      {
+        "Fraction": "0.25",
+        "Radius": "2.88"
+      },
+      {
         "Fraction": "0.5",
         "Radius": "1.44"
-      },
-      {
-        "Fraction": "0.25",
-        "Radius": "2.88"
-      },
-      {
-        "Fraction": "0.25",
-        "Radius": "2.88"
       }
     ],
     "EditorCategories": "Race:Terran",
@@ -13303,16 +13303,16 @@
     "Amount": 100,
     "AreaArray": [
       {
-        "Fraction": "1",
-        "Radius": "0.6"
+        "Fraction": "0.25",
+        "Radius": "2.4"
       },
       {
         "Fraction": "0.5",
         "Radius": "1.2"
       },
       {
-        "Fraction": "0.25",
-        "Radius": "2.4"
+        "Fraction": "1",
+        "Radius": "0.6"
       }
     ],
     "EditorCategories": "Race:Terran",
@@ -15020,16 +15020,16 @@
     "Amount": 40,
     "AreaArray": [
       {
-        "Fraction": "1",
-        "Radius": "0.5"
+        "Fraction": "0.375",
+        "Radius": "1.25"
       },
       {
         "Fraction": "0.75",
         "Radius": "0.8"
       },
       {
-        "Fraction": "0.375",
-        "Radius": "1.25"
+        "Fraction": "1",
+        "Radius": "0.5"
       }
     ],
     "Death": "Fire",
@@ -17328,12 +17328,12 @@
   "YoinkLaunchTargetMoverSwitch": {
     "CaseArray": [
       {
-        "Effect": "YoinkLaunchTargetGlide",
-        "Validator": "IsColossus"
-      },
-      {
         "Effect": "YoinkLaunchTargetAir",
         "Validator": "TargetIsAir"
+      },
+      {
+        "Effect": "YoinkLaunchTargetGlide",
+        "Validator": "IsColossus"
       }
     ],
     "CaseDefault": "YoinkLaunchTarget",
