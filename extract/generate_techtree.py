@@ -56,7 +56,7 @@ def is_techlab_unit(unit_data: dict) -> bool:
     return isinstance(tech_alias, str) and "TechLab" in tech_alias
 
 
-def extract_build_requirements(abil_data: dict) -> dict[str, str]:
+def extract_build_requirements(abil_data: dict) -> dict[str, list[str]]:
     """Extract unit -> requirement mappings from AbilData.InfoArray."""
     result = {}
     info_array = abil_data.get("InfoArray", [])
@@ -75,7 +75,12 @@ def extract_build_requirements(abil_data: dict) -> dict[str, str]:
         if requirements and isinstance(requirements, str):
             match = re.match(r"Have(\w+)", requirements)
             if match:
-                result[unit] = match.group(1)
+                reqs = []
+                for part in match.group(1).split("And"):
+                    if part.startswith("Attached") and part.endswith("TechLab"):
+                        part = "AttachedTechLab"
+                    reqs.append(part)
+                result[unit] = reqs
     return result
 
 
@@ -91,7 +96,7 @@ def main():
 
     building_unlocks: dict[str, list[str]] = {}
     building_produces: dict[str, list[str]] = {}
-    build_requirements: dict[str, str] = {}
+    build_requirements: dict[str, list[str]] = {}
 
     for name, data in abil_data.items():
         if not isinstance(data, dict):
@@ -154,7 +159,7 @@ def main():
                     requires.add(building)
 
             if name in build_requirements:
-                requires.add(build_requirements[name])
+                requires.update(build_requirements[name])
 
             units[name] = {
                 "requires": sorted(requires),

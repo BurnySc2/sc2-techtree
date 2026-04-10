@@ -915,9 +915,9 @@
     },
     "CommandCenter": {
       "produces": [
+        "OrbitalCommand",
         "PlanetaryFortress",
-        "SCV",
-        "OrbitalCommand"
+        "SCV"
       ],
       "race": "Terran",
       "unlocks": []
@@ -946,8 +946,8 @@
       "produces": [],
       "race": "Protoss",
       "unlocks": [
-        "Stalker",
         "Sentry",
+        "Stalker",
         "Adept"
       ]
     },
@@ -955,8 +955,8 @@
       "produces": [],
       "race": "Protoss",
       "unlocks": [
-        "Archon",
-        "DarkTemplar"
+        "DarkTemplar",
+        "Archon"
       ]
     },
     "EngineeringBay": {
@@ -981,9 +981,9 @@
     },
     "Factory": {
       "produces": [
+        "SiegeTank",
         "Thor",
-        "WidowMine",
-        "SiegeTank"
+        "WidowMine"
       ],
       "race": "Terran",
       "unlocks": []
@@ -1025,12 +1025,12 @@
     },
     "Gateway": {
       "produces": [
-        "HighTemplar",
-        "WarpGate",
         "DarkTemplar",
-        "Stalker",
+        "Zealot",
         "Sentry",
-        "Zealot"
+        "WarpGate",
+        "Stalker",
+        "HighTemplar"
       ],
       "race": "Protoss",
       "unlocks": []
@@ -1186,10 +1186,10 @@
     },
     "RoboticsFacility": {
       "produces": [
-        "WarpPrism",
-        "Observer",
         "Colossus",
-        "Immortal"
+        "WarpPrism",
+        "Immortal",
+        "Observer"
       ],
       "race": "Protoss",
       "unlocks": []
@@ -1208,8 +1208,8 @@
       "produces": [],
       "race": "Zerg",
       "unlocks": [
-        "Queen",
-        "Zergling"
+        "Zergling",
+        "Queen"
       ]
     },
     "SpineCrawler": {
@@ -1243,19 +1243,19 @@
     "Stargate": {
       "produces": [
         "Carrier",
-        "Oracle",
-        "VoidRay"
+        "VoidRay",
+        "Oracle"
       ],
       "race": "Protoss",
       "unlocks": []
     },
     "Starport": {
       "produces": [
-        "VikingFighter",
+        "Battlecruiser",
         "Banshee",
         "Medivac",
-        "Raven",
-        "Battlecruiser"
+        "VikingFighter",
+        "Raven"
       ],
       "race": "Terran",
       "unlocks": []
@@ -1354,7 +1354,7 @@
     "Battlecruiser": {
       "race": "Terran",
       "requires": [
-        "AttachedStarportTechLabAndFusionCore",
+        "AttachedTechLab",
         "FusionCore"
       ]
     },
@@ -1423,8 +1423,9 @@
     "Ghost": {
       "race": "Terran",
       "requires": [
-        "AttachedBarrTechLabAndShadowOps",
-        "GhostAcademy"
+        "AttachedTechLab",
+        "GhostAcademy",
+        "ShadowOps"
       ]
     },
     "Hellion": {
@@ -1665,7 +1666,7 @@
       "race": "Terran",
       "requires": [
         "Armory",
-        "ArmoryAndAttachedTechLab"
+        "AttachedTechLab"
       ]
     },
     "ThorAP": {
