@@ -135,8 +135,8 @@ def main():
         if is_structure:
             produced = building_produces.get(name, [])
             unlocked = building_unlocks.get(name, [])
-            produces = list({u for u in produced if isinstance(u, str)})
-            unlocks = list({u for u in unlocked if isinstance(u, str)})
+            produces = sorted({u for u in produced if isinstance(u, str)})
+            unlocks = sorted({u for u in unlocked if isinstance(u, str)})
 
             structures[name] = {
                 "produces": produces,

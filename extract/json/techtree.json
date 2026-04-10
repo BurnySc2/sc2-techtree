@@ -862,8 +862,8 @@
       "produces": [],
       "race": "Terran",
       "unlocks": [
-        "Thor",
-        "HellionTank"
+        "HellionTank",
+        "Thor"
       ]
     },
     "Assimilator": {
@@ -890,10 +890,10 @@
     },
     "Barracks": {
       "produces": [
-        "Marine",
+        "Ghost",
         "Marauder",
-        "Reaper",
-        "Ghost"
+        "Marine",
+        "Reaper"
       ],
       "race": "Terran",
       "unlocks": []
@@ -946,17 +946,17 @@
       "produces": [],
       "race": "Protoss",
       "unlocks": [
+        "Adept",
         "Sentry",
-        "Stalker",
-        "Adept"
+        "Stalker"
       ]
     },
     "DarkShrine": {
       "produces": [],
       "race": "Protoss",
       "unlocks": [
-        "DarkTemplar",
-        "Archon"
+        "Archon",
+        "DarkTemplar"
       ]
     },
     "EngineeringBay": {
@@ -1026,11 +1026,11 @@
     "Gateway": {
       "produces": [
         "DarkTemplar",
-        "Zealot",
+        "HighTemplar",
         "Sentry",
-        "WarpGate",
         "Stalker",
-        "HighTemplar"
+        "WarpGate",
+        "Zealot"
       ],
       "race": "Protoss",
       "unlocks": []
@@ -1187,9 +1187,9 @@
     "RoboticsFacility": {
       "produces": [
         "Colossus",
-        "WarpPrism",
         "Immortal",
-        "Observer"
+        "Observer",
+        "WarpPrism"
       ],
       "race": "Protoss",
       "unlocks": []
@@ -1208,8 +1208,8 @@
       "produces": [],
       "race": "Zerg",
       "unlocks": [
-        "Zergling",
-        "Queen"
+        "Queen",
+        "Zergling"
       ]
     },
     "SpineCrawler": {
@@ -1243,19 +1243,19 @@
     "Stargate": {
       "produces": [
         "Carrier",
-        "VoidRay",
-        "Oracle"
+        "Oracle",
+        "VoidRay"
       ],
       "race": "Protoss",
       "unlocks": []
     },
     "Starport": {
       "produces": [
-        "Battlecruiser",
         "Banshee",
+        "Battlecruiser",
         "Medivac",
-        "VikingFighter",
-        "Raven"
+        "Raven",
+        "VikingFighter"
       ],
       "race": "Terran",
       "unlocks": []
