@@ -43,6 +43,11 @@ Finally we can convert the data from .xml to .json with
 uv run extract/convert_xml_to_json.py
 ```
 
+From here we can generate tech tree
+```sh
+uv run extract/generate_techtree.py
+```
+
 Resulting files should be:
 ```sh
 extract/
