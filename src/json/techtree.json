@@ -1484,14 +1484,12 @@
       "builds": [
         "Armory",
         "Barracks",
-        "BomberLaunchPad",
         "Bunker",
         "CommandCenter",
         "EngineeringBay",
         "Factory",
         "FusionCore",
         "GhostAcademy",
-        "MercCompound",
         "MissileTurret",
         "Refinery",
         "RefineryRich",
@@ -1672,7 +1670,6 @@
       "builds": [
         "BanelingNest",
         "CreepTumor",
-        "Digester",
         "EvolutionChamber",
         "Extractor",
         "Hatchery",
@@ -2061,9 +2058,7 @@
         "overlordspeed",
         "overlordtransport"
       ],
-      "unlocks": [
-        "SnakeCaster"
-      ]
+      "unlocks": []
     },
     "HydraliskDen": {
       "produces": [],
@@ -2561,7 +2556,6 @@
       "builds": [
         "BanelingNest",
         "CreepTumor",
-        "Digester",
         "EvolutionChamber",
         "Extractor",
         "Hatchery",
@@ -2891,14 +2885,12 @@
       "builds": [
         "Armory",
         "Barracks",
-        "BomberLaunchPad",
         "Bunker",
         "CommandCenter",
         "EngineeringBay",
         "Factory",
         "FusionCore",
         "GhostAcademy",
-        "MercCompound",
         "MissileTurret",
         "Refinery",
         "RefineryRich",

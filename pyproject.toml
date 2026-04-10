@@ -17,7 +17,7 @@ dev = [
 ]
 
 [tool.pyrefly]
-project_includes = ["."]
+project_includes = ["src"]
 project-excludes = [
     # Cache and temp files
     # "**/tests/**",

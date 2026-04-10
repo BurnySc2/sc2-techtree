@@ -172,8 +172,9 @@ def extract_all_morph_info(abil_data: dict) -> tuple[dict[str, str], dict[str, l
     return morphsto_map, morph_requires
 
 
-def extract_buildable_units(abil_data: dict) -> dict[str, list[str]]:
-    """Extract build ability -> list of buildable units from *Build and *AddOns abilities in AbilData."""
+def extract_buildable_units(abil_data: dict, valid_units: set[str]) -> dict[str, list[str]]:
+    """Extract build ability -> list of buildable units from *Build and *AddOns abilities in AbilData.
+    Only includes units that exist in valid_units (i.e., have a UnitData.json entry)."""
     result = {}
     for name, data in abil_data.items():
         if not isinstance(data, dict):
@@ -187,7 +188,7 @@ def extract_buildable_units(abil_data: dict) -> dict[str, list[str]]:
         for item in info_array:
             if isinstance(item, dict) and "Unit" in item:
                 unit = item.get("Unit")
-                if unit and isinstance(unit, str):
+                if unit and isinstance(unit, str) and unit in valid_units:
                     buildables.append(unit)
         if buildables:
             result[name] = sorted(set(buildables))
@@ -324,8 +325,8 @@ def main():
     trainable_units = extract_trainable_units(abil_data)
     trainable_units_by_ability = extract_trainable_units_by_ability(abil_data)
     researchable_upgrades = extract_researchable_upgrades(abil_data)
-    buildable_units = extract_buildable_units(abil_data)
-    morphable_units = extract_morphable_units(abil_data)
+    valid_units = set(unit_data.keys())
+    buildable_units = extract_buildable_units(abil_data, valid_units)
     morphsto_map, morph_requires = extract_all_morph_info(abil_data)
 
     for name, data in unit_data.items():
@@ -341,12 +342,13 @@ def main():
             produced = building_produces.get(name, [])
             trainable = trainable_units.get(name, [])
             combined = list({*produced, *trainable})
+            valid_produces = sorted({u for u in combined if isinstance(u, str) and u in valid_units})
             unlocked = building_unlocks.get(name, [])
-            produces = sorted({u for u in combined if isinstance(u, str)})
-            unlocks = sorted({u for u in unlocked if isinstance(u, str)})
+            unlocks = sorted({u for u in unlocked if isinstance(u, str) and u in valid_units})
 
             abil_array = data.get("AbilArray", [])
             researches = []
+            valid_upgrades = set(upgrade_data.keys())
             if isinstance(abil_array, list):
                 for abil in abil_array:
                     if isinstance(abil, dict) and abil.get("Link"):
@@ -356,14 +358,18 @@ def main():
                     else:
                         continue
                     if research_name in researchable_upgrades:
-                        researches.extend(researchable_upgrades[research_name])
+                        for upgrade in researchable_upgrades[research_name]:
+                            if upgrade in valid_upgrades:
+                                researches.append(upgrade)
             elif isinstance(abil_array, dict) and abil_array.get("Link"):
                 research_name = abil_array.get("Link")
                 if research_name in researchable_upgrades:
-                    researches.extend(researchable_upgrades[research_name])
+                    for upgrade in researchable_upgrades[research_name]:
+                        if upgrade in valid_upgrades:
+                            researches.append(upgrade)
 
             structures[name] = {
-                "produces": produces,
+                "produces": valid_produces,
                 "unlocks": unlocks,
                 "race": race,
             }
