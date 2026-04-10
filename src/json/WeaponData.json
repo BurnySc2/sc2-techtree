@@ -151,9 +151,9 @@
     "AcquireTargetSorts": {
       "SortArray": [
         "GroundTarget",
-        "GroundTarget",
         "TSPriorityDesc",
         "TSThreatenBattlecruiser",
+        "TSTrackedByBattlecruiser",
         "TSTransientBattlecruiser"
       ]
     },

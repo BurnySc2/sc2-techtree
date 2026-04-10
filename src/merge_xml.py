@@ -95,12 +95,12 @@ def get_child_key(elem: etree._Element) -> tuple:
 
     For elements with @index, use (tag, index).
     For other elements, use (tag,) with empty string index.
-    For TechTreeUnlockedUnitArray, include value to differentiate.
+    For *Array tags, include value to differentiate (accumulate multiple values).
     """
-    tag = elem.tag
+    tag = str(elem.tag)
     index = elem.get("index", "")
     link = elem.get("Link", "")
-    if tag == "TechTreeUnlockedUnitArray":
+    if tag.endswith("Array"):
         value = elem.get("value", "")
         return (tag, index, link, value)
     return (tag, index, link)
@@ -133,13 +133,14 @@ def merge_child_elements(base_elem: etree._Element, override_elem: etree._Elemen
             if len(override_child) > 0 or len(base_child) > 0:
                 merge_child_elements(base_child, override_child)
                 del override_lookup[key]
-            elif base_child.tag == "TechTreeUnlockedUnitArray":
-                # Accumulate TechTreeUnlockedUnitArray values instead of replacing
+            elif str(base_child.tag).endswith("Array"):
+                # Accumulate *Array values instead of replacing
                 base_value = base_child.get("value", "")
                 override_value = override_child.get("value", "")
                 if override_value and override_value != base_value:
                     # Check if this value already exists in base's children
-                    existing_values = {c.get("value") for c in base_elem if c.tag == "TechTreeUnlockedUnitArray"}
+                    base_tag = str(base_child.tag)
+                    existing_values = {c.get("value") for c in base_elem if str(c.tag) == base_tag}
                     if override_value not in existing_values:
                         new_elem = deepcopy(override_child)
                         base_elem.append(new_elem)

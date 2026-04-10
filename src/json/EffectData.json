@@ -345,6 +345,7 @@
       "PhaseFungalMovementRemove",
       "PhaseMothershipRecalledRemove",
       "PhaseMothershipRecallingRemove",
+      "PhaseNeuralParasiteRemove",
       "PhaseShiftRemoveRecall",
       "PhaseStasisTrapRemove"
     ]
@@ -375,6 +376,7 @@
     "EffectArray": [
       "AdeptPhaseShiftIssueOrder",
       "AdeptPhaseShiftNeuraledShadeCP",
+      "AdeptPhaseShiftSpawnAB",
       "AdeptPhaseShiftTimerSpawnAB"
     ]
   },
@@ -470,7 +472,7 @@
   "AdeptPiercingSet": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
-      "AdeptPiercingInitialPersistent",
+      "AdeptDamage",
       "AdeptPiercingInitialPersistent"
     ],
     "TargetLocationType": "UnitOrPoint"
@@ -866,8 +868,8 @@
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": [
       "HasAtLeastNormalPower",
+      "IsNotConstructing",
       "IsShieldBattery",
-      "NexusBatteryOvercharge8Range",
       "NexusBatteryOvercharge8Range",
       "TargetNotHaveBatteryOvercharge"
     ]
@@ -969,7 +971,7 @@
   "BattlecruiserAttackTrackerPointSet": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
-      "BattlecruiserAttackTrackerOrderAttack",
+      "BattlecruiserAttackTrackerDP",
       "BattlecruiserAttackTrackerOrderAttack"
     ],
     "TargetLocationType": "Point"
@@ -977,7 +979,7 @@
   "BattlecruiserAttackTrackerStopSet": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
-      "BattlecruiserAttackTrackerOrderStop",
+      "BattlecruiserAttackTrackerDP",
       "BattlecruiserAttackTrackerOrderStop"
     ]
   },
@@ -994,8 +996,8 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "BattlecruiserAttackTrackerCP",
-      "BattlecruiserAttackTrackerCP",
-      "BattlecruiserAttackTrackerDP"
+      "BattlecruiserAttackTrackerDP",
+      "BattlecruiserChasingAB"
     ],
     "Marker": "Effect/BattlecruiserAttackTrackerCP"
   },
@@ -1030,7 +1032,7 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "BattlecruiserDamageSwitch",
-      "BattlecruiserDamageSwitch"
+      "BattlecruiserTransientTrackerAB"
     ]
   },
   "BattlecruiserDamageSwitch": {
@@ -1622,10 +1624,10 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "BypassArmorDebuffDamageDummy",
-      "BypassArmorDebuffDamageDummy",
       "BypassArmorDebuffOneAB",
       "BypassArmorDebuffThreeAB",
       "BypassArmorDebuffTwoAB",
+      "BypassArmorMovementDebuffAB",
       "BypassArmorStunAB"
     ]
   },
@@ -1654,7 +1656,7 @@
     "PeriodicPeriodArray": 0.5,
     "ValidatorArray": [
       "BypassArmorGreaterThanZero",
-      "BypassArmorGreaterThanZero"
+      "NotHaveBypassArmorDebuffCombine"
     ],
     "WhichLocation": {
       "Value": "TargetUnit"
@@ -1710,15 +1712,15 @@
     "EffectArray": [
       "BypassArmorDebuffOneRB",
       "BypassArmorDebuffThreeRB",
-      "BypassArmorDebuffThreeRB",
-      "BypassArmorDebuffTwoRB"
+      "BypassArmorDebuffTwoRB",
+      "BypassArmorStunRB"
     ]
   },
   "BypassArmorReapplyABSet": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "BypassArmorDebuffOneAB",
-      "BypassArmorDebuffThreeAB",
+      "BypassArmorDebuffOneRB",
       "BypassArmorDebuffThreeAB",
       "BypassArmorDebuffThreeRB",
       "BypassArmorDebuffTwoAB",
@@ -1755,6 +1757,7 @@
   "CCCreateSet": {
     "EditorCategories": "",
     "EffectArray": [
+      "CommandStructureAutoRally",
       "SprayTerranInitialUpgrade"
     ]
   },
@@ -1789,7 +1792,8 @@
     "EffectArray": [
       "CalldownMULEIssueOrder",
       "CalldownMULEIssueOrderSecondary",
-      "CalldownMULETimedLife"
+      "CalldownMULETimedLife",
+      "RemovePrecursor"
     ]
   },
   "CalldownMULEIssueOrder": {
@@ -1897,6 +1901,7 @@
   },
   "CausticSprayLevel1PersistentSet": {
     "EffectArray": [
+      "CausticSprayDummy",
       "CausticSprayLevel1Persistent",
       "ChannelingCausticSprayAB"
     ]
@@ -2012,7 +2017,7 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "ChannelSnipeCombatRB",
-      "ChannelSnipeCombatRB",
+      "ChannelSnipeDamage",
       "ChannelSnipeRefundRB"
     ]
   },
@@ -2032,7 +2037,7 @@
     "EffectArray": [
       "ChannelSnipeCombat",
       "ChannelSnipeCombatBeamDummy",
-      "ChannelSnipeCombatBeamDummy",
+      "ChannelSnipeCreatePersistent",
       "ChannelSnipeRefund"
     ]
   },
@@ -2052,7 +2057,7 @@
   "ChannelSnipeRefundSet": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
-      "ChannelSnipeRefundRB",
+      "ChannelSnipeEnergyRefund",
       "ChannelSnipeRefundRB"
     ]
   },
@@ -2117,8 +2122,8 @@
       "Value": "TargetUnit"
     },
     "ValidatorArray": [
+      "ChargeDamageDistance",
       "ZealotChargeTargetNotHidden",
-      "ZealotSunderingImpactUpgraded",
       "ZealotSunderingImpactUpgraded"
     ]
   },
@@ -2126,8 +2131,8 @@
     "Amount": 8,
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": [
+      "ChargeTargetNotAlive",
       "NotHidden",
-      "ZealotSunderingImpactUpgraded",
       "ZealotSunderingImpactUpgraded"
     ]
   },
@@ -2135,11 +2140,11 @@
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
       "ChargeAttackRemoveBuff",
-      "ChargeAttackRemoveBuff",
-      "ChargeCheckRemoveBuff"
+      "ChargeCheckRemoveBuff",
+      "ChargingDamage"
     ],
     "ValidatorArray": [
-      "NotHidden",
+      "ChargeTargetNotDead",
       "NotHidden"
     ]
   },
@@ -2148,7 +2153,8 @@
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": [
       "IsNotChronoBoosted",
-      "TimeWarpTargetFilters"
+      "TimeWarpTargetFilters",
+      "TimeWarpViableTargets"
     ]
   },
   "ChronoBoostAlert": {
@@ -2159,7 +2165,7 @@
     "Behavior": "ChronoBoostEnergyCost",
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": [
-      "TimeWarpViableTargets",
+      "TimeWarpTargetFilters",
       "TimeWarpViableTargets"
     ]
   },
@@ -2187,8 +2193,10 @@
     "Behavior": "CloakFieldEffect",
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": [
+      "CloakedAndNotBuried",
       "IsNotDisruptorPhased",
-      "NotMothership"
+      "NotMothership",
+      "NotMothershipCore"
     ]
   },
   "CloakingFieldApplyCasterBehavior": {
@@ -3377,7 +3385,7 @@
   "CommandCenterKnockbackSE": {
     "AreaArray": {
       "Effect": "TerranBuildingKnockBack2Set",
-      "Radius": "2"
+      "Radius": "1.9"
     },
     "EditorCategories": "",
     "SearchFilters": "Ground;Self,Neutral,Structure,Missile,Dead,Hidden"
@@ -3758,8 +3766,8 @@
         "Validator": "IsSupplyDepotLowered"
       },
       {
-        "Effect": "CrucioShockCannonDirected",
-        "Validator": "TargetRadiusLarge"
+        "Effect": "CrucioShockCannonBlast",
+        "Validator": "TargetRadiusSmall"
       },
       {
         "Effect": "CrucioShockCannonDirected",
@@ -3815,7 +3823,7 @@
   "CycloneAirWeaponLaunchMissileLeftSetAlternative": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
-      "CycloneWeaponLaunchMissileAlternateAB",
+      "CycloneAirWeaponLaunchMissileLeftAlternative",
       "CycloneWeaponLaunchMissileAlternateAB"
     ]
   },
@@ -3850,7 +3858,7 @@
   "CycloneAirWeaponLaunchMissileRightSetAlternative": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
-      "CycloneWeaponLaunchMissileAlternateRB",
+      "CycloneAirWeaponLaunchMissileRightAlternative",
       "CycloneWeaponLaunchMissileAlternateRB"
     ]
   },
@@ -3888,6 +3896,7 @@
   },
   "CycloneAttackWeaponLaunchMissileLeftSet": {
     "EffectArray": [
+      "CycloneAttackWeaponLaunchMissileLeft",
       "CycloneCooldownAB",
       "CycloneWeaponLaunchMissileAlternateAB"
     ]
@@ -3903,6 +3912,7 @@
   },
   "CycloneAttackWeaponLaunchMissileRightSet": {
     "EffectArray": [
+      "CycloneAttackWeaponLaunchMissileRight",
       "CycloneCooldownAB",
       "CycloneWeaponLaunchMissileAlternateRB"
     ]
@@ -3972,7 +3982,10 @@
       "Value": "CasterUnit"
     },
     "Movers": "CycloneMissileLeft",
-    "ValidatorArray": "CycloneWeaponLaunchMissileLeftTargetFilters"
+    "ValidatorArray": [
+      "CycloneWeaponLaunchMissileLeftTargetFilters",
+      "GroundUnitFilter"
+    ]
   },
   "CycloneWeaponLaunchMissileLeftSet": {
     "EditorCategories": "Race:Terran",
@@ -3986,7 +3999,7 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "CycloneWeaponLaunchMissileAlternateAB",
-      "CycloneWeaponLaunchMissileAlternateAB"
+      "CycloneWeaponLaunchMissileLeft"
     ]
   },
   "CycloneWeaponLaunchMissileRight": {
@@ -3997,7 +4010,10 @@
       "Value": "CasterUnit"
     },
     "Movers": "CycloneMissileRight",
-    "ValidatorArray": "CycloneWeaponLaunchMissileRightTargetFilters"
+    "ValidatorArray": [
+      "CycloneWeaponLaunchMissileRightTargetFilters",
+      "GroundUnitFilter"
+    ]
   },
   "CycloneWeaponLaunchMissileRightSet": {
     "EditorCategories": "Race:Terran",
@@ -4011,7 +4027,7 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "CycloneWeaponLaunchMissileAlternateRB",
-      "CycloneWeaponLaunchMissileAlternateRB"
+      "CycloneWeaponLaunchMissileRight"
     ]
   },
   "CycloneWeaponLaunchMissileSwitch": {
@@ -4092,7 +4108,7 @@
   "DamageTakenBarrierAutocastSet": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
-      "ImmortalBarrierSupressedApplyBehavior",
+      "DamageTakenBarrieAutocastAB",
       "ImmortalBarrierSupressedApplyBehavior"
     ]
   },
@@ -5150,7 +5166,10 @@
       "FeedbackEnergyLoss"
     ],
     "ValidatorArray": [
+      "",
+      "NotNexus",
       "NotOrbitalCommand",
+      "NotOrbitalCommandFlying",
       "NotShieldBattery"
     ]
   },
@@ -5295,8 +5314,8 @@
   "FungalGrowthTargetOnCreepSwitch": {
     "CaseArray": [
       {
-        "Effect": "FungalGrowthSlowMovementApplyBehavior",
-        "FallThrough": "1"
+        "Effect": "FungalGrowthApplyMovementBehavior",
+        "Validator": "TargetOnCreep"
       },
       {
         "Effect": "FungalGrowthSlowMovementApplyBehavior",
@@ -5646,7 +5665,12 @@
       "NoGravitonBeamInProgress",
       "NoGravitonBeamInProgress",
       "NoReaperKD8Knockback",
-      "NotAbducted"
+      "NotAbducted",
+      "NotFrenzied",
+      {
+        "index": "1",
+        "removed": "1"
+      }
     ],
     "WhichLocation": {
       "Value": "TargetUnit"
@@ -5693,6 +5717,7 @@
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
       "AttackCancel",
+      "DisableCasterEnergyRegenApplyBehavior",
       "DisableCasterWeaponsApplyBehavior",
       "GravitonBeamBehavior",
       "GravitonBeamHaltTerranBuild",
@@ -5735,7 +5760,9 @@
   },
   "GravitonBeamUnburrowTake2Set": {
     "EffectArray": [
-      "LurkerMPUnburrow"
+      "GravitonBeamUnburrow",
+      "LurkerMPUnburrow",
+      "SwarmHostMPUnburrow"
     ]
   },
   "GuardianMPWeaponDamage": {
@@ -5968,6 +5995,7 @@
   "HatcheryCreateSet": {
     "EditorCategories": "",
     "EffectArray": [
+      "CommandStructureAutoRally",
       "SprayZergInitialUpgrade"
     ],
     "ValidatorArray": "HatcheryCreateSetTargetFilters"
@@ -6178,9 +6206,9 @@
     "PeriodicPeriodArray": 1.4,
     "ValidatorArray": [
       "BattlecruiserPlacementCheck",
-      "BattlecruiserPlacementCheck",
       "CasterDoesNotHaveScramblerMissileBehavior",
-      "CasterIsNotYoinked"
+      "CasterIsNotYoinked",
+      "CasterNotFungalGrowthed"
     ]
   },
   "HyperjumpInitialDelaySuppressWeaponAB": {
@@ -6346,6 +6374,7 @@
     "PeriodCount": 25,
     "PeriodicEffectArray": "InfernalFlameThrowerE",
     "PeriodicOffsetArray": [
+      "0,-0.25,0",
       "0,-0.5,0",
       "0,-0.75,0",
       "0,-1,0",
@@ -6498,7 +6527,7 @@
       "IsNotInterceptor",
       "IsNotOverlordCocoon",
       "IsNotTransportOverlordCocoon",
-      "IsNotTransportOverlordCocoon"
+      "NotFrenzied"
     ]
   },
   "InfestorEnsnareLaunchTargetToAPathableLocationLM": {
@@ -6562,8 +6591,8 @@
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
       "InfestorEnsnareDelayedRemove",
-      "InfestorEnsnareDelayedRemove",
-      "InfestorEnsnareMakePrecursorReheightSource"
+      "InfestorEnsnareMakePrecursorReheightSource",
+      "InfestorEnsnareReheightSourceLaunchMissile"
     ]
   },
   "InhibitorZoneFlyingLargeSearch": {
@@ -6598,7 +6627,10 @@
     "parent": "InhibitorZoneFlyingSearchBase"
   },
   "InhibitorZoneFlyingTemporalField": {
-    "ValidatorArray": "noStructureOrFlyingStructure"
+    "ValidatorArray": [
+      "NotFrenzied",
+      "noStructureOrFlyingStructure"
+    ]
   },
   "InhibitorZoneLargeSearch": {
     "AreaArray": {
@@ -6632,7 +6664,10 @@
     "parent": "InhibitorZoneSearchBase"
   },
   "InhibitorZoneTemporalField": {
-    "ValidatorArray": "noStructureOrFlyingStructure"
+    "ValidatorArray": [
+      "NotFrenzied",
+      "noStructureOrFlyingStructure"
+    ]
   },
   "InstantMorphUnburrowAB": {
     "Behavior": "InstantMorph",
@@ -6640,9 +6675,12 @@
     "ValidatorArray": [
       "IsNotEggUnit",
       "IsNotHydralisk",
+      "IsNotRoach",
       "NotCorruptor",
       "NotHellion",
       "NotOverlord",
+      "NotSiegeTank",
+      "NotThor",
       "NotViking"
     ]
   },
@@ -6655,7 +6693,9 @@
       "GravitonBeamUnburrow",
       "GravitonBeamUnburrowCancel",
       "GravitonBeamUnburrowTake2",
-      "LurkerMPUnburrow"
+      "InstantMorphUnburrowAB",
+      "LurkerMPUnburrow",
+      "SwarmHostMPUnburrow"
     ]
   },
   "InterceptorBeamAADamage": {
@@ -7559,6 +7599,7 @@
     "EffectArray": [
       "LockOnDisableAttackRB",
       "LockOnDummyWeaponRB",
+      "LockOnRB",
       "LockOnResetCooldown",
       "LockOnTurretClear"
     ]
@@ -7631,8 +7672,8 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "LockOnDummyWeaponAB",
-      "LockOnDummyWeaponAB",
-      "LockOnResetCooldownInitial"
+      "LockOnResetCooldownInitial",
+      "LockOnTurretStart"
     ],
     "ValidatorArray": "TargetNotInvisibleDummyUnit"
   },
@@ -7865,8 +7906,8 @@
   "LocustMPFlyingSwoopPrecursorSet": {
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
+      "LocustMPFlyingPrecursorAB",
       "LocustMPFlyingSwoopLM",
-      "LocustMPFlyingUncommandableAB",
       "LocustMPFlyingUncommandableAB"
     ],
     "TargetLocationType": "Point"
@@ -7931,6 +7972,7 @@
     "EffectArray": [
       "LocustMPIssueMorph",
       "LocustMPIssueOrder",
+      "LocustMPRally",
       "LocustMPTimedLife"
     ]
   },
@@ -7998,7 +8040,9 @@
       "LurkerMPSearch"
     ],
     "PeriodicOffsetArray": [
+      "0,-1,0",
       "0,-10,0",
+      "0,-11,0",
       "0,-12,0",
       "0,-2,0",
       "0,-3,0",
@@ -8046,7 +8090,11 @@
     "EditorCategories": "Race:Zerg",
     "Kind": "Ranged",
     "SearchFlags": 0,
-    "ValidatorArray": "NotHidden",
+    "ValidatorArray": [
+      "NotHidden",
+      "NotInvulnerable",
+      "noMarkers"
+    ],
     "parent": "DU_WEAP_SPLASH"
   },
   "LurkerMPDestroyPersistent": {
@@ -8110,6 +8158,7 @@
     "SearchFilters": "Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": "CallForHelp",
     "ValidatorArray": [
+      "CliffLevelGE1",
       "WeaponInRange",
       "WeaponInRange"
     ]
@@ -8118,7 +8167,7 @@
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
       "KillRemove",
-      "KillRemove"
+      "LurkerMPWeaponRangeSwitch"
     ]
   },
   "LurkerMPUnburrow": {
@@ -8161,7 +8210,8 @@
       "HiddenCompareAB",
       "HiddenCompareBA",
       "NotStasis",
-      "NotVortexd"
+      "NotVortexd",
+      "NotWarpingIn"
     ]
   },
   "MakeCasterFacingTargetPoint": {
@@ -8193,7 +8243,9 @@
     "Behavior": "Recalling",
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": [
+      "",
       "NotAbducted",
+      "NotLarva",
       "NotLarvaEgg"
     ]
   },
@@ -8228,7 +8280,10 @@
       "MassRecallPostBehavior",
       "MassRecallTeleport"
     ],
-    "ValidatorArray": "NotLarva"
+    "ValidatorArray": [
+      "NotLarva",
+      "NotLarvaEgg"
+    ]
   },
   "MassRecallTeleport": {
     "EditorCategories": "Race:Protoss",
@@ -8285,6 +8340,7 @@
       "",
       "HiddenCompareAB",
       "HiddenCompareBA",
+      "IsBiological",
       "MedivacHealTargetFilter",
       "NotDisintegrating",
       "NotSpineCrawlerUprooted",
@@ -8292,7 +8348,8 @@
       "NotUncommandable",
       "NotVortexd",
       "NotWarpingIn",
-      "SourceNotHidden"
+      "SourceNotHidden",
+      "noMarkers"
     ]
   },
   "MedivacSpeedBoost": {
@@ -8302,7 +8359,7 @@
     "EditorCategories": "",
     "EffectArray": [
       "DisruptorTransportUnloadPurificationNovaCooldownReset",
-      "DisruptorTransportUnloadPurificationNovaCooldownReset"
+      "SiegeTankUnloadDelayAB"
     ]
   },
   "MercenarySensorDish": {
@@ -8457,6 +8514,7 @@
     "EditorCategories": "",
     "Marker": "Effect/MothershipCorePurifyNexusApply",
     "ValidatorArray": [
+      "IsNexus",
       "IsNotConstructing",
       "IsPylon"
     ]
@@ -8502,6 +8560,7 @@
     "Behavior": "MothershipCoreRecalling",
     "ValidatorArray": [
       "NotAbducted",
+      "NotLarva",
       "NotLarvaEgg",
       "NotReleasedInterceptor"
     ]
@@ -8511,6 +8570,7 @@
     "EditorCategories": "",
     "ValidatorArray": [
       "NotAbducted",
+      "NotLarva",
       "NotLarvaEgg"
     ]
   },
@@ -8715,6 +8775,7 @@
     "Behavior": "MothershipRecalling",
     "ValidatorArray": [
       "NotAbducted",
+      "NotLarva",
       "NotLarvaEgg",
       "NotReleasedInterceptor"
     ]
@@ -8724,6 +8785,7 @@
     "EditorCategories": "",
     "ValidatorArray": [
       "NotAbducted",
+      "NotLarva",
       "NotLarvaEgg"
     ]
   },
@@ -8750,7 +8812,7 @@
       "MothershipMassRecallSearch"
     ],
     "ValidatorArray": [
-      "IsNotConstructing",
+      "IsNexus",
       "IsNotConstructing"
     ]
   },
@@ -8770,11 +8832,11 @@
   "MothershipMassRecallSet": {
     "EffectArray": [
       "MothershipMassRecallPostBehavior",
-      "MothershipMassRecallPostBehavior"
+      "MothershipMassRecallTeleport"
     ],
     "ValidatorArray": [
       "NotLarva",
-      "NotLarva"
+      "NotLarvaEgg"
     ]
   },
   "MothershipMassRecallTeleport": {
@@ -8909,7 +8971,7 @@
   "MothershipStrategicRecallSearch": {
     "AreaArray": {
       "Effect": "MothershipStrategicRecallWarpOutSet",
-      "Radius": "6.5"
+      "Radius": "5"
     },
     "EditorCategories": "Race:Protoss",
     "ImpactLocation": {
@@ -8922,7 +8984,7 @@
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
       "MothershipStrategicRecallSetPrevent2ndRecall",
-      "NexusMassRecallPostBehavior",
+      "MothershipStrategicRecallTeleport",
       "NexusMassRecallPostBehavior"
     ]
   },
@@ -8960,13 +9022,13 @@
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
       "MothershipStrategicRecallWarpOutAB",
-      "NexusMassRecallPhased",
+      "NexusMassRecallCastingAB",
       "NexusMassRecallPhased"
     ],
     "ValidatorArray": [
       "IsNotNexusMassRecallWarpingOut",
       "IsNotWarpingIn",
-      "IsNotWarpingIn",
+      "IsStrategicWarpOut",
       "NotAbducted",
       "NotLarva",
       "NotLarvaEgg"
@@ -9050,6 +9112,7 @@
       "NotFrenzied",
       "NotHeroic",
       "NotPointDefenseDrone",
+      "NotWarpingIn",
       "noMarkers"
     ]
   },
@@ -9087,6 +9150,7 @@
   "NeuralParasitePersistentSet": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
+      "NeuralParasiteDroneCheck",
       "NeuralParasiteLockOnRemove",
       "NeuralParasitePersistent"
     ]
@@ -9109,6 +9173,7 @@
   "NexusBirthSet": {
     "EditorCategories": "",
     "EffectArray": [
+      "NexusChronoBoostIssueOrder",
       "SprayProtossInitialUpgrade"
     ]
   },
@@ -9125,6 +9190,8 @@
   "NexusCreateSet": {
     "EditorCategories": "",
     "EffectArray": [
+      "CommandStructureAutoRally",
+      "NexusChronoBoostIssueOrder",
       "SprayProtossInitialUpgrade"
     ]
   },
@@ -9191,8 +9258,8 @@
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
       "NexusMassRecallPostBehavior",
-      "NexusMassRecallPostBehavior",
-      "NexusMassRecallSetPrevent2ndRecall"
+      "NexusMassRecallSetPrevent2ndRecall",
+      "NexusMassRecallTeleport"
     ]
   },
   "NexusMassRecallSetPrevent2ndRecall": {
@@ -9232,12 +9299,12 @@
   "NexusMassRecallWarpOutSet": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
-      "NexusMassRecallPhased",
+      "NexusMassRecallCastingAB",
       "NexusMassRecallPhased",
       "NexusMassRecallWarpOutAB"
     ],
     "ValidatorArray": [
-      "IsNotWarpingIn",
+      "IsNotRecallingNexus",
       "IsNotWarpingIn",
       "IsStrategicWarpOut",
       "NotAbducted",
@@ -9301,12 +9368,12 @@
   "NexusShieldOverchargeSet": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
-      "NexusShieldOverchargeShield",
+      "NexusShieldOverchargeEnergy",
       "NexusShieldOverchargeShield"
     ],
     "ValidatorArray": [
       "CasterHasEnergy",
-      "CasterHasEnergy"
+      "ShieldsNotFull"
     ]
   },
   "NexusShieldOverchargeShield": {
@@ -9323,7 +9390,7 @@
     "PeriodicValidator": "CasterHasEnergy",
     "ValidatorArray": [
       "CasterHasEnergy",
-      "CasterHasEnergy"
+      "ShieldsNotFull"
     ],
     "WhichLocation": {
       "Value": "TargetUnit"
@@ -9342,8 +9409,8 @@
     "Behavior": "NexusShieldRechargeOnPylonBehavior",
     "EditorCategories": "",
     "ValidatorArray": [
+      "IsNotConstructing",
       "IsPylon",
-      "NotHaveNexusShieldRechargeOnPylonBehavior",
       "NotHaveNexusShieldRechargeOnPylonBehavior"
     ]
   },
@@ -9383,12 +9450,12 @@
   "NexusShieldRechargeSet": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
-      "NexusShieldRechargeShield",
+      "NexusShieldRechargeEnergy",
       "NexusShieldRechargeShield"
     ],
     "ValidatorArray": [
       "CasterHasEnergy",
-      "CasterHasEnergy"
+      "ShieldsNotFull"
     ]
   },
   "NexusShieldRechargeShield": {
@@ -9629,8 +9696,14 @@
     "Behavior": "OracleStasisTrapTarget",
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": [
+      "IsNotBanelingCocoon",
       "IsNotInfestedTerransEgg",
-      "NotFrenzied"
+      "IsNotRecallingCombine",
+      "NotFrenzied",
+      "NotLarva",
+      "NotLarvaEgg",
+      "NotLurkerCocoon",
+      "NotRavagerCocoon"
     ]
   },
   "OracleStasisTrapActivateCP": {
@@ -9859,6 +9932,7 @@
     "EffectArray": [
       "OracleWeaponABTarget",
       "OracleWeaponCooldownBase",
+      "OracleWeaponDamage",
       "OracleWeaponTimeWarpSwitch"
     ],
     "ValidatorArray": "NotHaveBeamTargetCDBehavior"
@@ -9987,7 +10061,10 @@
     "AttributeBonus": "Light",
     "EditorCategories": "Race:Terran",
     "Kind": "Ranged",
-    "ValidatorArray": "ReaperAttackDamageMaxRangeCombine",
+    "ValidatorArray": [
+      "MultipleHitGroundOnlyAttackTargetFilter",
+      "ReaperAttackDamageMaxRangeCombine"
+    ],
     "parent": "DU_WEAP"
   },
   "P38ScytheGuassPistolBurst": {
@@ -10104,8 +10181,8 @@
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
       "KillsToOrigin",
-      "KillsToOrigin",
-      "ParasiticBombSecondaryUnitSearch"
+      "ParasiticBombSecondaryUnitSearch",
+      "ParasiticBombTimerAB"
     ]
   },
   "ParasiticBombCURelay": {
@@ -10159,7 +10236,7 @@
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
       "KillsToOrigin",
-      "KillsToOrigin",
+      "ParasiticBombDodgeTimerAB",
       "ParasiticBombSecondaryUnitSearch"
     ]
   },
@@ -10180,7 +10257,7 @@
   "ParasiticBombFinalSet": {
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
-      "ParasiticBombGlazeMarkerRB",
+      "ParasiticBombCU",
       "ParasiticBombGlazeMarkerRB"
     ]
   },
@@ -10211,6 +10288,7 @@
       "ParasiticBombAB",
       "ParasiticBombGlazeMarkerAB",
       "ParasiticBombInitialDelayAB",
+      "ParasiticBombInitialImpactDummy",
       "ParasiticBombTimerAB"
     ]
   },
@@ -10241,14 +10319,14 @@
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
       "ParasiticBombDelayTimedLife",
-      "ParasiticBombDelayTimedLife"
+      "ParasiticBombOrderRelayDodge"
     ]
   },
   "ParasiticBombOrderRelaySet": {
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
       "ParasiticBombDelayTimedLife",
-      "ParasiticBombDelayTimedLife"
+      "ParasiticBombOrderRelay"
     ]
   },
   "ParasiticBombSearchEffect": {
@@ -10443,7 +10521,7 @@
   "PhaseShiftRemoveRecall": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
-      "PhaseMothershipCoreRecallingRemove",
+      "PhaseMothershipCoreRecalledRemove",
       "PhaseMothershipCoreRecallingRemove"
     ]
   },
@@ -10884,6 +10962,7 @@
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": [
       "MultipleHitGroundOnlyAttackTargetFilter",
+      "NotHidden",
       "ZealotAttackDamageMaxRange"
     ],
     "parent": "DU_WEAP"
@@ -10967,10 +11046,6 @@
         "index": "2"
       },
       {
-        "Fraction": "0.25",
-        "Radius": "1"
-      },
-      {
         "Fraction": "0.5",
         "Radius": "0.4"
       },
@@ -10978,6 +11053,10 @@
         "Fraction": "0.5",
         "Radius": "0.5",
         "index": "1"
+      },
+      {
+        "Fraction": "1",
+        "Radius": "0.093"
       },
       {
         "Fraction": "1",
@@ -10989,7 +11068,7 @@
     "EditorCategories": "Race:Protoss",
     "ExcludeArray": [
       {
-        "Value": "Target"
+        "Value": "Outer"
       },
       {
         "Value": "Target"
@@ -11024,7 +11103,7 @@
   "PunisherGrenadesLaunchSet": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
-      "PunisherGrenadesLMRight",
+      "PunisherGrenadesLMLeft",
       "PunisherGrenadesLMRight"
     ]
   },
@@ -11124,24 +11203,24 @@
     "EditorCategories": "",
     "EffectArray": [
       "PurificationNovaDetonateRBCaster",
-      "PurificationNovaDetonateRBCaster",
-      "PurificationNovaDetonateRBTarget"
+      "PurificationNovaDetonateRBTarget",
+      "PurificationNovaTargettedSearch"
     ],
     "ValidatorArray": [
       "IsNotSiegedSiegeTank",
-      "IsNotSiegedSiegeTank"
+      "TargetNotChangeling"
     ]
   },
   "PurificationNovaDetonateSetSiegeTank": {
     "EditorCategories": "",
     "EffectArray": [
       "PurificationNovaDetonateRBCaster",
-      "PurificationNovaDetonateRBCaster",
-      "PurificationNovaDetonateRBTarget"
+      "PurificationNovaDetonateRBTarget",
+      "PurificationNovaTargettedSearch"
     ],
     "ValidatorArray": [
       "IsSiegedSiegeTank",
-      "IsSiegedSiegeTank"
+      "TargetNotChangeling"
     ]
   },
   "PurificationNovaMorph": {
@@ -11183,7 +11262,7 @@
     "EffectArray": [
       "PurificationNovaDetonateSearch",
       "PurificationNovaDetonateSearchSiegedSiegeTank",
-      "PurificationNovaDetonateSearchSiegedSiegeTank"
+      "PurificationNovaNotificationSearch"
     ]
   },
   "PurificationNovaPhaseRB": {
@@ -11208,7 +11287,7 @@
         "Radius": "2.5"
       },
       {
-        "Radius": "1.5",
+        "Radius": "1.75",
         "index": "0"
       }
     ],
@@ -11322,7 +11401,7 @@
   "PurificationNovaTransportPickupSet": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
-      "PurificationNovaPostPhaseRB",
+      "PurificationNovaPhaseRB",
       "PurificationNovaPostPhaseRB",
       "PurificationNovaSpeedRB"
     ],
@@ -11622,9 +11701,9 @@
       "HiddenCompareBA",
       "NotUncommandable",
       "NotUnrepairable",
-      "NotUnrepairable",
       "NotWarpingIn",
-      "SourceNotHidden"
+      "SourceNotHidden",
+      "noMarkers"
     ]
   },
   "RavenRepairDroneReleaseLaunchMissile": {
@@ -11640,8 +11719,8 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "MakePrecursor",
-      "MakePrecursor",
-      "RavenRepairDroneReleaseLaunchMissile"
+      "RavenRepairDroneReleaseLaunchMissile",
+      "RavenRepairDroneTimedLife"
     ]
   },
   "RavenRepairDroneTimedLife": {
@@ -11723,12 +11802,12 @@
         "Radius": "2.88"
       },
       {
-        "Fraction": "0.25",
-        "Radius": "2.88"
-      },
-      {
         "Fraction": "0.5",
         "Radius": "1.44"
+      },
+      {
+        "Fraction": "1",
+        "Radius": "0.72"
       }
     ],
     "EditorCategories": "Race:Terran",
@@ -11759,7 +11838,7 @@
   "RavenShredderMissileImpactSet": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
-      "RavenShredderMissileImpactSearchArea",
+      "RavenShredderMissileDamage",
       "RavenShredderMissileImpactSearchArea"
     ]
   },
@@ -11781,7 +11860,7 @@
   "RavenShredderMissileLaunchSet": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
-      "RavenShredderMissileTintCP",
+      "RavenShredderMissileLaunchCP",
       "RavenShredderMissileTintCP"
     ]
   },
@@ -11847,6 +11926,7 @@
       "NoGravitonBeamInProgress",
       "NotAbducted",
       "NotFrenzied",
+      "NotMassive",
       "NotStructureTarget"
     ]
   },
@@ -12307,7 +12387,9 @@
       "HiddenCompareAB",
       "HiddenCompareBA",
       "NotDisintegrating",
-      "NotVortexd"
+      "NotStasis",
+      "NotVortexd",
+      "NotWarpingIn"
     ]
   },
   "RepulserField10SearchArea": {
@@ -12658,6 +12740,7 @@
   "RevelationSet": {
     "EditorCategories": "",
     "EffectArray": [
+      "OracleRevelationApplyBehavior",
       "OracleRevelationApplyControllerBehavior",
       "OracleRevelationDummyDamage",
       "OracleRevelationDummyDamage",
@@ -12714,7 +12797,7 @@
   "RipFieldSet": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
-      "RipFieldDamage",
+      "RipFieldApplyBehavior",
       "RipFieldDamage"
     ]
   },
@@ -13274,6 +13357,7 @@
   "SeekerMissileLaunchSet": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
+      "SeekerMissileLaunchCP",
       "SeekerMissileLaunchTintCP"
     ]
   },
@@ -13330,6 +13414,7 @@
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
       "DisruptionBeamABTarget",
+      "DisruptionBeamDamage",
       "DisruptionBeamTimeWarpSwitch",
       "SentryWeaponCooldownBase"
     ],
@@ -13349,8 +13434,8 @@
     "RechargeVital": "Shields",
     "RechargeVitalRate": 36,
     "ValidatorArray": [
+      "CasterIsNotBatteryOvercharged",
       "NotHidden",
-      "NotVortexd",
       "NotVortexd"
     ]
   },
@@ -13365,8 +13450,8 @@
     "RechargeVital": "Shields",
     "RechargeVitalRate": 72,
     "ValidatorArray": [
+      "CasterHasBatteryOverchargeBehavior",
       "NotHidden",
-      "NotVortexd",
       "NotVortexd"
     ]
   },
@@ -13381,18 +13466,18 @@
   },
   "ShieldBatteryRechargeChanneledSet": {
     "EffectArray": [
-      "ShieldBatteryRechargeChanneledOvercharged",
+      "ShieldBatteryRechargeChanneled",
       "ShieldBatteryRechargeChanneledOvercharged"
     ],
     "ValidatorArray": [
       "HiddenCompareAB",
       "HiddenCompareBA",
       "NotInterceptor",
-      "NotInterceptor",
       "NotVortexd",
       "NotWarpingIn",
       "ShieldsNotFull",
-      "SourceNotHidden"
+      "SourceNotHidden",
+      "noMarkers"
     ]
   },
   "ShieldBatteryRechargeEx5": {
@@ -13407,11 +13492,12 @@
     "RechargeVital": "Shields",
     "RechargeVitalRate": 36,
     "ValidatorArray": [
+      "NotHidden",
       "NotHiddenSelf",
       "NotInterceptor",
-      "NotInterceptor",
       "NotVortexd",
-      "ShieldBatteryRechargeTargetFilter"
+      "ShieldBatteryRechargeTargetFilter",
+      "noMarkers"
     ]
   },
   "ShieldBatteryRechargeEx5@DamageDummy": {
@@ -13672,7 +13758,7 @@
   "SpawnLarvaExpireSet": {
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
-      "SpawnMutantLarvaRemoveHiddenBehavior",
+      "SpawnMutantLarvaApplySpawnBehavior",
       "SpawnMutantLarvaRemoveHiddenBehavior"
     ]
   },
@@ -13680,10 +13766,10 @@
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
       "SpawnMutantLarvaApplyTimerBehavior",
-      "SpawnMutantLarvaApplyTimerBehavior"
+      "SpawnMutantLarvaHiddenAB"
     ],
     "ValidatorArray": [
-      "NotContaminated",
+      "IsHatcheryLairOrHive",
       "NotContaminated"
     ]
   },
@@ -13711,7 +13797,7 @@
     "EditorCategories": "Race:Zerg",
     "ValidatorArray": [
       "IsHatcheryLairOrHive",
-      "NotContaminated",
+      "IsSpawningMutantLarva",
       "NotContaminated"
     ]
   },
@@ -13890,7 +13976,10 @@
     "Amount": 4,
     "EditorCategories": "Race:Zerg",
     "Kind": "Ranged",
-    "ValidatorArray": "QueenTalonsAGAttackDamageMaxRange",
+    "ValidatorArray": [
+      "MultipleHitGroundOnlyAttackTargetFilter",
+      "QueenTalonsAGAttackDamageMaxRange"
+    ],
     "parent": "DU_WEAP"
   },
   "TalonsBurst": {
@@ -14037,7 +14126,7 @@
   "TempestDisruptionBlastSet": {
     "EditorCategories": "",
     "EffectArray": [
-      "TempestDisruptionBlastSecondaryWarningSearch",
+      "TempestDisruptionBlastSearch",
       "TempestDisruptionBlastSecondaryWarningSearch"
     ],
     "TargetLocationType": "Point"
@@ -14062,7 +14151,7 @@
   "TemporalFieldAfterBubbleSearchArea": {
     "AreaArray": {
       "Effect": "TemporalFieldApplyBehavior",
-      "Radius": "4"
+      "Radius": "3.75"
     },
     "EditorCategories": "Race:Protoss",
     "SearchFilters": "-;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"
@@ -14152,7 +14241,7 @@
   "TerranStructuresKnockbackSE": {
     "AreaArray": {
       "Effect": "TerranBuildingKnockBack2Set",
-      "Radius": "1"
+      "Radius": "0.9"
     },
     "EditorCategories": "",
     "SearchFilters": "Ground;Self,Neutral,Structure,Missile,Dead,Hidden"
@@ -14204,6 +14293,7 @@
   "ThermalLances": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
+      "ThermalLancesForward",
       "ThermalLancesFriendlyCP",
       "ThermalLancesReverse"
     ]
@@ -14305,6 +14395,7 @@
     ],
     "PeriodicPeriodArray": [
       0.0227,
+      0.025,
       0.0312
     ],
     "TimeScaleSource": {
@@ -14458,6 +14549,7 @@
     ],
     "PeriodicPeriodArray": [
       0.0227,
+      0.025,
       0.0312
     ],
     "TimeScaleSource": {
@@ -14881,7 +14973,10 @@
   },
   "Transfusion": {
     "EditorCategories": "Race:Zerg",
-    "ValidatorArray": "NotDisintegrating",
+    "ValidatorArray": [
+      "LifeNotFull",
+      "NotDisintegrating"
+    ],
     "VitalArray": {
       "Change": 75,
       "index": "Life"
@@ -14909,11 +15004,11 @@
   "TransfusionImpactSet": {
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
-      "TransfusionAB",
+      "Transfusion",
       "TransfusionAB"
     ],
     "ValidatorArray": [
-      "NotDisintegrating",
+      "LifeNotFull",
       "NotDisintegrating"
     ]
   },
@@ -15733,7 +15828,9 @@
     "ImpactEffect": "ViperConsumeStructureCreatePersistent",
     "ValidatorArray": [
       "ConsumePeriodicCheck",
-      "IsNotCreepTumorBurrowed"
+      "EnergyNotFullCaster",
+      "IsNotCreepTumorBurrowed",
+      "LifeGT2"
     ]
   },
   "ViperConsumeStructureModifyCaster": {
@@ -15748,7 +15845,10 @@
   },
   "ViperConsumeStructureModifyTarget": {
     "EditorCategories": "Race:Zerg",
-    "ValidatorArray": "ConsumePeriodicCheck",
+    "ValidatorArray": [
+      "ConsumePeriodicCheck",
+      "LifeGT2"
+    ],
     "VitalArray": {
       "Change": -10,
       "index": "Life"
@@ -15761,7 +15861,10 @@
       "ViperConsumeStructureModifyCaster",
       "ViperConsumeStructureModifyTarget"
     ],
-    "ValidatorArray": "ConsumePeriodicCheck"
+    "ValidatorArray": [
+      "ConsumePeriodicCheck",
+      "LifeGT2"
+    ]
   },
   "ViperConsumeStructureRemoveBehavior": {
     "BehaviorLink": "ViperConsumeStructure",
@@ -15947,6 +16050,7 @@
   "VoidRayWeaponPeriodicSet": {
     "EditorCategories": "Race:Protoss",
     "EffectArray": [
+      "VoidRaySwarmDamage",
       "VoidRayWeaponABTarget",
       "VoidRayWeaponCooldownBase",
       "VoidRayWeaponTimeWarpSwitch"
@@ -15978,7 +16082,7 @@
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
       "SwarmHostEggAnimationMPAB",
-      "SwarmHostEggAnimationMPAB"
+      "VoidSwarmHostSpawnLocustCU"
     ],
     "TargetLocationType": "Point",
     "ValidatorArray": "InfestedTerransPlacementCheck"
@@ -15986,8 +16090,8 @@
   "VolatileBurst": {
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
+      "BanelingDontExplode",
       "BanelingVolatileBurstDirectFallbackSet",
-      "Suicide",
       "Suicide",
       "SuicideTargetFriendlySwitch",
       "VolatileBurstU",
@@ -16198,7 +16302,10 @@
       "VortexUnburrow",
       "VortexUnsiege"
     ],
-    "ValidatorArray": "IsNotMothershipCorePurifyNexus"
+    "ValidatorArray": [
+      "IsNotMothershipCorePurifyNexus",
+      "NoYoink"
+    ]
   },
   "VortexEventHorizon": {
     "EditorCategories": "Race:Protoss",
@@ -16244,7 +16351,7 @@
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
       "VortexKillDamageAB",
-      "VortexKillDamageAB"
+      "VortexKillDamageDummy"
     ],
     "Marker": "Effect/DigesterCreepSecondarySet"
   },
@@ -16311,6 +16418,7 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "WidowMineApplyAnimation",
+      "WidowMineLMSwitch",
       "WidowMineTargetTintRemoveBehavior"
     ],
     "Marker": "WidowMineAttack",
@@ -16436,14 +16544,14 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "WidowMineExplodeSplash",
-      "WidowMineExplodeSplash"
+      "WidowMineExplodeSplashShields"
     ]
   },
   "WidowMineExplodeSplashSet2": {
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "WidowMineExplodeSplash2",
-      "WidowMineExplodeSplash2"
+      "WidowMineExplodeSplashShields2"
     ],
     "ValidatorArray": "noMarkers"
   },
@@ -16451,7 +16559,7 @@
     "EditorCategories": "Race:Terran",
     "EffectArray": [
       "WidowMineExplodeSplash3",
-      "WidowMineExplodeSplash3"
+      "WidowMineExplodeSplashShields3"
     ],
     "ValidatorArray": "noMarkers"
   },
@@ -17388,6 +17496,7 @@
   "YoinkSet": {
     "EditorCategories": "Race:Zerg",
     "EffectArray": [
+      "AbductDummyDamage",
       "InstantUnburrow",
       "InstantUnburrow",
       "RemoveCoreRecallingBehavior",
@@ -17410,7 +17519,13 @@
       }
     ],
     "Marker": "YoinkMarker",
-    "ValidatorArray": "TargetNotTacticalJumping"
+    "ValidatorArray": [
+      "IsNotMothershipCorePurifyNexus",
+      "IsNotRecallingCombine",
+      "IsNotSiegedSiegeTank",
+      "NoBurrowChargingRevD",
+      "TargetNotTacticalJumping"
+    ]
   },
   "YoinkSetSiegeTank": {
     "EditorCategories": "Race:Zerg",
@@ -17477,9 +17592,14 @@
     "ValidatorArray": [
       "IsNotEggUnit",
       "IsNotLarva",
+      "IsNotMothershipCorePurifyNexus",
+      "IsNotRecallingCombine",
+      "IsNotSiegedSiegeTank",
       "NoBurrowChargingRevD",
       "NoYoink",
+      "NotFrenzied",
       "NotViking",
+      "NotWarpingIn",
       "TargetNotTacticalJumping"
     ],
     "WhichLocation": {
@@ -17531,7 +17651,8 @@
     "SpawnUnit": "VikingFighter",
     "ValidatorArray": [
       "IsNotPhaseShielded",
-      "NoYoink"
+      "NoYoink",
+      "NotWarpingIn"
     ],
     "WhichLocation": {
       "Value": "CasterUnitOrPoint"
@@ -17556,7 +17677,8 @@
     "SpawnUnit": "VikingAssault",
     "ValidatorArray": [
       "IsNotPhaseShielded",
-      "NoYoink"
+      "NoYoink",
+      "NotWarpingIn"
     ],
     "WhichLocation": {
       "Value": "CasterUnitOrPoint"

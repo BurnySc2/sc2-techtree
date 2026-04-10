@@ -2004,6 +2004,7 @@
         "HighTemplar",
         "Sentry",
         "Stalker",
+        "WarpGate",
         "Zealot"
       ],
       "race": "Protoss",
@@ -2138,6 +2139,7 @@
     "Nexus": {
       "produces": [
         "Mothership",
+        "MothershipCore",
         "Probe"
       ],
       "race": "Protoss",
@@ -3205,7 +3207,28 @@
     },
     "Burrow": {
       "affected_units": [
-        "RavagerBurrowed"
+        "Baneling",
+        "BanelingBurrowed",
+        "Drone",
+        "DroneBurrowed",
+        "Hydralisk",
+        "HydraliskBurrowed",
+        "Infestor",
+        "InfestorBurrowed",
+        "InfestorTerran",
+        "InfestorTerranBurrowed",
+        "Queen",
+        "QueenBurrowed",
+        "Ravager",
+        "RavagerBurrowed",
+        "Roach",
+        "RoachBurrowed",
+        "SwarmHostBurrowedMP",
+        "SwarmHostMP",
+        "Ultralisk",
+        "UltraliskBurrowed",
+        "Zergling",
+        "ZerglingBurrowed"
       ],
       "race": "Zerg",
       "requires": []
@@ -3233,7 +3256,7 @@
     },
     "CentrificalHooks": {
       "affected_units": [
-        "BanelingBurrowed",
+        "Baneling",
         "BanelingBurrowed"
       ],
       "race": "Zerg",
@@ -3248,6 +3271,7 @@
     },
     "ChitinousPlating": {
       "affected_units": [
+        "Ultralisk",
         "UltraliskBurrowed"
       ],
       "race": "Zerg",
@@ -3347,7 +3371,7 @@
     },
     "DiggingClaws": {
       "affected_units": [
-        "LurkerMPBurrowed",
+        "LurkerMP",
         "LurkerMPBurrowed"
       ],
       "race": "Terran",
@@ -3355,7 +3379,7 @@
     },
     "DrillClaws": {
       "affected_units": [
-        "WidowMineBurrowed",
+        "WidowMine",
         "WidowMineBurrowed"
       ],
       "race": "Terran",
@@ -3370,8 +3394,8 @@
     },
     "EnhancedShockwaves": {
       "affected_units": [
+        "Ghost",
         "GhostAlternate",
-        "GhostNova",
         "GhostNova"
       ],
       "race": "Terran",
@@ -3379,7 +3403,7 @@
     },
     "EvolveGroovedSpines": {
       "affected_units": [
-        "HydraliskBurrowed",
+        "Hydralisk",
         "HydraliskBurrowed"
       ],
       "race": "Zerg",
@@ -3387,7 +3411,7 @@
     },
     "EvolveMuscularAugments": {
       "affected_units": [
-        "HydraliskBurrowed",
+        "Hydralisk",
         "HydraliskBurrowed"
       ],
       "race": "Zerg",
@@ -3423,7 +3447,9 @@
     },
     "GhostMoebiusReactor": {
       "affected_units": [
-        "Ghost"
+        "Ghost",
+        "GhostAlternate",
+        "GhostNova"
       ],
       "race": "Terran",
       "requires": []
@@ -3444,6 +3470,7 @@
     },
     "GlialReconstitution": {
       "affected_units": [
+        "Roach",
         "RoachBurrowed"
       ],
       "race": "Zerg",
@@ -3459,6 +3486,7 @@
     },
     "HiSecAutoTracking": {
       "affected_units": [
+        "AutoTurret",
         "MissileTurret",
         "PlanetaryFortress",
         "PointDefenseDrone"
@@ -3468,6 +3496,7 @@
     },
     "HighCapacityBarrels": {
       "affected_units": [
+        "Hellion",
         "HellionTank",
         {
           "index": "1",
@@ -3529,6 +3558,7 @@
     },
     "InfestorEnergyUpgrade": {
       "affected_units": [
+        "Infestor",
         "InfestorBurrowed"
       ],
       "race": "Zerg",
@@ -3550,7 +3580,7 @@
     },
     "LiberatorAGRangeUpgrade": {
       "affected_units": [
-        "LiberatorAG",
+        "Liberator",
         "LiberatorAG"
       ],
       "race": "Protoss",
@@ -3572,7 +3602,7 @@
     },
     "LurkerRange": {
       "affected_units": [
-        "LurkerMPBurrowed",
+        "LurkerMP",
         "LurkerMPBurrowed"
       ],
       "race": "Zerg",
@@ -3674,6 +3704,8 @@
     },
     "PersonalCloaking": {
       "affected_units": [
+        "Ghost",
+        "GhostAlternate",
         "GhostNova"
       ],
       "race": "Terran",
@@ -3763,6 +3795,8 @@
     },
     "ProtossGroundArmorsLevel1": {
       "affected_units": [
+        "Adept",
+        "Disruptor",
         "DisruptorPhased"
       ],
       "race": null,
@@ -3770,6 +3804,8 @@
     },
     "ProtossGroundArmorsLevel2": {
       "affected_units": [
+        "Adept",
+        "Disruptor",
         "DisruptorPhased"
       ],
       "race": null,
@@ -3777,6 +3813,8 @@
     },
     "ProtossGroundArmorsLevel3": {
       "affected_units": [
+        "Adept",
+        "Disruptor",
         "DisruptorPhased"
       ],
       "race": null,
@@ -3857,21 +3895,37 @@
     },
     "ProtossShieldsLevel1": {
       "affected_units": [
-        "ObserverSiegeMode"
+        "Adept",
+        "AssimilatorRich",
+        "Disruptor",
+        "DisruptorPhased",
+        "ObserverSiegeMode",
+        "PylonOvercharged",
+        "ShieldBattery"
       ],
       "race": null,
       "requires": []
     },
     "ProtossShieldsLevel2": {
       "affected_units": [
-        "ObserverSiegeMode"
+        "Adept",
+        "AssimilatorRich",
+        "Disruptor",
+        "DisruptorPhased",
+        "ObserverSiegeMode",
+        "PylonOvercharged"
       ],
       "race": null,
       "requires": []
     },
     "ProtossShieldsLevel3": {
       "affected_units": [
-        "ObserverSiegeMode"
+        "Adept",
+        "AssimilatorRich",
+        "Disruptor",
+        "DisruptorPhased",
+        "ObserverSiegeMode",
+        "PylonOvercharged"
       ],
       "race": null,
       "requires": []
@@ -3921,7 +3975,7 @@
     "RavenDamageUpgrade": {
       "affected_units": [
         "AutoTurret",
-        "AutoTurret"
+        "Raven"
       ],
       "race": "Terran",
       "requires": []
@@ -3974,6 +4028,8 @@
     },
     "RewardDanceGhost": {
       "affected_units": [
+        "Ghost",
+        "GhostAlternate",
         "GhostNova"
       ],
       "race": "Terran",
@@ -4042,7 +4098,7 @@
     "SecretedCoating": {
       "affected_units": [
         "NydusCanal",
-        "NydusCanal"
+        "NydusNetwork"
       ],
       "race": "Zerg",
       "requires": []
@@ -4063,8 +4119,8 @@
     },
     "SmartServos": {
       "affected_units": [
+        "Hellion",
         "HellionTank",
-        "Thor",
         "Thor",
         "ThorAP",
         "VikingAssault",
@@ -4107,7 +4163,8 @@
     },
     "Stimpack": {
       "affected_units": [
-        "Marauder"
+        "Marauder",
+        "Marine"
       ],
       "race": "Terran",
       "requires": []
@@ -4128,6 +4185,7 @@
     },
     "SupplyDepotSkin": {
       "affected_units": [
+        "SupplyDepot",
         "SupplyDepotLowered"
       ],
       "race": null,
@@ -4149,12 +4207,14 @@
     },
     "TerranBuildingArmor": {
       "affected_units": [
+        "Armory",
         "AutoTurret",
         "Barracks",
         "BarracksFlying",
         "BarracksReactor",
         "BarracksTechLab",
         "Bunker",
+        "BypassArmorDrone",
         "BypassArmorDrone",
         "CommandCenter",
         "CommandCenterFlying",
@@ -4171,6 +4231,7 @@
         "PlanetaryFortress",
         "PointDefenseDrone",
         "PointDefenseDrone",
+        "RavenRepairDrone",
         "Reactor",
         "Refinery",
         "RefineryRich",
@@ -4199,21 +4260,27 @@
     },
     "TerranInfantryArmorsLevel1": {
       "affected_units": [
-        "GhostNova"
+        "GhostAlternate",
+        "GhostNova",
+        "HERC"
       ],
       "race": null,
       "requires": []
     },
     "TerranInfantryArmorsLevel2": {
       "affected_units": [
-        "GhostNova"
+        "GhostAlternate",
+        "GhostNova",
+        "HERC"
       ],
       "race": null,
       "requires": []
     },
     "TerranInfantryArmorsLevel3": {
       "affected_units": [
-        "GhostNova"
+        "GhostAlternate",
+        "GhostNova",
+        "HERC"
       ],
       "race": null,
       "requires": []
@@ -4308,7 +4375,9 @@
       "affected_units": [
         "Banshee",
         "Battlecruiser",
+        "Hellion",
         "HellionTank",
+        "Liberator",
         "LiberatorAG",
         "Medivac",
         "Raven",
@@ -4343,6 +4412,7 @@
       "affected_units": [
         "Banshee",
         "Battlecruiser",
+        "Hellion",
         "HellionTank",
         "SiegeTank",
         "SiegeTankSieged",
@@ -4351,7 +4421,6 @@
         "VikingAssault",
         "VikingFighter",
         "WidowMine",
-        "WidowMineBurrowed",
         "WidowMineBurrowed"
       ],
       "race": "Terran",
@@ -4384,21 +4453,36 @@
     },
     "TerranVehicleArmorsLevel1": {
       "affected_units": [
-        "ThorAP"
+        "HellionTank",
+        "MPOdin",
+        "ThorAP",
+        "WarHound",
+        "WidowMine",
+        "WidowMineBurrowed"
       ],
       "race": null,
       "requires": []
     },
     "TerranVehicleArmorsLevel2": {
       "affected_units": [
-        "ThorAP"
+        "HellionTank",
+        "MPOdin",
+        "ThorAP",
+        "WarHound",
+        "WidowMine",
+        "WidowMineBurrowed"
       ],
       "race": null,
       "requires": []
     },
     "TerranVehicleArmorsLevel3": {
       "affected_units": [
-        "ThorAP"
+        "HellionTank",
+        "MPOdin",
+        "ThorAP",
+        "WarHound",
+        "WidowMine",
+        "WidowMineBurrowed"
       ],
       "race": null,
       "requires": []
@@ -4415,21 +4499,36 @@
     },
     "TerranVehicleWeaponsLevel1": {
       "affected_units": [
-        "ThorAP"
+        "HellionTank",
+        "MPOdin",
+        "ThorAP",
+        "WarHound",
+        "WidowMine",
+        "WidowMineBurrowed"
       ],
       "race": null,
       "requires": []
     },
     "TerranVehicleWeaponsLevel2": {
       "affected_units": [
-        "ThorAP"
+        "HellionTank",
+        "MPOdin",
+        "ThorAP",
+        "WarHound",
+        "WidowMine",
+        "WidowMineBurrowed"
       ],
       "race": null,
       "requires": []
     },
     "TerranVehicleWeaponsLevel3": {
       "affected_units": [
-        "ThorAP"
+        "HellionTank",
+        "MPOdin",
+        "ThorAP",
+        "WarHound",
+        "WidowMine",
+        "WidowMineBurrowed"
       ],
       "race": null,
       "requires": []
@@ -4443,6 +4542,7 @@
     },
     "TransformationServos": {
       "affected_units": [
+        "Hellion",
         "HellionTank"
       ],
       "race": "Terran",
@@ -4450,6 +4550,7 @@
     },
     "TunnelingClaws": {
       "affected_units": [
+        "Roach",
         "RoachBurrowed"
       ],
       "race": "Zerg",
@@ -4465,6 +4566,7 @@
     },
     "UltraliskSkin": {
       "affected_units": [
+        "Ultralisk",
         "UltraliskBurrowed"
       ],
       "race": "Zerg",
@@ -4516,21 +4618,30 @@
     },
     "ZergFlyerArmorsLevel1": {
       "affected_units": [
-        "OverseerSiegeMode"
+        "OverlordTransport",
+        "OverseerSiegeMode",
+        "TransportOverlordCocoon",
+        "Viper"
       ],
       "race": null,
       "requires": []
     },
     "ZergFlyerArmorsLevel2": {
       "affected_units": [
-        "OverseerSiegeMode"
+        "OverlordTransport",
+        "OverseerSiegeMode",
+        "TransportOverlordCocoon",
+        "Viper"
       ],
       "race": null,
       "requires": []
     },
     "ZergFlyerArmorsLevel3": {
       "affected_units": [
-        "OverseerSiegeMode"
+        "OverlordTransport",
+        "OverseerSiegeMode",
+        "TransportOverlordCocoon",
+        "Viper"
       ],
       "race": null,
       "requires": []
@@ -4584,21 +4695,48 @@
     },
     "ZergGroundArmorsLevel1": {
       "affected_units": [
-        "InfestorTerranBurrowed"
+        "InfestorTerran",
+        "InfestorTerranBurrowed",
+        "LocustMP",
+        "LocustMPFlying",
+        "LurkerMP",
+        "LurkerMPBurrowed",
+        "Ravager",
+        "RavagerBurrowed",
+        "SwarmHostBurrowedMP",
+        "SwarmHostMP"
       ],
       "race": null,
       "requires": []
     },
     "ZergGroundArmorsLevel2": {
       "affected_units": [
-        "InfestorTerranBurrowed"
+        "InfestorTerran",
+        "InfestorTerranBurrowed",
+        "LocustMP",
+        "LocustMPFlying",
+        "LurkerMP",
+        "LurkerMPBurrowed",
+        "Ravager",
+        "RavagerBurrowed",
+        "SwarmHostBurrowedMP",
+        "SwarmHostMP"
       ],
       "race": null,
       "requires": []
     },
     "ZergGroundArmorsLevel3": {
       "affected_units": [
-        "InfestorTerranBurrowed"
+        "InfestorTerran",
+        "InfestorTerranBurrowed",
+        "LocustMP",
+        "LocustMPFlying",
+        "LurkerMP",
+        "LurkerMPBurrowed",
+        "Ravager",
+        "RavagerBurrowed",
+        "SwarmHostBurrowedMP",
+        "SwarmHostMP"
       ],
       "race": null,
       "requires": []
@@ -4651,27 +4789,43 @@
     },
     "ZergMissileWeaponsLevel1": {
       "affected_units": [
-        "InfestorTerranBurrowed"
+        "InfestorTerran",
+        "InfestorTerranBurrowed",
+        "LocustMP",
+        "LurkerMP",
+        "LurkerMPBurrowed",
+        "Ravager"
       ],
       "race": null,
       "requires": []
     },
     "ZergMissileWeaponsLevel2": {
       "affected_units": [
-        "InfestorTerranBurrowed"
+        "InfestorTerran",
+        "InfestorTerranBurrowed",
+        "LocustMP",
+        "LurkerMP",
+        "LurkerMPBurrowed",
+        "Ravager"
       ],
       "race": null,
       "requires": []
     },
     "ZergMissileWeaponsLevel3": {
       "affected_units": [
-        "InfestorTerranBurrowed"
+        "InfestorTerran",
+        "InfestorTerranBurrowed",
+        "LocustMP",
+        "LurkerMP",
+        "LurkerMPBurrowed",
+        "Ravager"
       ],
       "race": null,
       "requires": []
     },
     "ZerglingSkin": {
       "affected_units": [
+        "Zergling",
         "ZerglingBurrowed"
       ],
       "race": null,
@@ -4686,6 +4840,7 @@
     },
     "hydraliskspeed": {
       "affected_units": [
+        "Hydralisk",
         "HydraliskBurrowed"
       ],
       "race": "Zerg",
@@ -4693,6 +4848,9 @@
     },
     "overlordspeed": {
       "affected_units": [
+        "Overlord",
+        "OverlordTransport",
+        "Overseer",
         "OverseerSiegeMode"
       ],
       "race": "Zerg",
@@ -4707,6 +4865,7 @@
     },
     "zerglingattackspeed": {
       "affected_units": [
+        "Zergling",
         "ZerglingBurrowed"
       ],
       "race": "Zerg",
@@ -4714,7 +4873,7 @@
     },
     "zerglingmovementspeed": {
       "affected_units": [
-        "ZerglingBurrowed",
+        "Zergling",
         "ZerglingBurrowed"
       ],
       "race": "Zerg",
