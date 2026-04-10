@@ -51,7 +51,7 @@ def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
         child_tags = [c.tag for c in children]
         unique_tags = set(child_tags)
 
-        result = {}
+        result: dict[str, Any] = {}
         for tag in unique_tags:
             matching = [c for c in children if c.tag == tag]
             child_val = [element_to_value(c, tag) for c in matching]

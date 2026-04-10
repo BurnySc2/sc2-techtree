@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import json
+import re
 from pathlib import Path
-from pstats import SortKey
 
 DATA_DIR = Path(__file__).parent / "json"
 OUTPUT_FILE = Path(__file__).parent / "json/techtree.json"
@@ -56,6 +56,29 @@ def is_techlab_unit(unit_data: dict) -> bool:
     return isinstance(tech_alias, str) and "TechLab" in tech_alias
 
 
+def extract_build_requirements(abil_data: dict) -> dict[str, str]:
+    """Extract unit -> requirement mappings from AbilData.InfoArray."""
+    result = {}
+    info_array = abil_data.get("InfoArray", [])
+    if not isinstance(info_array, list):
+        return result
+    for item in info_array:
+        if not isinstance(item, dict):
+            continue
+        button = item.get("Button", {})
+        if not isinstance(button, dict):
+            continue
+        unit = item.get("Unit")
+        if not unit or not isinstance(unit, str):
+            continue
+        requirements = button.get("Requirements", "")
+        if requirements and isinstance(requirements, str):
+            match = re.match(r"Have(\w+)", requirements)
+            if match:
+                result[unit] = match.group(1)
+    return result
+
+
 def main():
     unit_data = load_json("UnitData.json")
     abil_data = load_json("AbilData.json")
@@ -68,6 +91,12 @@ def main():
 
     building_unlocks: dict[str, list[str]] = {}
     building_produces: dict[str, list[str]] = {}
+    build_requirements: dict[str, str] = {}
+
+    for name, data in abil_data.items():
+        if not isinstance(data, dict):
+            continue
+        build_requirements.update(extract_build_requirements(data))
 
     for name, data in unit_data.items():
         if not isinstance(data, dict):
@@ -103,6 +132,7 @@ def main():
             unlocked = building_unlocks.get(name, [])
             unlocks = [u for u in produced if isinstance(u, str)]
             unlocks.extend(u for u in unlocked if isinstance(u, str))
+            unlocks.extend(unit for unit, req in build_requirements.items() if req == name)
 
             structures[name] = {
                 "unlocks": list(set(unlocks)),
@@ -126,6 +156,9 @@ def main():
             for building, produced_units in building_produces.items():
                 if name in produced_units:
                     requires.add(building)
+
+            if name in build_requirements:
+                requires.add(build_requirements[name])
 
             units[name] = {
                 "requires": sorted(requires),

@@ -859,8 +859,8 @@
     "Armory": {
       "race": "Terran",
       "unlocks": [
-        "HellionTank",
-        "Thor"
+        "Thor",
+        "HellionTank"
       ]
     },
     "Assimilator": {
@@ -884,10 +884,13 @@
     "Barracks": {
       "race": "Terran",
       "unlocks": [
+        "Bunker",
         "Ghost",
+        "Factory",
+        "Marauder",
         "Marine",
-        "Reaper",
-        "Marauder"
+        "GhostAcademy",
+        "Reaper"
       ]
     },
     "BarracksFlying": {
@@ -905,9 +908,10 @@
     "CommandCenter": {
       "race": "Terran",
       "unlocks": [
+        "SCV",
         "PlanetaryFortress",
         "OrbitalCommand",
-        "SCV"
+        "EngineeringBay"
       ]
     },
     "CommandCenterFlying": {
@@ -929,25 +933,34 @@
     "CyberneticsCore": {
       "race": "Protoss",
       "unlocks": [
-        "Stalker",
         "Sentry",
+        "ShieldBattery",
+        "Stargate",
+        "Stalker",
+        "RoboticsFacility",
+        "TwilightCouncil",
         "Adept"
       ]
     },
     "DarkShrine": {
       "race": "Protoss",
       "unlocks": [
-        "Archon",
-        "DarkTemplar"
+        "DarkTemplar",
+        "Archon"
       ]
     },
     "EngineeringBay": {
       "race": "Terran",
-      "unlocks": []
+      "unlocks": [
+        "SensorTower",
+        "MissileTurret"
+      ]
     },
     "EvolutionChamber": {
       "race": "Zerg",
-      "unlocks": []
+      "unlocks": [
+        "SporeCrawler"
+      ]
     },
     "Extractor": {
       "race": "Zerg",
@@ -962,6 +975,8 @@
       "unlocks": [
         "WidowMine",
         "Thor",
+        "Starport",
+        "Armory",
         "SiegeTank"
       ]
     },
@@ -976,8 +991,8 @@
     "FleetBeacon": {
       "race": "Protoss",
       "unlocks": [
-        "Mothership",
-        "Carrier"
+        "Carrier",
+        "Mothership"
       ]
     },
     "ForceField": {
@@ -986,7 +1001,9 @@
     },
     "Forge": {
       "race": "Protoss",
-      "unlocks": []
+      "unlocks": [
+        "PhotonCannon"
+      ]
     },
     "FusionCore": {
       "race": "Terran",
@@ -997,12 +1014,13 @@
     "Gateway": {
       "race": "Protoss",
       "unlocks": [
+        "CyberneticsCore",
+        "Zealot",
         "WarpGate",
+        "Sentry",
         "DarkTemplar",
         "Stalker",
-        "Sentry",
-        "HighTemplar",
-        "Zealot"
+        "HighTemplar"
       ]
     },
     "GhostAcademy": {
@@ -1020,23 +1038,29 @@
     "Hatchery": {
       "race": "Zerg",
       "unlocks": [
+        "Queen",
+        "EvolutionChamber",
         "Larva",
-        "Queen"
+        "SpawningPool"
       ]
     },
     "Hive": {
       "race": "Zerg",
-      "unlocks": []
+      "unlocks": [
+        "UltraliskCavern"
+      ]
     },
     "HydraliskDen": {
       "race": "Zerg",
       "unlocks": [
-        "Hydralisk"
+        "Hydralisk",
+        "LurkerDenMP"
       ]
     },
     "InfestationPit": {
       "race": "Zerg",
       "unlocks": [
+        "Infestor",
         "SwarmHostMP"
       ]
     },
@@ -1051,7 +1075,11 @@
     "Lair": {
       "race": "Zerg",
       "unlocks": [
-        "Overseer"
+        "Spire",
+        "NydusNetwork",
+        "Overseer",
+        "InfestationPit",
+        "HydraliskDen"
       ]
     },
     "LurkerDenMP": {
@@ -1067,8 +1095,10 @@
     "Nexus": {
       "race": "Protoss",
       "unlocks": [
-        "Probe",
-        "Mothership"
+        "Mothership",
+        "Gateway",
+        "Forge",
+        "Probe"
       ]
     },
     "NydusCanal": {
@@ -1132,10 +1162,10 @@
     "RoboticsFacility": {
       "race": "Protoss",
       "unlocks": [
-        "Colossus",
+        "Observer",
         "Immortal",
         "WarpPrism",
-        "Observer"
+        "Colossus"
       ]
     },
     "SensorTower": {
@@ -1149,8 +1179,11 @@
     "SpawningPool": {
       "race": "Zerg",
       "unlocks": [
+        "SpineCrawler",
+        "BanelingNest",
+        "Zergling",
         "Queen",
-        "Zergling"
+        "RoachWarren"
       ]
     },
     "SpineCrawler": {
@@ -1164,8 +1197,8 @@
     "Spire": {
       "race": "Zerg",
       "unlocks": [
-        "Mutalisk",
-        "Corruptor"
+        "Corruptor",
+        "Mutalisk"
       ]
     },
     "SporeCrawler": {
@@ -1179,19 +1212,21 @@
     "Stargate": {
       "race": "Protoss",
       "unlocks": [
-        "VoidRay",
         "Carrier",
+        "VoidRay",
+        "FleetBeacon",
         "Oracle"
       ]
     },
     "Starport": {
       "race": "Terran",
       "unlocks": [
-        "Banshee",
         "Raven",
-        "VikingFighter",
         "Battlecruiser",
-        "Medivac"
+        "VikingFighter",
+        "Medivac",
+        "FusionCore",
+        "Banshee"
       ]
     },
     "StarportFlying": {
@@ -1204,7 +1239,9 @@
     },
     "SupplyDepot": {
       "race": "Terran",
-      "unlocks": []
+      "unlocks": [
+        "Barracks"
+      ]
     },
     "SupplyDepotLowered": {
       "race": "Terran",
@@ -1217,13 +1254,16 @@
     "TemplarArchive": {
       "race": "Protoss",
       "unlocks": [
-        "Archon",
-        "HighTemplar"
+        "HighTemplar",
+        "Archon"
       ]
     },
     "TwilightCouncil": {
       "race": "Protoss",
-      "unlocks": []
+      "unlocks": [
+        "DarkShrine",
+        "TemplarArchive"
+      ]
     },
     "UltraliskCavern": {
       "race": "Zerg",
@@ -1273,12 +1313,14 @@
     "Banshee": {
       "race": "Terran",
       "requires": [
+        "AttachedTechLab",
         "Starport"
       ]
     },
     "Battlecruiser": {
       "race": "Terran",
       "requires": [
+        "AttachedStarportTechLabAndFusionCore",
         "FusionCore",
         "Starport"
       ]
@@ -1351,6 +1393,7 @@
     "Ghost": {
       "race": "Terran",
       "requires": [
+        "AttachedBarrTechLabAndShadowOps",
         "Barracks",
         "GhostAcademy"
       ]
@@ -1363,7 +1406,8 @@
       "race": "Protoss",
       "requires": [
         "Gateway",
-        "TemplarArchive"
+        "TemplarArchive",
+        "TemplarArchives"
       ]
     },
     "HighTemplarSkinPreview": {
@@ -1396,7 +1440,9 @@
     },
     "Infestor": {
       "race": "Zerg",
-      "requires": []
+      "requires": [
+        "InfestationPit"
+      ]
     },
     "InfestorBurrowed": {
       "race": "Zerg",
@@ -1446,6 +1492,7 @@
     "Marauder": {
       "race": "Terran",
       "requires": [
+        "AttachedTechLab",
         "Barracks"
       ]
     },
@@ -1538,12 +1585,14 @@
     "Raven": {
       "race": "Terran",
       "requires": [
+        "AttachedTechLab",
         "Starport"
       ]
     },
     "Reaper": {
       "race": "Terran",
       "requires": [
+        "AttachedTechLab",
         "Barracks"
       ]
     },
@@ -1554,6 +1603,7 @@
     "Roach": {
       "race": "Zerg",
       "requires": [
+        "BanelingNest2",
         "RoachWarren"
       ]
     },
@@ -1581,6 +1631,7 @@
     "SiegeTank": {
       "race": "Terran",
       "requires": [
+        "AttachedTechLab",
         "Factory"
       ]
     },
@@ -1607,6 +1658,7 @@
       "race": "Terran",
       "requires": [
         "Armory",
+        "ArmoryAndAttachedTechLab",
         "Factory"
       ]
     },
