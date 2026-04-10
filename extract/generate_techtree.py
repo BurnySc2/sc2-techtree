@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import json
 from pathlib import Path
+from pstats import SortKey
 
 DATA_DIR = Path(__file__).parent / "json"
-OUTPUT_FILE = Path(__file__).parent / "techtree.json"
+OUTPUT_FILE = Path(__file__).parent / "json/techtree.json"
 
 RACE_MAP = {
     "Terr": "Terran",
@@ -36,12 +37,15 @@ def extract_train_building(abil_array: list) -> str | None:
     for abil in abil_array:
         if not abil:
             continue
-        if abil.endswith("Train"):
-            return abil.replace("Train", "")
-        if abil.endswith("TrainLarge"):
-            return abil.replace("TrainLarge", "")
-        if abil.endswith("TrainMorph"):
-            return abil.replace("TrainMorph", "")
+        name = abil if isinstance(abil, str) else abil.get("Link")
+        if not name:
+            continue
+        if name.endswith("Train"):
+            return name.replace("Train", "")
+        if name.endswith("TrainLarge"):
+            return name.replace("TrainLarge", "")
+        if name.endswith("TrainMorph"):
+            return name.replace("TrainMorph", "")
     return None
 
 
@@ -95,12 +99,10 @@ def main():
         is_unit = "ObjectType:Unit" in categories
 
         if is_structure:
-            unlocks = []
             produced = building_produces.get(name, [])
-            unlocks.extend(produced)
-
             unlocked = building_unlocks.get(name, [])
-            unlocks.extend(unlocked)
+            unlocks = [u for u in produced if isinstance(u, str)]
+            unlocks.extend(u for u in unlocked if isinstance(u, str))
 
             structures[name] = {
                 "unlocks": list(set(unlocks)),
@@ -176,7 +178,7 @@ def main():
     }
 
     with OUTPUT_FILE.open("w") as f:
-        json.dump(tech_tree, f, indent=2)
+        json.dump(tech_tree, f, indent=2, sort_keys=True)
 
     print(f"Generated {OUTPUT_FILE}")
     print(f"  Structures: {len(structures)}")
