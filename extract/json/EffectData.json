@@ -12,13 +12,17 @@
     "PeriodicEffectArray": "250mmStrikeCannonsDamage",
     "PeriodicPeriodArray": 0.24,
     "PeriodicValidator": "250mmCannonValidators",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "250mmStrikeCannonsDamage": {
     "Amount": 20,
     "EditorCategories": "Race:Terran",
     "Flags": "Notification",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "ResponseFlags": "Acquire",
     "SearchFlags": [
       "CallForHelp",
@@ -46,14 +50,18 @@
     "AttributeBonus": "Armored",
     "Death": "Blast",
     "EditorCategories": "Race:Terran",
-    "Kind": "Ranged"
+    "Kind": "Ranged",
+    "parent": "DU_WEAP"
   },
   "AIDangerDamageLarge": {
     "AINotifyFlags": [
       "HurtFriend",
       "HurtEnemy"
     ],
-    "AreaArray": null,
+    "AreaArray": {
+      "Fraction": "1",
+      "Radius": "12"
+    },
     "Flags": "NoDamageTimerReset"
   },
   "AIDangerDamageSmall": {
@@ -61,7 +69,10 @@
       "HurtFriend",
       "HurtEnemy"
     ],
-    "AreaArray": null,
+    "AreaArray": {
+      "Fraction": "1",
+      "Radius": "8"
+    },
     "Flags": "NoDamageTimerReset"
   },
   "AIDangerEffect": {
@@ -76,7 +87,8 @@
   "ATALaserBatteryU": {
     "Amount": 5,
     "EditorCategories": "Race:Terran",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "ATSLaserBatteryLM": {
     "EditorCategories": "Race:Terran",
@@ -87,36 +99,73 @@
     "Amount": 8,
     "Death": "Fire",
     "EditorCategories": "Race:Terran",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "AccelerationZoneFlyingLargeSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "AccelerationZoneFlyingTemporalField",
+      "Radius": "6",
+      "index": "0"
+    },
+    "parent": "AccelerationZoneFlyingSearchBase"
   },
   "AccelerationZoneFlyingMediumSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "AccelerationZoneFlyingTemporalField",
+      "Radius": "5",
+      "index": "0"
+    },
+    "parent": "AccelerationZoneFlyingSearchBase"
   },
   "AccelerationZoneFlyingSearchBase": {
-    "AreaArray": null,
-    "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden"
+    "AreaArray": {
+      "Effect": "AccelerationZoneFlyingTemporalField"
+    },
+    "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden",
+    "default": 1
   },
   "AccelerationZoneFlyingSmallSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "AccelerationZoneFlyingTemporalField",
+      "Radius": "4",
+      "index": "0"
+    },
+    "parent": "AccelerationZoneFlyingSearchBase"
   },
   "AccelerationZoneFlyingTemporalField": {
     "ValidatorArray": "noStructureOrFlyingStructure"
   },
   "AccelerationZoneLargeSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "AccelerationZoneTemporalField",
+      "Radius": "6",
+      "index": "0"
+    },
+    "parent": "AccelerationZoneSearchBase"
   },
   "AccelerationZoneMediumSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "AccelerationZoneTemporalField",
+      "Radius": "5",
+      "index": "0"
+    },
+    "parent": "AccelerationZoneSearchBase"
   },
   "AccelerationZoneSearchBase": {
-    "AreaArray": null,
-    "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden"
+    "AreaArray": {
+      "Effect": "AccelerationZoneTemporalField"
+    },
+    "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden",
+    "default": 1
   },
   "AccelerationZoneSmallSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "AccelerationZoneTemporalField",
+      "Radius": "4",
+      "index": "0"
+    },
+    "parent": "AccelerationZoneSearchBase"
   },
   "AccelerationZoneTemporalField": {
     "ValidatorArray": "noStructureOrFlyingStructure"
@@ -130,12 +179,14 @@
   "AcidSalivaU": {
     "Amount": 16,
     "Death": "Disintegrate",
-    "EditorCategories": "Race:Zerg"
+    "EditorCategories": "Race:Zerg",
+    "parent": "DU_WEAP_MISSILE"
   },
   "AcidSpines": {
     "Amount": 9,
     "EditorCategories": "Race:Zerg",
-    "Kind": "Ranged"
+    "Kind": "Ranged",
+    "parent": "DU_WEAP"
   },
   "AcidSpinesLM": {
     "AmmoUnit": "AcidSpinesWeapon",
@@ -161,15 +212,22 @@
   "AssimilatorRichAB": {
     "Behavior": "HarvestableRichVespeneGeyserGasProtoss",
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "AssimilatorRichRB": {
     "BehaviorLink": "HarvestableVespeneGeyserGasProtoss",
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "AssimilatorRichSearch": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "AssimilatorRichSet",
+      "Radius": "0.5"
+    },
     "EditorCategories": "Race:Terran",
     "SearchFilters": "RawResource;-"
   },
@@ -187,20 +245,25 @@
   },
   "AutoTurret": {
     "Amount": 18,
-    "EditorCategories": "Race:Terran"
+    "EditorCategories": "Race:Terran",
+    "parent": "DU_WEAP_MISSILE"
   },
   "AutoTurretRelease": {
     "EditorCategories": "Race:Terran",
     "SpawnEffect": "AutoTurretSet",
     "SpawnRange": 0,
     "SpawnUnit": "AutoTurret",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "AutoTurretReleaseLM": {
     "AmmoUnit": "AutoTurretReleaseWeapon",
     "EditorCategories": "Race:Terran",
     "FinishEffect": "RemovePrecursor",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Value": "CasterUnit"
+    },
     "PlaceholderUnit": "AutoTurret"
   },
   "AutoTurretReleaseLaunch": {
@@ -230,7 +293,9 @@
       0.15,
       0
     ],
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "BacklashRocketsLM": {
     "EditorCategories": "Race:Terran",
@@ -241,31 +306,46 @@
   "BacklashRocketsU": {
     "Amount": 12,
     "EditorCategories": "Race:Terran",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "BanelingDontExplode": {
     "BehaviorLink": "BanelingExplode",
     "EditorCategories": "Race:Zerg",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "Blink": {
     "ClearQueuedOrders": 0,
     "EditorCategories": "Race:Protoss",
-    "PlacementAround": null,
+    "PlacementAround": {
+      "Value": "CasterUnit"
+    },
     "PlacementRange": 8,
     "Range": 8,
-    "TargetLocation": null,
+    "TargetLocation": {
+      "Value": "TargetPoint"
+    },
     "TeleportFlags": "TestCliff",
     "ValidatorArray": "CasterNotFungalGrowthed",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "BroodlingAttack": {
     "Abil": "attack",
     "EditorCategories": "Race:Zerg",
-    "Target": null
+    "Target": {
+      "Effect": "BroodlingEscort",
+      "Value": "TargetUnitOrPoint"
+    }
   },
   "BroodlingEscort": {
-    "CaseArray": null,
+    "CaseArray": {
+      "Effect": "BroodlingEscortStructure",
+      "Validator": "IsStructure"
+    },
     "CaseDefault": "BroodlingEscortUnitSet",
     "EditorCategories": "Race:Zerg",
     "ValidatorArray": "BroodlingAllowedAttack"
@@ -284,9 +364,13 @@
   "BroodlingEscortDamage": {
     "Amount": 20,
     "EditorCategories": "Race:Zerg",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Effect": "BroodlingEscort",
+      "Value": "TargetUnit"
+    },
     "ValidatorArray": "BroodlingEscortFilters",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "BroodlingEscortDamageSet": {
     "EditorCategories": "Race:Zerg",
@@ -299,18 +383,29 @@
     "Amount": 20,
     "EditorCategories": "Race:Zerg",
     "ValidatorArray": "BroodlingEscortFilters",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "BroodlingEscortFallbackMissile": {
     "EditorCategories": "Race:Zerg",
     "FinishEffect": "BroodlingEscortDamage",
     "Flags": 0,
-    "ImpactLocation": null,
-    "LaunchLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnitOrPoint"
+    },
+    "LaunchLocation": {
+      "Value": "CasterUnit"
+    },
     "MoverRollingJump": 1,
     "Movers": [
-      null,
-      null
+      {
+        "IfRangeLTE": "500",
+        "Link": "BroodLordWeaponRight"
+      },
+      {
+        "IfRangeLTE": "500",
+        "Link": "BroodLordWeaponLeft"
+      }
     ]
   },
   "BroodlingEscortImpact": {
@@ -331,7 +426,9 @@
     "SpawnEffect": "BroodlingEscortLaunchB",
     "SpawnRange": 5,
     "SpawnUnit": "Broodling",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnitOrPoint"
+    }
   },
   "BroodlingEscortImpactB": {
     "EditorCategories": "Race:Zerg",
@@ -343,8 +440,13 @@
   },
   "BroodlingEscortImpactTransfer": {
     "Behavior": "KillsToCaster",
-    "ImpactUnit": null,
-    "LaunchUnit": null
+    "ImpactUnit": {
+      "Value": "Target"
+    },
+    "LaunchUnit": {
+      "Effect": "BroodlingEscortMissile",
+      "Value": "Source"
+    }
   },
   "BroodlingEscortLaunch": {
     "EditorCategories": "Race:Zerg",
@@ -363,8 +465,14 @@
     "ImpactEffect": "BroodlingEscortDamageUnit",
     "MoverRollingJump": 1,
     "Movers": [
-      null,
-      null
+      {
+        "IfRangeLTE": "500",
+        "Link": "BroodLordWeaponRight"
+      },
+      {
+        "IfRangeLTE": "500",
+        "Link": "BroodLordWeaponLeft"
+      }
     ]
   },
   "BroodlingEscortLaunchB": {
@@ -379,8 +487,13 @@
   },
   "BroodlingEscortLaunchBTransfer": {
     "Behavior": "KillsToCaster",
-    "ImpactUnit": null,
-    "LaunchUnit": null
+    "ImpactUnit": {
+      "Value": "Target"
+    },
+    "LaunchUnit": {
+      "Effect": "BroodlingEscortLaunchA",
+      "Value": "Source"
+    }
   },
   "BroodlingEscortMissile": {
     "DeathType": "Unknown",
@@ -388,25 +501,40 @@
     "FinishEffect": "BroodlingEscortImpact",
     "Flags": 0,
     "ImpactEffect": "BroodlingEscortDamage",
-    "ImpactLocation": null,
-    "LaunchLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnitOrPoint"
+    },
+    "LaunchLocation": {
+      "Value": "CasterUnit"
+    },
     "MoverRollingJump": 1,
     "Movers": [
-      null,
-      null
+      {
+        "IfRangeLTE": "500",
+        "Link": "BroodLordWeaponRight"
+      },
+      {
+        "IfRangeLTE": "500",
+        "Link": "BroodLordWeaponLeft"
+      }
     ]
   },
   "BroodlingEscortMissileB": {
     "AmmoUnit": "BroodLordBWeapon",
     "EditorCategories": "Race:Zerg",
     "FinishEffect": "BroodlingEscortImpactB",
-    "LaunchLocation": null
+    "LaunchLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "BroodlingEscortRelease": {
     "EditorCategories": "Race:Zerg"
   },
   "BroodlingEscortStructure": {
-    "CaseArray": null,
+    "CaseArray": {
+      "Effect": "BroodlingEscortCU",
+      "FallThrough": "1"
+    },
     "CaseDefault": "BroodlingEscortFallbackMissile",
     "EditorCategories": "Race:Zerg"
   },
@@ -430,7 +558,8 @@
     "Amount": 10,
     "AttributeBonus": "Light",
     "EditorCategories": "Race:Terran",
-    "Kind": "Ranged"
+    "Kind": "Ranged",
+    "parent": "DU_WEAP"
   },
   "CCBirthSet": {
     "EditorCategories": "",
@@ -450,7 +579,9 @@
     "EditorCategories": "Race:Terran",
     "ExpireDelay": 4,
     "FinalEffect": "CalldownMULEFinalSet",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnitOrPoint"
+    }
   },
   "CalldownMULECreateSet": {
     "EditorCategories": "Race:Terran",
@@ -464,7 +595,9 @@
     "SpawnEffect": "CalldownMULECreateSet",
     "SpawnUnit": "MULE",
     "ValidatorArray": "MULETargetCheck",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnitOrPoint"
+    }
   },
   "CalldownMULEFinalSet": {
     "EditorCategories": "Race:Terran",
@@ -477,7 +610,10 @@
   "CalldownMULEIssueOrder": {
     "Abil": "MULEGather",
     "EditorCategories": "Race:Terran",
-    "Target": null
+    "Target": {
+      "Effect": "CalldownMULECreateUnit",
+      "Value": "TargetUnit"
+    }
   },
   "CalldownMULETimedLife": {
     "Behavior": "MULETimedLife",
@@ -491,24 +627,36 @@
     "EditorCategories": "Race:Protoss"
   },
   "CasterHealtoFullEnergy": {
-    "ImpactUnit": null,
+    "ImpactUnit": {
+      "Value": "Caster"
+    },
     "VitalArray": {
-      "ChangeFraction": 1
+      "ChangeFraction": 1,
+      "index": "Energy"
     }
   },
   "ChangelingDisguiseEx3RemoveBehavior": {
     "BehaviorLink": "ChangelingDisguiseEx3",
     "Count": 1,
     "EditorCategories": "Race:Zerg",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Source"
+    }
   },
   "ChangelingDisguiseEx3Search": {
     "AreaArray": [
-      null,
-      null
+      {
+        "Effect": "DisguiseEx3",
+        "Radius": "12"
+      },
+      {
+        "Effect": "ChangelingDisguiseEx3RemoveBehavior"
+      }
     ],
     "EditorCategories": "Race:Zerg",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "MaxCount": 1,
     "SearchFilters": "Visible;Player,Ally,Neutral,Missile",
     "SearchFlags": "ExtendByUnitRadius"
@@ -524,7 +672,9 @@
       "ChargeMinTriggerDistance",
       "ChargeMaxDistance"
     ],
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "ChronoBoost": {
     "Behavior": "TimeWarpProduction",
@@ -540,7 +690,8 @@
   },
   "Claws": {
     "Amount": 5,
-    "EditorCategories": "Race:Zerg"
+    "EditorCategories": "Race:Zerg",
+    "parent": "DU_WEAP"
   },
   "CloakingField": {
     "Behavior": "CloakFieldEffect",
@@ -551,9 +702,14 @@
     ]
   },
   "CloakingFieldSearch": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "CloakingField",
+      "Radius": "5"
+    },
     "EditorCategories": "Race:Protoss",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "CasterUnit"
+    },
     "SearchFilters": "-;Self,Neutral,Enemy,Missile,Dead,Hidden",
     "SearchFlags": "ExtendByUnitRadius"
   },
@@ -569,7 +725,9 @@
       "noMarkers",
       "ContaminateTargetFilters"
     ],
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "ContaminateApplyBehavior": {
     "Behavior": "Contaminated",
@@ -600,7 +758,9 @@
       "noMarkers",
       ""
     ],
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "CorruptionApplyBehavior": {
     "Behavior": "Corruption",
@@ -619,14 +779,25 @@
   "CrucioShockCannonBlast": {
     "Amount": 40,
     "AreaArray": [
-      null,
-      null,
-      null
+      {
+        "Fraction": "1",
+        "Radius": "0.4687"
+      },
+      {
+        "Fraction": "0.5",
+        "Radius": "0.7812"
+      },
+      {
+        "Fraction": "0.25",
+        "Radius": "1.25"
+      }
     ],
     "AttributeBonus": "Armored",
     "Death": "Blast",
     "EditorCategories": "Race:Terran",
-    "ExcludeArray": null,
+    "ExcludeArray": {
+      "Value": "Target"
+    },
     "Kind": "Ranged",
     "KindSplash": "Splash",
     "SearchFilters": "Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable",
@@ -634,7 +805,8 @@
     "ValidatorArray": [
       "TargetRadiusSmall",
       ""
-    ]
+    ],
+    "parent": "DU_WEAP"
   },
   "CrucioShockCannonBlastSet": {
     "EditorCategories": "Race:Terran",
@@ -653,7 +825,8 @@
     "ValidatorArray": [
       "TargetRadiusLarge",
       ""
-    ]
+    ],
+    "parent": "DU_WEAP"
   },
   "CrucioShockCannonDummy": {
     "Amount": 40,
@@ -661,7 +834,8 @@
     "Death": "Blast",
     "EditorCategories": "Race:Terran",
     "Kind": "Splash",
-    "KindSplash": "Splash"
+    "KindSplash": "Splash",
+    "parent": "DU_WEAP"
   },
   "CrucioShockCannonSet": {
     "EditorCategories": "Race:Terran",
@@ -675,7 +849,9 @@
     "ArmorReduction": 1,
     "EditorCategories": "Race:Terran",
     "Flags": "Notification",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "Kind": "Ranged",
     "ResponseFlags": [
       "Acquire",
@@ -689,67 +865,121 @@
   },
   "DisableCasterEnergyRegenApplyBehavior": {
     "Behavior": "DisableEnergyRegen",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "DisableCasterWeaponsApplyBehavior": {
     "Behavior": "DisablePhoenixWeapons",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "DisableMothership": {
     "EditorCategories": "Race:Protoss"
   },
   "Disguise": {
     "CaseArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Effect": "DisguiseAsZealot",
+        "Validator": "DisguiseAsZealot"
+      },
+      {
+        "Effect": "DisguiseAsMarineWithShield",
+        "Validator": "DisguiseAsMarineWithShield"
+      },
+      {
+        "Effect": "DisguiseAsMarineWithoutShield",
+        "Validator": "DisguiseAsMarineWithoutShield"
+      },
+      {
+        "Effect": "DisguiseAsZerglingWithWings",
+        "Validator": "DisguiseAsZerglingWithWings"
+      },
+      {
+        "Effect": "DisguiseAsZerglingWithoutWings",
+        "Validator": "DisguiseAsZerglingWithoutWings"
+      }
     ],
     "EditorCategories": "Race:Zerg"
   },
-  "DisguiseAsMarineWithShield": null,
+  "DisguiseAsMarineWithShield": {
+    "parent": "DisguiseSetDefault"
+  },
   "DisguiseAsMarineWithShieldCU": {
-    "SpawnUnit": "ChangelingMarineShield"
+    "SpawnUnit": "ChangelingMarineShield",
+    "parent": "DisguiseEx3CU"
   },
   "DisguiseAsMarineWithShieldIssueOrder": {
-    "Abil": "DisguiseAsMarineWithShield"
+    "Abil": "DisguiseAsMarineWithShield",
+    "parent": "DisguiseIssueOrderDefault"
   },
-  "DisguiseAsMarineWithoutShield": null,
+  "DisguiseAsMarineWithoutShield": {
+    "parent": "DisguiseSetDefault"
+  },
   "DisguiseAsMarineWithoutShieldCU": {
-    "SpawnUnit": "ChangelingMarine"
+    "SpawnUnit": "ChangelingMarine",
+    "parent": "DisguiseEx3CU"
   },
   "DisguiseAsMarineWithoutShieldIssueOrder": {
-    "Abil": "DisguiseAsMarineWithoutShield"
+    "Abil": "DisguiseAsMarineWithoutShield",
+    "parent": "DisguiseIssueOrderDefault"
   },
-  "DisguiseAsZealot": null,
+  "DisguiseAsZealot": {
+    "parent": "DisguiseSetDefault"
+  },
   "DisguiseAsZealotCU": {
-    "SpawnUnit": "ChangelingZealot"
+    "SpawnUnit": "ChangelingZealot",
+    "parent": "DisguiseEx3CU"
   },
   "DisguiseAsZealotIssueOrder": {
-    "Abil": "DisguiseAsZealot"
+    "Abil": "DisguiseAsZealot",
+    "parent": "DisguiseIssueOrderDefault"
   },
-  "DisguiseAsZerglingWithWings": null,
+  "DisguiseAsZerglingWithWings": {
+    "parent": "DisguiseSetDefault"
+  },
   "DisguiseAsZerglingWithWingsCU": {
-    "SpawnUnit": "ChangelingZerglingWings"
+    "SpawnUnit": "ChangelingZerglingWings",
+    "parent": "DisguiseEx3CU"
   },
   "DisguiseAsZerglingWithWingsIssueOrder": {
-    "Abil": "DisguiseAsZerglingWithWings"
+    "Abil": "DisguiseAsZerglingWithWings",
+    "parent": "DisguiseIssueOrderDefault"
   },
-  "DisguiseAsZerglingWithoutWings": null,
+  "DisguiseAsZerglingWithoutWings": {
+    "parent": "DisguiseSetDefault"
+  },
   "DisguiseAsZerglingWithoutWingsCU": {
-    "SpawnUnit": "ChangelingZergling"
+    "SpawnUnit": "ChangelingZergling",
+    "parent": "DisguiseEx3CU"
   },
   "DisguiseAsZerglingWithoutWingsIssueOrder": {
-    "Abil": "DisguiseAsZerglingWithoutWings"
+    "Abil": "DisguiseAsZerglingWithoutWings",
+    "parent": "DisguiseIssueOrderDefault"
   },
   "DisguiseEx3": {
     "CaseArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Effect": "DisguiseAsZealotCU",
+        "Validator": "DisguiseAsZealot"
+      },
+      {
+        "Effect": "DisguiseAsMarineWithShieldCU",
+        "Validator": "DisguiseAsMarineWithShield"
+      },
+      {
+        "Effect": "DisguiseAsMarineWithoutShieldCU",
+        "Validator": "DisguiseAsMarineWithoutShield"
+      },
+      {
+        "Effect": "DisguiseAsZerglingWithWingsCU",
+        "Validator": "DisguiseAsZerglingWithWings"
+      },
+      {
+        "Effect": "DisguiseAsZerglingWithoutWingsCU",
+        "Validator": "DisguiseAsZerglingWithoutWings"
+      }
     ],
     "EditorCategories": "Race:Zerg"
   },
@@ -768,16 +998,27 @@
       0
     ],
     "EditorCategories": "Race:Zerg",
-    "SelectUnit": null,
+    "SelectUnit": {
+      "Value": "Caster"
+    },
     "SpawnEffect": "DisguiseEx3FinalSet",
-    "SpawnOwner": null,
-    "WhichLocation": null
+    "SpawnOwner": {
+      "Value": "Target"
+    },
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    },
+    "default": 1
   },
   "DisguiseEx3ChangeOwner": {
     "EditorCategories": "Race:Zerg",
-    "ImpactUnit": null,
+    "ImpactUnit": {
+      "Effect": "DisguiseEx3FinalSet"
+    },
     "ModifyFlags": "Owner",
-    "ModifyOwnerPlayer": null
+    "ModifyOwnerPlayer": {
+      "Value": "Caster"
+    }
   },
   "DisguiseEx3ChangeOwnerMimicCP": {
     "FinalEffect": "DisguiseEx3Mimic",
@@ -795,8 +1036,13 @@
   },
   "DisguiseEx3Mimic": {
     "EditorCategories": "Race:Zerg",
-    "ImpactUnit": null,
-    "LaunchUnit": null,
+    "ImpactUnit": {
+      "Effect": "DisguiseEx3"
+    },
+    "LaunchUnit": {
+      "Effect": "DisguiseEx3FinalSet",
+      "Value": "Target"
+    },
     "ModifyFlags": "Mimic"
   },
   "DisguiseEx3RemoveCaster": {
@@ -806,38 +1052,60 @@
       "Kill",
       "NoKillCredit"
     ],
-    "ImpactLocation": null
+    "ImpactLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "DisguiseEx3Transfer": {
     "Behavior": "Changeling",
     "EditorCategories": "Race:Zerg",
-    "ImpactUnit": null,
-    "LaunchUnit": null
+    "ImpactUnit": {
+      "Value": "Target"
+    },
+    "LaunchUnit": {
+      "Value": "Caster"
+    }
   },
   "DisguiseIssueOrderDefault": {
     "CmdFlags": "Preempt",
     "EditorCategories": "Race:Zerg",
-    "Player": null,
-    "WhichUnit": null
+    "Player": {
+      "Value": "Caster"
+    },
+    "WhichUnit": {
+      "Value": "Caster"
+    },
+    "default": 1
   },
   "DisguiseMimic": {
     "EditorCategories": "Race:Zerg",
-    "ImpactUnit": null,
+    "ImpactUnit": {
+      "Effect": "Disguise"
+    },
     "ModifyFlags": "Mimic"
   },
   "DisguiseRemoveBehavior": {
     "BehaviorLink": "ChangelingDisguise",
     "Count": 1,
     "EditorCategories": "Race:Zerg",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Source"
+    }
   },
   "DisguiseSearch": {
     "AreaArray": [
-      null,
-      null
+      {
+        "Effect": "Disguise",
+        "Radius": "12"
+      },
+      {
+        "Effect": "DisguiseRemoveBehavior"
+      }
     ],
     "EditorCategories": "Race:Zerg",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "MaxCount": 1,
     "SearchFilters": "Visible;Player,Ally,Neutral,Missile",
     "SearchFlags": "ExtendByUnitRadius"
@@ -847,7 +1115,8 @@
     "EffectArray": [
       "##id##IssueOrder",
       "DisguiseMimic"
-    ]
+    ],
+    "default": 1
   },
   "DisruptionBeam": {
     "EditorCategories": "Race:Protoss",
@@ -864,14 +1133,19 @@
       1,
       0.0625
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "DisruptionBeamDamage": {
     "Amount": 6,
     "EditorCategories": "Race:Protoss",
     "Kind": "Ranged",
-    "ShieldBonus": 4
+    "ShieldBonus": 4,
+    "parent": "DU_WEAP"
   },
   "EMPApplyDecloakBehavior": {
     "Behavior": "EMPDecloak",
@@ -890,7 +1164,9 @@
     "AmmoUnit": "EMP2Weapon",
     "EditorCategories": "Race:Terran",
     "ImpactEffect": "EMPSearch",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetPoint"
+    },
     "ValidatorArray": "EMP2TargetFilters"
   },
   "EMPModifyUnit": {
@@ -898,21 +1174,34 @@
     "ValidatorArray": "empUTargetFilters",
     "VitalArray": [
       {
-        "Change": -100
+        "Change": -100,
+        "index": "Shields"
       },
       {
-        "ChangeFraction": -1
+        "ChangeFraction": -1,
+        "index": "Energy"
       }
     ]
   },
   "EMPSearch": {
     "AreaArray": [
-      null,
-      null
+      {
+        "Effect": "EMPSet",
+        "Radius": "2"
+      },
+      {
+        "Effect": "EMPSet",
+        "Radius": "1.5",
+        "index": "0"
+      }
     ],
     "EditorCategories": "Race:Terran",
-    "ImpactLocation": null,
-    "LaunchLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetPoint"
+    },
+    "LaunchLocation": {
+      "Value": "TargetPoint"
+    },
     "SearchFilters": "-;Hidden,Invulnerable"
   },
   "EMPSet": {
@@ -926,15 +1215,22 @@
   "ExtractorRichAB": {
     "Behavior": "HarvestableRichVespeneGeyserGasZerg",
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "ExtractorRichRB": {
     "BehaviorLink": "HarvestableVespeneGeyserGasZerg",
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "ExtractorRichSearch": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "ExtractorRichSet",
+      "Radius": "0.5"
+    },
     "EditorCategories": "Race:Terran",
     "SearchFilters": "RawResource;-"
   },
@@ -950,7 +1246,9 @@
     "Death": "Blast",
     "EditorCategories": "Race:Protoss",
     "Flags": "Notification",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "ResponseFlags": [
       "Acquire",
       "Flee"
@@ -966,7 +1264,8 @@
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": "",
     "VitalArray": {
-      "ChangeFraction": -1
+      "ChangeFraction": -1,
+      "index": "Energy"
     }
   },
   "FeedbackSet": {
@@ -989,14 +1288,20 @@
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "ForceFieldTimedLife",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 0,
     "SpawnUnit": "ForceField",
     "ValidatorArray": "CliffLevelGE1",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "ForceFieldPlacement": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Radius": "1.7"
+    },
     "EditorCategories": "Race:Protoss",
     "SearchFilters": "-;Air,Ground,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"
   },
@@ -1032,7 +1337,9 @@
     "AttributeBonus": "Armored",
     "EditorCategories": "Race:Zerg",
     "Flags": "Notification",
-    "ImpactLocation": null
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "FungalGrowthInitialSet": {
     "EditorCategories": "Race:Zerg",
@@ -1046,19 +1353,33 @@
   },
   "FungalGrowthSearch": {
     "AreaArray": [
-      null,
-      null
+      {
+        "Effect": "FungalGrowthSet",
+        "Radius": "2"
+      },
+      {
+        "Radius": "2.25",
+        "index": "0"
+      }
     ],
     "EditorCategories": "Race:Zerg",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetPoint"
+    },
     "ResponseFlags": "Acquire",
     "SearchFilters": "-;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": "CallForHelp"
   },
   "FungalGrowthSearchDummy": {
     "AreaArray": [
-      null,
-      null
+      {
+        "Fraction": "1",
+        "Radius": "2"
+      },
+      {
+        "Radius": "2.25",
+        "index": "0"
+      }
     ],
     "EditorCategories": "Race:Terran",
     "Flags": "Notification",
@@ -1078,15 +1399,20 @@
   },
   "FusionCutter": {
     "Amount": 5,
-    "EditorCategories": "Race:Terran"
+    "EditorCategories": "Race:Terran",
+    "parent": "DU_WEAP"
   },
   "GhostHoldFire": {
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "GhostHoldFireB": {
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "GhostHoldFireSet": {
     "EditorCategories": "Race:Terran",
@@ -1104,21 +1430,35 @@
     "ImpactEffect": "GlaiveWurmS1"
   },
   "GlaiveWurmE1": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "GlaiveWurmM2",
+      "Radius": "3"
+    },
     "EditorCategories": "Race:Zerg",
     "ExcludeArray": [
-      null,
-      null
+      {
+        "Value": "Outer"
+      },
+      {
+        "Value": "Target"
+      }
     ],
     "MaxCount": 1,
     "SearchFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"
   },
   "GlaiveWurmE2": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "GlaiveWurmM3",
+      "Radius": "3"
+    },
     "EditorCategories": "Race:Zerg",
     "ExcludeArray": [
-      null,
-      null
+      {
+        "Value": "Outer"
+      },
+      {
+        "Value": "Target"
+      }
     ],
     "MaxCount": 1,
     "SearchFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"
@@ -1156,17 +1496,20 @@
   "GlaiveWurmU1": {
     "Amount": 9,
     "EditorCategories": "Race:Zerg",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "GlaiveWurmU2": {
     "Amount": 3,
     "EditorCategories": "Race:Zerg",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "GlaiveWurmU3": {
     "Amount": 1,
     "EditorCategories": "Race:Zerg",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "GravitonBeam": {
     "EditorCategories": "Race:Protoss",
@@ -1176,14 +1519,21 @@
     "PeriodicEffectArray": "GravitonBeamPeriodicSet",
     "PeriodicPeriodArray": 0.125,
     "PeriodicValidator": "GravitonBeamValidators",
-    "TimeScaleSource": null,
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
     "ValidatorArray": [
       "NotFrenzied",
       "NoGravitonBeamInProgress",
       "NoGravitonBeamInProgress",
-      null
+      {
+        "index": "1",
+        "removed": "1"
+      }
     ],
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "GravitonBeamBehavior": {
     "Behavior": "GravitonBeam",
@@ -1191,9 +1541,12 @@
   },
   "GravitonBeamCasterEnergyDrain": {
     "EditorCategories": "Race:Protoss",
-    "ImpactUnit": null,
+    "ImpactUnit": {
+      "Value": "Caster"
+    },
     "VitalArray": {
-      "Change": -0.5
+      "Change": -0.5,
+      "index": "Energy"
     }
   },
   "GravitonBeamDummy": {
@@ -1259,7 +1612,9 @@
   "GravitonBeamUnburrowTake2": {
     "ExpireDelay": 0.0625,
     "ExpireEffect": "GravitonBeamUnburrowTake2Set",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "GravitonBeamUnburrowTake2Set": {
     "EffectArray": [
@@ -1277,15 +1632,25 @@
     "PeriodicEffectArray": "GuardianShieldSearch",
     "PeriodicPeriodArray": 0.5,
     "PeriodicValidator": "NotHaveScramblerMissileBehavior",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "SourceUnit"
+    }
   },
   "GuardianShieldSearch": {
     "AreaArray": [
-      null,
-      null
+      {
+        "Effect": "GuardianShieldApplyBehavior",
+        "Radius": "4"
+      },
+      {
+        "Radius": "4.5",
+        "index": "0"
+      }
     ],
     "EditorCategories": "Race:Protoss",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "SearchFilters": "-;Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": [
       "ExtendByUnitRadius",
@@ -1295,7 +1660,8 @@
   "GuassRifle": {
     "Amount": 6,
     "EditorCategories": "Race:Terran",
-    "Kind": "Ranged"
+    "Kind": "Ranged",
+    "parent": "DU_WEAP"
   },
   "HallucinationCreateArchon": {
     "CreateFlags": [
@@ -1441,8 +1807,12 @@
       0,
       2
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "HerdInteractSet": {
     "EditorCategories": "Race:Terran",
@@ -1452,17 +1822,24 @@
   },
   "HerdIssueMoveOrderSelf": {
     "Abil": "move",
-    "Target": null,
-    "WhichUnit": null
+    "Target": {
+      "Value": "TargetPoint"
+    },
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "HerdIssueStopOrderSelf": {
     "Abil": "stop",
     "CmdFlags": "Preempt",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "HydraliskMelee": {
     "Death": "Eviscerate",
-    "Kind": "Melee"
+    "Kind": "Melee",
+    "parent": "NeedleSpinesDamage"
   },
   "ImpalerTentacleLM": {
     "AmmoUnit": "SpineCrawlerWeapon",
@@ -1470,20 +1847,33 @@
     "Flags": "Return",
     "ImpactEffect": "ImpalerTentacleU",
     "Movers": [
-      null,
-      null
+      {
+        "IfRangeLTE": "3",
+        "Link": "SpineCrawlerTentacleExtendShort"
+      },
+      {
+        "IfRangeLTE": "7",
+        "Link": "SpineCrawlerTentacleExtendLong"
+      }
     ],
     "ReturnDelay": 0.175,
     "ReturnMovers": [
-      null,
-      null
+      {
+        "IfRangeLTE": "3",
+        "Link": "SpineCrawlerTentacleRetractShort"
+      },
+      {
+        "IfRangeLTE": "7",
+        "Link": "SpineCrawlerTentacleRetractLong"
+      }
     ],
     "ValidatorArray": "SpineCrawlerLMTargetFilters"
   },
   "ImpalerTentacleU": {
     "Amount": 25,
     "AttributeBonus": "Armored",
-    "EditorCategories": "Race:Zerg"
+    "EditorCategories": "Race:Zerg",
+    "parent": "DU_WEAP_MISSILE"
   },
   "InfernalFlameThrower": {
     "Amount": 8,
@@ -1492,7 +1882,8 @@
     "EditorCategories": "Race:Terran",
     "Kind": "Ranged",
     "KindSplash": "Splash",
-    "ValidatorArray": "noMarkers"
+    "ValidatorArray": "noMarkers",
+    "parent": "DU_WEAP"
   },
   "InfernalFlameThrowerCP": {
     "EditorCategories": "Race:Terran",
@@ -1526,13 +1917,23 @@
       "0,-6,0"
     ],
     "PeriodicPeriodArray": 0,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "SourcePoint"
+    }
   },
   "InfernalFlameThrowerE": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "InfernalFlameThrower",
+      "Radius": "0.15"
+    },
     "EditorCategories": "Race:Terran",
-    "ExcludeArray": null,
-    "IncludeArray": null,
+    "ExcludeArray": {
+      "Value": "Target"
+    },
+    "IncludeArray": {
+      "Effect": "InfernalFlameThrowerCP",
+      "Value": "Target"
+    },
     "SearchFilters": "Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": "CallForHelp"
   },
@@ -1546,7 +1947,8 @@
   "InfestedGuassRifle": {
     "Amount": 12,
     "EditorCategories": "Race:Terran",
-    "Kind": "Ranged"
+    "Kind": "Ranged",
+    "parent": "DU_WEAP"
   },
   "InfestedTerransCreateEgg": {
     "CreateFlags": "SetFacing",
@@ -1554,7 +1956,9 @@
     "SpawnEffect": "InfestedTerransInitialSet",
     "SpawnRange": 3,
     "SpawnUnit": "InfestedTerransEgg",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "InfestedTerransImpact": {
     "EditorCategories": "",
@@ -1575,8 +1979,12 @@
     "AmmoUnit": "InfestedTerransWeapon",
     "EditorCategories": "Race:Zerg",
     "FinishEffect": "InfestedTerransImpact",
-    "ImpactLocation": null,
-    "LaunchLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnitOrPoint"
+    },
+    "LaunchLocation": {
+      "Value": "CasterUnit"
+    },
     "Movers": "InfestedTerransWeapon"
   },
   "InfestedTerransLayEgg": {
@@ -1586,7 +1994,9 @@
     "SpawnRange": 5,
     "SpawnUnit": "InfestedTerransEgg",
     "ValidatorArray": "CliffLevelGE1",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "InfestedTerransLayEggPersistant": {
     "EditorCategories": "Race:Zerg",
@@ -1605,33 +2015,69 @@
     "EditorCategories": "Race:Zerg"
   },
   "InhibitorZoneFlyingLargeSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "InhibitorZoneFlyingTemporalField",
+      "Radius": "6",
+      "index": "0"
+    },
+    "parent": "InhibitorZoneFlyingSearchBase"
   },
   "InhibitorZoneFlyingMediumSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "InhibitorZoneFlyingTemporalField",
+      "Radius": "5",
+      "index": "0"
+    },
+    "parent": "InhibitorZoneFlyingSearchBase"
   },
   "InhibitorZoneFlyingSearchBase": {
-    "AreaArray": null,
-    "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden"
+    "AreaArray": {
+      "Effect": "InhibitorZoneFlyingTemporalField"
+    },
+    "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden",
+    "default": 1
   },
   "InhibitorZoneFlyingSmallSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "InhibitorZoneFlyingTemporalField",
+      "Radius": "4",
+      "index": "0"
+    },
+    "parent": "InhibitorZoneFlyingSearchBase"
   },
   "InhibitorZoneFlyingTemporalField": {
     "ValidatorArray": "noStructureOrFlyingStructure"
   },
   "InhibitorZoneLargeSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "InhibitorZoneTemporalField",
+      "Radius": "6",
+      "index": "0"
+    },
+    "parent": "InhibitorZoneSearchBase"
   },
   "InhibitorZoneMediumSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "InhibitorZoneTemporalField",
+      "Radius": "5",
+      "index": "0"
+    },
+    "parent": "InhibitorZoneSearchBase"
   },
   "InhibitorZoneSearchBase": {
-    "AreaArray": null,
-    "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden"
+    "AreaArray": {
+      "Effect": "InhibitorZoneTemporalField"
+    },
+    "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden",
+    "default": 1
   },
   "InhibitorZoneSmallSearch": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "InhibitorZoneTemporalField",
+      "Radius": "4",
+      "index": "0"
+    },
+    "parent": "InhibitorZoneSearchBase"
   },
   "InhibitorZoneTemporalField": {
     "ValidatorArray": "noStructureOrFlyingStructure"
@@ -1664,7 +2110,8 @@
     "Amount": 5,
     "EditorCategories": "Race:Protoss",
     "Kind": "Ranged",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP"
   },
   "InterceptorBeamPersistent": {
     "EditorCategories": "Race:Protoss",
@@ -1675,8 +2122,12 @@
       0,
       0
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "InterceptorLaunchPersistent": {
     "EditorCategories": "Race:Protoss",
@@ -1688,8 +2139,12 @@
       0.375
     ],
     "PeriodicValidator": "CasterNotDead",
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "InterceptorLaunchUpgradedPersistent": {
     "EditorCategories": "Race:Protoss",
@@ -1707,8 +2162,12 @@
       0.25
     ],
     "PeriodicValidator": "CasterNotDead",
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "IonCannons": {
     "EditorCategories": "Race:Protoss",
@@ -1723,7 +2182,9 @@
       0,
       0
     ],
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "IonCannonsLM": {
     "AmmoUnit": "IonCannonsWeapon",
@@ -1732,44 +2193,71 @@
   "IonCannonsLMLeft": {
     "ImpactEffect": "IonCannonsULeft",
     "Movers": [
-      null,
-      null
-    ]
+      {
+        "IfRangeLTE": "1",
+        "Link": "MissileDefault"
+      },
+      {
+        "IfRangeLTE": "6",
+        "Link": "IonCannonsWeaponLeft"
+      }
+    ],
+    "parent": "IonCannonsLM"
   },
   "IonCannonsLMRight": {
     "ImpactEffect": "IonCannonsURight",
     "Movers": [
-      null,
-      null
-    ]
+      {
+        "IfRangeLTE": "1",
+        "Link": "MissileDefault"
+      },
+      {
+        "IfRangeLTE": "6",
+        "Link": "IonCannonsWeaponRight"
+      }
+    ],
+    "parent": "IonCannonsLM"
   },
   "IonCannonsU": {
     "Amount": 5,
     "AttributeBonus": "Light",
     "EditorCategories": "Race:Protoss",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "IonCannonsULeft": {
     "Death": "Blast",
-    "ExcludeArray": null,
-    "SearchFilters": "Air;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"
+    "ExcludeArray": {
+      "Value": "Target"
+    },
+    "SearchFilters": "Air;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "parent": "IonCannonsU"
   },
   "IonCannonsURight": {
     "Death": "Blast",
-    "ExcludeArray": null,
-    "SearchFilters": "Air;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"
+    "ExcludeArray": {
+      "Value": "Target"
+    },
+    "SearchFilters": "Air;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "parent": "IonCannonsU"
   },
   "JavelinMissileLaunchersDamage": {
     "Amount": 6,
-    "AreaArray": null,
+    "AreaArray": {
+      "Fraction": "1",
+      "Radius": "0.5"
+    },
     "AttributeBonus": "Light",
     "Death": "Blast",
     "EditorCategories": "Race:Terran",
-    "ExcludeArray": null,
+    "ExcludeArray": {
+      "Value": "Target"
+    },
     "Kind": "Ranged",
     "KindSplash": "Splash",
     "SearchFilters": "Air;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0
+    "SearchFlags": 0,
+    "parent": "DU_WEAP_SPLASH"
   },
   "JavelinMissileLaunchersLM": {
     "AmmoUnit": "ThorAAWeapon",
@@ -1788,8 +2276,12 @@
       0.25,
       0.125
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "KaiserBlades": {
     "EditorCategories": "Race:Zerg",
@@ -1800,21 +2292,37 @@
   },
   "KaiserBladesDamage": {
     "Amount": 15,
-    "AreaArray": null,
+    "AreaArray": {
+      "Arc": "180",
+      "Fraction": "0.33",
+      "Radius": "2"
+    },
     "AttributeBonus": "Armored",
     "Death": "Eviscerate",
     "EditorCategories": "Race:Zerg",
-    "ExcludeArray": null,
+    "ExcludeArray": {
+      "Value": "Target"
+    },
     "Kind": "Splash",
     "KindSplash": "Splash",
     "SearchFilters": "Ground;Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0
+    "SearchFlags": 0,
+    "parent": "DU_WEAP"
   },
   "KaiserBladesSearch": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Arc": "180",
+      "Effect": "KaiserBladesDamage",
+      "Radius": "2"
+    },
     "EditorCategories": "Race:Zerg",
-    "ExcludeArray": null,
-    "ImpactLocation": null,
+    "ExcludeArray": {
+      "Effect": "KaiserBlades",
+      "Value": "Target"
+    },
+    "ImpactLocation": {
+      "Value": "SourceUnit"
+    },
     "SearchFilters": "Ground;Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": [
       "CallForHelp",
@@ -1872,14 +2380,17 @@
       0,
       0.21
     ],
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "LanzerTorpedoesDamage": {
     "Amount": 10,
     "AttributeBonus": "Armored",
     "EditorCategories": "Race:Terran",
     "Kind": "Ranged",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_SPLASH"
   },
   "LanzerTorpedoesLM": {
     "AmmoUnit": "VikingFighterWeapon",
@@ -1899,7 +2410,9 @@
     "AmmoUnit": "LarvaReleaseMissile",
     "EditorCategories": "Race:Zerg",
     "FinishEffect": "RemovePrecursor",
-    "LaunchLocation": null
+    "LaunchLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "LeechApplyBehavior": {
     "Behavior": "Leech",
@@ -1909,7 +2422,9 @@
   "LeechApplyCasterBehavior": {
     "Behavior": "LeechDisableAbilities",
     "EditorCategories": "Race:Zerg",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "LeechCastSet": {
     "EditorCategories": "Race:Zerg",
@@ -1925,14 +2440,17 @@
       "Notification",
       "NoVitalAbsorbLife"
     ],
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "LeechFraction": "Energy",
     "VitalFractionCurrent": -1
   },
   "LeechModifyUnit": {
     "EditorCategories": "Race:Zerg",
     "VitalArray": {
-      "Change": -10
+      "Change": -10,
+      "index": "Energy"
     }
   },
   "LeechSet": {
@@ -1942,23 +2460,53 @@
       "LeechDamage"
     ]
   },
-  "LoadOutSpray@1": null,
-  "LoadOutSpray@10": null,
-  "LoadOutSpray@11": null,
-  "LoadOutSpray@12": null,
-  "LoadOutSpray@13": null,
-  "LoadOutSpray@14": null,
-  "LoadOutSpray@2": null,
-  "LoadOutSpray@3": null,
-  "LoadOutSpray@4": null,
-  "LoadOutSpray@5": null,
-  "LoadOutSpray@6": null,
-  "LoadOutSpray@7": null,
-  "LoadOutSpray@8": null,
-  "LoadOutSpray@9": null,
+  "LoadOutSpray@1": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@10": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@11": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@12": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@13": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@14": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@2": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@3": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@4": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@5": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@6": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@7": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@8": {
+    "parent": "SprayDefault"
+  },
+  "LoadOutSpray@9": {
+    "parent": "SprayDefault"
+  },
   "LoadOutSpray@AddTracked": {
     "BehaviorLink": "LoadOutSpray@Tracker",
-    "TrackedUnit": null
+    "TrackedUnit": {
+      "Value": "Target"
+    }
   },
   "LongboltMissile": {
     "EditorCategories": "Race:Terran",
@@ -1969,8 +2517,12 @@
       0,
       0.1
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "LongboltMissileLM": {
     "AmmoUnit": "LongboltMissileWeapon",
@@ -1980,7 +2532,8 @@
   },
   "LongboltMissileU": {
     "Amount": 12,
-    "EditorCategories": "Race:Terran"
+    "EditorCategories": "Race:Terran",
+    "parent": "DU_WEAP_MISSILE"
   },
   "MULEFate": {
     "Alert": "MULEExpired",
@@ -2010,9 +2563,13 @@
     ]
   },
   "MakeCasterFacingTargetPoint": {
-    "FacingLocation": null,
+    "FacingLocation": {
+      "Value": "TargetPoint"
+    },
     "FacingType": "LookAt",
-    "ImpactUnit": null
+    "ImpactUnit": {
+      "Value": "Caster"
+    }
   },
   "MantalingSpawnSet": {
     "EditorCategories": "Race:Zerg",
@@ -2035,14 +2592,24 @@
     "ValidatorArray": ""
   },
   "MassRecallSearch": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "MassRecallApplyBehavior",
+      "Radius": "6.5"
+    },
     "EditorCategories": "Race:Protoss",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetPoint"
+    },
     "MinCount": 1,
     "SearchFilters": "-;Self,Ally,Neutral,Enemy,Structure,Missile,Item,Dead,Hidden,Invulnerable"
   },
   "MassRecallSearchCursor": {
-    "AreaArray": null
+    "AreaArray": {
+      "Effect": "MassRecallTeleportCursor",
+      "Radius": "6.5",
+      "index": "0"
+    },
+    "parent": "MassRecallSearch"
   },
   "MassRecallSet": {
     "EditorCategories": "Race:Protoss",
@@ -2055,16 +2622,32 @@
   "MassRecallTeleport": {
     "EditorCategories": "Race:Protoss",
     "PlacementArc": 360,
-    "PlacementAround": null,
+    "PlacementAround": {
+      "Effect": "MassRecallSearch",
+      "Value": "SourcePoint"
+    },
     "PlacementRange": 15,
-    "SourceLocation": null,
-    "TargetLocation": null,
+    "SourceLocation": {
+      "Effect": "MassRecallSearch",
+      "Value": "TargetPoint"
+    },
+    "TargetLocation": {
+      "Effect": "MassRecallSearch",
+      "Value": "SourcePoint"
+    },
     "TeleportFlags": 0
   },
   "MassRecallTeleportCursor": {
-    "PlacementAround": null,
-    "SourceLocation": null,
-    "TargetLocation": null
+    "PlacementAround": {
+      "Effect": ""
+    },
+    "SourceLocation": {
+      "Effect": ""
+    },
+    "TargetLocation": {
+      "Effect": ""
+    },
+    "parent": "MassRecallTeleport"
   },
   "MedivacHeal": {
     "DrainVital": "Energy",
@@ -2103,7 +2686,8 @@
       "NotHidden",
       "MultipleHitAttackTargetFilter"
     ],
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "MothershipBeamDummy": {
     "EditorCategories": "Race:Protoss",
@@ -2118,8 +2702,12 @@
     "PeriodicEffectArray": "MothershipBeamDamage",
     "PeriodicPeriodArray": 0.375,
     "PeriodicValidator": "CasterNotDead",
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "MothershipBeamSet": {
     "EditorCategories": "Race:Protoss",
@@ -2138,17 +2726,23 @@
     "PeriodicEffectArray": "MothershipBeamDamage",
     "PeriodicPeriodArray": 0.375,
     "PeriodicValidator": "MothershipRangeCheckCombine",
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "NeedleClaws": {
     "Amount": 4,
-    "EditorCategories": "Race:Zerg"
+    "EditorCategories": "Race:Zerg",
+    "parent": "DU_WEAP"
   },
   "NeedleSpinesDamage": {
     "Amount": 12,
     "EditorCategories": "Race:Zerg",
-    "Kind": "Ranged"
+    "Kind": "Ranged",
+    "parent": "DU_WEAP"
   },
   "NeedleSpinesLaunchMissile": {
     "AmmoUnit": "NeedleSpinesWeapon",
@@ -2161,13 +2755,17 @@
       "IsNotWarpingIn",
       "IsNotPhaseShifted"
     ],
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "NeuralParasiteLaunchMissile"
+    }
   },
   "NeuralParasiteDroneCheck": {
     "Behavior": "NeuralParasiteDrone",
     "EditorCategories": "Race:Zerg",
     "ValidatorArray": "IsDrone",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "NeuralParasiteLaunchMissile"
+    }
   },
   "NeuralParasiteDroneRemoveCheck": {
     "BehaviorLink": "NeuralParasiteDrone",
@@ -2183,7 +2781,10 @@
     ],
     "ImpactEffect": "NeuralParasitePersistentSet",
     "Marker": "Abil/NeuralParasiteMissile",
-    "Movers": null,
+    "Movers": {
+      "IfRangeLTE": "500",
+      "Link": "InfestorNeuralParasite"
+    },
     "ValidatorArray": [
       "noMarkers",
       "NotHeroic",
@@ -2206,7 +2807,9 @@
     ],
     "PeriodicPeriodArray": 0.5,
     "PeriodicValidator": "NeuralParasitePeriodicValidator",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "NeuralParasitePersistentDestroy": {
     "Count": 1,
@@ -2241,7 +2844,9 @@
     "CalldownCount": 1,
     "CalldownEffect": "NukePersistent",
     "EditorCategories": "Race:Terran",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "NukeDamage": {
     "AINotifyFlags": [
@@ -2251,9 +2856,18 @@
     ],
     "Amount": 300,
     "AreaArray": [
-      null,
-      null,
-      null
+      {
+        "Fraction": "1",
+        "Radius": "4"
+      },
+      {
+        "Fraction": "0.5",
+        "Radius": "6"
+      },
+      {
+        "Fraction": "0.25",
+        "Radius": "8"
+      }
     ],
     "AttributeBonus": "Structure",
     "Death": "Fire",
@@ -2290,7 +2904,9 @@
   "NukeSuicide": {
     "EditorCategories": "Race:Terran",
     "Flags": "Kill",
-    "ImpactLocation": null
+    "ImpactLocation": {
+      "Value": "SourceUnit"
+    }
   },
   "NydusAlertDummy": {
     "Alert": "NydusDetectObserver",
@@ -2301,7 +2917,8 @@
     "AttributeBonus": "Light",
     "EditorCategories": "Race:Terran",
     "Kind": "Ranged",
-    "ValidatorArray": "ReaperAttackDamageMaxRangeCombine"
+    "ValidatorArray": "ReaperAttackDamageMaxRangeCombine",
+    "parent": "DU_WEAP"
   },
   "P38ScytheGuassPistolBurst": {
     "EditorCategories": "Race:Terran",
@@ -2312,14 +2929,19 @@
       0,
       0.122
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "ParasiteSporeDamage": {
     "Amount": 14,
     "AttributeBonus": "Massive",
     "EditorCategories": "Race:Zerg",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP_MISSILE"
   },
   "ParasiteSporeLaunchMissile": {
     "AmmoUnit": "ParasiteSporeWeapon",
@@ -2329,7 +2951,8 @@
   },
   "ParticleBeam": {
     "Amount": 5,
-    "EditorCategories": "Race:Protoss"
+    "EditorCategories": "Race:Protoss",
+    "parent": "DU_WEAP"
   },
   "ParticleDisruptors": {
     "AmmoUnit": "StalkerWeapon",
@@ -2343,7 +2966,8 @@
   "ParticleDisruptorsU": {
     "Amount": 13,
     "AttributeBonus": "Armored",
-    "EditorCategories": "Race:Protoss"
+    "EditorCategories": "Race:Protoss",
+    "parent": "DU_WEAP_MISSILE"
   },
   "PhaseDisruptors": {
     "Amount": 20,
@@ -2371,7 +2995,8 @@
   "PhotonCannonU": {
     "Amount": 20,
     "EditorCategories": "Race:Protoss",
-    "Kind": "Ranged"
+    "Kind": "Ranged",
+    "parent": "DU_WEAP"
   },
   "PingPanelBeaconAttack": {
     "TargetLocationType": "Point"
@@ -2388,19 +3013,25 @@
   "PointDefenseApplyBehavior": {
     "Behavior": "PointDefenseReady",
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "PointDefenseDroneReleaseCreateUnit": {
     "EditorCategories": "Race:Terran",
     "SpawnEffect": "PointDefenseDroneReleaseSet",
     "SpawnUnit": "PointDefenseDrone",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "PointDefenseDroneReleaseLaunchMissile": {
     "AmmoUnit": "PointDefenseDroneReleaseWeapon",
     "EditorCategories": "Race:Terran",
     "FinishEffect": "RemovePrecursor",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Value": "CasterUnit"
+    },
     "PlaceholderUnit": "PointDefenseDrone"
   },
   "PointDefenseDroneReleaseSet": {
@@ -2433,10 +3064,13 @@
   },
   "PointDefenseLaserEnergy": {
     "EditorCategories": "Race:Terran",
-    "ImpactUnit": null,
+    "ImpactUnit": {
+      "Value": "Caster"
+    },
     "ValidatorArray": "PointDefenseLaserEnergyTargetFilters",
     "VitalArray": {
-      "Change": -10
+      "Change": -10,
+      "index": "Energy"
     }
   },
   "PointDefenseLaserInitialSet": {
@@ -2464,9 +3098,14 @@
     ]
   },
   "PointDefenseSearch": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "PointDefenseLaserSet",
+      "Radius": "8"
+    },
     "EditorCategories": "",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "SourceUnit"
+    },
     "SearchFilters": "Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable",
     "ValidatorArray": "PointDefenseSearchTargetFilters"
   },
@@ -2474,10 +3113,12 @@
     "EditorCategories": "Race:Zerg",
     "VitalArray": [
       {
-        "ChangeFraction": 1
+        "ChangeFraction": 1,
+        "index": "Life"
       },
       {
-        "ChangeFraction": 1
+        "ChangeFraction": 1,
+        "index": "Shields"
       }
     ]
   },
@@ -2512,8 +3153,12 @@
     ],
     "InitialEffect": "PrismaticBeamChargeInitial",
     "PeriodicPeriodArray": 0.6,
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "PrismaticBeamChargeEffect01": {
     "EditorCategories": "Race:Protoss",
@@ -2522,12 +3167,16 @@
     "PeriodCount": 6,
     "PeriodicEffectArray": "PrismaticBeamMUx1",
     "PeriodicPeriodArray": 0.6,
-    "TimeScaleSource": null,
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
     "ValidatorArray": [
       "NotDoubleDamage",
       "NotQuadDamage"
     ],
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "PrismaticBeamChargeEffect02": {
     "EditorCategories": "Race:Protoss",
@@ -2536,9 +3185,13 @@
     "PeriodCount": 6,
     "PeriodicEffectArray": "PrismaticBeamDamageSet2",
     "PeriodicPeriodArray": 0.6,
-    "TimeScaleSource": null,
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
     "ValidatorArray": "DoubleDamage",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "PrismaticBeamChargeEffect03": {
     "EditorCategories": "Race:Protoss",
@@ -2548,9 +3201,13 @@
     ],
     "PeriodicEffectArray": "PrismaticBeamDamageSet3",
     "PeriodicPeriodArray": 0.6,
-    "TimeScaleSource": null,
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
     "ValidatorArray": "QuadDamage",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "PrismaticBeamChargeInitial": {
     "EditorCategories": "Race:Protoss",
@@ -2559,8 +3216,12 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "PrismaticBeamSwitch",
     "PeriodicPeriodArray": 0,
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "PrismaticBeamDamageSet2": {
     "EditorCategories": "Race:Protoss",
@@ -2588,29 +3249,48 @@
     "ArmorReduction": 0.334,
     "EditorCategories": "Race:Protoss",
     "Kind": "Ranged",
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "default": 1,
+    "parent": "DU_WEAP"
   },
-  "PrismaticBeamMUInitial": null,
+  "PrismaticBeamMUInitial": {
+    "parent": "PrismaticBeamMUBase"
+  },
   "PrismaticBeamMUx1": {
     "Amount": 6,
     "ArmorReduction": 1,
-    "AttributeBonus": "Armored"
+    "AttributeBonus": "Armored",
+    "parent": "PrismaticBeamMUInitial"
   },
   "PrismaticBeamMUx2": {
     "Amount": 6,
     "ArmorReduction": 1,
-    "AttributeBonus": "Armored"
+    "AttributeBonus": "Armored",
+    "parent": "PrismaticBeamMUInitial"
   },
   "PrismaticBeamMUx3": {
     "Amount": 8,
     "ArmorReduction": 1,
-    "AttributeBonus": "Armored"
+    "AttributeBonus": "Armored",
+    "parent": "PrismaticBeamMUInitial"
   },
   "PrismaticBeamSwitch": {
     "CaseArray": [
-      null,
-      null,
-      null
+      {
+        "Effect": "PrismaticBeamMUx1",
+        "FallThrough": "1",
+        "Validator": "NotQuadAndNotDoubleDamage"
+      },
+      {
+        "Effect": "PrismaticBeamDamageSet2",
+        "FallThrough": "1",
+        "Validator": "DoubleDamage"
+      },
+      {
+        "Effect": "PrismaticBeamDamageSet3",
+        "FallThrough": "1",
+        "Validator": "QuadDamage"
+      }
     ],
     "EditorCategories": "Race:Protoss"
   },
@@ -2621,7 +3301,8 @@
     "ValidatorArray": [
       "ZealotAttackDamageMaxRange",
       "MultipleHitGroundOnlyAttackTargetFilter"
-    ]
+    ],
+    "parent": "DU_WEAP"
   },
   "PsiBladesBurst": {
     "EditorCategories": "Race:Protoss",
@@ -2632,8 +3313,12 @@
       0,
       0.28
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "PsiStormApplyBehavior": {
     "Behavior": "PsiStorm",
@@ -2672,8 +3357,14 @@
       "HurtEnemy"
     ],
     "AreaArray": [
-      null,
-      null
+      {
+        "Effect": "PsiStormApplyBehavior",
+        "Radius": "1.5"
+      },
+      {
+        "Radius": "2",
+        "index": "0"
+      }
     ],
     "EditorCategories": "Race:Protoss",
     "SearchFilters": "-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable",
@@ -2682,18 +3373,43 @@
   "PsionicShockwaveDamage": {
     "Amount": 25,
     "AreaArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Fraction": "1",
+        "Radius": "0.093"
+      },
+      {
+        "Fraction": "0.5",
+        "Radius": "0.4"
+      },
+      {
+        "Fraction": "0.25",
+        "Radius": "0.8"
+      },
+      {
+        "Fraction": "1",
+        "Radius": "0.25",
+        "index": "0"
+      },
+      {
+        "Fraction": "0.5",
+        "Radius": "0.5",
+        "index": "1"
+      },
+      {
+        "Fraction": "0.25",
+        "Radius": "1",
+        "index": "2"
+      }
     ],
     "AttributeBonus": "Biological",
     "EditorCategories": "Race:Protoss",
     "ExcludeArray": [
-      null,
-      null
+      {
+        "Value": "Outer"
+      },
+      {
+        "Value": "Target"
+      }
     ],
     "Kind": "Ranged",
     "KindSplash": "Splash",
@@ -2701,7 +3417,8 @@
     "SearchFlags": [
       0,
       0
-    ]
+    ],
+    "parent": "DU_WEAP"
   },
   "PunisherGrenadesLM": {
     "EditorCategories": "Race:Terran",
@@ -2730,7 +3447,8 @@
     "AttributeBonus": "Armored",
     "Death": "Blast",
     "EditorCategories": "Race:Terran",
-    "Kind": "Ranged"
+    "Kind": "Ranged",
+    "parent": "DU_WEAP"
   },
   "QueenBirth": {
     "Behavior": "QueenBirthUnburrow",
@@ -2740,20 +3458,28 @@
   "Ram": {
     "Amount": 75,
     "Death": "Eviscerate",
-    "EditorCategories": "Race:Zerg"
+    "EditorCategories": "Race:Zerg",
+    "parent": "DU_WEAP"
   },
   "RefineryRichAB": {
     "Behavior": "HarvestableRichVespeneGeyserGas",
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "RefineryRichRB": {
     "BehaviorLink": "HarvestableVespeneGeyserGas",
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "RefineryRichSearch": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "RefineryRichSet",
+      "Radius": "0.5"
+    },
     "EditorCategories": "Race:Terran",
     "SearchFilters": "RawResource;-"
   },
@@ -2768,13 +3494,17 @@
   "RemoveCommandCenterCargo": {
     "Death": "Remove",
     "Flags": "Kill",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "ValidatorArray": "IsCommandCenterFlying"
   },
   "RemoveSurfaceForSpellcastChanneled": {
     "BehaviorLink": "SurfaceForSpellCastChanneled",
     "EditorCategories": "Race:Zerg",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "RenegadeLongboltMissileCP": {
     "EditorCategories": "Race:Terran",
@@ -2785,8 +3515,12 @@
       0,
       0.1
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "RenegadeLongboltMissileLM": {
     "AmmoUnit": "RenegadeLongboltMissileWeapon",
@@ -2796,7 +3530,8 @@
   },
   "RenegadeLongboltMissileU": {
     "Amount": 12,
-    "EditorCategories": "Race:Terran"
+    "EditorCategories": "Race:Terran",
+    "parent": "DU_WEAP_MISSILE"
   },
   "Repair": {
     "DrainResourceCostFactor": [
@@ -2817,19 +3552,31 @@
     ]
   },
   "RepulserField10SearchArea": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "RepulserFieldSet",
+      "Radius": "10"
+    },
     "SearchFilters": "-;Player,Ally,Neutral,Missile,Dead"
   },
   "RepulserField12SearchArea": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "RepulserFieldSet",
+      "Radius": "12"
+    },
     "SearchFilters": "-;Player,Ally,Neutral,Missile,Dead"
   },
   "RepulserField6SearchArea": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "RepulserFieldSet",
+      "Radius": "6"
+    },
     "SearchFilters": "-;Player,Ally,Neutral,Missile,Dead"
   },
   "RepulserField8SearchArea": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "RepulserFieldSet",
+      "Radius": "8"
+    },
     "SearchFilters": "-;Player,Ally,Neutral,Missile,Dead"
   },
   "RepulserFieldApplyForce": {
@@ -2846,20 +3593,28 @@
   },
   "RoachUMelee": {
     "Death": "Eviscerate",
-    "Kind": "Melee"
+    "Kind": "Melee",
+    "parent": "AcidSalivaU"
   },
   "Salvage": {
     "Abil": "##id##Refund",
     "CmdFlags": "Preempt",
     "EditorCategories": "Race:Terran",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    },
+    "default": 1
   },
-  "SalvageBunker": null,
+  "SalvageBunker": {
+    "parent": "Salvage"
+  },
   "SalvageDeath": {
     "Death": "Salvage",
     "EditorCategories": "Race:Terran",
     "Flags": "Kill",
-    "ImpactLocation": null
+    "ImpactLocation": {
+      "Value": "SourceUnit"
+    }
   },
   "SalvageShared": {
     "EditorCategories": "Race:Terran",
@@ -2876,8 +3631,12 @@
   "SapStructureIssueAttackOrder": {
     "Abil": "attack",
     "EditorCategories": "Race:Zerg",
-    "Target": null,
-    "WhichUnit": null
+    "Target": {
+      "Value": "TargetUnit"
+    },
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "ScannerSweep": {
     "EditorCategories": "Race:Terran",
@@ -2896,12 +3655,23 @@
     ],
     "Amount": 100,
     "AreaArray": [
-      null,
-      null,
-      null
+      {
+        "Fraction": "1",
+        "Radius": "0.6"
+      },
+      {
+        "Fraction": "0.5",
+        "Radius": "1.2"
+      },
+      {
+        "Fraction": "0.25",
+        "Radius": "2.4"
+      }
     ],
     "EditorCategories": "Race:Terran",
-    "ExcludeArray": null,
+    "ExcludeArray": {
+      "Value": "Target"
+    },
     "Flags": "Notification",
     "ResponseFlags": [
       "Acquire",
@@ -2919,7 +3689,8 @@
   },
   "Sheep": {
     "Amount": 1,
-    "EditorCategories": "Race:Terran"
+    "EditorCategories": "Race:Terran",
+    "parent": "DU_WEAP"
   },
   "SnipeDamage": {
     "Amount": 25,
@@ -2927,8 +3698,11 @@
     "AttributeBonus": "Psionic",
     "Death": "Silentkill",
     "EditorCategories": "Race:Terran",
-    "ImpactLocation": null,
-    "Kind": "Spell"
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
+    "Kind": "Spell",
+    "parent": "DU_WEAP"
   },
   "SpawnChangeling": {
     "EditorCategories": "Race:Zerg",
@@ -2941,7 +3715,10 @@
     "Behavior": "QueenSpawnLarva",
     "Count": 3,
     "EditorCategories": "Race:Zerg",
-    "ValidatorArray": null
+    "ValidatorArray": {
+      "index": "0",
+      "removed": "1"
+    }
   },
   "SpawnMutantLarvaApplyTimerBehavior": {
     "Behavior": "QueenSpawnLarvaTimer",
@@ -2956,11 +3733,14 @@
     "BehaviorLink": "QueenSpawnLarva",
     "Count": 1,
     "EditorCategories": "Race:Zerg",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "Spines": {
     "Amount": 5,
-    "EditorCategories": "Race:Zerg"
+    "EditorCategories": "Race:Zerg",
+    "parent": "DU_WEAP"
   },
   "SporeCrawler": {
     "EditorCategories": "Race:Zerg",
@@ -2969,7 +3749,8 @@
   "SporeCrawlerU": {
     "Amount": 20,
     "AttributeBonus": "Biological",
-    "EditorCategories": "Race:Zerg"
+    "EditorCategories": "Race:Zerg",
+    "parent": "DU_WEAP_MISSILE"
   },
   "SprayDefault": {
     "CreateFlags": [
@@ -2980,31 +3761,47 @@
       0
     ],
     "SpawnEffect": "LoadOutSpray@AddTracked",
-    "SpawnUnit": "##id##"
+    "SpawnUnit": "##id##",
+    "default": 1
   },
   "SprayProtoss": {
     "TargetLocationType": "Point"
   },
   "SprayProtossInitialUpgrade": {
-    "Upgrades": null,
+    "Upgrades": {
+      "Count": "1",
+      "Upgrade": "SprayProtoss"
+    },
     "ValidatorArray": "DontHaveSpray",
-    "WhichPlayer": null
+    "WhichPlayer": {
+      "Value": "Caster"
+    }
   },
   "SprayTerran": {
     "TargetLocationType": "Point"
   },
   "SprayTerranInitialUpgrade": {
-    "Upgrades": null,
+    "Upgrades": {
+      "Count": "1",
+      "Upgrade": "SprayTerran"
+    },
     "ValidatorArray": "DontHaveSpray",
-    "WhichPlayer": null
+    "WhichPlayer": {
+      "Value": "Caster"
+    }
   },
   "SprayZerg": {
     "TargetLocationType": "Point"
   },
   "SprayZergInitialUpgrade": {
-    "Upgrades": null,
+    "Upgrades": {
+      "Count": "1",
+      "Upgrade": "SprayZerg"
+    },
     "ValidatorArray": "DontHaveSpray",
-    "WhichPlayer": null
+    "WhichPlayer": {
+      "Value": "Caster"
+    }
   },
   "Stimpack": {
     "EditorCategories": "Race:Terran"
@@ -3017,10 +3814,15 @@
   "SuicideRemove": {
     "Death": "Remove",
     "Flags": "Kill",
-    "ImpactLocation": null
+    "ImpactLocation": {
+      "Value": "SourceUnit"
+    }
   },
   "SuicideTargetFriendlySwitch": {
-    "CaseArray": null,
+    "CaseArray": {
+      "Effect": "VolatileBurstFriendlyBuildingDamage",
+      "Validator": "IsStructure"
+    },
     "CaseDefault": "VolatileBurstFriendlyUnitDamage",
     "EditorCategories": "Race:Zerg",
     "ValidatorArray": "FriendlyTarget"
@@ -3048,26 +3850,36 @@
     "Behavior": "SurfaceForSpellCast",
     "EditorCategories": "Race:Zerg",
     "ValidatorArray": "IsInfestorBurrowed",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "SurfaceForSpellcastChanneled": {
     "Behavior": "SurfaceForSpellCastChanneled",
     "EditorCategories": "Race:Zerg",
     "ValidatorArray": "IsInfestorBurrowed",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "SwarmSeedsLaunchSecondaryMissile": {
     "AmmoUnit": "BroodLordSecondaryWeapon",
     "EditorCategories": "Race:Zerg",
     "FinishEffect": "RemovePrecursor",
-    "ImpactLocation": null,
-    "LaunchLocation": null
+    "ImpactLocation": {
+      "Effect": "MantalingSpawnSet",
+      "Value": "SourceUnit"
+    },
+    "LaunchLocation": {
+      "Effect": "BroodLordSet"
+    }
   },
   "Talons": {
     "Amount": 4,
     "EditorCategories": "Race:Zerg",
     "Kind": "Ranged",
-    "ValidatorArray": "QueenTalonsAGAttackDamageMaxRange"
+    "ValidatorArray": "QueenTalonsAGAttackDamageMaxRange",
+    "parent": "DU_WEAP"
   },
   "TalonsBurst": {
     "EditorCategories": "Race:Zerg",
@@ -3081,8 +3893,12 @@
       0,
       0.3
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "ThermalLances": {
     "EditorCategories": "Race:Protoss",
@@ -3095,19 +3911,31 @@
     "EditorCategories": "Race:Protoss",
     "ExpireDelay": 0.25,
     "FinalEffect": "ThermalLancesMU",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    }
   },
   "ThermalLancesE": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "ThermalLancesDamageDelay",
+      "Radius": "0.15"
+    },
     "EditorCategories": "Race:Protoss",
-    "ExcludeArray": null,
+    "ExcludeArray": {
+      "Value": "Target"
+    },
     "SearchFilters": "Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": "CallForHelp"
   },
   "ThermalLancesEReverse": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "ThermalLancesDamageDelay",
+      "Radius": "0.15"
+    },
     "EditorCategories": "Race:Protoss",
-    "ExcludeArray": null,
+    "ExcludeArray": {
+      "Value": "Target"
+    },
     "SearchFilters": "Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": "CallForHelp"
   },
@@ -3138,8 +3966,12 @@
       0.0312,
       0.0227
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "ThermalLancesMU": {
     "Amount": 10,
@@ -3156,7 +3988,8 @@
       "noMarkers",
       "ColossusAttackDamageMaxRange"
     ],
-    "Visibility": "Visible"
+    "Visibility": "Visible",
+    "parent": "DU_WEAP"
   },
   "ThermalLancesReverse": {
     "EditorCategories": "Race:Protoss",
@@ -3185,8 +4018,12 @@
       0.0312,
       0.0227
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "ThorsHammer": {
     "EditorCategories": "Race:Terran",
@@ -3200,25 +4037,33 @@
       0,
       0.375
     ],
-    "TimeScaleSource": null,
-    "WhichLocation": null
+    "TimeScaleSource": {
+      "Value": "Caster"
+    },
+    "WhichLocation": {
+      "Value": "TargetUnitOrPoint"
+    }
   },
   "ThorsHammerDamage": {
     "Amount": 30,
     "Death": "Blast",
     "EditorCategories": "Race:Terran",
     "Kind": "Ranged",
-    "ValidatorArray": "MultipleHitGroundOnlyAttackTargetFilter"
+    "ValidatorArray": "MultipleHitGroundOnlyAttackTargetFilter",
+    "parent": "DU_WEAP"
   },
   "TransferKillsToCaster": {
     "Behavior": "KillsToCaster",
-    "LaunchUnit": null
+    "LaunchUnit": {
+      "Value": "Source"
+    }
   },
   "Transfusion": {
     "EditorCategories": "Race:Zerg",
     "ValidatorArray": "NotDisintegrating",
     "VitalArray": {
-      "Change": 75
+      "Change": 75,
+      "index": "Life"
     }
   },
   "TriggeredExplosion": null,
@@ -3226,25 +4071,40 @@
     "Amount": 12,
     "AttributeBonus": "Mechanical",
     "EditorCategories": "Race:Terran",
-    "Kind": "Ranged"
+    "Kind": "Ranged",
+    "parent": "DU_WEAP"
   },
   "TwinIbiksCannon": {
     "Amount": 40,
     "AreaArray": [
-      null,
-      null,
-      null
+      {
+        "Fraction": "1",
+        "Radius": "0.5"
+      },
+      {
+        "Fraction": "0.75",
+        "Radius": "0.8"
+      },
+      {
+        "Fraction": "0.375",
+        "Radius": "1.25"
+      }
     ],
     "Death": "Fire",
     "EditorCategories": "Race:Terran",
     "ExcludeArray": [
-      null,
-      null
+      {
+        "Value": "Outer"
+      },
+      {
+        "Value": "Target"
+      }
     ],
     "Kind": "Ranged",
     "KindSplash": "Splash",
     "SearchFilters": "Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0
+    "SearchFlags": 0,
+    "parent": "DU_WEAP"
   },
   "UnitKnockbackBy10": {
     "CreateFlags": [
@@ -3260,13 +4120,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy10CreatePHSet",
     "SpawnOffset": "0,10",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 11,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy10AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy10"
+    }
   },
   "UnitKnockbackBy10CreatePHSet": {
     "EffectArray": [
@@ -3279,19 +4145,26 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy10RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy10PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy10ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy10",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover10"
   },
   "UnitKnockbackBy10RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy10"
+    }
   },
   "UnitKnockbackBy11": {
     "CreateFlags": [
@@ -3307,13 +4180,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy11CreatePHSet",
     "SpawnOffset": "0,11",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 12,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy11AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy11"
+    }
   },
   "UnitKnockbackBy11CreatePHSet": {
     "EffectArray": [
@@ -3326,19 +4205,26 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy11RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy11PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy11ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy11",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover11"
   },
   "UnitKnockbackBy11RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy11"
+    }
   },
   "UnitKnockbackBy12": {
     "CreateFlags": [
@@ -3354,13 +4240,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy12CreatePHSet",
     "SpawnOffset": "0,12",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 13,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy12AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy12"
+    }
   },
   "UnitKnockbackBy12CreatePHSet": {
     "EffectArray": [
@@ -3373,19 +4265,26 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy12RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy12PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy12ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy12",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover12"
   },
   "UnitKnockbackBy12RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy12"
+    }
   },
   "UnitKnockbackBy2": {
     "CreateFlags": [
@@ -3401,13 +4300,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy2CreatePHSet",
     "SpawnOffset": "0,2",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 3,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy2AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy2"
+    }
   },
   "UnitKnockbackBy2CreatePHSet": {
     "EffectArray": [
@@ -3420,19 +4325,26 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy2RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy2PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy2ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy2",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover2"
   },
   "UnitKnockbackBy2RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy2"
+    }
   },
   "UnitKnockbackBy3": {
     "CreateFlags": [
@@ -3448,13 +4360,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy3CreatePHSet",
     "SpawnOffset": "0,3",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 4,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy3AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy3"
+    }
   },
   "UnitKnockbackBy3CreatePHSet": {
     "EffectArray": [
@@ -3467,19 +4385,26 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy3RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy3PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy3ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy3",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover3"
   },
   "UnitKnockbackBy3RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy3"
+    }
   },
   "UnitKnockbackBy4": {
     "CreateFlags": [
@@ -3495,13 +4420,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy4CreatePHSet",
     "SpawnOffset": "0,4",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 5,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy4AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy4"
+    }
   },
   "UnitKnockbackBy4CreatePHSet": {
     "EffectArray": [
@@ -3514,19 +4445,26 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy4RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy4PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy4ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy4",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover4"
   },
   "UnitKnockbackBy4RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy4"
+    }
   },
   "UnitKnockbackBy5": {
     "CreateFlags": [
@@ -3542,13 +4480,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy5CreatePHSet",
     "SpawnOffset": "0,5",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 6,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy5AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy5"
+    }
   },
   "UnitKnockbackBy5CreatePHSet": {
     "EffectArray": [
@@ -3561,20 +4505,27 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy5RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy5PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy5ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy5",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover5",
     "ValidatorArray": "UnitKnockbackBy5PHLMNotDead"
   },
   "UnitKnockbackBy5RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy5"
+    }
   },
   "UnitKnockbackBy6": {
     "CreateFlags": [
@@ -3590,13 +4541,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy6CreatePHSet",
     "SpawnOffset": "0,6",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 7,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy6AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy6"
+    }
   },
   "UnitKnockbackBy6CreatePHSet": {
     "EffectArray": [
@@ -3609,19 +4566,26 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy6RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy6PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy6ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy6",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover6"
   },
   "UnitKnockbackBy6RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy6"
+    }
   },
   "UnitKnockbackBy7": {
     "CreateFlags": [
@@ -3637,13 +4601,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy7CreatePHSet",
     "SpawnOffset": "0,7",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 8,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy7AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy7"
+    }
   },
   "UnitKnockbackBy7CreatePHSet": {
     "EffectArray": [
@@ -3656,19 +4626,26 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy7RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy7PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy7ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy7",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover7"
   },
   "UnitKnockbackBy7RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy7"
+    }
   },
   "UnitKnockbackBy8": {
     "CreateFlags": [
@@ -3684,13 +4661,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy8CreatePHSet",
     "SpawnOffset": "0,8",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 9,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy8AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy8"
+    }
   },
   "UnitKnockbackBy8CreatePHSet": {
     "EffectArray": [
@@ -3703,19 +4686,26 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy8RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy8PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy8ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy8",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover8"
   },
   "UnitKnockbackBy8RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy8"
+    }
   },
   "UnitKnockbackBy9": {
     "CreateFlags": [
@@ -3731,13 +4721,19 @@
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy9CreatePHSet",
     "SpawnOffset": "0,9",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Neutral"
+    },
     "SpawnRange": 10,
-    "TypeFallbackUnit": null
+    "TypeFallbackUnit": {
+      "Value": "Target"
+    }
   },
   "UnitKnockbackBy9AB": {
     "Behavior": "UnitKnockback",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy9"
+    }
   },
   "UnitKnockbackBy9CreatePHSet": {
     "EffectArray": [
@@ -3750,29 +4746,40 @@
     "PeriodCount": 1,
     "PeriodicEffectArray": "UnitKnockbackBy9RB",
     "PeriodicPeriodArray": 0.0625,
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterUnit"
+    }
   },
   "UnitKnockbackBy9PHLM": {
     "DeathType": "Unknown",
     "Flags": "2D",
     "ImpactEffect": "UnitKnockbackBy9ImpactCP",
-    "LaunchLocation": null,
+    "LaunchLocation": {
+      "Effect": "UnitKnockbackBy9",
+      "Value": "TargetUnit"
+    },
     "Movers": "UnitKnockbackMover9"
   },
   "UnitKnockbackBy9RB": {
     "BehaviorLink": "UnitKnockback",
     "Count": 1,
-    "WhichUnit": null
+    "WhichUnit": {
+      "Effect": "UnitKnockbackBy9"
+    }
   },
   "VoidRayPhase2": {
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": "",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "VoidRayPhase3": {
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": "",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "VolatileBurst": {
     "EditorCategories": "Race:Zerg",
@@ -3788,10 +4795,18 @@
   },
   "VolatileBurstFriendlyBuildingDamage": {
     "AINotifyFlags": 0,
-    "AreaArray": null,
-    "ExcludeArray": null,
+    "AreaArray": {
+      "index": "0",
+      "removed": "1"
+    },
+    "ExcludeArray": {
+      "index": "0",
+      "removed": "1"
+    },
     "Flags": 0,
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "ResponseFlags": [
       0,
       0
@@ -3801,16 +4816,25 @@
       0,
       0,
       0
-    ]
+    ],
+    "parent": "VolatileBurstU2"
   },
   "VolatileBurstFriendlyUnitDamage": {
     "AINotifyFlags": 0,
     "Amount": 16,
-    "AreaArray": null,
+    "AreaArray": {
+      "index": "0",
+      "removed": "1"
+    },
     "AttributeBonus": "Light",
-    "ExcludeArray": null,
+    "ExcludeArray": {
+      "index": "0",
+      "removed": "1"
+    },
     "Flags": 0,
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetUnit"
+    },
     "ResponseFlags": [
       0,
       0
@@ -3820,36 +4844,56 @@
       0,
       0,
       0
-    ]
+    ],
+    "parent": "VolatileBurstU"
   },
   "VolatileBurstU": {
     "AINotifyFlags": "HurtEnemy",
     "Amount": 16,
-    "AreaArray": null,
+    "AreaArray": {
+      "Fraction": "1",
+      "Radius": "2.2"
+    },
     "AttributeBonus": "Light",
     "Death": "Disintegrate",
     "EditorCategories": "Race:Zerg",
-    "ExcludeArray": null,
-    "ImpactLocation": null,
+    "ExcludeArray": {
+      "Value": "Outer"
+    },
+    "ImpactLocation": {
+      "Value": "CasterUnit"
+    },
     "Kind": "Splash",
     "KindSplash": "Splash",
-    "SearchFilters": "Ground;Player,Ally,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"
+    "SearchFilters": "Ground;Player,Ally,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "parent": "DU_WEAP"
   },
   "VolatileBurstU2": {
     "AINotifyFlags": "HurtEnemy",
     "Amount": 80,
-    "AreaArray": null,
+    "AreaArray": {
+      "Fraction": "1",
+      "Radius": "2.2"
+    },
     "ArmorReduction": 0,
     "Death": "Disintegrate",
     "EditorCategories": "Race:Zerg",
-    "ExcludeArray": null,
-    "ImpactLocation": null,
+    "ExcludeArray": {
+      "Value": "Outer"
+    },
+    "ImpactLocation": {
+      "Value": "CasterUnit"
+    },
     "Kind": "Splash",
     "KindSplash": "Splash",
-    "SearchFilters": "Ground,Structure;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"
+    "SearchFilters": "Ground,Structure;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
+    "parent": "DU_WEAP"
   },
   "VortexApplyDisable": {
-    "CaseArray": null,
+    "CaseArray": {
+      "Effect": "VortexApplyDisableEnemy",
+      "Validator": "TargetIsEnemy"
+    },
     "CaseDefault": "VortexApplyDisableOther",
     "EditorCategories": "Race:Protoss"
   },
@@ -3902,7 +4946,10 @@
     "EditorCategories": "Race:Protoss"
   },
   "VortexEventHorizonSearchArea": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "VortexEventHorizon",
+      "Radius": "2.75"
+    },
     "EditorCategories": "Race:Protoss",
     "SearchFilters": "-;Self,Structure,Missile,Item,Dead,Hidden"
   },
@@ -3910,7 +4957,10 @@
     "Amount": -0.1,
     "EditorCategories": "Race:Protoss",
     "ValidatorArray": "IsNotWarpBubble",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Effect": "VortexCreatePersistent",
+      "Value": "TargetPoint"
+    }
   },
   "VortexKillForceField": {
     "EditorCategories": "Race:Protoss",
@@ -3919,7 +4969,10 @@
     "ValidatorArray": "TargetIsForceField"
   },
   "VortexSearchArea": {
-    "AreaArray": null,
+    "AreaArray": {
+      "Effect": "VortexEffect",
+      "Radius": "2.5"
+    },
     "EditorCategories": "Race:Protoss",
     "SearchFilters": "-;Self,Structure,Missile,Item,Dead,Hidden"
   },
@@ -3936,21 +4989,26 @@
   "WarpBlades": {
     "Amount": 45,
     "Death": "Eviscerate",
-    "EditorCategories": "Race:Protoss"
+    "EditorCategories": "Race:Protoss",
+    "parent": "DU_WEAP"
   },
   "WarpInEffect": null,
   "WarpInEffect15": null,
   "WizChainDelay": {
     "ExpireDelay": 0.125,
     "FinalEffect": "##abil####n##SearchForNewTarget",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetUnit"
+    },
+    "default": 1
   },
   "WizChainImpactSet": {
     "EffectArray": [
       "##abil####nNext##Delay",
       "##abil####n##Damage"
     ],
-    "ValidatorArray": "noMarkers"
+    "ValidatorArray": "noMarkers",
+    "default": 1
   },
   "WizChainInitialSet": {
     "EffectArray": [
@@ -3959,29 +5017,49 @@
     ],
     "Marker": {
       "MatchFlags": "Id"
-    }
+    },
+    "default": 1
   },
   "WizChainSearchForNewTarget": {
-    "AreaArray": null,
-    "ExcludeArray": null,
-    "ImpactLocation": null,
+    "AreaArray": {
+      "Effect": "##abil####n##ImpactSet",
+      "MaxCount": "1",
+      "Radius": "4"
+    },
+    "ExcludeArray": {
+      "Value": "Target"
+    },
+    "ImpactLocation": {
+      "Effect": "##abil####n##Delay",
+      "Value": "TargetPoint"
+    },
     "SearchFilters": "Visible;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
     "TargetSorts": {
       "SortArray": "TSDistanceToTarget"
-    }
+    },
+    "default": 1
   },
-  "WizDamage": null,
+  "WizDamage": {
+    "default": "1",
+    "parent": "DU_WEAP_MISSILE"
+  },
   "WizLaunch": {
     "AmmoUnit": "##id##",
-    "ImpactEffect": "##weaponid##Damage"
+    "ImpactEffect": "##weaponid##Damage",
+    "default": 1
   },
   "WizLaunchPoint": {
     "AmmoUnit": "##id##",
     "ImpactEffect": "##weaponid##Damage",
-    "ImpactLocation": null
+    "ImpactLocation": {
+      "Value": "TargetPoint"
+    },
+    "default": 1
   },
   "WizMeleeDamage": {
-    "Kind": "Melee"
+    "Kind": "Melee",
+    "default": 1,
+    "parent": "DU_WEAP_MISSILE"
   },
   "WizSimpleSkillshotFinalImpactSet": {
     "TargetLocationType": "Point"
@@ -3991,51 +5069,77 @@
       "##abil##ImpactSet"
     ],
     "TargetLocationType": "Point",
-    "ValidatorArray": "noMarkers"
+    "ValidatorArray": "noMarkers",
+    "default": 1
   },
   "WizSimpleSkillshotInitialOffset": {
     "InitialEffect": "##abil##LaunchMissile",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "CasterPoint"
+    },
+    "default": 1
   },
   "WizSimpleSkillshotInitialSet": {
     "EffectArray": [
       "##abil##InitialOffset"
     ],
-    "TargetLocationType": "Point"
+    "TargetLocationType": "Point",
+    "default": 1
   },
   "WizSimpleSkillshotLaunchMissile": {
     "AmmoUnit": "##abil##LaunchMissile",
     "ImpactEffect": "##abil##FinalImpactSet",
-    "ImpactLocation": null,
+    "ImpactLocation": {
+      "Value": "TargetPoint"
+    },
     "LaunchEffect": "##abil##MissilePersistent",
     "Marker": {
       "MatchFlags": "Id"
     },
-    "ValidatorArray": "CasterNotDead"
+    "ValidatorArray": "CasterNotDead",
+    "default": 1
   },
   "WizSimpleSkillshotMissilePersistent": {
     "PeriodCount": 80,
     "PeriodicEffectArray": "##abil##MissileScan",
     "PeriodicPeriodArray": 0.0625,
     "PeriodicValidator": "SourceNotDead",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "SourceUnit"
+    },
+    "default": 1
   },
   "WizSimpleSkillshotMissileScan": {
-    "AreaArray": null,
-    "ImpactLocation": null,
+    "AreaArray": {
+      "Effect": "##abil##ImpactSet",
+      "RectangleHeight": "1",
+      "RectangleWidth": "1"
+    },
+    "ImpactLocation": {
+      "Value": "SourceUnit"
+    },
     "RevealerParams": {
-      "RevealFlags": "Unfog"
+      "Duration": 0.75,
+      "RevealFlags": "Unfog",
+      "ShapeExpansion": 1
     },
     "SearchFilters": "-;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
-    "ValidatorArray": "noMarkers"
+    "ValidatorArray": "noMarkers",
+    "default": 1
   },
   "WizSpellDamage": {
-    "Kind": "Spell"
+    "Kind": "Spell",
+    "default": 1,
+    "parent": "DU_WEAP"
   },
   "WormholeTransitTeleportMove": {
     "EditorCategories": "Race:Protoss",
-    "TargetLocation": null,
-    "WhichUnit": null
+    "TargetLocation": {
+      "Value": "TargetPoint"
+    },
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "Yamato": {
     "EditorCategories": "Race:Terran",
@@ -4060,7 +5164,9 @@
   "ZealotDisableCharging": {
     "BehaviorLink": "Charging",
     "EditorCategories": "Race:Protoss",
-    "WhichUnit": null
+    "WhichUnit": {
+      "Value": "Caster"
+    }
   },
   "ZergBuildingNotOnCreepDamage": {
     "Amount": 1,
@@ -4072,9 +5178,13 @@
     "EditorCategories": "Race:Zerg",
     "SpawnCount": 6,
     "SpawnEffect": "BroodlingTimedLife",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Caster"
+    },
     "SpawnUnit": "Broodling",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "ZergBuildingSpawnBroodling6Delay": {
     "EditorCategories": "Race:Zerg",
@@ -4087,9 +5197,13 @@
     "EditorCategories": "Race:Zerg",
     "SpawnCount": 9,
     "SpawnEffect": "BroodlingTimedLife",
-    "SpawnOwner": null,
+    "SpawnOwner": {
+      "Value": "Caster"
+    },
     "SpawnUnit": "Broodling",
-    "WhichLocation": null
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    }
   },
   "ZergBuildingSpawnBroodling9Delay": {
     "EditorCategories": "Race:Zerg",

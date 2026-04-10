@@ -14,8 +14,16 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null
+      {
+        "Reference": "Unit,Ultralisk,Speed",
+        "Value": "0.421871"
+      },
+      {
+        "Operation": "Subtract",
+        "Reference": "Unit,Ultralisk,SpeedMultiplierCreep",
+        "Value": "0.1625",
+        "index": "0"
+      }
     ],
     "Flags": 0,
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-anabolicsynthesis.dds",
@@ -36,7 +44,10 @@
     "AffectedUnitArray": "Battlecruiser",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,Battlecruiser,EnergyStart",
+      "Value": "25"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-behemothreactor.dds",
     "InfoTooltipPriority": 11,
@@ -76,7 +87,11 @@
     "AffectedUnitArray": "Carrier",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Protoss,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Weapon,InterceptorLaunch,Effect",
+      "Value": "InterceptorLaunchUpgradedPersistent"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-gravitoncatapult.dds",
     "Race": "Prot",
@@ -90,7 +105,10 @@
     ],
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,BanelingBurrowed,LifeMax",
+      "Value": "5"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-centrifugalhooks.dds",
     "InfoTooltipPriority": 1,
@@ -103,8 +121,14 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Protoss,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null
+      {
+        "Reference": "Unit,Zealot,Speed",
+        "Value": "0.500000"
+      },
+      {
+        "Value": "1.125000",
+        "index": "0"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-ability-protoss-charge-color.dds",
@@ -117,10 +141,22 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Ultralisk,LifeArmor",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,UltraliskBurrowed,LifeArmor",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,Ultralisk,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,UltraliskBurrowed,LifeArmorLevel",
+        "Value": "2"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-chitinousplating.dds",
@@ -131,20 +167,51 @@
   "CollectionSkinDeluxe": {
     "EditorCategories": "Race:##race##",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,##unit##,UnitIcon",
+        "Value": "Assets\\Textures\\btn-unit-##unit##-collectionskin-deluxe.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Button,##unit##,Icon",
+        "Value": "Assets\\Textures\\btn-unit-##unit##-collectionskin-deluxe.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Button,##unit##,AlertIcon",
+        "Value": "Assets\\Textures\\btn-unit-##unit##-collectionskin-deluxe.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,##unit##,Wireframe.Image[0]",
+        "Value": "Assets\\Textures\\WireFrame-##race##-##unit##-CollectionSkins-Deluxe.dds"
+      }
     ],
     "Flags": 0,
-    "LeaderAlias": ""
+    "LeaderAlias": "",
+    "default": 1
   },
   "CollectionSkinDeluxeProtoss": {
     "EffectArray": [
-      null,
-      null,
-      null
-    ]
+      {
+        "Operation": "Set",
+        "Reference": "Actor,##unit##,WireframeShield.Image[0]",
+        "Value": "Assets\\Textures\\WireFrame-##race##-##unit##-CollectionSkins-Deluxe-Shield01.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,##unit##,WireframeShield.Image[1]",
+        "Value": "Assets\\Textures\\WireFrame-##race##-##unit##-CollectionSkins-Deluxe-Shield02.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,##unit##,WireframeShield.Image[2]",
+        "Value": "Assets\\Textures\\WireFrame-##race##-##unit##-CollectionSkins-Deluxe-Shield03.dds"
+      }
+    ],
+    "default": 1,
+    "parent": "CollectionSkinDeluxe"
   },
   "Confetti": {
     "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
@@ -156,10 +223,22 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Behavior,AutoTurretTimedLife,Duration",
+        "Value": "60.000000"
+      },
+      {
+        "Reference": "Behavior,PointDefenseDroneTimedLife,Duration",
+        "Value": "60.000000"
+      },
+      {
+        "Reference": "Behavior,SeekerMissileTimeout,Duration",
+        "Value": "5.000000"
+      },
+      {
+        "Value": "10.000000",
+        "index": "1"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-durablematerials.dds",
@@ -172,9 +251,18 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Protoss,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,ThermalLances,MinScanRange",
+        "Value": "2"
+      },
+      {
+        "Value": "2",
+        "index": "0"
+      },
+      {
+        "Value": "2",
+        "index": "1"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-extendedthermallance.dds",
@@ -191,7 +279,10 @@
     "AffectedUnitArray": "GhostNova",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,GhostNova,EnergyStart",
+      "Value": "25"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-moebiusreactor.dds",
     "Race": "Terr",
@@ -206,12 +297,36 @@
   "GhostSkinNova": {
     "AffectedUnitArray": "Ghost",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Button,Ghost,Icon",
+        "Value": "Assets\\Textures\\btn-unit-terran-blackops-femaleghost.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Button,Ghost,AlertIcon",
+        "Value": "Assets\\Textures\\btn-unit-terran-blackops-femaleghost.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ghost,UnitIcon",
+        "Value": "Assets\\Textures\\btn-unit-terran-blackops-femaleghost.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ghost,UnitIcon",
+        "Value": "Assets\\Textures\\btn-unit-terran-blackops-femaleghost.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ghost,Wireframe.Image[0]",
+        "Value": "Assets\\Textures\\wireframe-ghostfemale.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ghost,GroupIcon.Image[0]",
+        "Value": "Assets\\Textures\\wireframe-ghostfemale.dds"
+      }
     ],
     "Flags": 0,
     "LeaderAlias": ""
@@ -220,7 +335,10 @@
     "AffectedUnitArray": "RoachBurrowed",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,RoachBurrowed,Speed",
+      "Value": "0.84"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-glialreconstitution.dds",
     "Race": "Zerg",
@@ -235,8 +353,14 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Protoss,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null
+      {
+        "Reference": "Unit,WarpPrism,Speed",
+        "Value": "0.875000"
+      },
+      {
+        "Reference": "Unit,WarpPrism,Acceleration",
+        "Value": "1.125"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-graviticdrive.dds",
@@ -252,25 +376,45 @@
     ],
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,LongboltMissile,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,TwinIbiksCannon,Range",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Weapon,AutoTurret,Range",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,PointDefenseLaser,Range",
+        "Value": "1"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\BTN-Upgrade-Terran-hisecautotracking.dds",
     "InfoTooltipPriority": 31,
     "Race": "Terr",
     "ScoreAmount": 200,
-    "ScoreResult": "BuildOrder"
+    "ScoreResult": "BuildOrder",
+    "parent": "Research"
   },
   "HighCapacityBarrels": {
     "AffectedUnitArray": "HellionTank",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
     "EffectArray": [
-      null,
-      null
+      {
+        "Reference": "Effect,HellionTankDamage,AttributeBonus[Light]",
+        "Value": "12"
+      },
+      {
+        "Reference": "Effect,InfernalFlameThrower,AttributeBonus[Light]",
+        "Value": "5",
+        "index": "0"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-infernalpreigniter.dds",
@@ -282,7 +426,10 @@
     "AffectedUnitArray": "HighTemplar",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Protoss,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,HighTemplar,EnergyStart",
+      "Value": "25"
+    },
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-khaydarinamulet.dds",
     "Race": "Prot",
     "ScoreAmount": 299,
@@ -301,7 +448,10 @@
     "AffectedUnitArray": "InfestorBurrowed",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,Infestor,EnergyStart",
+      "Value": "25"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-pathogenglands.dds",
     "Race": "Zerg",
@@ -312,7 +462,10 @@
     "AffectedUnitArray": "InfestorBurrowed",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:SpellResearch",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,InfestorBurrowed,Speed",
+      "Value": "1.000000"
+    },
     "Flags": 0,
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-peristalsis.dds",
     "Race": "Zerg",
@@ -321,7 +474,11 @@
   },
   "MarineSkin": {
     "AffectedUnitArray": "Marine",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Actor,Marine,GroupIcon.Image[0]",
+      "Value": "Assets\\Textures\\wireframe-terran-marinexprewardnoshield.dds"
+    },
     "Icon": "Assets\\Textures\\btn-unit-terran-marine.dds",
     "LeaderAlias": ""
   },
@@ -330,8 +487,16 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null
+      {
+        "Reference": "Unit,Medivac,EnergyStart",
+        "Value": "25"
+      },
+      {
+        "Operation": "Multiply",
+        "Reference": "Unit,Medivac,EnergyRegenRate",
+        "Value": "2.000000",
+        "index": "0"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-caduceusreactor.dds",
@@ -348,12 +513,32 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Abil,BunkerTransport,MaxCargoCount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Abil,BunkerTransport,TotalCargoSpace",
+        "Value": "2"
+      },
+      {
+        "Reference": "Abil,CommandCenterTransport,MaxCargoCount",
+        "Value": "5"
+      },
+      {
+        "Reference": "Abil,CommandCenterTransport,TotalCargoSpace",
+        "Value": "5"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Bunker,Wireframe.Image[0]",
+        "Value": "Assets\\Textures\\wireframe-terran-bunker-neosteelframe.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Bunker,GroupIcon.Image[0]",
+        "Value": "Assets\\Textures\\wireframe-terran-bunker-neosteelframe.dds"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-neosteelframe.dds",
@@ -367,9 +552,18 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Protoss,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Observer,Speed",
+        "Value": "0.9375"
+      },
+      {
+        "Reference": "Unit,Observer,Acceleration",
+        "Value": "1.0625"
+      },
+      {
+        "Value": "1.007800",
+        "index": "0"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-graviticbooster.dds",
@@ -391,7 +585,10 @@
     ],
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,RoachBurrowed,LifeRegenRate",
+      "Value": "10.000000"
+    },
     "Flags": 0,
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-organiccarapace.dds",
     "Race": "Zerg",
@@ -400,7 +597,11 @@
   },
   "OverlordSkin": {
     "AffectedUnitArray": "Overlord",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Actor,Overlord,GroupIcon.Image[0]",
+      "Value": "Assets\\Textures\\WireFrame-Zerg-OverlordXPreward.dds"
+    },
     "Icon": "Assets\\Textures\\btn-unit-zerg-overlord.dds",
     "LeaderAlias": ""
   },
@@ -426,22 +627,70 @@
     ],
     "EditorCategories": "Race:Protoss,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Observer,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Observer,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpPrism,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpPrism,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpPrismPhasing,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpPrismPhasing,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Phoenix,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Phoenix,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,VoidRay,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,VoidRay,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Carrier,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Carrier,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Interceptor,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Interceptor,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Mothership,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Mothership,LifeArmor",
+        "Value": "1.000000"
+      }
     ],
     "LeaderAlias": "ProtossAirArmors",
     "Name": "Upgrade/Name/ProtossAirArmors",
@@ -449,61 +698,158 @@
     "ScoreCount": "ArmorTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "ArmorTechnologyCount",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ProtossAirArmorsLevel1": {
     "AffectedUnitArray": "ObserverSiegeMode",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,ObserverSiegeMode,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Observer,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Phoenix,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrism,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrismPhasing,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Carrier,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Interceptor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Mothership,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ProtossAirArmorsLevel1",
     "ScoreAmount": 200,
-    "ScoreValue": "ArmorTechnologyValue"
+    "ScoreValue": "ArmorTechnologyValue",
+    "parent": "ProtossAirArmors"
   },
   "ProtossAirArmorsLevel2": {
     "AffectedUnitArray": "ObserverSiegeMode",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,ObserverSiegeMode,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Observer,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Phoenix,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrism,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrismPhasing,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Carrier,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Interceptor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Mothership,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ProtossAirArmorsLevel2",
     "ScoreAmount": 350,
-    "ScoreValue": "ArmorTechnologyValue"
+    "ScoreValue": "ArmorTechnologyValue",
+    "parent": "ProtossAirArmors"
   },
   "ProtossAirArmorsLevel3": {
     "AffectedUnitArray": "ObserverSiegeMode",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,ObserverSiegeMode,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Observer,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Phoenix,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrism,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrismPhasing,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Carrier,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Interceptor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Mothership,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airarmorlevel3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ProtossAirArmorsLevel3",
     "ScoreAmount": 500,
-    "ScoreValue": "ArmorTechnologyValue"
+    "ScoreValue": "ArmorTechnologyValue",
+    "parent": "ProtossAirArmors"
   },
   "ProtossAirWeapons": {
     "AffectedUnitArray": [
@@ -514,20 +860,62 @@
     ],
     "EditorCategories": "Race:Protoss,UpgradeType:AttackBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,IonCannons,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,IonCannonsU,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,PrismaticBeam,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx1,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx2,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx2,AttributeBonus[Armored]",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx3,Amount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx3,AttributeBonus[Armored]",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Weapon,InterceptorLaunch,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,InterceptorBeam,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,InterceptorBeamDamage,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,InterceptorsDummy,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,MothershipBeam,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,MothershipBeamDamage,Amount",
+        "Value": "1.000000"
+      }
     ],
     "LeaderAlias": "ProtossAirWeapons",
     "Name": "Upgrade/Name/ProtossAirWeapons",
@@ -535,85 +923,314 @@
     "ScoreCount": "WeaponTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "WeaponTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ProtossAirWeaponsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,VoidRaySwarmDisplayDummy,Level",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InterceptorBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,MothershipBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx3,Amount",
+        "Value": "1",
+        "index": "5"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx3,AttributeBonus[Armored]",
+        "Value": "1",
+        "index": "6"
+      },
+      {
+        "Reference": "Weapon,InterceptorLaunch,Level",
+        "Value": "1",
+        "index": "7"
+      },
+      {
+        "Reference": "Weapon,InterceptorBeam,Level",
+        "Value": "1",
+        "index": "8"
+      },
+      {
+        "Reference": "Effect,InterceptorBeamDamage,Amount",
+        "Value": "1",
+        "index": "9"
+      },
+      {
+        "Reference": "Weapon,InterceptorsDummy,Level",
+        "Value": "1",
+        "index": "10"
+      },
+      {
+        "Reference": "Weapon,MothershipBeam,Level",
+        "Value": "1",
+        "index": "11"
+      },
+      {
+        "Reference": "Effect,MothershipBeamDamage,Amount",
+        "Value": "1.000000",
+        "index": "12"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,IonCannons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
+        "index": "14"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InterceptorBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
+        "index": "15"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,MothershipBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
+        "index": "16"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,IonCannonsULeft,Amount",
+        "Value": "1",
+        "index": "17"
+      },
+      {
+        "Value": "4",
+        "index": "32"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ProtossAirWeaponsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "ProtossAirWeapons"
   },
   "ProtossAirWeaponsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,VoidRaySwarmDisplayDummy,Level",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InterceptorBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,MothershipBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx3,Amount",
+        "Value": "1",
+        "index": "5"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx3,AttributeBonus[Armored]",
+        "Value": "1",
+        "index": "6"
+      },
+      {
+        "Reference": "Weapon,InterceptorLaunch,Level",
+        "Value": "1",
+        "index": "7"
+      },
+      {
+        "Reference": "Weapon,InterceptorBeam,Level",
+        "Value": "1",
+        "index": "8"
+      },
+      {
+        "Reference": "Effect,InterceptorBeamDamage,Amount",
+        "Value": "1",
+        "index": "9"
+      },
+      {
+        "Reference": "Weapon,InterceptorsDummy,Level",
+        "Value": "1",
+        "index": "10"
+      },
+      {
+        "Reference": "Weapon,MothershipBeam,Level",
+        "Value": "1",
+        "index": "11"
+      },
+      {
+        "Reference": "Effect,MothershipBeamDamage,Amount",
+        "Value": "1.000000",
+        "index": "12"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,IonCannons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
+        "index": "14"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InterceptorBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
+        "index": "15"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,MothershipBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
+        "index": "16"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,IonCannonsULeft,Amount",
+        "Value": "1",
+        "index": "17"
+      },
+      {
+        "Value": "4",
+        "index": "32"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ProtossAirWeaponsLevel2",
-    "ScoreAmount": 350
+    "ScoreAmount": 350,
+    "parent": "ProtossAirWeapons"
   },
   "ProtossAirWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,VoidRaySwarmDisplayDummy,Level",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InterceptorBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,MothershipBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx3,Amount",
+        "Value": "1",
+        "index": "5"
+      },
+      {
+        "Reference": "Effect,PrismaticBeamMUx3,AttributeBonus[Armored]",
+        "Value": "1",
+        "index": "6"
+      },
+      {
+        "Reference": "Weapon,InterceptorLaunch,Level",
+        "Value": "1",
+        "index": "7"
+      },
+      {
+        "Reference": "Weapon,InterceptorBeam,Level",
+        "Value": "1",
+        "index": "8"
+      },
+      {
+        "Reference": "Effect,InterceptorBeamDamage,Amount",
+        "Value": "1",
+        "index": "9"
+      },
+      {
+        "Reference": "Weapon,InterceptorsDummy,Level",
+        "Value": "1",
+        "index": "10"
+      },
+      {
+        "Reference": "Weapon,MothershipBeam,Level",
+        "Value": "1",
+        "index": "11"
+      },
+      {
+        "Reference": "Effect,MothershipBeamDamage,Amount",
+        "Value": "1.000000",
+        "index": "12"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,IonCannons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PrismaticBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
+        "index": "14"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InterceptorBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
+        "index": "15"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,MothershipBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
+        "index": "16"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,IonCannonsULeft,Amount",
+        "Value": "1",
+        "index": "17"
+      },
+      {
+        "Value": "4",
+        "index": "32"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ProtossAirWeaponsLevel3",
-    "ScoreAmount": 500
+    "ScoreAmount": 500,
+    "parent": "ProtossAirWeapons"
   },
   "ProtossGroundArmors": {
     "AffectedUnitArray": [
@@ -629,24 +1246,78 @@
     ],
     "EditorCategories": "Race:Protoss,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Probe,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Probe,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Zealot,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Zealot,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Sentry,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Sentry,LifeArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,Stalker,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Stalker,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Immortal,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Immortal,LifeArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,HighTemplar,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,HighTemplar,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,DarkTemplar,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,DarkTemplar,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Archon,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Archon,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Colossus,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Colossus,LifeArmor",
+        "Value": "1"
+      }
     ],
     "LeaderAlias": "ProtossGroundArmors",
     "Name": "Upgrade/Name/ProtossGroundArmors",
@@ -654,58 +1325,170 @@
     "ScoreCount": "ArmorTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "ArmorTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ProtossGroundArmorsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Probe,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zealot,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Sentry,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Stalker,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Immortal,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,HighTemplar,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,DarkTemplar,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Archon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Colossus,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ProtossGroundArmorsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "ProtossGroundArmors"
   },
   "ProtossGroundArmorsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Probe,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zealot,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Sentry,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Stalker,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Immortal,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,HighTemplar,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,DarkTemplar,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Archon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Colossus,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ProtossGroundArmorsLevel2",
-    "ScoreAmount": 300
+    "ScoreAmount": 300,
+    "parent": "ProtossGroundArmors"
   },
   "ProtossGroundArmorsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Probe,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zealot,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Sentry,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Stalker,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Immortal,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,HighTemplar,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,DarkTemplar,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Archon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Colossus,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundarmorlevel3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ProtossGroundArmorsLevel3",
-    "ScoreAmount": 400
+    "ScoreAmount": 400,
+    "parent": "ProtossGroundArmors"
   },
   "ProtossGroundWeapons": {
     "AffectedUnitArray": [
@@ -720,22 +1503,70 @@
     ],
     "EditorCategories": "Race:Protoss,UpgradeType:AttackBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,PsiBlades,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,PsiBlades,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,DisruptionBeam,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,DisruptionBeamDamage,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,ParticleDisruptors,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,ParticleDisruptorsU,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Weapon,PhaseDisruptors,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,PhaseDisruptors,Amount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Effect,PhaseDisruptors,AttributeBonus[Armored]",
+        "Value": "3"
+      },
+      {
+        "Reference": "Weapon,WarpBlades,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,WarpBlades,Amount",
+        "Value": "5"
+      },
+      {
+        "Reference": "Weapon,PsionicShockwave,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,PsionicShockwaveDamage,Amount",
+        "Value": "3.000000"
+      },
+      {
+        "Reference": "Weapon,ThermalLances,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,ThermalLancesMU,Amount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Effect,PsionicShockwaveDamage,AttributeBonus[Biological]",
+        "Value": "1.000000"
+      }
     ],
     "LeaderAlias": "ProtossGroundWeapons",
     "Name": "Upgrade/Name/ProtossGroundWeapons",
@@ -743,61 +1574,173 @@
     "ScoreCount": "WeaponTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "WeaponTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ProtossGroundWeaponsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,DisruptionBeamDisplayDummy,Level",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,DisruptionBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ParticleDisruptors,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PhaseDisruptors,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,WarpBlades,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PsionicShockwave,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ThermalLances,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds"
+      },
+      {
+        "Value": "1",
+        "index": "5"
+      },
+      {
+        "Value": "1",
+        "index": "14"
+      },
+      {
+        "Value": "1",
+        "index": "23"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ProtossGroundWeaponsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "ProtossGroundWeapons"
   },
   "ProtossGroundWeaponsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,DisruptionBeamDisplayDummy,Level",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,DisruptionBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ParticleDisruptors,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PhaseDisruptors,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,WarpBlades,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PsionicShockwave,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ThermalLances,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds"
+      },
+      {
+        "Value": "1",
+        "index": "5"
+      },
+      {
+        "Value": "1",
+        "index": "14"
+      },
+      {
+        "Value": "1",
+        "index": "23"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ProtossGroundWeaponsLevel2",
-    "ScoreAmount": 300
+    "ScoreAmount": 300,
+    "parent": "ProtossGroundWeapons"
   },
   "ProtossGroundWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,DisruptionBeamDisplayDummy,Level",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,DisruptionBeam,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ParticleDisruptors,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PhaseDisruptors,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,WarpBlades,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PsionicShockwave,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ThermalLances,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds"
+      },
+      {
+        "Value": "1",
+        "index": "5"
+      },
+      {
+        "Value": "1",
+        "index": "14"
+      },
+      {
+        "Value": "1",
+        "index": "23"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ProtossGroundWeaponsLevel3",
-    "ScoreAmount": 400
+    "ScoreAmount": 400,
+    "parent": "ProtossGroundWeapons"
   },
   "ProtossShields": {
     "AffectedUnitArray": [
@@ -836,70 +1779,262 @@
     ],
     "EditorCategories": "Race:Protoss,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Probe,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Probe,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Zealot,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Zealot,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Sentry,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Sentry,ShieldArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,Stalker,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Stalker,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Immortal,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Immortal,ShieldArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,HighTemplar,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,HighTemplar,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,DarkTemplar,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,DarkTemplar,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Archon,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Archon,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Observer,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Observer,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpPrism,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpPrism,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpPrismPhasing,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpPrismPhasing,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Colossus,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Colossus,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Phoenix,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Phoenix,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,VoidRay,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,VoidRay,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Carrier,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Carrier,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Interceptor,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Interceptor,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Mothership,ShieldArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,Mothership,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Nexus,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Nexus,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Assimilator,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Assimilator,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Pylon,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Pylon,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Gateway,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Gateway,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpGate,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,WarpGate,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Forge,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Forge,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,PhotonCannon,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,PhotonCannon,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,CyberneticsCore,ShieldArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,CyberneticsCore,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,TwilightCouncil,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,TwilightCouncil,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,TemplarArchive,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,TemplarArchive,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,DarkShrine,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,DarkShrine,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,RoboticsFacility,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,RoboticsFacility,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,RoboticsBay,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,RoboticsBay,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Stargate,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Stargate,ShieldArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,FleetBeacon,ShieldArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,FleetBeacon,ShieldArmor",
+        "Value": "1"
+      }
     ],
     "LeaderAlias": "ProtossShields",
     "Name": "Upgrade/Name/ProtossShields",
@@ -907,130 +2042,518 @@
     "ScoreCount": "ArmorTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "ArmorTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ProtossShieldsLevel1": {
     "AffectedUnitArray": "AssimilatorRich",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,AssimilatorRich,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zealot,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Sentry,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Stalker,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Immortal,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,HighTemplar,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,DarkTemplar,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Archon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Observer,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrism,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrismPhasing,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Colossus,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Phoenix,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,VoidRay,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Carrier,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Interceptor,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Mothership,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Nexus,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Assimilator,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Pylon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Gateway,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpGate,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Forge,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,PhotonCannon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,CyberneticsCore,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,TwilightCouncil,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,TemplarArchive,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,DarkShrine,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,RoboticsBay,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,RoboticsFacility,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Stargate,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,FleetBeacon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ProtossShieldsLevel1",
-    "ScoreAmount": 300
+    "ScoreAmount": 300,
+    "parent": "ProtossShields"
   },
   "ProtossShieldsLevel2": {
     "AffectedUnitArray": "AssimilatorRich",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,AssimilatorRich,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zealot,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Sentry,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Stalker,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Immortal,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,HighTemplar,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,DarkTemplar,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Archon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Observer,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrism,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrismPhasing,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Colossus,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Phoenix,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,VoidRay,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Carrier,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Interceptor,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Mothership,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Nexus,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Assimilator,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Pylon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Gateway,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpGate,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Forge,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,PhotonCannon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,CyberneticsCore,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,TwilightCouncil,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,TemplarArchive,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,DarkShrine,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,RoboticsBay,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,RoboticsFacility,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Stargate,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,FleetBeacon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ProtossShieldsLevel2",
-    "ScoreAmount": 400
+    "ScoreAmount": 400,
+    "parent": "ProtossShields"
   },
   "ProtossShieldsLevel3": {
     "AffectedUnitArray": "AssimilatorRich",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,AssimilatorRich,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zealot,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Sentry,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Stalker,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Immortal,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,HighTemplar,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,DarkTemplar,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Archon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Observer,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrism,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpPrismPhasing,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Colossus,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Phoenix,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,VoidRay,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Carrier,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Interceptor,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Mothership,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Nexus,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Assimilator,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Pylon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Gateway,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,WarpGate,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Forge,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,PhotonCannon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,CyberneticsCore,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,TwilightCouncil,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,TemplarArchive,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,DarkShrine,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,RoboticsBay,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,RoboticsFacility,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Stargate,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,FleetBeacon,ShieldArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-shieldslevel3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ProtossShieldsLevel3",
-    "ScoreAmount": 500
+    "ScoreAmount": 500,
+    "parent": "ProtossShields"
   },
   "PsiStormTech": {
     "AffectedUnitArray": "HighTemplar",
@@ -1052,7 +2575,11 @@
   },
   "PylonSkin": {
     "AffectedUnitArray": "Pylon",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Actor,Pylon,PlacementModel[0]",
+      "Value": "PylonXPRPlacement"
+    },
     "Icon": "Assets\\Textures\\btn-building-protoss-pylon.dds",
     "LeaderAlias": ""
   },
@@ -1060,7 +2587,10 @@
     "AffectedUnitArray": "Raven",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,Raven,EnergyStart",
+      "Value": "25"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-corvidreactor.dds",
     "Race": "Terr",
@@ -1071,7 +2601,10 @@
     "AffectedUnitArray": "Reaper",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Unit,Reaper,Speed",
+      "Value": "0.886700"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-reapernitropacks.dds",
     "Race": "Terr",
@@ -1080,13 +2613,21 @@
   },
   "RewardDanceColossus": {
     "AffectedUnitArray": "Colossus",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Unit,Colossus,TauntDuration[Dance]",
+      "Value": "5"
+    },
     "Icon": "Assets\\Textures\\btn-unit-protoss-Colossus.dds",
     "LeaderAlias": ""
   },
   "RewardDanceGhost": {
     "AffectedUnitArray": "GhostNova",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Unit,GhostNova,TauntDuration[Dance]",
+      "Value": "5"
+    },
     "Icon": "Assets\\Textures\\btn-unit-terran-ghost.dds",
     "LeaderAlias": ""
   },
@@ -1095,13 +2636,21 @@
       "Infestor",
       "InfestorBurrowed"
     ],
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Unit,Infestor,TauntDuration[Dance]",
+      "Value": "5"
+    },
     "Icon": "Assets\\Textures\\btn-unit-zerg-infestor.dds",
     "LeaderAlias": ""
   },
   "RewardDanceMule": {
     "AffectedUnitArray": "MULE",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Unit,MULE,TauntDuration[Dance]",
+      "Value": "5"
+    },
     "Icon": "Assets\\Textures\\btn-unit-terran-mule.dds",
     "LeaderAlias": ""
   },
@@ -1111,7 +2660,11 @@
   },
   "RewardDanceOverlord": {
     "AffectedUnitArray": "Overlord",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Unit,Overlord,TauntDuration[Dance]",
+      "Value": "5"
+    },
     "Icon": "Assets\\Textures\\btn-unit-zerg-Overlord.dds",
     "LeaderAlias": ""
   },
@@ -1120,13 +2673,21 @@
       "Roach",
       "RoachBurrowed"
     ],
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Unit,Roach,TauntDuration[Dance]",
+      "Value": "5"
+    },
     "Icon": "Assets\\Textures\\btn-unit-zerg-roach.dds",
     "LeaderAlias": ""
   },
   "RewardDanceStalker": {
     "AffectedUnitArray": "Stalker",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Unit,Stalker,TauntDuration[Dance]",
+      "Value": "5"
+    },
     "Icon": "Assets\\Textures\\btn-unit-protoss-stalker.dds",
     "LeaderAlias": ""
   },
@@ -1136,8 +2697,16 @@
       "VikingAssault"
     ],
     "EffectArray": [
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Unit,VikingFighter,TauntDuration[Dance]",
+        "Value": "5"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Unit,VikingAssault,TauntDuration[Dance]",
+        "Value": "5"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-unit-terran-ghost.dds",
     "LeaderAlias": ""
@@ -1146,17 +2715,32 @@
     "AffectedUnitArray": "Marine",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Marine,LifeMax",
+        "Value": "10"
+      },
+      {
+        "Reference": "Unit,Marine,LifeStart",
+        "Value": "10"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Marine,Wireframe.Image[0]",
+        "Value": "Assets\\Textures\\wireframe-terran-marine-shield.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Marine,GroupIcon.Image[0]",
+        "Value": "Assets\\Textures\\wireframe-terran-marine-shield.dds"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-techupgrade-terran-combatshield-color.dds",
     "InfoTooltipPriority": 2,
     "Race": "Terr",
     "ScoreAmount": 200,
-    "ScoreResult": "BuildOrder"
+    "ScoreResult": "BuildOrder",
+    "parent": "Research"
   },
   "SiegeTech": {
     "AffectedUnitArray": "SiegeTank",
@@ -1199,11 +2783,16 @@
     "Icon": "Assets\\Textures\\btn-ability-terran-stimpack-color.dds",
     "Race": "Terr",
     "ScoreAmount": 200,
-    "ScoreResult": "BuildOrder"
+    "ScoreResult": "BuildOrder",
+    "parent": "Research"
   },
   "SupplyDepotSkin": {
     "AffectedUnitArray": "SupplyDepotLowered",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Actor,SupplyDepot,GroupIcon.Image[0]",
+      "Value": "Assets\\Textures\\Wireframe-Terran-SupplyDepotXPReward.dds"
+    },
     "Icon": "Assets\\Textures\\btn-building-terran-supplydepot.dds",
     "LeaderAlias": ""
   },
@@ -1245,72 +2834,271 @@
     ],
     "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,RefineryRich,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,CommandCenter,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,CommandCenterFlying,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,CommandCenterFlying,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,OrbitalCommand,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,OrbitalCommand,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,OrbitalCommandFlying,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,OrbitalCommandFlying,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,PlanetaryFortress,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,PlanetaryFortress,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,Refinery,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,Refinery,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,SupplyDepot,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,SupplyDepot,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,SupplyDepotLowered,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,SupplyDepotLowered,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,EngineeringBay,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,EngineeringBay,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,Barracks,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,Barracks,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,BarracksFlying,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,BarracksFlying,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,StarportReactor,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,StarportReactor,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,FactoryReactor,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,FactoryReactor,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,BarracksReactor,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,BarracksReactor,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,Reactor,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,Reactor,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,TechLab,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,TechLab,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,BarracksTechLab,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,BarracksTechLab,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,FactoryTechLab,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,FactoryTechLab,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,StarportTechLab,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,StarportTechLab,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,GhostAcademy,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,GhostAcademy,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,MissileTurret,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,MissileTurret,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,SensorTower,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,SensorTower,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,Bunker,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,Bunker,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,Factory,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,Factory,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,FactoryFlying,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,FactoryFlying,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,Armory,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,Armory,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,Starport,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,Starport,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,StarportFlying,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,StarportFlying,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,FusionCore,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,FusionCore,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,AutoTurret,LifeArmor",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Unit,AutoTurret,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,PointDefenseDrone,LifeArmorLevel",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,PointDefenseDrone,LifeArmor",
+        "Value": "2"
+      },
+      {
+        "Reference": "Unit,PointDefenseDrone,LifeArmorLevel",
+        "Value": "2",
+        "index": "58"
+      },
+      {
+        "Reference": "Unit,PointDefenseDrone,LifeArmor",
+        "index": "59"
+      },
+      {
+        "Reference": "Unit,BypassArmorDrone,LifeArmorLevel",
+        "index": "60"
+      },
+      {
+        "Reference": "Unit,BypassArmorDrone,LifeArmor",
+        "index": "61"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-buildingarmor.dds",
     "InfoTooltipPriority": 41,
@@ -1329,18 +3117,54 @@
     ],
     "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,SCV,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,SCV,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Marine,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Marine,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Reaper,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Reaper,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Marauder,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Marauder,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Ghost,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Ghost,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,MULE,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,MULE,LifeArmorLevel",
+        "Value": "1"
+      }
     ],
     "InfoTooltipPriority": 51,
     "LeaderAlias": "TechInfantryArmors",
@@ -1349,55 +3173,131 @@
     "ScoreCount": "ArmorTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "ArmorTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "TerranInfantryArmorsLevel1": {
     "AffectedUnitArray": "GhostNova",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,GhostNova,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,MULE,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Marine,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Reaper,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Marauder,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ghost,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel1.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel1.dds",
     "InfoTooltipPriority": 0,
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/TerranInfantryArmorsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "TerranInfantryArmors"
   },
   "TerranInfantryArmorsLevel2": {
     "AffectedUnitArray": "GhostNova",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,GhostNova,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,MULE,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Marine,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Reaper,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Marauder,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ghost,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel2.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel2.dds",
     "InfoTooltipPriority": 0,
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/TerranInfantryArmorsLevel2",
-    "ScoreAmount": 300
+    "ScoreAmount": 300,
+    "parent": "TerranInfantryArmors"
   },
   "TerranInfantryArmorsLevel3": {
     "AffectedUnitArray": "GhostNova",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,GhostNova,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,MULE,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Marine,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Reaper,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Marauder,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ghost,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel3.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryarmorlevel3.dds",
     "InfoTooltipPriority": 0,
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/TerranInfantryArmorsLevel3",
-    "ScoreAmount": 400
+    "ScoreAmount": 400,
+    "parent": "TerranInfantryArmors"
   },
   "TerranInfantryWeapons": {
     "AffectedUnitArray": [
@@ -1408,18 +3308,54 @@
     ],
     "EditorCategories": "Race:Terran,UpgradeType:AttackBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,GuassRifle,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,GuassRifle,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,P38ScytheGuassPistol,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,D8Charge,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,P38ScytheGuassPistol,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,D8ChargeDamage,Amount",
+        "Value": "3"
+      },
+      {
+        "Reference": "Weapon,PunisherGrenades,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,PunisherGrenadesU,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Effect,PunisherGrenadesU,AttributeBonus[Armored]",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Weapon,C10CanisterRifle,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,C10CanisterRifle,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Effect,C10CanisterRifle,AttributeBonus[Light]",
+        "Value": "1.000000"
+      }
     ],
     "InfoTooltipPriority": 61,
     "LeaderAlias": "TechInfantryWeapons",
@@ -1428,49 +3364,113 @@
     "ScoreCount": "WeaponTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "WeaponTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "TerranInfantryWeaponsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,GuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,D8Charge,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,P38ScytheGuassPistol,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PunisherGrenades,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,C10CanisterRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds",
     "InfoTooltipPriority": 0,
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/TerranInfantryWeaponsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "TerranInfantryWeapons"
   },
   "TerranInfantryWeaponsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,GuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,D8Charge,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,P38ScytheGuassPistol,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PunisherGrenades,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,C10CanisterRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds",
     "InfoTooltipPriority": 0,
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/TerranInfantryWeaponsLevel2",
-    "ScoreAmount": 300
+    "ScoreAmount": 300,
+    "parent": "TerranInfantryWeapons"
   },
   "TerranInfantryWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,GuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,D8Charge,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,P38ScytheGuassPistol,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,PunisherGrenades,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,C10CanisterRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds",
     "InfoTooltipPriority": 0,
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/TerranInfantryWeaponsLevel3",
-    "ScoreAmount": 400
+    "ScoreAmount": 400,
+    "parent": "TerranInfantryWeapons"
   },
   "TerranShipArmors": {
     "AffectedUnitArray": [
@@ -1483,18 +3483,54 @@
     ],
     "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Banshee,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Banshee,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Battlecruiser,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Battlecruiser,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Medivac,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Medivac,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Raven,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Raven,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,VikingAssault,LifeArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,VikingAssault,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,VikingFighter,LifeArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,VikingFighter,LifeArmorLevel",
+        "Value": "1"
+      }
     ],
     "LeaderAlias": "TerranShipArmors",
     "Name": "Upgrade/Name/TerranShipArmors",
@@ -1502,49 +3538,125 @@
     "ScoreCount": "ArmorTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "ArmorTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "TerranShipArmorsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,LiberatorAG,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Battlecruiser,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Raven,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Medivac,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,VikingAssault,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,VikingFighter,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel1.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/TerranShipArmorsLevel1",
-    "ScoreAmount": 300
+    "ScoreAmount": 300,
+    "parent": "TerranShipArmors"
   },
   "TerranShipArmorsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,LiberatorAG,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Battlecruiser,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Raven,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Medivac,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,VikingAssault,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,VikingFighter,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel2.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/TerranShipArmorsLevel2",
-    "ScoreAmount": 450
+    "ScoreAmount": 450,
+    "parent": "TerranShipArmors"
   },
   "TerranShipArmorsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,LiberatorAG,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Battlecruiser,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Raven,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Medivac,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,VikingAssault,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,VikingFighter,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel3.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-shipplatinglevel3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/TerranShipArmorsLevel3",
-    "ScoreAmount": 600
+    "ScoreAmount": 600,
+    "parent": "TerranShipArmors"
   },
   "TerranShipWeapons": {
     "AffectedUnitArray": [
@@ -1558,16 +3670,46 @@
     ],
     "EditorCategories": "Race:Terran,UpgradeType:AttackBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,BacklashRockets,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,BacklashRocketsU,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,ATSLaserBattery,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,ATSLaserBatteryU,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Weapon,ATALaserBattery,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,ATALaserBatteryU,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Weapon,LanzerTorpedoes,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,TwinGatlingCannon,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,LanzerTorpedoesDamage,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Effect,TwinGatlingCannons,Amount",
+        "Value": "1"
+      }
     ],
     "LeaderAlias": "TerranShipWeapons",
     "Name": "Upgrade/Name/TerranShipWeapons",
@@ -1575,46 +3717,107 @@
     "ScoreCount": "WeaponTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "WeaponTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "TerranShipWeaponsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,TwinGatlingCannons,AttributeBonus[Mechanical]",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ATALaserBattery,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ATSLaserBattery,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,TwinGatlingCannon,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,LanzerTorpedoes,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel1.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/TerranShipWeaponsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "TerranShipWeapons"
   },
   "TerranShipWeaponsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,TwinGatlingCannons,AttributeBonus[Mechanical]",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ATALaserBattery,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ATSLaserBattery,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,TwinGatlingCannon,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,LanzerTorpedoes,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel2.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/TerranShipWeaponsLevel2",
-    "ScoreAmount": 350
+    "ScoreAmount": 350,
+    "parent": "TerranShipWeapons"
   },
   "TerranShipWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,TwinGatlingCannons,AttributeBonus[Mechanical]",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ATALaserBattery,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ATSLaserBattery,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,TwinGatlingCannon,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,LanzerTorpedoes,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel3.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/TerranShipWeaponsLevel3",
-    "ScoreAmount": 500
+    "ScoreAmount": 500,
+    "parent": "TerranShipWeapons"
   },
   "TerranVehicleArmors": {
     "AffectedUnitArray": [
@@ -1625,14 +3828,38 @@
     ],
     "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Thor,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Thor,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,SiegeTank,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,SiegeTank,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,SiegeTankSieged,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,SiegeTankSieged,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Hellion,LifeArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,Hellion,LifeArmorLevel",
+        "Value": "1"
+      }
     ],
     "LeaderAlias": "TerranVehicleArmors",
     "Name": "Upgrade/Name/TerranVehicleArmors",
@@ -1640,43 +3867,95 @@
     "ScoreCount": "ArmorTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "ArmorTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "TerranVehicleArmorsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Thor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,SiegeTank,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,SiegeTankSieged,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hellion,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel1.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/TerranVehicleArmorsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "TerranVehicleArmors"
   },
   "TerranVehicleArmorsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Thor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,SiegeTank,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,SiegeTankSieged,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hellion,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel2.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/TerranVehicleArmorsLevel2",
-    "ScoreAmount": 350
+    "ScoreAmount": 350,
+    "parent": "TerranVehicleArmors"
   },
   "TerranVehicleArmorsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Thor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,SiegeTank,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,SiegeTankSieged,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hellion,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel3.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleplatinglevel3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/TerranVehicleArmorsLevel3",
-    "ScoreAmount": 500
+    "ScoreAmount": 500,
+    "parent": "TerranVehicleArmors"
   },
   "TerranVehicleWeapons": {
     "AffectedUnitArray": [
@@ -1687,24 +3966,81 @@
     ],
     "EditorCategories": "Race:Terran,UpgradeType:AttackBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,CrucioShockCannonDummy,AttributeBonus[Armored]",
+        "Value": "2"
+      },
+      {
+        "Reference": "Weapon,JavelinMissileLaunchers,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,ThorsHammerDamage,Amount",
+        "Value": "3"
+      },
+      {
+        "Reference": "Effect,JavelinMissileLaunchersDamage,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Weapon,90mmCannons,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,90mmCannons,Amount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Weapon,CrucioShockCannon,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonBlast,Amount",
+        "Value": "5.000000"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonDirected,Amount",
+        "Value": "5.000000"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonDummy,Amount",
+        "Value": "5.000000"
+      },
+      {
+        "Reference": "Effect,InfernalFlameThrower,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Weapon,InfernalFlameThrower,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,90mmCannons,AttributeBonus[Armored]",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Effect,JavelinMissileLaunchersDamage,AttributeBonus[Light]",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,InfernalFlameThrower,AttributeBonus[Light]",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonBlast,Amount",
+        "Value": "3",
+        "index": "7"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonDirected,Amount",
+        "Value": "3",
+        "index": "8"
+      },
+      {
+        "Reference": "Effect,CrucioShockCannonDummy,Amount",
+        "Value": "3",
+        "index": "9"
+      }
     ],
     "LeaderAlias": "TechVehicleWeapons",
     "Name": "Upgrade/Name/TerranVehicleWeapons",
@@ -1712,89 +4048,301 @@
     "ScoreCount": "WeaponTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "WeaponTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "TerranVehicleWeaponsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ThorsHammer,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,90mmCannons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,CrucioShockCannon,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfernalFlameThrower,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds"
+      },
+      {
+        "Value": "4",
+        "index": "7"
+      },
+      {
+        "Value": "4",
+        "index": "8"
+      },
+      {
+        "Value": "4",
+        "index": "9"
+      },
+      {
+        "Value": "1",
+        "index": "20"
+      },
+      {
+        "Value": "1",
+        "index": "21"
+      },
+      {
+        "Value": "1",
+        "index": "22"
+      },
+      {
+        "Reference": "Effect,CycloneAttackWeaponDamage,Amount",
+        "index": "36"
+      },
+      {
+        "Reference": "Weapon,LanceMissileLaunchers,Level",
+        "Value": "1",
+        "index": "34"
+      },
+      {
+        "Reference": "Effect,LanceMissileLaunchersDamage,Amount",
+        "Value": "3",
+        "index": "35"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,LanceMissileLaunchers,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
+        "index": "37"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Weapon,TyphoonMissilePod,Level",
+        "Value": "1",
+        "index": "38"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,TyphoonMissilePod,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
+        "index": "39"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1",
+        "index": "40"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/TerranVehicleWeaponsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "TerranVehicleWeapons"
   },
   "TerranVehicleWeaponsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ThorsHammer,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,90mmCannons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,CrucioShockCannon,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfernalFlameThrower,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds"
+      },
+      {
+        "Value": "4",
+        "index": "7"
+      },
+      {
+        "Value": "4",
+        "index": "8"
+      },
+      {
+        "Value": "4",
+        "index": "9"
+      },
+      {
+        "Value": "1",
+        "index": "20"
+      },
+      {
+        "Value": "1",
+        "index": "21"
+      },
+      {
+        "Value": "1",
+        "index": "22"
+      },
+      {
+        "Reference": "Effect,CycloneAttackWeaponDamage,Amount",
+        "index": "36"
+      },
+      {
+        "Reference": "Weapon,LanceMissileLaunchers,Level",
+        "Value": "1",
+        "index": "34"
+      },
+      {
+        "Reference": "Effect,LanceMissileLaunchersDamage,Amount",
+        "Value": "3",
+        "index": "35"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,LanceMissileLaunchers,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
+        "index": "37"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Weapon,TyphoonMissilePod,Level",
+        "Value": "1",
+        "index": "38"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,TyphoonMissilePod,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
+        "index": "39"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1",
+        "index": "40"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/TerranVehicleWeaponsLevel2",
-    "ScoreAmount": 350
+    "ScoreAmount": 350,
+    "parent": "TerranVehicleWeapons"
   },
   "TerranVehicleWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ThorsHammer,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,90mmCannons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,CrucioShockCannon,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfernalFlameThrower,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds"
+      },
+      {
+        "Value": "4",
+        "index": "7"
+      },
+      {
+        "Value": "4",
+        "index": "8"
+      },
+      {
+        "Value": "4",
+        "index": "9"
+      },
+      {
+        "Value": "1",
+        "index": "20"
+      },
+      {
+        "Value": "1",
+        "index": "21"
+      },
+      {
+        "Value": "1",
+        "index": "22"
+      },
+      {
+        "Reference": "Effect,CycloneAttackWeaponDamage,Amount",
+        "index": "36"
+      },
+      {
+        "Reference": "Weapon,LanceMissileLaunchers,Level",
+        "Value": "1",
+        "index": "34"
+      },
+      {
+        "Reference": "Effect,LanceMissileLaunchersDamage,Amount",
+        "Value": "3",
+        "index": "35"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,LanceMissileLaunchers,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
+        "index": "37"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Weapon,TyphoonMissilePod,Level",
+        "Value": "1",
+        "index": "38"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,TyphoonMissilePod,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
+        "index": "39"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,LanceMissileLaunchersDamage,AttributeBonus[Massive]",
+        "Value": "1",
+        "index": "40"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/TerranVehicleWeaponsLevel3",
-    "ScoreAmount": 500
+    "ScoreAmount": 500,
+    "parent": "TerranVehicleWeapons"
   },
   "ThorSkin": {
     "AffectedUnitArray": "Thor",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Actor,Thor,GroupIcon.Image[0]",
+      "Value": "Assets\\Textures\\Wireframe-Terran-Thor.dds"
+    },
     "Icon": "Assets\\Textures\\btn-unit-terran-thor.dds",
     "LeaderAlias": "",
     "Race": "Terr"
@@ -1804,9 +4352,19 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Unit,RoachBurrowed,Collide[Land7]",
+        "Value": "1"
+      },
+      {
+        "Value": "1.4062",
+        "index": "0"
+      },
+      {
+        "Value": "0.000000",
+        "index": "1"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-tunnelingclaws.dds",
@@ -1816,7 +4374,11 @@
   },
   "UltraliskSkin": {
     "AffectedUnitArray": "UltraliskBurrowed",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Actor,Ultralisk,GroupIcon.Image[0]",
+      "Value": "Assets\\Textures\\Wireframe-Zerg-UltraliskEx1B.dds"
+    },
     "Icon": "Assets\\Textures\\btn-unit-zerg-ultralisk.dds",
     "LeaderAlias": ""
   },
@@ -1824,7 +4386,10 @@
     "AffectedUnitArray": "VikingFighter",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:AttackBonus",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Weapon,LanzerTorpedoes,Range",
+      "Value": "2.000000"
+    },
     "Flags": 0,
     "Icon": "Assets\\Textures\\btn-upgrade-terran-jotunboosters.dds",
     "Race": "Terr",
@@ -1836,10 +4401,25 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Protoss,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Behavior,VoidRaySwarmDamageBoost,Modification.AccelerationMultiplier",
+        "Value": "0.7441"
+      },
+      {
+        "Reference": "Unit,VoidRay,Acceleration",
+        "Value": "0.687500"
+      },
+      {
+        "Operation": "Set",
+        "Value": "3.320300",
+        "index": "0"
+      },
+      {
+        "Operation": "Set",
+        "Value": "2.687500",
+        "index": "1"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-fluxvanes.dds",
@@ -1858,7 +4438,11 @@
   },
   "ZealotSkin": {
     "AffectedUnitArray": "Zealot",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Actor,Zealot,BuildModel",
+      "Value": "ZealotXPRWarpIn"
+    },
     "Icon": "Assets\\Textures\\btn-unit-protoss-zealot.dds",
     "LeaderAlias": ""
   },
@@ -1872,20 +4456,62 @@
     ],
     "EditorCategories": "Race:Zerg,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Mutalisk,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Mutalisk,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Overlord,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Overlord,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Overseer,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Overseer,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Corruptor,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Corruptor,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,BroodLord,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,BroodLord,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,OverlordCocoon,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,OverlordCocoon,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,BroodLordCocoon,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,BroodLordCocoon,LifeArmor",
+        "Value": "1"
+      }
     ],
     "LeaderAlias": "ZergFlyerArmors",
     "Name": "Upgrade/Name/Zerg Flyer Armors",
@@ -1893,55 +4519,140 @@
     "ScoreCount": "ArmorTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "ArmorTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ZergFlyerArmorsLevel1": {
     "AffectedUnitArray": "OverseerSiegeMode",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,OverseerSiegeMode,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Overlord,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Overseer,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Corruptor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BroodLord,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BroodLordCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,OverlordCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level1.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ZergFlyerArmorsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "ZergFlyerArmors"
   },
   "ZergFlyerArmorsLevel2": {
     "AffectedUnitArray": "OverseerSiegeMode",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,OverseerSiegeMode,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Overlord,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Overseer,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Corruptor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BroodLord,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BroodLordCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,OverlordCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ZergFlyerArmorsLevel2",
-    "ScoreAmount": 350
+    "ScoreAmount": 350,
+    "parent": "ZergFlyerArmors"
   },
   "ZergFlyerArmorsLevel3": {
     "AffectedUnitArray": "OverseerSiegeMode",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,OverseerSiegeMode,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Overlord,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Overseer,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Corruptor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BroodLord,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BroodLordCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,OverlordCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level3.dds"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ZergFlyerArmorsLevel3",
-    "ScoreAmount": 500
+    "ScoreAmount": 500,
+    "parent": "ZergFlyerArmors"
   },
   "ZergFlyerWeapons": {
     "AffectedUnitArray": [
@@ -1951,16 +4662,46 @@
     ],
     "EditorCategories": "Race:Zerg,UpgradeType:AttackBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,GlaiveWurm,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,GlaiveWurmU1,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,GlaiveWurmU2,Amount",
+        "Value": "0.333"
+      },
+      {
+        "Reference": "Effect,GlaiveWurmU3,Amount",
+        "Value": "0.111"
+      },
+      {
+        "Reference": "Weapon,BroodlingStrike,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,BroodlingEscortDamage,Amount",
+        "Value": "3.000000"
+      },
+      {
+        "Reference": "Effect,BroodlingEscortDamageUnit,Amount",
+        "Value": "3.000000"
+      },
+      {
+        "Reference": "Weapon,ParasiteSpore,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,ParasiteSporeDamage,AttributeBonus[Massive]",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,ParasiteSporeDamage,Amount",
+        "Value": "1"
+      }
     ],
     "LeaderAlias": "ZergFlyerWeapons",
     "Name": "Upgrade/Name/ZergFlyerWeapons",
@@ -1968,46 +4709,110 @@
     "ScoreCount": "WeaponTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "WeaponTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ZergFlyerWeaponsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,GlaiveWurm,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,BroodlingStrike,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ParasiteSpore,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level1.dds"
+      },
+      {
+        "Reference": "Effect,BroodlingEscortDamage,Amount",
+        "Value": "2",
+        "index": "5"
+      },
+      {
+        "Reference": "Effect,BroodlingEscortDamageUnit,Amount",
+        "Value": "2",
+        "index": "6"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ZergFlyerWeaponsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "ZergFlyerWeapons"
   },
   "ZergFlyerWeaponsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,GlaiveWurm,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,BroodlingStrike,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ParasiteSpore,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level2.dds"
+      },
+      {
+        "Reference": "Effect,BroodlingEscortDamage,Amount",
+        "Value": "2",
+        "index": "5"
+      },
+      {
+        "Reference": "Effect,BroodlingEscortDamageUnit,Amount",
+        "Value": "2",
+        "index": "6"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ZergFlyerWeaponsLevel2",
-    "ScoreAmount": 350
+    "ScoreAmount": 350,
+    "parent": "ZergFlyerWeapons"
   },
   "ZergFlyerWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,GlaiveWurm,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,BroodlingStrike,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,ParasiteSpore,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level3.dds"
+      },
+      {
+        "Reference": "Effect,BroodlingEscortDamage,Amount",
+        "Value": "2",
+        "index": "5"
+      },
+      {
+        "Reference": "Effect,BroodlingEscortDamageUnit,Amount",
+        "Value": "2",
+        "index": "6"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ZergFlyerWeaponsLevel3",
-    "ScoreAmount": 500
+    "ScoreAmount": 500,
+    "parent": "ZergFlyerWeapons"
   },
   "ZergGroundArmors": {
     "AffectedUnitArray": [
@@ -2031,52 +4836,192 @@
     ],
     "EditorCategories": "Race:Zerg,UpgradeType:ArmorBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Drone,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Drone,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,DroneBurrowed,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,DroneBurrowed,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Zergling,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Zergling,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,ZerglingBurrowed,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,ZerglingBurrowed,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Hydralisk,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Hydralisk,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,HydraliskBurrowed,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,HydraliskBurrowed,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Baneling,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Baneling,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,BanelingBurrowed,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,BanelingBurrowed,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Roach,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Roach,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,RoachBurrowed,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,RoachBurrowed,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Ultralisk,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Ultralisk,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,UltraliskBurrowed,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,UltraliskBurrowed,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Queen,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Queen,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,QueenBurrowed,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,QueenBurrowed,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Infestor,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Infestor,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,InfestorBurrowed,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,InfestorBurrowed,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,Broodling,LifeArmor",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Unit,Broodling,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,InfestorTerran,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,InfestorTerranBurrowed,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,InfestorTerran,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,InfestorTerranBurrowed,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmor",
+        "Value": "1"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
+        "Value": "1",
+        "index": "34"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmor",
+        "Value": "1",
+        "index": "35"
+      },
+      {
+        "index": "36",
+        "removed": "1"
+      },
+      {
+        "index": "37",
+        "removed": "1"
+      },
+      {
+        "index": "38",
+        "removed": "1"
+      },
+      {
+        "index": "39",
+        "removed": "1"
+      }
     ],
     "LeaderAlias": "ZergGroundArmors",
     "Name": "Upgrade/Name/ZergGroundArmors",
@@ -2084,118 +5029,473 @@
     "ScoreCount": "ArmorTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "ArmorTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ZergGroundArmorsLevel1": {
     "AffectedUnitArray": "InfestorTerranBurrowed",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zergling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hydralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Roach,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Baneling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ultralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Queen,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Infestor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Broodling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
+        "Value": "1",
+        "index": "34"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmor",
+        "Value": "1",
+        "index": "35"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Drone,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "36"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zergling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "37"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hydralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "38"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Roach,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "39"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Baneling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "40"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ultralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "41"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Queen,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "42"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Infestor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "43"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Broodling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "44"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
+        "index": "45"
+      },
+      {
+        "index": "46",
+        "removed": "1"
+      },
+      {
+        "index": "47",
+        "removed": "1"
+      },
+      {
+        "index": "48",
+        "removed": "1"
+      },
+      {
+        "index": "49",
+        "removed": "1"
+      },
+      {
+        "index": "50",
+        "removed": "1"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ZergGroundArmorsLevel1",
-    "ScoreAmount": 300
+    "ScoreAmount": 300,
+    "parent": "ZergGroundArmors"
   },
   "ZergGroundArmorsLevel2": {
     "AffectedUnitArray": "InfestorTerranBurrowed",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zergling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hydralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Roach,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Baneling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ultralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Queen,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Infestor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Broodling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
+        "Value": "1",
+        "index": "34"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmor",
+        "Value": "1",
+        "index": "35"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Drone,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "36"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zergling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "37"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hydralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "38"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Roach,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "39"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Baneling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "40"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ultralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "41"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Queen,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "42"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Infestor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "43"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Broodling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "44"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
+        "index": "45"
+      },
+      {
+        "index": "46",
+        "removed": "1"
+      },
+      {
+        "index": "47",
+        "removed": "1"
+      },
+      {
+        "index": "48",
+        "removed": "1"
+      },
+      {
+        "index": "49",
+        "removed": "1"
+      },
+      {
+        "index": "50",
+        "removed": "1"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ZergGroundArmorsLevel2",
-    "ScoreAmount": 400
+    "ScoreAmount": 400,
+    "parent": "ZergGroundArmors"
   },
   "ZergGroundArmorsLevel3": {
     "AffectedUnitArray": "InfestorTerranBurrowed",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zergling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hydralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Roach,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Baneling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ultralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Queen,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Infestor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Broodling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
+        "Value": "1",
+        "index": "34"
+      },
+      {
+        "Reference": "Unit,BanelingCocoon,LifeArmor",
+        "Value": "1",
+        "index": "35"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Drone,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "36"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zergling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "37"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Hydralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "38"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Roach,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "39"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Baneling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "40"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Ultralisk,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "41"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Queen,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "42"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Infestor,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "43"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Broodling,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "44"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,BanelingCocoon,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
+        "index": "45"
+      },
+      {
+        "index": "46",
+        "removed": "1"
+      },
+      {
+        "index": "47",
+        "removed": "1"
+      },
+      {
+        "index": "48",
+        "removed": "1"
+      },
+      {
+        "index": "49",
+        "removed": "1"
+      },
+      {
+        "index": "50",
+        "removed": "1"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ZergGroundArmorsLevel3",
-    "ScoreAmount": 500
+    "ScoreAmount": 500,
+    "parent": "ZergGroundArmors"
   },
   "ZergMeleeWeapons": {
     "AffectedUnitArray": [
@@ -2209,21 +5509,66 @@
     ],
     "EditorCategories": "Race:Zerg,UpgradeType:AttackBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,Claws,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,Claws,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,KaiserBlades,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,KaiserBladesDamage,Amount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Weapon,Ram,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,Ram,Amount",
+        "Value": "5"
+      },
+      {
+        "Reference": "Effect,NeedleClaws,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Weapon,NeedleClaws,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,VolatileBurstU,Amount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Effect,VolatileBurstU2,Amount",
+        "Value": "5"
+      },
+      {
+        "Reference": "Effect,VolatileBurstFriendlyUnitDamage,Amount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Effect,VolatileBurstFriendlyBuildingDamage,Amount",
+        "Value": "5"
+      },
+      {
+        "Reference": "Weapon,VolatileBurstDummy,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,VolatileBurstU,AttributeBonus[Light]",
+        "Value": "2.000000"
+      },
+      {
+        "Reference": "Effect,VolatileBurstFriendlyUnitDamage,AttributeBonus[Light]",
+        "Value": "2.000000"
+      }
     ],
     "LeaderAlias": "ZergMeleeArmors",
     "Name": "Upgrade/Name/ZergMeleeWeapons",
@@ -2231,67 +5576,215 @@
     "ScoreCount": "WeaponTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "WeaponTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ZergMeleeWeaponsLevel1": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,KaiserBladesDamage,AttributeBonus[Armored]",
+        "Value": "2"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleClaws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,KaiserBlades,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Ram,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Claws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleClaws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds",
+        "index": "14"
+      },
+      {
+        "Reference": "Weapon,KaiserBlades,Icon",
+        "index": "15"
+      },
+      {
+        "Reference": "Weapon,Ram,Icon",
+        "index": "16"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,Amount",
+        "Value": "2",
+        "index": "17"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]",
+        "Value": "2",
+        "index": "18"
+      },
+      {
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount",
+        "Value": "5",
+        "index": "19"
+      },
+      {
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount",
+        "index": "20"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ZergMeleeWeaponsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "ZergMeleeWeapons"
   },
   "ZergMeleeWeaponsLevel2": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,KaiserBladesDamage,AttributeBonus[Armored]",
+        "Value": "2"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleClaws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,KaiserBlades,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Ram,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Claws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleClaws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds",
+        "index": "14"
+      },
+      {
+        "Reference": "Weapon,KaiserBlades,Icon",
+        "index": "15"
+      },
+      {
+        "Reference": "Weapon,Ram,Icon",
+        "index": "16"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,Amount",
+        "Value": "2",
+        "index": "17"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]",
+        "Value": "2",
+        "index": "18"
+      },
+      {
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount",
+        "Value": "5",
+        "index": "19"
+      },
+      {
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount",
+        "index": "20"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ZergMeleeWeaponsLevel2",
-    "ScoreAmount": 300
+    "ScoreAmount": 300,
+    "parent": "ZergMeleeWeapons"
   },
   "ZergMeleeWeaponsLevel3": {
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Effect,KaiserBladesDamage,AttributeBonus[Armored]",
+        "Value": "2"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleClaws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,KaiserBlades,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Ram,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Claws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleClaws,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds",
+        "index": "14"
+      },
+      {
+        "Reference": "Weapon,KaiserBlades,Icon",
+        "index": "15"
+      },
+      {
+        "Reference": "Weapon,Ram,Icon",
+        "index": "16"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,Amount",
+        "Value": "2",
+        "index": "17"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,BurrowChargeMPTargetDamage,AttributeBonus[Armored]",
+        "Value": "2",
+        "index": "18"
+      },
+      {
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralBuilding,Amount",
+        "Value": "5",
+        "index": "19"
+      },
+      {
+        "Reference": "Effect,VolatileBurstDirectFallbackEnemyNeutralUnit,Amount",
+        "index": "20"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-meleeattacks-level3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ZergMeleeWeaponsLevel3",
-    "ScoreAmount": 400
+    "ScoreAmount": 400,
+    "parent": "ZergMeleeWeapons"
   },
   "ZergMissileWeapons": {
     "AffectedUnitArray": [
@@ -2304,20 +5797,62 @@
     ],
     "EditorCategories": "Race:Zerg,UpgradeType:AttackBonus",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Reference": "Weapon,NeedleSpines,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,NeedleSpinesDamage,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Weapon,Talons,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,Talons,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Effect,AcidSpines,Amount",
+        "Value": "1.000000"
+      },
+      {
+        "Reference": "Weapon,AcidSaliva,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,AcidSalivaU,Amount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Weapon,AcidSpines,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,HydraliskMelee,Amount",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,RoachUMelee,Amount",
+        "Value": "2"
+      },
+      {
+        "Reference": "Weapon,InfestedGuassRifle,Level",
+        "Value": "1"
+      },
+      {
+        "Reference": "Effect,InfestedGuassRifle,Amount",
+        "Value": "1"
+      },
+      {
+        "index": "10",
+        "removed": "1"
+      },
+      {
+        "index": "11",
+        "removed": "1"
+      }
     ],
     "LeaderAlias": "ZergMissileWeapons",
     "Name": "Upgrade/Name/ZergMissileWeapons",
@@ -2325,74 +5860,235 @@
     "ScoreCount": "WeaponTechnologyCount",
     "ScoreResult": "BuildOrder",
     "ScoreValue": "WeaponTechnologyValue",
-    "WebPriority": 0
+    "WebPriority": 0,
+    "default": 1
   },
   "ZergMissileWeaponsLevel1": {
     "AffectedUnitArray": "InfestorTerranBurrowed",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Spinesdisabled,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Talons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSaliva,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfestedGuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
+        "index": "10"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Talons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
+        "index": "11"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSaliva,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
+        "index": "12"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,TalonsMissileDamage,Amount",
+        "Value": "1.000000",
+        "index": "14"
+      },
+      {
+        "index": "15",
+        "removed": "1"
+      },
+      {
+        "index": "16",
+        "removed": "1"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
     "LeaderLevel": 1,
     "Name": "Upgrade/Name/ZergMissileWeaponsLevel1",
-    "ScoreAmount": 200
+    "ScoreAmount": 200,
+    "parent": "ZergMissileWeapons"
   },
   "ZergMissileWeaponsLevel2": {
     "AffectedUnitArray": "InfestorTerranBurrowed",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Spinesdisabled,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Talons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSaliva,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfestedGuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
+        "index": "10"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Talons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
+        "index": "11"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSaliva,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
+        "index": "12"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,TalonsMissileDamage,Amount",
+        "Value": "1.000000",
+        "index": "14"
+      },
+      {
+        "index": "15",
+        "removed": "1"
+      },
+      {
+        "index": "16",
+        "removed": "1"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
     "LeaderLevel": 2,
     "Name": "Upgrade/Name/ZergMissileWeaponsLevel2",
-    "ScoreAmount": 300
+    "ScoreAmount": 300,
+    "parent": "ZergMissileWeapons"
   },
   "ZergMissileWeaponsLevel3": {
     "AffectedUnitArray": "InfestorTerranBurrowed",
     "EffectArray": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Spinesdisabled,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Talons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSaliva,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfestedGuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,NeedleSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
+        "index": "10"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,Talons,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
+        "index": "11"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSaliva,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
+        "index": "12"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,AcidSpines,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
+        "index": "13"
+      },
+      {
+        "Operation": "Add",
+        "Reference": "Effect,TalonsMissileDamage,Amount",
+        "Value": "1.000000",
+        "index": "14"
+      },
+      {
+        "index": "15",
+        "removed": "1"
+      },
+      {
+        "index": "16",
+        "removed": "1"
+      }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",
     "LeaderLevel": 3,
     "Name": "Upgrade/Name/ZergMissileWeaponsLevel3",
-    "ScoreAmount": 400
+    "ScoreAmount": 400,
+    "parent": "ZergMissileWeapons"
   },
   "ZerglingSkin": {
     "AffectedUnitArray": "ZerglingBurrowed",
-    "EffectArray": null,
+    "EffectArray": {
+      "Operation": "Set",
+      "Reference": "Button,Zergling,AlertIcon",
+      "Value": "Assets\\Textures\\btn-unit-zergling-swarmling.dds"
+    },
     "Icon": "Assets\\Textures\\btn-unit-zerg-zergling.dds",
     "LeaderAlias": ""
   },
@@ -2409,7 +6105,10 @@
     "AffectedUnitArray": "HydraliskBurrowed",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Weapon,NeedleSpines,MinScanRange",
+      "Value": "1"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-groovedspines.dds",
     "Race": "Zerg",
@@ -2421,9 +6120,20 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null
+      {
+        "Operation": "Set",
+        "Reference": "Unit,OverlordTransport,Speed",
+        "Value": "2.144500"
+      },
+      {
+        "Reference": "Unit,Overlord,Speed",
+        "Value": "1.406200"
+      },
+      {
+        "Reference": "Unit,Overlord,Speed",
+        "Value": "1.289000",
+        "index": "1"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-pneumatizedcarapace.dds",
@@ -2444,7 +6154,10 @@
     "AffectedUnitArray": "ZerglingBurrowed",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-    "EffectArray": null,
+    "EffectArray": {
+      "Reference": "Weapon,Claws,RateMultiplier",
+      "Value": "0.2"
+    },
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-adrenalglands.dds",
     "Race": "Zerg",
@@ -2459,9 +6172,20 @@
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
     "EffectArray": [
-      null,
-      null,
-      null
+      {
+        "Reference": "Unit,Zergling,Speed",
+        "Value": "1.746000"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zergling,Wireframe.Image[0]",
+        "Value": "Assets\\Textures\\wireframe-zerg-zerglingupgrade.dds"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,Zergling,GroupIcon.Image[0]",
+        "Value": "Assets\\Textures\\wireframe-zerg-zerglingupgrade.dds"
+      }
     ],
     "Flags": "TechTreeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-metabolicboost.dds",

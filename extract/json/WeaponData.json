@@ -13,7 +13,11 @@
     "AllowedMovement": "Moving",
     "Arc": 360,
     "Cost": {
-      "Cooldown": null
+      "Cooldown": {
+        "Link": "Weapon/ATSLaserBattery",
+        "Location": "Unit",
+        "TimeUse": "0.225"
+      }
     },
     "DisplayEffect": "ATALaserBatteryU",
     "EditorCategories": "Race:Terran",
@@ -33,7 +37,10 @@
     "AcquirePrioritization": "ByAngle",
     "AllowedMovement": "Moving",
     "Cost": {
-      "Cooldown": null
+      "Cooldown": {
+        "Location": "Unit",
+        "TimeUse": "0.225"
+      }
     },
     "DisplayEffect": "ATSLaserBatteryU",
     "EditorCategories": "Race:Terran",
@@ -171,7 +178,10 @@
   },
   "DisruptionBeam": {
     "Cost": {
-      "Cooldown": null
+      "Cooldown": {
+        "Location": "Unit",
+        "TimeUse": "1"
+      }
     },
     "DisplayEffect": "DisruptionBeamDamage",
     "EditorCategories": "Race:Protoss",
@@ -535,7 +545,9 @@
   },
   "PsionicShockwave": {
     "Cost": {
-      "Cooldown": null
+      "Cooldown": {
+        "Location": "Unit"
+      }
     },
     "DisplayEffect": "PsionicShockwaveDamage",
     "EditorCategories": "Race:Protoss",
@@ -730,6 +742,7 @@
     "DisplayEffect": "##id##Damage",
     "Effect": "##id##Damage",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel0.dds",
-    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable"
+    "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+    "default": 1
   }
 }

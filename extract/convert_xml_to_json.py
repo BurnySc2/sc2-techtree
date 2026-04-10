@@ -60,6 +60,19 @@ def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
                 result[tag] = child_val
             else:
                 result[tag] = child_val[0]
+
+        # Merge parent attributes (excluding id) into result
+        for k, v in attrs.items():
+            if k == "id":
+                continue
+            # Convert numeric attributes
+            try:
+                result[k] = int(v)
+            except ValueError:
+                try:
+                    result[k] = float(v)
+                except ValueError:
+                    result[k] = v
         return result
 
     # No children - handle index+value pairs
@@ -99,6 +112,10 @@ def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
         except ValueError:
             pass
         return value
+
+    # No value attribute, no children, no text - check for other attributes
+    if attrs:
+        return attrs
 
     # Text content
     text = element.text.strip() if element.text else None
