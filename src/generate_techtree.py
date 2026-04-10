@@ -3,6 +3,8 @@ import json
 import re
 from pathlib import Path
 
+from utils import dump_json
+
 DATA_DIR = Path(__file__).parent / "json"
 OUTPUT_FILE = Path(__file__).parent / "json/techtree.json"
 
@@ -325,7 +327,7 @@ def main():
     }
 
     with OUTPUT_FILE.open("w") as f:
-        json.dump(tech_tree, f, indent=2, sort_keys=True)
+        dump_json(tech_tree, f, indent=2, sort_keys=True)
 
     print(f"Generated {OUTPUT_FILE}")
     print(f"  Structures: {len(structures)}")

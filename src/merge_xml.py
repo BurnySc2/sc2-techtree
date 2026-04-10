@@ -30,13 +30,18 @@ from copy import deepcopy
 
 # MOD_LOAD_ORDER: later files override earlier ones
 MOD_ORDER = [
+    "core.sc2mod",  # Optional?
     "liberty.sc2mod",
     "libertymulti.sc2mod",
-    "balancemulti.sc2mod",
+    "swarm.sc2mod",  # Oracle, HellionTank
+    "swarmmulti.sc2mod",  # Cyclone
+    "void.sc2mod",  # Adept
     "voidmulti.sc2mod",
+    "balancemulti.sc2mod",
 ]
 
 DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData", "EffectData"]
+
 
 def get_fallback_path(data_type: str) -> Path | None:
     """Get path to local fallback file for a data type if it exists."""
@@ -158,6 +163,9 @@ def merge_xml_trees(base_tree: etree._ElementTree, override_tree: etree._Element
     for elem in override_tree.findall(".//*[@id]"):
         override_lookup[elem.get("id")] = elem
 
+    # Track which override elements have been consumed/merged
+    consumed_override_ids = set()
+
     # Process all elements in base tree that have @id
     for base_elem in base_tree.findall(".//*[@id]"):
         base_id = base_elem.get("id")
@@ -165,6 +173,12 @@ def merge_xml_trees(base_tree: etree._ElementTree, override_tree: etree._Element
             override_elem = override_lookup[base_id]
             # Deep merge child elements instead of full replacement
             merge_child_elements(base_elem, override_elem)
+            consumed_override_ids.add(base_id)
+
+    # Add elements that only exist in override (not in base)
+    for override_id, override_elem in override_lookup.items():
+        if override_id not in consumed_override_ids:
+            base_tree.getroot().append(deepcopy(override_elem))
 
     return base_tree
 

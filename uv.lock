@@ -201,7 +201,7 @@ wheels = [
 ]
 
 [[package]]
-name = "sc2-techtree"
+name = "src"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

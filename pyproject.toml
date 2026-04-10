@@ -1,5 +1,5 @@
 [project]
-name = "sc2-techtree"
+name = "src"
 version = "0.1.0"
 description = ""
 authors = [{ name = "BurnySc2", email = "gamingburny@gmail.com" }]

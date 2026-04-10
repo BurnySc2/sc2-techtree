@@ -10,6 +10,8 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any
 
+from utils import dumps_json
+
 
 # Tags where index+value="1" pairs become arrays of index names
 FLAG_ARRAY_TAGS = {
@@ -197,7 +199,7 @@ def convert_xml_to_json(xml_path: Path, output_path: Path) -> dict:
     # Post-process
     result = post_process(result)
 
-    output_path.write_text(json.dumps(result, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+    output_path.write_text(dumps_json(result, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")
 
     return result
 
