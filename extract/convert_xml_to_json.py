@@ -32,6 +32,10 @@ LINK_ARRAY_TAGS = {"WeaponArray", "AbilArray", "EffectArray"}
 # Tags where index is used as the key for the value (not flag style)
 INDEX_AS_KEY_TAGS = {"CostResource"}
 
+# Tags where the index name is returned regardless of value (for enum-like attributes)
+# e.g., <AttributeBonus index="Light" value="6"/> -> "Light" (not "6" or {"Light": 6})
+FLAG_VALUE_TAGS = {"AttributeBonus"}
+
 
 def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
     """Convert a single XML element to its JSON value."""
@@ -61,7 +65,7 @@ def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
     # No children - handle index+value pairs
     if "index" in attrs and "value" in attrs:
         # Flag pattern: index + value="1" -> just the index name (string)
-        if attrs["value"] == "1":
+        if attrs["value"] == "1" or tag_name in FLAG_VALUE_TAGS:
             return attrs["index"]
         # Index-as-key pattern: index + value (not "1") -> {"key": value}
         # e.g., <CostResource index="Minerals" value="50"/> -> {"Minerals": 50}
@@ -201,6 +205,7 @@ def main():
         ("UnitData.xml", "UnitData.json"),
         ("UpgradeData.xml", "UpgradeData.json"),
         ("WeaponData.xml", "WeaponData.json"),
+        ("EffectData.xml", "EffectData.json"),
     ]
 
     print("Converting SC2 XML files to JSON...\n")

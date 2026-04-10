@@ -36,7 +36,7 @@ MOD_ORDER = [
     "voidmulti.sc2mod",
 ]
 
-DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData"]
+DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData", "EffectData"]
 
 
 def get_xml_path(mod_name: str, data_type: str) -> Path:
