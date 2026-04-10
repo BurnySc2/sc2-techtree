@@ -38,11 +38,6 @@ MOD_ORDER = [
 
 DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData", "EffectData"]
 
-# Track which (parent_id, child_key) pairs exist in each source mod
-# Structure: {data_type: {parent_id: {child_key: set of mods containing it}}}
-_mod_child_tracking = {dt: {} for dt in DATA_TYPES}
-
-
 def get_fallback_path(data_type: str) -> Path | None:
     """Get path to local fallback file for a data type if it exists."""
     fallback_dir = Path(__file__).parent / "fallback"

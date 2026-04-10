@@ -84,6 +84,28 @@ def extract_build_requirements(abil_data: dict) -> dict[str, list[str]]:
     return result
 
 
+def extract_trainable_units(abil_data: dict) -> dict[str, list[str]]:
+    """Extract building -> trainable unit mappings from *Train abilities in AbilData."""
+    result = {}
+    for name, data in abil_data.items():
+        if not isinstance(data, dict):
+            continue
+        if not name.endswith("Train"):
+            continue
+        building = name.replace("Train", "").replace("TrainLarge", "").replace("TrainMorph", "")
+        info_array = data.get("InfoArray", [])
+        if not isinstance(info_array, list):
+            info_array = [info_array] if info_array else []
+        for item in info_array:
+            if isinstance(item, dict) and "Unit" in item:
+                unit = item.get("Unit")
+                if unit and isinstance(unit, str):
+                    if building not in result:
+                        result[building] = []
+                    result[building].append(unit)
+    return result
+
+
 def main():
     unit_data = load_json("UnitData.json")
     abil_data = load_json("AbilData.json")
@@ -123,6 +145,8 @@ def main():
                     unlocked = [unlocked]
                 building_unlocks[name] = unlocked
 
+    trainable_units = extract_trainable_units(abil_data)
+
     for name, data in unit_data.items():
         if not isinstance(data, dict):
             continue
@@ -134,8 +158,10 @@ def main():
 
         if is_structure:
             produced = building_produces.get(name, [])
+            trainable = trainable_units.get(name, [])
+            combined = list({*produced, *trainable})
             unlocked = building_unlocks.get(name, [])
-            produces = sorted({u for u in produced if isinstance(u, str)})
+            produces = sorted({u for u in combined if isinstance(u, str)})
             unlocks = sorted({u for u in unlocked if isinstance(u, str)})
 
             structures[name] = {
