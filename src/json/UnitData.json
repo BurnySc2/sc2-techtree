@@ -1777,6 +1777,7 @@
     "SubgroupPriority": 16,
     "TechTreeUnlockedUnitArray": [
       "HellionTank",
+      "Thor",
       "WidowMine"
     ],
     "TurningRate": 719.4726
@@ -8562,7 +8563,9 @@
     "TechTreeUnlockedUnitArray": [
       "Adept",
       "Adept",
+      "MothershipCore",
       "Sentry",
+      "Stalker",
       {
         "index": "3",
         "removed": "1"
@@ -14219,6 +14222,7 @@
     "SubgroupPriority": 14,
     "TechTreeUnlockedUnitArray": [
       "Carrier",
+      "Carrier",
       "Mothership",
       "Mothership",
       "Tempest"
@@ -16846,7 +16850,10 @@
       "Alias_Hatchery",
       "Alias_Lair"
     ],
-    "TechTreeUnlockedUnitArray": "SnakeCaster",
+    "TechTreeUnlockedUnitArray": [
+      "SnakeCaster",
+      "Viper"
+    ],
     "TurningRate": 719.4726
   },
   "HunterSeekerWeapon": {
@@ -17931,7 +17938,10 @@
     "Sight": 9,
     "StationaryTurningRate": 719.4726,
     "SubgroupPriority": 12,
-    "TechTreeUnlockedUnitArray": "SwarmHostMP",
+    "TechTreeUnlockedUnitArray": [
+      "Infestor",
+      "SwarmHostMP"
+    ],
     "TurningRate": 719.4726
   },
   "InfestedAcidSpinesWeapon": {
@@ -31188,7 +31198,10 @@
     "Sight": 9,
     "StationaryTurningRate": 719.4726,
     "SubgroupPriority": 6,
-    "TechTreeUnlockedUnitArray": "Ravager",
+    "TechTreeUnlockedUnitArray": [
+      "Ravager",
+      "Roach"
+    ],
     "TurningRate": 719.4726
   },
   "RoboticsBay": {
@@ -31299,7 +31312,10 @@
     "Sight": 9,
     "StationaryTurningRate": 719.4726,
     "SubgroupPriority": 6,
-    "TechTreeUnlockedUnitArray": "Disruptor",
+    "TechTreeUnlockedUnitArray": [
+      "Colossus",
+      "Disruptor"
+    ],
     "TurningRate": 719.4726
   },
   "RoboticsFacility": {

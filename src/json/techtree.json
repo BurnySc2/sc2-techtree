@@ -1769,6 +1769,7 @@
       ],
       "unlocks": [
         "HellionTank",
+        "Thor",
         "WidowMine"
       ]
     },
@@ -1867,7 +1868,9 @@
       ],
       "unlocks": [
         "Adept",
-        "Sentry"
+        "MothershipCore",
+        "Sentry",
+        "Stalker"
       ]
     },
     "DarkShrine": {
@@ -2058,7 +2061,9 @@
         "overlordspeed",
         "overlordtransport"
       ],
-      "unlocks": []
+      "unlocks": [
+        "Viper"
+      ]
     },
     "HydraliskDen": {
       "produces": [],
@@ -2084,6 +2089,7 @@
         "NeuralParasite"
       ],
       "unlocks": [
+        "Infestor",
         "SwarmHostMP"
       ]
     },
@@ -2213,7 +2219,8 @@
         "TunnelingClaws"
       ],
       "unlocks": [
-        "Ravager"
+        "Ravager",
+        "Roach"
       ]
     },
     "RoboticsBay": {
@@ -2226,6 +2233,7 @@
         "ObserverGraviticBooster"
       ],
       "unlocks": [
+        "Colossus",
         "Disruptor"
       ]
     },
@@ -2740,7 +2748,9 @@
     },
     "MothershipCore": {
       "race": "Protoss",
-      "requires": []
+      "requires": [
+        "CyberneticsCore"
+      ]
     },
     "Mutalisk": {
       "race": "Zerg",
@@ -2874,7 +2884,8 @@
     "Roach": {
       "race": "Zerg",
       "requires": [
-        "BanelingNest2"
+        "BanelingNest2",
+        "RoachWarren"
       ]
     },
     "RoachBurrowed": {
