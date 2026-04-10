@@ -106,6 +106,28 @@ def extract_trainable_units(abil_data: dict) -> dict[str, list[str]]:
     return result
 
 
+def extract_researchable_upgrades(abil_data: dict) -> dict[str, list[str]]:
+    """Extract research ability -> list of upgrade names from *Research abilities in AbilData."""
+    result = {}
+    for name, data in abil_data.items():
+        if not isinstance(data, dict):
+            continue
+        if not name.endswith("Research"):
+            continue
+        info_array = data.get("InfoArray", [])
+        if not isinstance(info_array, list):
+            info_array = [info_array] if info_array else []
+        upgrades = []
+        for item in info_array:
+            if isinstance(item, dict) and "Upgrade" in item:
+                upgrade = item.get("Upgrade")
+                if upgrade and isinstance(upgrade, str):
+                    upgrades.append(upgrade)
+        if upgrades:
+            result[name] = upgrades
+    return result
+
+
 def main():
     unit_data = load_json("UnitData.json")
     abil_data = load_json("AbilData.json")
@@ -146,6 +168,7 @@ def main():
                 building_unlocks[name] = unlocked
 
     trainable_units = extract_trainable_units(abil_data)
+    researchable_upgrades = extract_researchable_upgrades(abil_data)
 
     for name, data in unit_data.items():
         if not isinstance(data, dict):
@@ -164,11 +187,30 @@ def main():
             produces = sorted({u for u in combined if isinstance(u, str)})
             unlocks = sorted({u for u in unlocked if isinstance(u, str)})
 
+            abil_array = data.get("AbilArray", [])
+            researches = []
+            if isinstance(abil_array, list):
+                for abil in abil_array:
+                    if isinstance(abil, dict) and abil.get("Link"):
+                        research_name = abil.get("Link")
+                    elif isinstance(abil, str):
+                        research_name = abil
+                    else:
+                        continue
+                    if research_name in researchable_upgrades:
+                        researches.extend(researchable_upgrades[research_name])
+            elif isinstance(abil_array, dict) and abil_array.get("Link"):
+                research_name = abil_array.get("Link")
+                if research_name in researchable_upgrades:
+                    researches.extend(researchable_upgrades[research_name])
+
             structures[name] = {
                 "produces": produces,
                 "unlocks": unlocks,
                 "race": race,
             }
+            if researches:
+                structures[name]["researches"] = sorted(set(researches))
 
         elif is_unit:
             abil_array = data.get("AbilArray", [])

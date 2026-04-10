@@ -861,6 +861,23 @@
     "Armory": {
       "produces": [],
       "race": "Terran",
+      "researches": [
+        "TerranShipArmorsLevel1",
+        "TerranShipArmorsLevel2",
+        "TerranShipArmorsLevel3",
+        "TerranShipWeaponsLevel1",
+        "TerranShipWeaponsLevel2",
+        "TerranShipWeaponsLevel3",
+        "TerranVehicleAndShipArmorsLevel1",
+        "TerranVehicleAndShipArmorsLevel2",
+        "TerranVehicleAndShipArmorsLevel3",
+        "TerranVehicleArmorsLevel1",
+        "TerranVehicleArmorsLevel2",
+        "TerranVehicleArmorsLevel3",
+        "TerranVehicleWeaponsLevel1",
+        "TerranVehicleWeaponsLevel2",
+        "TerranVehicleWeaponsLevel3"
+      ],
       "unlocks": [
         "HellionTank",
         "Thor"
@@ -884,6 +901,9 @@
     "BanelingNest": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "CentrificalHooks"
+      ],
       "unlocks": [
         "Baneling"
       ]
@@ -945,6 +965,16 @@
     "CyberneticsCore": {
       "produces": [],
       "race": "Protoss",
+      "researches": [
+        "ProtossAirArmorsLevel1",
+        "ProtossAirArmorsLevel2",
+        "ProtossAirArmorsLevel3",
+        "ProtossAirWeaponsLevel1",
+        "ProtossAirWeaponsLevel2",
+        "ProtossAirWeaponsLevel3",
+        "WarpGateResearch",
+        "haltech"
+      ],
       "unlocks": [
         "Adept",
         "Sentry",
@@ -962,6 +992,17 @@
     "EngineeringBay": {
       "produces": [],
       "race": "Terran",
+      "researches": [
+        "HiSecAutoTracking",
+        "NeosteelFrame",
+        "TerranBuildingArmor",
+        "TerranInfantryArmorsLevel1",
+        "TerranInfantryArmorsLevel2",
+        "TerranInfantryArmorsLevel3",
+        "TerranInfantryWeaponsLevel1",
+        "TerranInfantryWeaponsLevel2",
+        "TerranInfantryWeaponsLevel3"
+      ],
       "unlocks": []
     },
     "EvolutionChamber": {
@@ -1003,6 +1044,12 @@
     "FleetBeacon": {
       "produces": [],
       "race": "Protoss",
+      "researches": [
+        "AnionPulseCrystals",
+        "CarrierLaunchSpeedUpgrade",
+        "TempestGroundAttackUpgrade",
+        "VoidRaySpeedUpgrade"
+      ],
       "unlocks": [
         "Carrier",
         "Mothership"
@@ -1016,11 +1063,28 @@
     "Forge": {
       "produces": [],
       "race": "Protoss",
+      "researches": [
+        "ProtossGroundArmorsLevel1",
+        "ProtossGroundArmorsLevel2",
+        "ProtossGroundArmorsLevel3",
+        "ProtossGroundWeaponsLevel1",
+        "ProtossGroundWeaponsLevel2",
+        "ProtossGroundWeaponsLevel3",
+        "ProtossShieldsLevel1",
+        "ProtossShieldsLevel2",
+        "ProtossShieldsLevel3"
+      ],
       "unlocks": []
     },
     "FusionCore": {
       "produces": [],
       "race": "Terran",
+      "researches": [
+        "BattlecruiserBehemothReactor",
+        "BattlecruiserEnableSpecializations",
+        "MedivacCaduceusReactor",
+        "MedivacIncreaseSpeedBoost"
+      ],
       "unlocks": [
         "Battlecruiser"
       ]
@@ -1040,6 +1104,12 @@
     "GhostAcademy": {
       "produces": [],
       "race": "Terran",
+      "researches": [
+        "EnhancedShockwaves",
+        "GhostMoebiusReactor",
+        "PersonalCloaking",
+        "ReaperSpeed"
+      ],
       "unlocks": [
         "Ghost"
       ]
@@ -1047,6 +1117,17 @@
     "GreaterSpire": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "Burrow",
+        "ZergFlyerArmorsLevel1",
+        "ZergFlyerArmorsLevel2",
+        "ZergFlyerArmorsLevel3",
+        "ZergFlyerWeaponsLevel1",
+        "ZergFlyerWeaponsLevel2",
+        "ZergFlyerWeaponsLevel3",
+        "overlordspeed",
+        "overlordtransport"
+      ],
       "unlocks": [
         "BroodLord"
       ]
@@ -1057,16 +1138,31 @@
         "Queen"
       ],
       "race": "Zerg",
+      "researches": [
+        "Burrow",
+        "overlordspeed",
+        "overlordtransport"
+      ],
       "unlocks": []
     },
     "Hive": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "Burrow",
+        "overlordspeed",
+        "overlordtransport"
+      ],
       "unlocks": []
     },
     "HydraliskDen": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "EvolveGroovedSpines",
+        "EvolveMuscularAugments",
+        "hydraliskspeed"
+      ],
       "unlocks": [
         "Hydralisk"
       ]
@@ -1074,6 +1170,11 @@
     "InfestationPit": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "InfestorEnergyUpgrade",
+        "MicrobialShroud",
+        "NeuralParasite"
+      ],
       "unlocks": [
         "SwarmHostMP"
       ]
@@ -1091,6 +1192,11 @@
     "Lair": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "Burrow",
+        "overlordspeed",
+        "overlordtransport"
+      ],
       "unlocks": [
         "Overseer"
       ]
@@ -1098,6 +1204,11 @@
     "LurkerDenMP": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "EvolveGroovedSpines",
+        "EvolveMuscularAugments",
+        "hydraliskspeed"
+      ],
       "unlocks": [
         "LurkerMP"
       ]
@@ -1175,6 +1286,10 @@
     "RoachWarren": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "GlialReconstitution",
+        "TunnelingClaws"
+      ],
       "unlocks": [
         "Roach"
       ]
@@ -1182,6 +1297,11 @@
     "RoboticsBay": {
       "produces": [],
       "race": "Protoss",
+      "researches": [
+        "ExtendedThermalLance",
+        "GraviticDrive",
+        "ObserverGraviticBooster"
+      ],
       "unlocks": [
         "Colossus"
       ]
@@ -1209,6 +1329,10 @@
     "SpawningPool": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "zerglingattackspeed",
+        "zerglingmovementspeed"
+      ],
       "unlocks": [
         "Queen",
         "Zergling"
@@ -1227,6 +1351,14 @@
     "Spire": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "ZergFlyerArmorsLevel1",
+        "ZergFlyerArmorsLevel2",
+        "ZergFlyerArmorsLevel3",
+        "ZergFlyerWeaponsLevel1",
+        "ZergFlyerWeaponsLevel2",
+        "ZergFlyerWeaponsLevel3"
+      ],
       "unlocks": [
         "Corruptor",
         "Mutalisk"
@@ -1291,6 +1423,10 @@
     "TemplarArchive": {
       "produces": [],
       "race": "Protoss",
+      "researches": [
+        "HighTemplarKhaydarinAmulet",
+        "PsiStormTech"
+      ],
       "unlocks": [
         "Archon",
         "HighTemplar"
@@ -1299,11 +1435,23 @@
     "TwilightCouncil": {
       "produces": [],
       "race": "Protoss",
+      "researches": [
+        "AdeptPiercingAttack",
+        "AmplifiedShielding",
+        "BlinkTech",
+        "Charge",
+        "PsionicAmplifiers",
+        "SunderingImpact"
+      ],
       "unlocks": []
     },
     "UltraliskCavern": {
       "produces": [],
       "race": "Zerg",
+      "researches": [
+        "AnabolicSynthesis",
+        "ChitinousPlating"
+      ],
       "unlocks": [
         "Ultralisk"
       ]
