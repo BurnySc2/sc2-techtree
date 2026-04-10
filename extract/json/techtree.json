@@ -849,14 +849,17 @@
   },
   "structures": {
     "AccelerationZoneBase": {
+      "produces": [],
       "race": null,
       "unlocks": []
     },
     "AccelerationZoneFlyingBase": {
+      "produces": [],
       "race": null,
       "unlocks": []
     },
     "Armory": {
+      "produces": [],
       "race": "Terran",
       "unlocks": [
         "Thor",
@@ -864,131 +867,139 @@
       ]
     },
     "Assimilator": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "AssimilatorRich": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "AutoTurret": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "BanelingNest": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
         "Baneling"
       ]
     },
     "Barracks": {
-      "race": "Terran",
-      "unlocks": [
-        "Bunker",
-        "Ghost",
-        "Factory",
-        "Marauder",
+      "produces": [
         "Marine",
-        "GhostAcademy",
-        "Reaper"
-      ]
+        "Marauder",
+        "Reaper",
+        "Ghost"
+      ],
+      "race": "Terran",
+      "unlocks": []
     },
     "BarracksFlying": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "BarracksReactor": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "Bunker": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "CommandCenter": {
-      "race": "Terran",
-      "unlocks": [
-        "SCV",
+      "produces": [
         "PlanetaryFortress",
-        "OrbitalCommand",
-        "EngineeringBay"
-      ]
+        "SCV",
+        "OrbitalCommand"
+      ],
+      "race": "Terran",
+      "unlocks": []
     },
     "CommandCenterFlying": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "CreepTumor": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "CreepTumorBurrowed": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "CreepTumorQueen": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "CyberneticsCore": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": [
-        "Sentry",
-        "ShieldBattery",
-        "Stargate",
         "Stalker",
-        "RoboticsFacility",
-        "TwilightCouncil",
+        "Sentry",
         "Adept"
       ]
     },
     "DarkShrine": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": [
-        "DarkTemplar",
-        "Archon"
+        "Archon",
+        "DarkTemplar"
       ]
     },
     "EngineeringBay": {
+      "produces": [],
       "race": "Terran",
-      "unlocks": [
-        "SensorTower",
-        "MissileTurret"
-      ]
+      "unlocks": []
     },
     "EvolutionChamber": {
+      "produces": [],
       "race": "Zerg",
-      "unlocks": [
-        "SporeCrawler"
-      ]
+      "unlocks": []
     },
     "Extractor": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "ExtractorRich": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "Factory": {
-      "race": "Terran",
-      "unlocks": [
-        "WidowMine",
+      "produces": [
         "Thor",
-        "Starport",
-        "Armory",
+        "WidowMine",
         "SiegeTank"
-      ]
+      ],
+      "race": "Terran",
+      "unlocks": []
     },
     "FactoryFlying": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "FactoryReactor": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "FleetBeacon": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": [
         "Carrier",
@@ -996,205 +1007,223 @@
       ]
     },
     "ForceField": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "Forge": {
+      "produces": [],
       "race": "Protoss",
-      "unlocks": [
-        "PhotonCannon"
-      ]
+      "unlocks": []
     },
     "FusionCore": {
+      "produces": [],
       "race": "Terran",
       "unlocks": [
         "Battlecruiser"
       ]
     },
     "Gateway": {
-      "race": "Protoss",
-      "unlocks": [
-        "CyberneticsCore",
-        "Zealot",
+      "produces": [
+        "HighTemplar",
         "WarpGate",
-        "Sentry",
         "DarkTemplar",
         "Stalker",
-        "HighTemplar"
-      ]
+        "Sentry",
+        "Zealot"
+      ],
+      "race": "Protoss",
+      "unlocks": []
     },
     "GhostAcademy": {
+      "produces": [],
       "race": "Terran",
       "unlocks": [
         "Ghost"
       ]
     },
     "GreaterSpire": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
         "BroodLord"
       ]
     },
     "Hatchery": {
-      "race": "Zerg",
-      "unlocks": [
-        "Queen",
-        "EvolutionChamber",
+      "produces": [
         "Larva",
-        "SpawningPool"
-      ]
+        "Queen"
+      ],
+      "race": "Zerg",
+      "unlocks": []
     },
     "Hive": {
+      "produces": [],
       "race": "Zerg",
-      "unlocks": [
-        "UltraliskCavern"
-      ]
+      "unlocks": []
     },
     "HydraliskDen": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
-        "Hydralisk",
-        "LurkerDenMP"
+        "Hydralisk"
       ]
     },
     "InfestationPit": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
-        "Infestor",
         "SwarmHostMP"
       ]
     },
     "InhibitorZoneBase": {
+      "produces": [],
       "race": null,
       "unlocks": []
     },
     "InhibitorZoneFlyingBase": {
+      "produces": [],
       "race": null,
       "unlocks": []
     },
     "Lair": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
-        "Spire",
-        "NydusNetwork",
-        "Overseer",
-        "InfestationPit",
-        "HydraliskDen"
+        "Overseer"
       ]
     },
     "LurkerDenMP": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
         "LurkerMP"
       ]
     },
     "MissileTurret": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "Nexus": {
-      "race": "Protoss",
-      "unlocks": [
+      "produces": [
         "Mothership",
-        "Gateway",
-        "Forge",
         "Probe"
-      ]
+      ],
+      "race": "Protoss",
+      "unlocks": []
     },
     "NydusCanal": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "NydusNetwork": {
-      "race": "Zerg",
-      "unlocks": [
+      "produces": [
         "NydusCanal"
-      ]
+      ],
+      "race": "Zerg",
+      "unlocks": []
     },
     "OrbitalCommand": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "OrbitalCommandFlying": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "PhotonCannon": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "PlanetaryFortress": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "Pylon": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "Reactor": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "Refinery": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "RefineryRich": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "RenegadeMissileTurret": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "RoachWarren": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
         "Roach"
       ]
     },
     "RoboticsBay": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": [
         "Colossus"
       ]
     },
     "RoboticsFacility": {
-      "race": "Protoss",
-      "unlocks": [
-        "Observer",
-        "Immortal",
+      "produces": [
         "WarpPrism",
-        "Colossus"
-      ]
+        "Observer",
+        "Colossus",
+        "Immortal"
+      ],
+      "race": "Protoss",
+      "unlocks": []
     },
     "SensorTower": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "ShieldBattery": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "SpawningPool": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
-        "SpineCrawler",
-        "BanelingNest",
-        "Zergling",
         "Queen",
-        "RoachWarren"
+        "Zergling"
       ]
     },
     "SpineCrawler": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "SpineCrawlerUprooted": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "Spire": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
         "Corruptor",
@@ -1202,76 +1231,82 @@
       ]
     },
     "SporeCrawler": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "SporeCrawlerUprooted": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "Stargate": {
-      "race": "Protoss",
-      "unlocks": [
+      "produces": [
         "Carrier",
-        "VoidRay",
-        "FleetBeacon",
-        "Oracle"
-      ]
+        "Oracle",
+        "VoidRay"
+      ],
+      "race": "Protoss",
+      "unlocks": []
     },
     "Starport": {
-      "race": "Terran",
-      "unlocks": [
-        "Raven",
-        "Battlecruiser",
+      "produces": [
         "VikingFighter",
+        "Banshee",
         "Medivac",
-        "FusionCore",
-        "Banshee"
-      ]
+        "Raven",
+        "Battlecruiser"
+      ],
+      "race": "Terran",
+      "unlocks": []
     },
     "StarportFlying": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "StarportReactor": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "SupplyDepot": {
+      "produces": [],
       "race": "Terran",
-      "unlocks": [
-        "Barracks"
-      ]
+      "unlocks": []
     },
     "SupplyDepotLowered": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "TechLab": {
+      "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "TemplarArchive": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": [
-        "HighTemplar",
-        "Archon"
+        "Archon",
+        "HighTemplar"
       ]
     },
     "TwilightCouncil": {
+      "produces": [],
       "race": "Protoss",
-      "unlocks": [
-        "DarkShrine",
-        "TemplarArchive"
-      ]
+      "unlocks": []
     },
     "UltraliskCavern": {
+      "produces": [],
       "race": "Zerg",
       "unlocks": [
         "Ultralisk"
       ]
     },
     "WarpGate": {
+      "produces": [],
       "race": "Protoss",
       "unlocks": []
     }
@@ -1313,16 +1348,14 @@
     "Banshee": {
       "race": "Terran",
       "requires": [
-        "AttachedTechLab",
-        "Starport"
+        "AttachedTechLab"
       ]
     },
     "Battlecruiser": {
       "race": "Terran",
       "requires": [
         "AttachedStarportTechLabAndFusionCore",
-        "FusionCore",
-        "Starport"
+        "FusionCore"
       ]
     },
     "BroodLord": {
@@ -1342,8 +1375,7 @@
     "Carrier": {
       "race": "Protoss",
       "requires": [
-        "FleetBeacon",
-        "Stargate"
+        "FleetBeacon"
       ]
     },
     "Changeling": {
@@ -1353,8 +1385,7 @@
     "Colossus": {
       "race": "Protoss",
       "requires": [
-        "RoboticsBay",
-        "RoboticsFacility"
+        "RoboticsBay"
       ]
     },
     "Corruptor": {
@@ -1374,8 +1405,7 @@
     "DarkTemplar": {
       "race": "Protoss",
       "requires": [
-        "DarkShrine",
-        "Gateway"
+        "DarkShrine"
       ]
     },
     "Drone": {
@@ -1394,7 +1424,6 @@
       "race": "Terran",
       "requires": [
         "AttachedBarrTechLabAndShadowOps",
-        "Barracks",
         "GhostAcademy"
       ]
     },
@@ -1405,7 +1434,6 @@
     "HighTemplar": {
       "race": "Protoss",
       "requires": [
-        "Gateway",
         "TemplarArchive",
         "TemplarArchives"
       ]
@@ -1426,9 +1454,7 @@
     },
     "Immortal": {
       "race": "Protoss",
-      "requires": [
-        "RoboticsFacility"
-      ]
+      "requires": []
     },
     "InfestedTerransEgg": {
       "race": "Zerg",
@@ -1463,7 +1489,6 @@
     "Larva": {
       "race": "Zerg",
       "requires": [
-        "Hatchery",
         "Larva"
       ]
     },
@@ -1492,27 +1517,21 @@
     "Marauder": {
       "race": "Terran",
       "requires": [
-        "AttachedTechLab",
-        "Barracks"
+        "AttachedTechLab"
       ]
     },
     "Marine": {
       "race": "Terran",
-      "requires": [
-        "Barracks"
-      ]
+      "requires": []
     },
     "Medivac": {
       "race": "Terran",
-      "requires": [
-        "Starport"
-      ]
+      "requires": []
     },
     "Mothership": {
       "race": "Protoss",
       "requires": [
-        "FleetBeacon",
-        "Nexus"
+        "FleetBeacon"
       ]
     },
     "Mutalisk": {
@@ -1523,9 +1542,7 @@
     },
     "Observer": {
       "race": "Protoss",
-      "requires": [
-        "RoboticsFacility"
-      ]
+      "requires": []
     },
     "Overlord": {
       "race": "Zerg",
@@ -1555,14 +1572,11 @@
     },
     "Probe": {
       "race": "Protoss",
-      "requires": [
-        "Nexus"
-      ]
+      "requires": []
     },
     "Queen": {
       "race": "Zerg",
       "requires": [
-        "Hatchery",
         "SpawningPool"
       ]
     },
@@ -1585,15 +1599,13 @@
     "Raven": {
       "race": "Terran",
       "requires": [
-        "AttachedTechLab",
-        "Starport"
+        "AttachedTechLab"
       ]
     },
     "Reaper": {
       "race": "Terran",
       "requires": [
-        "AttachedTechLab",
-        "Barracks"
+        "AttachedTechLab"
       ]
     },
     "ReaperPlaceholder": {
@@ -1613,9 +1625,7 @@
     },
     "SCV": {
       "race": "Terran",
-      "requires": [
-        "CommandCenter"
-      ]
+      "requires": []
     },
     "ScopeTest": {
       "race": "Terran",
@@ -1624,15 +1634,13 @@
     "Sentry": {
       "race": "Protoss",
       "requires": [
-        "CyberneticsCore",
-        "Gateway"
+        "CyberneticsCore"
       ]
     },
     "SiegeTank": {
       "race": "Terran",
       "requires": [
-        "AttachedTechLab",
-        "Factory"
+        "AttachedTechLab"
       ]
     },
     "SiegeTankSieged": {
@@ -1650,16 +1658,14 @@
     "Stalker": {
       "race": "Protoss",
       "requires": [
-        "CyberneticsCore",
-        "Gateway"
+        "CyberneticsCore"
       ]
     },
     "Thor": {
       "race": "Terran",
       "requires": [
         "Armory",
-        "ArmoryAndAttachedTechLab",
-        "Factory"
+        "ArmoryAndAttachedTechLab"
       ]
     },
     "ThorAP": {
@@ -1690,21 +1696,15 @@
     },
     "VikingFighter": {
       "race": "Terran",
-      "requires": [
-        "Starport"
-      ]
+      "requires": []
     },
     "VoidRay": {
       "race": "Protoss",
-      "requires": [
-        "Stargate"
-      ]
+      "requires": []
     },
     "WarpPrism": {
       "race": "Protoss",
-      "requires": [
-        "RoboticsFacility"
-      ]
+      "requires": []
     },
     "WarpPrismPhasing": {
       "race": "Protoss",
@@ -1716,9 +1716,7 @@
     },
     "Zealot": {
       "race": "Protoss",
-      "requires": [
-        "Gateway"
-      ]
+      "requires": []
     },
     "Zergling": {
       "race": "Zerg",

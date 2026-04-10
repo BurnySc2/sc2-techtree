@@ -130,12 +130,12 @@ def main():
         if is_structure:
             produced = building_produces.get(name, [])
             unlocked = building_unlocks.get(name, [])
-            unlocks = [u for u in produced if isinstance(u, str)]
-            unlocks.extend(u for u in unlocked if isinstance(u, str))
-            unlocks.extend(unit for unit, req in build_requirements.items() if req == name)
+            produces = list({u for u in produced if isinstance(u, str)})
+            unlocks = list({u for u in unlocked if isinstance(u, str)})
 
             structures[name] = {
-                "unlocks": list(set(unlocks)),
+                "produces": produces,
+                "unlocks": unlocks,
                 "race": race,
             }
 
@@ -151,10 +151,6 @@ def main():
 
             for building, unlocked_units in building_unlocks.items():
                 if name in unlocked_units:
-                    requires.add(building)
-
-            for building, produced_units in building_produces.items():
-                if name in produced_units:
                     requires.add(building)
 
             if name in build_requirements:
