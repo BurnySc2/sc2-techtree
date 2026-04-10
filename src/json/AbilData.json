@@ -1060,18 +1060,6 @@
     "Effect": "BattlecruiserAttackTrackerStopSet",
     "Flags": "Transient"
   },
-  "Beacon": {
-    "CmdButtonArray": [
-      {
-        "DefaultButtonFace": "BeaconMove",
-        "index": "Move"
-      },
-      {
-        "DefaultButtonFace": "Cancel",
-        "index": "Cancel"
-      }
-    ]
-  },
   "BlindingCloud": {
     "AINotifyEffect": "BlindingCloudCP",
     "CmdButtonArray": {
@@ -4848,23 +4836,6 @@
     "TargetSorts": {
       "SortArray": "TSRandom"
     }
-  },
-  "HoldFire": {
-    "CmdButtonArray": [
-      {
-        "DefaultButtonFace": "",
-        "index": "Cheer"
-      },
-      {
-        "DefaultButtonFace": "",
-        "index": "Dance"
-      },
-      {
-        "DefaultButtonFace": "StopSpecial",
-        "index": "Stop"
-      }
-    ],
-    "Flags": "HoldFire"
   },
   "HydraliskDenResearch": {
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
@@ -10001,30 +9972,6 @@
     ],
     "Range": 7
   },
-  "ReviveSelf": {
-    "SelfReviveCmd": "Revive1",
-    "SharedFlags": 0,
-    "default": 1
-  },
-  "ReviveSelfAtTarget": {
-    "SelfReviveCmd": "ReviveAtTarget1",
-    "default": 1,
-    "parent": "ReviveSelf"
-  },
-  "ReviveSelfOnCreep": {
-    "TargetType": "Point",
-    "ValidatorArray": [
-      "HasVisionOfTarget",
-      "TargetOnCreep"
-    ],
-    "default": 1,
-    "parent": "ReviveSelfAtTarget"
-  },
-  "ReviveSelfReplaceTarget": {
-    "ReplaceFilters": "Ground;Self,Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable",
-    "default": 1,
-    "parent": "ReviveSelfAtTarget"
-  },
   "RoachWarrenResearch": {
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
     "InfoArray": [
@@ -12109,14 +12056,6 @@
   },
   "Tarsonis_DoorNWLowered": {
     "parent": "Tarsonis_DoorDefaultLower"
-  },
-  "Taunt": {
-    "CmdButtonArray": {
-      "DefaultButtonFace": "Taunt",
-      "index": "Execute"
-    },
-    "Effect": "taunt",
-    "Range": 10
   },
   "TechLabMorph": {
     "CmdButtonArray": {
@@ -14669,12 +14608,7 @@
     ]
   },
   "move": {
-    "AbilSetId": "Move",
-    "FleeRange": 5,
-    "FleeTime": 5,
-    "FollowAcquireRange": 6,
-    "FollowRangeSlop": 1,
-    "MinPatrolDistance": 1
+    "AbilSetId": "Move"
   },
   "que1": {
     "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
@@ -14720,12 +14654,6 @@
     "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
     "QueueCount": 2,
     "QueueSize": 8
-  },
-  "stop": {
-    "CmdButtonArray": {
-      "DefaultButtonFace": "HoldFireSpecial",
-      "index": "HoldFire"
-    }
   },
   "stopProtossBuilding": {
     "CmdButtonArray": {

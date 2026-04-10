@@ -3470,31 +3470,9 @@
     "ValidatorArray": "",
     "Visibility": "Visible"
   },
-  "CopyCasterFacing": {
-    "FacingLocation": {
-      "Value": "CasterUnit"
-    }
-  },
   "CopyOrders": {
     "CopyOrderCount": 32,
     "ModifyFlags": "CopyAutoCast"
-  },
-  "CopyTargetFacing": {
-    "FacingLocation": {
-      "Value": "TargetUnit"
-    },
-    "ImpactUnit": {
-      "Value": "Caster"
-    }
-  },
-  "CopyTargetSelectionAndControlGroups": {
-    "ImpactUnit": {
-      "Value": "Caster"
-    },
-    "SelectTransferFlags": "IncludeControlGroups",
-    "SelectTransferUnit": {
-      "Value": "Target"
-    }
   },
   "Corruption": {
     "EditorCategories": "Race:Zerg",
@@ -4103,31 +4081,6 @@
     "AmmoUnit": "D8ChargeWeapon",
     "EditorCategories": "Race:Terran",
     "ImpactEffect": "D8ChargeDamage"
-  },
-  "DU_WEAP": {
-    "ArmorReduction": 1,
-    "Flags": "Notification",
-    "Kind": "Melee",
-    "ResponseFlags": [
-      "Acquire",
-      "Flee"
-    ],
-    "SearchFlags": [
-      "CallForHelp",
-      "OffsetAreaByAngle",
-      "OffsetByUnitRadius"
-    ],
-    "default": 1
-  },
-  "DU_WEAP_MISSILE": {
-    "Kind": "Ranged",
-    "default": 1,
-    "parent": "DU_WEAP"
-  },
-  "DU_WEAP_SPLASH": {
-    "Kind": "Splash",
-    "default": 1,
-    "parent": "DU_WEAP"
   },
   "DamageTakenBarrieAutocastAB": {
     "Behavior": "TakenDamage",
@@ -4938,10 +4891,6 @@
     "Amount": 150,
     "EditorCategories": "Race:Zerg"
   },
-  "EA_WEAP": {
-    "SearchFlags": "CallForHelp",
-    "default": 1
-  },
   "EMPApplyDecloakBehavior": {
     "Behavior": "EMPDecloak",
     "EditorCategories": "Race:Terran"
@@ -5492,16 +5441,6 @@
     "EditorCategories": "Race:Zerg",
     "Visibility": "Visible",
     "parent": "DU_WEAP_MISSILE"
-  },
-  "GrabDummyCP": {
-    "ExpireDelay": 0.0625,
-    "WhichLocation": {
-      "Value": "TargetUnit"
-    }
-  },
-  "GrabThrowMissileTag": {
-    "ExpireDelay": 0.25,
-    "ValidatorArray": "HasGrabbedBehavior"
   },
   "GrappleCasterInMotionApplyBehavior": {
     "Behavior": "GrappleCasterInMotion",
@@ -6828,7 +6767,6 @@
       "Value": "TargetUnit"
     }
   },
-  "InvisibleModelSwapper": null,
   "InvulnerabilityShield": {
     "EditorCategories": "Race:Protoss"
   },
@@ -8029,12 +7967,6 @@
     "EditorCategories": "Race:Terran",
     "parent": "DU_WEAP_MISSILE"
   },
-  "LookAtCaster": {
-    "FacingLocation": {
-      "Value": "CasterUnit"
-    },
-    "FacingType": "LookAt"
-  },
   "LurkerHoldFire": {
     "EditorCategories": "Race:Zerg",
     "WhichUnit": {
@@ -8240,9 +8172,6 @@
     "ImpactUnit": {
       "Value": "Caster"
     }
-  },
-  "MakePrecursor": {
-    "Behavior": "Precursor"
   },
   "MakePrecursorCore": {
     "Behavior": "PrecursorCore"
@@ -12298,9 +12227,6 @@
       "Effect": "YoinkStartCreatePlaceholderVikingGround"
     }
   },
-  "RemovePrecursor": {
-    "BehaviorLink": "Precursor"
-  },
   "RemovePrecursorLocust": {
     "BehaviorLink": "PrecursorLocust"
   },
@@ -13807,7 +13733,6 @@
     "EditorCategories": "Race:Zerg",
     "parent": "DU_WEAP"
   },
-  "SplashDamage": null,
   "SporeCrawler": {
     "EditorCategories": "Race:Zerg",
     "ImpactEffect": "SporeCrawlerU"
@@ -13878,15 +13803,6 @@
     "EditorCategories": "Race:Terran",
     "Marker": "Effect/Stimpack",
     "ValidatorArray": "StimpackTargetFilters"
-  },
-  "Suicide": {
-    "Flags": [
-      "Kill",
-      "NoKillCredit"
-    ],
-    "ImpactLocation": {
-      "Value": "SourceUnit"
-    }
   },
   "SuicideRemove": {
     "Death": "Remove",
@@ -14890,13 +14806,6 @@
     "WhichUnit": {
       "Effect": "TimeWarpCP"
     }
-  },
-  "TimedLifeFate": {
-    "Death": "Timeout",
-    "Flags": [
-      "Kill",
-      "NoKillCredit"
-    ]
   },
   "TornadoMissileCP": {
     "EditorCategories": "Race:Zerg",
@@ -17788,12 +17697,5 @@
     "ExpireDelay": 0.5,
     "FinalEffect": "ZergBuildingSpawnBroodling9",
     "ValidatorArray": "CasterIsNotHidden"
-  },
-  "taunt": {
-    "AreaArray": {
-      "Effect": "tauntb",
-      "Radius": "4"
-    }
-  },
-  "tauntb": null
+  }
 }

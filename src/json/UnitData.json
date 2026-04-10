@@ -2343,107 +2343,10 @@
     "Race": "Terr",
     "parent": "MISSILE_INVULNERABLE"
   },
-  "BEACON": {
-    "EditorFlags": [
-      "NoPalettes",
-      "NoPlacement"
-    ],
-    "FlagArray": [
-      0,
-      0,
-      0,
-      "Invulnerable",
-      "NoScore",
-      "ShareControl",
-      "Uncommandable",
-      "Undetectable",
-      "Unradarable",
-      "Unselectable",
-      "Untargetable"
-    ],
-    "HotkeyAlias": "",
-    "LeaderAlias": "",
-    "LifeMax": 10000,
-    "LifeStart": 10000,
-    "MinimapRadius": 1,
-    "PlaneArray": [
-      "Air"
-    ],
-    "Response": "Nothing",
-    "default": 1
-  },
   "BacklashRocketsLMWeapon": {
     "EditorCategories": "ObjectType:Projectile,ObjectFamily:Melee",
     "Race": "Terr",
     "parent": "MISSILE"
-  },
-  "Ball": {
-    "AbilArray": [
-      "Taunt",
-      "move",
-      "stop"
-    ],
-    "Acceleration": 2.1875,
-    "Attributes": [
-      "Biological"
-    ],
-    "BehaviorArray": [
-      "PermanentlyInvulnerable"
-    ],
-    "CardLayouts": {
-      "LayoutButtons": [
-        {
-          "AbilCmd": "Taunt,Execute",
-          "Column": "0",
-          "Face": "Taunt",
-          "Row": "3",
-          "Type": "AbilCmd"
-        },
-        {
-          "AbilCmd": "move,HoldPos",
-          "Column": "2",
-          "Face": "MoveHoldPosition",
-          "Row": "0",
-          "Type": "AbilCmd"
-        },
-        {
-          "AbilCmd": "move,Move",
-          "Column": "0",
-          "Face": "Move",
-          "Row": "0",
-          "Type": "AbilCmd"
-        },
-        {
-          "AbilCmd": "move,Patrol",
-          "Column": "0",
-          "Face": "MovePatrol",
-          "Row": "1",
-          "Type": "AbilCmd"
-        },
-        {
-          "AbilCmd": "stop,Stop",
-          "Column": "1",
-          "Face": "Stop",
-          "Row": "0",
-          "Type": "AbilCmd"
-        }
-      ]
-    },
-    "Deceleration": 2.1875,
-    "EditorFlags": [
-      "NoPalettes"
-    ],
-    "FlagArray": [
-      "Bounce"
-    ],
-    "Height": 0.5,
-    "InnerRadius": 0.625,
-    "LateralAcceleration": 2.1875,
-    "MinimapRadius": 0.625,
-    "Radius": 0.625,
-    "SeparationRadius": 0.625,
-    "Speed": 6,
-    "SubgroupPriority": 1
   },
   "Baneling": {
     "AIEvalFactor": 3,
@@ -4892,7 +4795,6 @@
       "NoPlacement"
     ]
   },
-  "Burrow": "Land1",
   "BypassArmorDrone": {
     "AbilArray": [
       "attack",
@@ -7149,13 +7051,17 @@
     "GlossaryCategory": "Unit/Category/ProtossUnits",
     "GlossaryPriority": 130,
     "GlossaryStrongArray": [
+      "Marine",
+      "Zealot",
       "Zealot",
       "Zergling",
       "Zergling"
     ],
     "GlossaryWeakArray": [
       "Corruptor",
+      "Immortal",
       "Tempest",
+      "Thor",
       "Ultralisk",
       "VikingFighter"
     ],
@@ -7193,9 +7099,7 @@
     "WeaponArray": {
       "Link": "ThermalLances",
       "Turret": "Colossus"
-    },
-    "path": "CUnit.Collide.index",
-    "value": "Land5"
+    }
   },
   "ColossusACGluescreenDummy": {
     "EditorFlags": [
@@ -8160,9 +8064,7 @@
     "SubgroupAlias": "CreepTumorBurrowed",
     "SubgroupPriority": 2,
     "TechAliasArray": "Alias_CreepTumor",
-    "TurningRate": 719.4726,
-    "path": "CUnit.Collide.index",
-    "value": "Land10"
+    "TurningRate": 719.4726
   },
   "CreepTumorBurrowed": {
     "AIEvalFactor": 0,
@@ -8872,31 +8774,6 @@
     "Mover": "D8Charge",
     "Race": "Terr",
     "parent": "MISSILE"
-  },
-  "DESTRUCTIBLE": {
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorCategories": "ObjectType:Destructible",
-    "Fidget": {
-      "DelayMax": "0",
-      "DelayMin": "0"
-    },
-    "FlagArray": [
-      0,
-      0,
-      "CreateVisible",
-      "Destructible",
-      "FootprintAlwaysIgnoreHeight",
-      "Uncommandable"
-    ],
-    "FogVisibility": "Snapshot",
-    "LifeMax": 10,
-    "LifeStart": 10,
-    "MinimapRadius": 0,
-    "Response": "Nothing",
-    "StationaryTurningRate": 0,
-    "TurningRate": 0,
-    "default": 1
   },
   "DarkArchonACGluescreenDummy": {
     "EditorFlags": [
@@ -11955,10 +11832,14 @@
     ],
     "Food": -3,
     "GlossaryStrongArray": [
+      "Hydralisk",
+      "Marauder",
       "Probe"
     ],
     "GlossaryWeakArray": [
-      "Immortal"
+      "Immortal",
+      "Thor",
+      "Ultralisk"
     ],
     "InnerRadius": 0.5,
     "KillDisplay": "Never",
@@ -11987,9 +11868,7 @@
     "StationaryTurningRate": 999.8437,
     "SubgroupPriority": 17,
     "TacticalAIThink": "AIThinkDisruptorPhased",
-    "TurningRate": 999.8437,
-    "path": "CUnit.Collide.index",
-    "value": "Land15"
+    "TurningRate": 999.8437
   },
   "Dog": {
     "Description": "Button/Tooltip/CritterDog",
@@ -14346,9 +14225,6 @@
     ],
     "TurningRate": 719.4726
   },
-  "Flying": "Air1",
-  "FlyingEscorts": "Air3",
-  "FlyingImmobile": "Air2",
   "FlyoverUnit": {
     "AbilArray": [
       "attack",
@@ -14471,9 +14347,7 @@
     "Race": "Prot",
     "Radius": 1.5,
     "SeparationRadius": 0,
-    "SubgroupPriority": 31,
-    "path": "CUnit.Collide.index",
-    "value": "Land9"
+    "SubgroupPriority": 31
   },
   "Forge": {
     "AbilArray": [
@@ -15639,7 +15513,6 @@
     "TechTreeUnlockedUnitArray": "BroodLord",
     "TurningRate": 719.4726
   },
-  "Ground": "Land2",
   "GuardianACGluescreenDummy": {
     "EditorFlags": [
       "NoPlacement"
@@ -17686,30 +17559,6 @@
     "EditorFlags": [
       "NoPlacement"
     ]
-  },
-  "ITEM": {
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorCategories": "ObjectType:Item",
-    "Fidget": {
-      "DelayMax": "0",
-      "DelayMin": "0"
-    },
-    "FlagArray": [
-      0,
-      0,
-      "Invulnerable",
-      "Uncommandable"
-    ],
-    "Item": "##id##",
-    "LifeMax": 10,
-    "LifeStart": 10,
-    "MinimapRadius": 0,
-    "Response": "Nothing",
-    "Sight": 2.5,
-    "StationaryTurningRate": 0,
-    "TurningRate": 0,
-    "default": 1
   },
   "Ice2x2NonConjoined": {
     "Attributes": [
@@ -19813,12 +19662,18 @@
     "Speed": 0.5625,
     "SubgroupPriority": 58,
     "TechTreeProducedUnitArray": [
+      "Corruptor",
+      "Hydralisk",
+      "Infestor",
+      "Mutalisk",
+      "Overlord",
+      "Roach",
       "SwarmHostMP",
       "Ultralisk",
-      "Viper"
-    ],
-    "path": "CUnit.Collide.index",
-    "value": "Land3"
+      "Ultralisk",
+      "Viper",
+      "Zergling"
+    ]
   },
   "LarvaReleaseMissile": {
     "EditorCategories": "ObjectType:Projectile,ObjectFamily:Melee",
@@ -21011,54 +20866,6 @@
     "Description": "Button/Tooltip/CritterLyote",
     "Mob": "Multiplayer",
     "parent": "Critter"
-  },
-  "MISSILE": {
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorCategories": "ObjectType:Projectile",
-    "EditorFlags": [
-      "NoPlacement"
-    ],
-    "Fidget": {
-      "DelayMax": "0",
-      "DelayMin": "0"
-    },
-    "FlagArray": [
-      0,
-      0,
-      "Missile",
-      "NoDeathEvent",
-      "NoScore",
-      "Uncommandable",
-      "Unselectable",
-      "Untargetable"
-    ],
-    "HotkeyAlias": "",
-    "LeaderAlias": "",
-    "LifeMax": 10,
-    "LifeStart": 10,
-    "MinimapRadius": 0,
-    "Mover": "##id##",
-    "PlaneArray": [
-      "Air"
-    ],
-    "Radius": 0,
-    "Response": "Nothing",
-    "SeparationRadius": 0,
-    "default": 1
-  },
-  "MISSILE_HALFLIFE": {
-    "LifeMax": 5,
-    "LifeStart": 5,
-    "default": 1,
-    "parent": "MISSILE"
-  },
-  "MISSILE_INVULNERABLE": {
-    "FlagArray": [
-      "Invulnerable"
-    ],
-    "default": 1,
-    "parent": "MISSILE"
   },
   "MULE": {
     "AIOverideTargetPriority": 10,
@@ -25144,103 +24951,6 @@
       "NoPlacement"
     ]
   },
-  "PATHINGBLOCKER": {
-    "Collide": [
-      "Burrow",
-      "Ground",
-      "Small",
-      "Structure"
-    ],
-    "EditorCategories": "ObjectType:Other,ObjectFamily:Melee",
-    "EditorFlags": [
-      "NeutralDefault"
-    ],
-    "FlagArray": [
-      "Invulnerable",
-      "PreventReveal",
-      "Undetectable",
-      "Unradarable",
-      "Unselectable",
-      "Untargetable"
-    ],
-    "MinimapRadius": 0,
-    "Mob": "Multiplayer",
-    "PlaneArray": [
-      "Ground"
-    ],
-    "SeparationRadius": 0,
-    "default": 1
-  },
-  "PLACEHOLDER": {
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorFlags": [
-      "NoPlacement"
-    ],
-    "FlagArray": [
-      "Invulnerable",
-      "NoDraw",
-      "NoScore",
-      "Uncommandable",
-      "Unselectable",
-      "Untargetable"
-    ],
-    "PlaneArray": [
-      "Ground"
-    ],
-    "default": 1
-  },
-  "PLACEHOLDER_AIR": {
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorFlags": [
-      "NoPlacement"
-    ],
-    "FlagArray": [
-      "Invulnerable",
-      "NoDraw",
-      "NoScore",
-      "Uncommandable",
-      "Unselectable",
-      "Untargetable"
-    ],
-    "Mover": "Fly",
-    "PlaneArray": [
-      "Air"
-    ],
-    "default": 1
-  },
-  "POWERUP": {
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorCategories": "ObjectType:Item",
-    "Fidget": {
-      "DelayMax": "0",
-      "DelayMin": "0"
-    },
-    "FlagArray": [
-      0,
-      0,
-      "Uncommandable"
-    ],
-    "LifeMax": 10,
-    "LifeStart": 10,
-    "MinimapRadius": 0,
-    "PowerupCost": {
-      "Charge": {
-        "CountMax": 1,
-        "CountStart": 1,
-        "CountUse": 1,
-        "Link": "##id##"
-      },
-      "Cooldown": "##id##"
-    },
-    "PowerupEffect": "##id##",
-    "Response": "Nothing",
-    "StationaryTurningRate": 0,
-    "TurningRate": 0,
-    "default": 1
-  },
   "ParasiteSporeWeapon": {
     "EditorCategories": "ObjectType:Projectile,ObjectFamily:Melee",
     "Mover": "MissileDefault",
@@ -25402,7 +25112,6 @@
     "PlacementFootprint": "Footprint1x1",
     "parent": "PATHINGBLOCKER"
   },
-  "Phased": "Land14",
   "Phoenix": {
     "AIEvalFactor": 0.7,
     "AbilArray": [
@@ -31065,7 +30774,6 @@
       "NoPlacement"
     ]
   },
-  "RoachBurrow": "Land7",
   "RoachBurrowed": {
     "AIEvaluateAlias": "Roach",
     "AbilArray": [
@@ -32112,120 +31820,6 @@
       "NoPlacement"
     ]
   },
-  "SMCAMERA": {
-    "AbilArray": [
-      "move",
-      "stop"
-    ],
-    "Collide": [
-      "Ground",
-      "Small"
-    ],
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorCategories": "ObjectType:PropStory",
-    "Fidget": {
-      "DelayMax": "0",
-      "DelayMin": "0"
-    },
-    "FlagArray": [
-      0,
-      0,
-      0,
-      "IgnoreTerrainZInit",
-      "Unselectable",
-      "Untargetable",
-      "UseLineOfSight"
-    ],
-    "MinimapRadius": 0,
-    "Mob": "Story",
-    "PlaneArray": [
-      "Ground"
-    ],
-    "Radius": 0,
-    "Response": "Nothing",
-    "SeparationRadius": 0,
-    "StationaryTurningRate": 0,
-    "TurningRate": 0,
-    "default": 1
-  },
-  "SMCHARACTER": {
-    "AbilArray": [
-      "move",
-      "stop"
-    ],
-    "Acceleration": 1000,
-    "Collide": [
-      "Ground",
-      "Small"
-    ],
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorCategories": "ObjectType:CharacterStory",
-    "Fidget": {
-      "ChanceArray": [
-        5,
-        95
-      ],
-      "DelayMax": 20
-    },
-    "FlagArray": [
-      0,
-      0,
-      0,
-      "Unselectable",
-      "Untargetable",
-      "UseLineOfSight"
-    ],
-    "LateralAcceleration": 46.0625,
-    "MinimapRadius": 0,
-    "Mob": "Story",
-    "PlaneArray": [
-      "Ground"
-    ],
-    "Radius": 0,
-    "Response": "Nothing",
-    "SeparationRadius": 0,
-    "Speed": 0.4492,
-    "StationaryTurningRate": 225,
-    "TurningRate": 180,
-    "default": 1
-  },
-  "SMSET": {
-    "Collide": [
-      "Ground",
-      "Small"
-    ],
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorCategories": "ObjectType:SetStory",
-    "Fidget": {
-      "DelayMax": "0",
-      "DelayMin": "0"
-    },
-    "FlagArray": [
-      0,
-      0,
-      0,
-      "IgnoreTerrainZInit",
-      "Unselectable",
-      "Untargetable",
-      "UseLineOfSight"
-    ],
-    "FogVisibility": "Visible",
-    "MinimapRadius": 0,
-    "Mob": "Story",
-    "PlaneArray": [
-      "Ground"
-    ],
-    "Race": "Terr",
-    "Radius": 0,
-    "Response": "Nothing",
-    "SeparationRadius": 0,
-    "StationaryTurningRate": 180,
-    "TurningRate": 180,
-    "default": 1
-  },
   "SNARE_PLACEHOLDER": {
     "BehaviorArray": [
       "DelayedRemove"
@@ -32244,40 +31838,6 @@
     ],
     "Height": 1,
     "parent": "PLACEHOLDER"
-  },
-  "STARMAP": {
-    "Collide": [
-      "Flying"
-    ],
-    "DeathRevealDuration": 0,
-    "DeathRevealRadius": 0,
-    "EditorCategories": "ObjectType:Campaign",
-    "Fidget": {
-      "DelayMax": "0",
-      "DelayMin": "0"
-    },
-    "FlagArray": [
-      0,
-      0,
-      0,
-      0,
-      "IgnoreTerrainZInit",
-      "Unselectable",
-      "Untargetable",
-      "UseLineOfSight"
-    ],
-    "MinimapRadius": 0,
-    "Mob": "Story",
-    "Mover": "Fly",
-    "PlaneArray": [
-      "Air"
-    ],
-    "Radius": 0,
-    "Response": "Nothing",
-    "SeparationRadius": 0,
-    "StationaryTurningRate": 180,
-    "TurningRate": 180,
-    "default": 1
   },
   "Scantipede": {
     "Description": "Button/Tooltip/CritterScantipede",
@@ -34223,7 +33783,6 @@
     "Mob": "Multiplayer",
     "parent": "Critter"
   },
-  "Small": "Land16",
   "SnowGlazeStarterMP": {
     "BehaviorArray": [
       "SnowGlazeStarterMP"
@@ -36040,19 +35599,11 @@
     "SubgroupAlias": "StarportTechLab",
     "parent": "TechLab"
   },
-  "StereoscopicOptionsUnit": {
-    "EditorCategories": "ObjectType:Other",
-    "EditorFlags": [
-      "NoPalettes",
-      "NoPlacement"
-    ]
-  },
   "StrikeGoliathACGluescreenDummy": {
     "EditorFlags": [
       "NoPlacement"
     ]
   },
-  "Structure": "Land6",
   "StukovBroodQueenACGluescreenDummy": {
     "EditorFlags": [
       "NoPlacement"
@@ -36277,7 +35828,6 @@
     "TechAliasArray": "Alias_SupplyDepot",
     "TurningRate": 719.4726
   },
-  "Swarm": "Land4",
   "SwarmHostACGluescreenDummy": {
     "EditorFlags": [
       "NoPlacement"
@@ -36662,12 +36212,6 @@
     ]
   },
   "SwarmlingACGluescreenDummy": {
-    "EditorFlags": [
-      "NoPlacement"
-    ]
-  },
-  "System_Snapshot_Dummy": {
-    "EditorCategories": "ObjectType:Other",
     "EditorFlags": [
       "NoPlacement"
     ]
@@ -37734,7 +37278,6 @@
     "Mob": "Multiplayer",
     "parent": "Critter"
   },
-  "TinyCritter": "Land8",
   "TornadoMissileDummyWeapon": {
     "EditorCategories": "ObjectType:Projectile,ObjectFamily:Melee",
     "Race": "Terr",

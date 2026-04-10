@@ -30,7 +30,7 @@ from copy import deepcopy
 
 # MOD_LOAD_ORDER: later files override earlier ones
 MOD_ORDER = [
-    "core.sc2mod",  # Optional?
+    # "core.sc2mod",  # With this enabled, armory unlocks WidowMine instead of Thor in techtree.json
     "liberty.sc2mod",
     "libertymulti.sc2mod",
     "swarm.sc2mod",  # Oracle, HellionTank

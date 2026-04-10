@@ -3664,11 +3664,6 @@
     "ScoreAmount": 100,
     "ScoreResult": "BuildOrder"
   },
-  "Research": {
-    "Alert": "ResearchComplete",
-    "InfoTooltipPriority": 1,
-    "default": 1
-  },
   "RestoreShields": {
     "AffectedUnitArray": "Oracle",
     "Alert": "ResearchComplete",

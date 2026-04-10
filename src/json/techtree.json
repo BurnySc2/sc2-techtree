@@ -3997,11 +3997,6 @@
       "race": "Terran",
       "requires": []
     },
-    "Research": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
     "RestoreShields": {
       "affected_units": [
         "Oracle"
