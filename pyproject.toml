@@ -6,13 +6,15 @@ authors = [{ name = "BurnySc2", email = "gamingburny@gmail.com" }]
 requires-python = ">=3.9, <3.13"
 
 dependencies = [
-  "burnysc2>=7.0.3",
   "loguru>=0.7.3",
-  "toml>=0.10.2",
+  "lxml>=6.0.3",
 ]
 
 [dependency-groups]
-dev = ["pyre-check>=0.9.23", "pyright>=1.1.391", "ruff>=0.8.4"]
+dev = [
+    "pyrefly>=0.60.1",
+    "ruff>=0.8.4",
+]
 
 [tool.yapf]
 based_on_style = "pep8"

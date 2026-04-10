@@ -16,6 +16,8 @@ generated/
 /.idea
 
 # Misc
-
 sc2
 .env*
+
+# Extracted xml files
+.xml
