@@ -2396,6 +2396,15 @@
       {
         "Time": "30",
         "index": "Train25"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "BuildCyclone",
+          "State": "Restricted"
+        },
+        "Time": 30,
+        "Unit": "Cyclone",
+        "index": "Train8"
       }
     ],
     "Range": 3

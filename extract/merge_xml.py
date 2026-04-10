@@ -38,6 +38,51 @@ MOD_ORDER = [
 
 DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData", "EffectData"]
 
+# Track which (parent_id, child_key) pairs exist in each source mod
+# Structure: {data_type: {parent_id: {child_key: set of mods containing it}}}
+_mod_child_tracking = {dt: {} for dt in DATA_TYPES}
+
+
+def get_fallback_path(data_type: str) -> Path | None:
+    """Get path to local fallback file for a data type if it exists."""
+    fallback_dir = Path(__file__).parent / "fallback"
+    fallback_path = fallback_dir / f"{data_type}.xml"
+    return fallback_path if fallback_path.exists() else None
+
+
+def get_fallback_tree(data_type: str) -> etree._ElementTree | None:
+    """Load fallback XML tree for a data type."""
+    fallback_path = get_fallback_path(data_type)
+    if fallback_path:
+        return etree.parse(str(fallback_path))
+    return None
+
+
+def load_child_tracking(data_type: str) -> dict:
+    """
+    Scan all source mods and build a dict of {parent_id: {child_key: set of mods}}.
+    This tracks which children each parent has in each source mod.
+    """
+    tracking = {}
+    for mod_name in MOD_ORDER:
+        xml_path = get_xml_path(mod_name, data_type)
+        if not xml_path.exists():
+            continue
+        try:
+            tree = etree.parse(str(xml_path))
+            for parent in tree.findall(".//*[@id]"):
+                parent_id = parent.get("id")
+                if parent_id not in tracking:
+                    tracking[parent_id] = {}
+                for child in parent:
+                    key = get_child_key(child)
+                    if key not in tracking[parent_id]:
+                        tracking[parent_id][key] = set()
+                    tracking[parent_id][key].add(mod_name)
+        except etree.XMLSyntaxError:
+            continue
+    return tracking
+
 
 def get_xml_path(mod_name: str, data_type: str) -> Path:
     """Get path to XML file in a mod."""
@@ -129,6 +174,47 @@ def merge_xml_trees(base_tree: etree._ElementTree, override_tree: etree._Element
     return base_tree
 
 
+def fill_missing_children_from_fallback(result_tree: etree._ElementTree, data_type: str) -> None:
+    """
+    After merging, check for missing children and fill them in from fallback source.
+
+    For each parent element with @id, look at all its children with @index.
+    If a child key was not found in ANY source mod (tracked by load_child_tracking),
+    but a fallback source is available, copy that child from the fallback.
+    """
+    fallback_tree = get_fallback_tree(data_type)
+    if fallback_tree is None:
+        return
+
+    tracking = load_child_tracking(data_type)
+
+    for parent in result_tree.findall(".//*[@id]"):
+        parent_id = parent.get("id")
+
+        fallback_parent = fallback_tree.find(f".//*[@id='{parent_id}']")
+        if fallback_parent is None:
+            continue
+
+        parent_tracking = tracking.get(parent_id, {})
+
+        for fallback_child in fallback_parent:
+            child_key = get_child_key(fallback_child)
+
+            # Check if this child was missing from ALL source mods
+            if child_key not in parent_tracking or not parent_tracking[child_key]:
+                # This child wasn't in any source - check if parent has it
+                existing = None
+                for existing_child in parent:
+                    if get_child_key(existing_child) == child_key:
+                        existing = existing_child
+                        break
+
+                if existing is None:
+                    child_idx = fallback_child.get("index", fallback_child.get("Link", ""))
+                    print(f"  [FALLBACK] Adding missing {fallback_child.tag}[@{child_idx}] to {parent_id}")
+                    parent.append(deepcopy(fallback_child))
+
+
 def merge_mods(data_type: str, output_path: Path) -> int:
     """
     Merge all mod XML files for a given data type.
@@ -163,6 +249,9 @@ def merge_mods(data_type: str, output_path: Path) -> int:
             print(f"  [ERROR] Failed to parse {xml_path}: {e}")
 
     if result_tree is not None:
+        # Fill in missing children from fallback source
+        fill_missing_children_from_fallback(result_tree, data_type)
+
         # Write merged result
         result_tree.write(str(output_path), xml_declaration=True, encoding="UTF-8", pretty_print=True)
         print(f"  [WRITE] {output_path}")
