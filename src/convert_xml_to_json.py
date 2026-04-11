@@ -63,7 +63,10 @@ def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
     attrs = {k: v for k, v in element.attrib.items() if k != "id"}
 
     # Link-only element (e.g., <AbilArray Link="stop"/>) -> string
-    if set(attrs.keys()) == {"Link"}:
+    # Also handles Link+index (e.g., <AbilArray index="5" Link="MorphToBaneling"/>) -> string
+    link_only_keys = {"Link"}
+    index_and_link_keys = {"index", "Link"}
+    if set(attrs.keys()) == link_only_keys or set(attrs.keys()) == index_and_link_keys:
         return attrs["Link"]
 
     # Has children - recurse

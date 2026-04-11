@@ -661,6 +661,51 @@
       "race": "Terran",
       "requires": []
     },
+    "BatteryOvercharge": {
+      "AINotifyEffect": "BatteryOverchargeCreateHealer",
+      "Alignment": "Negative",
+      "Arc": 360,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "BatteryOvercharge",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "Location": "Player",
+          "TimeUse": "84"
+        },
+        "Energy": 50
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": "BatteryOverchargeAB",
+      "Range": 500,
+      "TargetFilters": "Visible;Self,Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "name": "BatteryOvercharge",
+      "race": "Protoss",
+      "requires": []
+    },
+    "BattlecruiserAttack": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "MaxAttackSpeedMultiplier": 128,
+      "MinAttackSpeedMultiplier": 0.25,
+      "TargetMessage": "Abil/TargetMessage/attack",
+      "name": "BattlecruiserAttack",
+      "race": "Terran",
+      "requires": []
+    },
+    "BattlecruiserMove": {
+      "AbilSetId": "Move",
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "name": "BattlecruiserMove",
+      "race": "Terran",
+      "requires": []
+    },
+    "BattlecruiserStop": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "name": "BattlecruiserStop",
+      "race": "Terran",
+      "requires": []
+    },
     "Blink": {
       "AbilSetId": "Blnk",
       "Arc": 360,
@@ -716,6 +761,49 @@
     },
     "BuildInProgress": {
       "name": "BuildInProgress"
+    },
+    "BuildNydusCanal": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "EffectArray": [
+        "NydusAlertDummy"
+      ],
+      "FlagArray": [
+        "Cancelable"
+      ],
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": ""
+          },
+          "Time": 15,
+          "Unit": "NydusCanalCreeper",
+          "index": "Build3"
+        },
+        {
+          "Button": {
+            "Requirements": ""
+          },
+          "Time": 15,
+          "Unit": "NydusCanalAttacker",
+          "index": "Build2"
+        },
+        {
+          "Button": {
+            "State": "Available"
+          },
+          "Cooldown": {
+            "TimeUse": "20"
+          },
+          "Time": 20,
+          "Unit": "NydusCanal",
+          "index": "Build1"
+        }
+      ],
+      "Range": 500,
+      "name": "BuildNydusCanal",
+      "race": "Zerg",
+      "requires": []
     },
     "BuildinProgressNydusCanal": {
       "Cancelable": 0,
@@ -815,6 +903,50 @@
         "Unit": "BanelingBurrowed"
       },
       "name": "BurrowBanelingDown",
+      "race": "Zerg",
+      "requires": [
+        "Burrow"
+      ]
+    },
+    "BurrowCreepTumorDown": {
+      "AbilSetId": "BrwD",
+      "ActorKey": "BurrowDown",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowDown",
+        "Flags": "ToSelection",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "Link": "BurrowCreepTumorDown",
+          "Location": "Unit"
+        }
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": [
+        "Automatic",
+        "IgnoreFacing",
+        "SuppressMovement"
+      ],
+      "InfoArray": {
+        "RandomDelayMax": 0.37,
+        "SectionArray": [
+          {
+            "DurationArray": 0.5556,
+            "index": "Collide"
+          },
+          {
+            "DurationArray": 1,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 1,
+            "index": "Stats"
+          }
+        ],
+        "Unit": "CreepTumorBurrowed"
+      },
+      "name": "BurrowCreepTumorDown",
       "race": "Zerg",
       "requires": [
         "Burrow"
@@ -1342,6 +1474,53 @@
       "race": "Protoss",
       "requires": []
     },
+    "CausticSpray": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "CausticSpray",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "45"
+        }
+      },
+      "EditorCategories": "AbilityorEffectType:Units",
+      "Effect": "CausticSprayBasePersistent",
+      "Flags": "DeferCooldown",
+      "Range": 6,
+      "RangeSlop": 2,
+      "TargetFilters": "Structure,Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "TrackingArc": 0.9997,
+      "name": "CausticSpray"
+    },
+    "ChannelSnipe": {
+      "CancelableArray": "Channel",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "Cancel",
+          "index": "Cancel"
+        },
+        {
+          "DefaultButtonFace": "ChannelSnipe",
+          "index": "Execute"
+        }
+      ],
+      "Cost": {
+        "Energy": 50
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "Effect": "ChannelSnipeInitialSet",
+      "Range": 10,
+      "RangeSlop": 20,
+      "TargetFilters": "Biological,Visible;Self,Player,Ally,Structure,Destructible,Stasis,Dead,Hidden,Invulnerable",
+      "UninterruptibleArray": [
+        "Cast",
+        "Channel"
+      ],
+      "name": "ChannelSnipe",
+      "race": "Terran",
+      "requires": []
+    },
     "Charge": {
       "AbilCmd": "attack,Execute",
       "Alignment": "Negative",
@@ -1366,6 +1545,34 @@
       "name": "Charge",
       "race": "Protoss",
       "requires": []
+    },
+    "ChronoBoostEnergyCost": {
+      "AINotifyEffect": "ChronoBoost",
+      "Arc": 360,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "ChronoBoostEnergyCost",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Energy": 50
+      },
+      "Effect": "ChronoBoostEnergyCostAB",
+      "Range": 500,
+      "TargetFilters": "Structure;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "UninterruptibleArray": [
+        "Approach",
+        "Cast",
+        "Channel",
+        "Finish",
+        "Prep"
+      ],
+      "name": "ChronoBoostEnergyCost"
+    },
+    "CommandCenterLiftOff": {
+      "Name": "Abil/Name/CommandCenterLiftOff",
+      "name": "CommandCenterLiftOff",
+      "parent": "TerranBuildingLiftOff",
+      "unit": "CommandCenterFlying"
     },
     "CommandCenterTrain": {
       "Alert": "TrainWorkerComplete",
@@ -1707,6 +1914,32 @@
       "name": "EMP",
       "race": "Terran",
       "requires": []
+    },
+    "EnergyRecharge": {
+      "Arc": 360,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "EnergyRecharge",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Charge": "Abil/BatteryOvercharge",
+        "Cooldown": {
+          "Location": "Player",
+          "TimeUse": "63"
+        },
+        "Energy": 50
+      },
+      "Effect": "EnergyRechargePersistent",
+      "Range": 500,
+      "TargetFilters": "CanHaveEnergy;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Hallucination,Invulnerable",
+      "UninterruptibleArray": [
+        "Approach",
+        "Cast",
+        "Channel",
+        "Finish",
+        "Prep"
+      ],
+      "name": "EnergyRecharge"
     },
     "EngineeringBayResearch": {
       "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
@@ -2942,6 +3175,71 @@
       ],
       "name": "Hyperjump"
     },
+    "InfestationPitResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveFlyingLocusts",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnFlyingLocusts"
+          },
+          "Resource": [
+            150,
+            150
+          ],
+          "Time": 160,
+          "Upgrade": "FlyingLocusts",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveInfestorEnergyUpgrade",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnInfestorEnergyUpgrade",
+            "State": "Restricted"
+          },
+          "Resource": [
+            150,
+            150
+          ],
+          "Time": 80,
+          "Upgrade": "InfestorEnergyUpgrade",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchLocustLifetimeIncrease",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnLocustLifetimeIncrease"
+          },
+          "Resource": [
+            200,
+            200
+          ],
+          "Time": 120,
+          "Upgrade": "LocustLifetimeIncrease",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchNeuralParasite",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnNeuralParasite"
+          },
+          "Resource": [
+            150,
+            150
+          ],
+          "Time": 110,
+          "Upgrade": "NeuralParasite",
+          "index": "Research4"
+        }
+      ],
+      "name": "InfestationPitResearch",
+      "race": "Zerg",
+      "requires": []
+    },
     "InfestedTerrans": {
       "CastIntroTime": 0,
       "CastOutroTime": 0,
@@ -2967,6 +3265,20 @@
       "race": "Zerg",
       "requires": []
     },
+    "InfestorEnsnare": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "InfestorEnsnare",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Energy": 50
+      },
+      "EditorCategories": "AbilityorEffectType:Units",
+      "Effect": "InfestorEnsnareLM",
+      "Range": 8,
+      "TargetFilters": "Air,Visible;Ground,Structure,Heroic,Missile,Stasis,Dead,Invulnerable,Unstoppable",
+      "name": "InfestorEnsnare"
+    },
     "KD8Charge": {
       "Alignment": "Negative",
       "CastOutroTime": 0.35,
@@ -2990,6 +3302,72 @@
       "TargetFilters": "Ground,Visible;-",
       "name": "KD8Charge",
       "race": "Terran",
+      "requires": []
+    },
+    "LairResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveVentralSacks",
+            "Flags": [
+              "ShowInGlossary",
+              "ToSelection"
+            ],
+            "Requirements": "LearnVentralSacs",
+            "State": "Restricted"
+          },
+          "Resource": [
+            200,
+            200
+          ],
+          "Time": 130,
+          "Upgrade": "overlordtransport",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchBurrow",
+            "Flags": [
+              "ShowInGlossary",
+              "ToSelection"
+            ],
+            "Requirements": "LearnBurrow",
+            "State": "Restricted"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 100,
+          "Upgrade": "Burrow",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "overlordspeed",
+            "Flags": [
+              "ShowInGlossary",
+              "ToSelection"
+            ],
+            "Requirements": "LearnPneumatizedCarapace",
+            "State": "Restricted"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 60,
+          "Upgrade": "overlordspeed",
+          "index": "Research2"
+        },
+        {
+          "Time": "70",
+          "index": "Research1"
+        }
+      ],
+      "name": "LairResearch",
+      "race": "Zerg",
       "requires": []
     },
     "LarvaTrain": {
@@ -3236,6 +3614,26 @@
       "TargetFilters": "-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
       "name": "LightningBomb",
       "race": "Protoss",
+      "requires": []
+    },
+    "LightofAiur": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "LightofAiur",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "60"
+        },
+        "Energy": 50
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "Flags": [
+        "BestUnit",
+        "Transient"
+      ],
+      "name": "LightofAiur",
+      "race": "Terran",
       "requires": []
     },
     "LoadOutSpray": {
@@ -3574,6 +3972,44 @@
       "race": "Terran",
       "requires": []
     },
+    "LurkerDenResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveDiggingClaws",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnEvolveDiggingClaws",
+            "State": "Restricted"
+          },
+          "Resource": [
+            150,
+            150
+          ],
+          "Time": 80,
+          "Upgrade": "DiggingClaws",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchLurkerRange",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnEvolveSeismicSpines",
+            "State": "Restricted"
+          },
+          "Resource": [
+            150,
+            150
+          ],
+          "Time": 80,
+          "Upgrade": "LurkerRange",
+          "index": "Research2"
+        }
+      ],
+      "name": "LurkerDenResearch",
+      "race": "Zerg",
+      "requires": []
+    },
     "MassRecall": {
       "AINotifyEffect": "",
       "Arc": 360,
@@ -3807,6 +4243,65 @@
       "name": "MorphBackToGateway",
       "race": "Protoss",
       "requires": []
+    },
+    "MorphToBaneling": {
+      "Alert": "MorphComplete_Zerg",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "Baneling",
+          "Requirements": "HaveBanelingNest",
+          "index": "Execute"
+        },
+        {
+          "DefaultButtonFace": "Cancel",
+          "index": "Cancel"
+        }
+      ],
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": [
+        "BestUnit",
+        "Birth",
+        "DisableAbils",
+        "FastBuild",
+        "IgnoreFacing",
+        "Interruptible",
+        "Produce",
+        "Rally",
+        "RallyReset",
+        "ShowProgress",
+        "SuppressMovement",
+        "WaitUntilStopped"
+      ],
+      "InfoArray": [
+        {
+          "Score": 1,
+          "SectionArray": [
+            {
+              "DurationArray": 20,
+              "EffectArray": "PostMorphHeal",
+              "index": "Stats"
+            },
+            {
+              "DurationArray": 20,
+              "index": "Abils"
+            },
+            {
+              "DurationArray": 20,
+              "index": "Actor"
+            }
+          ],
+          "Unit": "Baneling"
+        },
+        {
+          "Unit": "BanelingCocoon"
+        }
+      ],
+      "morphsto": "Baneling",
+      "name": "MorphToBaneling",
+      "race": "Zerg",
+      "requires": [
+        "BanelingNest"
+      ]
     },
     "MorphToBroodLord": {
       "AbilClassEnableArray": [
@@ -4334,6 +4829,28 @@
       "race": "Protoss",
       "requires": []
     },
+    "MothershipMassRecall": {
+      "AINotifyEffect": "MassRecall",
+      "Arc": 360,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "MothershipMassRecall",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Charge": "",
+        "Cooldown": "",
+        "Energy": 50
+      },
+      "CursorEffect": "MothershipMassRecallSearch",
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": "MothershipMassRecallPrepare",
+      "Flags": "AllowMovement",
+      "Range": 500,
+      "TargetFilters": "-;Ally,Neutral,Enemy",
+      "name": "MothershipMassRecall",
+      "race": "Protoss",
+      "requires": []
+    },
     "NeuralParasite": {
       "CancelableArray": "Channel",
       "CmdButtonArray": [
@@ -4371,6 +4888,96 @@
       ],
       "name": "NeuralParasite",
       "race": "Zerg",
+      "requires": []
+    },
+    "NexusInvulnerability": {
+      "Arc": 360,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "NexusInvulnerability",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Energy": 75
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": "NexusInvulnerabilityApplyBehavior",
+      "Range": 10,
+      "TargetFilters": "-;Ally,Neutral,Enemy,Massive,Missile,Stasis,UnderConstruction,Hidden,Invulnerable",
+      "name": "NexusInvulnerability",
+      "race": "Protoss",
+      "requires": []
+    },
+    "NexusMassRecall": {
+      "Arc": 360,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "MassRecall",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "Location": "Player",
+          "TimeUse": "182"
+        },
+        "Energy": 50
+      },
+      "CursorEffect": "NexusMassRecallSearch",
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": "NexusMassRecallSearch",
+      "Range": 500,
+      "name": "NexusMassRecall",
+      "race": "Protoss",
+      "requires": []
+    },
+    "NexusTrain": {
+      "Activity": "UI/Warping",
+      "Alert": "TrainWorkerComplete",
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": {
+        "Button": {
+          "DefaultButtonFace": "Probe"
+        },
+        "Time": 17,
+        "Unit": "Probe",
+        "index": "Train1"
+      },
+      "name": "NexusTrain",
+      "race": "Protoss",
+      "requires": []
+    },
+    "NexusTrainMothership": {
+      "Activity": "UI/Warping",
+      "Alert": "MothershipComplete",
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": {
+        "Button": {
+          "DefaultButtonFace": "Mothership",
+          "Requirements": "MothershipRequirements",
+          "State": "Restricted"
+        },
+        "Time": 160,
+        "Unit": "Mothership",
+        "index": "Train1"
+      },
+      "name": "NexusTrainMothership",
+      "race": "Protoss",
+      "requires": []
+    },
+    "NexusTrainMothershipCore": {
+      "Activity": "UI/Warping",
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": {
+        "Button": {
+          "DefaultButtonFace": "MothershipCore",
+          "Requirements": "MothershipCoreRequirements",
+          "State": "Restricted"
+        },
+        "Time": 30,
+        "Unit": "MothershipCore",
+        "index": "Train1"
+      },
+      "Offset": "0,0",
+      "name": "NexusTrainMothershipCore",
+      "race": "Protoss",
       "requires": []
     },
     "NydusCanalTransport": {
@@ -4418,6 +5025,62 @@
       "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
       "UnloadPeriod": 0.5,
       "name": "NydusCanalTransport",
+      "race": "Zerg",
+      "requires": []
+    },
+    "NydusWormTransport": {
+      "AbilSetId": "ULdS",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "NydusCanalLoad",
+          "index": "Load"
+        },
+        {
+          "DefaultButtonFace": "NydusCanalUnloadAll",
+          "Flags": "ToSelection",
+          "index": "UnloadAll"
+        },
+        {
+          "Flags": "Hidden",
+          "index": "LoadAll"
+        },
+        {
+          "Flags": "Hidden",
+          "index": "UnloadAt"
+        },
+        {
+          "Flags": "Hidden",
+          "index": "UnloadUnit"
+        }
+      ],
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Flags": [
+        "CargoDeath",
+        "PlayerHold",
+        "ShowCargoSize"
+      ],
+      "InitialUnloadDelay": 0.5,
+      "LoadPeriod": 0.25,
+      "LoadValidatorArray": [
+        "NotSpawnling",
+        "NotWidowMineTarget"
+      ],
+      "MaxCargoCount": 255,
+      "MaxCargoSize": 8,
+      "MaxUnloadRange": 4,
+      "OrderArray": {
+        "Color": "255,0,255,0",
+        "DisplayType": "Confirm",
+        "LineTexture": "Assets\\Textures\\WayPointLine.dds",
+        "Model": "Assets\\UI\\Cursors\\WayPointConfirm_Void\\WayPointConfirm_Void.m3",
+        "Scale": 0.75,
+        "index": 0
+      },
+      "Range": 0.5,
+      "TotalCargoSpace": 1020,
+      "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
+      "UnloadPeriod": 0.5,
+      "name": "NydusWormTransport",
       "race": "Zerg",
       "requires": []
     },
@@ -4873,6 +5536,20 @@
       "race": "Protoss",
       "requires": []
     },
+    "PurifyMorphPylon": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "MothershipCoreWeapon",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Flags": "Transient",
+      "InfoArray": {
+        "Unit": "PylonOvercharged"
+      },
+      "name": "PurifyMorphPylon",
+      "race": "Protoss",
+      "requires": []
+    },
     "QueenBuild": {
       "Alert": "BuildComplete_Zerg",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
@@ -4929,6 +5606,42 @@
       "race": "Terran",
       "requires": []
     },
+    "RallyHatchery": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "SetOnGround": 0,
+          "SetValidators": "Failure"
+        },
+        {
+          "SetOnGround": 0,
+          "UseFilters": "Worker;-",
+          "UseValidators": "NotQueen"
+        },
+        {
+          "SetValidators": "NotResourcesOrEnemyTargetType",
+          "UseFilters": "-;Worker",
+          "UseValidators": "NotQueen",
+          "index": 0
+        }
+      ],
+      "name": "RallyHatchery",
+      "race": "Zerg",
+      "requires": []
+    },
+    "RallyNexus": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "OrderArray": {
+        "Color": "255,245,140,70",
+        "DisplayType": "Rally",
+        "LineTexture": "Assets\\Textures\\WayPointLine.dds",
+        "Model": "Assets\\UI\\Feedback\\WayPointRally\\WayPointRally.m3",
+        "index": 0
+      },
+      "name": "RallyNexus",
+      "race": "Protoss",
+      "requires": []
+    },
     "RavagerCorrosiveBile": {
       "Alignment": "Negative",
       "CmdButtonArray": {
@@ -4946,6 +5659,61 @@
       "Range": 9,
       "name": "RavagerCorrosiveBile",
       "race": "Zerg",
+      "requires": []
+    },
+    "RavenScramblerMissile": {
+      "Alignment": "Negative",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "RavenScramblerMissile",
+        "Requirements": "HaveRavenInterferenceMatrixUpgrade",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Energy": 75
+      },
+      "DefaultError": "MustTargetUnit,Error/MustTargetMechanicalorPsionic",
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "Effect": "RavenScramblerSwitchInitial",
+      "Flags": [
+        "AllowMovement",
+        "ChannelingMinimum"
+      ],
+      "InfoTooltipPriority": 1,
+      "Range": 9,
+      "TargetFilters": "Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Invulnerable",
+      "UninterruptibleArray": [
+        "Cast",
+        "Channel",
+        "Finish",
+        "Prep"
+      ],
+      "ValidatedArray": [
+        0,
+        1
+      ],
+      "name": "RavenScramblerMissile",
+      "race": "Terran",
+      "requires": []
+    },
+    "RavenShredderMissile": {
+      "Alignment": "Negative",
+      "Arc": 29.9926,
+      "ArcSlop": 0,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "RavenShredderMissile",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Energy": 75
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "Effect": "RavenShredderMissileLaunchMissile",
+      "Flags": "AllowMovement",
+      "InfoTooltipPriority": 1,
+      "Range": 10,
+      "TargetFilters": "Visible;Self,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "name": "RavenShredderMissile",
+      "race": "Terran",
       "requires": []
     },
     "Repair": {
@@ -5058,6 +5826,84 @@
       ],
       "name": "RoachWarrenResearch",
       "race": "Zerg",
+      "requires": []
+    },
+    "RoboticsBayResearch": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchExtendedThermalLance",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnExtendedThermalLance",
+            "State": "Restricted"
+          },
+          "Resource": [
+            150,
+            150
+          ],
+          "Time": 140,
+          "Upgrade": "ExtendedThermalLance",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchGraviticBooster",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnGraviticBooster",
+            "State": "Restricted"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 80,
+          "Upgrade": "ObserverGraviticBooster",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchGraviticDrive",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnGraviticDrive",
+            "State": "Restricted"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 80,
+          "Upgrade": "GraviticDrive",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchImmortalRevive",
+            "Requirements": "LearnImmortalRevive"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 80,
+          "Upgrade": "ImmortalRevive",
+          "index": "Research8"
+        },
+        {
+          "Time": "140",
+          "index": "Research4"
+        },
+        {
+          "Time": "140",
+          "index": "Research5"
+        },
+        {
+          "Time": "70",
+          "index": "Research1"
+        }
+      ],
+      "name": "RoboticsBayResearch",
+      "race": "Protoss",
       "requires": []
     },
     "RoboticsFacilityTrain": {
@@ -5288,6 +6134,64 @@
       "race": "Terran",
       "requires": []
     },
+    "ShieldBatteryRechargeEx5": {
+      "Arc": 360,
+      "AutoCastAcquireLevel": "Defensive",
+      "AutoCastFilters": "Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden",
+      "AutoCastRange": 6,
+      "AutoCastValidatorArray": [
+        "Casterhas10EnergyorCasterisBatteryOvercharged",
+        "NotHaveBatteryCooldownBehavior",
+        "UnitOrAttackingStructure"
+      ],
+      "CancelableArray": "Channel",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "ShieldBatteryRecharge",
+          "Flags": [
+            "CreateDefaultButton",
+            "UseDefaultButton"
+          ],
+          "index": "Execute"
+        },
+        {
+          "DefaultButtonFace": "Stop",
+          "Flags": [
+            "CreateDefaultButton",
+            "ToSelection",
+            "UseDefaultButton"
+          ],
+          "index": "Cancel"
+        }
+      ],
+      "DefaultError": "RequiresHealTarget",
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Flags": [
+        "AutoCast",
+        "AutoCastOn",
+        "BestUnit",
+        "CancelResetAutoCast",
+        "ReExecutable",
+        "Smart"
+      ],
+      "Range": 6,
+      "TargetFilters": "Visible;Self,Enemy,Missile,UnderConstruction,Dead,Hidden",
+      "TargetSorts": {
+        "RequestCount": 1,
+        "SortArray": [
+          "TSAlliancePassive",
+          "TSDistance",
+          "TSShieldsFraction"
+        ]
+      },
+      "UseMarkerArray": [
+        0,
+        0
+      ],
+      "name": "ShieldBatteryRechargeEx5",
+      "race": "Protoss",
+      "requires": []
+    },
     "SiegeMode": {
       "AbilSetId": "SiegeMode",
       "CmdButtonArray": {
@@ -5401,6 +6305,30 @@
       "race": "Zerg",
       "requires": []
     },
+    "SpawnLocustsTargeted": {
+      "Arc": 360,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "SwarmHost",
+        "Flags": "ToSelection",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "60"
+        }
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Effect": "LocustMPCreateSet",
+      "Flags": [
+        "BestUnit",
+        "RequireTargetVision",
+        "Transient"
+      ],
+      "Range": 500,
+      "name": "SpawnLocustsTargeted",
+      "race": "Zerg",
+      "requires": []
+    },
     "SpawningPoolResearch": {
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
       "InfoArray": [
@@ -5471,6 +6399,104 @@
         "Unit": "SpineCrawlerUprooted"
       },
       "name": "SpineCrawlerUproot",
+      "race": "Zerg",
+      "requires": []
+    },
+    "SpireResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerarmor1",
+            "Flags": "ToSelection",
+            "Requirements": "LearnZergFlyerArmor1",
+            "State": "Restricted"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 160,
+          "Upgrade": "ZergFlyerArmorsLevel1",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerarmor2",
+            "Flags": "ToSelection",
+            "Requirements": "LearnZergFlyerArmor2",
+            "State": "Restricted"
+          },
+          "Resource": [
+            175,
+            175
+          ],
+          "Time": 190,
+          "Upgrade": "ZergFlyerArmorsLevel2",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerarmor3",
+            "Flags": "ToSelection",
+            "Requirements": "LearnZergFlyerArmor3",
+            "State": "Restricted"
+          },
+          "Resource": [
+            250,
+            250
+          ],
+          "Time": 220,
+          "Upgrade": "ZergFlyerArmorsLevel3",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerattack1",
+            "Flags": "ToSelection",
+            "Requirements": "LearnZergFlyerAttack1",
+            "State": "Restricted"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 160,
+          "Upgrade": "ZergFlyerWeaponsLevel1",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerattack2",
+            "Flags": "ToSelection",
+            "Requirements": "LearnZergFlyerAttack2",
+            "State": "Restricted"
+          },
+          "Resource": [
+            175,
+            175
+          ],
+          "Time": 190,
+          "Upgrade": "ZergFlyerWeaponsLevel2",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerattack3",
+            "Flags": "ToSelection",
+            "Requirements": "LearnZergFlyerAttack3",
+            "State": "Restricted"
+          },
+          "Resource": [
+            250,
+            250
+          ],
+          "Time": 220,
+          "Upgrade": "ZergFlyerWeaponsLevel3",
+          "index": "Research3"
+        }
+      ],
+      "name": "SpireResearch",
       "race": "Zerg",
       "requires": []
     },
@@ -5792,6 +6818,42 @@
       },
       "name": "StopRedirect"
     },
+    "SupplyDepotLower": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "Lower",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": {
+        "CollideRange": 0,
+        "SectionArray": [
+          {
+            "DurationArray": 1.3,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 1.3,
+            "index": "Collide"
+          },
+          {
+            "DurationArray": 1.3,
+            "index": "Mover"
+          },
+          {
+            "DurationArray": 1.3,
+            "index": "Stats"
+          },
+          {
+            "EffectArray": "SupplyDepotMorphingApplyBehavior",
+            "index": "Abils"
+          }
+        ],
+        "Unit": "SupplyDepotLowered"
+      },
+      "name": "SupplyDepotLower",
+      "race": "Terran",
+      "requires": []
+    },
     "SupplyDrop": {
       "Arc": 360,
       "CmdButtonArray": {
@@ -5900,6 +6962,35 @@
         }
       ],
       "name": "TemplarArchivesResearch",
+      "race": "Protoss",
+      "requires": []
+    },
+    "TemporalField": {
+      "AINotifyEffect": "TemporalFieldCreatePersistent",
+      "Arc": 360,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "TemporalField",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "84"
+        },
+        "Energy": 100
+      },
+      "CursorEffect": [
+        "TemporalFieldAfterBubbleSearchArea",
+        "TemporalFieldSearchArea"
+      ],
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": "TemporalFieldGrowingBubbleCreatePersistent",
+      "Flags": [
+        "AllowMovement",
+        "NoDeceleration",
+        "RequireTargetVision"
+      ],
+      "Range": 9,
+      "name": "TemporalField",
       "race": "Protoss",
       "requires": []
     },
@@ -6084,6 +7175,122 @@
       "race": "Terran",
       "requires": []
     },
+    "ThorAPMode": {
+      "AbilSetId": "ThorAPMode",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "ArmorpiercingMode",
+          "Flags": "ToSelection",
+          "index": "Execute"
+        },
+        {
+          "DefaultButtonFace": "Cancel",
+          "index": "Cancel"
+        }
+      ],
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "Flags": [
+        "IgnoreFacing",
+        "Interruptible",
+        "SuppressMovement"
+      ],
+      "InfoArray": [
+        {
+          "RandomDelayMax": 0.25,
+          "SectionArray": [
+            {
+              "DurationArray": 2.5,
+              "index": "Abils"
+            },
+            {
+              "DurationArray": 2.5,
+              "index": "Actor"
+            },
+            {
+              "DurationArray": 2.5,
+              "index": "Stats"
+            }
+          ],
+          "index": 0
+        },
+        {
+          "RandomDelayMax": 0.5,
+          "SectionArray": [
+            {
+              "DurationArray": 3.9,
+              "index": "Abils"
+            },
+            {
+              "DurationArray": 4,
+              "index": "Actor"
+            },
+            {
+              "DurationArray": 4,
+              "index": "Stats"
+            }
+          ],
+          "Unit": "ThorAP"
+        }
+      ],
+      "name": "ThorAPMode",
+      "race": "Terran",
+      "requires": []
+    },
+    "TimeWarp": {
+      "AINotifyEffect": "ChronoBoost",
+      "Arc": 360,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "TimeWarp",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "5"
+        },
+        "Energy": 0
+      },
+      "EditorCategories": "AbilityorEffectType:Units,Race:Terran",
+      "Effect": "TimeWarpCP",
+      "Flags": "Transient",
+      "Range": 500,
+      "TargetFilters": [
+        "Structure;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden",
+        "Structure;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable"
+      ],
+      "UninterruptibleArray": [
+        "Approach",
+        "Approach",
+        "Cast",
+        "Cast",
+        "Channel",
+        "Channel",
+        "Finish",
+        "Finish",
+        "Prep",
+        "Prep"
+      ],
+      "name": "TimeWarp",
+      "race": "Terran",
+      "requires": []
+    },
+    "TrainQueen": {
+      "Activity": "UI/Spawning",
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": {
+        "Button": {
+          "DefaultButtonFace": "Queen",
+          "Flags": "ToSelection",
+          "Requirements": "HaveSpawningPool"
+        },
+        "Effect": "QueenBirth",
+        "Time": 50,
+        "Unit": "Queen",
+        "index": "Train1"
+      },
+      "name": "TrainQueen",
+      "race": "Zerg",
+      "requires": []
+    },
     "Transfusion": {
       "Alignment": "Positive",
       "CastIntroTime": 0.2,
@@ -6212,6 +7419,56 @@
       "race": "Protoss",
       "requires": []
     },
+    "UltraliskCavernResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveAnabolicSynthesis2",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnAnabolicSynthesis"
+          },
+          "Resource": [
+            150,
+            150
+          ],
+          "Time": 60,
+          "Upgrade": "AnabolicSynthesis",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveBurrowCharge",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnBurrowCharge"
+          },
+          "Resource": [
+            200,
+            200
+          ],
+          "Time": 130,
+          "Upgrade": "UltraliskBurrowChargeUpgrade",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveChitinousPlating",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnChitinousPlating"
+          },
+          "Resource": [
+            150,
+            150
+          ],
+          "Time": 110,
+          "Upgrade": "ChitinousPlating",
+          "index": "Research3"
+        }
+      ],
+      "name": "UltraliskCavernResearch",
+      "race": "Zerg",
+      "requires": []
+    },
     "UltraliskWeaponCooldown": {
       "CmdButtonArray": {
         "DefaultButtonFace": "UltraliskWeaponCooldown",
@@ -6225,6 +7482,210 @@
       },
       "Flags": "RequireTargetVision",
       "name": "UltraliskWeaponCooldown"
+    },
+    "UpgradeToGreaterSpire": {
+      "Activity": "UI/Mutating",
+      "Alert": "MorphComplete_Zerg",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "CancelMutateMorph",
+          "index": "Cancel"
+        },
+        {
+          "DefaultButtonFace": "GreaterSpire",
+          "Requirements": "HaveHive",
+          "index": "Execute"
+        }
+      ],
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": [
+        "BestUnit",
+        "DisableAbils",
+        "FastBuild",
+        "Interruptible",
+        "Produce",
+        "ShowProgress"
+      ],
+      "InfoArray": {
+        "Score": 1,
+        "SectionArray": [
+          {
+            "DurationArray": 100,
+            "index": "Abils"
+          },
+          {
+            "DurationArray": 100,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 100,
+            "index": "Stats"
+          },
+          {
+            "DurationArray": 5,
+            "index": "Facing"
+          }
+        ],
+        "Unit": "GreaterSpire"
+      },
+      "morphsto": "GreaterSpire",
+      "name": "UpgradeToGreaterSpire",
+      "race": "Zerg",
+      "requires": [
+        "Hive"
+      ]
+    },
+    "UpgradeToLair": {
+      "Activity": "UI/Mutating",
+      "ActorKey": "LairUpgrade",
+      "Alert": "MorphComplete_Zerg",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "CancelMutateMorph",
+          "index": "Cancel"
+        },
+        {
+          "DefaultButtonFace": "Lair",
+          "Requirements": "HaveSpawningPool",
+          "index": "Execute"
+        }
+      ],
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": [
+        "BestUnit",
+        "Birth",
+        "DisableAbils",
+        "FastBuild",
+        "Interruptible",
+        "Produce",
+        "ShowProgress"
+      ],
+      "InfoArray": {
+        "Score": 1,
+        "SectionArray": [
+          {
+            "DurationArray": 80,
+            "index": "Abils"
+          },
+          {
+            "DurationArray": 80,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 80,
+            "index": "Stats"
+          }
+        ],
+        "Unit": "Lair"
+      },
+      "morphsto": "Lair",
+      "name": "UpgradeToLair",
+      "race": "Zerg",
+      "requires": [
+        "SpawningPool"
+      ]
+    },
+    "UpgradeToOrbital": {
+      "Activity": "UI/Upgrading",
+      "Alert": "CommandCenterUpgradeComplete",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "CancelUpgradeMorph",
+          "index": "Cancel"
+        },
+        {
+          "DefaultButtonFace": "OrbitalCommand",
+          "Requirements": "HaveBarracks",
+          "State": "Restricted",
+          "index": "Execute"
+        }
+      ],
+      "EditorCategories": "Race:Terran,AbilityorEffectType:MorphsandBurrows",
+      "Flags": [
+        "BestUnit",
+        "Birth",
+        "DisableAbils",
+        "FastBuild",
+        "Interruptible",
+        "Produce",
+        "ShowProgress"
+      ],
+      "InfoArray": {
+        "Score": 1,
+        "SectionArray": [
+          {
+            "DurationArray": 35,
+            "index": "Abils"
+          },
+          {
+            "DurationArray": 35,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 35,
+            "index": "Stats"
+          }
+        ],
+        "Unit": "OrbitalCommand"
+      },
+      "ValidatorArray": "HasNoCargo",
+      "morphsto": "OrbitalCommand",
+      "name": "UpgradeToOrbital",
+      "race": "Terran",
+      "requires": [
+        "Barracks"
+      ]
+    },
+    "UpgradeToPlanetaryFortress": {
+      "Activity": "UI/Upgrading",
+      "Alert": "CommandCenterUpgradeComplete",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "CancelUpgradeMorph",
+          "index": "Cancel"
+        },
+        {
+          "DefaultButtonFace": "PlanetaryFortress",
+          "Requirements": "HaveEngineeringBay",
+          "State": "Restricted",
+          "index": "Execute"
+        }
+      ],
+      "EditorCategories": "Race:Terran,AbilityorEffectType:MorphsandBurrows",
+      "Flags": [
+        "BestUnit",
+        "Birth",
+        "DisableAbils",
+        "FastBuild",
+        "Interruptible",
+        "Produce",
+        "ShowProgress"
+      ],
+      "InfoArray": {
+        "Score": 1,
+        "SectionArray": [
+          {
+            "DurationArray": 50,
+            "index": "Abils"
+          },
+          {
+            "DurationArray": 50,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 50,
+            "index": "Stats"
+          }
+        ],
+        "Unit": "PlanetaryFortress"
+      },
+      "ValidatorArray": "HasNoCargo",
+      "morphsto": "PlanetaryFortress",
+      "name": "UpgradeToPlanetaryFortress",
+      "race": "Terran",
+      "requires": [
+        "EngineeringBay"
+      ]
     },
     "UpgradeToWarpGate": {
       "Activity": "UI/Transforming",
@@ -7147,6 +8608,14 @@
       "race": "Neutral",
       "requires": []
     },
+    "que5Passive": {
+      "EditorCategories": "Race:Neutral,AbilityorEffectType:Structures",
+      "Flags": "Passive",
+      "QueueSize": 5,
+      "name": "que5Passive",
+      "race": "Neutral",
+      "requires": []
+    },
     "que5PassiveCancelToSelection": {
       "AbilSetId": "QueueCancelToSelection",
       "CmdButtonArray": {
@@ -7159,6 +8628,9 @@
       "name": "que5PassiveCancelToSelection",
       "race": "Neutral",
       "requires": []
+    },
+    "stop": {
+      "name": "stop"
     },
     "stopProtossBuilding": {
       "CmdButtonArray": {
@@ -7937,38 +9409,20 @@
       "AIEvalFactor": 1.1,
       "AbilArray": [
         "AttackRedirect",
+        "AttackRedirect",
         "BuildInProgress",
         "BunkerTransport",
         "Rally",
+        "Rally",
         "SalvageBunkerRefund",
+        "SalvageEffect",
         "SalvageShared",
         "StimpackMarauderRedirect",
+        "StimpackMarauderRedirect",
+        "StimpackRedirect",
         "StimpackRedirect",
         "StopRedirect",
-        {
-          "Link": "AttackRedirect",
-          "index": "7"
-        },
-        {
-          "Link": "Rally",
-          "index": "3"
-        },
-        {
-          "Link": "SalvageEffect",
-          "index": "2"
-        },
-        {
-          "Link": "StimpackMarauderRedirect",
-          "index": "5"
-        },
-        {
-          "Link": "StimpackRedirect",
-          "index": "4"
-        },
-        {
-          "Link": "StopRedirect",
-          "index": "6"
-        },
+        "StopRedirect",
         {
           "index": "8",
           "removed": "1"
@@ -8744,17 +10198,11 @@
       "AbilArray": [
         "BuildInProgress",
         "DarkShrineResearch",
+        "DarkShrineResearch",
         "attackProtossBuilding",
         "que5",
-        "stopProtossBuilding",
-        {
-          "Link": "DarkShrineResearch",
-          "index": "1"
-        },
-        {
-          "Link": "que5",
-          "index": "2"
-        }
+        "que5",
+        "stopProtossBuilding"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -10981,11 +12429,8 @@
       "AbilArray": [
         "BuildInProgress",
         "HydraliskDenResearch",
-        "que5",
-        {
-          "Link": "LurkerDenResearch",
-          "index": "2"
-        }
+        "LurkerDenResearch",
+        "que5"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -11314,39 +12759,21 @@
       "AbilArray": [
         "BatteryOvercharge",
         "BuildInProgress",
+        "ChronoBoostEnergyCost",
         "EnergyRecharge",
         "NexusInvulnerability",
+        "NexusMassRecall",
         "NexusTrain",
         "NexusTrainMothership",
+        "NexusTrainMothership",
         "NexusTrainMothershipCore",
+        "RallyNexus",
         "RallyNexus",
         "TimeWarp",
         "attackProtossBuilding",
         "que5",
-        {
-          "Link": "ChronoBoostEnergyCost",
-          "index": "1"
-        },
-        {
-          "Link": "NexusMassRecall",
-          "index": "8"
-        },
-        {
-          "Link": "NexusTrainMothership",
-          "index": "7"
-        },
-        {
-          "Link": "RallyNexus",
-          "index": "4"
-        },
-        {
-          "Link": "que5Passive",
-          "index": "2"
-        },
-        {
-          "Link": "stopProtossBuilding",
-          "index": "5"
-        }
+        "que5Passive",
+        "stopProtossBuilding"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -12567,26 +13994,14 @@
     "RoboticsFacility": {
       "AbilArray": [
         "BuildInProgress",
+        "BuildInProgress",
         "GatewayTrain",
         "Rally",
+        "Rally",
+        "RoboticsFacilityTrain",
         "RoboticsFacilityTrain",
         "que5",
-        {
-          "Link": "BuildInProgress",
-          "index": "0"
-        },
-        {
-          "Link": "Rally",
-          "index": "3"
-        },
-        {
-          "Link": "RoboticsFacilityTrain",
-          "index": "2"
-        },
-        {
-          "Link": "que5",
-          "index": "1"
-        },
+        "que5",
         {
           "index": "4",
           "removed": "1"
@@ -12878,11 +14293,8 @@
       "AbilArray": [
         "BuildInProgress",
         "ShieldBatteryRechargeChanneled",
+        "ShieldBatteryRechargeEx5",
         "stop",
-        {
-          "Link": "ShieldBatteryRechargeEx5",
-          "index": "1"
-        },
         {
           "index": "2",
           "removed": "1"
@@ -14748,14 +16160,11 @@
       ],
       "BehaviorArray": [
         "MassiveVoidRayVulnerability",
+        "MassiveVoidRayVulnerability",
         null,
         [
           "0",
           "1"
-        ],
-        [
-          "0",
-          "MassiveVoidRayVulnerability"
         ]
       ],
       "CardLayouts": {
@@ -15194,19 +16603,13 @@
       "AbilArray": [
         "BurrowBanelingDown",
         "Explode",
+        "Explode",
         "SapStructure",
+        "VolatileBurstBuilding",
         "VolatileBurstBuilding",
         "attack",
         "move",
-        "stop",
-        {
-          "Link": "Explode",
-          "index": "4"
-        },
-        {
-          "Link": "VolatileBurstBuilding",
-          "index": "5"
-        }
+        "stop"
       ],
       "Acceleration": 1000,
       "AttackTargetPriority": 20,
@@ -15837,24 +17240,15 @@
     "Battlecruiser": {
       "AIEvalFactor": 0.9,
       "AbilArray": [
+        "BattlecruiserAttack",
+        "BattlecruiserMove",
+        "BattlecruiserStop",
         "Hyperjump",
         "Yamato",
         "attack",
         "move",
         "que1",
-        "stop",
-        {
-          "Link": "BattlecruiserAttack",
-          "index": "1"
-        },
-        {
-          "Link": "BattlecruiserMove",
-          "index": "2"
-        },
-        {
-          "Link": "BattlecruiserStop",
-          "index": "0"
-        }
+        "stop"
       ],
       "Acceleration": 1,
       "AttackTargetPriority": 20,
@@ -16018,6 +17412,7 @@
       "TechAliasArray": "Alias_BattlecruiserClass",
       "VisionHeight": 15,
       "WeaponArray": [
+        "BattlecruiserWeaponSwitch",
         {
           "Link": "ATALaserBattery",
           "Turret": "Battlecruiser"
@@ -16025,10 +17420,6 @@
         {
           "Link": "ATSLaserBattery",
           "Turret": "Battlecruiser"
-        },
-        {
-          "Link": "BattlecruiserWeaponSwitch",
-          "index": "0"
         },
         {
           "index": "1",
@@ -16046,38 +17437,20 @@
       "AIEvalFactor": 1.1,
       "AbilArray": [
         "AttackRedirect",
+        "AttackRedirect",
         "BuildInProgress",
         "BunkerTransport",
         "Rally",
+        "Rally",
         "SalvageBunkerRefund",
+        "SalvageEffect",
         "SalvageShared",
         "StimpackMarauderRedirect",
+        "StimpackMarauderRedirect",
+        "StimpackRedirect",
         "StimpackRedirect",
         "StopRedirect",
-        {
-          "Link": "AttackRedirect",
-          "index": "7"
-        },
-        {
-          "Link": "Rally",
-          "index": "3"
-        },
-        {
-          "Link": "SalvageEffect",
-          "index": "2"
-        },
-        {
-          "Link": "StimpackMarauderRedirect",
-          "index": "5"
-        },
-        {
-          "Link": "StimpackRedirect",
-          "index": "4"
-        },
-        {
-          "Link": "StopRedirect",
-          "index": "6"
-        },
+        "StopRedirect",
         {
           "index": "8",
           "removed": "1"
@@ -16587,15 +17960,12 @@
     "Corruptor": {
       "AIEvalFactor": 0.7,
       "AbilArray": [
+        "CausticSpray",
         "Corruption",
         "MorphToBroodLord",
         "attack",
         "move",
-        "stop",
-        {
-          "Link": "CausticSpray",
-          "index": "0"
-        }
+        "stop"
       ],
       "Acceleration": 3,
       "AttackTargetPriority": 20,
@@ -17094,17 +18464,11 @@
       "AbilArray": [
         "BuildInProgress",
         "DarkShrineResearch",
+        "DarkShrineResearch",
         "attackProtossBuilding",
         "que5",
-        "stopProtossBuilding",
-        {
-          "Link": "DarkShrineResearch",
-          "index": "1"
-        },
-        {
-          "Link": "que5",
-          "index": "2"
-        }
+        "que5",
+        "stopProtossBuilding"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -19074,6 +20438,7 @@
     "Ghost": {
       "AIEvalFactor": 1.2,
       "AbilArray": [
+        "ChannelSnipe",
         "EMP",
         "GhostCloak",
         "GhostHoldFire",
@@ -19082,11 +20447,7 @@
         "TacNukeStrike",
         "attack",
         "move",
-        "stop",
-        {
-          "Link": "ChannelSnipe",
-          "index": "4"
-        }
+        "stop"
       ],
       "Acceleration": 1000,
       "AttackTargetPriority": 20,
@@ -20340,12 +21701,9 @@
         "Mechanical"
       ],
       "BehaviorArray": [
+        "BarrierDamageResponse",
         "HardenedShield",
-        "ImmortalOverload",
-        [
-          "0",
-          "BarrierDamageResponse"
-        ]
+        "ImmortalOverload"
       ],
       "CardLayouts": [
         {
@@ -20494,23 +21852,14 @@
         "AmorphousArmorcloud",
         "BurrowInfestorDown",
         "FungalGrowth",
+        "FungalGrowth",
         "InfestedTerrans",
+        "InfestedTerrans",
+        "InfestorEnsnare",
         "Leech",
         "NeuralParasite",
         "move",
         "stop",
-        {
-          "Link": "FungalGrowth",
-          "index": "4"
-        },
-        {
-          "Link": "InfestedTerrans",
-          "index": "5"
-        },
-        {
-          "Link": "InfestorEnsnare",
-          "index": "5"
-        },
         {
           "index": "6",
           "removed": "1"
@@ -21108,11 +22457,8 @@
       "AbilArray": [
         "BuildInProgress",
         "HydraliskDenResearch",
-        "que5",
-        {
-          "Link": "LurkerDenResearch",
-          "index": "2"
-        }
+        "LurkerDenResearch",
+        "que5"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -22019,23 +23365,14 @@
       "AIEvalFactor": 0.8,
       "AbilArray": [
         "MassRecall",
+        "MassRecall",
         "MothershipCloak",
+        "MothershipMassRecall",
+        "TemporalField",
         "Vortex",
         "attack",
         "move",
-        "stop",
-        {
-          "Link": "MassRecall",
-          "index": "4"
-        },
-        {
-          "Link": "MothershipMassRecall",
-          "index": "4"
-        },
-        {
-          "Link": "TemporalField",
-          "index": "3"
-        }
+        "stop"
       ],
       "Acceleration": 1.375,
       "AlliedPushPriority": 1,
@@ -22052,10 +23389,8 @@
         "MassiveVoidRayVulnerability",
         "MothershipLastTargetTracker",
         "MothershipResetEnergy",
-        [
-          "0",
-          "MothershipTargetFireTracker"
-        ],
+        "MothershipResetEnergy",
+        "MothershipTargetFireTracker",
         [
           "1",
           "1"
@@ -22063,10 +23398,6 @@
         [
           "1",
           "2"
-        ],
-        [
-          "1",
-          "MothershipResetEnergy"
         ]
       ],
       "CardLayouts": [
@@ -22244,13 +23575,10 @@
         "MothershipCoreMassRecall",
         "MothershipCorePurifyNexus",
         "MothershipCoreWeapon",
+        "TemporalField",
         "attack",
         "move",
-        "stop",
-        {
-          "Link": "TemporalField",
-          "index": "1"
-        }
+        "stop"
       ],
       "Acceleration": 1.0625,
       "AttackTargetPriority": 20,
@@ -22575,12 +23903,9 @@
       "AbilArray": [
         "BuildinProgressNydusCanal",
         "NydusCanalTransport",
+        "NydusWormTransport",
         "Rally",
-        "stop",
-        {
-          "Link": "NydusWormTransport",
-          "index": "2"
-        }
+        "stop"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -22589,12 +23914,9 @@
         "Structure"
       ],
       "BehaviorArray": [
+        "NydusCreepGrowth",
         "NydusDetect",
         "NydusWormArmor",
-        [
-          "0",
-          "NydusCreepGrowth"
-        ],
         "makeCreep4x4"
       ],
       "CardLayouts": [
@@ -22875,30 +24197,18 @@
     "Oracle": {
       "AIEvalFactor": 0.3,
       "AbilArray": [
+        "LightofAiur",
         "OracleRevelation",
         "OracleStasisTrapBuild",
+        "OracleWeapon",
         "OracleWeapon",
         "ResourceStun",
         "VoidSiphon",
         "Warpable",
+        "attack",
+        "attack",
         "move",
-        "stop",
-        {
-          "Link": "LightofAiur",
-          "index": "4"
-        },
-        {
-          "Link": "OracleWeapon",
-          "index": "5"
-        },
-        {
-          "Link": "attack",
-          "index": "4"
-        },
-        {
-          "Link": "attack",
-          "index": "5"
-        }
+        "stop"
       ],
       "Acceleration": 3,
       "AttackTargetPriority": 20,
@@ -24697,30 +26007,15 @@
     "Raven": {
       "AbilArray": [
         "BuildAutoTurret",
+        "BuildAutoTurret",
         "PlacePointDefenseDrone",
+        "RavenScramblerMissile",
+        "RavenScramblerMissile",
+        "RavenShredderMissile",
+        "RavenShredderMissile",
         "SeekerMissile",
         "move",
-        "stop",
-        {
-          "Link": "BuildAutoTurret",
-          "index": "4"
-        },
-        {
-          "Link": "RavenScramblerMissile",
-          "index": "2"
-        },
-        {
-          "Link": "RavenScramblerMissile",
-          "index": "3"
-        },
-        {
-          "Link": "RavenShredderMissile",
-          "index": "2"
-        },
-        {
-          "Link": "RavenShredderMissile",
-          "index": "3"
-        }
+        "stop"
       ],
       "Acceleration": 2,
       "AttackTargetPriority": 20,
@@ -25098,12 +26393,9 @@
       "TacticalAIThink": "AIThinkReaper",
       "TurningRate": 999.8437,
       "WeaponArray": [
+        "",
         "D8Charge",
-        "P38ScytheGuassPistol",
-        {
-          "Link": "",
-          "index": "1"
-        }
+        "P38ScytheGuassPistol"
       ],
       "name": "Reaper",
       "race": "Terran",
@@ -25562,26 +26854,14 @@
     "RoboticsFacility": {
       "AbilArray": [
         "BuildInProgress",
+        "BuildInProgress",
         "GatewayTrain",
         "Rally",
+        "Rally",
+        "RoboticsFacilityTrain",
         "RoboticsFacilityTrain",
         "que5",
-        {
-          "Link": "BuildInProgress",
-          "index": "0"
-        },
-        {
-          "Link": "Rally",
-          "index": "3"
-        },
-        {
-          "Link": "RoboticsFacilityTrain",
-          "index": "2"
-        },
-        {
-          "Link": "que5",
-          "index": "1"
-        },
+        "que5",
         {
           "index": "4",
           "removed": "1"
@@ -26487,11 +27767,8 @@
       "AbilArray": [
         "BuildInProgress",
         "ShieldBatteryRechargeChanneled",
+        "ShieldBatteryRechargeEx5",
         "stop",
-        {
-          "Link": "ShieldBatteryRechargeEx5",
-          "index": "1"
-        },
         {
           "index": "2",
           "removed": "1"
@@ -27674,13 +28951,10 @@
     "SwarmHostMP": {
       "AbilArray": [
         "MorphToSwarmHostBurrowedMP",
+        "SpawnLocustsTargeted",
         "SwarmHostSpawnLocusts",
         "move",
-        "stop",
-        {
-          "Link": "SpawnLocustsTargeted",
-          "index": "3"
-        }
+        "stop"
       ],
       "Acceleration": 1000,
       "AttackTargetPriority": 20,
@@ -28133,13 +29407,10 @@
     "Thor": {
       "AbilArray": [
         "250mmStrikeCannons",
+        "ThorAPMode",
         "attack",
         "move",
-        "stop",
-        {
-          "Link": "ThorAPMode",
-          "index": "3"
-        }
+        "stop"
       ],
       "Acceleration": 1000,
       "AlliedPushPriority": 1,
@@ -28457,14 +29728,8 @@
       ],
       "BehaviorArray": [
         "Frenzy",
-        [
-          "0",
-          "Frenzy"
-        ],
-        [
-          "0",
-          "MassiveVoidRayVulnerability"
-        ]
+        "Frenzy",
+        "MassiveVoidRayVulnerability"
       ],
       "CardLayouts": [
         {
@@ -28615,12 +29880,9 @@
       ],
       "TurningRate": 360,
       "WeaponArray": [
+        "",
         "KaiserBlades",
-        "Ram",
-        {
-          "Link": "",
-          "index": "1"
-        }
+        "Ram"
       ],
       "name": "Ultralisk",
       "race": "Zerg",
@@ -28928,10 +30190,7 @@
       "VisionHeight": 15,
       "WeaponArray": [
         "PrismaticBeam",
-        {
-          "Link": "VoidRaySwarm",
-          "index": "0"
-        }
+        "VoidRaySwarm"
       ],
       "name": "VoidRay",
       "race": "Protoss",
@@ -29550,15 +30809,12 @@
     "Zergling": {
       "AbilArray": [
         "BurrowZerglingDown",
+        "MorphToBaneling",
         "MorphZerglingToBaneling",
         "attack",
         "move",
         "que1",
-        "stop",
-        {
-          "Link": "MorphToBaneling",
-          "index": "5"
-        }
+        "stop"
       ],
       "Acceleration": 1000,
       "AttackTargetPriority": 20,

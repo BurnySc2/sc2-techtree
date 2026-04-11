@@ -133,6 +133,12 @@ def gather_data():
                                 if unit_name not in visited_units:
                                     queue.append(("unit", unit_name))
 
+            # Add abilities directly listed on this structure
+            abilities_list = structure_info.get("abilities", [])
+            for ability_name in abilities_list:
+                if ability_name not in visited_abilities:
+                    visited_abilities.add(ability_name)
+
         elif category == "upgrade":
             if name in visited_upgrades:
                 continue

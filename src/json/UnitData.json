@@ -1346,14 +1346,11 @@
     ],
     "BehaviorArray": [
       "MassiveVoidRayVulnerability",
+      "MassiveVoidRayVulnerability",
       null,
       [
         "0",
         "1"
-      ],
-      [
-        "0",
-        "MassiveVoidRayVulnerability"
       ]
     ],
     "CardLayouts": {
@@ -2361,19 +2358,13 @@
     "AbilArray": [
       "BurrowBanelingDown",
       "Explode",
+      "Explode",
       "SapStructure",
+      "VolatileBurstBuilding",
       "VolatileBurstBuilding",
       "attack",
       "move",
-      "stop",
-      {
-        "Link": "Explode",
-        "index": "4"
-      },
-      {
-        "Link": "VolatileBurstBuilding",
-        "index": "5"
-      }
+      "stop"
     ],
     "Acceleration": 1000,
     "AttackTargetPriority": 20,
@@ -2815,12 +2806,9 @@
   },
   "BanelingCocoon": {
     "AbilArray": [
+      "MorphToBaneling",
       "Rally",
-      "que1",
-      {
-        "Link": "MorphToBaneling",
-        "index": "0"
-      }
+      "que1"
     ],
     "AttackTargetPriority": 10,
     "Attributes": [
@@ -3569,10 +3557,7 @@
     "AbilArray": [
       "BarracksTechLabResearch",
       "MercCompoundResearch",
-      {
-        "Link": "TechLabMorph",
-        "index": "2"
-      },
+      "TechLabMorph",
       {
         "index": "6",
         "removed": "1"
@@ -3654,10 +3639,7 @@
   },
   "BattleStationMineralField750": {
     "BehaviorArray": [
-      [
-        "0",
-        "MineralFieldMinerals750"
-      ]
+      "MineralFieldMinerals750"
     ],
     "LifeMax": 500,
     "LifeStart": 500,
@@ -3666,24 +3648,15 @@
   "Battlecruiser": {
     "AIEvalFactor": 0.9,
     "AbilArray": [
+      "BattlecruiserAttack",
+      "BattlecruiserMove",
+      "BattlecruiserStop",
       "Hyperjump",
       "Yamato",
       "attack",
       "move",
       "que1",
-      "stop",
-      {
-        "Link": "BattlecruiserAttack",
-        "index": "1"
-      },
-      {
-        "Link": "BattlecruiserMove",
-        "index": "2"
-      },
-      {
-        "Link": "BattlecruiserStop",
-        "index": "0"
-      }
+      "stop"
     ],
     "Acceleration": 1,
     "AttackTargetPriority": 20,
@@ -3847,6 +3820,7 @@
     "TechAliasArray": "Alias_BattlecruiserClass",
     "VisionHeight": 15,
     "WeaponArray": [
+      "BattlecruiserWeaponSwitch",
       {
         "Link": "ATALaserBattery",
         "Turret": "Battlecruiser"
@@ -3854,10 +3828,6 @@
       {
         "Link": "ATSLaserBattery",
         "Turret": "Battlecruiser"
-      },
-      {
-        "Link": "BattlecruiserWeaponSwitch",
-        "index": "0"
       },
       {
         "index": "1",
@@ -4183,14 +4153,11 @@
       "Massive"
     ],
     "BehaviorArray": [
+      "Frenzy",
       "MassiveVoidRayVulnerability",
       [
         "0",
         "1"
-      ],
-      [
-        "0",
-        "Frenzy"
       ]
     ],
     "CardLayouts": [
@@ -4586,38 +4553,20 @@
     "AIEvalFactor": 1.1,
     "AbilArray": [
       "AttackRedirect",
+      "AttackRedirect",
       "BuildInProgress",
       "BunkerTransport",
       "Rally",
+      "Rally",
       "SalvageBunkerRefund",
+      "SalvageEffect",
       "SalvageShared",
       "StimpackMarauderRedirect",
+      "StimpackMarauderRedirect",
+      "StimpackRedirect",
       "StimpackRedirect",
       "StopRedirect",
-      {
-        "Link": "AttackRedirect",
-        "index": "7"
-      },
-      {
-        "Link": "Rally",
-        "index": "3"
-      },
-      {
-        "Link": "SalvageEffect",
-        "index": "2"
-      },
-      {
-        "Link": "StimpackMarauderRedirect",
-        "index": "5"
-      },
-      {
-        "Link": "StimpackRedirect",
-        "index": "4"
-      },
-      {
-        "Link": "StopRedirect",
-        "index": "6"
-      },
+      "StopRedirect",
       {
         "index": "8",
         "removed": "1"
@@ -5198,10 +5147,7 @@
   },
   "ChangelingMarine": {
     "AbilArray": [
-      {
-        "Link": "move",
-        "index": "1"
-      },
+      "move",
       {
         "index": "2",
         "removed": "1"
@@ -5294,10 +5240,7 @@
   },
   "ChangelingMarineShield": {
     "AbilArray": [
-      {
-        "Link": "move",
-        "index": "1"
-      },
+      "move",
       {
         "index": "2",
         "removed": "1"
@@ -5392,10 +5335,7 @@
   },
   "ChangelingZealot": {
     "AbilArray": [
-      {
-        "Link": "move",
-        "index": "1"
-      },
+      "move",
       {
         "index": "2",
         "removed": "1"
@@ -5502,10 +5442,7 @@
   },
   "ChangelingZergling": {
     "AbilArray": [
-      {
-        "Link": "move",
-        "index": "1"
-      },
+      "move",
       {
         "index": "2",
         "removed": "1"
@@ -5612,10 +5549,7 @@
   },
   "ChangelingZerglingWings": {
     "AbilArray": [
-      {
-        "Link": "move",
-        "index": "1"
-      },
+      "move",
       {
         "index": "2",
         "removed": "1"
@@ -7689,15 +7623,12 @@
   "Corruptor": {
     "AIEvalFactor": 0.7,
     "AbilArray": [
+      "CausticSpray",
       "Corruption",
       "MorphToBroodLord",
       "attack",
       "move",
-      "stop",
-      {
-        "Link": "CausticSpray",
-        "index": "0"
-      }
+      "stop"
     ],
     "Acceleration": 3,
     "AttackTargetPriority": 20,
@@ -8828,17 +8759,11 @@
     "AbilArray": [
       "BuildInProgress",
       "DarkShrineResearch",
+      "DarkShrineResearch",
       "attackProtossBuilding",
       "que5",
-      "stopProtossBuilding",
-      {
-        "Link": "DarkShrineResearch",
-        "index": "1"
-      },
-      {
-        "Link": "que5",
-        "index": "2"
-      }
+      "que5",
+      "stopProtossBuilding"
     ],
     "AttackTargetPriority": 11,
     "Attributes": [
@@ -14057,10 +13982,7 @@
   "FactoryTechLab": {
     "AbilArray": [
       "FactoryTechLabResearch",
-      {
-        "Link": "TechLabMorph",
-        "index": "3"
-      }
+      "TechLabMorph"
     ],
     "AddedOnArray": [
       {
@@ -14909,6 +14831,7 @@
   "Ghost": {
     "AIEvalFactor": 1.2,
     "AbilArray": [
+      "ChannelSnipe",
       "EMP",
       "GhostCloak",
       "GhostHoldFire",
@@ -14917,11 +14840,7 @@
       "TacNukeStrike",
       "attack",
       "move",
-      "stop",
-      {
-        "Link": "ChannelSnipe",
-        "index": "4"
-      }
+      "stop"
     ],
     "Acceleration": 1000,
     "AttackTargetPriority": 20,
@@ -15341,10 +15260,7 @@
     "AbilArray": [
       "ChannelSnipe",
       "MorphToGhostNova",
-      {
-        "Link": "MorphToGhostNova",
-        "index": "4"
-      }
+      "MorphToGhostNova"
     ],
     "EffectArray": [
       "MorphToGhostNova",
@@ -15443,19 +15359,10 @@
       "BuildInProgress",
       "LairResearch",
       "SpireResearch",
+      "SpireResearch",
+      "SpireResearch",
       "que5CancelToSelection",
-      {
-        "Link": "SpireResearch",
-        "index": "1"
-      },
-      {
-        "Link": "SpireResearch",
-        "index": "2"
-      },
-      {
-        "Link": "que5CancelToSelection",
-        "index": "1"
-      },
+      "que5CancelToSelection",
       {
         "index": "3",
         "removed": "1"
@@ -17723,12 +17630,9 @@
       "Mechanical"
     ],
     "BehaviorArray": [
+      "BarrierDamageResponse",
       "HardenedShield",
-      "ImmortalOverload",
-      [
-        "0",
-        "BarrierDamageResponse"
-      ]
+      "ImmortalOverload"
     ],
     "CardLayouts": [
       {
@@ -18144,23 +18048,14 @@
       "AmorphousArmorcloud",
       "BurrowInfestorDown",
       "FungalGrowth",
+      "FungalGrowth",
       "InfestedTerrans",
+      "InfestedTerrans",
+      "InfestorEnsnare",
       "Leech",
       "NeuralParasite",
       "move",
       "stop",
-      {
-        "Link": "FungalGrowth",
-        "index": "4"
-      },
-      {
-        "Link": "InfestedTerrans",
-        "index": "5"
-      },
-      {
-        "Link": "InfestorEnsnare",
-        "index": "5"
-      },
       {
         "index": "6",
         "removed": "1"
@@ -18396,12 +18291,9 @@
       "BurrowInfestorUp",
       "InfestedTerrans",
       "InfestorEnsnare",
+      "NeuralParasite",
       "move",
-      "stop",
-      {
-        "Link": "NeuralParasite",
-        "index": "3"
-      }
+      "stop"
     ],
     "Acceleration": 1000,
     "AttackTargetPriority": 20,
@@ -18826,11 +18718,8 @@
     "SubgroupPriority": 66,
     "TurningRate": 999.8437,
     "WeaponArray": [
-      "InfestedGuassRifle",
-      {
-        "Link": "InfestedAcidSpines",
-        "index": "0"
-      }
+      "InfestedAcidSpines",
+      "InfestedGuassRifle"
     ]
   },
   "InfestorTerranBurrowed": {
@@ -19373,10 +19262,7 @@
   },
   "LabMineralField750": {
     "BehaviorArray": [
-      [
-        "0",
-        "MineralFieldMinerals750"
-      ]
+      "MineralFieldMinerals750"
     ],
     "LifeMax": 500,
     "LifeStart": 500,
@@ -20374,11 +20260,8 @@
     "AbilArray": [
       "BuildInProgress",
       "HydraliskDenResearch",
-      "que5",
-      {
-        "Link": "LurkerDenResearch",
-        "index": "2"
-      }
+      "LurkerDenResearch",
+      "que5"
     ],
     "AttackTargetPriority": 11,
     "Attributes": [
@@ -20808,16 +20691,10 @@
   "LurkerMPEgg": {
     "AbilArray": [
       "LurkerAspectMP",
+      "MorphToLurker",
+      "Rally",
       "move",
       "stop",
-      {
-        "Link": "MorphToLurker",
-        "index": "0"
-      },
-      {
-        "Link": "Rally",
-        "index": "1"
-      },
       {
         "index": "2",
         "removed": "1"
@@ -21712,10 +21589,7 @@
   },
   "MineralField450": {
     "BehaviorArray": [
-      [
-        "0",
-        "MineralFieldMinerals450"
-      ]
+      "MineralFieldMinerals450"
     ],
     "LifeMax": 500,
     "LifeStart": 500,
@@ -21723,10 +21597,7 @@
   },
   "MineralField750": {
     "BehaviorArray": [
-      [
-        "0",
-        "MineralFieldMinerals750"
-      ]
+      "MineralFieldMinerals750"
     ],
     "LifeMax": 500,
     "LifeStart": 500,
@@ -21787,10 +21658,7 @@
   },
   "MineralFieldOpaque": {
     "BehaviorArray": [
-      [
-        "0",
-        "MineralFieldMineralsOpaque"
-      ]
+      "MineralFieldMineralsOpaque"
     ],
     "LifeMax": 500,
     "LifeStart": 500,
@@ -21798,10 +21666,7 @@
   },
   "MineralFieldOpaque900": {
     "BehaviorArray": [
-      [
-        "0",
-        "MineralFieldMineralsOpaque900"
-      ]
+      "MineralFieldMineralsOpaque900"
     ],
     "LifeMax": 500,
     "LifeStart": 500,
@@ -22089,23 +21954,14 @@
     "AIEvalFactor": 0.8,
     "AbilArray": [
       "MassRecall",
+      "MassRecall",
       "MothershipCloak",
+      "MothershipMassRecall",
+      "TemporalField",
       "Vortex",
       "attack",
       "move",
-      "stop",
-      {
-        "Link": "MassRecall",
-        "index": "4"
-      },
-      {
-        "Link": "MothershipMassRecall",
-        "index": "4"
-      },
-      {
-        "Link": "TemporalField",
-        "index": "3"
-      }
+      "stop"
     ],
     "Acceleration": 1.375,
     "AlliedPushPriority": 1,
@@ -22122,10 +21978,8 @@
       "MassiveVoidRayVulnerability",
       "MothershipLastTargetTracker",
       "MothershipResetEnergy",
-      [
-        "0",
-        "MothershipTargetFireTracker"
-      ],
+      "MothershipResetEnergy",
+      "MothershipTargetFireTracker",
       [
         "1",
         "1"
@@ -22133,10 +21987,6 @@
       [
         "1",
         "2"
-      ],
-      [
-        "1",
-        "MothershipResetEnergy"
       ]
     ],
     "CardLayouts": [
@@ -22309,13 +22159,10 @@
       "MothershipCoreMassRecall",
       "MothershipCorePurifyNexus",
       "MothershipCoreWeapon",
+      "TemporalField",
       "attack",
       "move",
-      "stop",
-      {
-        "Link": "TemporalField",
-        "index": "1"
-      }
+      "stop"
     ],
     "Acceleration": 1.0625,
     "AttackTargetPriority": 20,
@@ -22689,39 +22536,21 @@
     "AbilArray": [
       "BatteryOvercharge",
       "BuildInProgress",
+      "ChronoBoostEnergyCost",
       "EnergyRecharge",
       "NexusInvulnerability",
+      "NexusMassRecall",
       "NexusTrain",
       "NexusTrainMothership",
+      "NexusTrainMothership",
       "NexusTrainMothershipCore",
+      "RallyNexus",
       "RallyNexus",
       "TimeWarp",
       "attackProtossBuilding",
       "que5",
-      {
-        "Link": "ChronoBoostEnergyCost",
-        "index": "1"
-      },
-      {
-        "Link": "NexusMassRecall",
-        "index": "8"
-      },
-      {
-        "Link": "NexusTrainMothership",
-        "index": "7"
-      },
-      {
-        "Link": "RallyNexus",
-        "index": "4"
-      },
-      {
-        "Link": "que5Passive",
-        "index": "2"
-      },
-      {
-        "Link": "stopProtossBuilding",
-        "index": "5"
-      }
+      "que5Passive",
+      "stopProtossBuilding"
     ],
     "AttackTargetPriority": 11,
     "Attributes": [
@@ -22950,12 +22779,9 @@
     "AbilArray": [
       "BuildinProgressNydusCanal",
       "NydusCanalTransport",
+      "NydusWormTransport",
       "Rally",
-      "stop",
-      {
-        "Link": "NydusWormTransport",
-        "index": "2"
-      }
+      "stop"
     ],
     "AttackTargetPriority": 11,
     "Attributes": [
@@ -22964,12 +22790,9 @@
       "Structure"
     ],
     "BehaviorArray": [
+      "NydusCreepGrowth",
       "NydusDetect",
       "NydusWormArmor",
-      [
-        "0",
-        "NydusCreepGrowth"
-      ],
       "makeCreep4x4"
     ],
     "CardLayouts": [
@@ -23624,20 +23447,13 @@
     ]
   },
   "ObserverSiegeMode": {
-    "AbilArray": {
-      "Link": "ObserverSiegeMorphtoObserver",
-      "index": "2"
-    },
+    "AbilArray": [
+      "ObserverSiegeMorphtoObserver"
+    ],
     "Acceleration": 0,
     "BehaviorArray": [
-      [
-        "0",
-        "Detector13p75"
-      ],
-      [
-        "0",
-        "Detector15"
-      ]
+      "Detector13p75",
+      "Detector15"
     ],
     "CardLayouts": {
       "LayoutButtons": [
@@ -23685,30 +23501,18 @@
   "Oracle": {
     "AIEvalFactor": 0.3,
     "AbilArray": [
+      "LightofAiur",
       "OracleRevelation",
       "OracleStasisTrapBuild",
+      "OracleWeapon",
       "OracleWeapon",
       "ResourceStun",
       "VoidSiphon",
       "Warpable",
+      "attack",
+      "attack",
       "move",
-      "stop",
-      {
-        "Link": "LightofAiur",
-        "index": "4"
-      },
-      {
-        "Link": "OracleWeapon",
-        "index": "5"
-      },
-      {
-        "Link": "attack",
-        "index": "4"
-      },
-      {
-        "Link": "attack",
-        "index": "5"
-      }
+      "stop"
     ],
     "Acceleration": 3,
     "AttackTargetPriority": 20,
@@ -24987,17 +24791,11 @@
   "OverseerSiegeMode": {
     "AbilArray": [
       "LoadOutSpray",
-      {
-        "Link": "OverseerSiegeModeMorphtoOverseer",
-        "index": "4"
-      }
+      "OverseerSiegeModeMorphtoOverseer"
     ],
     "Acceleration": 0,
     "BehaviorArray": [
-      [
-        "0",
-        "Detector13p75"
-      ]
+      "Detector13p75"
     ],
     "CardLayouts": [
       {
@@ -27615,10 +27413,7 @@
   },
   "PurifierMineralField750": {
     "BehaviorArray": [
-      [
-        "0",
-        "MineralFieldMinerals750"
-      ]
+      "MineralFieldMinerals750"
     ],
     "LifeMax": 500,
     "LifeStart": 500,
@@ -27631,10 +27426,7 @@
   },
   "PurifierRichMineralField750": {
     "BehaviorArray": [
-      [
-        "0",
-        "HighYieldMineralFieldMinerals750"
-      ]
+      "HighYieldMineralFieldMinerals750"
     ],
     "LifeMax": 500,
     "LifeStart": 500,
@@ -29114,30 +28906,15 @@
   "Raven": {
     "AbilArray": [
       "BuildAutoTurret",
+      "BuildAutoTurret",
       "PlacePointDefenseDrone",
+      "RavenScramblerMissile",
+      "RavenScramblerMissile",
+      "RavenShredderMissile",
+      "RavenShredderMissile",
       "SeekerMissile",
       "move",
-      "stop",
-      {
-        "Link": "BuildAutoTurret",
-        "index": "4"
-      },
-      {
-        "Link": "RavenScramblerMissile",
-        "index": "2"
-      },
-      {
-        "Link": "RavenScramblerMissile",
-        "index": "3"
-      },
-      {
-        "Link": "RavenShredderMissile",
-        "index": "2"
-      },
-      {
-        "Link": "RavenShredderMissile",
-        "index": "3"
-      }
+      "stop"
     ],
     "Acceleration": 2,
     "AttackTargetPriority": 20,
@@ -29740,12 +29517,9 @@
     "TacticalAIThink": "AIThinkReaper",
     "TurningRate": 999.8437,
     "WeaponArray": [
+      "",
       "D8Charge",
-      "P38ScytheGuassPistol",
-      {
-        "Link": "",
-        "index": "1"
-      }
+      "P38ScytheGuassPistol"
     ]
   },
   "ReaperPlaceholder": {
@@ -30535,10 +30309,7 @@
   },
   "RichMineralField750": {
     "BehaviorArray": [
-      [
-        "0",
-        "HighYieldMineralFieldMinerals750"
-      ]
+      "HighYieldMineralFieldMinerals750"
     ],
     "LifeMax": 500,
     "LifeStart": 500,
@@ -30546,10 +30317,7 @@
   },
   "RichMineralFieldDefault": {
     "BehaviorArray": [
-      [
-        "0",
-        "HighYieldMineralFieldMinerals"
-      ]
+      "HighYieldMineralFieldMinerals"
     ],
     "Description": "Button/Tooltip/RichMineralField",
     "LifeMax": 500,
@@ -30933,10 +30701,7 @@
       "BurrowRoachUp",
       "burrowedStop",
       "move",
-      {
-        "Link": "stop",
-        "index": "1"
-      }
+      "stop"
     ],
     "Acceleration": 0,
     "AttackTargetPriority": 20,
@@ -31464,26 +31229,14 @@
   "RoboticsFacility": {
     "AbilArray": [
       "BuildInProgress",
+      "BuildInProgress",
       "GatewayTrain",
       "Rally",
+      "Rally",
+      "RoboticsFacilityTrain",
       "RoboticsFacilityTrain",
       "que5",
-      {
-        "Link": "BuildInProgress",
-        "index": "0"
-      },
-      {
-        "Link": "Rally",
-        "index": "3"
-      },
-      {
-        "Link": "RoboticsFacilityTrain",
-        "index": "2"
-      },
-      {
-        "Link": "que5",
-        "index": "1"
-      },
+      "que5",
       {
         "index": "4",
         "removed": "1"
@@ -33379,11 +33132,8 @@
     "AbilArray": [
       "BuildInProgress",
       "ShieldBatteryRechargeChanneled",
+      "ShieldBatteryRechargeEx5",
       "stop",
-      {
-        "Link": "ShieldBatteryRechargeEx5",
-        "index": "1"
-      },
       {
         "index": "2",
         "removed": "1"
@@ -35677,10 +35427,7 @@
   "StarportTechLab": {
     "AbilArray": [
       "StarportTechLabResearch",
-      {
-        "Link": "TechLabMorph",
-        "index": "4"
-      }
+      "TechLabMorph"
     ],
     "AddedOnArray": [
       {
@@ -36021,24 +35768,15 @@
   "SwarmHostBurrowedMP": {
     "AIEvaluateAlias": "SwarmHostMP",
     "AbilArray": [
+      "",
+      "",
+      "",
       "MorphToSwarmHostMP",
       "Rally",
       "SpawnLocustsTargeted",
       "SwarmHostSpawnLocusts",
       "move",
-      "que1",
-      {
-        "Link": "",
-        "index": "1"
-      },
-      {
-        "Link": "",
-        "index": "2"
-      },
-      {
-        "Link": "",
-        "index": "3"
-      }
+      "que1"
     ],
     "AttackTargetPriority": 20,
     "Attributes": [
@@ -36223,13 +35961,10 @@
   "SwarmHostMP": {
     "AbilArray": [
       "MorphToSwarmHostBurrowedMP",
+      "SpawnLocustsTargeted",
       "SwarmHostSpawnLocusts",
       "move",
-      "stop",
-      {
-        "Link": "SpawnLocustsTargeted",
-        "index": "3"
-      }
+      "stop"
     ],
     "Acceleration": 1000,
     "AttackTargetPriority": 20,
@@ -37089,13 +36824,10 @@
   "Thor": {
     "AbilArray": [
       "250mmStrikeCannons",
+      "ThorAPMode",
       "attack",
       "move",
-      "stop",
-      {
-        "Link": "ThorAPMode",
-        "index": "3"
-      }
+      "stop"
     ],
     "Acceleration": 1000,
     "AlliedPushPriority": 1,
@@ -37443,15 +37175,9 @@
     "TurningRate": 360,
     "WeaponArray": [
       "LanceMissileLaunchers",
+      "LanceMissileLaunchers",
       "ThorsHammer",
-      {
-        "Link": "LanceMissileLaunchers",
-        "index": "0"
-      },
-      {
-        "Link": "ThorsHammer",
-        "index": "1"
-      }
+      "ThorsHammer"
     ]
   },
   "ThorMengskACGluescreenDummy": {
@@ -37843,14 +37569,8 @@
     ],
     "BehaviorArray": [
       "Frenzy",
-      [
-        "0",
-        "Frenzy"
-      ],
-      [
-        "0",
-        "MassiveVoidRayVulnerability"
-      ]
+      "Frenzy",
+      "MassiveVoidRayVulnerability"
     ],
     "CardLayouts": [
       {
@@ -38001,12 +37721,9 @@
     ],
     "TurningRate": 360,
     "WeaponArray": [
+      "",
       "KaiserBlades",
-      "Ram",
-      {
-        "Link": "",
-        "index": "1"
-      }
+      "Ram"
     ]
   },
   "UltraliskACGluescreenDummy": {
@@ -38027,14 +37744,8 @@
     ],
     "BehaviorArray": [
       "Frenzy",
-      [
-        "0",
-        "Frenzy"
-      ],
-      [
-        "0",
-        "MassiveVoidRayVulnerability"
-      ]
+      "Frenzy",
+      "MassiveVoidRayVulnerability"
     ],
     "CardLayouts": [
       {
@@ -39330,10 +39041,7 @@
     "VisionHeight": 15,
     "WeaponArray": [
       "PrismaticBeam",
-      {
-        "Link": "VoidRaySwarm",
-        "index": "0"
-      }
+      "VoidRaySwarm"
     ]
   },
   "VoidRayACGluescreenDummy": {
@@ -39774,10 +39482,7 @@
     ],
     "BehaviorArray": [
       "WarpPrismPowerSource",
-      [
-        "0",
-        "WarpPrismPowerSourceFast"
-      ]
+      "WarpPrismPowerSourceFast"
     ],
     "CardLayouts": [
       {
@@ -41832,15 +41537,12 @@
   "Zergling": {
     "AbilArray": [
       "BurrowZerglingDown",
+      "MorphToBaneling",
       "MorphZerglingToBaneling",
       "attack",
       "move",
       "que1",
-      "stop",
-      {
-        "Link": "MorphToBaneling",
-        "index": "5"
-      }
+      "stop"
     ],
     "Acceleration": 1000,
     "AttackTargetPriority": 20,

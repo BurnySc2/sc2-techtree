@@ -143,11 +143,20 @@ def merge_child_elements(base_elem: etree._Element, override_elem: etree._Elemen
                 # Accumulate *Array values instead of replacing
                 base_value = base_child.get("value", "")
                 override_value = override_child.get("value", "")
+                base_link = base_child.get("Link", "")
+                override_link = override_child.get("Link", "")
                 if override_value and override_value != base_value:
                     # Check if this value already exists in base's children
                     base_tag = str(base_child.tag)
                     existing_values = {c.get("value") for c in base_elem if str(c.tag) == base_tag}
                     if override_value not in existing_values:
+                        new_elem = deepcopy(override_child)
+                        base_elem.append(new_elem)
+                elif override_link and override_link != base_link:
+                    # Link-based array item (e.g., CmdButtonArray) - accumulate if link differs
+                    base_tag = str(base_child.tag)
+                    existing_links = {c.get("Link") for c in base_elem if str(c.tag) == base_tag}
+                    if override_link not in existing_links:
                         new_elem = deepcopy(override_child)
                         base_elem.append(new_elem)
                 del override_lookup[key]
