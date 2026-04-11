@@ -18,7 +18,7 @@
         }
       ],
       "Cost": {
-        "Vital": 150
+        "Energy": 150
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": "250mmStrikeCannonsCreatePersistent",
@@ -82,7 +82,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "CursorEffect": "AmorphousArmorcloudSearch",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
@@ -186,7 +186,7 @@
         }
       ],
       "Cost": {
-        "Vital": 25
+        "Energy": 25
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
@@ -234,7 +234,7 @@
           "Link": "Raven Build Link",
           "Location": "Unit"
         },
-        "Vital": 50
+        "Energy": 50
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": "AutoTurretRelease",
@@ -788,7 +788,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 50
+        "Energy": 50
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": "OrbitalCommandCreateMuleSwitch",
@@ -942,7 +942,7 @@
           "TimeStart": "45",
           "TimeUse": "45"
         },
-        "Vital": 0
+        "Energy": 0
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": [
@@ -1038,7 +1038,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "CursorEffect": "EMPSearch",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -1078,7 +1078,7 @@
       "Cost": {
         "Charge": "",
         "Cooldown": "",
-        "Vital": 50
+        "Energy": 50
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "FeedbackSet",
@@ -1104,7 +1104,7 @@
         }
       ],
       "Cost": {
-        "Vital": 50
+        "Energy": 50
       },
       "CursorEffect": "ForceFieldPlacement",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -1132,7 +1132,7 @@
           "Link": "Abil/Leech",
           "Location": "Unit"
         },
-        "Vital": 75
+        "Energy": 75
       },
       "CursorEffect": "FungalGrowthSearch",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
@@ -1161,7 +1161,7 @@
         }
       ],
       "Cost": {
-        "Vital": 25
+        "Energy": 25
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
@@ -1220,7 +1220,7 @@
         }
       ],
       "Cost": {
-        "Vital": 50
+        "Energy": 50
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Flags": [
@@ -1252,7 +1252,7 @@
             "TimeUse": "18"
           }
         ],
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "GuardianShieldPersistent",
@@ -1272,7 +1272,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateAdept",
@@ -1288,7 +1288,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateArchon",
@@ -1304,7 +1304,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateColossus",
@@ -1319,7 +1319,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateDisruptor",
@@ -1335,7 +1335,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateHighTemplar",
@@ -1351,7 +1351,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateImmortal",
@@ -1367,7 +1367,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateOracle",
@@ -1383,7 +1383,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreatePhoenix",
@@ -1399,7 +1399,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateProbe",
@@ -1415,7 +1415,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateStalker",
@@ -1431,7 +1431,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
       "Effect": "HallucinationCreateVoidRay",
@@ -1447,7 +1447,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateWarpPrism",
@@ -1463,7 +1463,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "HallucinationCreateZealot",
@@ -1512,7 +1512,7 @@
         "Cooldown": {
           "TimeUse": "100"
         },
-        "Vital": 0
+        "Energy": 0
       },
       "EditorCategories": "AbilityorEffectType:Units",
       "Effect": "HyperjumpInitialCP",
@@ -1550,7 +1550,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 50
+        "Energy": 50
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": "InfestedTerransCreateEgg",
@@ -2189,7 +2189,7 @@
             "TimeUse": "125"
           }
         ],
-        "Vital": 0
+        "Energy": 0
       },
       "CursorEffect": [
         "MassRecallSearchCursor",
@@ -2262,7 +2262,7 @@
         "Cooldown": {
           "TimeUse": "20"
         },
-        "Vital": 0
+        "Energy": 0
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": "Transient",
@@ -2847,7 +2847,7 @@
       "Cost": {
         "Charge": "",
         "Cooldown": "",
-        "Vital": 50
+        "Energy": 50
       },
       "CursorEffect": "MothershipCoreMassRecallSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -2866,7 +2866,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 50
+        "Energy": 50
       },
       "DefaultError": "CantTargetThatUnit",
       "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
@@ -2891,7 +2891,7 @@
         "Cooldown": {
           "TimeUse": "25"
         },
-        "Vital": 100
+        "Energy": 100
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "MothershipCoreWeaponAB",
@@ -2918,7 +2918,7 @@
           "Link": "Abil/Leech",
           "Location": "Unit"
         },
-        "Vital": 100
+        "Energy": 100
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": "NeuralParasiteLaunchMissile",
@@ -3037,7 +3037,7 @@
         "Cooldown": {
           "TimeUse": "14"
         },
-        "Vital": 25
+        "Energy": 25
       },
       "CursorEffect": "OracleRevelationSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -3065,7 +3065,9 @@
         },
         "Time": 5,
         "Unit": "OracleStasisTrap",
-        "Vital": 50,
+        "Vital": {
+          "Energy": 50
+        },
         "index": "Build1"
       },
       "Range": 5,
@@ -3105,7 +3107,7 @@
             "TimeUse": "4"
           }
         ],
-        "Vital": 25,
+        "Energy": 25,
         "index": 0
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -3168,7 +3170,7 @@
           "Link": "Raven Build Link",
           "Location": "Unit"
         },
-        "Vital": 100
+        "Energy": 100
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": "PointDefenseDroneReleaseCreateUnit",
@@ -3394,7 +3396,7 @@
         "Cooldown": {
           "TimeUse": "2"
         },
-        "Vital": 75
+        "Energy": 75
       },
       "CursorEffect": "PsiStormSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -3452,7 +3454,9 @@
           "Delay": 2,
           "Time": 15,
           "Unit": "CreepTumorQueen",
-          "Vital": 25,
+          "Vital": {
+            "Energy": 25
+          },
           "index": "Build1"
         },
         {
@@ -3556,7 +3560,7 @@
     },
     "ResourceStun": {
       "Cost": {
-        "Vital": 75
+        "Energy": 75
       },
       "CursorEffect": "ResourceStunDummyCastSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -3615,7 +3619,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 50
+        "Energy": 50
       },
       "CursorEffect": "ScannerSweep",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -3641,7 +3645,7 @@
       "Cost": {
         "Charge": "Abil/HunterSeekerMissile",
         "Cooldown": "Abil/HunterSeekerMissile",
-        "Vital": 125
+        "Energy": 125
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": "SeekerMissileLaunchMissile",
@@ -3724,7 +3728,7 @@
         "index": "Execute"
       },
       "Cost": {
-        "Vital": 25
+        "Energy": 25
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": "SnipeDamage",
@@ -3750,7 +3754,7 @@
       "Cost": {
         "Charge": "Abil/SpawnMutantLarva",
         "Cooldown": "Abil/SpawnMutantLarva",
-        "Vital": 25
+        "Energy": 25
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": "SpawnLarvaSet",
@@ -3803,7 +3807,7 @@
         "Cooldown": {
           "TimeUse": "1"
         },
-        "Vital": 10
+        "Life": 10
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": "Transient",
@@ -3829,7 +3833,7 @@
             "TimeUse": "1"
           }
         ],
-        "Vital": 20
+        "Life": 20
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": "Transient",
@@ -3847,7 +3851,7 @@
       },
       "Cost": {
         "Cooldown": "SupplyDrop",
-        "Vital": 50
+        "Energy": 50
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": "SupplyDropApplyTempBehavior",
@@ -4105,7 +4109,7 @@
           "Link": "Transfusion",
           "TimeUse": "1"
         },
-        "Vital": 50
+        "Energy": 50
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": "TransfusionImpactSet",
@@ -4176,7 +4180,7 @@
           "Link": "Abil/ViperConsumeStructure",
           "Location": "Unit"
         },
-        "Vital": 50
+        "Energy": 50
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "OracleVoidSiphonPersistentSet",
@@ -4228,7 +4232,7 @@
       },
       "Cost": {
         "Cooldown": "Vortex",
-        "Vital": 100
+        "Energy": 100
       },
       "CursorEffect": [
         "VortexSearchArea",
@@ -4602,7 +4606,7 @@
             "TimeUse": "100"
           }
         ],
-        "Vital": 0
+        "Energy": 0
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [

@@ -32,7 +32,7 @@ FLAG_ARRAY_TAGS = {
 LINK_ARRAY_TAGS = {"WeaponArray", "AbilArray", "EffectArray"}
 
 # Tags where index is used as the key for the value (not flag style)
-INDEX_AS_KEY_TAGS = {"CostResource"}
+INDEX_AS_KEY_TAGS = {"CostResource", "Vital"}
 
 # Tags where the index name is returned regardless of value (for enum-like attributes)
 # e.g., <AttributeBonus index="Light" value="6"/> -> "Light" (not "6" or {"Light": 6})
@@ -60,6 +60,8 @@ def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
             # Flag arrays should always be arrays (even single element)
             if tag in FLAG_ARRAY_TAGS or len(matching) > 1:
                 result[tag] = child_val
+            elif tag_name == "Cost" and tag == "Vital":
+                result.update(child_val[0])
             else:
                 result[tag] = child_val[0]
 
