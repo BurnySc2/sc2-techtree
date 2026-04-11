@@ -329,7 +329,6 @@ def main():
                     unlocked = [unlocked]
                 building_unlocks[name] = unlocked
 
-    trainable_units = extract_trainable_units(abil_data)
     trainable_units_by_ability = extract_trainable_units_by_ability(abil_data)
     researchable_upgrades = extract_researchable_upgrades(abil_data)
     valid_units = set(unit_data.keys())
@@ -347,7 +346,13 @@ def main():
 
         if is_structure:
             produced = building_produces.get(name, [])
-            trainable = trainable_units.get(name, [])
+            abil_array = data.get("AbilArray", [])
+            trainable = []
+            if isinstance(abil_array, list):
+                for abil in abil_array:
+                    abil_name = abil if isinstance(abil, str) else abil.get("Link")
+                    if abil_name and abil_name.endswith("Train") and abil_name in trainable_units_by_ability:
+                        trainable.extend(trainable_units_by_ability[abil_name])
             combined = list({*produced, *trainable})
             valid_produces = sorted({u for u in combined if isinstance(u, str) and u in valid_units})
             unlocked = building_unlocks.get(name, [])
@@ -356,7 +361,6 @@ def main():
             combined_unlocks = list({*filtered_unlocked, *req_unlocked})
             unlocks = sorted({u for u in combined_unlocks if isinstance(u, str) and u in valid_units})
 
-            abil_array = data.get("AbilArray", [])
             researches = []
             structure_abilities = []
             valid_upgrades = set(upgrade_data.keys())

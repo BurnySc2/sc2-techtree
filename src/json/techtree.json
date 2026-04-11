@@ -2489,7 +2489,9 @@
         "SupplyDrop",
         "que5CancelToSelection"
       ],
-      "produces": [],
+      "produces": [
+        "SCV"
+      ],
       "race": "Terran",
       "unlocks": []
     },
@@ -2523,7 +2525,9 @@
         "que5PassiveCancelToSelection",
         "stop"
       ],
-      "produces": [],
+      "produces": [
+        "SCV"
+      ],
       "race": "Terran",
       "unlocks": []
     },
@@ -2619,11 +2623,17 @@
         "que5"
       ],
       "produces": [
+        "Adept",
         "Colossus",
+        "DarkTemplar",
         "Disruptor",
+        "HighTemplar",
         "Immortal",
         "Observer",
-        "WarpPrism"
+        "Sentry",
+        "Stalker",
+        "WarpPrism",
+        "Zealot"
       ],
       "race": "Protoss",
       "unlocks": []

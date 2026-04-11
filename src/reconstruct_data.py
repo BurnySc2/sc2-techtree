@@ -147,12 +147,10 @@ def gather_data():
                     visited_abilities.add(ability_name)
                     ability_info = abilities_section.get(ability_name, {})
                     morphsto = ability_info.get("morphsto")
-                    if morphsto and morphsto in structures_section:
-                        if morphsto not in visited_structures:
-                            queue.append(("structure", morphsto))
-                    elif morphsto and morphsto in units_section:
-                        if morphsto not in visited_units:
-                            queue.append(("unit", morphsto))
+                    if morphsto and morphsto in structures_section and morphsto not in visited_structures:
+                        queue.append(("structure", morphsto))
+                    elif morphsto and morphsto in units_section and morphsto not in visited_units:
+                        queue.append(("unit", morphsto))
 
         elif category == "upgrade":
             if name in visited_upgrades:

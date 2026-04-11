@@ -14295,7 +14295,9 @@
         "que5CancelToSelection"
       ],
       "name": "OrbitalCommand",
-      "produces": [],
+      "produces": [
+        "SCV"
+      ],
       "race": "Terran",
       "unlocks": []
     },
@@ -14595,7 +14597,9 @@
         "stop"
       ],
       "name": "PlanetaryFortress",
-      "produces": [],
+      "produces": [
+        "SCV"
+      ],
       "race": "Terran",
       "unlocks": []
     },
@@ -15358,11 +15362,17 @@
       ],
       "name": "RoboticsFacility",
       "produces": [
+        "Adept",
         "Colossus",
+        "DarkTemplar",
         "Disruptor",
+        "HighTemplar",
         "Immortal",
         "Observer",
-        "WarpPrism"
+        "Sentry",
+        "Stalker",
+        "WarpPrism",
+        "Zealot"
       ],
       "race": "Protoss",
       "unlocks": []
