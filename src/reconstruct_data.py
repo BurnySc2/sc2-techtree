@@ -76,6 +76,13 @@ def gather_data():
                     and ability_name not in visited_abilities
                 ):
                     visited_abilities.add(ability_name)
+                    ability_info = abilities_section.get(ability_name, {})
+                    morphsto = ability_info.get("morphsto")
+                    if morphsto and morphsto not in visited_structures:
+                        if morphsto in structures_section:
+                            queue.append(("structure", morphsto))
+                        elif morphsto in units_section:
+                            queue.append(("unit", morphsto))
 
             # Add structures this unit can build
             builds = unit_info.get("builds", [])
@@ -138,6 +145,14 @@ def gather_data():
             for ability_name in abilities_list:
                 if ability_name not in visited_abilities:
                     visited_abilities.add(ability_name)
+                    ability_info = abilities_section.get(ability_name, {})
+                    morphsto = ability_info.get("morphsto")
+                    if morphsto and morphsto in structures_section:
+                        if morphsto not in visited_structures:
+                            queue.append(("structure", morphsto))
+                    elif morphsto and morphsto in units_section:
+                        if morphsto not in visited_units:
+                            queue.append(("unit", morphsto))
 
         elif category == "upgrade":
             if name in visited_upgrades:

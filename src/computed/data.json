@@ -706,6 +706,27 @@
       "race": "Terran",
       "requires": []
     },
+    "BlindingCloud": {
+      "AINotifyEffect": "BlindingCloudCP",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "BlindingCloud",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Energy": 100
+      },
+      "CursorEffect": "BlindingCloudSearch",
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Effect": "BlindingCloudCP",
+      "Flags": [
+        "AllowMovement",
+        "NoDeceleration"
+      ],
+      "Range": 11,
+      "name": "BlindingCloud",
+      "race": "Zerg",
+      "requires": []
+    },
     "Blink": {
       "AbilSetId": "Blnk",
       "Arc": 360,
@@ -729,6 +750,53 @@
       "Range": 500,
       "name": "Blink",
       "race": "Protoss",
+      "requires": []
+    },
+    "BroodLordHangar": {
+      "Alert": "",
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "EffectArray": [
+        "InterceptorFate",
+        "KillsToCaster"
+      ],
+      "ExternalAngle": [
+        -149.9853,
+        149.9853
+      ],
+      "Flags": [
+        "AutoCastOffOwnerLeave",
+        "Retarget"
+      ],
+      "InfoArray": {
+        "Button": {
+          "DefaultButtonFace": "Broodling",
+          "Requirements": "ArmBroodlingEscort"
+        },
+        "CountStart": 2,
+        "Flags": [
+          "AutoBuild",
+          "AutoBuildOn",
+          "External"
+        ],
+        "Manage": "Recall",
+        "Time": 2.5,
+        "Unit": "BroodlingEscort",
+        "index": "Ammo1"
+      },
+      "Leash": 9,
+      "name": "BroodLordHangar",
+      "race": "Zerg",
+      "requires": []
+    },
+    "BroodLordQueue2": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "Flags": [
+        "Hidden",
+        "Passive"
+      ],
+      "QueueSize": 2,
+      "name": "BroodLordQueue2",
+      "race": "Zerg",
       "requires": []
     },
     "BuildAutoTurret": {
@@ -1635,6 +1703,28 @@
       "UnloadCargoEffect": "CCUnloadDummy",
       "name": "CommandCenterTransport",
       "race": "Terran",
+      "requires": []
+    },
+    "Contaminate": {
+      "AINotifyEffect": "",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "Contaminate",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Charge": "",
+        "Cooldown": "",
+        "Energy": 125
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Flags": [
+        "AllowMovement",
+        "NoDeceleration"
+      ],
+      "Range": 3,
+      "TargetFilters": "Structure,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "name": "Contaminate",
+      "race": "Zerg",
       "requires": []
     },
     "Corruption": {
@@ -4708,6 +4798,76 @@
       "race": "Terran",
       "requires": []
     },
+    "MorphToSwarmHostMP": {
+      "AbilSetId": "BrwU",
+      "ActorKey": "BurrowUp",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "MorphToSwarmHostMP",
+        "Flags": [
+          "ShowInGlossary",
+          "ToSelection"
+        ],
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "Flags": [
+        "IgnoreFacing",
+        "IgnoreFood",
+        "IgnoreUnitCost",
+        "RallyReset",
+        "SuppressMovement"
+      ],
+      "InfoArray": [
+        {
+          "RandomDelayMax": 0.5,
+          "SectionArray": [
+            {
+              "DurationArray": 0.5,
+              "index": "Abils"
+            },
+            {
+              "DurationArray": [
+                0.5,
+                1
+              ],
+              "index": "Actor"
+            },
+            {
+              "DurationArray": [
+                0.5,
+                1
+              ],
+              "index": "Mover"
+            },
+            {
+              "DurationArray": [
+                0.5,
+                1
+              ],
+              "index": "Stats"
+            }
+          ],
+          "Unit": "SwarmHostMP"
+        },
+        {
+          "SectionArray": [
+            {
+              "DurationArray": 0,
+              "index": "Abils"
+            },
+            {
+              "DurationArray": 0,
+              "index": "Mover"
+            }
+          ],
+          "index": 0
+        }
+      ],
+      "morphsto": "SwarmHostMP",
+      "name": "MorphToSwarmHostMP",
+      "race": "Terran",
+      "requires": []
+    },
     "MorphZerglingToBaneling": {
       "Activity": "UI/Morphing",
       "ActorKey": "BanelingAspect",
@@ -5219,6 +5379,66 @@
       "name": "OrbitalLiftOff",
       "parent": "TerranBuildingLiftOff",
       "unit": "OrbitalCommandFlying"
+    },
+    "OverseerMorphtoOverseerSiegeMode": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "MorphtoOverseerSiege",
+        "Flags": "ToSelection",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Flags": [
+        "DisableAbils",
+        "IgnoreFacing",
+        "WaitUntilStopped"
+      ],
+      "InfoArray": {
+        "SectionArray": [
+          {
+            "DurationArray": 0.5,
+            "index": "Abils"
+          },
+          {
+            "DurationArray": 0.5,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 0.5,
+            "index": "Collide"
+          },
+          {
+            "DurationArray": 0.5,
+            "index": "Stats"
+          },
+          {
+            "DurationArray": 0.75,
+            "index": "Mover"
+          }
+        ],
+        "Unit": "OverseerSiegeMode"
+      },
+      "name": "OverseerMorphtoOverseerSiegeMode",
+      "race": "Zerg",
+      "requires": []
+    },
+    "ParasiticBomb": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "ParasiticBomb",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Energy": 125
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Effect": "ParasiticBombLM",
+      "Range": 8,
+      "TargetFilters": [
+        "Air,Visible;Self,Player,Ally,Neutral,Structure,Heroic,Stasis,Invulnerable",
+        "Air,Visible;Self,Player,Ally,Neutral,Structure,Stasis,Invulnerable"
+      ],
+      "name": "ParasiticBomb",
+      "race": "Zerg",
+      "requires": []
     },
     "PhasingMode": {
       "CmdButtonArray": [
@@ -6271,6 +6491,21 @@
       "TargetFilters": "Biological,Visible;Self,Structure,Destructible,Stasis,Dead,Hidden,Invulnerable",
       "name": "Snipe",
       "race": "Terran",
+      "requires": []
+    },
+    "SpawnChangeling": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "SpawnChangeling",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Energy": 50
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Flags": "BestUnit",
+      "ProducedUnitArray": "Changeling",
+      "name": "SpawnChangeling",
+      "race": "Zerg",
       "requires": []
     },
     "SpawnLarva": {
@@ -7525,6 +7760,56 @@
         "Hive"
       ]
     },
+    "UpgradeToHive": {
+      "Activity": "UI/Mutating",
+      "ActorKey": "HiveUpgrade",
+      "Alert": "MorphComplete_Zerg",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "CancelMutateMorph",
+          "index": "Cancel"
+        },
+        {
+          "DefaultButtonFace": "Hive",
+          "Requirements": "HaveInfestationPit",
+          "index": "Execute"
+        }
+      ],
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": [
+        "BestUnit",
+        "Birth",
+        "DisableAbils",
+        "FastBuild",
+        "Interruptible",
+        "Produce",
+        "ShowProgress"
+      ],
+      "InfoArray": {
+        "Score": 1,
+        "SectionArray": [
+          {
+            "DurationArray": 100,
+            "index": "Abils"
+          },
+          {
+            "DurationArray": 100,
+            "index": "Actor"
+          },
+          {
+            "DurationArray": 100,
+            "index": "Stats"
+          }
+        ],
+        "Unit": "Hive"
+      },
+      "morphsto": "Hive",
+      "name": "UpgradeToHive",
+      "race": "Zerg",
+      "requires": [
+        "InfestationPit"
+      ]
+    },
     "UpgradeToLair": {
       "Activity": "UI/Mutating",
       "ActorKey": "LairUpgrade",
@@ -7726,6 +8011,32 @@
       "morphsto": "WarpGate",
       "name": "UpgradeToWarpGate",
       "race": "Protoss",
+      "requires": []
+    },
+    "ViperConsumeStructure": {
+      "Alignment": "Positive",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "ViperConsume",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "1"
+        }
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Effect": "ViperConsumeStructureLaunchMissile",
+      "Flags": [
+        "AllowMovement",
+        "BestUnit",
+        "DeferCooldown",
+        "NoDeceleration",
+        "WaitToSpend"
+      ],
+      "Range": 7,
+      "TargetFilters": "Structure;Ally,Neutral,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden",
+      "name": "ViperConsumeStructure",
+      "race": "Zerg",
       "requires": []
     },
     "VoidRaySwarmDamageBoost": {
@@ -8223,6 +8534,37 @@
       ],
       "name": "Yamato",
       "race": "Terran",
+      "requires": []
+    },
+    "Yoink": {
+      "AINotifyEffect": "FaceEmbrace",
+      "CastOutroTime": 0.8,
+      "CmdButtonArray": {
+        "DefaultButtonFace": "FaceEmbrace",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Energy": 75
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Effect": "YoinkStartSwitch",
+      "Flags": [
+        "AllowMovement",
+        "NoDeceleration"
+      ],
+      "Range": 9,
+      "TargetFilters": [
+        "-;Self,Neutral,Structure,Heroic,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable",
+        "-;Self,Neutral,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"
+      ],
+      "UninterruptibleArray": [
+        "Cast",
+        "Channel",
+        "Finish"
+      ],
+      "UseMarkerArray": 0,
+      "name": "Yoink",
+      "race": "Zerg",
       "requires": []
     },
     "ZergBuild": {
@@ -11913,6 +12255,170 @@
         "Ghost"
       ]
     },
+    "GreaterSpire": {
+      "AbilArray": [
+        "BuildInProgress",
+        "LairResearch",
+        "SpireResearch",
+        "SpireResearch",
+        "SpireResearch",
+        "que5CancelToSelection",
+        "que5CancelToSelection",
+        {
+          "index": "3",
+          "removed": "1"
+        }
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "OnCreep",
+        "ZergBuildingDies6",
+        "ZergBuildingNotOnCreep"
+      ],
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "BuildInProgress,Cancel",
+            "Column": "4",
+            "Face": "CancelBuilding",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research1",
+            "Column": "0",
+            "Face": "zergflyerattack1",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research2",
+            "Column": "0",
+            "Face": "zergflyerattack2",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research3",
+            "Column": "0",
+            "Face": "zergflyerattack3",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research4",
+            "Column": "1",
+            "Face": "zergflyerarmor1",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research5",
+            "Column": "1",
+            "Face": "zergflyerarmor2",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research6",
+            "Column": "1",
+            "Face": "zergflyerarmor3",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "que5CancelToSelection,CancelLast",
+            "Column": "4",
+            "Face": "Cancel",
+            "Row": "2",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 350,
+        "Vespene": 350
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "Facing": 339.994,
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PenaltyRevealed",
+        "PreventDefeat",
+        "PreventDestroy",
+        "TownAlert",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Footprint": "Footprint2x2IgnoreCreepContour",
+      "GlossaryPriority": 244,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergBuildingArmor",
+      "LifeMax": 1000,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 1000,
+      "MinimapRadius": 1,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint2x2Creep",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Zerg",
+      "Radius": 1,
+      "ScoreKill": 700,
+      "ScoreMake": 650,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 1,
+      "Sight": 9,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 22,
+      "TechAliasArray": "Alias_Spire",
+      "TechTreeUnlockedUnitArray": "BroodLord",
+      "TurningRate": 719.4726,
+      "abilities": [
+        "BuildInProgress",
+        "LairResearch",
+        "SpireResearch",
+        "que5CancelToSelection"
+      ],
+      "name": "GreaterSpire",
+      "produces": [],
+      "race": "Zerg",
+      "researches": [
+        "Burrow",
+        "ZergFlyerArmorsLevel1",
+        "ZergFlyerArmorsLevel2",
+        "ZergFlyerArmorsLevel3",
+        "ZergFlyerWeaponsLevel1",
+        "ZergFlyerWeaponsLevel2",
+        "ZergFlyerWeaponsLevel3",
+        "overlordspeed",
+        "overlordtransport"
+      ],
+      "unlocks": [
+        "BroodLord"
+      ]
+    },
     "Hatchery": {
       "AIEvalFactor": 0,
       "AbilArray": [
@@ -12113,6 +12619,191 @@
       "unlocks": [
         "EvolutionChamber",
         "SpawningPool"
+      ]
+    },
+    "Hive": {
+      "AIEvalFactor": 0,
+      "AbilArray": [
+        "BuildInProgress",
+        "LairResearch",
+        "RallyHatchery",
+        "TrainQueen",
+        "que5CancelToSelection"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "SpawnLarva",
+        "ZergBuildingDies9",
+        "makeCreep8x6"
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BuildInProgress,Cancel",
+              "Column": "4",
+              "Face": "CancelBuilding",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "LairResearch,Research2",
+              "Column": "0",
+              "Face": "overlordspeed",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "LairResearch,Research3",
+              "Column": "1",
+              "Face": "EvolveVentralSacks",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "LairResearch,Research4",
+              "Column": "4",
+              "Face": "ResearchBurrow",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "RallyHatchery,Rally1",
+              "Column": "4",
+              "Face": "SetRallyPoint2",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "RallyHatchery,Rally2",
+              "Column": "3",
+              "Face": "RallyEgg",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "TrainQueen,Train1",
+              "Column": "1",
+              "Face": "Queen",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "que5CancelToSelection,CancelLast",
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "0",
+              "Face": "Larva",
+              "Row": "0",
+              "Type": "SelectLarva"
+            }
+          ]
+        },
+        {
+          "LayoutButtons": {
+            "index": "8",
+            "removed": "1"
+          },
+          "index": 0
+        }
+      ],
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 675,
+        "Vespene": 250
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PreventDefeat",
+        "PreventDestroy",
+        "PreventReveal",
+        "TownAlert",
+        "TownCamera",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Food": 6,
+      "Footprint": "Footprint6x5DropOffCreepSourceContour",
+      "GlossaryPriority": 18,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "KillDisplay": "Default",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergBuildingArmor",
+      "LifeMax": 2500,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 2500,
+      "MinimapRadius": 2.5,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint6x5DropOffCreepSource",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Zerg",
+      "Radius": 2,
+      "RankDisplay": "Default",
+      "ResourceDropOff": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "ScoreKill": 925,
+      "ScoreMake": 875,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 2,
+      "Sight": 12,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 28,
+      "TechAliasArray": [
+        "Alias_Hatchery",
+        "Alias_Lair"
+      ],
+      "TechTreeUnlockedUnitArray": [
+        "SnakeCaster",
+        "Viper"
+      ],
+      "TurningRate": 719.4726,
+      "abilities": [
+        "BuildInProgress",
+        "LairResearch",
+        "RallyHatchery",
+        "TrainQueen",
+        "que5CancelToSelection"
+      ],
+      "name": "Hive",
+      "produces": [],
+      "race": "Zerg",
+      "researches": [
+        "Burrow",
+        "overlordspeed",
+        "overlordtransport"
+      ],
+      "unlocks": [
+        "UltraliskCavern",
+        "Viper"
       ]
     },
     "HydraliskDen": {
@@ -12407,6 +13098,205 @@
       "unlocks": [
         "Infestor",
         "SwarmHostMP"
+      ]
+    },
+    "Lair": {
+      "AIEvalFactor": 0,
+      "AbilArray": [
+        "BuildInProgress",
+        "LairResearch",
+        "RallyHatchery",
+        "TrainQueen",
+        "UpgradeToHive",
+        "que5CancelToSelection"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "SpawnLarva",
+        "ZergBuildingDies9",
+        "makeCreep8x6"
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BuildInProgress,Cancel",
+              "Column": "4",
+              "Face": "CancelBuilding",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "LairResearch,Research2",
+              "Column": "0",
+              "Face": "overlordspeed",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "LairResearch,Research3",
+              "Column": "1",
+              "Face": "EvolveVentralSacks",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "LairResearch,Research4",
+              "Column": "4",
+              "Face": "ResearchBurrow",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "RallyHatchery,Rally1",
+              "Column": "4",
+              "Face": "SetRallyPoint2",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "RallyHatchery,Rally2",
+              "Column": "3",
+              "Face": "RallyEgg",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "TrainQueen,Train1",
+              "Column": "1",
+              "Face": "Queen",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "UpgradeToHive,Cancel",
+              "Column": "4",
+              "Face": "CancelMutateMorph",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "UpgradeToHive,Execute",
+              "Column": "0",
+              "Face": "Hive",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "que5CancelToSelection,CancelLast",
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "0",
+              "Face": "Larva",
+              "Row": "0",
+              "Type": "SelectLarva"
+            }
+          ]
+        },
+        {
+          "LayoutButtons": {
+            "index": "10",
+            "removed": "1"
+          },
+          "index": 0
+        }
+      ],
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 475,
+        "Vespene": 100
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PreventDefeat",
+        "PreventDestroy",
+        "PreventReveal",
+        "TownAlert",
+        "TownCamera",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Food": 6,
+      "Footprint": "Footprint6x5DropOffCreepSourceContour",
+      "GlossaryPriority": 14,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergBuildingArmor",
+      "LifeMax": 2000,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 2000,
+      "MinimapRadius": 2.5,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint6x5DropOffCreepSource",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Zerg",
+      "Radius": 2,
+      "ResourceDropOff": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "ScoreKill": 575,
+      "ScoreMake": 525,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 2,
+      "Sight": 12,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 30,
+      "TechAliasArray": [
+        "Alias_Hatchery",
+        "Alias_Lair"
+      ],
+      "TechTreeUnlockedUnitArray": "Overseer",
+      "TurningRate": 719.4726,
+      "abilities": [
+        "BuildInProgress",
+        "LairResearch",
+        "RallyHatchery",
+        "TrainQueen",
+        "UpgradeToHive",
+        "que5CancelToSelection"
+      ],
+      "name": "Lair",
+      "produces": [],
+      "race": "Zerg",
+      "researches": [
+        "Burrow",
+        "overlordspeed",
+        "overlordtransport"
+      ],
+      "unlocks": [
+        "HydraliskDen",
+        "InfestationPit",
+        "NydusNetwork",
+        "Overseer",
+        "Spire"
       ]
     },
     "LurkerDenMP": {
@@ -13246,6 +14136,169 @@
       "Sight": 7,
       "name": "OracleStasisTrap"
     },
+    "OrbitalCommand": {
+      "AbilArray": [
+        "BuildInProgress",
+        "CalldownMULE",
+        "CommandCenterTrain",
+        "OrbitalLiftOff",
+        "RallyCommand",
+        "ScannerSweep",
+        "SupplyDrop",
+        "que5CancelToSelection"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Mechanical",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "CommandCenterKnockbackBehavior",
+        "TerranBuildingBurnDown"
+      ],
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "BuildInProgress,Cancel",
+            "Column": "4",
+            "Face": "CancelBuilding",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "CalldownMULE,Execute",
+            "Column": "0",
+            "Face": "CalldownMULE",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "CommandCenterTrain,Train1",
+            "Column": "0",
+            "Face": "SCV",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "OrbitalLiftOff,Execute",
+            "Column": "3",
+            "Face": "Lift",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "RallyCommand,Rally1",
+            "Column": "4",
+            "Face": "Rally",
+            "Row": "1",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "ScannerSweep,Execute",
+            "Column": "2",
+            "Face": "Scan",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SupplyDrop,Execute",
+            "Column": "1",
+            "Face": "SupplyDrop",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "que5CancelToSelection,CancelLast",
+            "Column": "4",
+            "Face": "Cancel",
+            "Row": "2",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Economy",
+      "CostResource": {
+        "Minerals": 550
+      },
+      "DeathRevealRadius": 3,
+      "Description": "Button/Tooltip/OrbitalCommandUnit",
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "EnergyMax": 200,
+      "EnergyRegenRate": 0.5625,
+      "EnergyStart": 50,
+      "Facing": 315,
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PreventDefeat",
+        "PreventDestroy",
+        "PreventReveal",
+        "TownAlert",
+        "TownCamera",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Food": 15,
+      "Footprint": "Footprint5x5Contour",
+      "GlossaryPriority": 32,
+      "HotkeyCategory": "Unit/Category/TerranUnits",
+      "KillXP": 80,
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/TerranBuildingPlating",
+      "LifeMax": 1500,
+      "LifeStart": 1500,
+      "MinimapRadius": 2.5,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint5x5DropOff",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Terr",
+      "Radius": 2.5,
+      "RepairTime": 135,
+      "ResourceDropOff": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "ScoreKill": 550,
+      "ScoreMake": 550,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 2.5,
+      "Sight": 11,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 34,
+      "TacticalAIThink": "AIThinkOrbitalCommand",
+      "TechAliasArray": "Alias_CommandCenter",
+      "TurningRate": 719.4726,
+      "abilities": [
+        "BuildInProgress",
+        "CalldownMULE",
+        "CommandCenterTrain",
+        "OrbitalLiftOff",
+        "RallyCommand",
+        "ScannerSweep",
+        "SupplyDrop",
+        "que5CancelToSelection"
+      ],
+      "name": "OrbitalCommand",
+      "produces": [],
+      "race": "Terran",
+      "unlocks": []
+    },
     "PhotonCannon": {
       "AIEvalFactor": 0.8,
       "AbilArray": [
@@ -13373,6 +14426,177 @@
       "name": "PhotonCannon",
       "produces": [],
       "race": "Protoss",
+      "unlocks": []
+    },
+    "PlanetaryFortress": {
+      "AIEvalFactor": 0.7,
+      "AbilArray": [
+        "BuildInProgress",
+        "CommandCenterTrain",
+        "CommandCenterTransport",
+        "RallyCommand",
+        "attack",
+        "que5PassiveCancelToSelection",
+        "stop"
+      ],
+      "AttackTargetPriority": 20,
+      "Attributes": [
+        "Armored",
+        "Mechanical",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "TerranBuildingBurnDown"
+      ],
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "BuildInProgress,Cancel",
+            "Column": "4",
+            "Face": "CancelBuilding",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "CommandCenterTrain,Train1",
+            "Column": "0",
+            "Face": "SCV",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "CommandCenterTransport,LoadAll",
+            "Column": "0",
+            "Face": "PlanetaryFortressLoad",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "CommandCenterTransport,UnloadAll",
+            "Column": "1",
+            "Face": "CommandCenterUnloadAll",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "RallyCommand,Rally1",
+            "Column": "4",
+            "Face": "Rally",
+            "Row": "1",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "attack,Execute",
+            "Column": "4",
+            "Face": "AttackBuildingPFort",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "que5PassiveCancelToSelection,CancelLast",
+            "Column": "4",
+            "Face": "Cancel",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "stop,Stop",
+            "Column": "3",
+            "Face": "StopPlanetaryFortress",
+            "Row": "0",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Economy",
+      "CostResource": {
+        "Minerals": 550,
+        "Vespene": 150
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "Facing": 315,
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PreventDefeat",
+        "PreventDestroy",
+        "PreventReveal",
+        "TownAlert",
+        "TownCamera",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Food": 15,
+      "Footprint": "Footprint5x5Contour",
+      "GlossaryCategory": "Unit/Category/TerranUnits",
+      "GlossaryPriority": 240,
+      "GlossaryStrongArray": [
+        "Marine",
+        "Zealot",
+        "Zergling"
+      ],
+      "GlossaryWeakArray": [
+        "Banshee",
+        "Mutalisk",
+        "SiegeTank",
+        "VoidRay"
+      ],
+      "HotkeyCategory": "Unit/Category/TerranUnits",
+      "LifeArmor": 2,
+      "LifeArmorName": "Unit/LifeArmorName/TerranBuildingPlating",
+      "LifeMax": 1500,
+      "LifeStart": 1500,
+      "MinimapRadius": 2.5,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint5x5DropOff",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Terr",
+      "Radius": 2.5,
+      "RepairTime": 150,
+      "ResourceDropOff": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "ScoreKill": 700,
+      "ScoreMake": 700,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 2.5,
+      "Sight": 11,
+      "SubgroupPriority": 30,
+      "TacticalAIThink": "AIThinkCommandCenter",
+      "TechAliasArray": "Alias_CommandCenter",
+      "WeaponArray": {
+        "Link": "TwinIbiksCannon",
+        "Turret": "PlanetaryFortress"
+      },
+      "abilities": [
+        "BuildInProgress",
+        "CommandCenterTrain",
+        "CommandCenterTransport",
+        "RallyCommand",
+        "attack",
+        "que5PassiveCancelToSelection",
+        "stop"
+      ],
+      "name": "PlanetaryFortress",
+      "produces": [],
+      "race": "Terran",
       "unlocks": []
     },
     "Pylon": {
@@ -15939,6 +17163,160 @@
       "unlocks": [
         "Ultralisk"
       ]
+    },
+    "WarpGate": {
+      "AbilArray": [
+        "BuildInProgress",
+        "MorphBackToGateway",
+        "WarpGateTrain"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "FastEnablerPowerSource",
+        "PowerUserQueue"
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "MorphBackToGateway,Execute",
+              "Column": "1",
+              "Face": "MorphBackToGateway",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "Rally,Rally1",
+              "Column": "4",
+              "Face": "Rally",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "WarpGateTrain,Train1",
+              "Column": "0",
+              "Face": "Zealot",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "WarpGateTrain,Train2",
+              "Column": "2",
+              "Face": "Stalker",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "WarpGateTrain,Train4",
+              "Column": "0",
+              "Face": "HighTemplar",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "WarpGateTrain,Train5",
+              "Column": "1",
+              "Face": "DarkTemplar",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "WarpGateTrain,Train6",
+              "Column": "1",
+              "Face": "Sentry",
+              "Row": "0",
+              "Type": "AbilCmd"
+            }
+          ]
+        },
+        {
+          "LayoutButtons": {
+            "AbilCmd": "WarpGateTrain,Train7",
+            "Column": "3",
+            "Face": "WarpInAdept",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          "index": 0
+        }
+      ],
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 150
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "Facing": 315,
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PenaltyRevealed",
+        "PreventDefeat",
+        "PreventDestroy",
+        "TownAlert",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Footprint": "Footprint3x3Contour",
+      "GlossaryPriority": 24,
+      "HotkeyAlias": "Gateway",
+      "HotkeyCategory": "Unit/Category/ProtossUnits",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ProtossBuildingPlating",
+      "LifeMax": 500,
+      "LifeStart": 500,
+      "MinimapRadius": 1.75,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint3x3",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Prot",
+      "Radius": 1.75,
+      "ScoreKill": 150,
+      "ScoreResult": "BuildOrder",
+      "SelectAlias": "Gateway",
+      "SeparationRadius": 1.75,
+      "ShieldArmorName": "Unit/ShieldArmorName/ProtossPlasmaShields",
+      "ShieldRegenDelay": 10,
+      "ShieldRegenRate": 2,
+      "ShieldsMax": 500,
+      "ShieldsStart": 500,
+      "Sight": 9,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 30,
+      "TechAliasArray": "Alias_Gateway",
+      "TurningRate": 719.4726,
+      "abilities": [
+        "BuildInProgress",
+        "MorphBackToGateway",
+        "WarpGateTrain"
+      ],
+      "name": "WarpGate",
+      "produces": [
+        "Adept",
+        "DarkTemplar",
+        "HighTemplar",
+        "Sentry",
+        "Stalker",
+        "Zealot"
+      ],
+      "race": "Protoss",
+      "unlocks": []
     }
   },
   "units": {
@@ -17396,6 +18774,155 @@
       "requires": [
         "AttachedTechLab",
         "FusionCore"
+      ]
+    },
+    "BroodLord": {
+      "AIEvalFactor": 1.5,
+      "AbilArray": [
+        "BroodLordHangar",
+        "BroodLordQueue2",
+        "attack",
+        "move",
+        "stop"
+      ],
+      "Acceleration": 1.0625,
+      "AttackTargetPriority": 20,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Massive"
+      ],
+      "BehaviorArray": [
+        "Frenzy",
+        "MassiveVoidRayVulnerability",
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "attack,Execute",
+              "Column": "4",
+              "Face": "Attack",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,HoldPos",
+              "Column": "2",
+              "Face": "MoveHoldPosition",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,Move",
+              "Column": "0",
+              "Face": "Move",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,Patrol",
+              "Column": "3",
+              "Face": "MovePatrol",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "stop,Stop",
+              "Column": "1",
+              "Face": "Stop",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "0",
+              "Face": "SwarmSeeds",
+              "Row": "2",
+              "Type": "Passive"
+            }
+          ]
+        },
+        {
+          "LayoutButtons": {
+            "Column": "1",
+            "Face": "Frenzied",
+            "Row": "2",
+            "Type": "Passive"
+          },
+          "index": 0
+        }
+      ],
+      "Collide": [
+        "Flying"
+      ],
+      "CostCategory": "Army",
+      "CostResource": {
+        "Minerals": 300,
+        "Vespene": 250
+      },
+      "DamageDealtXP": 1,
+      "DamageTakenXP": 1,
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "FlagArray": [
+        "AIThreatGround",
+        "ArmySelect",
+        "PreventDestroy",
+        "UseLineOfSight"
+      ],
+      "Food": -4,
+      "GlossaryCategory": "Unit/Category/ZergUnits",
+      "GlossaryPriority": 190,
+      "GlossaryStrongArray": [
+        "HighTemplar",
+        "Hydralisk",
+        "Marine",
+        "SiegeTank",
+        "Stalker",
+        "Ultralisk"
+      ],
+      "GlossaryWeakArray": [
+        "Corruptor",
+        "Tempest",
+        "VikingFighter",
+        "VoidRay"
+      ],
+      "Height": 3.75,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "KillXP": 70,
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergAirArmor",
+      "LifeMax": 225,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 225,
+      "Mass": 0.6,
+      "MinimapRadius": 1,
+      "Mob": "Multiplayer",
+      "Mover": "Fly",
+      "PlaneArray": [
+        "Air"
+      ],
+      "Race": "Zerg",
+      "Radius": 1,
+      "ScoreKill": 550,
+      "ScoreMake": 550,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 1,
+      "Sight": 12,
+      "Speed": 1.6015,
+      "SubgroupPriority": 78,
+      "VisionHeight": 15,
+      "WeaponArray": [
+        "BroodlingStrike"
+      ],
+      "name": "BroodLord",
+      "race": "Zerg",
+      "requires": [
+        "GreaterSpire"
       ]
     },
     "Bunker": {
@@ -21624,6 +23151,133 @@
         "HydraliskDen"
       ]
     },
+    "HydraliskDen": {
+      "AbilArray": [
+        "BuildInProgress",
+        "HydraliskDenResearch",
+        "que5"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "OnCreep",
+        "ZergBuildingDies6",
+        "ZergBuildingNotOnCreep"
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BuildInProgress,Cancel",
+              "Column": "4",
+              "Face": "CancelBuilding",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "HydraliskDenResearch,Research3",
+              "Column": "0",
+              "Face": "hydraliskspeed",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "que5,CancelLast",
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "AbilCmd"
+            }
+          ]
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "HydraliskDenResearch,Research2",
+              "Column": "1",
+              "Face": "EvolveMuscularAugments",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "HydraliskDenResearch,Research4",
+              "Column": "1",
+              "Face": "MuscularAugments",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "UpgradeToLurkerDenMP,Cancel",
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "index": "2"
+            }
+          ],
+          "index": 0
+        }
+      ],
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 150,
+        "Vespene": 100
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "Facing": 332.9956,
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PenaltyRevealed",
+        "PreventDefeat",
+        "PreventDestroy",
+        "TownAlert",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Footprint": "Footprint3x3CreepContour",
+      "GlossaryPriority": 234,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergBuildingArmor",
+      "LifeMax": 850,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 850,
+      "MinimapRadius": 1.5,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint3x3Creep",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Zerg",
+      "Radius": 1.5,
+      "ScoreKill": 250,
+      "ScoreMake": 200,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 1.5,
+      "Sight": 9,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 18,
+      "TechAliasArray": "Alias_HydraliskDen",
+      "TechTreeUnlockedUnitArray": "Hydralisk",
+      "TurningRate": 719.4726,
+      "name": "HydraliskDen"
+    },
     "Immortal": {
       "AbilArray": [
         "Warpable",
@@ -21782,6 +23436,138 @@
       "name": "Immortal",
       "race": "Protoss",
       "requires": []
+    },
+    "InfestationPit": {
+      "AbilArray": [
+        "BuildInProgress",
+        "InfestationPitResearch",
+        "que5"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "OnCreep",
+        "ZergBuildingDies6",
+        "ZergBuildingNotOnCreep"
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BuildInProgress,Cancel",
+              "Column": "4",
+              "Face": "CancelBuilding",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "InfestationPitResearch,Research2",
+              "Column": "0",
+              "Face": "EvolvePeristalsis",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "InfestationPitResearch,Research3",
+              "Column": "1",
+              "Face": "EvolveInfestorEnergyUpgrade",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "que5,CancelLast",
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "AbilCmd"
+            }
+          ]
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "InfestationPitResearch,Research4",
+              "Face": "ResearchNeuralParasite",
+              "index": "2"
+            },
+            {
+              "AbilCmd": "InfestationPitResearch,Research6",
+              "Column": "2",
+              "Face": "EvolveFlyingLocusts",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "InfestationPitResearch,Research6",
+              "Face": "AmorphousArmorcloud",
+              "index": "3"
+            }
+          ],
+          "index": 0
+        }
+      ],
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 150,
+        "Vespene": 100
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "Facing": 329.9963,
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PenaltyRevealed",
+        "PreventDefeat",
+        "PreventDestroy",
+        "TownAlert",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Footprint": "Footprint3x3CreepContour",
+      "GlossaryPriority": 237,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergBuildingArmor",
+      "LifeMax": 850,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 850,
+      "MinimapRadius": 1.5,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint3x3Creep",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Zerg",
+      "Radius": 1.5,
+      "ScoreKill": 250,
+      "ScoreMake": 200,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 1.5,
+      "Sight": 9,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 12,
+      "TechTreeUnlockedUnitArray": [
+        "Infestor",
+        "SwarmHostMP"
+      ],
+      "TurningRate": 719.4726,
+      "name": "InfestationPit"
     },
     "Infestor": {
       "AIEvalFactor": 1.8,
@@ -23964,6 +25750,176 @@
       "TurningRate": 719.4726,
       "name": "NydusCanal"
     },
+    "NydusNetwork": {
+      "AbilArray": [
+        "BuildInProgress",
+        "BuildNydusCanal",
+        "NydusCanalTransport",
+        "Rally",
+        "stop"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "OnCreep",
+        "ZergBuildingDies6",
+        "ZergBuildingNotOnCreep"
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BuildInProgress,Cancel",
+              "Column": "4",
+              "Face": "CancelBuilding",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BuildNydusCanal,Build1",
+              "Column": "0",
+              "Face": "SummonNydusWorm",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "NydusCanalTransport,Load",
+              "Column": "1",
+              "Face": "NydusCanalLoad",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "NydusCanalTransport,UnloadAll",
+              "Column": "2",
+              "Face": "NydusCanalUnloadAll",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "Rally,Rally1",
+              "Column": "4",
+              "Face": "SetRallyPoint",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "stop,Stop",
+              "Column": "1",
+              "Face": "Stop",
+              "Row": "0",
+              "Type": "AbilCmd"
+            }
+          ]
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BuildNydusCanal,Build1",
+              "Column": "0",
+              "Face": "SummonNydusWorm",
+              "Row": "1",
+              "Type": "AbilCmd",
+              "index": "4"
+            },
+            {
+              "AbilCmd": "BuildNydusCanal,Build3",
+              "Column": "2",
+              "Face": "SummonNydusCanalCreeper",
+              "Row": "1",
+              "Type": "AbilCmd",
+              "index": "6"
+            },
+            {
+              "AbilCmd": "BuildNydusCanal,Build3",
+              "Column": "2",
+              "Face": "SummonNydusCanalCreeper",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "0",
+              "index": "1"
+            },
+            {
+              "Column": "1",
+              "index": "2"
+            },
+            {
+              "Column": "2",
+              "Face": "NydusWormIncreasedArmorPassive",
+              "Row": "2",
+              "Type": "Passive"
+            },
+            {
+              "index": "7",
+              "removed": "1"
+            }
+          ],
+          "index": 0
+        }
+      ],
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 200,
+        "Vespene": 150
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "Facing": 344.9707,
+      "FlagArray": [
+        "AIDefense",
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PenaltyRevealed",
+        "PreventDefeat",
+        "PreventDestroy",
+        "TownAlert",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Footprint": "Footprint3x3CreepContour",
+      "GlossaryPriority": 249,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergBuildingArmor",
+      "LifeMax": 850,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 850,
+      "MinimapRadius": 1.5,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint3x3Creep",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Zerg",
+      "Radius": 1.5,
+      "ScoreKill": 350,
+      "ScoreMake": 300,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 1.5,
+      "Sight": 9,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 10,
+      "TechTreeProducedUnitArray": "NydusCanal",
+      "TurningRate": 719.4726,
+      "name": "NydusNetwork"
+    },
     "Observer": {
       "AIEvalFactor": 0,
       "AbilArray": [
@@ -24501,6 +26457,183 @@
       "TechAliasArray": "Alias_CommandCenter",
       "TurningRate": 719.4726,
       "name": "OrbitalCommand"
+    },
+    "Overseer": {
+      "AIEvalFactor": 0,
+      "AbilArray": [
+        "Contaminate",
+        "LoadOutSpray",
+        "OverseerMorphtoOverseerSiegeMode",
+        "SpawnChangeling",
+        "move",
+        "stop"
+      ],
+      "Acceleration": 2.125,
+      "AttackTargetPriority": 20,
+      "Attributes": [
+        "Armored",
+        "Biological"
+      ],
+      "BehaviorArray": [
+        "Detector11"
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "OverseerMorphtoOverseerSiegeMode,Execute",
+              "Column": 0,
+              "Face": "MorphtoOverseerSiege",
+              "Row": 2,
+              "SubmenuCardId": "Spry",
+              "SubmenuIsSticky": 1,
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "2",
+              "index": "6"
+            },
+            {
+              "Column": "3",
+              "index": "8"
+            },
+            {
+              "Column": "4",
+              "index": "7"
+            }
+          ],
+          "index": 0
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "SpawnChangeling,Execute",
+              "Column": "0",
+              "Face": "SpawnChangeling",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "attack,Execute",
+              "Column": "4",
+              "Face": "Attack",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,AcquireMove",
+              "Column": "4",
+              "Face": "AcquireMove",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,HoldPos",
+              "Column": "2",
+              "Face": "MoveHoldPosition",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,Patrol",
+              "Column": "3",
+              "Face": "MovePatrol",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "stop,Stop",
+              "Column": "1",
+              "Face": "Stop",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "3",
+              "Face": "Detector",
+              "Row": "2",
+              "Type": "Passive"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            }
+          ]
+        }
+      ],
+      "Collide": [
+        "Flying"
+      ],
+      "CostCategory": "Army",
+      "CostResource": {
+        "Minerals": 150,
+        "Vespene": 50
+      },
+      "DamageDealtXP": 1,
+      "DamageTakenXP": 1,
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "EnergyMax": 200,
+      "EnergyRegenRate": 0.5625,
+      "EnergyStart": 50,
+      "Facing": 45,
+      "FlagArray": [
+        "AISupport",
+        "ArmySelect",
+        "PreventDestroy",
+        "UseLineOfSight"
+      ],
+      "Food": 8,
+      "GlossaryCategory": "Unit/Category/ZergUnits",
+      "GlossaryPriority": 210,
+      "GlossaryStrongArray": [
+        "Banshee",
+        "DarkTemplar",
+        "LurkerMP",
+        "Roach"
+      ],
+      "GlossaryWeakArray": [
+        "Mutalisk",
+        "Stalker",
+        "VikingFighter"
+      ],
+      "Height": 3.75,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "KillXP": 30,
+      "LateralAcceleration": 46.0625,
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergAirArmor",
+      "LifeMax": 200,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 200,
+      "MinimapRadius": 1,
+      "Mob": "Multiplayer",
+      "Mover": "Fly",
+      "PlaneArray": [
+        "Air"
+      ],
+      "Race": "Zerg",
+      "Radius": 1,
+      "Response": "Flee",
+      "ScoreKill": 200,
+      "ScoreMake": 200,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 0.75,
+      "Sight": 11,
+      "Speed": 1.875,
+      "StationaryTurningRate": 999.8437,
+      "SubgroupPriority": 74,
+      "TacticalAIThink": "AIThinkOverseer",
+      "TechAliasArray": "Alias_Overlord",
+      "TurningRate": 999.8437,
+      "VisionHeight": 15,
+      "name": "Overseer",
+      "race": "Zerg",
+      "requires": [
+        "Lair"
+      ]
     },
     "Phoenix": {
       "AIEvalFactor": 0.7,
@@ -28191,6 +30324,158 @@
       },
       "name": "SpineCrawler"
     },
+    "Spire": {
+      "AbilArray": [
+        "BuildInProgress",
+        "SpireResearch",
+        "UpgradeToGreaterSpire",
+        "que5CancelToSelection"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "OnCreep",
+        "ZergBuildingDies6",
+        "ZergBuildingNotOnCreep"
+      ],
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "BuildInProgress,Cancel",
+            "Column": "4",
+            "Face": "CancelBuilding",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research1",
+            "Column": "0",
+            "Face": "zergflyerattack1",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research2",
+            "Column": "0",
+            "Face": "zergflyerattack2",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research3",
+            "Column": "0",
+            "Face": "zergflyerattack3",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research4",
+            "Column": "1",
+            "Face": "zergflyerarmor1",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research5",
+            "Column": "1",
+            "Face": "zergflyerarmor2",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "SpireResearch,Research6",
+            "Column": "1",
+            "Face": "zergflyerarmor3",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "UpgradeToGreaterSpire,Cancel",
+            "Column": "4",
+            "Face": "CancelMutateMorph",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "UpgradeToGreaterSpire,Execute",
+            "Column": "0",
+            "Face": "GreaterSpire",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "que5CancelToSelection,CancelLast",
+            "Column": "4",
+            "Face": "Cancel",
+            "Row": "2",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 200,
+        "Vespene": 150
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "Facing": 315,
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PenaltyRevealed",
+        "PreventDefeat",
+        "PreventDestroy",
+        "TownAlert",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Footprint": "Footprint2x2CreepContour",
+      "GlossaryPriority": 241,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergBuildingArmor",
+      "LifeMax": 850,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 850,
+      "MinimapRadius": 1,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint2x2Creep",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Zerg",
+      "Radius": 1,
+      "ScoreKill": 450,
+      "ScoreMake": 400,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 1,
+      "Sight": 9,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 24,
+      "TechAliasArray": "Alias_Spire",
+      "TechTreeUnlockedUnitArray": [
+        "Corruptor",
+        "Mutalisk"
+      ],
+      "TurningRate": 719.4726,
+      "name": "Spire"
+    },
     "SporeCrawler": {
       "AIEvalFactor": 0.65,
       "AbilArray": [
@@ -28855,6 +31140,198 @@
       ],
       "TurningRate": 719.4726,
       "name": "Starport"
+    },
+    "SwarmHostBurrowedMP": {
+      "AIEvaluateAlias": "SwarmHostMP",
+      "AbilArray": [
+        "",
+        "MorphToSwarmHostMP",
+        "Rally",
+        "SpawnLocustsTargeted",
+        "SwarmHostSpawnLocusts",
+        "move",
+        "que1"
+      ],
+      "AttackTargetPriority": 20,
+      "Attributes": [
+        "Armored",
+        "Biological"
+      ],
+      "BehaviorArray": [
+        "SpawnLocusts",
+        "TrainInfestedTerran",
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1"
+        ]
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "",
+              "Column": 1,
+              "Face": "FlyingLocusts",
+              "Requirements": "HaveFlyingLocusts",
+              "Row": 2,
+              "Type": "Passive",
+              "index": 4
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "SpawnLocustsTargeted,Execute",
+              "Column": "0",
+              "Face": "VoidSwarmHostSpawnLocust",
+              "Row": "2",
+              "index": "3"
+            },
+            {
+              "AbilCmd": "attack,Execute",
+              "Column": "4",
+              "Face": "Attack",
+              "Row": "0",
+              "index": "1"
+            },
+            {
+              "AbilCmd": "move,AcquireMove",
+              "Face": "AcquireMove",
+              "index": "2"
+            }
+          ],
+          "index": 0
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "MorphToSwarmHostMP,Execute",
+              "Column": "4",
+              "Face": "SwarmHostBurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "Rally,Rally1",
+              "Column": "3",
+              "Face": "SetRallyPointSwarmHost",
+              "Row": "1",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "SwarmHostSpawnLocusts,Execute",
+              "Column": "0",
+              "Face": "SwarmHost",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "attack,Execute",
+              "Column": "4",
+              "Face": "Attack",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,AcquireMove",
+              "Column": "4",
+              "Face": "AcquireMove",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,HoldPos",
+              "Column": "2",
+              "Face": "MoveHoldPosition",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,Move",
+              "Column": "0",
+              "Face": "Move",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,Patrol",
+              "Column": "3",
+              "Face": "MovePatrol",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "stop,Stop",
+              "Column": "1",
+              "Face": "Stop",
+              "Row": "0",
+              "Type": "AbilCmd"
+            }
+          ]
+        }
+      ],
+      "Collide": [
+        "Burrow",
+        "RoachBurrow"
+      ],
+      "CostCategory": "Army",
+      "CostResource": {
+        "Minerals": 100,
+        "Vespene": 75
+      },
+      "DeathRevealRadius": 3,
+      "Description": "Button/Tooltip/SwarmHostMP",
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "Facing": 45,
+      "FlagArray": [
+        "AIHighPrioTarget",
+        "AIPreferBurrow",
+        "AIPressForwardDisabled",
+        "AIThreatGround",
+        "AlwaysThreatens",
+        "ArmySelect",
+        "Buried",
+        "Cloaked",
+        "PreventDestroy",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "Food": -4,
+      "GlossaryAlias": "SwarmHostMP",
+      "HotkeyAlias": "SwarmHostMP",
+      "InnerRadius": 0.5,
+      "KillDisplay": "Always",
+      "LeaderAlias": "SwarmHostMP",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergGroundArmor",
+      "LifeMax": 160,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 160,
+      "Mob": "Multiplayer",
+      "Mover": "Burrowed",
+      "Name": "Unit/Name/SwarmHostMP",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Zerg",
+      "Radius": 0.8125,
+      "RankDisplay": "Always",
+      "ScoreKill": 175,
+      "SeparationRadius": 0,
+      "Sight": 10,
+      "SubgroupAlias": "SwarmHostMP",
+      "SubgroupPriority": 86,
+      "TacticalAIThink": "AIThinkSwarmHostMP",
+      "name": "SwarmHostBurrowedMP",
+      "race": "Zerg",
+      "requires": []
     },
     "SwarmHostMP": {
       "AbilArray": [
@@ -29792,6 +32269,137 @@
         "UltraliskCavern"
       ]
     },
+    "UltraliskCavern": {
+      "AbilArray": [
+        "BuildInProgress",
+        "UltraliskCavernResearch",
+        "que5"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "OnCreep",
+        "ZergBuildingDies6",
+        "ZergBuildingNotOnCreep"
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BuildInProgress,Cancel",
+              "Column": "4",
+              "Face": "CancelBuilding",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "UltraliskCavernResearch,Research2",
+              "Column": "0",
+              "Face": "EvolveAnabolicSynthesis2",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "UltraliskCavernResearch,Research3",
+              "Column": "1",
+              "Face": "EvolveChitinousPlating",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "que5,CancelLast",
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "AbilCmd"
+            }
+          ]
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "UltraliskCavernResearch,Research1",
+              "Column": "1",
+              "Face": "EvolveAnabolicSynthesis2",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "UltraliskCavernResearch,Research3",
+              "Column": "0",
+              "Face": "EvolveChitinousPlating",
+              "Row": "0",
+              "Type": "AbilCmd",
+              "index": "2"
+            },
+            {
+              "index": "3",
+              "removed": "1"
+            }
+          ],
+          "index": 0
+        }
+      ],
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 200,
+        "Vespene": 200
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "Facing": 29.9926,
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PenaltyRevealed",
+        "PreventDefeat",
+        "PreventDestroy",
+        "TownAlert",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Footprint": "Footprint3x3CreepContour",
+      "GlossaryPriority": 253,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergBuildingArmor",
+      "LifeMax": 850,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 850,
+      "MinimapRadius": 1.5,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint3x3Creep",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Zerg",
+      "Radius": 1.5,
+      "ScoreKill": 400,
+      "ScoreMake": 350,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 1.5,
+      "Sight": 9,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 14,
+      "TechTreeUnlockedUnitArray": "Ultralisk",
+      "TurningRate": 719.4726,
+      "name": "UltraliskCavern"
+    },
     "VikingFighter": {
       "AbilArray": [
         "AssaultMode",
@@ -29933,6 +32541,182 @@
       "name": "VikingFighter",
       "race": "Terran",
       "requires": []
+    },
+    "Viper": {
+      "AIEvalFactor": 0,
+      "AbilArray": [
+        "BlindingCloud",
+        "ParasiticBomb",
+        "ViperConsumeStructure",
+        "Yoink",
+        "move",
+        "stop"
+      ],
+      "Acceleration": 3,
+      "AttackTargetPriority": 20,
+      "Attributes": [
+        "Armored",
+        "Biological",
+        "Psionic"
+      ],
+      "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BlindingCloud,Execute",
+              "Column": "2",
+              "Face": "BlindingCloud",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "ViperConsumeStructure,Execute",
+              "Column": "0",
+              "Face": "ViperConsume",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "Yoink,Execute",
+              "Column": "1",
+              "Face": "FaceEmbrace",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "attack,Execute",
+              "Column": "4",
+              "Face": "Attack",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,AcquireMove",
+              "Column": "4",
+              "Face": "AcquireMove",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,HoldPos",
+              "Column": "2",
+              "Face": "MoveHoldPosition",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,Move",
+              "Column": "0",
+              "Face": "Move",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "move,Patrol",
+              "Column": "3",
+              "Face": "MovePatrol",
+              "Row": "0",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "stop,Stop",
+              "Column": "1",
+              "Face": "Stop",
+              "Row": "0",
+              "Type": "AbilCmd"
+            }
+          ]
+        },
+        {
+          "LayoutButtons": {
+            "AbilCmd": "ParasiticBomb,Execute",
+            "Column": "3",
+            "Face": "ParasiticBomb",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          "index": 0
+        }
+      ],
+      "Collide": [
+        "Flying"
+      ],
+      "CostCategory": "Army",
+      "CostResource": {
+        "Minerals": 100,
+        "Vespene": 200
+      },
+      "DamageDealtXP": 1,
+      "DamageTakenXP": 1,
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "EnergyMax": 200,
+      "EnergyRegenRate": 0.5625,
+      "EnergyStart": 50,
+      "Facing": 45,
+      "FlagArray": [
+        "AISupport",
+        "AIThreatAir",
+        "AIThreatGround",
+        "AlwaysThreatens",
+        "ArmySelect",
+        "PreventDestroy",
+        "UseLineOfSight"
+      ],
+      "Food": -3,
+      "GlossaryCategory": "Unit/Category/ZergUnits",
+      "GlossaryPriority": 80,
+      "GlossaryStrongArray": [
+        "Colossus",
+        "Hydralisk",
+        "Mutalisk",
+        "SiegeTank",
+        "SiegeTankSieged"
+      ],
+      "GlossaryWeakArray": [
+        "Corruptor",
+        "Ghost",
+        "HighTemplar",
+        "Mutalisk",
+        "Phoenix",
+        "VikingFighter"
+      ],
+      "Height": 3.75,
+      "HotkeyCategory": "Unit/Category/ZergUnits",
+      "KillDisplay": "Always",
+      "KillXP": 30,
+      "LateralAcceleration": 46.0625,
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ZergAirArmor",
+      "LifeMax": 150,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 150,
+      "MinimapRadius": 1,
+      "Mob": "Multiplayer",
+      "Mover": "Fly",
+      "PlaneArray": [
+        "Air"
+      ],
+      "Race": "Zerg",
+      "Radius": 1,
+      "RankDisplay": "Always",
+      "Response": "Flee",
+      "ScoreKill": 300,
+      "ScoreMake": 300,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 0.75,
+      "Sight": 11,
+      "Speed": 2.9531,
+      "StationaryTurningRate": 999.8437,
+      "SubgroupPriority": 96,
+      "TacticalAIThink": "AIThinkViper",
+      "TurningRate": 999.8437,
+      "VisionHeight": 15,
+      "name": "Viper",
+      "race": "Zerg",
+      "requires": [
+        "Hive"
+      ]
     },
     "VoidRay": {
       "AbilArray": [
@@ -31667,6 +34451,9 @@
       "race": "Protoss",
       "requires": []
     },
+    "GreaterSpire": {
+      "name": "GreaterSpire"
+    },
     "HiSecAutoTracking": {
       "AffectedUnitArray": [
         "AutoTurret",
@@ -31728,6 +34515,9 @@
       "name": "HighTemplarKhaydarinAmulet",
       "race": "Protoss",
       "requires": []
+    },
+    "Hive": {
+      "name": "Hive"
     },
     "HydraliskDen": {
       "name": "HydraliskDen"
@@ -31804,6 +34594,9 @@
       "name": "InfestorEnergyUpgrade",
       "race": "Zerg",
       "requires": []
+    },
+    "Lair": {
+      "name": "Lair"
     },
     "Larva": {
       "name": "Larva"
