@@ -37,15 +37,15 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
       "PreventDestroy",
+      "Turnable",
       "Uncommandable",
-      "Untargetable"
+      "Untargetable",
+      "Untooltipable"
     ],
     "FogVisibility": "Dimmed",
     "HotkeyAlias": "",
@@ -85,15 +85,15 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
       "PreventDestroy",
+      "Turnable",
       "Uncommandable",
-      "Untargetable"
+      "Untargetable",
+      "Untooltipable"
     ],
     "FogVisibility": "Dimmed",
     "Height": 3.75,
@@ -1404,7 +1404,7 @@
     },
     "CargoSize": 4,
     "Collide": [
-      0,
+      "ForceField",
       "Ground",
       "Locust",
       "Small"
@@ -1745,13 +1745,13 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -1853,13 +1853,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -1933,13 +1933,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -2298,12 +2298,12 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "AIDefense",
       "AILifetime",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "NoScore",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -2965,13 +2965,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -3298,13 +3298,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -3528,12 +3528,12 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -4107,9 +4107,9 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
+      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "UseLineOfSight"
@@ -4147,12 +4147,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -4746,7 +4746,6 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "AIDefense",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
@@ -4754,6 +4753,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -5243,9 +5243,9 @@
       "Minerals": 0
     },
     "FlagArray": [
-      0,
       "AIChangeling",
       "AILifetime",
+      "ArmySelect",
       "NoScore"
     ],
     "Food": 0,
@@ -5339,9 +5339,9 @@
       "Minerals": 0
     },
     "FlagArray": [
-      0,
       "AIChangeling",
       "AILifetime",
+      "ArmySelect",
       "NoScore"
     ],
     "Food": 0,
@@ -5449,9 +5449,9 @@
       "Minerals": 0
     },
     "FlagArray": [
-      0,
       "AIChangeling",
       "AILifetime",
+      "ArmySelect",
       "NoScore"
     ],
     "Food": 0,
@@ -5559,9 +5559,9 @@
       "Minerals": 0
     },
     "FlagArray": [
-      0,
       "AIChangeling",
       "AILifetime",
+      "ArmySelect",
       "NoScore"
     ],
     "Food": 0,
@@ -5669,9 +5669,9 @@
       "Minerals": 0
     },
     "FlagArray": [
-      0,
       "AIChangeling",
       "AILifetime",
+      "ArmySelect",
       "NoScore"
     ],
     "Food": 0,
@@ -5722,7 +5722,7 @@
   },
   "CleaningBot": {
     "Attributes": [
-      0,
+      "Biological",
       "Mechanical"
     ],
     "Fidget": {
@@ -5761,11 +5761,11 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -5807,13 +5807,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -5856,13 +5856,13 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -5903,13 +5903,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -5949,11 +5949,11 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -5989,11 +5989,11 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6030,11 +6030,11 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6071,11 +6071,11 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6112,11 +6112,11 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6161,13 +6161,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6210,13 +6210,13 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6253,13 +6253,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6295,13 +6295,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6338,13 +6338,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6380,13 +6380,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6427,13 +6427,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6480,13 +6480,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6533,13 +6533,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6586,13 +6586,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6639,13 +6639,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6684,12 +6684,12 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6733,13 +6733,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6782,13 +6782,13 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6825,13 +6825,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6868,13 +6868,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6915,13 +6915,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -6967,13 +6967,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Unhighlightable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -7075,10 +7075,10 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "AISplash",
       "ArmySelect",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -6,
@@ -7294,7 +7294,6 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
@@ -7302,6 +7301,7 @@
       "PreventReveal",
       "TownAlert",
       "TownCamera",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -7323,10 +7323,10 @@
     "Radius": 2.5,
     "RepairTime": 100,
     "ResourceDropOff": [
-      "Custom",
-      "Minerals",
-      "Terrazine",
-      "Vespene"
+      1,
+      1,
+      1,
+      1
     ],
     "ScoreKill": 400,
     "ScoreMake": 400,
@@ -7474,7 +7474,7 @@
   },
   "CommentatorBot1": {
     "Attributes": [
-      0,
+      "Biological",
       "Mechanical"
     ],
     "Description": "Button/Tooltip/CritterCommentatorBot1",
@@ -7483,7 +7483,7 @@
   },
   "CommentatorBot2": {
     "Attributes": [
-      0,
+      "Biological",
       "Mechanical"
     ],
     "Description": "Button/Tooltip/CritterCommentatorBot2",
@@ -7492,7 +7492,7 @@
   },
   "CommentatorBot3": {
     "Attributes": [
-      0,
+      "Biological",
       "Mechanical"
     ],
     "Description": "Button/Tooltip/CritterCommentatorBot3",
@@ -7501,7 +7501,7 @@
   },
   "CommentatorBot4": {
     "Attributes": [
-      0,
+      "Biological",
       "Mechanical"
     ],
     "Description": "Button/Tooltip/CritterCommentatorBot4",
@@ -7522,7 +7522,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "Footprint": "CompoundMansion_DoorE",
@@ -7542,7 +7542,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "Footprint": "Tarsonis_DoorELowered",
@@ -7562,7 +7562,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "Footprint": "CompoundMansion_DoorN",
@@ -7582,7 +7582,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "Footprint": "CompoundMansion_DoorNE",
@@ -7602,7 +7602,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "Footprint": "Tarsonis_DoorNELowered",
@@ -7622,7 +7622,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "Footprint": "Tarsonis_DoorNLowered",
@@ -7642,7 +7642,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "Footprint": "CompoundMansion_DoorNW",
@@ -7662,7 +7662,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "Footprint": "Tarsonis_DoorNWLowered",
@@ -8032,7 +8032,7 @@
     ],
     "AttackTargetPriority": 11,
     "Attributes": [
-      0,
+      "Armored",
       "Biological",
       "Light",
       "Structure"
@@ -8070,12 +8070,12 @@
       "NoPlacement"
     ],
     "FlagArray": [
-      0,
       "AILifetime",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "NoScore",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -8111,7 +8111,7 @@
     ],
     "AttackTargetPriority": 19,
     "Attributes": [
-      0,
+      "Armored",
       "Biological",
       "Light",
       "Structure"
@@ -8166,7 +8166,6 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "AILifetime",
       "ArmorDisabledWhileConstructing",
       "Buried",
@@ -8175,6 +8174,7 @@
       "NoScore",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -8217,7 +8217,7 @@
     ],
     "AttackTargetPriority": 11,
     "Attributes": [
-      0,
+      "Armored",
       "Biological",
       "Light",
       "Structure"
@@ -8255,11 +8255,11 @@
       "NoPlacement"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "NoScore",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -8371,8 +8371,8 @@
       "DelayMin": 4
     },
     "FlagArray": [
-      0,
-      0,
+      "KillCredit",
+      "Unclickable",
       "UseLineOfSight"
     ],
     "HotkeyAlias": "",
@@ -8425,8 +8425,8 @@
       "DelayMin": 4
     },
     "FlagArray": [
-      0,
-      0,
+      "KillCredit",
+      "Unclickable",
       "UseLineOfSight"
     ],
     "HotkeyAlias": "",
@@ -8559,13 +8559,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -8901,13 +8901,13 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9125,10 +9125,10 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9164,11 +9164,11 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9204,11 +9204,11 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9690,13 +9690,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9731,13 +9731,13 @@
     ],
     "Facing": 90,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9771,13 +9771,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9812,13 +9812,13 @@
     ],
     "Facing": 90,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9852,12 +9852,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9891,12 +9891,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9930,13 +9930,13 @@
     ],
     "Facing": 4.9987,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -9970,13 +9970,13 @@
     ],
     "Facing": 94.9987,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10009,12 +10009,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10048,12 +10048,12 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10087,13 +10087,13 @@
     ],
     "Facing": 4.9987,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10127,13 +10127,13 @@
     ],
     "Facing": 94.9987,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10171,12 +10171,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10209,12 +10209,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "NoPortraitTalk"
+      "Destructible",
+      "NoPortraitTalk",
+      "Turnable"
     ],
     "FogVisibility": "Snapshot",
     "Footprint": "FootprintDoodad3x3",
@@ -10247,12 +10247,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "NoPortraitTalk"
+      "Destructible",
+      "NoPortraitTalk",
+      "Turnable"
     ],
     "FogVisibility": "Snapshot",
     "Footprint": "FootprintDoodad5x5",
@@ -10269,7 +10269,7 @@
   "DestructibleIce2x4Horizontal": {
     "Facing": 0,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIce2x4Horizontal",
@@ -10278,7 +10278,7 @@
   "DestructibleIce2x4Vertical": {
     "Facing": 90,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIce2x4Vertical",
@@ -10287,7 +10287,7 @@
   "DestructibleIce2x6Horizontal": {
     "Facing": 0,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIce2x6Horizontal",
@@ -10296,7 +10296,7 @@
   "DestructibleIce2x6Vertical": {
     "Facing": 90,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIce2x6Vertical",
@@ -10304,7 +10304,7 @@
   },
   "DestructibleIce4x4": {
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIce4x4",
@@ -10312,7 +10312,7 @@
   },
   "DestructibleIce6x6": {
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIce6x6",
@@ -10321,7 +10321,7 @@
   "DestructibleIceDiagonalHugeBLUR": {
     "Facing": 0,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIceDiagonalHugeBLUR",
@@ -10330,7 +10330,7 @@
   "DestructibleIceDiagonalHugeULBR": {
     "Facing": 90,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIceDiagonalHugeULBR",
@@ -10339,7 +10339,7 @@
   "DestructibleIceHorizontalHuge": {
     "Facing": 135,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIceHorizontalHuge",
@@ -10348,7 +10348,7 @@
   "DestructibleIceVerticalHuge": {
     "Facing": 45,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleIceVerticalHuge",
@@ -10374,13 +10374,13 @@
     ],
     "Facing": 4.9987,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10414,13 +10414,13 @@
     ],
     "Facing": 94.9987,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10454,13 +10454,13 @@
     ],
     "Facing": 144.9975,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10494,13 +10494,13 @@
     ],
     "Facing": 49.9987,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10534,13 +10534,13 @@
     ],
     "Facing": 90,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10573,13 +10573,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10613,13 +10613,13 @@
     ],
     "Facing": 90,
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10652,13 +10652,13 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10691,12 +10691,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10730,12 +10730,12 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -10770,9 +10770,9 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
+      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "UseLineOfSight"
@@ -10791,7 +10791,7 @@
   "DestructibleRockEx12x4Horizontal": {
     "Facing": 0,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx12x4Horizontal",
@@ -10800,7 +10800,7 @@
   "DestructibleRockEx12x4Vertical": {
     "Facing": 90,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx12x4Vertical",
@@ -10809,7 +10809,7 @@
   "DestructibleRockEx12x6Horizontal": {
     "Facing": 0,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx12x6Horizontal",
@@ -10818,7 +10818,7 @@
   "DestructibleRockEx12x6Vertical": {
     "Facing": 90,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx12x6Vertical",
@@ -10826,7 +10826,7 @@
   },
   "DestructibleRockEx14x4": {
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx14x4",
@@ -10834,7 +10834,7 @@
   },
   "DestructibleRockEx16x6": {
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx16x6",
@@ -10843,7 +10843,7 @@
   "DestructibleRockEx1DiagonalHugeBLUR": {
     "Facing": 0,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx1DiagonalHugeBLUR",
@@ -10852,7 +10852,7 @@
   "DestructibleRockEx1DiagonalHugeULBR": {
     "Facing": 90,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx1DiagonalHugeULBR",
@@ -10861,7 +10861,7 @@
   "DestructibleRockEx1HorizontalHuge": {
     "Facing": 135,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx1HorizontalHuge",
@@ -10870,7 +10870,7 @@
   "DestructibleRockEx1VerticalHuge": {
     "Facing": 45,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "MinimapRadius": 2.5,
     "Name": "Unit/Name/DestructibleRockEx1VerticalHuge",
@@ -11349,12 +11349,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -11638,8 +11638,8 @@
     "Acceleration": 1000,
     "AttackTargetPriority": 20,
     "Attributes": [
-      0,
       "Armored",
+      "Light",
       "Mechanical"
     ],
     "CardLayouts": {
@@ -11726,10 +11726,10 @@
       ]
     },
     "FlagArray": [
-      0,
       "AlwaysThreatens",
       "ArmySelect",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -3,
@@ -11797,8 +11797,8 @@
     "Acceleration": 1000,
     "AttackTargetPriority": 20,
     "Attributes": [
-      0,
       "Armored",
+      "Light",
       "Mechanical"
     ],
     "CardLayouts": [
@@ -11891,7 +11891,6 @@
       ]
     },
     "FlagArray": [
-      0,
       "AICantAddToWave",
       "AIFleeDamageDisabled",
       "AILifetime",
@@ -11900,6 +11899,7 @@
       "Invulnerable",
       "NoScore",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -3,
@@ -12661,9 +12661,9 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Campaign",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
+      "KillCredit",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "TownAlert",
@@ -12690,17 +12690,17 @@
   },
   "EnemyPathingBlocker16x16": {
     "Collide": [
-      0,
-      0,
-      0,
-      0,
-      "RoachBurrow"
+      "Burrow",
+      "Ground",
+      "RoachBurrow",
+      "Small",
+      "Structure"
     ],
     "EditorFlags": [
-      0
+      "NeutralDefault"
     ],
     "FlagArray": [
-      0
+      "Turnable"
     ],
     "Footprint": "EnemyPathingBlocker16x16",
     "PlacementFootprint": "EnemyPathingBlocker16x16",
@@ -12709,17 +12709,17 @@
   },
   "EnemyPathingBlocker1x1": {
     "Collide": [
-      0,
-      0,
-      0,
-      0,
-      "RoachBurrow"
+      "Burrow",
+      "Ground",
+      "RoachBurrow",
+      "Small",
+      "Structure"
     ],
     "EditorFlags": [
-      0
+      "NeutralDefault"
     ],
     "FlagArray": [
-      0
+      "Turnable"
     ],
     "Footprint": "EnemyPathingBlocker1x1",
     "PlacementFootprint": "EnemyPathingBlocker1x1",
@@ -12727,17 +12727,17 @@
   },
   "EnemyPathingBlocker2x2": {
     "Collide": [
-      0,
-      0,
-      0,
-      0,
-      "RoachBurrow"
+      "Burrow",
+      "Ground",
+      "RoachBurrow",
+      "Small",
+      "Structure"
     ],
     "EditorFlags": [
-      0
+      "NeutralDefault"
     ],
     "FlagArray": [
-      0
+      "Turnable"
     ],
     "Footprint": "EnemyPathingBlocker2x2",
     "PlacementFootprint": "EnemyPathingBlocker2x2",
@@ -12746,17 +12746,17 @@
   },
   "EnemyPathingBlocker4x4": {
     "Collide": [
-      0,
-      0,
-      0,
-      0,
-      "RoachBurrow"
+      "Burrow",
+      "Ground",
+      "RoachBurrow",
+      "Small",
+      "Structure"
     ],
     "EditorFlags": [
-      0
+      "NeutralDefault"
     ],
     "FlagArray": [
-      0
+      "Turnable"
     ],
     "Footprint": "EnemyPathingBlocker4x4",
     "PlacementFootprint": "EnemyPathingBlocker4x4",
@@ -12765,17 +12765,17 @@
   },
   "EnemyPathingBlocker8x8": {
     "Collide": [
-      0,
-      0,
-      0,
-      0,
-      "RoachBurrow"
+      "Burrow",
+      "Ground",
+      "RoachBurrow",
+      "Small",
+      "Structure"
     ],
     "EditorFlags": [
-      0
+      "NeutralDefault"
     ],
     "FlagArray": [
-      0
+      "Turnable"
     ],
     "Footprint": "EnemyPathingBlocker8x8",
     "PlacementFootprint": "EnemyPathingBlocker8x8",
@@ -12956,13 +12956,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -13107,13 +13107,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 329.9963,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -13156,10 +13156,10 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
+      "Turnable",
       "Unradarable",
       "Unselectable",
       "Untargetable",
@@ -13502,13 +13502,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 329.9963,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -13579,13 +13579,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 329.9963,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -13783,13 +13783,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -14017,12 +14017,12 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -14254,13 +14254,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -14388,23 +14388,23 @@
       }
     },
     "Collide": [
-      0,
-      0,
-      0,
       "Burrow",
+      "Colossus",
       "ForceField",
-      "LocustForceField"
+      "Ground",
+      "LocustForceField",
+      "Small"
     ],
     "DeathRevealDuration": 0,
     "DeathRevealRadius": 0,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
-      0,
       "Destructible",
       "ForceCollisionCheck",
       "Invulnerable",
+      "KillCredit",
       "NoScore",
+      "Turnable",
       "Uncloakable",
       "Uncommandable",
       "Unradarable",
@@ -14537,13 +14537,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -14699,13 +14699,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -14855,13 +14855,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -15300,13 +15300,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -15551,13 +15551,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 339.994,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -16185,7 +16185,6 @@
       "HatcheryCreateSet"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
@@ -16193,6 +16192,7 @@
       "PreventReveal",
       "TownAlert",
       "TownCamera",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -16214,10 +16214,10 @@
     "Race": "Zerg",
     "Radius": 2,
     "ResourceDropOff": [
-      "Custom",
-      "Minerals",
-      "Terrazine",
-      "Vespene"
+      1,
+      1,
+      1,
+      1
     ],
     "ScoreKill": 325,
     "ScoreMake": 275,
@@ -16546,7 +16546,7 @@
     "AIEvaluateAlias": "",
     "EditorCategories": "ObjectType:Other,ObjectFamily:Campaign",
     "FlagArray": [
-      0,
+      "KillCredit",
       "Unselectable",
       "Untargetable"
     ],
@@ -16877,7 +16877,6 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
@@ -16885,6 +16884,7 @@
       "PreventReveal",
       "TownAlert",
       "TownCamera",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -16908,10 +16908,10 @@
     "Radius": 2,
     "RankDisplay": "Default",
     "ResourceDropOff": [
-      "Custom",
-      "Minerals",
-      "Terrazine",
-      "Vespene"
+      1,
+      1,
+      1,
+      1
     ],
     "ScoreKill": 925,
     "ScoreMake": 875,
@@ -17592,13 +17592,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 332.9956,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -17662,10 +17662,10 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -17693,8 +17693,8 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "KillCredit",
+      "Uncommandable",
       "Unselectable",
       "UseLineOfSight"
     ],
@@ -17809,9 +17809,9 @@
       ]
     },
     "FlagArray": [
-      0,
       "ArmySelect",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -4,
@@ -17980,13 +17980,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 329.9963,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -18116,8 +18116,8 @@
     ],
     "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "Invulnerable",
+      "KillCredit",
       "NoScore",
       "Uncommandable",
       "Uncursorable",
@@ -19090,15 +19090,15 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
       "PreventDestroy",
+      "Turnable",
       "Uncommandable",
-      "Untargetable"
+      "Untargetable",
+      "Untooltipable"
     ],
     "FogVisibility": "Dimmed",
     "HotkeyAlias": "",
@@ -19138,15 +19138,15 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
       "PreventDestroy",
+      "Turnable",
       "Uncommandable",
-      "Untargetable"
+      "Untargetable",
+      "Untooltipable"
     ],
     "FogVisibility": "Dimmed",
     "Height": 3.75,
@@ -19252,9 +19252,9 @@
       "NoPlacement"
     ],
     "FlagArray": [
-      0,
       "AILifetime",
       "ArmySelect",
+      "Uncommandable",
       "Uncommandable",
       "Unselectable",
       "Untargetable",
@@ -19359,7 +19359,7 @@
   },
   "LabBot": {
     "Attributes": [
-      0,
+      "Biological",
       "Hover",
       "Mechanical"
     ],
@@ -19510,7 +19510,6 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
@@ -19518,6 +19517,7 @@
       "PreventReveal",
       "TownAlert",
       "TownCamera",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -19539,10 +19539,10 @@
     "Race": "Zerg",
     "Radius": 2,
     "ResourceDropOff": [
-      "Custom",
-      "Minerals",
-      "Terrazine",
-      "Vespene"
+      1,
+      1,
+      1,
+      1
     ],
     "ScoreKill": 575,
     "ScoreMake": 525,
@@ -19718,8 +19718,8 @@
       }
     ],
     "Collide": [
-      0,
-      "Larva"
+      "Larva",
+      "Structure"
     ],
     "DamageDealtXP": 1,
     "DamageTakenXP": 1,
@@ -19987,11 +19987,11 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "AIThreatAir",
       "AIThreatGround",
       "ArmySelect",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -3,
@@ -20155,11 +20155,11 @@
       ]
     },
     "Collide": [
-      0,
-      0,
-      0,
+      "ForceField",
+      "Ground",
       "Locust",
-      "LocustForceField"
+      "LocustForceField",
+      "Small"
     ],
     "CostCategory": "Army",
     "DamageDealtXP": 1,
@@ -20336,11 +20336,11 @@
       "Small"
     ],
     "EditorFlags": [
-      0,
+      "BlockStructures",
       "NoPlacement"
     ],
     "FlagArray": [
-      0,
+      "KillCredit",
       "NoScore",
       "Uncursorable",
       "Unselectable",
@@ -20455,13 +20455,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 29.9926,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -21574,10 +21574,10 @@
     "EnergyRegenRate": 0.5625,
     "EnergyStart": 50,
     "FlagArray": [
-      0,
       "AISupport",
       "AIThreatAir",
       "AIThreatGround",
+      "AlwaysThreatens",
       "AlwaysThreatens",
       "ArmySelect",
       "PreventDestroy",
@@ -21757,13 +21757,13 @@
       "DelayMax": "0"
     },
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
+      "ClearRallyOnTargetLost",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
       "TownAlert",
+      "Turnable",
       "Uncommandable",
       "UseLineOfSight"
     ],
@@ -21934,7 +21934,6 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "AIDefense",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
@@ -21942,6 +21941,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -22111,11 +22111,11 @@
     "AlliedPushPriority": 1,
     "AttackTargetPriority": 20,
     "Attributes": [
-      0,
       "Armored",
       "Heroic",
       "Massive",
-      "Mechanical"
+      "Mechanical",
+      "Psionic"
     ],
     "BehaviorArray": [
       "CloakField",
@@ -22242,9 +22242,9 @@
     "EnergyStart": 0,
     "Facing": 45,
     "FlagArray": [
-      0,
       "ArmySelect",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -8,
@@ -22320,8 +22320,8 @@
     "Acceleration": 1.0625,
     "AttackTargetPriority": 20,
     "Attributes": [
-      0,
       "Armored",
+      "Massive",
       "Mechanical",
       "Psionic"
     ],
@@ -22442,12 +22442,12 @@
     "EnergyStart": 50,
     "Facing": 45,
     "FlagArray": [
-      0,
       "AICaster",
       "AIHighPrioTarget",
       "AISupport",
       "ArmySelect",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -2,
@@ -22516,10 +22516,10 @@
       "DelayMin": "0"
     },
     "FlagArray": [
-      0,
-      0,
-      0,
       "Invulnerable",
+      "KillCredit",
+      "Unclickable",
+      "Unhighlightable",
       "Unselectable",
       "Untargetable",
       "UseLineOfSight"
@@ -22854,7 +22854,6 @@
     "EnergyStart": 50,
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
@@ -22862,6 +22861,7 @@
       "PreventReveal",
       "TownAlert",
       "TownCamera",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -22883,10 +22883,10 @@
     "Race": "Prot",
     "Radius": 2,
     "ResourceDropOff": [
-      "Custom",
-      "Minerals",
-      "Terrazine",
-      "Vespene"
+      1,
+      1,
+      1,
+      1
     ],
     "ScoreKill": 400,
     "ScoreMake": 400,
@@ -23046,18 +23046,18 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 29.9707,
     "FlagArray": [
-      0,
-      0,
       "AIDefense",
       "AIHighPrioTarget",
       "AIThreatAir",
       "AIThreatGround",
+      "ArmorDisabledWhileConstructing",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -23138,7 +23138,6 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 29.9707,
     "FlagArray": [
-      0,
       "AIDefense",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
@@ -23146,6 +23145,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -23245,7 +23245,6 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 29.9707,
     "FlagArray": [
-      0,
       "AIDefense",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
@@ -23253,6 +23252,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -23415,7 +23415,6 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 344.9707,
     "FlagArray": [
-      0,
       "AIDefense",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
@@ -23423,6 +23422,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -23665,7 +23665,7 @@
       "index": 0
     },
     "FlagArray": [
-      0
+      "Cloaked"
     ],
     "GlossaryCategory": "",
     "Height": 5,
@@ -23713,8 +23713,8 @@
     "Acceleration": 3,
     "AttackTargetPriority": 20,
     "Attributes": [
-      0,
       "Armored",
+      "Light",
       "Mechanical",
       "Psionic"
     ],
@@ -23971,13 +23971,13 @@
     ],
     "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "AIHighPrioTarget",
       "AILifetime",
       "AISplash",
       "AIThreatGround",
       "NoPortraitTalk",
       "NoScore",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Footprint": "OracleStasisTrap",
@@ -24122,7 +24122,6 @@
     "EnergyStart": 50,
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
@@ -24130,6 +24129,7 @@
       "PreventReveal",
       "TownAlert",
       "TownCamera",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -24152,10 +24152,10 @@
     "Radius": 2.5,
     "RepairTime": 135,
     "ResourceDropOff": [
-      "Custom",
-      "Minerals",
-      "Terrazine",
-      "Vespene"
+      1,
+      1,
+      1,
+      1
     ],
     "ScoreKill": 550,
     "ScoreMake": 550,
@@ -25142,8 +25142,8 @@
     "DeathRevealRadius": 0,
     "EditorCategories": "ObjectFamily:Campaign,ObjectType:Other",
     "FlagArray": [
-      0,
       "Invulnerable",
+      "KillCredit",
       "NoDeathEvent",
       "NoDraw",
       "NoPortraitTalk",
@@ -25169,11 +25169,11 @@
   },
   "PathingBlocker1x1": {
     "Collide": [
-      0,
-      0,
-      0,
-      0,
-      "RoachBurrow"
+      "Burrow",
+      "Ground",
+      "RoachBurrow",
+      "Small",
+      "Structure"
     ],
     "FlagArray": [
       "CreateVisible"
@@ -25185,11 +25185,11 @@
   },
   "PathingBlocker2x2": {
     "Collide": [
-      0,
-      0,
-      0,
-      0,
-      "RoachBurrow"
+      "Burrow",
+      "Ground",
+      "RoachBurrow",
+      "Small",
+      "Structure"
     ],
     "FlagArray": [
       "CreateVisible"
@@ -25215,12 +25215,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "Destructible",
       "ForceCollisionCheck",
       "Invulnerable",
+      "KillCredit",
       "NoScore",
+      "Turnable",
       "Uncloakable",
       "Uncommandable",
       "Unradarable",
@@ -25473,7 +25473,6 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 45,
     "FlagArray": [
-      0,
       "AIDefense",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
@@ -25481,6 +25480,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -25755,8 +25755,8 @@
     ],
     "EditorCategories": "ObjectType:Item,ObjectFamily:Melee",
     "FlagArray": [
-      0,
-      "Turnable"
+      "Turnable",
+      "Untooltipable"
     ],
     "FogVisibility": "Snapshot",
     "Height": 0.25,
@@ -25774,8 +25774,8 @@
     "EditorCategories": "ObjectType:Item,ObjectFamily:Melee",
     "Facing": 19.995,
     "FlagArray": [
-      0,
-      "Turnable"
+      "Turnable",
+      "Untooltipable"
     ],
     "FogVisibility": "Snapshot",
     "Height": 0.5,
@@ -25791,10 +25791,10 @@
     ],
     "EditorCategories": "ObjectType:Item,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
-      "Turnable"
+      "Turnable",
+      "Untooltipable"
     ],
     "FogVisibility": "Snapshot",
     "LeaderAlias": "",
@@ -25813,10 +25813,10 @@
     ],
     "EditorCategories": "ObjectType:Item,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
-      "Turnable"
+      "Turnable",
+      "Untooltipable"
     ],
     "FogVisibility": "Snapshot",
     "LeaderAlias": "",
@@ -25836,10 +25836,10 @@
     ],
     "EditorCategories": "ObjectType:Item,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
-      "Turnable"
+      "Turnable",
+      "Untooltipable"
     ],
     "FogVisibility": "Snapshot",
     "LeaderAlias": "",
@@ -25949,7 +25949,6 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
@@ -25957,6 +25956,7 @@
       "PreventReveal",
       "TownAlert",
       "TownCamera",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -25990,10 +25990,10 @@
     "Radius": 2.5,
     "RepairTime": 150,
     "ResourceDropOff": [
-      "Custom",
-      "Minerals",
-      "Terrazine",
-      "Vespene"
+      1,
+      1,
+      1,
+      1
     ],
     "ScoreKill": 700,
     "ScoreMake": 700,
@@ -27478,8 +27478,8 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "KillCredit",
+      "Uncommandable",
       "Unselectable",
       "UseLineOfSight"
     ],
@@ -27696,13 +27696,13 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -28294,10 +28294,10 @@
     "EnergyRegenRate": 0.5625,
     "EnergyStart": 60,
     "FlagArray": [
-      0,
       "AIDefense",
       "AIThreatAir",
       "AIThreatGround",
+      "ArmySelect",
       "ArmySelect",
       "Buried",
       "Cloaked",
@@ -28983,8 +28983,8 @@
       }
     ],
     "Collide": [
-      0,
-      "Burrow"
+      "Burrow",
+      "RoachBurrow"
     ],
     "CostCategory": "Army",
     "CostResource": {
@@ -29432,12 +29432,12 @@
     "EnergyRegenRate": 0.5625,
     "EnergyStart": 200,
     "FlagArray": [
-      0,
       "AILifetime",
       "ArmorDisabledWhileConstructing",
       "ArmySelect",
       "NoPortraitTalk",
       "NoScore",
+      "Turnable",
       "UseLineOfSight"
     ],
     "GlossaryPriority": 315,
@@ -29546,13 +29546,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -29824,8 +29824,8 @@
       ]
     },
     "Collide": [
-      0,
-      0,
+      "Ground",
+      "Small",
       "TinyCritter"
     ],
     "Description": "Button/Tooltip/CritterRedstoneLavaCritter",
@@ -29881,9 +29881,9 @@
       ]
     },
     "Collide": [
-      0,
-      0,
-      0
+      "ForceField",
+      "Ground",
+      "Small"
     ],
     "Description": "Button/Tooltip/CritterRedstoneLavaCritterBurrowed",
     "FlagArray": [
@@ -29944,8 +29944,8 @@
       ]
     },
     "Collide": [
-      0,
-      0,
+      "Ground",
+      "Small",
       "TinyCritter"
     ],
     "Description": "Button/Tooltip/CritterRedstoneLavaCritterInjured",
@@ -30001,9 +30001,9 @@
       ]
     },
     "Collide": [
-      0,
-      0,
-      0
+      "ForceField",
+      "Ground",
+      "Small"
     ],
     "Description": "Button/Tooltip/CritterRedstoneLavaCritterInjuredBurrowed",
     "FlagArray": [
@@ -30082,13 +30082,13 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -30178,13 +30178,13 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -30225,9 +30225,9 @@
     ],
     "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
     "FlagArray": [
-      0,
-      0,
       "Invulnerable",
+      "Movable",
+      "Turnable",
       "Uncommandable",
       "Unselectable",
       "Untargetable"
@@ -30325,8 +30325,6 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
-      0,
       "AIDefense",
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
@@ -30335,6 +30333,8 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -30444,10 +30444,10 @@
       ]
     },
     "FlagArray": [
-      0,
       "AlwaysThreatens",
       "ArmySelect",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -4,
@@ -30579,12 +30579,12 @@
       "DelayMax": "0"
     },
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
       "TownAlert",
+      "Turnable",
       "Uncommandable"
     ],
     "FogVisibility": "Snapshot",
@@ -31170,8 +31170,8 @@
       }
     ],
     "Collide": [
-      0,
-      "Burrow"
+      "Burrow",
+      "RoachBurrow"
     ],
     "CostCategory": "Army",
     "CostResource": {
@@ -31308,13 +31308,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 326.997,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -31418,13 +31418,13 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -31581,13 +31581,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -31647,10 +31647,10 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -31990,8 +31990,8 @@
       "Small"
     ],
     "FlagArray": [
-      0,
-      0,
+      "PlayerRevivable",
+      "ShowResources",
       "Undetectable",
       "Unradarable",
       "Unstoppable"
@@ -32473,13 +32473,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -32534,7 +32534,7 @@
     "Acceleration": 1000,
     "AttackTargetPriority": 20,
     "Attributes": [
-      0,
+      "Light",
       "Mechanical",
       "Psionic"
     ],
@@ -33117,9 +33117,9 @@
       "DelayMin": "0"
     },
     "FlagArray": [
-      0,
-      0,
-      0,
+      "KillCredit",
+      "Unclickable",
+      "Unhighlightable",
       "Unselectable",
       "Untargetable",
       "UseLineOfSight"
@@ -33463,7 +33463,6 @@
     "EnergyRegenRate": 0.5625,
     "EnergyStart": 50,
     "FlagArray": [
-      0,
       "AIDefense",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
@@ -33471,6 +33470,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -33732,10 +33732,10 @@
     "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
     "Facing": 45,
     "FlagArray": [
-      0,
       "AISplash",
       "ArmySelect",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -3,
@@ -34124,13 +34124,13 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -34245,7 +34245,6 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "AIDefense",
       "AIPressForwardDisabled",
       "AIThreatGround",
@@ -34255,6 +34254,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -34397,7 +34397,6 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "AIDefense",
       "AIThreatGround",
       "ArmorDisabledWhileConstructing",
@@ -34406,6 +34405,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "HotkeyAlias": "SpineCrawler",
@@ -34558,13 +34558,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -34689,7 +34689,6 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "AIDefense",
       "AIPressForwardDisabled",
       "AIThreatAir",
@@ -34699,6 +34698,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -34841,7 +34841,6 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "AIDefense",
       "AIThreatAir",
       "ArmorDisabledWhileConstructing",
@@ -34850,6 +34849,7 @@
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "HotkeyAlias": "SporeCrawler",
@@ -34893,16 +34893,16 @@
       "NoPlacement"
     ],
     "FlagArray": [
-      0,
-      0,
-      0,
       "Invulnerable",
+      "Movable",
       "NoScore",
+      "Turnable",
       "Uncommandable",
       "Undetectable",
       "Unradarable",
       "Unselectable",
-      "Untargetable"
+      "Untargetable",
+      "Untooltipable"
     ],
     "FogVisibility": "Snapshot",
     "HotkeyAlias": "",
@@ -35186,13 +35186,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -35401,13 +35401,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -35636,12 +35636,12 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -35902,13 +35902,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -35978,13 +35978,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -36167,8 +36167,8 @@
       }
     ],
     "Collide": [
-      0,
-      "Burrow"
+      "Burrow",
+      "RoachBurrow"
     ],
     "CostCategory": "Army",
     "CostResource": {
@@ -36180,7 +36180,6 @@
     "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
     "Facing": 45,
     "FlagArray": [
-      0,
       "AIHighPrioTarget",
       "AIPreferBurrow",
       "AIPressForwardDisabled",
@@ -36190,6 +36189,7 @@
       "Buried",
       "Cloaked",
       "PreventDestroy",
+      "Turnable",
       "Turnable",
       "UseLineOfSight"
     ],
@@ -36420,11 +36420,11 @@
       "NoPlacement"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
+      "Turnable",
       "Unselectable",
       "Untargetable"
     ],
@@ -36449,7 +36449,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "Footprint": "Tarsonis_DoorE",
@@ -36469,7 +36469,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "Footprint": "Tarsonis_DoorELowered",
@@ -36489,7 +36489,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "Footprint": "Tarsonis_DoorN",
@@ -36509,7 +36509,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "Footprint": "Tarsonis_DoorNE",
@@ -36529,7 +36529,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "Footprint": "Tarsonis_DoorNELowered",
@@ -36549,7 +36549,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "Footprint": "Tarsonis_DoorNLowered",
@@ -36569,7 +36569,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "Footprint": "Tarsonis_DoorNW",
@@ -36589,7 +36589,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "Footprint": "Tarsonis_DoorNWLowered",
@@ -36663,13 +36663,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -36947,13 +36947,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 45,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -37736,13 +37736,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -38210,13 +38210,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 29.9926,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -38260,12 +38260,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -38341,12 +38341,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -38422,12 +38422,12 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
+      "Destructible",
       "NoPortraitTalk",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -38541,7 +38541,7 @@
   },
   "UtilityBot": {
     "Attributes": [
-      0,
+      "Biological",
       "Mechanical"
     ],
     "Description": "Button/Tooltip/CritterUtilityBot",
@@ -38568,12 +38568,12 @@
       "DelayMax": "0"
     },
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
       "TownAlert",
+      "Turnable",
       "Uncommandable"
     ],
     "FogVisibility": "Snapshot",
@@ -39574,13 +39574,13 @@
     "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
     "Facing": 315,
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
       "PreventDefeat",
       "PreventDestroy",
       "TownAlert",
+      "Turnable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -39869,10 +39869,10 @@
     "DeathRevealRadius": 3,
     "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
     "FlagArray": [
-      0,
       "AISupport",
       "ArmySelect",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -2,
@@ -40197,7 +40197,6 @@
       "Weapon": "WidowMineDummy"
     },
     "FlagArray": [
-      0,
       "AISplash",
       "AIThreatAir",
       "AIThreatGround",
@@ -40207,6 +40206,7 @@
       "Buried",
       "Cloaked",
       "PreventDestroy",
+      "Turnable",
       "UseLineOfSight"
     ],
     "Food": -2,
@@ -40300,7 +40300,7 @@
   },
   "XelNagaDestructibleBlocker6E": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "Footprint": "XelNagaDestructibleRampBlocker6W",
@@ -40308,7 +40308,7 @@
   },
   "XelNagaDestructibleBlocker6N": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "Footprint": "XelNagaDestructibleRampBlocker6N",
@@ -40316,7 +40316,7 @@
   },
   "XelNagaDestructibleBlocker6NE": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "Footprint": "XelNagaDestructibleRampBlocker6NE",
@@ -40324,7 +40324,7 @@
   },
   "XelNagaDestructibleBlocker6NW": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "Footprint": "XelNagaDestructibleRampBlocker6NW",
@@ -40332,14 +40332,14 @@
   },
   "XelNagaDestructibleBlocker6S": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker6N",
     "parent": "XelNagaDestructibleRampBlocker"
   },
   "XelNagaDestructibleBlocker6SE": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 45,
     "Footprint": "XelNagaDestructibleRampBlocker6NW",
@@ -40347,7 +40347,7 @@
   },
   "XelNagaDestructibleBlocker6SW": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 315,
     "Footprint": "XelNagaDestructibleRampBlocker6NE",
@@ -40355,7 +40355,7 @@
   },
   "XelNagaDestructibleBlocker6W": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 270,
     "Footprint": "XelNagaDestructibleRampBlocker6W",
@@ -40363,7 +40363,7 @@
   },
   "XelNagaDestructibleBlocker8E": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "Footprint": "XelNagaDestructibleRampBlocker8W",
@@ -40372,7 +40372,7 @@
   },
   "XelNagaDestructibleBlocker8N": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "Footprint": "XelNagaDestructibleRampBlocker8N",
@@ -40381,7 +40381,7 @@
   },
   "XelNagaDestructibleBlocker8NE": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "Footprint": "XelNagaDestructibleRampBlocker8NE",
@@ -40390,7 +40390,7 @@
   },
   "XelNagaDestructibleBlocker8NW": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "Footprint": "XelNagaDestructibleRampBlocker8NW",
@@ -40399,7 +40399,7 @@
   },
   "XelNagaDestructibleBlocker8S": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker8N",
     "MinimapRadius": 2.5,
@@ -40407,7 +40407,7 @@
   },
   "XelNagaDestructibleBlocker8SE": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 45,
     "Footprint": "XelNagaDestructibleRampBlocker8NW",
@@ -40416,7 +40416,7 @@
   },
   "XelNagaDestructibleBlocker8SW": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 315,
     "Footprint": "XelNagaDestructibleRampBlocker8NE",
@@ -40425,7 +40425,7 @@
   },
   "XelNagaDestructibleBlocker8W": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 270,
     "Footprint": "XelNagaDestructibleRampBlocker8W",
@@ -40452,12 +40452,12 @@
       "NoPlacement"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
       "NoPortraitTalk",
+      "Turnable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -40473,98 +40473,98 @@
   },
   "XelNagaDestructibleRampBlocker6E": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker6W",
     "parent": "XelNagaDestructibleRampBlocker"
   },
   "XelNagaDestructibleRampBlocker6N": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker6N",
     "parent": "XelNagaDestructibleRampBlocker"
   },
   "XelNagaDestructibleRampBlocker6NE": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker6NE",
     "parent": "XelNagaDestructibleRampBlocker"
   },
   "XelNagaDestructibleRampBlocker6NW": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker6NW",
     "parent": "XelNagaDestructibleRampBlocker"
   },
   "XelNagaDestructibleRampBlocker6S": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker6N",
     "parent": "XelNagaDestructibleRampBlocker"
   },
   "XelNagaDestructibleRampBlocker6SE": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 45,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker6NW",
     "parent": "XelNagaDestructibleRampBlocker"
   },
   "XelNagaDestructibleRampBlocker6SW": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 315,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker6NE",
     "parent": "XelNagaDestructibleRampBlocker"
   },
   "XelNagaDestructibleRampBlocker6W": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 270,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker6W",
     "parent": "XelNagaDestructibleRampBlocker"
   },
   "XelNagaDestructibleRampBlocker8E": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker8W",
     "MinimapRadius": 2.5,
@@ -40572,11 +40572,11 @@
   },
   "XelNagaDestructibleRampBlocker8N": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker8N",
     "MinimapRadius": 2.5,
@@ -40584,11 +40584,11 @@
   },
   "XelNagaDestructibleRampBlocker8NE": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker8NE",
     "MinimapRadius": 2.5,
@@ -40596,11 +40596,11 @@
   },
   "XelNagaDestructibleRampBlocker8NW": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker8NW",
     "MinimapRadius": 2.5,
@@ -40608,10 +40608,10 @@
   },
   "XelNagaDestructibleRampBlocker8S": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker8N",
     "MinimapRadius": 2.5,
@@ -40619,11 +40619,11 @@
   },
   "XelNagaDestructibleRampBlocker8SE": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 45,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker8NW",
     "MinimapRadius": 2.5,
@@ -40631,11 +40631,11 @@
   },
   "XelNagaDestructibleRampBlocker8SW": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 315,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker8NE",
     "MinimapRadius": 2.5,
@@ -40643,11 +40643,11 @@
   },
   "XelNagaDestructibleRampBlocker8W": {
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 270,
     "FlagArray": [
-      0
+      "Destructible"
     ],
     "Footprint": "XelNagaDestructibleRampBlocker8W",
     "MinimapRadius": 2.5,
@@ -40676,18 +40676,18 @@
       }
     ],
     "Collide": [
-      0
+      "Structure"
     ],
     "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
       "Invulnerable",
       "NoPortraitTalk",
+      "Turnable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "FogVisibility": "Snapshot",
@@ -40718,15 +40718,15 @@
     ],
     "Facing": 315,
     "FlagArray": [
-      0,
-      0,
       "AIObservatory",
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
       "PreventDestroy",
-      "Uncommandable"
+      "Turnable",
+      "Uncommandable",
+      "Untooltipable"
     ],
     "FogVisibility": "Snapshot",
     "Footprint": "Footprint2x2Contour",
@@ -40754,11 +40754,11 @@
       "NoPlacement"
     ],
     "FlagArray": [
-      0,
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Invulnerable",
       "NoPortraitTalk",
+      "Turnable",
       "Unselectable",
       "Untargetable"
     ],
@@ -40783,7 +40783,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "Footprint": "XelNaga_Caverns_DoorE",
@@ -40803,7 +40803,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 90,
     "Footprint": "XelNaga_Caverns_DoorEOpened",
@@ -40823,7 +40823,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "Footprint": "XelNaga_Caverns_DoorN",
@@ -40843,7 +40843,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "Footprint": "XelNaga_Caverns_DoorNE",
@@ -40863,7 +40863,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 135,
     "Footprint": "XelNaga_Caverns_DoorNEOpened",
@@ -40883,7 +40883,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 180,
     "Footprint": "XelNaga_Caverns_DoorNOpened",
@@ -40903,7 +40903,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "Footprint": "XelNaga_Caverns_DoorNW",
@@ -40923,7 +40923,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 225,
     "Footprint": "XelNaga_Caverns_DoorNWOpened",
@@ -40943,7 +40943,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Footprint": "XelNaga_Caverns_DoorS",
     "parent": "XelNaga_Caverns_Door"
@@ -40962,7 +40962,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 45,
     "Footprint": "XelNaga_Caverns_DoorSE",
@@ -40982,7 +40982,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 45,
     "Footprint": "XelNaga_Caverns_DoorSEOpened",
@@ -41002,7 +41002,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Footprint": "XelNaga_Caverns_DoorSOpened",
     "parent": "XelNaga_Caverns_Door"
@@ -41021,7 +41021,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 315,
     "Footprint": "XelNaga_Caverns_DoorSW",
@@ -41041,7 +41041,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 315,
     "Footprint": "XelNaga_Caverns_DoorSWOpened",
@@ -41061,7 +41061,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 270,
     "Footprint": "XelNaga_Caverns_DoorW",
@@ -41081,7 +41081,7 @@
       }
     },
     "EditorFlags": [
-      0
+      "NoPlacement"
     ],
     "Facing": 270,
     "Footprint": "XelNaga_Caverns_DoorWOpened",
@@ -42406,14 +42406,14 @@
       "NeutralDefault"
     ],
     "FlagArray": [
-      0,
-      0,
       "ArmorDisabledWhileConstructing",
       "KillCredit",
       "NoPortraitTalk",
       "Turnable",
+      "Uncommandable",
       "Unselectable",
       "Untargetable",
+      "Untooltipable",
       "UseLineOfSight"
     ],
     "LifeMax": 2000,

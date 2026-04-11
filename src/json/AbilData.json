@@ -47,8 +47,8 @@
     "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
     "Effect": "AdeptPhaseShiftInitialSet",
     "Flags": [
-      0,
-      0,
+      "BestUnit",
+      "RequireTargetVision",
       "TransientPreferred"
     ],
     "Range": 500
@@ -688,9 +688,9 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
-      0,
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "IgnorePlacement",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "CollideRange": 3.75,
@@ -733,7 +733,7 @@
     "AcquireFilters": "-;Self,Player,Ally,Neutral,Enemy",
     "CmdButtonArray": {
       "DefaultButtonFace": "AttackWarpPrism",
-      "Flags": 0,
+      "Flags": "ToSelection",
       "index": "Execute"
     },
     "MaxAttackSpeedMultiplier": 128,
@@ -883,7 +883,7 @@
       {
         "Button": {
           "DefaultButtonFace": "ResearchCombatDrugs",
-          "Flags": 0,
+          "Flags": "ShowInGlossary",
           "Requirements": "LearnCombatDrugs"
         },
         "Resource": [
@@ -1027,7 +1027,7 @@
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Effect": "BattlecruiserAttackTrackerSwitch",
     "Flags": [
-      0,
+      "RequireTargetVision",
       "Smart",
       "Transient"
     ],
@@ -1090,8 +1090,8 @@
     },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Flags": [
-      0,
-      0
+      "BestUnit",
+      "RequireTargetVision"
     ],
     "Range": 500
   },
@@ -1159,7 +1159,7 @@
       149.9853
     ],
     "Flags": [
-      0,
+      "AutoCastOffOwnerLeave",
       "Retarget"
     ],
     "InfoArray": {
@@ -1220,7 +1220,7 @@
       "NydusAlertDummy"
     ],
     "FlagArray": [
-      0
+      "Cancelable"
     ],
     "InfoArray": [
       {
@@ -1258,8 +1258,8 @@
     "Cancelable": 0,
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "VitalStartFactor": [
-      "Life",
-      "Shields"
+      1,
+      1
     ]
   },
   "BuildingShield": {
@@ -1341,7 +1341,7 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "UseBurrow",
@@ -1354,9 +1354,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible",
       "SuppressMovement"
@@ -1365,16 +1365,16 @@
       "RandomDelayMax": 0.3703,
       "SectionArray": [
         {
-          "DurationArray": "Delay",
-          "index": "Stats"
+          "DurationArray": 0.5556,
+          "index": "Collide"
         },
         {
-          "DurationArray": "Duration",
+          "DurationArray": 1,
           "index": "Actor"
         },
         {
-          "DurationArray": 0.5556,
-          "index": "Collide"
+          "DurationArray": 1,
+          "index": "Stats"
         }
       ],
       "Unit": "BanelingBurrowed"
@@ -1390,7 +1390,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -1406,7 +1406,7 @@
     "InfoArray": {
       "RandomDelayMax": 0.5,
       "SectionArray": {
-        "DurationArray": "Duration",
+        "DurationArray": 1,
         "index": "Actor"
       },
       "Unit": "Baneling"
@@ -1456,8 +1456,8 @@
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "BurrowChargeInitialRevD",
     "Flags": [
-      0,
-      "RangeUsePathing"
+      "RangeUsePathing",
+      "RequireTargetVision"
     ],
     "Range": 9,
     "UninterruptibleArray": [
@@ -1494,16 +1494,16 @@
       "RandomDelayMax": 0.37,
       "SectionArray": [
         {
-          "DurationArray": "Delay",
-          "index": "Stats"
+          "DurationArray": 0.5556,
+          "index": "Collide"
         },
         {
-          "DurationArray": "Duration",
+          "DurationArray": 1,
           "index": "Actor"
         },
         {
-          "DurationArray": 0.5556,
-          "index": "Collide"
+          "DurationArray": 1,
+          "index": "Stats"
         }
       ],
       "Unit": "CreepTumorBurrowed"
@@ -1516,7 +1516,7 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "UseBurrow",
@@ -1529,9 +1529,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible",
       "SuppressMovement"
@@ -1562,7 +1562,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -1578,12 +1578,12 @@
       "RandomDelayMax": 0.25,
       "SectionArray": [
         {
-          "DurationArray": "Duration",
-          "index": "Actor"
-        },
-        {
           "DurationArray": 0.4443,
           "index": "Stats"
+        },
+        {
+          "DurationArray": 1,
+          "index": "Actor"
         }
       ],
       "Unit": "Drone"
@@ -1596,7 +1596,7 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "UseBurrow",
@@ -1609,9 +1609,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible",
       "SuppressMovement"
@@ -1645,7 +1645,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -1677,12 +1677,12 @@
         "RandomDelayMax": 0.5,
         "SectionArray": [
           {
-            "DurationArray": "Duration",
-            "index": "Actor"
-          },
-          {
             "DurationArray": 0.4443,
             "index": "Stats"
+          },
+          {
+            "DurationArray": 1,
+            "index": "Actor"
           }
         ],
         "Unit": "Hydralisk"
@@ -1696,7 +1696,7 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "UseBurrow",
@@ -1709,9 +1709,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible"
     ],
@@ -1740,7 +1740,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowDown",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "Requirements": "UseBurrow",
@@ -1748,9 +1748,9 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible",
       "SuppressMovement"
@@ -1759,12 +1759,12 @@
       "RandomDelayMax": 0.3703,
       "SectionArray": [
         {
-          "DurationArray": "Delay",
-          "index": "Stats"
-        },
-        {
           "DurationArray": 0.5556,
           "index": "Collide"
+        },
+        {
+          "DurationArray": 1,
+          "index": "Stats"
         },
         {
           "DurationArray": 1.333,
@@ -1784,7 +1784,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -1800,7 +1800,7 @@
     "InfoArray": {
       "RandomDelayMax": 0.5,
       "SectionArray": {
-        "DurationArray": "Duration",
+        "DurationArray": 1,
         "index": "Actor"
       },
       "Unit": "InfestorTerran"
@@ -1816,7 +1816,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -1873,8 +1873,8 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
+      "IgnorePlacement",
       "Interruptible",
       "SuppressMovement"
     ],
@@ -1910,7 +1910,7 @@
     "ActorKey": "BurrowUp",
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
-      "Flags": 0,
+      "Flags": "ShowInGlossary",
       "index": "Execute"
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
@@ -1922,7 +1922,7 @@
       {
         "RandomDelayMax": 0.5,
         "SectionArray": {
-          "DurationArray": "Duration",
+          "DurationArray": 1,
           "index": "Actor"
         },
         "Unit": "LurkerMP"
@@ -1946,7 +1946,7 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "UseBurrow",
@@ -1959,9 +1959,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible",
       "SuppressMovement"
@@ -1995,7 +1995,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -2012,12 +2012,12 @@
       "RandomDelayMax": 0.5,
       "SectionArray": [
         {
-          "DurationArray": "Duration",
-          "index": "Actor"
-        },
-        {
           "DurationArray": 0.4443,
           "index": "Stats"
+        },
+        {
+          "DurationArray": 1,
+          "index": "Actor"
         }
       ],
       "Unit": "Queen"
@@ -2030,7 +2030,7 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "UseBurrow",
@@ -2043,9 +2043,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible"
     ],
@@ -2078,7 +2078,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -2113,7 +2113,7 @@
       {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "UseBurrow",
@@ -2126,9 +2126,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible"
     ],
@@ -2161,7 +2161,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -2195,7 +2195,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowDown",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "Requirements": "UseBurrow",
@@ -2203,9 +2203,9 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "SuppressMovement"
     ],
@@ -2257,7 +2257,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -2305,9 +2305,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible",
       "SuppressMovement"
@@ -2316,12 +2316,12 @@
       "RandomDelayMax": 0.3703,
       "SectionArray": [
         {
-          "DurationArray": "Delay",
-          "index": "Stats"
-        },
-        {
           "DurationArray": 0.5556,
           "index": "Collide"
+        },
+        {
+          "DurationArray": 1,
+          "index": "Stats"
         },
         {
           "DurationArray": 1.333,
@@ -2341,7 +2341,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "BurrowUp",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -2376,7 +2376,7 @@
         "RandomDelayMax": 0.5,
         "SectionArray": [
           {
-            "DurationArray": "Duration",
+            "DurationArray": 1,
             "index": "Actor"
           },
           {
@@ -2646,8 +2646,8 @@
     "DeathUnloadEffect": "RemoveCommandCenterCargo",
     "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
     "Flags": [
-      0,
-      0
+      "AllowPassengerSmartCmd",
+      "AllowSmartCmd"
     ],
     "LoadCargoBehavior": "CCTransportDummy",
     "LoadCargoEffect": "CCLoadDummy",
@@ -2803,8 +2803,8 @@
     },
     "Range": 10,
     "SharedFlags": [
-      "RegisterChargeEvent",
-      "RegisterCooldownEvent"
+      1,
+      1
     ]
   },
   "CritterFlee": {
@@ -2982,8 +2982,8 @@
     },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Flags": [
-      0,
-      0
+      "BestUnit",
+      "RequireTargetVision"
     ],
     "Range": 500
   },
@@ -3004,8 +3004,8 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
+      "IgnorePlacement",
       "Interruptible",
       "SuppressMovement"
     ],
@@ -3013,12 +3013,12 @@
       "RandomDelayMax": 0.3703,
       "SectionArray": [
         {
-          "DurationArray": "Duration",
-          "index": "Mover"
-        },
-        {
           "DurationArray": 0.5556,
           "index": "Collide"
+        },
+        {
+          "DurationArray": 1,
+          "index": "Mover"
         },
         {
           "DurationArray": 1.166,
@@ -3129,7 +3129,7 @@
     "CursorEffect": "DigesterCreepSprayDummySearch",
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "DigesterCreepInitialSet",
-    "Flags": 0,
+    "Flags": "RequireTargetVision",
     "Range": 500
   },
   "DigesterTransport": {
@@ -3177,18 +3177,18 @@
     "InfoArray": [
       {
         "SectionArray": {
-          "DurationArray": "Delay",
-          "index": "Actor"
-        },
-        "Unit": "ChangelingMarineShield"
-      },
-      {
-        "SectionArray": {
           "DurationArray": 0.5,
           "index": "Actor"
         },
         "Unit": "ChangelingMarineShield",
         "index": 0
+      },
+      {
+        "SectionArray": {
+          "DurationArray": 1,
+          "index": "Actor"
+        },
+        "Unit": "ChangelingMarineShield"
       }
     ],
     "Name": "Abil/Name/DisguiseAsMarineWithShield",
@@ -3202,18 +3202,18 @@
     "InfoArray": [
       {
         "SectionArray": {
-          "DurationArray": "Delay",
-          "index": "Actor"
-        },
-        "Unit": "ChangelingMarine"
-      },
-      {
-        "SectionArray": {
           "DurationArray": 0.5,
           "index": "Actor"
         },
         "Unit": "ChangelingMarine",
         "index": 0
+      },
+      {
+        "SectionArray": {
+          "DurationArray": 1,
+          "index": "Actor"
+        },
+        "Unit": "ChangelingMarine"
       }
     ],
     "Name": "Abil/Name/DisguiseAsMarineWithoutShield",
@@ -3227,18 +3227,18 @@
     "InfoArray": [
       {
         "SectionArray": {
-          "DurationArray": "Delay",
-          "index": "Actor"
-        },
-        "Unit": "ChangelingZealot"
-      },
-      {
-        "SectionArray": {
           "DurationArray": 0.5,
           "index": "Actor"
         },
         "Unit": "ChangelingZealot",
         "index": 0
+      },
+      {
+        "SectionArray": {
+          "DurationArray": 1,
+          "index": "Actor"
+        },
+        "Unit": "ChangelingZealot"
       }
     ],
     "Name": "Abil/Name/DisguiseAsZealot",
@@ -3252,18 +3252,18 @@
     "InfoArray": [
       {
         "SectionArray": {
-          "DurationArray": "Delay",
-          "index": "Actor"
-        },
-        "Unit": "ChangelingZerglingWings"
-      },
-      {
-        "SectionArray": {
           "DurationArray": 0.5,
           "index": "Actor"
         },
         "Unit": "ChangelingZerglingWings",
         "index": 0
+      },
+      {
+        "SectionArray": {
+          "DurationArray": 1,
+          "index": "Actor"
+        },
+        "Unit": "ChangelingZerglingWings"
       }
     ],
     "Name": "Abil/Name/DisguiseAsZerglingWithWings",
@@ -3277,18 +3277,18 @@
     "InfoArray": [
       {
         "SectionArray": {
-          "DurationArray": "Delay",
-          "index": "Actor"
-        },
-        "Unit": "ChangelingZergling"
-      },
-      {
-        "SectionArray": {
           "DurationArray": 0.5,
           "index": "Actor"
         },
         "Unit": "ChangelingZergling",
         "index": 0
+      },
+      {
+        "SectionArray": {
+          "DurationArray": 1,
+          "index": "Actor"
+        },
+        "Unit": "ChangelingZergling"
       }
     ],
     "Name": "Abil/Name/DisguiseAsZerglingWithoutWings",
@@ -3960,20 +3960,6 @@
         "Button": {
           "DefaultButtonFace": "ResearchVoidRaySpeedUpgrade",
           "Flags": "ShowInGlossary",
-          "Requirements": "LearnVoidRaySpeedUpgrade"
-        },
-        "Resource": [
-          100,
-          100
-        ],
-        "Time": 80,
-        "Upgrade": "VoidRaySpeedUpgrade",
-        "index": "Research5"
-      },
-      {
-        "Button": {
-          "DefaultButtonFace": "ResearchVoidRaySpeedUpgrade",
-          "Flags": 0,
           "Requirements": "LearnVoidRaySpeedUpgrade",
           "State": "Restricted"
         },
@@ -3984,6 +3970,20 @@
         "Time": 80,
         "Upgrade": "VoidRaySpeedUpgrade",
         "index": "Research1"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "ResearchVoidRaySpeedUpgrade",
+          "Flags": "ShowInGlossary",
+          "Requirements": "LearnVoidRaySpeedUpgrade"
+        },
+        "Resource": [
+          100,
+          100
+        ],
+        "Time": 80,
+        "Upgrade": "VoidRaySpeedUpgrade",
+        "index": "Research5"
       },
       {
         "Button": {
@@ -4049,8 +4049,8 @@
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Marker": {
       "MatchFlags": [
-        0,
-        "CasterUnit"
+        "CasterUnit",
+        "Link"
       ]
     },
     "PlaceUnit": "ForceField",
@@ -4451,7 +4451,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "HoldFire",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "Requirements": "GhostNotHoldingFire",
@@ -4464,7 +4464,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "WeaponsFree",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "Requirements": "GhostHoldingFire",
@@ -4778,7 +4778,7 @@
       {
         "Button": {
           "DefaultButtonFace": "MuscularAugments",
-          "Flags": 0,
+          "Flags": "ShowInGlossary",
           "Requirements": "LearnHydraliskSpeedUpgrade"
         },
         "Resource": [
@@ -4806,7 +4806,7 @@
       {
         "Button": {
           "DefaultButtonFace": "hydraliskspeed",
-          "Flags": 0,
+          "Flags": "ShowInGlossary",
           "Requirements": "LearnMuscularAugments",
           "State": "Restricted"
         },
@@ -4855,10 +4855,10 @@
     "Effect": "HyperjumpInitialCP",
     "FinishTime": 6,
     "Flags": [
-      0,
-      0,
       "AllowMovement",
-      "NoDeceleration"
+      "BestUnit",
+      "NoDeceleration",
+      "RequireTargetVision"
     ],
     "InterruptCost": {
       "Cooldown": {
@@ -4870,7 +4870,7 @@
       "Hyperjump"
     ],
     "Range": 500,
-    "ShowProgressArray": "Channel",
+    "ShowProgressArray": 1,
     "UninterruptibleArray": [
       "Channel",
       "Finish",
@@ -5132,11 +5132,11 @@
     "Activity": "UI/Morphing",
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "DisableCollision",
       "KillOnCancel",
       "KillOnFinish",
-      "Select"
+      "Select",
+      "WaitForFood"
     ],
     "InfoArray": [
       {
@@ -5309,8 +5309,8 @@
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "LeechResourcesLaunchMissile",
     "Flags": [
-      0,
       "AllowMovement",
+      "BestUnit",
       "DeferCooldown",
       "NoDeceleration"
     ],
@@ -5402,8 +5402,8 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": [
       {
@@ -5476,7 +5476,7 @@
     ]
   },
   "LoadOutSpray": {
-    "AbilityCategories": "Physical",
+    "AbilityCategories": 1,
     "Alert": "",
     "DefaultButtonCardId": "Spry",
     "Flags": "UnitOrderQueue",
@@ -5847,9 +5847,9 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
-      "Transient"
+      "Transient",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "LocustMP"
@@ -5863,7 +5863,7 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "LocustMPFlyingSwoopCreatePrecursor",
-    "Flags": 0,
+    "Flags": "BestUnit",
     "Range": 6,
     "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"
   },
@@ -5875,7 +5875,7 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "LocustMPFlyingSwoopCreatePrecursorOffset",
-    "Flags": 0,
+    "Flags": "BestUnit",
     "Range": 6,
     "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"
   },
@@ -5886,8 +5886,8 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "SectionArray": {
@@ -5901,12 +5901,12 @@
     "Alert": "",
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
-      0,
+      "BestUnit",
       "DisableCollision",
       "KillOnCancel",
       "KillOnFinish",
-      "Select"
+      "Select",
+      "WaitForFood"
     ],
     "InfoArray": {
       "Button": {
@@ -5926,8 +5926,8 @@
   },
   "LurkerAspectMP": {
     "AbilClassEnableArray": [
-      "CAbilMove",
-      "CAbilStop"
+      1,
+      1
     ],
     "Alert": "MorphComplete_Zerg",
     "CmdButtonArray": [
@@ -5980,8 +5980,8 @@
   },
   "LurkerAspectMPFromHydraliskBurrowed": {
     "AbilClassEnableArray": [
-      "CAbilMove",
-      "CAbilStop"
+      1,
+      1
     ],
     "ActorKey": "BurrowUpMorph",
     "Alert": "MorphComplete_Zerg",
@@ -6086,7 +6086,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "LurkerHoldFire",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "Requirements": "LurkerNotHoldingFire",
@@ -6103,7 +6103,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "LurkerCancelHoldFire",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "Requirements": "LurkerHoldingFire",
@@ -6123,7 +6123,7 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "FlagArray": [
-      0,
+      "BypassResourceQueue",
       "BypassResourceQueue"
     ],
     "Range": 0.5,
@@ -6133,7 +6133,7 @@
       0,
       0
     ],
-    "ResourceAmountMultiplier": "Minerals",
+    "ResourceAmountMultiplier": 1,
     "ResourceAmountRequest": 25,
     "ResourceQueueIndex": 1,
     "ResourceTimeMultiplier": 2.05
@@ -6155,17 +6155,17 @@
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Effect": "Repair",
     "Flags": [
-      0,
       "AutoCast",
       "AutoCastOffOwnerLeave",
+      "BestUnit",
       "PassengerAcquirePassengers",
       "ReExecutable",
       "Smart"
     ],
     "InheritAttackPriorityArray": [
-      "Cast",
-      "Channel",
-      "Prep"
+      1,
+      1,
+      1
     ],
     "Marker": "Abil/Repair",
     "RangeSlop": 0.2,
@@ -6494,7 +6494,6 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "BestUnit",
       "Birth",
       "DisableAbils",
@@ -6505,7 +6504,8 @@
       "Rally",
       "RallyReset",
       "ShowProgress",
-      "SuppressMovement"
+      "SuppressMovement",
+      "WaitUntilStopped"
     ],
     "InfoArray": [
       {
@@ -6534,8 +6534,8 @@
   },
   "MorphToBroodLord": {
     "AbilClassEnableArray": [
-      "CAbilMove",
-      "CAbilStop"
+      1,
+      1
     ],
     "ActorKey": "GuardianAspect",
     "Alert": "MorphComplete_Zerg",
@@ -6552,8 +6552,6 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
-      0,
       "BestUnit",
       "Birth",
       "DisableAbils",
@@ -6561,8 +6559,10 @@
       "IgnoreFacing",
       "Interruptible",
       "Produce",
+      "Rally",
       "ShowProgress",
-      "SuppressMovement"
+      "SuppressMovement",
+      "WaitUntilStopped"
     ],
     "InfoArray": [
       {
@@ -6605,9 +6605,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "Birth",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "CollapsiblePurifierTowerDebris"
@@ -6627,9 +6627,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "Birth",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "CollapsibleRockTowerDebris"
@@ -6649,9 +6649,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "Birth",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "CollapsibleRockTowerDebrisRampLeft"
@@ -6671,9 +6671,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "Birth",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "CollapsibleRockTowerDebrisRampLeftGreen"
@@ -6693,9 +6693,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "Birth",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "CollapsibleRockTowerDebrisRampRight"
@@ -6715,9 +6715,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "Birth",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "CollapsibleRockTowerDebrisRampRightGreen"
@@ -6737,9 +6737,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "Birth",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "CollapsibleTerranTowerDebris"
@@ -6759,9 +6759,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "Birth",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "DebrisRampLeft"
@@ -6781,9 +6781,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "Birth",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "DebrisRampRight"
@@ -6791,8 +6791,8 @@
   },
   "MorphToDevourerMP": {
     "AbilClassEnableArray": [
-      "CAbilMove",
-      "CAbilStop"
+      1,
+      1
     ],
     "ActorKey": "DevourerAspect",
     "Alert": "MorphComplete_Zerg",
@@ -6857,8 +6857,8 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
-      "Transient"
+      "Transient",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "GhostAlternate"
@@ -6872,8 +6872,8 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
-      "Transient"
+      "Transient",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "Unit": "GhostNova"
@@ -6881,8 +6881,8 @@
   },
   "MorphToGuardianMP": {
     "AbilClassEnableArray": [
-      "CAbilMove",
-      "CAbilStop"
+      1,
+      1
     ],
     "ActorKey": "GuardianAspect",
     "Alert": "MorphComplete_Zerg",
@@ -7011,8 +7011,8 @@
   },
   "MorphToInfestedTerran": {
     "AbilClassEnableArray": [
-      "CAbilMove",
-      "CAbilStop"
+      1,
+      1
     ],
     "CmdButtonArray": {
       "DefaultButtonFace": "InfestedTerrans",
@@ -7059,7 +7059,6 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "BestUnit",
       "Birth",
       "DisableAbils",
@@ -7070,7 +7069,8 @@
       "Rally",
       "RallyReset",
       "ShowProgress",
-      "SuppressMovement"
+      "SuppressMovement",
+      "WaitUntilStopped"
     ],
     "InfoArray": [
       {
@@ -7134,10 +7134,10 @@
     ],
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Flags": [
-      0,
       "DisableAbils",
       "FastBuild",
       "IgnoreFacing",
+      "IgnorePlacement",
       "Interruptible",
       "Produce",
       "ShowProgress",
@@ -7170,8 +7170,8 @@
   "MorphToOverseer": {
     "AbilClassEnableArray": [
       0,
-      "CAbilMove",
-      "CAbilStop"
+      1,
+      1
     ],
     "ActorKey": "OverseerMut",
     "Alert": "MorphComplete_Zerg",
@@ -7192,16 +7192,16 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
-      0,
       "BestUnit",
       "DisableAbils",
       "FastBuild",
       "IgnoreFacing",
       "Interruptible",
       "Produce",
+      "Rally",
       "ShowProgress",
-      "SuppressMovement"
+      "SuppressMovement",
+      "WaitUntilStopped"
     ],
     "InfoArray": [
       {
@@ -7246,7 +7246,6 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "BestUnit",
       "Birth",
       "DisableAbils",
@@ -7257,7 +7256,8 @@
       "Rally",
       "RallyReset",
       "ShowProgress",
-      "SuppressMovement"
+      "SuppressMovement",
+      "WaitUntilStopped"
     ],
     "InfoArray": [
       {
@@ -7317,7 +7317,7 @@
       {
         "DefaultButtonFace": "MorphToSwarmHostBurrowedMP",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "index": "Execute"
@@ -7325,9 +7325,9 @@
     ],
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
       "IgnoreFacing",
       "IgnoreFood",
+      "IgnorePlacement",
       "IgnoreUnitCost",
       "Interruptible",
       "RallyReset",
@@ -7355,7 +7355,7 @@
     "CmdButtonArray": {
       "DefaultButtonFace": "MorphToSwarmHostMP",
       "Flags": [
-        0,
+        "ShowInGlossary",
         "ToSelection"
       ],
       "index": "Execute"
@@ -7379,21 +7379,21 @@
           {
             "DurationArray": [
               0.5,
-              "Duration"
+              1
             ],
             "index": "Actor"
           },
           {
             "DurationArray": [
               0.5,
-              "Duration"
+              1
             ],
             "index": "Mover"
           },
           {
             "DurationArray": [
               0.5,
-              "Duration"
+              1
             ],
             "index": "Stats"
           }
@@ -7417,8 +7417,8 @@
   },
   "MorphToTransportOverlord": {
     "AbilClassEnableArray": [
-      "CAbilMove",
-      "CAbilStop"
+      1,
+      1
     ],
     "Alert": "MorphComplete_Zerg",
     "CmdButtonArray": [
@@ -7440,7 +7440,6 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "BestUnit",
       "DisableAbils",
       "FastBuild",
@@ -7448,7 +7447,8 @@
       "Interruptible",
       "Produce",
       "ShowProgress",
-      "SuppressMovement"
+      "SuppressMovement",
+      "WaitUntilStopped"
     ],
     "InfoArray": [
       {
@@ -7611,7 +7611,7 @@
     "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
     "Effect": "MothershipCorePurifyNexusRemove",
     "ProgressButtonArray": "ExitPurifyMode",
-    "ShowProgressArray": "Cast"
+    "ShowProgressArray": 1
   },
   "MothershipCoreTeleport": {
     "Arc": 360,
@@ -7710,7 +7710,7 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "NeuralParasiteLaunchMissile",
-    "Flags": 0,
+    "Flags": "AbortOnAllianceChange",
     "Range": 8,
     "RangeSlop": 5,
     "TargetFilters": [
@@ -7820,14 +7820,14 @@
     },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Flags": [
-      0,
       "AutoCast",
+      "BestUnit",
       "ReExecutable"
     ],
     "InheritAttackPriorityArray": [
-      "Cast",
-      "Channel",
-      "Prep"
+      1,
+      1,
+      1
     ],
     "Range": 8,
     "TargetFilters": "Visible;Self,Enemy,Missile,UnderConstruction,Dead,Hidden",
@@ -7928,9 +7928,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Flags": [
-      0,
       "CargoDeath",
-      "PlayerHold"
+      "PlayerHold",
+      "ShowCargoSize"
     ],
     "InitialUnloadDelay": 0.5,
     "LoadPeriod": 0.25,
@@ -7973,9 +7973,9 @@
     ],
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Flags": [
-      0,
       "CargoDeath",
-      "PlayerHold"
+      "PlayerHold",
+      "ShowCargoSize"
     ],
     "InitialUnloadDelay": 0.5,
     "LoadPeriod": 0.25,
@@ -8007,9 +8007,9 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
       "DisableAbils",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "SectionArray": [
@@ -8384,9 +8384,9 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Flags": [
-      0,
       "DisableAbils",
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "WaitUntilStopped"
     ],
     "InfoArray": {
       "SectionArray": [
@@ -8488,8 +8488,8 @@
     "Effect": "PenetratingShotCreatePersistent",
     "FinishTime": 0,
     "Flags": [
-      0,
-      0
+      "BestUnit",
+      "RequireTargetVision"
     ],
     "Range": 500,
     "UninterruptibleArray": [
@@ -8558,10 +8558,10 @@
     "Effect": "PickupPalletGasSet",
     "FinishTime": 3,
     "Flags": [
-      0,
       "AutoCast",
       "AutoCastOn",
-      "ReExecutable"
+      "ReExecutable",
+      "RequireTargetVision"
     ],
     "Range": 1
   },
@@ -8582,10 +8582,10 @@
     "Effect": "PickupPalletMineralsSet",
     "FinishTime": 3,
     "Flags": [
-      0,
       "AutoCast",
       "AutoCastOn",
-      "ReExecutable"
+      "ReExecutable",
+      "RequireTargetVision"
     ],
     "Range": 1
   },
@@ -8606,10 +8606,10 @@
     "Effect": "PickupScrapLargeSet",
     "FinishTime": 3,
     "Flags": [
-      0,
       "AutoCast",
       "AutoCastOn",
-      "ReExecutable"
+      "ReExecutable",
+      "RequireTargetVision"
     ],
     "Range": 1
   },
@@ -8630,10 +8630,10 @@
     "Effect": "PickupScrapMediumSet",
     "FinishTime": 3,
     "Flags": [
-      0,
       "AutoCast",
       "AutoCastOn",
-      "ReExecutable"
+      "ReExecutable",
+      "RequireTargetVision"
     ],
     "Range": 1
   },
@@ -8654,10 +8654,10 @@
     "Effect": "PickupScrapSmallSet",
     "FinishTime": 3,
     "Flags": [
-      0,
       "AutoCast",
       "AutoCastOn",
-      "ReExecutable"
+      "ReExecutable",
+      "RequireTargetVision"
     ],
     "Range": 1
   },
@@ -8847,8 +8847,8 @@
       "WorkerVespeneBugOnProbeAB"
     ],
     "FlagArray": [
-      0,
-      "PeonDisableCollision"
+      "PeonDisableCollision",
+      "PeonMaintained"
     ],
     "InfoArray": [
       {
@@ -9087,8 +9087,8 @@
     "Effect": "PurificationNovaSet",
     "Flags": "Transient",
     "SharedFlags": [
-      "RegisterChargeEvent",
-      "RegisterCooldownEvent"
+      1,
+      1
     ]
   },
   "PurificationNovaMorph": {
@@ -9134,11 +9134,11 @@
     },
     "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
     "Effect": "PurificationNovaTargettedInitialSet",
-    "Flags": 0,
+    "Flags": "RequireTargetVision",
     "Range": 500,
     "SharedFlags": [
-      "RegisterChargeEvent",
-      "RegisterCooldownEvent"
+      1,
+      1
     ]
   },
   "PurifyMorphPylon": {
@@ -9167,8 +9167,8 @@
     "Alert": "BuildComplete_Zerg",
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "FlagArray": [
-      0,
-      0
+      "PeonMaintained",
+      "RangeIncludesBuilding"
     ],
     "InfoArray": [
       {
@@ -9206,11 +9206,11 @@
       "RandomDelayMax": 0.5,
       "SectionArray": [
         {
-          "DurationArray": "Delay",
+          "DurationArray": 1,
           "index": "Collide"
         },
         {
-          "DurationArray": "Duration",
+          "DurationArray": 1,
           "index": "Stats"
         },
         {
@@ -9239,15 +9239,15 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Flags": [
-      0,
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "IgnorePlacement"
     ],
     "InfoArray": {
       "CollideRange": 3.75,
       "RandomDelayMax": 0.5,
       "SectionArray": [
         {
-          "DurationArray": "Duration",
+          "DurationArray": 1,
           "index": "Stats"
         },
         {
@@ -9370,7 +9370,7 @@
   "RavenBuild": {
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "FlagArray": [
-      0
+      "PeonMaintained"
     ],
     "InfoArray": {
       "Button": {
@@ -9461,8 +9461,8 @@
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Effect": "RavenScramblerSwitchInitial",
     "Flags": [
-      0,
-      "AllowMovement"
+      "AllowMovement",
+      "ChannelingMinimum"
     ],
     "InfoTooltipPriority": 1,
     "Range": 9,
@@ -9475,7 +9475,7 @@
     ],
     "ValidatedArray": [
       0,
-      "Wait"
+      1
     ]
   },
   "RavenShredderMissile": {
@@ -9526,20 +9526,20 @@
     },
     "EditorCategories": "Race:Neutral,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
+      "IgnorePlacement",
       "SuppressMovement"
     ],
     "InfoArray": {
       "RandomDelayMax": 0.37,
       "SectionArray": [
         {
-          "DurationArray": "Delay",
-          "index": "Stats"
-        },
-        {
           "DurationArray": 0.5556,
           "index": "Collide"
+        },
+        {
+          "DurationArray": 1,
+          "index": "Stats"
         },
         {
           "DurationArray": 1.333,
@@ -9563,20 +9563,20 @@
     },
     "EditorCategories": "Race:Neutral,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "IgnoreFacing",
+      "IgnorePlacement",
       "SuppressMovement"
     ],
     "InfoArray": {
       "RandomDelayMax": 0.37,
       "SectionArray": [
         {
-          "DurationArray": "Delay",
-          "index": "Stats"
-        },
-        {
           "DurationArray": 0.5556,
           "index": "Collide"
+        },
+        {
+          "DurationArray": 1,
+          "index": "Stats"
         },
         {
           "DurationArray": 1.333,
@@ -9695,20 +9695,20 @@
     "DefaultError": "RequiresRepairTarget",
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
       "AutoCast",
       "AutoCastOffOwnerLeave",
+      "BestUnit",
       "PassengerAcquirePassengers",
       "ReExecutable",
       "Smart"
     ],
     "InheritAttackPriorityArray": [
-      "Cast",
-      "Channel",
-      "Prep"
+      1,
+      1,
+      1
     ],
     "Marker": {
-      "MatchFlags": 0,
+      "MatchFlags": "Link",
       "MismatchFlags": 0
     },
     "RangeSlop": 0.2,
@@ -10023,13 +10023,13 @@
     "Cost": null,
     "Effect": "SalvageCombatAB",
     "Flags": [
-      0,
-      0,
-      0,
-      0,
-      0,
       "BestUnit",
-      "Transient"
+      "CancelResetAutoCast",
+      "RangeUseCasterRadius",
+      "ReApproachable",
+      "RequireTargetVision",
+      "Transient",
+      "UpdateChargesOnLevelChange"
     ],
     "Name": "Abil/Name/SalvageEffect",
     "parent": "Refund"
@@ -10125,13 +10125,13 @@
       "Resource": -18
     },
     "Flags": [
-      0,
-      0,
-      0,
+      "AbortOnAllianceChange",
       "PassengerAcquireExternal",
       "PassengerAcquirePassengers",
       "PassengerAcquireTransport",
-      "Transient"
+      "RequireTargetVision",
+      "Transient",
+      "UpdateChargesOnLevelChange"
     ],
     "Name": "Abil/Name/SalvageUltraliskRefund",
     "PauseableArray": [
@@ -10190,7 +10190,7 @@
     "CursorEffect": "ScannerSweep",
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
+      "RequireTargetVision",
       "Transient"
     ],
     "Range": 500
@@ -10221,9 +10221,9 @@
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "SeekerDummyChannelCreatePersistent",
     "Flags": [
-      0,
       "AllowMovement",
-      "NoDeceleration"
+      "NoDeceleration",
+      "RequireTargetVision"
     ],
     "Range": 500,
     "TargetFilters": "Visible;-"
@@ -10394,9 +10394,9 @@
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Effect": "ShieldBatteryRechargeChanneledSet",
     "Flags": [
-      0,
       "AutoCast",
       "AutoCastOn",
+      "BestUnit",
       "ReExecutable",
       "Smart"
     ],
@@ -10448,10 +10448,10 @@
     "DefaultError": "RequiresHealTarget",
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Flags": [
-      0,
-      0,
       "AutoCast",
       "AutoCastOn",
+      "BestUnit",
+      "CancelResetAutoCast",
       "ReExecutable",
       "Smart"
     ],
@@ -10480,7 +10480,7 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
+      "IgnoreCollision",
       "SuppressMovement"
     ],
     "InfoArray": [
@@ -10584,7 +10584,7 @@
       }
     },
     "Effect": "SlaynElementalGrabLM",
-    "Flags": 0,
+    "Flags": "RequireTargetVision",
     "Range": 10,
     "TargetFilters": "-;Self,Missile,Stasis,Dead,Invulnerable,Unstoppable"
   },
@@ -10602,8 +10602,8 @@
     "Effect": "SnipeDamage",
     "Marker": {
       "MatchFlags": [
-        0,
-        "CasterUnit"
+        "CasterUnit",
+        "Link"
       ]
     },
     "Range": 10,
@@ -10623,8 +10623,8 @@
     "Effect": "GhostSnipeDoTSet",
     "Marker": {
       "MatchFlags": [
-        0,
-        "CasterUnit"
+        "CasterUnit",
+        "Link"
       ]
     },
     "Range": 10,
@@ -10686,7 +10686,7 @@
   "SpawnInfestedTerran": {
     "Alert": "",
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
-    "Flags": 0,
+    "Flags": "BestUnit",
     "InfoArray": {
       "Button": {
         "DefaultButtonFace": "LocustMP",
@@ -10748,8 +10748,8 @@
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "LocustMPCreateSet",
     "Flags": [
-      0,
-      0,
+      "BestUnit",
+      "RequireTargetVision",
       "Transient"
     ],
     "Range": 500
@@ -10815,9 +10815,9 @@
     ],
     "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "DisableAbils",
       "FastBuild",
+      "IgnorePlacement",
       "Interruptible",
       "ShowProgress"
     ],
@@ -10887,16 +10887,16 @@
     "InfoArray": {
       "SectionArray": [
         {
-          "DurationArray": "Delay",
-          "index": "Stats"
-        },
-        {
-          "DurationArray": "Duration",
+          "DurationArray": 1,
           "index": "Abils"
         },
         {
-          "DurationArray": "Duration",
+          "DurationArray": 1,
           "index": "Actor"
+        },
+        {
+          "DurationArray": 1,
+          "index": "Stats"
         }
       ],
       "Unit": "SpineCrawlerUprooted"
@@ -11011,9 +11011,9 @@
     ],
     "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
       "DisableAbils",
       "FastBuild",
+      "IgnorePlacement",
       "Interruptible",
       "ShowProgress"
     ],
@@ -11081,16 +11081,16 @@
     "InfoArray": {
       "SectionArray": [
         {
-          "DurationArray": "Delay",
-          "index": "Stats"
-        },
-        {
-          "DurationArray": "Duration",
+          "DurationArray": 1,
           "index": "Abils"
         },
         {
-          "DurationArray": "Duration",
+          "DurationArray": 1,
           "index": "Actor"
+        },
+        {
+          "DurationArray": 1,
+          "index": "Stats"
         }
       ],
       "Unit": "SporeCrawlerUprooted"
@@ -11648,7 +11648,7 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
     "Flags": [
-      0,
+      "IgnorePlacement",
       "MoveBlockers"
     ],
     "InfoArray": {
@@ -11864,7 +11864,7 @@
     "PrepEffect": "TempestDisruptionBlastInitialWarningSearch",
     "ProgressButtonArray": "TempestDisruptionBlast",
     "Range": 10,
-    "ShowProgressArray": "Cast",
+    "ShowProgressArray": 1,
     "UninterruptibleArray": "Cast"
   },
   "TemplarArchivesResearch": {
@@ -11873,7 +11873,7 @@
       {
         "Button": {
           "DefaultButtonFace": "ResearchHighTemplarEnergyUpgrade",
-          "Flags": 0,
+          "Flags": "ShowInGlossary",
           "Requirements": "LearnHighTemplarEnergyUpgrade",
           "State": "Restricted"
         },
@@ -11922,9 +11922,9 @@
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "TemporalFieldGrowingBubbleCreatePersistent",
     "Flags": [
-      0,
       "AllowMovement",
-      "NoDeceleration"
+      "NoDeceleration",
+      "RequireTargetVision"
     ],
     "Range": 9
   },
@@ -12148,7 +12148,7 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:MorphsandBurrows",
     "Flags": [
-      0,
+      "IgnorePlacement",
       "RallyReset",
       "SuppressMovement"
     ],
@@ -12231,7 +12231,7 @@
     ],
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Effect": "TestZergLM",
-    "Flags": 0,
+    "Flags": "AbortOnAllianceChange",
     "Range": 10,
     "RangeSlop": 10,
     "TargetFilters": "Visible;Player,Ally,Neutral,Robotic,Structure,Heroic,Missile,Stasis,Dead,Invulnerable"
@@ -12304,7 +12304,7 @@
       {
         "DefaultButtonFace": "ExplosiveMode",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "index": "Execute"
@@ -12390,22 +12390,22 @@
     },
     "EditorCategories": "AbilityorEffectType:Units,Race:Terran",
     "Effect": "TimeWarpCP",
-    "Flags": 0,
+    "Flags": "Transient",
     "Range": 500,
     "TargetFilters": [
       "Structure;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden",
       "Structure;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable"
     ],
     "UninterruptibleArray": [
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Approach",
       "Approach",
       "Cast",
+      "Cast",
+      "Channel",
       "Channel",
       "Finish",
+      "Finish",
+      "Prep",
       "Prep"
     ]
   },
@@ -12669,7 +12669,7 @@
         "TimeUse": "1"
       }
     },
-    "Flags": 0
+    "Flags": "RequireTargetVision"
   },
   "Unsiege": {
     "AbilSetId": "Unsieged",
@@ -12679,8 +12679,8 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
-      "IgnoreFacing"
+      "IgnoreFacing",
+      "SuppressMovement"
     ],
     "InfoArray": [
       {
@@ -13097,8 +13097,8 @@
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "ViperConsumeStructureLaunchMissile",
     "Flags": [
-      0,
       "AllowMovement",
+      "BestUnit",
       "DeferCooldown",
       "NoDeceleration",
       "WaitToSpend"
@@ -13241,7 +13241,7 @@
     },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "VoidSwarmHostSpawnLocustSet",
-    "Flags": 0,
+    "Flags": "BestUnit",
     "Range": 13
   },
   "VolatileBurstBuilding": {
@@ -13290,7 +13290,7 @@
     ],
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "VortexKillSet",
-    "Flags": 0,
+    "Flags": "AbortOnAllianceChange",
     "Range": 9,
     "TargetFilters": "Visible;Player,Ally,Massive,Structure,Missile,Stasis,Dead,Invulnerable"
   },
@@ -13509,7 +13509,7 @@
     "CancelEffect": "WidowMineTargetTintRemoveBehavior",
     "CmdButtonArray": {
       "DefaultButtonFace": "WidowMineAttack",
-      "Flags": 0,
+      "Flags": "ShowInGlossary",
       "Requirements": "WidowMineArmed",
       "index": "Execute"
     },
@@ -13546,8 +13546,8 @@
     ],
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
       "IgnoreFacing",
+      "IgnorePlacement",
       "Interruptible",
       "SuppressMovement"
     ],
@@ -13627,15 +13627,15 @@
         "RandomDelayMax": 0.5,
         "SectionArray": [
           {
-            "DurationArray": "Duration",
+            "DurationArray": 1,
             "index": "Actor"
           },
           {
-            "DurationArray": "Duration",
+            "DurationArray": 1,
             "index": "Mover"
           },
           {
-            "DurationArray": "Duration",
+            "DurationArray": 1,
             "index": "Stats"
           }
         ],
@@ -13650,7 +13650,7 @@
     },
     "Cost": null,
     "Effect": "##id##InitialSet",
-    "Flags": 0,
+    "Flags": "WaitToSpend",
     "Range": 5,
     "default": 1
   },
@@ -13662,7 +13662,7 @@
     "Cost": null,
     "CursorEffect": "##id##Damage",
     "Effect": "##id##LaunchMissile",
-    "Flags": 0,
+    "Flags": "WaitToSpend",
     "Range": 7,
     "default": 1
   },
@@ -13675,8 +13675,8 @@
     "CursorEffect": "##id##MissileScan",
     "Effect": "##id##InitialSet",
     "Flags": [
-      0,
-      0
+      "RequireTargetVision",
+      "WaitToSpend"
     ],
     "Range": 500,
     "default": 1
@@ -13690,8 +13690,8 @@
     },
     "Effect": "WorkerChannelStopIdle",
     "Flags": [
-      0,
       "AllowMovement",
+      "BestUnit",
       "DeferCooldown"
     ],
     "PreEffectBehavior": {
@@ -13946,7 +13946,7 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
-      0,
+      "AbortOnAllianceChange",
       "AllowMovement",
       "IgnoreOrderPlayerIdInStageValidate",
       "NoDeceleration"
@@ -13960,7 +13960,7 @@
     "ProgressButtonArray": "YamatoGun",
     "Range": 10,
     "RangeSlop": 10,
-    "ShowProgressArray": "Prep",
+    "ShowProgressArray": 1,
     "UninterruptibleArray": [
       "Cast",
       "Channel",
@@ -14003,9 +14003,9 @@
   "ZergBuild": {
     "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
     "FlagArray": [
-      0,
       "PeonHide",
-      "PeonKillFinish"
+      "PeonKillFinish",
+      "RangeIncludesBuilding"
     ],
     "InfoArray": [
       {

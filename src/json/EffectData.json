@@ -25,8 +25,8 @@
     },
     "ResponseFlags": "Acquire",
     "SearchFlags": [
-      0,
-      "CallForHelp"
+      "CallForHelp",
+      "SameCliff"
     ]
   },
   "250mmStrikeCannonsDummy": {
@@ -55,18 +55,18 @@
   },
   "90mmCannonsDummy": {
     "EditorCategories": "Race:Terran",
-    "Flags": 0,
+    "Flags": "Notification",
     "ResponseFlags": [
-      0,
-      0
+      "Acquire",
+      "Flee"
     ],
     "Visibility": "Hidden",
     "parent": "DU_WEAP"
   },
   "AIDangerDamageLarge": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend"
+      1,
+      1
     ],
     "AreaArray": {
       "Fraction": "1",
@@ -76,8 +76,8 @@
   },
   "AIDangerDamageSmall": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend"
+      1,
+      1
     ],
     "AreaArray": {
       "Fraction": "1",
@@ -91,9 +91,9 @@
   },
   "AIPurificationNovaDanger": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend",
-      "MajorDanger"
+      1,
+      1,
+      1
     ],
     "AreaArray": {
       "Fraction": "1",
@@ -270,11 +270,11 @@
   },
   "AdeptPhaseShiftCU": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      "PlacementIgnoreBlockers"
+      "DropOff",
+      "OffsetByRadius",
+      "PlacementIgnoreBlockers",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "AdeptPhaseShiftSpawnSet",
@@ -663,7 +663,7 @@
     },
     "TeleportFlags": [
       0,
-      "TestCliff"
+      1
     ]
   },
   "ArbiterMPStasisFieldApply": {
@@ -912,7 +912,7 @@
       "Flee"
     ],
     "SearchFilters": "Air;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0
+    "SearchFlags": "OffsetAreaByAngle"
   },
   "BattlecruiserAntiAirSet": {
     "EditorCategories": "Race:Terran",
@@ -1153,7 +1153,7 @@
     "TargetLocation": {
       "Value": "TargetPoint"
     },
-    "TeleportFlags": "TestCliff",
+    "TeleportFlags": 1,
     "ValidatorArray": "CasterNotFungalGrowthed",
     "WhichUnit": {
       "Value": "Caster"
@@ -1181,7 +1181,7 @@
   },
   "BroodlingEscortCU": {
     "CreateFlags": [
-      0,
+      "Birth",
       "SetFacing"
     ],
     "EditorCategories": "Race:Zerg",
@@ -1218,7 +1218,7 @@
   "BroodlingEscortFallbackMissile": {
     "EditorCategories": "Race:Zerg",
     "FinishEffect": "BroodlingEscortDamage",
-    "Flags": 0,
+    "Flags": "ValidateWeapon",
     "ImpactLocation": {
       "Value": "TargetUnitOrPoint"
     },
@@ -1248,7 +1248,7 @@
   },
   "BroodlingEscortImpactA": {
     "CreateFlags": [
-      0,
+      "Birth",
       "SetFacing"
     ],
     "EditorCategories": "Race:Zerg",
@@ -1290,7 +1290,7 @@
   "BroodlingEscortLaunchA": {
     "EditorCategories": "Race:Zerg",
     "FinishEffect": "BroodlingEscortImpactA",
-    "Flags": 0,
+    "Flags": "ValidateWeapon",
     "ImpactEffect": "BroodlingEscortDamageUnit",
     "MoverRollingJump": 1,
     "Movers": [
@@ -1328,7 +1328,7 @@
     "DeathType": "Unknown",
     "EditorCategories": "Race:Zerg",
     "FinishEffect": "BroodlingEscortImpact",
-    "Flags": 0,
+    "Flags": "ValidateWeapon",
     "ImpactEffect": "BroodlingEscortDamage",
     "ImpactLocation": {
       "Value": "TargetUnitOrPoint"
@@ -1549,13 +1549,13 @@
   },
   "BurrowChargeMPForcePersistent": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "BurrowChargeCreatePHSet",
@@ -1633,8 +1633,8 @@
   },
   "BypassArmorCU": {
     "CreateFlags": [
-      0,
-      0
+      "ProvideFood",
+      "UseFood"
     ],
     "EditorCategories": "Race:Terran",
     "SpawnEffect": "BypassArmorDroneMove",
@@ -2285,7 +2285,7 @@
     ]
   },
   "CloneCreateUnit": {
-    "CreateFlags": 0,
+    "CreateFlags": "Placement",
     "EditorCategories": "Race:Protoss",
     "Origin": {
       "Value": "TargetUnit"
@@ -2341,12 +2341,12 @@
   },
   "CollapsiblePurifierTowerCreateDebris": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "SetFacing"
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "Origin": {
@@ -2472,12 +2472,12 @@
   },
   "CollapsibleRockTowerCreateDebris": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "SetFacing"
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "Origin": {
@@ -2587,12 +2587,12 @@
   },
   "CollapsibleRockTowerRampLeftCreateDebris": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "SetFacing"
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "Origin": {
@@ -2631,12 +2631,12 @@
   },
   "CollapsibleRockTowerRampLeftGreenCreateDebris": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "SetFacing"
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "Origin": {
@@ -2675,12 +2675,12 @@
   },
   "CollapsibleRockTowerRampRightCreateDebris": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "SetFacing"
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "Origin": {
@@ -2719,12 +2719,12 @@
   },
   "CollapsibleRockTowerRampRightGreenCreateDebris": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "SetFacing"
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "Origin": {
@@ -3047,12 +3047,12 @@
   },
   "CollapsibleTerranTowerCreateDebris": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "SetFacing"
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "Origin": {
@@ -3129,12 +3129,12 @@
   },
   "CollapsibleTerranTowerRampLeftCreateDebris": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "SetFacing"
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "Origin": {
@@ -3176,12 +3176,12 @@
   },
   "CollapsibleTerranTowerRampRightCreateDebris": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "SetFacing"
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "Origin": {
@@ -3480,7 +3480,7 @@
   },
   "CopyOrders": {
     "CopyOrderCount": 32,
-    "ModifyFlags": "CopyAutoCast"
+    "ModifyFlags": 1
   },
   "Corruption": {
     "EditorCategories": "Race:Zerg",
@@ -3508,7 +3508,7 @@
     "EditorCategories": ""
   },
   "CorruptionBombChannelDamage": {
-    "AINotifyFlags": "HurtEnemy",
+    "AINotifyFlags": 1,
     "Death": "Disintegrate",
     "EditorCategories": "",
     "Flags": "Notification"
@@ -3711,7 +3711,7 @@
     "Kind": "Ranged",
     "KindSplash": "Splash",
     "SearchFilters": "Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0,
+    "SearchFlags": "OffsetByUnitRadius",
     "ValidatorArray": [
       "",
       "TargetRadiusSmall"
@@ -4130,7 +4130,7 @@
       "Value": "TargetPoint"
     },
     "TeleportEffect": "DarkTemplarBlinkAB",
-    "TeleportFlags": "TestCliff",
+    "TeleportFlags": 1,
     "ValidatorArray": "CasterNotFungalGrowthed",
     "WhichUnit": {
       "Value": "Caster"
@@ -4217,11 +4217,11 @@
   },
   "DestructibleStatueCreateRubble": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "SpawnOwner": {
@@ -4337,11 +4337,11 @@
   },
   "DigesterCreepInitialCreateUnit": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "DigesterCreepInitialSecondarySet",
@@ -4371,11 +4371,11 @@
   },
   "DigesterCreepSecondaryCreateUnit": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "DigesterCreepSecondarySet",
@@ -4442,11 +4442,11 @@
   },
   "DigesterCreepSprayCreateTargetUnit": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "DigesterCreepSprayAttackOrder",
@@ -4696,17 +4696,17 @@
   },
   "DisguiseEx3CU": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
+      "OffsetByRadius",
+      "Placement",
       "PlacementIgnoreBlockers",
       "PlacementIgnoreCliffTest",
+      "ProvideFood",
       "SelectControlGroups",
-      "SetFacing"
+      "SetFacing",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SelectUnit": {
@@ -4726,7 +4726,7 @@
     "ImpactUnit": {
       "Effect": "DisguiseEx3FinalSet"
     },
-    "ModifyFlags": "Owner",
+    "ModifyFlags": 1,
     "ModifyOwnerPlayer": {
       "Value": "Caster"
     }
@@ -4754,7 +4754,7 @@
       "Effect": "DisguiseEx3FinalSet",
       "Value": "Target"
     },
-    "ModifyFlags": "Mimic"
+    "ModifyFlags": 1
   },
   "DisguiseEx3RemoveCaster": {
     "Death": "Remove",
@@ -4793,7 +4793,7 @@
     "ImpactUnit": {
       "Effect": "Disguise"
     },
-    "ModifyFlags": "Mimic"
+    "ModifyFlags": 1
   },
   "DisguiseRemoveBehavior": {
     "BehaviorLink": "ChangelingDisguise",
@@ -5117,9 +5117,9 @@
     "PeriodicPeriodArray": 0.5,
     "PeriodicValidator": "NotDead",
     "RevealFlags": [
-      "Detect",
-      "LoS",
-      "Unfog"
+      1,
+      1,
+      1
     ],
     "RevealRadius": 9,
     "WhichLocation": {
@@ -5145,8 +5145,8 @@
       "Flee"
     ],
     "SearchFlags": [
-      0,
-      "CallForHelp"
+      "CallForHelp",
+      "SameCliff"
     ],
     "ValidatorArray": "",
     "VitalFractionCurrent": 0.5
@@ -5182,10 +5182,10 @@
   },
   "ForceField": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "ForceFieldTimedLife",
@@ -5475,10 +5475,10 @@
   },
   "GrappleCreatePlaceholder": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "SpawnEffect": "GrappleCreatePlaceholderSet",
     "SpawnRange": 1.5,
@@ -5493,15 +5493,15 @@
   },
   "GrappleCreatePlaceholderColossus": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "OffsetByRadius",
       "PlacementIgnoreBlockers",
       "PlacementOriginSideOfFootprints",
-      "SetFacing"
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "SpawnEffect": "GrappleCreatePlaceholderSet",
     "SpawnRange": 1.5,
@@ -5612,14 +5612,14 @@
   },
   "GrappleUnitKnockbackBy5": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Terran",
     "SpawnEffect": "GrappleUnitKnockbackBy5CreatePHSet",
@@ -5808,8 +5808,8 @@
     },
     "SearchFilters": "-;Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": [
-      0,
-      "ExtendByUnitRadius"
+      "ExtendByUnitRadius",
+      "SameCliff"
     ]
   },
   "GuassRifle": {
@@ -5831,16 +5831,16 @@
     "KindSplash": "Splash",
     "SearchFilters": "Ground;Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": [
-      0,
-      "CenterAtLaunch"
+      "CenterAtLaunch",
+      "OffsetByUnitRadius"
     ],
     "parent": "DU_WEAP_MISSILE"
   },
   "HallucinationCreateAdept": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnCount": 2,
@@ -5849,9 +5849,9 @@
   },
   "HallucinationCreateArchon": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "HallucinationCreateUnitB",
@@ -5859,9 +5859,9 @@
   },
   "HallucinationCreateColossus": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "HallucinationCreateUnitB",
@@ -5869,9 +5869,9 @@
   },
   "HallucinationCreateDisruptor": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "HallucinationCreateUnitB",
@@ -5879,9 +5879,9 @@
   },
   "HallucinationCreateHighTemplar": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnCount": 2,
@@ -5890,9 +5890,9 @@
   },
   "HallucinationCreateImmortal": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "HallucinationCreateUnitB",
@@ -5900,9 +5900,9 @@
   },
   "HallucinationCreateOracle": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "HallucinationCreateUnitB",
@@ -5910,9 +5910,9 @@
   },
   "HallucinationCreatePhoenix": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "HallucinationCreateUnitB",
@@ -5920,9 +5920,9 @@
   },
   "HallucinationCreateProbe": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnCount": 4,
@@ -5931,9 +5931,9 @@
   },
   "HallucinationCreateStalker": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnCount": 2,
@@ -5957,9 +5957,9 @@
   },
   "HallucinationCreateVoidRay": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "HallucinationCreateUnitB",
@@ -5967,9 +5967,9 @@
   },
   "HallucinationCreateWarpPrism": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "HallucinationCreateUnitB",
@@ -5977,9 +5977,9 @@
   },
   "HallucinationCreateZealot": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnCount": 2,
@@ -6181,12 +6181,12 @@
   },
   "HyperjumpCreatePrecursor": {
     "CreateFlags": [
-      0,
-      0,
-      0,
       "PlacementIgnoreBlockers",
       "Precursor",
-      "SetFacing"
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Terran",
     "SpawnEffect": "HyperjumpTeleportOutABSet",
@@ -6238,7 +6238,7 @@
     },
     "TeleportFlags": [
       0,
-      "TestZone"
+      1
     ],
     "WhichUnit": {
       "Value": "Caster"
@@ -6540,7 +6540,7 @@
     "Movers": "LaunchTargetToAPathableLocationSlow"
   },
   "InfestorEnsnareLaunchTargetToAPathableLocationPrecursor": {
-    "CreateFlags": 0,
+    "CreateFlags": "OffsetByRadius",
     "Origin": {
       "Value": "TargetUnit"
     },
@@ -6560,14 +6560,14 @@
   "InfestorEnsnareMakePrecursorReheightSource": null,
   "InfestorEnsnareReheightSourceCreatePlaceholder": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      "Precursor"
+      "Birth",
+      "DropOff",
+      "OffsetByRadius",
+      "Placement",
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "SpawnEffect": "InfestorEnsnareReheightSourceStartSet",
     "TypeFallbackUnit": {
@@ -6911,7 +6911,7 @@
     "Kind": "Ranged",
     "KindSplash": "Splash",
     "SearchFilters": "Air;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0,
+    "SearchFlags": "OffsetByUnitRadius",
     "parent": "DU_WEAP_SPLASH"
   },
   "JavelinMissileLaunchersLM": {
@@ -7007,9 +7007,9 @@
   },
   "KD8SearchArea": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend",
-      "MinorDanger"
+      1,
+      1,
+      1
     ],
     "AreaArray": {
       "Effect": "KD8ChargeEndSet",
@@ -7040,7 +7040,7 @@
     "Kind": "Splash",
     "KindSplash": "Splash",
     "SearchFilters": "Ground;Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0,
+    "SearchFlags": "OffsetAreaByAngle",
     "parent": "DU_WEAP"
   },
   "KaiserBladesSearch": {
@@ -7059,9 +7059,9 @@
     },
     "SearchFilters": "Ground;Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": [
-      0,
       "CallForHelp",
       "ExtendByUnitRadius",
+      "OffsetAreaByAngle",
       "SameCliff"
     ]
   },
@@ -7146,7 +7146,7 @@
     "Kind": "Ranged",
     "KindSplash": "Splash",
     "SearchFilters": "Air;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0,
+    "SearchFlags": "OffsetByUnitRadius",
     "parent": "DU_WEAP_SPLASH"
   },
   "LanceMissileLaunchersLaunchMissile": {
@@ -7232,7 +7232,7 @@
     "ImpactLocation": {
       "Value": "TargetUnit"
     },
-    "LeechFraction": "Energy",
+    "LeechFraction": 1,
     "VitalFractionCurrent": -1
   },
   "LeechModifyUnit": {
@@ -7403,7 +7403,7 @@
       0.25,
       4
     ],
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 5.5
   },
   "LiberatorTargetMorphOrderInitialSet": {
@@ -7423,7 +7423,7 @@
     "PeriodicEffectArray": "LiberatorTargetMorphSearchArea",
     "PeriodicPeriodArray": 0.25,
     "PeriodicValidator": "LiberatorMorphValidatorCombine",
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 5.5
   },
   "LiberatorTargetMorphSearchAB": {
@@ -7432,8 +7432,8 @@
   },
   "LiberatorTargetMorphSearchArea": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "MajorDanger"
+      1,
+      1
     ],
     "AreaArray": {
       "Effect": "LiberatorTargetMorphSearchAB",
@@ -7793,8 +7793,8 @@
   },
   "LocustMPCreateUnitA": {
     "CreateFlags": [
-      0,
-      "PlacementIgnoreBlockers"
+      "PlacementIgnoreBlockers",
+      "TechComplete"
     ],
     "EditorCategories": "Race:Zerg",
     "RallyUnit": {
@@ -7810,8 +7810,8 @@
   },
   "LocustMPCreateUnitB": {
     "CreateFlags": [
-      0,
-      "PlacementIgnoreBlockers"
+      "PlacementIgnoreBlockers",
+      "TechComplete"
     ],
     "EditorCategories": "Race:Zerg",
     "RallyUnit": {
@@ -7861,12 +7861,12 @@
   },
   "LocustMPFlyingSwoopCreatePrecursor": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      "PlacementIgnoreBlockers"
+      "Birth",
+      "PlacementIgnoreBlockers",
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "LocustMPFlyingSwoopPrecursorSet",
@@ -8031,8 +8031,8 @@
   "LurkerMP": {
     "EditorCategories": "Race:Zerg",
     "Flags": [
-      0,
-      0
+      "Channeled",
+      "EffectFailure"
     ],
     "PeriodCount": 9,
     "PeriodicEffectArray": [
@@ -8067,14 +8067,14 @@
   },
   "LurkerMPCU": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
+      "OffsetByRadius",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "LurkerMPSearchSet",
@@ -8089,7 +8089,7 @@
     "Death": "Blast",
     "EditorCategories": "Race:Zerg",
     "Kind": "Ranged",
-    "SearchFlags": 0,
+    "SearchFlags": "SameCliff",
     "ValidatorArray": [
       "NotHidden",
       "NotInvulnerable",
@@ -8303,7 +8303,7 @@
     },
     "TeleportFlags": [
       0,
-      "TestCliff"
+      1
     ]
   },
   "MassRecallTeleportCursor": {
@@ -8480,7 +8480,7 @@
   "MothershipBeamPersistent": {
     "EditorCategories": "Race:Protoss",
     "FinalEffect": "MothershipAddRecentTarget",
-    "Flags": 0,
+    "Flags": "Channeled",
     "InitialEffect": "MothershipBeamDummy",
     "PeriodCount": 2,
     "PeriodicEffectArray": "MothershipBeamDamage",
@@ -8641,7 +8641,7 @@
     },
     "TeleportFlags": [
       0,
-      "TestCliff"
+      1
     ]
   },
   "MothershipCorePlasmaDisruptorLaunchMissile": {
@@ -8710,13 +8710,13 @@
   },
   "MothershipCoreTeleportCU": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      "Birth",
+      "DropOff",
+      "OffsetByRadius",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "MothershipCoreTeleportPlacementSet",
@@ -8856,7 +8856,7 @@
     },
     "TeleportFlags": [
       0,
-      "TestCliff"
+      1
     ]
   },
   "MothershipSearch": {
@@ -8872,8 +8872,8 @@
     "MinCount": 1,
     "SearchFilters": "Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": [
-      0,
-      "ExtendByUnitRadius"
+      "ExtendByUnitRadius",
+      "OffsetAreaByAngle"
     ],
     "TargetSorts": {
       "SortArray": [
@@ -8888,7 +8888,7 @@
   },
   "MothershipSecondaryBeamPersistent": {
     "EditorCategories": "Race:Protoss",
-    "Flags": 0,
+    "Flags": "Channeled",
     "InitialDelay": 0.25,
     "InitialEffect": "MothershipBeamDummy",
     "PeriodCount": 2,
@@ -9012,7 +9012,7 @@
     },
     "TeleportFlags": [
       0,
-      "TestCliff"
+      1
     ]
   },
   "MothershipStrategicRecallWarpOutAB": {
@@ -9036,9 +9036,9 @@
   },
   "MultiplayerLootSpawner": {
     "CreateFlags": [
-      0,
-      0,
-      0
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "",
     "SpawnOwner": {
@@ -9098,8 +9098,8 @@
     "AmmoUnit": "NeuralParasiteWeapon",
     "EditorCategories": "Race:Zerg",
     "Flags": [
-      0,
-      "Channeled"
+      "Channeled",
+      "PointFallback"
     ],
     "ImpactEffect": "NeuralParasitePersistentSet",
     "Marker": "Abil/NeuralParasiteMissile",
@@ -9126,8 +9126,8 @@
   "NeuralParasitePersistent": {
     "EditorCategories": "Race:Zerg",
     "Flags": [
-      0,
-      "Channeled"
+      "Channeled",
+      "PersistUntilDestroyed"
     ],
     "InitialEffect": "NeuralParasite",
     "PeriodCount": 30,
@@ -9286,7 +9286,7 @@
     },
     "TeleportFlags": [
       0,
-      "TestCliff"
+      1
     ]
   },
   "NexusMassRecallWarpOutAB": {
@@ -9474,9 +9474,9 @@
   },
   "NukeDamage": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend",
-      "MajorDanger"
+      1,
+      1,
+      1
     ],
     "Amount": 300,
     "AreaArray": [
@@ -9502,8 +9502,8 @@
     ],
     "SearchFilters": "-;Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": [
-      0,
-      "CallForHelp"
+      "CallForHelp",
+      "SameCliff"
     ]
   },
   "NukeDetonate": {
@@ -9511,7 +9511,7 @@
     "ExpireDelay": 8.25,
     "InitialDelay": 1.25,
     "InitialEffect": "NukeDamage",
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 8
   },
   "NukePersistent": {
@@ -9681,7 +9681,7 @@
     "EditorCategories": "Race:Protoss"
   },
   "OracleStasisTrapActivate": {
-    "AINotifyFlags": "HurtEnemy",
+    "AINotifyFlags": 1,
     "AreaArray": {
       "Effect": "OracleStasisTrapSearchSet",
       "Radius": "5"
@@ -9761,7 +9761,7 @@
   },
   "OracleStasisTrapReveal": {
     "ExpireDelay": 4,
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 4,
     "WhichLocation": {
       "Value": "CasterUnit"
@@ -10032,8 +10032,8 @@
   },
   "OverchargeSearch": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend"
+      1,
+      1
     ],
     "AreaArray": {
       "Effect": "OverchargeApplyDamage",
@@ -10136,11 +10136,11 @@
   },
   "ParasiticBombCU": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "ParasiticBombCUSpawnSwitch",
@@ -10163,11 +10163,11 @@
   },
   "ParasiticBombCUDodge": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "ParasiticBombCUDodgeSpawnSet",
@@ -10187,11 +10187,11 @@
   },
   "ParasiticBombCURelay": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "OffsetByRadius",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "ParasiticBombOrderRelaySet",
@@ -10200,11 +10200,11 @@
   },
   "ParasiticBombCURelayDodge": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "OffsetByRadius",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "ParasiticBombOrderRelayDodgeSet",
@@ -10331,9 +10331,9 @@
   },
   "ParasiticBombSearchEffect": {
     "AINotifyFlags": [
-      "HurtFriend",
-      "MajorDanger",
-      "MinorDanger"
+      1,
+      1,
+      1
     ],
     "AreaArray": [
       {
@@ -10709,8 +10709,8 @@
     "EditorCategories": "Race:Terran",
     "Marker": "Weapon/PointDefenseLaser",
     "ModifyFlags": [
-      "Hide",
-      "NullifyMissile"
+      1,
+      1
     ]
   },
   "PointDefenseLaserDummy": {
@@ -11016,8 +11016,8 @@
   },
   "PsiStormSearch": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend"
+      1,
+      1
     ],
     "AreaArray": [
       {
@@ -11078,8 +11078,8 @@
     "KindSplash": "Splash",
     "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": [
-      0,
-      0
+      "OffsetByUnitRadius",
+      "SameCliff"
     ],
     "parent": "DU_WEAP"
   },
@@ -11322,11 +11322,11 @@
   },
   "PurificationNovaTargettedCU": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      "PlacementIgnoreBlockers"
+      "DropOff",
+      "OffsetByRadius",
+      "PlacementIgnoreBlockers",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Protoss",
     "SpawnEffect": "PurificationNovaTargettedSpawnSet",
@@ -11520,7 +11520,7 @@
     "SpawnUnit": "Broodling"
   },
   "QueenMPSpawnBroodlingsDamage": {
-    "AINotifyFlags": "HurtEnemy",
+    "AINotifyFlags": 1,
     "EditorCategories": "",
     "Flags": [
       "Kill",
@@ -11643,9 +11643,9 @@
   },
   "RavagerCorrosiveBileSearch": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend",
-      "MajorDanger"
+      1,
+      1,
+      1
     ],
     "AreaArray": {
       "Effect": "RavagerCorrosiveBileSet",
@@ -11792,9 +11792,9 @@
   },
   "RavenShredderMissileDamage": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend",
-      "MajorDanger"
+      1,
+      1,
+      1
     ],
     "AreaArray": [
       {
@@ -11820,7 +11820,7 @@
       "Flee"
     ],
     "SearchFilters": "-;Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0,
+    "SearchFlags": "SameCliff",
     "Visibility": "Visible"
   },
   "RavenShredderMissileImpactApplyBehavior": {
@@ -11893,14 +11893,14 @@
   },
   "ReaperKD8Knockback": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "Origin": {
@@ -11955,12 +11955,12 @@
   "ReaperKD8KnockbackPHLM": {
     "DeathType": "Unknown",
     "Flags": [
-      0,
-      0,
-      0,
-      0,
       "2D",
-      "TravelValidation"
+      "TravelValidation",
+      "ValidateAbil",
+      "ValidateBenign",
+      "ValidateTeleport",
+      "ValidateWeapon"
     ],
     "ImpactEffect": "ReaperKD8KnockbackImpactCP",
     "LaunchLocation": {
@@ -12042,9 +12042,9 @@
   },
   "ReleaseInterceptorsBeaconCU": {
     "CreateFlags": [
-      0,
       "PlacementIgnoreCliffTest",
-      "SetFacing"
+      "SetFacing",
+      "TechComplete"
     ],
     "EditorCategories": "Race:Protoss",
     "Origin": {
@@ -12552,7 +12552,7 @@
     }
   },
   "ResourceStunCreateUnit": {
-    "CreateFlags": 0,
+    "CreateFlags": "Placement",
     "EditorCategories": "Race:Protoss",
     "SpawnRange": 0,
     "SpawnUnit": "ResourceBlocker",
@@ -12720,7 +12720,7 @@
     "EditorCategories": "",
     "ExpireDelay": 28,
     "PeriodicValidator": "",
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 3,
     "WhichLocation": {
       "Value": "TargetUnit"
@@ -12833,7 +12833,7 @@
     },
     "SearchFilters": "Ground;Self,Player,Missile,Stasis,Dead,Hidden,Invulnerable",
     "SearchFlags": [
-      0,
+      "OffsetAreaByAngle",
       "SameCliff"
     ]
   },
@@ -13005,7 +13005,7 @@
   },
   "SalvageShared": {
     "EditorCategories": "Race:Terran",
-    "ModifyFlags": "Salvage",
+    "ModifyFlags": 1,
     "SalvageFactor": {
       "Resource": [
         -0.75,
@@ -13089,8 +13089,8 @@
     "EditorCategories": "Race:Terran",
     "ExpireDelay": 12.2775,
     "RevealFlags": [
-      "Detect",
-      "Unfog"
+      1,
+      1
     ],
     "RevealRadius": 13
   },
@@ -13192,7 +13192,7 @@
     "PeriodCount": 60,
     "PeriodicPeriodArray": 1,
     "PeriodicValidator": "NotDead",
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 12.5,
     "ValidatorArray": "TargetRadius0Dot5",
     "WhichLocation": {
@@ -13204,7 +13204,7 @@
     "PeriodCount": 60,
     "PeriodicPeriodArray": 1,
     "PeriodicValidator": "NotDead",
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 13,
     "ValidatorArray": "TargetRadius1Dot0",
     "WhichLocation": {
@@ -13216,7 +13216,7 @@
     "PeriodCount": 60,
     "PeriodicPeriodArray": 1,
     "PeriodicValidator": "NotDead",
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 13.5,
     "ValidatorArray": "TargetRadius1Dot5",
     "WhichLocation": {
@@ -13228,7 +13228,7 @@
     "PeriodCount": 60,
     "PeriodicPeriodArray": 1,
     "PeriodicValidator": "NotDead",
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 14,
     "ValidatorArray": "TargetRadius2Dot0",
     "WhichLocation": {
@@ -13240,7 +13240,7 @@
     "PeriodCount": 60,
     "PeriodicPeriodArray": 1,
     "PeriodicValidator": "NotDead",
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 14.5,
     "ValidatorArray": "TargetRadius2Dot5",
     "WhichLocation": {
@@ -13252,7 +13252,7 @@
     "PeriodCount": 60,
     "PeriodicPeriodArray": 1,
     "PeriodicValidator": "NotDead",
-    "RevealFlags": "Unfog",
+    "RevealFlags": 1,
     "RevealRadius": 15,
     "ValidatorArray": "TargetRadiusGT2Dot5",
     "WhichLocation": {
@@ -13305,9 +13305,9 @@
   },
   "SeekerMissileDamage": {
     "AINotifyFlags": [
-      "HurtEnemy",
-      "HurtFriend",
-      "MajorDanger"
+      1,
+      1,
+      1
     ],
     "Amount": 100,
     "AreaArray": [
@@ -13334,7 +13334,7 @@
       "Flee"
     ],
     "SearchFilters": "-;Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0,
+    "SearchFlags": "SameCliff",
     "Visibility": "Visible"
   },
   "SeekerMissileLaunchCP": {
@@ -13585,11 +13585,11 @@
   },
   "SlaynElementalGrabImpactAirCU": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "SpawnEffect": "SlaynElementalGrabImpactCP",
     "SpawnUnit": "SlaynElementalGrabAirUnit",
@@ -13612,9 +13612,9 @@
     "PeriodicPeriodArray": 0.5,
     "PeriodicValidator": "SlaynElementalGrabSourceNotDeadAndTargetNotDeadAndOriginNotDead",
     "RevealFlags": [
-      "Detect",
-      "LoS",
-      "Unfog"
+      1,
+      1,
+      1
     ],
     "RevealRadius": 15,
     "WhichLocation": {
@@ -13623,11 +13623,11 @@
   },
   "SlaynElementalGrabImpactGroundCU": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "DropOff",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "SpawnEffect": "SlaynElementalGrabImpactCP",
     "SpawnUnit": "SlaynElementalGrabGroundUnit",
@@ -13733,7 +13733,7 @@
     }
   },
   "SpawnInfestedMarines": {
-    "CreateFlags": 0,
+    "CreateFlags": "Placement",
     "EditorCategories": "Race:Zerg",
     "SpawnCount": 4,
     "SpawnEffect": "InfestedTerransTimedLife",
@@ -13832,11 +13832,11 @@
   },
   "SprayDefault": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0
+      "NormalizeSpawnOffset",
+      "Placement",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "SpawnEffect": "LoadOutSpray@AddTracked",
     "SpawnUnit": "##id##",
@@ -14171,7 +14171,7 @@
   "TemporalFieldDamageDummy": {
     "EditorCategories": "Race:Protoss",
     "Kind": "Spell",
-    "ResponseFlags": 0,
+    "ResponseFlags": "Flee",
     "parent": "DU_WEAP"
   },
   "TemporalFieldDecelerationApply": {
@@ -15049,7 +15049,7 @@
     "Kind": "Ranged",
     "KindSplash": "Splash",
     "SearchFilters": "Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
-    "SearchFlags": 0,
+    "SearchFlags": "OffsetByUnitRadius",
     "parent": "DU_WEAP"
   },
   "UltraliskWeaponCooldown": {
@@ -15065,14 +15065,14 @@
   },
   "UnitKnockbackBy10": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy10CreatePHSet",
@@ -15125,14 +15125,14 @@
   },
   "UnitKnockbackBy11": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy11CreatePHSet",
@@ -15185,14 +15185,14 @@
   },
   "UnitKnockbackBy12": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy12CreatePHSet",
@@ -15245,14 +15245,14 @@
   },
   "UnitKnockbackBy2": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy2CreatePHSet",
@@ -15305,14 +15305,14 @@
   },
   "UnitKnockbackBy3": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy3CreatePHSet",
@@ -15365,14 +15365,14 @@
   },
   "UnitKnockbackBy4": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy4CreatePHSet",
@@ -15425,14 +15425,14 @@
   },
   "UnitKnockbackBy5": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy5CreatePHSet",
@@ -15486,14 +15486,14 @@
   },
   "UnitKnockbackBy6": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy6CreatePHSet",
@@ -15546,14 +15546,14 @@
   },
   "UnitKnockbackBy7": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy7CreatePHSet",
@@ -15606,14 +15606,14 @@
   },
   "UnitKnockbackBy8": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy8CreatePHSet",
@@ -15666,14 +15666,14 @@
   },
   "UnitKnockbackBy9": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitKnockbackBy9CreatePHSet",
@@ -15726,15 +15726,15 @@
   },
   "UnitLaunchToTargetPoint": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "NormalizeSpawnOffset",
+      "Placement",
       "PlacementIgnoreBlockers",
-      "Precursor"
+      "Precursor",
+      "ProvideFood",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "UnitLaunchToTargetPointCreatePHSet",
@@ -16114,8 +16114,8 @@
     "Name": "Effect/Name/VolatileBurstDirectFallbackEnemyNeutralBuilding",
     "SearchFilters": "-;-",
     "SearchFlags": [
-      0,
-      0
+      "OffsetByUnitRadius",
+      "SameCliff"
     ],
     "ValidatorArray": [
       "VolatileBurstFallbackEnemyNeutralBuilding",
@@ -16138,8 +16138,8 @@
     "Name": "Effect/Name/VolatileBurstDirectFallbackEnemyNeutralUnit",
     "SearchFilters": "-;-",
     "SearchFlags": [
-      0,
-      0
+      "OffsetByUnitRadius",
+      "SameCliff"
     ],
     "ValidatorArray": [
       "VolatileBurstFallbackEnemyNeutralUnit",
@@ -16157,19 +16157,19 @@
       "index": "0",
       "removed": "1"
     },
-    "Flags": 0,
+    "Flags": "Notification",
     "ImpactLocation": {
       "Value": "TargetUnit"
     },
     "ResponseFlags": [
-      0,
-      0
+      "Acquire",
+      "Flee"
     ],
     "SearchFilters": "-;-",
     "SearchFlags": [
-      0,
-      0,
-      0
+      "CallForHelp",
+      "OffsetByUnitRadius",
+      "SameCliff"
     ],
     "parent": "VolatileBurstU2"
   },
@@ -16185,24 +16185,24 @@
       "index": "0",
       "removed": "1"
     },
-    "Flags": 0,
+    "Flags": "Notification",
     "ImpactLocation": {
       "Value": "TargetUnit"
     },
     "ResponseFlags": [
-      0,
-      0
+      "Acquire",
+      "Flee"
     ],
     "SearchFilters": "-;-",
     "SearchFlags": [
-      0,
-      0,
-      0
+      "CallForHelp",
+      "OffsetByUnitRadius",
+      "SameCliff"
     ],
     "parent": "VolatileBurstU"
   },
   "VolatileBurstU": {
-    "AINotifyFlags": "HurtEnemy",
+    "AINotifyFlags": 1,
     "Amount": 16,
     "AreaArray": {
       "Fraction": "1",
@@ -16223,7 +16223,7 @@
     "parent": "DU_WEAP"
   },
   "VolatileBurstU2": {
-    "AINotifyFlags": "HurtEnemy",
+    "AINotifyFlags": 1,
     "Amount": 80,
     "AreaArray": {
       "Fraction": "1",
@@ -16778,7 +16778,7 @@
     },
     "RevealerParams": {
       "Duration": 0.75,
-      "RevealFlags": "Unfog",
+      "RevealFlags": 1,
       "ShapeExpansion": 1
     },
     "SearchFilters": "-;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
@@ -16927,8 +16927,8 @@
     },
     "SearchFilters": "Worker;Ally,Neutral,Enemy",
     "SearchFlags": [
-      0,
-      "ExtendByUnitRadius"
+      "ExtendByUnitRadius",
+      "OffsetAreaByAngle"
     ]
   },
   "WorkerVespeneWalkApplyBehavior": {
@@ -17572,15 +17572,15 @@
   },
   "YoinkStartCreatePlaceholder": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "OffsetByRadius",
       "PlacementIgnoreBlockers",
       "Precursor",
-      "SetFacing"
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "YoinkStartSet",
@@ -17608,15 +17608,15 @@
   },
   "YoinkStartCreatePlaceholderSiegeTank": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "OffsetByRadius",
       "PlacementIgnoreBlockers",
       "Precursor",
-      "SetFacing"
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "YoinkStartSetSiegeTank",
@@ -17634,15 +17634,15 @@
   },
   "YoinkStartCreatePlaceholderVikingAir": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "OffsetByRadius",
       "PlacementIgnoreBlockers",
       "Precursor",
-      "SetFacing"
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "YoinkStartSetVikingAir",
@@ -17660,15 +17660,15 @@
   },
   "YoinkStartCreatePlaceholderVikingGround": {
     "CreateFlags": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      "Birth",
+      "DropOff",
+      "OffsetByRadius",
       "PlacementIgnoreBlockers",
       "Precursor",
-      "SetFacing"
+      "ProvideFood",
+      "SetFacing",
+      "TechComplete",
+      "UseFood"
     ],
     "EditorCategories": "Race:Zerg",
     "SpawnEffect": "YoinkStartSetVikingGround",
@@ -17783,7 +17783,7 @@
     "Flags": "NoKillCredit"
   },
   "ZergBuildingSpawnBroodling6": {
-    "CreateFlags": 0,
+    "CreateFlags": "Placement",
     "EditorCategories": "Race:Zerg",
     "SpawnCount": 6,
     "SpawnEffect": "BroodlingTimedLife",
@@ -17802,7 +17802,7 @@
     "ValidatorArray": "CasterIsNotHidden"
   },
   "ZergBuildingSpawnBroodling9": {
-    "CreateFlags": 0,
+    "CreateFlags": "Placement",
     "EditorCategories": "Race:Zerg",
     "SpawnCount": 9,
     "SpawnEffect": "BroodlingTimedLife",

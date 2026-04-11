@@ -6,7 +6,7 @@
     ],
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "ScoreResult": "BuildOrder"
   },
   "AdeptKillBounce": {
@@ -60,7 +60,7 @@
       "Reference": "Button,WarpInAdept,AlertIcon",
       "Value": "Assets\\Textures\\btn-unit-protoss-adept-purifier.dds"
     },
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-unit-protoss-adept.dds",
     "LeaderAlias": "",
     "Race": "Prot"
@@ -104,7 +104,7 @@
         "Value": "btn-unit-protoss-alarak-taldarim-adept-collection.dds"
       }
     ],
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": "",
     "Race": "Prot"
   },
@@ -141,7 +141,7 @@
         "Value": "0.687500"
       }
     ],
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-anabolicsynthesis.dds",
     "Race": "Zerg",
     "ScoreAmount": 300,
@@ -427,7 +427,7 @@
       "TemplarArchive",
       "WarpGate"
     ],
-    "Flags": 0
+    "Flags": "UpgradeCheat"
   },
   "CollectionSkinDeluxe": {
     "EditorCategories": "Race:##race##",
@@ -453,7 +453,7 @@
         "Value": "Assets\\Textures\\btn-unit-##unit##-collectionskin-deluxe.dds"
       }
     ],
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": "",
     "default": 1
   },
@@ -485,7 +485,7 @@
       "Reference": "Button,Colossus,AlertIcon",
       "Value": "Assets\\Textures\\btn-unit-protoss-Colossus-purifier.dds"
     },
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-unit-protoss-colossus.dds",
     "LeaderAlias": "",
     "Race": "Prot"
@@ -497,7 +497,7 @@
       "Reference": "Button,Colossus,AlertIcon",
       "Value": "Assets\\Textures\\btn-unit-protoss-colossus-taldarimex3.dds"
     },
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-unit-protoss-colossus.dds",
     "LeaderAlias": "",
     "Race": "Prot"
@@ -514,11 +514,11 @@
   },
   "Confetti": {
     "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": ""
   },
   "CursorDebug": {
-    "Flags": 0
+    "Flags": "UpgradeCheat"
   },
   "CycloneAirUpgrade": {
     "AffectedUnitArray": "Cyclone",
@@ -906,7 +906,7 @@
   },
   "GhostAlternate": {
     "AffectedUnitArray": "Ghost",
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": ""
   },
   "GhostMoebiusReactor": {
@@ -929,7 +929,7 @@
   },
   "GhostSkinJunker": {
     "AffectedUnitArray": "Ghost",
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": ""
   },
   "GhostSkinNova": {
@@ -966,7 +966,7 @@
         "Value": "Assets\\Textures\\btn-unit-terran-blackops-femaleghost.dds"
       }
     ],
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": ""
   },
   "GlialReconstitution": {
@@ -1192,7 +1192,7 @@
       "Reference": "Weapon,PhaseDisruptors,Range",
       "Value": "2"
     },
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\aoe_splatterran1c.dds",
     "Race": "Prot",
     "ScoreAmount": 400,
@@ -1223,7 +1223,7 @@
       "Reference": "Unit,InfestorBurrowed,Speed",
       "Value": "1.000000"
     },
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-peristalsis.dds",
     "Race": "Zerg",
     "ScoreAmount": 200,
@@ -1370,7 +1370,7 @@
         "Value": "7.000000"
       }
     ],
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-highcapacityfueltanks.dds",
     "ScoreAmount": 200,
     "ScoreResult": "BuildOrder"
@@ -1383,7 +1383,7 @@
       "Reference": "Abil,MedivacTransport,UnloadPeriod",
       "Value": "0.500000"
     },
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-techupgrade-terran-rapiddeployment.dds"
   },
   "MicrobialShroud": {
@@ -1474,7 +1474,7 @@
   "ObverseIncubation": {
     "AffectedUnitArray": "Zergling",
     "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-enduringcorruption.dds",
     "Race": "Zerg"
   },
@@ -1503,7 +1503,7 @@
       "Reference": "Unit,RoachBurrowed,LifeRegenRate",
       "Value": "10.000000"
     },
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-organiccarapace.dds",
     "Race": "Zerg",
     "ScoreAmount": 300,
@@ -4143,22 +4143,22 @@
       "Nexus",
       "XelNagaTower"
     ],
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": ""
   },
   "SprayProtoss": {
     "AffectedUnitArray": "Probe",
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": ""
   },
   "SprayTerran": {
     "AffectedUnitArray": "SCV",
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": ""
   },
   "SprayZerg": {
     "AffectedUnitArray": "Drone",
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "LeaderAlias": ""
   },
   "Stimpack": {
@@ -6718,7 +6718,7 @@
       "Reference": "Weapon,LanzerTorpedoes,Range",
       "Value": "2.000000"
     },
-    "Flags": 0,
+    "Flags": "UpgradeCheat",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-jotunboosters.dds",
     "Race": "Terr",
     "ScoreAmount": 200,

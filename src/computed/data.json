@@ -51,8 +51,8 @@
       "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
       "Effect": "AdeptPhaseShiftInitialSet",
       "Flags": [
-        0,
-        0,
+        "BestUnit",
+        "RequireTargetVision",
         "TransientPreferred"
       ],
       "Range": 500,
@@ -133,9 +133,9 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
-        0,
-        0,
-        "IgnoreFacing"
+        "IgnoreFacing",
+        "IgnorePlacement",
+        "WaitUntilStopped"
       ],
       "InfoArray": {
         "CollideRange": 3.75,
@@ -214,8 +214,8 @@
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Flags": [
-        0,
-        0
+        "BestUnit",
+        "RequireTargetVision"
       ],
       "Range": 500,
       "name": "Blink",
@@ -257,8 +257,8 @@
       "Cancelable": 0,
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "VitalStartFactor": [
-        "Life",
-        "Shields"
+        1,
+        1
       ],
       "name": "BuildinProgressNydusCanal",
       "race": "Zerg",
@@ -271,7 +271,7 @@
         {
           "DefaultButtonFace": "BurrowDown",
           "Flags": [
-            0,
+            "ShowInGlossary",
             "ToSelection"
           ],
           "Requirements": "UseBurrow",
@@ -284,9 +284,9 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "Interruptible",
         "SuppressMovement"
@@ -295,16 +295,16 @@
         "RandomDelayMax": 0.3703,
         "SectionArray": [
           {
-            "DurationArray": "Delay",
-            "index": "Stats"
+            "DurationArray": 0.5556,
+            "index": "Collide"
           },
           {
-            "DurationArray": "Duration",
+            "DurationArray": 1,
             "index": "Actor"
           },
           {
-            "DurationArray": 0.5556,
-            "index": "Collide"
+            "DurationArray": 1,
+            "index": "Stats"
           }
         ],
         "Unit": "BanelingBurrowed"
@@ -322,7 +322,7 @@
         {
           "DefaultButtonFace": "BurrowDown",
           "Flags": [
-            0,
+            "ShowInGlossary",
             "ToSelection"
           ],
           "Requirements": "UseBurrow",
@@ -335,9 +335,9 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "Interruptible",
         "SuppressMovement"
@@ -373,7 +373,7 @@
         {
           "DefaultButtonFace": "BurrowDown",
           "Flags": [
-            0,
+            "ShowInGlossary",
             "ToSelection"
           ],
           "Requirements": "UseBurrow",
@@ -386,9 +386,9 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "Interruptible",
         "SuppressMovement"
@@ -424,7 +424,7 @@
         {
           "DefaultButtonFace": "BurrowDown",
           "Flags": [
-            0,
+            "ShowInGlossary",
             "ToSelection"
           ],
           "Requirements": "UseBurrow",
@@ -437,9 +437,9 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "Interruptible"
       ],
@@ -481,8 +481,8 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
+        "IgnorePlacement",
         "Interruptible",
         "SuppressMovement"
       ],
@@ -526,7 +526,7 @@
         {
           "DefaultButtonFace": "BurrowDown",
           "Flags": [
-            0,
+            "ShowInGlossary",
             "ToSelection"
           ],
           "Requirements": "UseBurrow",
@@ -539,9 +539,9 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "Interruptible",
         "SuppressMovement"
@@ -577,7 +577,7 @@
         {
           "DefaultButtonFace": "BurrowDown",
           "Flags": [
-            0,
+            "ShowInGlossary",
             "ToSelection"
           ],
           "Requirements": "UseBurrow",
@@ -590,9 +590,9 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "Interruptible"
       ],
@@ -627,7 +627,7 @@
         {
           "DefaultButtonFace": "BurrowDown",
           "Flags": [
-            0,
+            "ShowInGlossary",
             "ToSelection"
           ],
           "Requirements": "UseBurrow",
@@ -640,9 +640,9 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "Interruptible"
       ],
@@ -676,7 +676,7 @@
       "CmdButtonArray": {
         "DefaultButtonFace": "BurrowDown",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "UseBurrow",
@@ -684,9 +684,9 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "SuppressMovement"
       ],
@@ -750,9 +750,9 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "Interruptible",
         "SuppressMovement"
@@ -761,12 +761,12 @@
         "RandomDelayMax": 0.3703,
         "SectionArray": [
           {
-            "DurationArray": "Delay",
-            "index": "Stats"
-          },
-          {
             "DurationArray": 0.5556,
             "index": "Collide"
+          },
+          {
+            "DurationArray": 1,
+            "index": "Stats"
           },
           {
             "DurationArray": 1.333,
@@ -907,8 +907,8 @@
       "DeathUnloadEffect": "RemoveCommandCenterCargo",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
       "Flags": [
-        0,
-        0
+        "AllowPassengerSmartCmd",
+        "AllowSmartCmd"
       ],
       "LoadCargoBehavior": "CCTransportDummy",
       "LoadCargoEffect": "CCLoadDummy",
@@ -987,8 +987,8 @@
       },
       "Range": 10,
       "SharedFlags": [
-        "RegisterChargeEvent",
-        "RegisterCooldownEvent"
+        1,
+        1
       ],
       "builds": [
         "CreepTumor"
@@ -1012,8 +1012,8 @@
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Flags": [
-        0,
-        0
+        "BestUnit",
+        "RequireTargetVision"
       ],
       "Range": 500,
       "name": "DarkTemplarBlink",
@@ -1110,8 +1110,8 @@
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Marker": {
         "MatchFlags": [
-          0,
-          "CasterUnit"
+          "CasterUnit",
+          "Link"
         ]
       },
       "PlaceUnit": "ForceField",
@@ -1176,7 +1176,7 @@
       "CmdButtonArray": {
         "DefaultButtonFace": "HoldFire",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "GhostNotHoldingFire",
@@ -1192,7 +1192,7 @@
       "CmdButtonArray": {
         "DefaultButtonFace": "WeaponsFree",
         "Flags": [
-          0,
+          "ShowInGlossary",
           "ToSelection"
         ],
         "Requirements": "GhostHoldingFire",
@@ -1518,10 +1518,10 @@
       "Effect": "HyperjumpInitialCP",
       "FinishTime": 6,
       "Flags": [
-        0,
-        0,
         "AllowMovement",
-        "NoDeceleration"
+        "BestUnit",
+        "NoDeceleration",
+        "RequireTargetVision"
       ],
       "InterruptCost": {
         "Cooldown": {
@@ -1533,7 +1533,7 @@
         "Hyperjump"
       ],
       "Range": 500,
-      "ShowProgressArray": "Channel",
+      "ShowProgressArray": 1,
       "UninterruptibleArray": [
         "Channel",
         "Finish",
@@ -1595,11 +1595,11 @@
       "Activity": "UI/Morphing",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "DisableCollision",
         "KillOnCancel",
         "KillOnFinish",
-        "Select"
+        "Select",
+        "WaitForFood"
       ],
       "InfoArray": [
         {
@@ -1775,8 +1775,8 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
-        0,
-        "IgnoreFacing"
+        "IgnoreFacing",
+        "WaitUntilStopped"
       ],
       "InfoArray": [
         {
@@ -1838,7 +1838,7 @@
       "requires": []
     },
     "LoadOutSpray": {
-      "AbilityCategories": "Physical",
+      "AbilityCategories": 1,
       "Alert": "",
       "DefaultButtonCardId": "Spry",
       "Flags": "UnitOrderQueue",
@@ -2375,8 +2375,8 @@
     },
     "MorphToBroodLord": {
       "AbilClassEnableArray": [
-        "CAbilMove",
-        "CAbilStop"
+        1,
+        1
       ],
       "ActorKey": "GuardianAspect",
       "Alert": "MorphComplete_Zerg",
@@ -2393,8 +2393,6 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
-        0,
         "BestUnit",
         "Birth",
         "DisableAbils",
@@ -2402,8 +2400,10 @@
         "IgnoreFacing",
         "Interruptible",
         "Produce",
+        "Rally",
         "ShowProgress",
-        "SuppressMovement"
+        "SuppressMovement",
+        "WaitUntilStopped"
       ],
       "InfoArray": [
         {
@@ -2535,7 +2535,6 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "BestUnit",
         "Birth",
         "DisableAbils",
@@ -2546,7 +2545,8 @@
         "Rally",
         "RallyReset",
         "ShowProgress",
-        "SuppressMovement"
+        "SuppressMovement",
+        "WaitUntilStopped"
       ],
       "InfoArray": [
         {
@@ -2616,10 +2616,10 @@
       ],
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Flags": [
-        0,
         "DisableAbils",
         "FastBuild",
         "IgnoreFacing",
+        "IgnorePlacement",
         "Interruptible",
         "Produce",
         "ShowProgress",
@@ -2668,7 +2668,6 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": [
-        0,
         "BestUnit",
         "Birth",
         "DisableAbils",
@@ -2679,7 +2678,8 @@
         "Rally",
         "RallyReset",
         "ShowProgress",
-        "SuppressMovement"
+        "SuppressMovement",
+        "WaitUntilStopped"
       ],
       "InfoArray": [
         {
@@ -2745,7 +2745,7 @@
         {
           "DefaultButtonFace": "MorphToSwarmHostBurrowedMP",
           "Flags": [
-            0,
+            "ShowInGlossary",
             "ToSelection"
           ],
           "index": "Execute"
@@ -2753,9 +2753,9 @@
       ],
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
-        0,
         "IgnoreFacing",
         "IgnoreFood",
+        "IgnorePlacement",
         "IgnoreUnitCost",
         "Interruptible",
         "RallyReset",
@@ -2922,7 +2922,7 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": "NeuralParasiteLaunchMissile",
-      "Flags": 0,
+      "Flags": "AbortOnAllianceChange",
       "Range": 8,
       "RangeSlop": 5,
       "TargetFilters": [
@@ -2965,9 +2965,9 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": [
-        0,
         "CargoDeath",
-        "PlayerHold"
+        "PlayerHold",
+        "ShowCargoSize"
       ],
       "InitialUnloadDelay": 0.5,
       "LoadPeriod": 0.25,
@@ -2994,9 +2994,9 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
-        0,
         "DisableAbils",
-        "IgnoreFacing"
+        "IgnoreFacing",
+        "WaitUntilStopped"
       ],
       "InfoArray": {
         "SectionArray": [
@@ -3211,8 +3211,8 @@
         "WorkerVespeneBugOnProbeAB"
       ],
       "FlagArray": [
-        0,
-        "PeonDisableCollision"
+        "PeonDisableCollision",
+        "PeonMaintained"
       ],
       "InfoArray": [
         {
@@ -3428,11 +3428,11 @@
       },
       "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
       "Effect": "PurificationNovaTargettedInitialSet",
-      "Flags": 0,
+      "Flags": "RequireTargetVision",
       "Range": 500,
       "SharedFlags": [
-        "RegisterChargeEvent",
-        "RegisterCooldownEvent"
+        1,
+        1
       ],
       "name": "PurificationNovaTargeted",
       "race": "Protoss",
@@ -3442,8 +3442,8 @@
       "Alert": "BuildComplete_Zerg",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "FlagArray": [
-        0,
-        0
+        "PeonMaintained",
+        "RangeIncludesBuilding"
       ],
       "InfoArray": [
         {
@@ -3527,20 +3527,20 @@
       "DefaultError": "RequiresRepairTarget",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
-        0,
         "AutoCast",
         "AutoCastOffOwnerLeave",
+        "BestUnit",
         "PassengerAcquirePassengers",
         "ReExecutable",
         "Smart"
       ],
       "InheritAttackPriorityArray": [
-        "Cast",
-        "Channel",
-        "Prep"
+        1,
+        1,
+        1
       ],
       "Marker": {
-        "MatchFlags": 0,
+        "MatchFlags": "Link",
         "MismatchFlags": 0
       },
       "RangeSlop": 0.2,
@@ -3624,7 +3624,7 @@
       "CursorEffect": "ScannerSweep",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
-        0,
+        "RequireTargetVision",
         "Transient"
       ],
       "Range": 500,
@@ -3668,7 +3668,7 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
-        0,
+        "IgnoreCollision",
         "SuppressMovement"
       ],
       "InfoArray": [
@@ -3734,8 +3734,8 @@
       "Effect": "SnipeDamage",
       "Marker": {
         "MatchFlags": [
-          0,
-          "CasterUnit"
+          "CasterUnit",
+          "Link"
         ]
       },
       "Range": 10,
@@ -4139,7 +4139,7 @@
           "TimeUse": "1"
         }
       },
-      "Flags": 0,
+      "Flags": "RequireTargetVision",
       "name": "UltraliskWeaponCooldown"
     },
     "VoidRaySwarmDamageBoost": {
@@ -4243,7 +4243,7 @@
       ],
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "VortexKillSet",
-      "Flags": 0,
+      "Flags": "AbortOnAllianceChange",
       "Range": 9,
       "TargetFilters": "Visible;Player,Ally,Massive,Structure,Missile,Stasis,Dead,Invulnerable",
       "name": "Vortex",
@@ -4474,7 +4474,7 @@
       "CancelEffect": "WidowMineTargetTintRemoveBehavior",
       "CmdButtonArray": {
         "DefaultButtonFace": "WidowMineAttack",
-        "Flags": 0,
+        "Flags": "ShowInGlossary",
         "Requirements": "WidowMineArmed",
         "index": "Execute"
       },
@@ -4512,8 +4512,8 @@
       ],
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
-        0,
         "IgnoreFacing",
+        "IgnorePlacement",
         "Interruptible",
         "SuppressMovement"
       ],
@@ -4571,8 +4571,8 @@
       },
       "Effect": "WorkerChannelStopIdle",
       "Flags": [
-        0,
         "AllowMovement",
+        "BestUnit",
         "DeferCooldown"
       ],
       "PreEffectBehavior": {
@@ -4610,7 +4610,7 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": [
-        0,
+        "AbortOnAllianceChange",
         "AllowMovement",
         "IgnoreOrderPlayerIdInStageValidate",
         "NoDeceleration"
@@ -4624,7 +4624,7 @@
       "ProgressButtonArray": "YamatoGun",
       "Range": 10,
       "RangeSlop": 10,
-      "ShowProgressArray": "Prep",
+      "ShowProgressArray": 1,
       "UninterruptibleArray": [
         "Cast",
         "Channel",
@@ -4642,9 +4642,9 @@
     "ZergBuild": {
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "FlagArray": [
-        0,
         "PeonHide",
-        "PeonKillFinish"
+        "PeonKillFinish",
+        "RangeIncludesBuilding"
       ],
       "InfoArray": [
         {
@@ -5122,13 +5122,13 @@
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -5233,13 +5233,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -5339,13 +5339,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -5545,13 +5545,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -5760,7 +5760,6 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "AIDefense",
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
@@ -5768,6 +5767,7 @@
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -5950,7 +5950,6 @@
       ],
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PreventDefeat",
@@ -5958,6 +5957,7 @@
         "PreventReveal",
         "TownAlert",
         "TownCamera",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -5979,10 +5979,10 @@
       "Radius": 2.5,
       "RepairTime": 100,
       "ResourceDropOff": [
-        "Custom",
-        "Minerals",
-        "Terrazine",
-        "Vespene"
+        1,
+        1,
+        1,
+        1
       ],
       "ScoreKill": 400,
       "ScoreMake": 400,
@@ -6016,7 +6016,7 @@
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
-        0,
+        "Armored",
         "Biological",
         "Light",
         "Structure"
@@ -6054,12 +6054,12 @@
         "NoPlacement"
       ],
       "FlagArray": [
-        0,
         "AILifetime",
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "NoScore",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -6100,7 +6100,7 @@
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
-        0,
+        "Armored",
         "Biological",
         "Light",
         "Structure"
@@ -6138,11 +6138,11 @@
         "NoPlacement"
       ],
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "NoScore",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -6293,13 +6293,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -6439,13 +6439,13 @@
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -6667,13 +6667,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -6833,13 +6833,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 329.9963,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -6919,13 +6919,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 329.9963,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -7118,13 +7118,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -7274,13 +7274,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -7448,13 +7448,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -7610,13 +7610,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -7778,13 +7778,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -7987,13 +7987,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -8167,7 +8167,6 @@
         "HatcheryCreateSet"
       ],
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PreventDefeat",
@@ -8175,6 +8174,7 @@
         "PreventReveal",
         "TownAlert",
         "TownCamera",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -8196,10 +8196,10 @@
       "Race": "Zerg",
       "Radius": 2,
       "ResourceDropOff": [
-        "Custom",
-        "Minerals",
-        "Terrazine",
-        "Vespene"
+        1,
+        1,
+        1,
+        1
       ],
       "ScoreKill": 325,
       "ScoreMake": 275,
@@ -8316,13 +8316,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 332.9956,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -8458,13 +8458,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 329.9963,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -8595,13 +8595,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 29.9926,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -8779,7 +8779,6 @@
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "FlagArray": [
-        0,
         "AIDefense",
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
@@ -8787,6 +8786,7 @@
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -9001,7 +9001,6 @@
       "EnergyStart": 50,
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PreventDefeat",
@@ -9009,6 +9008,7 @@
         "PreventReveal",
         "TownAlert",
         "TownCamera",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -9030,10 +9030,10 @@
       "Race": "Prot",
       "Radius": 2,
       "ResourceDropOff": [
-        "Custom",
-        "Minerals",
-        "Terrazine",
-        "Vespene"
+        1,
+        1,
+        1,
+        1
       ],
       "ScoreKill": 400,
       "ScoreMake": 400,
@@ -9199,7 +9199,6 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 344.9707,
       "FlagArray": [
-        0,
         "AIDefense",
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
@@ -9207,6 +9206,7 @@
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -9289,13 +9289,13 @@
       ],
       "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
       "FlagArray": [
-        0,
         "AIHighPrioTarget",
         "AILifetime",
         "AISplash",
         "AIThreatGround",
         "NoPortraitTalk",
         "NoScore",
+        "Turnable",
         "UseLineOfSight"
       ],
       "Footprint": "OracleStasisTrap",
@@ -9399,7 +9399,6 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 45,
       "FlagArray": [
-        0,
         "AIDefense",
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
@@ -9407,6 +9406,7 @@
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -9510,13 +9510,13 @@
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -9626,13 +9626,13 @@
       ],
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -9726,13 +9726,13 @@
       ],
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -9856,13 +9856,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 326.997,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -9978,13 +9978,13 @@
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -10154,13 +10154,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -10295,13 +10295,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -10421,7 +10421,6 @@
       "EnergyRegenRate": 0.5625,
       "EnergyStart": 50,
       "FlagArray": [
-        0,
         "AIDefense",
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
@@ -10429,6 +10428,7 @@
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -10530,13 +10530,13 @@
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -10657,7 +10657,6 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "AIDefense",
         "AIPressForwardDisabled",
         "AIThreatGround",
@@ -10667,6 +10666,7 @@
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -10831,13 +10831,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -10972,7 +10972,6 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "AIDefense",
         "AIPressForwardDisabled",
         "AIThreatAir",
@@ -10982,6 +10981,7 @@
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -11144,13 +11144,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -11369,13 +11369,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -11489,13 +11489,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -11604,13 +11604,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 45,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -11742,13 +11742,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -11887,13 +11887,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 29.9926,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -12190,7 +12190,7 @@
       },
       "CargoSize": 4,
       "Collide": [
-        0,
+        "ForceField",
         "Ground",
         "Locust",
         "Small"
@@ -13083,10 +13083,10 @@
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
       "FlagArray": [
-        0,
         "AISplash",
         "ArmySelect",
         "PreventDestroy",
+        "Turnable",
         "UseLineOfSight"
       ],
       "Food": -6,
@@ -13660,8 +13660,8 @@
       "Acceleration": 1000,
       "AttackTargetPriority": 20,
       "Attributes": [
-        0,
         "Armored",
+        "Light",
         "Mechanical"
       ],
       "CardLayouts": {
@@ -13748,10 +13748,10 @@
         ]
       },
       "FlagArray": [
-        0,
         "AlwaysThreatens",
         "ArmySelect",
         "PreventDestroy",
+        "Turnable",
         "UseLineOfSight"
       ],
       "Food": -3,
@@ -15336,9 +15336,9 @@
         ]
       },
       "FlagArray": [
-        0,
         "ArmySelect",
         "PreventDestroy",
+        "Turnable",
         "UseLineOfSight"
       ],
       "Food": -4,
@@ -15814,8 +15814,8 @@
         }
       ],
       "Collide": [
-        0,
-        "Larva"
+        "Larva",
+        "Structure"
       ],
       "DamageDealtXP": 1,
       "DamageTakenXP": 1,
@@ -16570,10 +16570,10 @@
       "EnergyRegenRate": 0.5625,
       "EnergyStart": 50,
       "FlagArray": [
-        0,
         "AISupport",
         "AIThreatAir",
         "AIThreatGround",
+        "AlwaysThreatens",
         "AlwaysThreatens",
         "ArmySelect",
         "PreventDestroy",
@@ -16645,11 +16645,11 @@
       "AlliedPushPriority": 1,
       "AttackTargetPriority": 20,
       "Attributes": [
-        0,
         "Armored",
         "Heroic",
         "Massive",
-        "Mechanical"
+        "Mechanical",
+        "Psionic"
       ],
       "BehaviorArray": [
         "CloakField",
@@ -16776,9 +16776,9 @@
       "EnergyStart": 0,
       "Facing": 45,
       "FlagArray": [
-        0,
         "ArmySelect",
         "PreventDestroy",
+        "Turnable",
         "UseLineOfSight"
       ],
       "Food": -8,
@@ -16859,8 +16859,8 @@
       "Acceleration": 1.0625,
       "AttackTargetPriority": 20,
       "Attributes": [
-        0,
         "Armored",
+        "Massive",
         "Mechanical",
         "Psionic"
       ],
@@ -16981,12 +16981,12 @@
       "EnergyStart": 50,
       "Facing": 45,
       "FlagArray": [
-        0,
         "AICaster",
         "AIHighPrioTarget",
         "AISupport",
         "ArmySelect",
         "PreventDestroy",
+        "Turnable",
         "UseLineOfSight"
       ],
       "Food": -2,
@@ -17275,18 +17275,18 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 29.9707,
       "FlagArray": [
-        0,
-        0,
         "AIDefense",
         "AIHighPrioTarget",
         "AIThreatAir",
         "AIThreatGround",
+        "ArmorDisabledWhileConstructing",
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -17507,8 +17507,8 @@
       "Acceleration": 3,
       "AttackTargetPriority": 20,
       "Attributes": [
-        0,
         "Armored",
+        "Light",
         "Mechanical",
         "Psionic"
       ],
@@ -17822,7 +17822,6 @@
       "EnergyStart": 50,
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PreventDefeat",
@@ -17830,6 +17829,7 @@
         "PreventReveal",
         "TownAlert",
         "TownCamera",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -17852,10 +17852,10 @@
       "Radius": 2.5,
       "RepairTime": 135,
       "ResourceDropOff": [
-        "Custom",
-        "Minerals",
-        "Terrazine",
-        "Vespene"
+        1,
+        1,
+        1,
+        1
       ],
       "ScoreKill": 550,
       "ScoreMake": 550,
@@ -18119,7 +18119,6 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PreventDefeat",
@@ -18127,6 +18126,7 @@
         "PreventReveal",
         "TownAlert",
         "TownCamera",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -18160,10 +18160,10 @@
       "Radius": 2.5,
       "RepairTime": 150,
       "ResourceDropOff": [
-        "Custom",
-        "Minerals",
-        "Terrazine",
-        "Vespene"
+        1,
+        1,
+        1,
+        1
       ],
       "ScoreKill": 700,
       "ScoreMake": 700,
@@ -20250,7 +20250,7 @@
       "Acceleration": 1000,
       "AttackTargetPriority": 20,
       "Attributes": [
-        0,
+        "Light",
         "Mechanical",
         "Psionic"
       ],
@@ -21974,13 +21974,13 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "Facing": 315,
       "FlagArray": [
-        0,
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
         "PreventDefeat",
         "PreventDestroy",
         "TownAlert",
+        "Turnable",
         "UseLineOfSight"
       ],
       "FogVisibility": "Snapshot",
@@ -22878,7 +22878,7 @@
           "Value": "0.687500"
         }
       ],
-      "Flags": 0,
+      "Flags": "UpgradeCheat",
       "Icon": "Assets\\Textures\\btn-upgrade-zerg-anabolicsynthesis.dds",
       "Race": "Zerg",
       "ScoreAmount": 300,
@@ -23698,7 +23698,7 @@
           "Value": "7.000000"
         }
       ],
-      "Flags": 0,
+      "Flags": "UpgradeCheat",
       "Icon": "Assets\\Textures\\btn-upgrade-terran-highcapacityfueltanks.dds",
       "ScoreAmount": 200,
       "ScoreResult": "BuildOrder",

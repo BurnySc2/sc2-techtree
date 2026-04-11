@@ -36,7 +36,26 @@ INDEX_AS_KEY_TAGS = {"CostResource", "Vital"}
 
 # Tags where the index name is returned regardless of value (for enum-like attributes)
 # e.g., <AttributeBonus index="Light" value="6"/> -> "Light" (not "6" or {"Light": 6})
-FLAG_VALUE_TAGS = {"AttributeBonus"}
+FLAG_VALUE_TAGS = {
+    "AttributeBonus",
+    "Attributes",
+    "CancelableArray",
+    "CmdButtonArray",
+    "CmdFlags",
+    "Collide",
+    "CreateFlags",
+    "EditorFlags",
+    "FlagArray",
+    "Flags",
+    "LegacyOptions",
+    "MatchFlags",
+    "Options",
+    "PlaneArray",
+    "ResponseFlags",
+    "SearchFlags",
+    "SelectTransferFlags",
+    "UninterruptibleArray",
+}
 
 
 def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
@@ -82,7 +101,7 @@ def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
     # No children - handle index+value pairs
     if "index" in attrs and "value" in attrs:
         # Flag pattern: index + value="1" -> just the index name (string)
-        if attrs["value"] == "1" or tag_name in FLAG_VALUE_TAGS:
+        if tag_name in FLAG_VALUE_TAGS:
             return attrs["index"]
         # Index-as-key pattern: index + value (not "1") -> {"key": value}
         # e.g., <CostResource index="Minerals" value="50"/> -> {"Minerals": 50}

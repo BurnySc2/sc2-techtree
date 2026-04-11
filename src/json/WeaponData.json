@@ -14,11 +14,11 @@
     "Icon": "Assets\\Textures\\btn-upgrade-terran-vehicleweaponslevel0.dds",
     "MinScanRange": 7.5,
     "Options": [
-      0,
-      0,
-      0,
-      0,
-      "Hidden"
+      "CanInitiateAttackOrder",
+      "Hidden",
+      "LinkedCooldown",
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 1.04,
     "Range": 7,
@@ -40,8 +40,8 @@
     "Effect": "ATALaserBatteryLM",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel0.dds",
     "Options": [
-      0,
-      0
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 0.225,
     "RandomDelayMax": 0,
@@ -64,8 +64,8 @@
     "Effect": "ATSLaserBatteryLM",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-shipweaponslevel0.dds",
     "Options": [
-      0,
-      0
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 0.225,
     "RandomDelayMax": 0,
@@ -169,12 +169,12 @@
       "MatchFlags": "CasterUnit"
     },
     "Options": [
-      0,
-      0,
-      0,
       "Hidden",
       "IgnoreAttackPriority",
-      "IgnoreThreat"
+      "IgnoreThreat",
+      "LinkedCooldown",
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 0.225,
     "RandomDelayMax": 0,
@@ -215,11 +215,11 @@
     "Icon": "Assets\\Textures\\btn-building-protoss-photoncannon.dds",
     "LegacyOptions": "CanRetargetWhileChanneling",
     "Options": [
-      0,
-      0,
-      0,
-      0,
-      "ContinuousScan"
+      "CanInitiateAttackOrder",
+      "ContinuousScan",
+      "LinkedCooldown",
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 1.25,
     "Range": 7,
@@ -593,8 +593,8 @@
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel0.dds",
     "MinScanRange": 4,
     "Options": [
-      0,
-      0
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 1.1,
     "Range": 5,
@@ -767,10 +767,10 @@
       "KeepChanneling"
     ],
     "Options": [
-      0,
-      0,
-      0,
-      "DisplayCooldown"
+      "DisplayCooldown",
+      "LinkedCooldown",
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 2.21,
     "RandomDelayMax": 0,
@@ -802,10 +802,10 @@
     "Effect": "MothershipCoreWeaponLM",
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel0.dds",
     "Options": [
-      0,
-      0,
-      0,
-      "Disabled"
+      "Disabled",
+      "LinkedCooldown",
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 1.25,
     "Range": 10,
@@ -893,7 +893,7 @@
       "NoDeceleration"
     ],
     "Options": [
-      0,
+      "CanInitiateAttackOrder",
       "Disabled"
     ],
     "Period": 0.86,
@@ -960,8 +960,8 @@
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel0.dds",
     "MinScanRange": 6.5,
     "Options": [
-      0,
-      0
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 1.6,
     "Range": 6,
@@ -1006,8 +1006,8 @@
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel0.dds",
     "LegacyOptions": "CanRetargetWhileChanneling",
     "Options": [
-      0,
-      0
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 0.6,
     "Range": 6,
@@ -1073,13 +1073,13 @@
     "Effect": "MothershipAddTargetFire",
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel0.dds",
     "LegacyOptions": [
-      0,
-      "CanRetargetWhileChanneling"
+      "CanRetargetWhileChanneling",
+      "FaceTargetWhileInCooldown"
     ],
     "Options": [
-      0,
       "DisplayCooldown",
-      "Hidden"
+      "Hidden",
+      "LinkedCooldown"
     ],
     "Period": 0,
     "RandomDelayMax": 0,
@@ -1317,8 +1317,8 @@
     "LegacyOptions": "KeepChanneling",
     "MinScanRange": 7.5,
     "Options": [
-      0,
-      0
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 1.5,
     "Range": 7,
@@ -1354,7 +1354,7 @@
     "Arc": 90,
     "EditorCategories": "Race:Terran",
     "Icon": "Assets\\Textures\\btn-upgrade-terran-hisecautotracking.dds",
-    "Options": 0,
+    "Options": "OnlyFireAtAttackOrderTarget",
     "Period": 2,
     "Range": 6,
     "TargetFilters": "Ground,Visible;Self,Missile,Stasis,Dead,Hidden,Invulnerable"
@@ -1430,11 +1430,11 @@
     "Icon": "Assets\\Textures\\btn-upgrade-protoss-airweaponslevel0.dds",
     "LegacyOptions": "CanRetargetWhileChanneling",
     "Options": [
-      0,
-      0,
-      0,
       "Disabled",
-      "Hidden"
+      "Hidden",
+      "LinkedCooldown",
+      "OnlyFireAtAttackOrderTarget",
+      "OnlyFireWhileInAttackOrder"
     ],
     "Period": 0.5,
     "Range": 6,
@@ -1453,7 +1453,7 @@
       "MatchFlags": "Id"
     },
     "Options": [
-      0,
+      "Disabled",
       "Hidden",
       "Melee"
     ],
