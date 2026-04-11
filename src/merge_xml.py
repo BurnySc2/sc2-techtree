@@ -17,7 +17,7 @@ This is crucial for SC2 delta files where:
 
 Usage:
     uv run merge_xml [--data-type UnitData] [--output merged_UnitData.xml]
-    uv run merge_xml --all  # Merge all 4 data types
+    uv run merge_xml --all  # Merge all 5 data types
 
 Dependencies:
     pip install lxml
@@ -89,6 +89,9 @@ def get_xml_path(mod_name: str, data_type: str) -> Path:
     return Path(__file__).parent / f"xml/mods/{mod_name}/base.sc2data/GameData/{data_type}.xml"
 
 
+OVERRIDE_TAGS = {"Cost", "Range"}
+
+
 def get_child_key(elem: etree._Element) -> tuple:
     """
     Get a unique key for a child element to enable matching.
@@ -96,10 +99,13 @@ def get_child_key(elem: etree._Element) -> tuple:
     For elements with @index, use (tag, index).
     For other elements, use (tag,) with empty string index.
     For *Array tags, include value to differentiate (accumulate multiple values).
+    For Cost elements, ignore index since Cost doesn't use indexed children.
     """
     tag = str(elem.tag)
     index = elem.get("index", "")
     link = elem.get("Link", "")
+    if tag in OVERRIDE_TAGS:
+        return (tag,)
     if tag.endswith("Array"):
         value = elem.get("value", "")
         return (tag, index, link, value)

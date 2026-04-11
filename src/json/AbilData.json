@@ -16,15 +16,9 @@
         "index": "Cancel"
       }
     ],
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 150,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 150
+    },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Effect": "250mmStrikeCannonsCreatePersistent",
     "FinishTime": 2,
@@ -1077,10 +1071,7 @@
       "AllowMovement",
       "NoDeceleration"
     ],
-    "Range": [
-      10,
-      11
-    ]
+    "Range": 11
   },
   "Blink": {
     "AbilSetId": "Blnk",
@@ -1220,10 +1211,7 @@
     "PlaceUnit": "AutoTurret",
     "Placeholder": "AutoTurret",
     "ProducedUnitArray": "AutoTurret",
-    "Range": [
-      2,
-      3
-    ]
+    "Range": 2
   },
   "BuildInProgress": null,
   "BuildNydusCanal": {
@@ -2703,17 +2691,11 @@
       "DefaultButtonFace": "Contaminate",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Charge": "",
-        "Cooldown": "",
-        "Vital": 75
-      },
-      {
-        "Vital": 125,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Charge": "",
+      "Cooldown": "",
+      "Vital": 125
+    },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Flags": [
       "AllowMovement",
@@ -2734,19 +2716,13 @@
         "index": "Execute"
       }
     ],
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeStart": "45",
-          "TimeUse": "45"
-        },
-        "Vital": 75
+    "Cost": {
+      "Cooldown": {
+        "TimeStart": "45",
+        "TimeUse": "45"
       },
-      {
-        "Vital": 0,
-        "index": 0
-      }
-    ],
+      "Vital": 0
+    },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Flags": [
       "AllowMovement",
@@ -2754,10 +2730,7 @@
       "AutoCastOn",
       "NoDeceleration"
     ],
-    "Range": [
-      3,
-      6
-    ],
+    "Range": 6,
     "TargetFilters": [
       "Structure,Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Invulnerable",
       "Visible;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Invulnerable"
@@ -3909,10 +3882,7 @@
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "FeedbackSet",
     "Flags": "AllowMovement",
-    "Range": [
-      10,
-      9
-    ],
+    "Range": 10,
     "TargetFilters": [
       "CanHaveEnergy,Visible,HasEnergy;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
       "Visible,HasEnergy;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"
@@ -4223,17 +4193,11 @@
       "DefaultButtonFace": "Frenzy",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Charge": "",
-        "Cooldown": "",
-        "Vital": 50
-      },
-      {
-        "Vital": 25,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Charge": "",
+      "Cooldown": "",
+      "Vital": 25
+    },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "FrenzyLaunchMissile",
     "Range": 9,
@@ -4256,10 +4220,7 @@
     "CursorEffect": "FungalGrowthSearch",
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "FungalGrowthLaunchMissile",
-    "Range": [
-      10,
-      9
-    ]
+    "Range": 10
   },
   "FusionCoreResearch": {
     "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
@@ -4563,21 +4524,18 @@
       "DefaultButtonFace": "GuardianShield",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
+    "Cost": {
+      "Cooldown": [
+        {
           "Link": "GuardianShield",
           "TimeUse": "15.2"
         },
-        "Vital": 75
-      },
-      {
-        "Cooldown": {
+        {
           "TimeUse": "18"
-        },
-        "index": 0
-      }
-    ],
+        }
+      ],
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "GuardianShieldPersistent",
     "Flags": [
@@ -4592,15 +4550,9 @@
       "DefaultButtonFace": "WarpInAdept",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateAdept",
     "Flags": "BestUnit"
@@ -4611,15 +4563,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateArchon",
     "Flags": "BestUnit"
@@ -4630,15 +4576,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateColossus",
     "Flags": "BestUnit"
@@ -4648,15 +4588,9 @@
       "DefaultButtonFace": "WarpinDisruptor",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateDisruptor",
     "Flags": "BestUnit"
@@ -4667,15 +4601,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateHighTemplar",
     "Flags": "BestUnit"
@@ -4686,15 +4614,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateImmortal",
     "Flags": "BestUnit"
@@ -4705,15 +4627,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateOracle",
     "Flags": "BestUnit"
@@ -4724,15 +4640,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreatePhoenix",
     "Flags": "BestUnit"
@@ -4743,15 +4653,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateProbe",
     "Flags": "BestUnit"
@@ -4762,15 +4666,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateStalker",
     "Flags": "BestUnit"
@@ -4781,15 +4679,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
     "Effect": "HallucinationCreateVoidRay",
     "Flags": "BestUnit"
@@ -4800,15 +4692,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateWarpPrism",
     "Flags": "BestUnit"
@@ -4819,15 +4705,9 @@
       "Requirements": "UseHallucination",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "HallucinationCreateZealot",
     "Flags": "BestUnit"
@@ -4965,18 +4845,12 @@
       "DefaultButtonFace": "Hyperjump",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "100"
-        },
-        "Vital": 0,
-        "index": 0
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "100"
       },
-      {
-        "Vital": 125
-      }
-    ],
+      "Vital": 0
+    },
     "EditorCategories": "AbilityorEffectType:Units",
     "Effect": "HyperjumpInitialCP",
     "FinishTime": 6,
@@ -5010,19 +4884,11 @@
       "DefaultButtonFace": "ImmortalOverload",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "45"
-        },
-        "index": 0
-      },
-      {
-        "Cooldown": {
-          "TimeUse": "60"
-        }
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "45"
       }
-    ],
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "ImmortalOverloadAB",
     "Flags": [
@@ -5115,22 +4981,13 @@
       "Flags": "ToSelection",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 25
-      },
-      {
-        "Vital": 50,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 50
+    },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "InfestedTerransCreateEgg",
     "ProducedUnitArray": "InfestedTerran",
-    "Range": [
-      8,
-      9
-    ],
+    "Range": 8,
     "UninterruptibleArray": [
       "Cast",
       "Channel",
@@ -5193,20 +5050,17 @@
       "DefaultButtonFace": "KD8Charge",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
+    "Cost": {
+      "Cooldown": [
+        {
           "Link": "KD8Charge",
           "TimeUse": "10"
-        }
-      },
-      {
-        "Cooldown": {
-          "TimeUse": "20"
         },
-        "index": 0
-      }
-    ],
+        {
+          "TimeUse": "20"
+        }
+      ]
+    },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Range": 5,
     "TargetFilters": "Ground,Visible;-"
@@ -5481,10 +5335,7 @@
     "EditorCategories": "AbilityorEffectType:Units",
     "Effect": "LiberatorTargetMorphOrderInitialSet",
     "Flags": "AllowMovement",
-    "Range": [
-      5,
-      9
-    ]
+    "Range": 5
   },
   "LiberatorMorphtoAA": {
     "AbilSetId": "LiberatorAA",
@@ -6013,10 +5864,7 @@
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "LocustMPFlyingSwoopCreatePrecursor",
     "Flags": 0,
-    "Range": [
-      4,
-      6
-    ],
+    "Range": 6,
     "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"
   },
   "LocustMPFlyingSwoopAttack": {
@@ -6339,21 +6187,17 @@
       "DefaultButtonFace": "MassRecall",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Charge": "",
-        "Cooldown": "",
-        "Vital": 100
-      },
-      {
-        "Cooldown": {
+    "Cost": {
+      "Charge": "",
+      "Cooldown": [
+        "",
+        {
           "Link": "Abil/MassRecall",
           "TimeUse": "125"
-        },
-        "Vital": 0,
-        "index": 0
-      }
-    ],
+        }
+      ],
+      "Vital": 0
+    },
     "CursorEffect": [
       "MassRecallSearchCursor",
       "MothershipStrategicRecallSearch"
@@ -6449,21 +6293,12 @@
       "Flags": "ToSelection",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "1"
-        },
-        "Vital": 50
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "20"
       },
-      {
-        "Cooldown": {
-          "TimeUse": "20"
-        },
-        "Vital": 0,
-        "index": 0
-      }
-    ],
+      "Vital": 0
+    },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": "Transient"
   },
@@ -7734,17 +7569,11 @@
       "DefaultButtonFace": "MothershipCoreMassRecall",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Charge": "",
-        "Cooldown": "",
-        "Vital": 100
-      },
-      {
-        "Vital": 50,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Charge": "",
+      "Cooldown": "",
+      "Vital": 50
+    },
     "CursorEffect": "MothershipCoreMassRecallSearch",
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "MothershipCoreMassRecallPrepare",
@@ -7758,15 +7587,9 @@
       "DefaultButtonFace": "MothershipCoreWeapon",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 50,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 50
+    },
     "DefaultError": "CantTargetThatUnit",
     "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
     "Effect": "MothershipCoreApplyPurifyAB",
@@ -7834,17 +7657,11 @@
       "DefaultButtonFace": "MothershipMassRecall",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Charge": "",
-        "Cooldown": "",
-        "Vital": 100
-      },
-      {
-        "Vital": 50,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Charge": "",
+      "Cooldown": "",
+      "Vital": 50
+    },
     "CursorEffect": "MothershipMassRecallSearch",
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "MothershipMassRecallPrepare",
@@ -7884,26 +7701,17 @@
         "index": "Execute"
       }
     ],
-    "Cost": [
-      {
-        "Cooldown": {
-          "Link": "Abil/Leech",
-          "Location": "Unit"
-        },
-        "Vital": 50
+    "Cost": {
+      "Cooldown": {
+        "Link": "Abil/Leech",
+        "Location": "Unit"
       },
-      {
-        "Vital": 100,
-        "index": 0
-      }
-    ],
+      "Vital": 100
+    },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "NeuralParasiteLaunchMissile",
     "Flags": 0,
-    "Range": [
-      7,
-      8
-    ],
+    "Range": 8,
     "RangeSlop": 5,
     "TargetFilters": [
       "Ground,Visible;Self,Player,Ally,Neutral,Structure,Heroic,Stasis,Invulnerable",
@@ -8345,29 +8153,17 @@
       "DefaultButtonFace": "OracleRevelation",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "14"
-        },
-        "Vital": 25,
-        "index": 0
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "14"
       },
-      {
-        "Cooldown": {
-          "TimeUse": "2.5"
-        },
-        "Vital": 75
-      }
-    ],
+      "Vital": 25
+    },
     "CursorEffect": "OracleRevelationSearch",
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "OracleRevelationSearch",
     "Flags": "AllowMovement",
-    "Range": [
-      12,
-      9
-    ]
+    "Range": 12
   },
   "OracleRevelationMode": {
     "CmdButtonArray": [
@@ -8478,23 +8274,20 @@
         "index": "On"
       }
     ],
-    "Cost": [
-      {
-        "Charge": "Abil/OracleWeapon",
-        "Cooldown": {
+    "Cost": {
+      "Charge": "Abil/OracleWeapon",
+      "Cooldown": [
+        {
           "Link": "Abil/OracleWeapon",
           "TimeUse": "4"
         },
-        "Vital": 25,
-        "index": 0
-      },
-      {
-        "Cooldown": {
+        {
           "TimeUse": "4"
-        },
-        "Vital": 25
-      }
-    ],
+        }
+      ],
+      "Vital": 25,
+      "index": 0
+    },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
       "Toggle",
@@ -8658,15 +8451,9 @@
       "DefaultButtonFace": "ParasiticBomb",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 125,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 125
+    },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Effect": "ParasiticBombLM",
     "Range": 8,
@@ -9224,29 +9011,17 @@
       "Requirements": "UsePsiStorm",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "2"
-        },
-        "Vital": 75,
-        "index": 0
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "2"
       },
-      {
-        "Cooldown": {
-          "TimeUse": "2.5"
-        },
-        "Vital": 75
-      }
-    ],
+      "Vital": 75
+    },
     "CursorEffect": "PsiStormSearch",
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "PsiStormPersistent",
     "Flags": "AllowMovement",
-    "Range": [
-      8,
-      9
-    ]
+    "Range": 8
   },
   "PulsarBeam": {
     "AutoCastFilters": "Structure,Visible;Player,Ally,Neutral,RawResource,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
@@ -9301,19 +9076,11 @@
       "DefaultButtonFace": "PurificationNova",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "23.8"
-        },
-        "index": 0
-      },
-      {
-        "Cooldown": {
-          "TimeUse": "30"
-        }
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "23.8"
       }
-    ],
+    },
     "EditorCategories": "AbilityorEffectType:Units",
     "Effect": "PurificationNovaSet",
     "Flags": "Transient",
@@ -9351,21 +9118,18 @@
       "Flags": "ToSelection",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Charge": "Abil/PurificationNovaTargetted",
-        "Cooldown": {
+    "Cost": {
+      "Charge": "Abil/PurificationNovaTargetted",
+      "Cooldown": [
+        {
           "Link": "Abil/PurificationNovaTargetted",
           "TimeUse": "30"
-        }
-      },
-      {
-        "Cooldown": {
-          "TimeUse": "23.8"
         },
-        "index": 0
-      }
-    ],
+        {
+          "TimeUse": "23.8"
+        }
+      ]
+    },
     "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
     "Effect": "PurificationNovaTargettedInitialSet",
     "Flags": 0,
@@ -9903,19 +9667,11 @@
       "Requirements": "ReleaseInterceptors",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "20"
-        }
-      },
-      {
-        "Cooldown": {
-          "TimeUse": "40"
-        },
-        "index": 0
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "40"
       }
-    ],
+    },
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "ReleaseInterceptorsBeaconCU",
     "Flags": "AllowMovement",
@@ -9970,15 +9726,9 @@
     "Range": 5
   },
   "ResourceStun": {
-    "Cost": [
-      {
-        "Vital": 100
-      },
-      {
-        "Vital": 75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Vital": 75
+    },
     "CursorEffect": "ResourceStunDummyCastSearch",
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "ResourceStunInitialSet",
@@ -10248,15 +9998,9 @@
     "parent": "Salvage"
   },
   "SalvageBunkerRefund": {
-    "Cost": [
-      {
-        "Resource": -100
-      },
-      {
-        "Resource": -75,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Resource": -75
+    },
     "Name": "Abil/Name/SalvageBunkerRefund",
     "parent": "Refund"
   },
@@ -10490,26 +10234,17 @@
       "Requirements": "UseHunterSeekerMissiles",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Charge": "Abil/HunterSeekerMissile",
-        "Cooldown": "Abil/HunterSeekerMissile",
-        "Vital": 125
-      },
-      {
-        "Vital": 125,
-        "index": 0
-      }
-    ],
+    "Cost": {
+      "Charge": "Abil/HunterSeekerMissile",
+      "Cooldown": "Abil/HunterSeekerMissile",
+      "Vital": 125
+    },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Effect": "SeekerMissileLaunchMissile",
     "Flags": "AllowMovement",
     "InfoTooltipPriority": 1,
     "Marker": "Abil/HunterSeekerMissile",
-    "Range": [
-      10,
-      9
-    ],
+    "Range": 10,
     "TargetFilters": "Visible;Self,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"
   },
   "SelfRepair": {
@@ -10920,15 +10655,9 @@
       "DefaultButtonFace": "SpawnChangeling",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Vital": 50,
-        "index": 0
-      },
-      {
-        "Vital": 75
-      }
-    ],
+    "Cost": {
+      "Vital": 50
+    },
     "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
     "Flags": "BestUnit",
     "ProducedUnitArray": "Changeling"
@@ -11813,17 +11542,12 @@
       "Requirements": "UseStimpack",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "1"
-        },
-        "index": 0
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "1"
       },
-      {
-        "Vital": 10
-      }
-    ],
+      "Vital": 10
+    },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": "Transient",
     "InfoTooltipPriority": 1
@@ -11837,19 +11561,16 @@
       "Requirements": "UseStimpack",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Charge": "Abil/Stimpack",
-        "Cooldown": "Abil/Stimpack",
-        "Vital": 20
-      },
-      {
-        "Cooldown": {
+    "Cost": {
+      "Charge": "Abil/Stimpack",
+      "Cooldown": [
+        "Abil/Stimpack",
+        {
           "TimeUse": "1"
-        },
-        "index": 0
-      }
-    ],
+        }
+      ],
+      "Vital": 20
+    },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": "Transient",
     "InfoTooltipPriority": 1,
@@ -12184,18 +11905,12 @@
       "DefaultButtonFace": "TemporalField",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "84"
-        },
-        "Vital": 100,
-        "index": 0
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "84"
       },
-      {
-        "Vital": 75
-      }
-    ],
+      "Vital": 100
+    },
     "CursorEffect": [
       "TemporalFieldAfterBubbleSearchArea",
       "TemporalFieldSearchArea"
@@ -12663,18 +12378,12 @@
       "DefaultButtonFace": "TimeWarp",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
-          "TimeUse": "5"
-        },
-        "Vital": 0,
-        "index": 0
+    "Cost": {
+      "Cooldown": {
+        "TimeUse": "5"
       },
-      {
-        "Vital": 25
-      }
-    ],
+      "Vital": 0
+    },
     "EditorCategories": "AbilityorEffectType:Units,Race:Terran",
     "Effect": "TimeWarpCP",
     "Flags": 0,
@@ -14219,22 +13928,18 @@
       "Requirements": "UseBattlecruiserSpecializations",
       "index": "Execute"
     },
-    "Cost": [
-      {
-        "Cooldown": {
+    "Cost": {
+      "Cooldown": [
+        {
           "Link": "Yamato",
           "TimeUse": "0.8332"
         },
-        "Vital": 125
-      },
-      {
-        "Cooldown": {
+        {
           "TimeUse": "100"
-        },
-        "Vital": 0,
-        "index": 0
-      }
-    ],
+        }
+      ],
+      "Vital": 0
+    },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "Flags": [
       0,
