@@ -31,7 +31,7 @@ docker run -v "path/to/starcraft/StarCraft II:/data/sc2data:ro" -v ./src/xml:/da
 
 Then merge relevant .xml files using order
 ```
-liberty.sc2mod -> libertymulti.sc2mod -> balancemulti.sc2mod -> voidmulti.sc2mod
+liberty.sc2mod -> libertymulti.sc2mod -> swarm.sc2mod -> swarmmulti.sc2mod -> void.sc2mod -> voidmulti.sc2mod -> balancemulti.sc2mod 
 ```
 Run
 ```sh
