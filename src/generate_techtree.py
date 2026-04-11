@@ -164,7 +164,7 @@ def extract_all_morph_info(abil_data: dict) -> tuple[dict[str, str], dict[str, l
     for name, data in abil_data.items():
         if not isinstance(data, dict):
             continue
-        if not name.startswith("MorphTo"):
+        if not (name.startswith("MorphTo") or name.startswith("UpgradeTo") or name.endswith("LiftOff")):
             continue
         ms, mr = extract_morph_info(data, name)
         morphsto_map.update(ms)
@@ -302,6 +302,13 @@ def main():
             continue
         build_requirements.update(extract_build_requirements(data))
 
+    requirement_unlocks: dict[str, list[str]] = {}
+    for unit, reqs in build_requirements.items():
+        for req in reqs:
+            if req not in requirement_unlocks:
+                requirement_unlocks[req] = []
+            requirement_unlocks[req].append(unit)
+
     for name, data in unit_data.items():
         if not isinstance(data, dict):
             continue
@@ -344,10 +351,14 @@ def main():
             combined = list({*produced, *trainable})
             valid_produces = sorted({u for u in combined if isinstance(u, str) and u in valid_units})
             unlocked = building_unlocks.get(name, [])
-            unlocks = sorted({u for u in unlocked if isinstance(u, str) and u in valid_units})
+            req_unlocked = requirement_unlocks.get(name, [])
+            filtered_unlocked = [u for u in unlocked if isinstance(u, str)]
+            combined_unlocks = list({*filtered_unlocked, *req_unlocked})
+            unlocks = sorted({u for u in combined_unlocks if isinstance(u, str) and u in valid_units})
 
             abil_array = data.get("AbilArray", [])
             researches = []
+            structure_abilities = []
             valid_upgrades = set(upgrade_data.keys())
             if isinstance(abil_array, list):
                 for abil in abil_array:
@@ -361,12 +372,14 @@ def main():
                         for upgrade in researchable_upgrades[research_name]:
                             if upgrade in valid_upgrades:
                                 researches.append(upgrade)
+                    structure_abilities.append(research_name)
             elif isinstance(abil_array, dict) and abil_array.get("Link"):
                 research_name = abil_array.get("Link")
                 if research_name in researchable_upgrades:
                     for upgrade in researchable_upgrades[research_name]:
                         if upgrade in valid_upgrades:
                             researches.append(upgrade)
+                structure_abilities.append(research_name)
 
             structures[name] = {
                 "produces": valid_produces,
@@ -375,6 +388,8 @@ def main():
             }
             if researches:
                 structures[name]["researches"] = sorted(set(researches))
+            if structure_abilities:
+                structures[name]["abilities"] = sorted(set(structure_abilities))
 
         elif is_unit:
             abil_array = data.get("AbilArray", [])
@@ -446,7 +461,9 @@ def main():
             if name == "LarvaTrain" and name in trainable_units_by_ability:
                 abilities[name]["morphs"] = trainable_units_by_ability[name]
 
-            if name.startswith("MorphTo") and name in morphsto_map:
+            if (
+                name.startswith("MorphTo") or name.startswith("UpgradeTo") or name.endswith("LiftOff")
+            ) and name in morphsto_map:
                 abilities[name]["morphsto"] = morphsto_map[name]
                 abilities[name]["requires"] = morph_requires.get(name, [])
 

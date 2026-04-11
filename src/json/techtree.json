@@ -1505,6 +1505,7 @@
       "requires": []
     },
     "TerranBuildingLiftOff": {
+      "morphsto": "##unit##",
       "race": "Terran",
       "requires": []
     },
@@ -1553,30 +1554,49 @@
       "requires": []
     },
     "UpgradeToGreaterSpire": {
+      "morphsto": "GreaterSpire",
       "race": "Zerg",
-      "requires": []
+      "requires": [
+        "Hive"
+      ]
     },
     "UpgradeToHive": {
+      "morphsto": "Hive",
       "race": "Zerg",
-      "requires": []
+      "requires": [
+        "InfestationPit"
+      ]
     },
     "UpgradeToLair": {
+      "morphsto": "Lair",
       "race": "Zerg",
-      "requires": []
+      "requires": [
+        "SpawningPool"
+      ]
     },
     "UpgradeToLurkerDenMP": {
+      "morphsto": "LurkerDenMP",
       "race": "Zerg",
-      "requires": []
+      "requires": [
+        "Hive"
+      ]
     },
     "UpgradeToOrbital": {
+      "morphsto": "OrbitalCommand",
       "race": "Terran",
-      "requires": []
+      "requires": [
+        "Barracks"
+      ]
     },
     "UpgradeToPlanetaryFortress": {
+      "morphsto": "PlanetaryFortress",
       "race": "Terran",
-      "requires": []
+      "requires": [
+        "EngineeringBay"
+      ]
     },
     "UpgradeToWarpGate": {
+      "morphsto": "WarpGate",
       "race": "Protoss",
       "requires": []
     },
@@ -1748,6 +1768,12 @@
       "unlocks": []
     },
     "Armory": {
+      "abilities": [
+        "ArmoryResearch",
+        "ArmoryResearchSwarm",
+        "BuildInProgress",
+        "que5"
+      ],
       "produces": [],
       "race": "Terran",
       "researches": [
@@ -1774,21 +1800,37 @@
       ]
     },
     "Assimilator": {
+      "abilities": [
+        "BuildInProgress"
+      ],
       "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "AssimilatorRich": {
+      "abilities": [
+        "BuildInProgress"
+      ],
       "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "AutoTurret": {
+      "abilities": [
+        "BuildInProgress",
+        "attack",
+        "stop"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "BanelingNest": {
+      "abilities": [
+        "BanelingNestResearch",
+        "BuildInProgress",
+        "que5"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -1800,6 +1842,14 @@
       ]
     },
     "Barracks": {
+      "abilities": [
+        "BarracksAddOns",
+        "BarracksLiftOff",
+        "BarracksTrain",
+        "BuildInProgress",
+        "Rally",
+        "que5"
+      ],
       "produces": [
         "Ghost",
         "Marauder",
@@ -1807,53 +1857,116 @@
         "Reaper"
       ],
       "race": "Terran",
-      "unlocks": []
+      "unlocks": [
+        "Bunker",
+        "Factory",
+        "GhostAcademy"
+      ]
     },
     "BarracksFlying": {
+      "abilities": [
+        "BarracksAddOns",
+        "BarracksLand",
+        "move",
+        "stop"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "BarracksReactor": {
+      "abilities": [
+        "BuildInProgress",
+        "FactoryReactorMorph",
+        "ReactorMorph",
+        "StarportReactorMorph"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "Bunker": {
+      "abilities": [
+        "AttackRedirect",
+        "BuildInProgress",
+        "BunkerTransport",
+        "Rally",
+        "SalvageBunkerRefund",
+        "SalvageEffect",
+        "SalvageShared",
+        "StimpackMarauderRedirect",
+        "StimpackRedirect",
+        "StopRedirect"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "CommandCenter": {
+      "abilities": [
+        "BuildInProgress",
+        "CommandCenterLiftOff",
+        "CommandCenterTrain",
+        "CommandCenterTransport",
+        "RallyCommand",
+        "UpgradeToOrbital",
+        "UpgradeToPlanetaryFortress",
+        "que5CancelToSelection"
+      ],
       "produces": [
         "OrbitalCommand",
         "PlanetaryFortress",
         "SCV"
       ],
       "race": "Terran",
-      "unlocks": []
+      "unlocks": [
+        "EngineeringBay"
+      ]
     },
     "CommandCenterFlying": {
+      "abilities": [
+        "CommandCenterLand",
+        "CommandCenterTransport",
+        "move",
+        "stop"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "CreepTumor": {
+      "abilities": [
+        "BuildInProgress",
+        "BurrowCreepTumorDown"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "CreepTumorBurrowed": {
+      "abilities": [
+        "BuildInProgress",
+        "CreepTumorBuild"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "CreepTumorQueen": {
+      "abilities": [
+        "BuildInProgress",
+        "BurrowCreepTumorDown"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "CyberneticsCore": {
+      "abilities": [
+        "BuildInProgress",
+        "CyberneticsCoreResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Protoss",
       "researches": [
@@ -1869,11 +1982,22 @@
       "unlocks": [
         "Adept",
         "MothershipCore",
+        "RoboticsFacility",
         "Sentry",
-        "Stalker"
+        "ShieldBattery",
+        "Stalker",
+        "Stargate",
+        "TwilightCouncil"
       ]
     },
     "DarkShrine": {
+      "abilities": [
+        "BuildInProgress",
+        "DarkShrineResearch",
+        "attackProtossBuilding",
+        "que5",
+        "stopProtossBuilding"
+      ],
       "produces": [],
       "race": "Protoss",
       "researches": [
@@ -1885,11 +2009,20 @@
       ]
     },
     "Elsecaro_Colonist_Hut": {
+      "abilities": [
+        "HutTransport",
+        "Rally"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "EngineeringBay": {
+      "abilities": [
+        "BuildInProgress",
+        "EngineeringBayResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Terran",
       "researches": [
@@ -1903,9 +2036,17 @@
         "TerranInfantryWeaponsLevel2",
         "TerranInfantryWeaponsLevel3"
       ],
-      "unlocks": []
+      "unlocks": [
+        "MissileTurret",
+        "SensorTower"
+      ]
     },
     "EvolutionChamber": {
+      "abilities": [
+        "BuildInProgress",
+        "evolutionchamberresearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
@@ -1916,16 +2057,30 @@
       "unlocks": []
     },
     "Extractor": {
+      "abilities": [
+        "BuildInProgress"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "ExtractorRich": {
+      "abilities": [
+        "BuildInProgress"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "Factory": {
+      "abilities": [
+        "BuildInProgress",
+        "FactoryAddOns",
+        "FactoryLiftOff",
+        "FactoryTrain",
+        "Rally",
+        "que5"
+      ],
       "produces": [
         "Cyclone",
         "Hellion",
@@ -1935,19 +2090,39 @@
         "WidowMine"
       ],
       "race": "Terran",
-      "unlocks": []
+      "unlocks": [
+        "Armory",
+        "Starport"
+      ]
     },
     "FactoryFlying": {
+      "abilities": [
+        "FactoryAddOns",
+        "FactoryLand",
+        "move",
+        "stop"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "FactoryReactor": {
+      "abilities": [
+        "BarracksReactorMorph",
+        "BuildInProgress",
+        "ReactorMorph",
+        "StarportReactorMorph"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "FleetBeacon": {
+      "abilities": [
+        "BuildInProgress",
+        "FleetBeaconResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Protoss",
       "researches": [
@@ -1964,11 +2139,19 @@
       ]
     },
     "ForceField": {
+      "abilities": [
+        "Shatter"
+      ],
       "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "Forge": {
+      "abilities": [
+        "BuildInProgress",
+        "ForgeResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Protoss",
       "researches": [
@@ -1982,9 +2165,16 @@
         "ProtossShieldsLevel2",
         "ProtossShieldsLevel3"
       ],
-      "unlocks": []
+      "unlocks": [
+        "PhotonCannon"
+      ]
     },
     "FusionCore": {
+      "abilities": [
+        "BuildInProgress",
+        "FusionCoreResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Terran",
       "researches": [
@@ -1998,6 +2188,13 @@
       ]
     },
     "Gateway": {
+      "abilities": [
+        "BuildInProgress",
+        "GatewayTrain",
+        "Rally",
+        "UpgradeToWarpGate",
+        "que5"
+      ],
       "produces": [
         "Adept",
         "DarkTemplar",
@@ -2008,9 +2205,18 @@
         "Zealot"
       ],
       "race": "Protoss",
-      "unlocks": []
+      "unlocks": [
+        "CyberneticsCore"
+      ]
     },
     "GhostAcademy": {
+      "abilities": [
+        "ArmSiloWithNuke",
+        "BuildInProgress",
+        "GhostAcademyResearch",
+        "MercCompoundResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Terran",
       "researches": [
@@ -2024,6 +2230,12 @@
       ]
     },
     "GreaterSpire": {
+      "abilities": [
+        "BuildInProgress",
+        "LairResearch",
+        "SpireResearch",
+        "que5CancelToSelection"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2042,6 +2254,14 @@
       ]
     },
     "Hatchery": {
+      "abilities": [
+        "BuildInProgress",
+        "LairResearch",
+        "RallyHatchery",
+        "TrainQueen",
+        "UpgradeToLair",
+        "que5CancelToSelection"
+      ],
       "produces": [
         "Larva",
         "Queen"
@@ -2052,9 +2272,19 @@
         "overlordspeed",
         "overlordtransport"
       ],
-      "unlocks": []
+      "unlocks": [
+        "EvolutionChamber",
+        "SpawningPool"
+      ]
     },
     "Hive": {
+      "abilities": [
+        "BuildInProgress",
+        "LairResearch",
+        "RallyHatchery",
+        "TrainQueen",
+        "que5CancelToSelection"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2063,10 +2293,16 @@
         "overlordtransport"
       ],
       "unlocks": [
+        "UltraliskCavern",
         "Viper"
       ]
     },
     "HydraliskDen": {
+      "abilities": [
+        "BuildInProgress",
+        "HydraliskDenResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2077,10 +2313,16 @@
         "hydraliskspeed"
       ],
       "unlocks": [
-        "Hydralisk"
+        "Hydralisk",
+        "LurkerDenMP"
       ]
     },
     "InfestationPit": {
+      "abilities": [
+        "BuildInProgress",
+        "InfestationPitResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2105,6 +2347,14 @@
       "unlocks": []
     },
     "Lair": {
+      "abilities": [
+        "BuildInProgress",
+        "LairResearch",
+        "RallyHatchery",
+        "TrainQueen",
+        "UpgradeToHive",
+        "que5CancelToSelection"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2113,10 +2363,20 @@
         "overlordtransport"
       ],
       "unlocks": [
-        "Overseer"
+        "HydraliskDen",
+        "InfestationPit",
+        "NydusNetwork",
+        "Overseer",
+        "Spire"
       ]
     },
     "LurkerDenMP": {
+      "abilities": [
+        "BuildInProgress",
+        "HydraliskDenResearch",
+        "LurkerDenResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2132,35 +2392,86 @@
       ]
     },
     "MissileTurret": {
+      "abilities": [
+        "BuildInProgress",
+        "attack",
+        "stop"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "Nexus": {
+      "abilities": [
+        "BatteryOvercharge",
+        "BuildInProgress",
+        "ChronoBoostEnergyCost",
+        "EnergyRecharge",
+        "NexusInvulnerability",
+        "NexusMassRecall",
+        "NexusTrain",
+        "NexusTrainMothership",
+        "NexusTrainMothershipCore",
+        "RallyNexus",
+        "TimeWarp",
+        "attackProtossBuilding",
+        "que5",
+        "que5Passive",
+        "stopProtossBuilding"
+      ],
       "produces": [
         "Mothership",
         "MothershipCore",
         "Probe"
       ],
       "race": "Protoss",
-      "unlocks": []
+      "unlocks": [
+        "Forge",
+        "Gateway"
+      ]
     },
     "NydusCanal": {
+      "abilities": [
+        "BuildinProgressNydusCanal",
+        "NydusCanalTransport",
+        "NydusWormTransport",
+        "Rally",
+        "stop"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "NydusCanalAttacker": {
+      "abilities": [
+        "BuildinProgressNydusCanal",
+        "attack",
+        "move",
+        "stop"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "NydusCanalCreeper": {
+      "abilities": [
+        "BuildinProgressNydusCanal",
+        "DigesterCreepSpray",
+        "attack",
+        "stop"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "NydusNetwork": {
+      "abilities": [
+        "BuildInProgress",
+        "BuildNydusCanal",
+        "NydusCanalTransport",
+        "Rally",
+        "stop"
+      ],
       "produces": [
         "NydusCanal"
       ],
@@ -2168,51 +2479,106 @@
       "unlocks": []
     },
     "OrbitalCommand": {
+      "abilities": [
+        "BuildInProgress",
+        "CalldownMULE",
+        "CommandCenterTrain",
+        "OrbitalLiftOff",
+        "RallyCommand",
+        "ScannerSweep",
+        "SupplyDrop",
+        "que5CancelToSelection"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "OrbitalCommandFlying": {
+      "abilities": [
+        "OrbitalCommandLand",
+        "move",
+        "stop"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "PhotonCannon": {
+      "abilities": [
+        "BuildInProgress",
+        "attack",
+        "stop"
+      ],
       "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "PlanetaryFortress": {
+      "abilities": [
+        "BuildInProgress",
+        "CommandCenterTrain",
+        "CommandCenterTransport",
+        "RallyCommand",
+        "attack",
+        "que5PassiveCancelToSelection",
+        "stop"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "Pylon": {
+      "abilities": [
+        "BuildInProgress",
+        "PurifyMorphPylon"
+      ],
       "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "Reactor": {
+      "abilities": [
+        "BarracksReactorMorph",
+        "BuildInProgress",
+        "FactoryReactorMorph",
+        "StarportReactorMorph"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "Refinery": {
+      "abilities": [
+        "BuildInProgress"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "RefineryRich": {
+      "abilities": [
+        "BuildInProgress"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "RenegadeMissileTurret": {
+      "abilities": [
+        "BuildInProgress",
+        "attack",
+        "stop"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "RoachWarren": {
+      "abilities": [
+        "BuildInProgress",
+        "RoachWarrenResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2226,6 +2592,11 @@
       ]
     },
     "RoboticsBay": {
+      "abilities": [
+        "BuildInProgress",
+        "RoboticsBayResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Protoss",
       "researches": [
@@ -2240,6 +2611,13 @@
       ]
     },
     "RoboticsFacility": {
+      "abilities": [
+        "BuildInProgress",
+        "GatewayTrain",
+        "Rally",
+        "RoboticsFacilityTrain",
+        "que5"
+      ],
       "produces": [
         "Colossus",
         "Disruptor",
@@ -2251,16 +2629,31 @@
       "unlocks": []
     },
     "SensorTower": {
+      "abilities": [
+        "BuildInProgress",
+        "SalvageEffect"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "ShieldBattery": {
+      "abilities": [
+        "BuildInProgress",
+        "ShieldBatteryRechargeChanneled",
+        "ShieldBatteryRechargeEx5",
+        "stop"
+      ],
       "produces": [],
       "race": "Protoss",
       "unlocks": []
     },
     "SpawningPool": {
+      "abilities": [
+        "BuildInProgress",
+        "SpawningPoolResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2268,21 +2661,42 @@
         "zerglingmovementspeed"
       ],
       "unlocks": [
+        "BanelingNest",
         "Queen",
+        "RoachWarren",
+        "SpineCrawler",
+        "SporeCrawler",
         "Zergling"
       ]
     },
     "SpineCrawler": {
+      "abilities": [
+        "BuildInProgress",
+        "SpineCrawlerUproot",
+        "attack",
+        "stop"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "SpineCrawlerUprooted": {
+      "abilities": [
+        "SpineCrawlerRoot",
+        "move",
+        "stop"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "Spire": {
+      "abilities": [
+        "BuildInProgress",
+        "SpireResearch",
+        "UpgradeToGreaterSpire",
+        "que5CancelToSelection"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2299,16 +2713,33 @@
       ]
     },
     "SporeCrawler": {
+      "abilities": [
+        "BuildInProgress",
+        "SporeCrawlerUproot",
+        "attack",
+        "stop"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "SporeCrawlerUprooted": {
+      "abilities": [
+        "SporeCrawlerRoot",
+        "move",
+        "stop"
+      ],
       "produces": [],
       "race": "Zerg",
       "unlocks": []
     },
     "Stargate": {
+      "abilities": [
+        "BuildInProgress",
+        "Rally",
+        "StargateTrain",
+        "que5"
+      ],
       "produces": [
         "Carrier",
         "Oracle",
@@ -2317,9 +2748,19 @@
         "VoidRay"
       ],
       "race": "Protoss",
-      "unlocks": []
+      "unlocks": [
+        "FleetBeacon"
+      ]
     },
     "Starport": {
+      "abilities": [
+        "BuildInProgress",
+        "Rally",
+        "StarportAddOns",
+        "StarportLiftOff",
+        "StarportTrain",
+        "que5"
+      ],
       "produces": [
         "Banshee",
         "Battlecruiser",
@@ -2329,24 +2770,48 @@
         "VikingFighter"
       ],
       "race": "Terran",
-      "unlocks": []
+      "unlocks": [
+        "FusionCore"
+      ]
     },
     "StarportFlying": {
+      "abilities": [
+        "StarportAddOns",
+        "StarportLand",
+        "move",
+        "stop"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "StarportReactor": {
+      "abilities": [
+        "BarracksReactorMorph",
+        "BuildInProgress",
+        "FactoryReactorMorph",
+        "ReactorMorph"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "SupplyDepot": {
+      "abilities": [
+        "BuildInProgress",
+        "SupplyDepotLower"
+      ],
       "produces": [],
       "race": "Terran",
-      "unlocks": []
+      "unlocks": [
+        "Barracks"
+      ]
     },
     "SupplyDepotLowered": {
+      "abilities": [
+        "BuildInProgress",
+        "SupplyDepotRaise"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
@@ -2357,11 +2822,23 @@
       "unlocks": []
     },
     "TechLab": {
+      "abilities": [
+        "BarracksTechLabMorph",
+        "BuildInProgress",
+        "FactoryTechLabMorph",
+        "StarportTechLabMorph",
+        "que5Addon"
+      ],
       "produces": [],
       "race": "Terran",
       "unlocks": []
     },
     "TemplarArchive": {
+      "abilities": [
+        "BuildInProgress",
+        "TemplarArchivesResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Protoss",
       "researches": [
@@ -2374,6 +2851,11 @@
       ]
     },
     "TwilightCouncil": {
+      "abilities": [
+        "BuildInProgress",
+        "TwilightCouncilResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Protoss",
       "researches": [
@@ -2384,9 +2866,17 @@
         "PsionicAmplifiers",
         "SunderingImpact"
       ],
-      "unlocks": []
+      "unlocks": [
+        "DarkShrine",
+        "TemplarArchive"
+      ]
     },
     "UltraliskCavern": {
+      "abilities": [
+        "BuildInProgress",
+        "UltraliskCavernResearch",
+        "que5"
+      ],
       "produces": [],
       "race": "Zerg",
       "researches": [
@@ -2399,6 +2889,11 @@
       ]
     },
     "WarpGate": {
+      "abilities": [
+        "BuildInProgress",
+        "MorphBackToGateway",
+        "WarpGateTrain"
+      ],
       "produces": [
         "Adept",
         "DarkTemplar",
