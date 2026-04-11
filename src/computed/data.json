@@ -3163,7 +3163,6 @@
         }
       },
       "ProgressButtonArray": [
-        "Hyperjump",
         "Hyperjump"
       ],
       "Range": 500,
@@ -3491,7 +3490,6 @@
           },
           "Time": 24,
           "Unit": [
-            "Zergling",
             "Zergling"
           ],
           "index": "Train2"
@@ -3924,7 +3922,6 @@
         "IsNotNeuralParasited",
         "NotLarva",
         "NotLarvaEgg",
-        "TargetNotChangeling",
         "TargetNotChangeling",
         "TargetNotLockOn",
         "noMarkers"
@@ -5150,7 +5147,6 @@
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "EffectArray": [
         "OracleStasisTrapBuildBeamOff",
-        "OracleStasisTrapBuildBeamOff",
         "OracleStasisTrapBuildBeamOn"
       ],
       "FlagArray": [
@@ -5178,7 +5174,6 @@
     },
     "OracleWeapon": {
       "BehaviorArray": [
-        "OracleWeapon",
         "OracleWeapon"
       ],
       "CmdButtonArray": [
@@ -7259,14 +7254,9 @@
       ],
       "UninterruptibleArray": [
         "Approach",
-        "Approach",
-        "Cast",
         "Cast",
         "Channel",
-        "Channel",
         "Finish",
-        "Finish",
-        "Prep",
         "Prep"
       ],
       "name": "TimeWarp",
@@ -10198,9 +10188,7 @@
       "AbilArray": [
         "BuildInProgress",
         "DarkShrineResearch",
-        "DarkShrineResearch",
         "attackProtossBuilding",
-        "que5",
         "que5",
         "stopProtossBuilding"
       ],
@@ -11006,7 +10994,6 @@
         "Hellion",
         "HellionTank",
         "SiegeTank",
-        "SiegeTank",
         "Thor",
         "WidowMine"
       ],
@@ -11173,8 +11160,6 @@
       "SubgroupPriority": 14,
       "TechTreeUnlockedUnitArray": [
         "Carrier",
-        "Carrier",
-        "Mothership",
         "Mothership",
         "Tempest"
       ],
@@ -11697,7 +11682,6 @@
       "TechTreeProducedUnitArray": [
         "Adept",
         "DarkTemplar",
-        "HighTemplar",
         "HighTemplar",
         "Sentry",
         "Stalker",
@@ -12765,9 +12749,7 @@
         "NexusMassRecall",
         "NexusTrain",
         "NexusTrainMothership",
-        "NexusTrainMothership",
         "NexusTrainMothershipCore",
-        "RallyNexus",
         "RallyNexus",
         "TimeWarp",
         "attackProtossBuilding",
@@ -12954,7 +12936,6 @@
       "SubgroupPriority": 28,
       "TacticalAIThink": "AIThinkNexus",
       "TechTreeProducedUnitArray": [
-        "Mothership",
         "Mothership",
         "MothershipCore",
         "Probe"
@@ -15172,7 +15153,6 @@
         "Oracle",
         "Phoenix",
         "Tempest",
-        "VoidRay",
         "VoidRay"
       ],
       "TurningRate": 719.4726,
@@ -15399,11 +15379,9 @@
       "TechAliasArray": "Alias_Starport",
       "TechTreeProducedUnitArray": [
         "Banshee",
-        "Banshee",
         "Battlecruiser",
         "Liberator",
         "Medivac",
-        "Raven",
         "Raven",
         "VikingFighter"
       ],
@@ -16091,16 +16069,12 @@
       "GlossaryPriority": 20,
       "GlossaryStrongArray": [
         "Marine",
-        "Marine",
         "Stalker",
         "Zealot",
-        "Zergling",
         "Zergling"
       ],
       "GlossaryWeakArray": [
         "Marauder",
-        "Marauder",
-        "Roach",
         "Roach",
         "Stalker",
         "Zealot"
@@ -16244,16 +16218,13 @@
         "Mutalisk",
         "Zealot",
         [
-          "1",
           "1"
         ]
       ],
       "GlossaryWeakArray": [
         "Hydralisk",
         "Immortal",
-        "Immortal",
         "Thor",
-        "Ultralisk",
         "Ultralisk"
       ],
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -16603,9 +16574,7 @@
       "AbilArray": [
         "BurrowBanelingDown",
         "Explode",
-        "Explode",
         "SapStructure",
-        "VolatileBurstBuilding",
         "VolatileBurstBuilding",
         "attack",
         "move",
@@ -16748,16 +16717,12 @@
       "GlossaryStrongArray": [
         "Marine",
         "Zealot",
-        "Zealot",
-        "Zergling",
         "Zergling"
       ],
       "GlossaryWeakArray": [
         "Infestor",
         "Marauder",
         "Roach",
-        "Roach",
-        "Stalker",
         "Stalker",
         "Thor"
       ],
@@ -17751,17 +17716,14 @@
       "GlossaryPriority": 170,
       "GlossaryStrongArray": [
         "Mutalisk",
-        "Mutalisk",
         "Phoenix",
         "SiegeTank",
         "Thor"
       ],
       "GlossaryWeakArray": [
         "Corruptor",
-        "Corruptor",
         "Tempest",
         "VikingFighter",
-        "VoidRay",
         "VoidRay"
       ],
       "Height": 3.75,
@@ -17903,13 +17865,10 @@
       "GlossaryStrongArray": [
         "Marine",
         "Zealot",
-        "Zealot",
-        "Zergling",
         "Zergling"
       ],
       "GlossaryWeakArray": [
         "Corruptor",
-        "Immortal",
         "Immortal",
         "Tempest",
         "Thor",
@@ -18068,11 +18027,8 @@
       "GlossaryPriority": 140,
       "GlossaryStrongArray": [
         "Battlecruiser",
-        "Battlecruiser",
         "BroodLord",
         "Mutalisk",
-        "Mutalisk",
-        "Phoenix",
         "Phoenix",
         "Tempest"
       ],
@@ -18464,9 +18420,7 @@
       "AbilArray": [
         "BuildInProgress",
         "DarkShrineResearch",
-        "DarkShrineResearch",
         "attackProtossBuilding",
-        "que5",
         "que5",
         "stopProtossBuilding"
       ],
@@ -19811,7 +19765,6 @@
         "Hellion",
         "HellionTank",
         "SiegeTank",
-        "SiegeTank",
         "Thor",
         "WidowMine"
       ],
@@ -19957,8 +19910,6 @@
       "SubgroupPriority": 14,
       "TechTreeUnlockedUnitArray": [
         "Carrier",
-        "Carrier",
-        "Mothership",
         "Mothership",
         "Tempest"
       ],
@@ -20425,7 +20376,6 @@
       "TechTreeProducedUnitArray": [
         "Adept",
         "DarkTemplar",
-        "HighTemplar",
         "HighTemplar",
         "Sentry",
         "Stalker",
@@ -20963,7 +20913,6 @@
         "Probe",
         "SCV",
         "Zealot",
-        "Zergling",
         "Zergling"
       ],
       "GlossaryWeakArray": [
@@ -21126,10 +21075,7 @@
       ],
       "GlossaryWeakArray": [
         "Baneling",
-        "Baneling",
         "Marauder",
-        "Marauder",
-        "Stalker",
         "Stalker"
       ],
       "HotkeyAlias": "Hellion",
@@ -21304,7 +21250,6 @@
       "GlossaryPriority": 80,
       "GlossaryStrongArray": [
         "Hydralisk",
-        "Hydralisk",
         "Marine",
         "Sentry",
         "Stalker"
@@ -21312,7 +21257,6 @@
       "GlossaryWeakArray": [
         "Colossus",
         "Ghost",
-        "Roach",
         "Roach",
         "Zealot"
       ],
@@ -21631,8 +21575,6 @@
         "Banshee",
         "Battlecruiser",
         "Mutalisk",
-        "Mutalisk",
-        "VoidRay",
         "VoidRay"
       ],
       "GlossaryWeakArray": [
@@ -21641,7 +21583,6 @@
         "SiegeTank",
         "SiegeTankSieged",
         "Zealot",
-        "Zergling",
         "Zergling"
       ],
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -21795,16 +21736,12 @@
       "GlossaryStrongArray": [
         "Cyclone",
         "Roach",
-        "Roach",
         "SiegeTankSieged",
-        "Stalker",
         "Stalker"
       ],
       "GlossaryWeakArray": [
         "Marine",
         "Zealot",
-        "Zealot",
-        "Zergling",
         "Zergling"
       ],
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -22051,7 +21988,6 @@
         "Colossus",
         "Immortal",
         "Marine",
-        "Mutalisk",
         "Mutalisk",
         "VoidRay"
       ],
@@ -22699,7 +22635,6 @@
         "Roach",
         "Stalker",
         "Zealot",
-        "Zealot",
         "Zergling"
       ],
       "GlossaryWeakArray": [
@@ -23139,7 +23074,6 @@
         "AIThreatAir",
         "AIThreatGround",
         "AlwaysThreatens",
-        "AlwaysThreatens",
         "ArmySelect",
         "PreventDestroy",
         "UseLineOfSight"
@@ -23365,7 +23299,6 @@
       "AIEvalFactor": 0.8,
       "AbilArray": [
         "MassRecall",
-        "MassRecall",
         "MothershipCloak",
         "MothershipMassRecall",
         "TemporalField",
@@ -23393,11 +23326,10 @@
         "MothershipTargetFireTracker",
         [
           "1",
-          "1"
+          "2"
         ],
         [
-          "1",
-          "2"
+          "1"
         ]
       ],
       "CardLayouts": [
@@ -23860,9 +23792,7 @@
       ],
       "GlossaryWeakArray": [
         "Corruptor",
-        "Corruptor",
         "Marine",
-        "Phoenix",
         "Phoenix",
         "Thor",
         "Viper"
@@ -23997,7 +23927,6 @@
         "AIHighPrioTarget",
         "AIThreatAir",
         "AIThreatGround",
-        "ArmorDisabledWhileConstructing",
         "ArmorDisabledWhileConstructing",
         "NoPortraitTalk",
         "PenaltyRevealed",
@@ -24201,11 +24130,9 @@
         "OracleRevelation",
         "OracleStasisTrapBuild",
         "OracleWeapon",
-        "OracleWeapon",
         "ResourceStun",
         "VoidSiphon",
         "Warpable",
-        "attack",
         "attack",
         "move",
         "stop"
@@ -24679,8 +24606,6 @@
       "GlossaryWeakArray": [
         "Battlecruiser",
         "Carrier",
-        "Carrier",
-        "Corruptor",
         "Corruptor",
         "Tempest"
       ],
@@ -26007,11 +25932,8 @@
     "Raven": {
       "AbilArray": [
         "BuildAutoTurret",
-        "BuildAutoTurret",
         "PlacePointDefenseDrone",
         "RavenScramblerMissile",
-        "RavenScramblerMissile",
-        "RavenShredderMissile",
         "RavenShredderMissile",
         "SeekerMissile",
         "move",
@@ -26678,16 +26600,12 @@
         "Adept",
         "Hellion",
         "Zealot",
-        "Zealot",
-        "Zergling",
         "Zergling"
       ],
       "GlossaryWeakArray": [
         "Immortal",
-        "Immortal",
         "LurkerMP",
         "Marauder",
-        "Ultralisk",
         "Ultralisk"
       ],
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -27709,8 +27627,6 @@
         "Mutalisk",
         "VoidRay",
         "Zealot",
-        "Zealot",
-        "Zergling",
         "Zergling"
       ],
       "GlossaryWeakArray": [
@@ -27719,7 +27635,6 @@
         "Hydralisk",
         "Ravager",
         "Reaper",
-        "Stalker",
         "Stalker",
         "Thor",
         "Zergling"
@@ -28524,17 +28439,13 @@
       "GlossaryStrongArray": [
         "Corruptor",
         "Mutalisk",
-        "Mutalisk",
         "Reaper",
         "Tempest",
-        "VoidRay",
         "VoidRay"
       ],
       "GlossaryWeakArray": [
         "Immortal",
-        "Immortal",
         "Marauder",
-        "Zergling",
         "Zergling"
       ],
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -28727,7 +28638,6 @@
         "Oracle",
         "Phoenix",
         "Tempest",
-        "VoidRay",
         "VoidRay"
       ],
       "TurningRate": 719.4726,
@@ -28937,11 +28847,9 @@
       "TechAliasArray": "Alias_Starport",
       "TechTreeProducedUnitArray": [
         "Banshee",
-        "Banshee",
         "Battlecruiser",
         "Liberator",
         "Medivac",
-        "Raven",
         "Raven",
         "VikingFighter"
       ],
@@ -29087,7 +28995,6 @@
         "Baneling",
         "Banshee",
         "Colossus",
-        "Hellion",
         "Hellion",
         "Mutalisk",
         "Stalker"
@@ -29728,7 +29635,6 @@
       ],
       "BehaviorArray": [
         "Frenzy",
-        "Frenzy",
         "MassiveVoidRayVulnerability"
       ],
       "CardLayouts": [
@@ -29829,19 +29735,15 @@
       "GlossaryStrongArray": [
         "Marauder",
         "Marine",
-        "Marine",
         "Roach",
         "Stalker",
         "Zealot",
-        "Zealot",
-        "Zergling",
         "Zergling"
       ],
       "GlossaryWeakArray": [
         "Banshee",
         "BroodLord",
         "Ghost",
-        "Immortal",
         "Immortal",
         "Marauder",
         "Mutalisk",
@@ -30152,8 +30054,6 @@
         "Hydralisk",
         "Marine",
         "Mutalisk",
-        "Mutalisk",
-        "Phoenix",
         "Phoenix",
         "VikingFighter"
       ],
@@ -30755,13 +30655,11 @@
       "GlossaryStrongArray": [
         "Hydralisk",
         "Immortal",
-        "Immortal",
         "Marauder",
         "Zergling"
       ],
       "GlossaryWeakArray": [
         "Baneling",
-        "Colossus",
         "Colossus",
         "Hellion",
         "HellionTank",
@@ -31076,14 +30974,11 @@
       "GlossaryPriority": 50,
       "GlossaryStrongArray": [
         "Hydralisk",
-        "Hydralisk",
         "Marauder",
-        "Stalker",
         "Stalker"
       ],
       "GlossaryWeakArray": [
         "Archon",
-        "Baneling",
         "Baneling",
         "Colossus",
         "Hellion",
@@ -33816,7 +33711,6 @@
         "BarracksTechLab",
         "Bunker",
         "BypassArmorDrone",
-        "BypassArmorDrone",
         "CommandCenter",
         "CommandCenterFlying",
         "EngineeringBay",
@@ -33830,7 +33724,6 @@
         "OrbitalCommand",
         "OrbitalCommandFlying",
         "PlanetaryFortress",
-        "PointDefenseDrone",
         "PointDefenseDrone",
         "RavenRepairDrone",
         "Reactor",
@@ -34128,7 +34021,6 @@
         "BarracksTechLab",
         "Bunker",
         "BypassArmorDrone",
-        "BypassArmorDrone",
         "CommandCenter",
         "CommandCenterFlying",
         "EngineeringBay",
@@ -34142,7 +34034,6 @@
         "OrbitalCommand",
         "OrbitalCommandFlying",
         "PlanetaryFortress",
-        "PointDefenseDrone",
         "PointDefenseDrone",
         "RavenRepairDrone",
         "Reactor",

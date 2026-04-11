@@ -4866,7 +4866,6 @@
       }
     },
     "ProgressButtonArray": [
-      "Hyperjump",
       "Hyperjump"
     ],
     "Range": 500,
@@ -5249,7 +5248,6 @@
         },
         "Time": 24,
         "Unit": [
-          "Zergling",
           "Zergling"
         ],
         "index": "Train2"
@@ -5763,7 +5761,6 @@
       "NotLarva",
       "NotLarvaEgg",
       "TargetNotChangeling",
-      "TargetNotChangeling",
       "TargetNotLockOn",
       "noMarkers"
     ],
@@ -6123,7 +6120,6 @@
     },
     "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
     "FlagArray": [
-      "BypassResourceQueue",
       "BypassResourceQueue"
     ],
     "Range": 0.5,
@@ -8238,7 +8234,6 @@
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "EffectArray": [
       "OracleStasisTrapBuildBeamOff",
-      "OracleStasisTrapBuildBeamOff",
       "OracleStasisTrapBuildBeamOn"
     ],
     "FlagArray": [
@@ -8260,7 +8255,6 @@
   },
   "OracleWeapon": {
     "BehaviorArray": [
-      "OracleWeapon",
       "OracleWeapon"
     ],
     "CmdButtonArray": [
@@ -10702,7 +10696,6 @@
         "AutoCastOn"
       ],
       "Unit": [
-        "LocustMP",
         "LocustMP"
       ],
       "index": "Train1"
@@ -12398,14 +12391,9 @@
     ],
     "UninterruptibleArray": [
       "Approach",
-      "Approach",
-      "Cast",
       "Cast",
       "Channel",
-      "Channel",
       "Finish",
-      "Finish",
-      "Prep",
       "Prep"
     ]
   },

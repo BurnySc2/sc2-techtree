@@ -6815,8 +6815,6 @@
     "PeriodCount": 2,
     "PeriodicEffectArray": [
       "IonCannonsLMLeft",
-      "IonCannonsLMLeft",
-      "IonCannonsLMRight",
       "IonCannonsLMRight"
     ],
     "PeriodicPeriodArray": [
@@ -7159,7 +7157,6 @@
     "EditorCategories": "Race:Terran",
     "PeriodCount": 2,
     "PeriodicEffectArray": [
-      "LanzerTorpedoesLM",
       "LanzerTorpedoesLM"
     ],
     "PeriodicPeriodArray": [
@@ -7301,7 +7298,6 @@
     ],
     "PeriodCount": 2,
     "PeriodicEffectArray": [
-      "LiberatorDamageMissileLM",
       "LiberatorDamageMissileLM"
     ],
     "PeriodicPeriodArray": 0.05,
@@ -8159,7 +8155,6 @@
     "SearchFlags": "CallForHelp",
     "ValidatorArray": [
       "CliffLevelGE1",
-      "WeaponInRange",
       "WeaponInRange"
     ]
   },
@@ -12743,7 +12738,6 @@
       "OracleRevelationApplyBehavior",
       "OracleRevelationApplyControllerBehavior",
       "OracleRevelationDummyDamage",
-      "OracleRevelationDummyDamage",
       "RevelationPersistent"
     ]
   },
@@ -14286,7 +14280,6 @@
   "ThermalBeamSet": {
     "EditorCategories": "",
     "EffectArray": [
-      "ThermalBeamDamage",
       "ThermalBeamDamage"
     ]
   },
@@ -14439,7 +14432,6 @@
     "Flags": "Channeled",
     "PeriodCount": 2,
     "PeriodicEffectArray": [
-      "ThermalLancesFriendlyDamage",
       "ThermalLancesFriendlyDamage"
     ],
     "PeriodicPeriodArray": [
@@ -14459,7 +14451,6 @@
     "Flags": "Channeled",
     "PeriodCount": 2,
     "PeriodicEffectArray": [
-      "ThermalLancesFriendlyDamageAir",
       "ThermalLancesFriendlyDamageAir"
     ],
     "PeriodicPeriodArray": [
@@ -14504,7 +14495,6 @@
       "MultipleHitGroundOnlyAttackTargetFilter",
       "NotHidden",
       "ThermalLancesCliffLevel",
-      "noMarkers",
       "noMarkers"
     ],
     "Visibility": "Visible",
@@ -14600,7 +14590,6 @@
     "Flags": "Channeled",
     "PeriodCount": 2,
     "PeriodicEffectArray": [
-      "ThorsHammerDamage",
       "ThorsHammerDamage"
     ],
     "PeriodicPeriodArray": [

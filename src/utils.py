@@ -5,7 +5,10 @@ def _recursive_sort(obj):
     if isinstance(obj, dict):
         return {k: _recursive_sort(v) for k, v in sorted(obj.items())}
     elif isinstance(obj, list):
-        return sorted([_recursive_sort(item) for item in obj], key=str)
+        items = [_recursive_sort(item) for item in obj]
+        if items and all(isinstance(item, str) for item in items):
+            items = list(dict.fromkeys(items))
+        return sorted(items, key=str)
     return obj
 
 

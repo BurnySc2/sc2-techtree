@@ -267,16 +267,12 @@
     "GlossaryPriority": 20,
     "GlossaryStrongArray": [
       "Marine",
-      "Marine",
       "Stalker",
       "Zealot",
-      "Zergling",
       "Zergling"
     ],
     "GlossaryWeakArray": [
       "Marauder",
-      "Marauder",
-      "Roach",
       "Roach",
       "Stalker",
       "Zealot"
@@ -1430,16 +1426,13 @@
       "Mutalisk",
       "Zealot",
       [
-        "1",
         "1"
       ]
     ],
     "GlossaryWeakArray": [
       "Hydralisk",
       "Immortal",
-      "Immortal",
       "Thor",
-      "Ultralisk",
       "Ultralisk"
     ],
     "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -2358,9 +2351,7 @@
     "AbilArray": [
       "BurrowBanelingDown",
       "Explode",
-      "Explode",
       "SapStructure",
-      "VolatileBurstBuilding",
       "VolatileBurstBuilding",
       "attack",
       "move",
@@ -2503,16 +2494,12 @@
     "GlossaryStrongArray": [
       "Marine",
       "Zealot",
-      "Zealot",
-      "Zergling",
       "Zergling"
     ],
     "GlossaryWeakArray": [
       "Infestor",
       "Marauder",
       "Roach",
-      "Roach",
-      "Stalker",
       "Stalker",
       "Thor"
     ],
@@ -4080,7 +4067,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "UseLineOfSight"
     ],
@@ -4119,7 +4105,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
@@ -4247,10 +4232,8 @@
     ],
     "GlossaryWeakArray": [
       "Corruptor",
-      "Corruptor",
       "Tempest",
       "VikingFighter",
-      "VoidRay",
       "VoidRay"
     ],
     "Height": 3.75,
@@ -4958,17 +4941,14 @@
     "GlossaryPriority": 170,
     "GlossaryStrongArray": [
       "Mutalisk",
-      "Mutalisk",
       "Phoenix",
       "SiegeTank",
       "Thor"
     ],
     "GlossaryWeakArray": [
       "Corruptor",
-      "Corruptor",
       "Tempest",
       "VikingFighter",
-      "VoidRay",
       "VoidRay"
     ],
     "Height": 3.75,
@@ -5204,11 +5184,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "GlossaryWeakArray": [
@@ -5218,11 +5197,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "HotkeyAlias": "Changeling",
@@ -5297,11 +5275,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "GlossaryWeakArray": [
@@ -5311,11 +5288,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "HotkeyAlias": "Changeling",
@@ -5404,11 +5380,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "GlossaryWeakArray": [
@@ -5418,11 +5393,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "HotkeyAlias": "Changeling",
@@ -5511,11 +5485,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "GlossaryWeakArray": [
@@ -5525,11 +5498,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "HotkeyAlias": "Changeling",
@@ -5618,11 +5590,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "GlossaryWeakArray": [
@@ -5632,11 +5603,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "HotkeyAlias": "Changeling",
@@ -5697,7 +5667,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -5743,7 +5712,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
@@ -5840,7 +5808,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
       "Untooltipable",
@@ -5885,7 +5852,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -5924,7 +5890,6 @@
     ],
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
@@ -5966,7 +5931,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -6007,7 +5971,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -6047,7 +6010,6 @@
     ],
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
@@ -6097,7 +6059,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
@@ -6364,7 +6325,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
       "Untooltipable",
@@ -6416,7 +6376,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
@@ -6470,7 +6429,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
       "Untooltipable",
@@ -6522,7 +6480,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
@@ -6576,7 +6533,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
       "Untooltipable",
@@ -6620,7 +6576,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
@@ -6669,7 +6624,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
@@ -6852,7 +6806,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
       "Untooltipable",
@@ -6903,7 +6856,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Unhighlightable",
@@ -7021,13 +6973,10 @@
     "GlossaryStrongArray": [
       "Marine",
       "Zealot",
-      "Zealot",
-      "Zergling",
       "Zergling"
     ],
     "GlossaryWeakArray": [
       "Corruptor",
-      "Immortal",
       "Immortal",
       "Tempest",
       "Thor",
@@ -7731,11 +7680,8 @@
     "GlossaryPriority": 140,
     "GlossaryStrongArray": [
       "Battlecruiser",
-      "Battlecruiser",
       "BroodLord",
       "Mutalisk",
-      "Mutalisk",
-      "Phoenix",
       "Phoenix",
       "Tempest"
     ],
@@ -8759,9 +8705,7 @@
     "AbilArray": [
       "BuildInProgress",
       "DarkShrineResearch",
-      "DarkShrineResearch",
       "attackProtossBuilding",
-      "que5",
       "que5",
       "stopProtossBuilding"
     ],
@@ -9091,7 +9035,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -9130,7 +9073,6 @@
     ],
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
@@ -9618,7 +9560,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Turnable",
       "Untooltipable",
@@ -9659,7 +9600,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Turnable",
       "Untooltipable",
@@ -9698,7 +9638,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Turnable",
@@ -9740,7 +9679,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Turnable",
       "Untooltipable",
@@ -9780,7 +9718,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -9819,7 +9756,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -9857,7 +9793,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Turnable",
@@ -9898,7 +9833,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Turnable",
       "Untooltipable",
@@ -9936,7 +9870,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
@@ -9976,7 +9909,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -10014,7 +9946,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Turnable",
@@ -10054,7 +9985,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Turnable",
@@ -10099,7 +10029,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -10137,7 +10066,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Turnable"
     ],
@@ -10174,7 +10102,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Turnable"
@@ -10302,7 +10229,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Turnable",
       "Untooltipable",
@@ -10341,7 +10267,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Turnable",
@@ -10382,7 +10307,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Turnable",
       "Untooltipable",
@@ -10421,7 +10345,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Turnable",
@@ -10462,7 +10385,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Turnable",
       "Untooltipable",
@@ -10500,7 +10422,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Turnable",
@@ -10541,7 +10462,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Turnable",
       "Untooltipable",
@@ -10579,7 +10499,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Turnable",
@@ -10619,7 +10538,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -10657,7 +10575,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
@@ -10697,7 +10614,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "UseLineOfSight"
@@ -11276,7 +11192,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
@@ -13747,7 +13662,6 @@
       "Hellion",
       "HellionTank",
       "SiegeTank",
-      "SiegeTank",
       "Thor",
       "WidowMine"
     ],
@@ -14215,8 +14129,6 @@
     "SubgroupPriority": 14,
     "TechTreeUnlockedUnitArray": [
       "Carrier",
-      "Carrier",
-      "Mothership",
       "Mothership",
       "Tempest"
     ],
@@ -14820,7 +14732,6 @@
       "Adept",
       "DarkTemplar",
       "HighTemplar",
-      "HighTemplar",
       "Sentry",
       "Stalker",
       "WarpGate",
@@ -15259,11 +15170,9 @@
   "GhostAlternate": {
     "AbilArray": [
       "ChannelSnipe",
-      "MorphToGhostNova",
       "MorphToGhostNova"
     ],
     "EffectArray": [
-      "MorphToGhostNova",
       "MorphToGhostNova"
     ],
     "GlossaryCategory": "",
@@ -16247,7 +16156,6 @@
       "Probe",
       "SCV",
       "Zealot",
-      "Zergling",
       "Zergling"
     ],
     "GlossaryWeakArray": [
@@ -16407,10 +16315,7 @@
     ],
     "GlossaryWeakArray": [
       "Baneling",
-      "Baneling",
       "Marauder",
-      "Marauder",
-      "Stalker",
       "Stalker"
     ],
     "HotkeyAlias": "Hellion",
@@ -16598,7 +16503,6 @@
     "GlossaryPriority": 80,
     "GlossaryStrongArray": [
       "Hydralisk",
-      "Hydralisk",
       "Marine",
       "Sentry",
       "Stalker"
@@ -16606,7 +16510,6 @@
     "GlossaryWeakArray": [
       "Colossus",
       "Ghost",
-      "Roach",
       "Roach",
       "Zealot"
     ],
@@ -17118,8 +17021,6 @@
       "Banshee",
       "Battlecruiser",
       "Mutalisk",
-      "Mutalisk",
-      "VoidRay",
       "VoidRay"
     ],
     "GlossaryWeakArray": [
@@ -17128,7 +17029,6 @@
       "SiegeTank",
       "SiegeTankSieged",
       "Zealot",
-      "Zergling",
       "Zergling"
     ],
     "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -17724,16 +17624,12 @@
     "GlossaryStrongArray": [
       "Cyclone",
       "Roach",
-      "Roach",
       "SiegeTankSieged",
-      "Stalker",
       "Stalker"
     ],
     "GlossaryWeakArray": [
       "Marine",
       "Zealot",
-      "Zealot",
-      "Zergling",
       "Zergling"
     ],
     "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -18247,7 +18143,6 @@
       "Colossus",
       "Immortal",
       "Marine",
-      "Mutalisk",
       "Mutalisk",
       "VoidRay"
     ],
@@ -19143,7 +19038,6 @@
     "FlagArray": [
       "AILifetime",
       "ArmySelect",
-      "Uncommandable",
       "Uncommandable",
       "Unselectable",
       "Untargetable",
@@ -20501,7 +20395,6 @@
       "Roach",
       "Stalker",
       "Zealot",
-      "Zealot",
       "Zergling"
     ],
     "GlossaryWeakArray": [
@@ -21455,7 +21348,6 @@
       "AIThreatAir",
       "AIThreatGround",
       "AlwaysThreatens",
-      "AlwaysThreatens",
       "ArmySelect",
       "PreventDestroy",
       "UseLineOfSight"
@@ -21954,7 +21846,6 @@
     "AIEvalFactor": 0.8,
     "AbilArray": [
       "MassRecall",
-      "MassRecall",
       "MothershipCloak",
       "MothershipMassRecall",
       "TemporalField",
@@ -21982,11 +21873,10 @@
       "MothershipTargetFireTracker",
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "CardLayouts": [
@@ -22468,9 +22358,7 @@
     ],
     "GlossaryWeakArray": [
       "Corruptor",
-      "Corruptor",
       "Marine",
-      "Phoenix",
       "Phoenix",
       "Thor",
       "Viper"
@@ -22542,9 +22430,7 @@
       "NexusMassRecall",
       "NexusTrain",
       "NexusTrainMothership",
-      "NexusTrainMothership",
       "NexusTrainMothershipCore",
-      "RallyNexus",
       "RallyNexus",
       "TimeWarp",
       "attackProtossBuilding",
@@ -22732,7 +22618,6 @@
     "TacticalAIThink": "AIThinkNexus",
     "TechTreeProducedUnitArray": [
       "Mothership",
-      "Mothership",
       "MothershipCore",
       "Probe"
     ],
@@ -22873,7 +22758,6 @@
       "AIHighPrioTarget",
       "AIThreatAir",
       "AIThreatGround",
-      "ArmorDisabledWhileConstructing",
       "ArmorDisabledWhileConstructing",
       "NoPortraitTalk",
       "PenaltyRevealed",
@@ -23505,11 +23389,9 @@
       "OracleRevelation",
       "OracleStasisTrapBuild",
       "OracleWeapon",
-      "OracleWeapon",
       "ResourceStun",
       "VoidSiphon",
       "Warpable",
-      "attack",
       "attack",
       "move",
       "stop"
@@ -24850,11 +24732,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "GlossaryWeakArray": [
@@ -24864,11 +24745,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "Height": 5,
@@ -25151,8 +25031,6 @@
     "GlossaryWeakArray": [
       "Battlecruiser",
       "Carrier",
-      "Carrier",
-      "Corruptor",
       "Corruptor",
       "Tempest"
     ],
@@ -28090,7 +27968,6 @@
       "AIThreatAir",
       "AIThreatGround",
       "ArmySelect",
-      "ArmySelect",
       "Buried",
       "Cloaked",
       "PreventDestroy",
@@ -28906,11 +28783,8 @@
   "Raven": {
     "AbilArray": [
       "BuildAutoTurret",
-      "BuildAutoTurret",
       "PlacePointDefenseDrone",
       "RavenScramblerMissile",
-      "RavenScramblerMissile",
-      "RavenShredderMissile",
       "RavenShredderMissile",
       "SeekerMissile",
       "move",
@@ -30648,16 +30522,12 @@
       "Adept",
       "Hellion",
       "Zealot",
-      "Zealot",
-      "Zergling",
       "Zergling"
     ],
     "GlossaryWeakArray": [
       "Immortal",
-      "Immortal",
       "LurkerMP",
       "Marauder",
-      "Ultralisk",
       "Ultralisk"
     ],
     "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -32537,8 +32407,6 @@
       "Mutalisk",
       "VoidRay",
       "Zealot",
-      "Zealot",
-      "Zergling",
       "Zergling"
     ],
     "GlossaryWeakArray": [
@@ -32547,7 +32415,6 @@
       "Hydralisk",
       "Ravager",
       "Reaper",
-      "Stalker",
       "Stalker",
       "Thor",
       "Zergling"
@@ -34765,17 +34632,13 @@
     "GlossaryStrongArray": [
       "Corruptor",
       "Mutalisk",
-      "Mutalisk",
       "Reaper",
       "Tempest",
-      "VoidRay",
       "VoidRay"
     ],
     "GlossaryWeakArray": [
       "Immortal",
-      "Immortal",
       "Marauder",
-      "Zergling",
       "Zergling"
     ],
     "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -34978,7 +34841,6 @@
       "Oracle",
       "Phoenix",
       "Tempest",
-      "VoidRay",
       "VoidRay"
     ],
     "TurningRate": 719.4726
@@ -35187,11 +35049,9 @@
     "TechAliasArray": "Alias_Starport",
     "TechTreeProducedUnitArray": [
       "Banshee",
-      "Banshee",
       "Battlecruiser",
       "Liberator",
       "Medivac",
-      "Raven",
       "Raven",
       "VikingFighter"
     ],
@@ -35769,8 +35629,6 @@
     "AIEvaluateAlias": "SwarmHostMP",
     "AbilArray": [
       "",
-      "",
-      "",
       "MorphToSwarmHostMP",
       "Rally",
       "SpawnLocustsTargeted",
@@ -35791,7 +35649,6 @@
         "1"
       ],
       [
-        "1",
         "1"
       ]
     ],
@@ -35927,7 +35784,6 @@
       "Buried",
       "Cloaked",
       "PreventDestroy",
-      "Turnable",
       "Turnable",
       "UseLineOfSight"
     ],
@@ -36097,7 +35953,6 @@
       "Baneling",
       "Banshee",
       "Colossus",
-      "Hellion",
       "Hellion",
       "Mutalisk",
       "Stalker"
@@ -37175,8 +37030,6 @@
     "TurningRate": 360,
     "WeaponArray": [
       "LanceMissileLaunchers",
-      "LanceMissileLaunchers",
-      "ThorsHammer",
       "ThorsHammer"
     ]
   },
@@ -37569,7 +37422,6 @@
     ],
     "BehaviorArray": [
       "Frenzy",
-      "Frenzy",
       "MassiveVoidRayVulnerability"
     ],
     "CardLayouts": [
@@ -37670,19 +37522,15 @@
     "GlossaryStrongArray": [
       "Marauder",
       "Marine",
-      "Marine",
       "Roach",
       "Stalker",
       "Zealot",
-      "Zealot",
-      "Zergling",
       "Zergling"
     ],
     "GlossaryWeakArray": [
       "Banshee",
       "BroodLord",
       "Ghost",
-      "Immortal",
       "Immortal",
       "Marauder",
       "Mutalisk",
@@ -37743,7 +37591,6 @@
       "Massive"
     ],
     "BehaviorArray": [
-      "Frenzy",
       "Frenzy",
       "MassiveVoidRayVulnerability"
     ],
@@ -37974,7 +37821,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -38055,7 +37901,6 @@
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
       "Destructible",
-      "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
       "UseLineOfSight"
@@ -38135,7 +37980,6 @@
     "FlagArray": [
       "ArmorDisabledWhileConstructing",
       "CreateVisible",
-      "Destructible",
       "Destructible",
       "NoPortraitTalk",
       "Untooltipable",
@@ -38437,11 +38281,10 @@
       ],
       [
         "1",
-        "1"
+        "2"
       ],
       [
-        "1",
-        "2"
+        "1"
       ]
     ],
     "HotkeyAlias": "VikingFighter",
@@ -38749,7 +38592,6 @@
     "GlossaryPriority": 80,
     "GlossaryStrongArray": [
       "Colossus",
-      "Colossus",
       "Hydralisk",
       "Mutalisk",
       "SiegeTank",
@@ -39003,8 +38845,6 @@
       "Hydralisk",
       "Marine",
       "Mutalisk",
-      "Mutalisk",
-      "Phoenix",
       "Phoenix",
       "VikingFighter"
     ],
@@ -41416,13 +41256,11 @@
     "GlossaryStrongArray": [
       "Hydralisk",
       "Immortal",
-      "Immortal",
       "Marauder",
       "Zergling"
     ],
     "GlossaryWeakArray": [
       "Baneling",
-      "Colossus",
       "Colossus",
       "Hellion",
       "HellionTank",
@@ -41804,14 +41642,11 @@
     "GlossaryPriority": 50,
     "GlossaryStrongArray": [
       "Hydralisk",
-      "Hydralisk",
       "Marauder",
-      "Stalker",
       "Stalker"
     ],
     "GlossaryWeakArray": [
       "Archon",
-      "Baneling",
       "Baneling",
       "Colossus",
       "Hellion",
