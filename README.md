@@ -35,22 +35,31 @@ liberty.sc2mod -> libertymulti.sc2mod -> balancemulti.sc2mod -> voidmulti.sc2mod
 ```
 Run
 ```sh
+# Creates src/merged/*Data.xml
 uv run src/merge_xml.py --all
 ```
 
-Finally we can convert the data from .xml to .json with
+Now we can convert the data from .xml to .json with
 ```sh
+# Creates src/json/*Data.json
 uv run src/convert_xml_to_json.py
 ```
 
-From here we can generate the techtree
+From here we can generate the techtree (all units, all abilities)
 ```sh
+# Creates src/json/techtree.json
 uv run src/generate_techtree.py
 ```
 
+A smaller version of the techtree (with only real units and hardcoded suppressions) can be generated with
+```sh
+# Creates src/computed/data.json
+uv run src/reconstruct_data.py
+``` 
+
 All in one:
 ```sh
-uv run src/merge_xml.py --all && uv run src/convert_xml_to_json.py && uv run src/generate_techtree.py 
+uv run src/merge_xml.py --all && uv run src/convert_xml_to_json.py && uv run src/generate_techtree.py && uv run src/reconstruct_data.py 
 ```
 
 Resulting files should be:
