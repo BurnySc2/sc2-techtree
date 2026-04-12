@@ -78,11 +78,19 @@ def gather_data():
                     visited_abilities.add(ability_name)
                     ability_info = abilities_section.get(ability_name, {})
                     morphsto = ability_info.get("morphsto")
-                    if morphsto and morphsto not in visited_structures:
-                        if morphsto in structures_section:
-                            queue.append(("structure", morphsto))
-                        elif morphsto in units_section:
-                            queue.append(("unit", morphsto))
+                    if morphsto:
+                        if isinstance(morphsto, list):
+                            for m in morphsto:
+                                if m and m not in visited_structures:
+                                    if m in structures_section:
+                                        queue.append(("structure", m))
+                                    elif m in units_section:
+                                        queue.append(("unit", m))
+                        elif morphsto not in visited_structures:
+                            if morphsto in structures_section:
+                                queue.append(("structure", morphsto))
+                            elif morphsto in units_section:
+                                queue.append(("unit", morphsto))
 
             # Add structures this unit can build
             builds = unit_info.get("builds", [])

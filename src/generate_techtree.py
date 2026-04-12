@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
+"""
+Generate StarCraft 2 techtree.json from converted JSON data files.
+
+Usage: uv run generate_techtree.py
+"""
+
 import json
-import re
 from pathlib import Path
+from typing import Any
 
-from utils import dump_json
-
-DATA_DIR = Path(__file__).parent / "json"
-OUTPUT_FILE = Path(__file__).parent / "json/techtree.json"
+from utils import dumps_json
 
 RACE_MAP = {
     "Terr": "Terran",
@@ -14,478 +17,355 @@ RACE_MAP = {
     "Prot": "Protoss",
 }
 
+# Mapping of units to their correct requirements when game data is inconsistent
+UNIT_REQUIREMENT_FIXES = {
+    "Roach": ["RoachWarren"],
+}
+
 
 def load_json(filename: str) -> dict:
-    with (DATA_DIR / filename).open() as f:
+    """Load a JSON data file."""
+    path = Path(__file__).parent / "json" / filename
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 
-def parse_race(categories: str, race_field: str | None = None) -> str | None:
-    if race_field and race_field in RACE_MAP:
-        return RACE_MAP[race_field]
-    if race_field and race_field in RACE_MAP.values():
-        return race_field
-    if not categories:
-        return None
-    for part in categories.split(","):
-        if part.startswith("Race:"):
-            return RACE_MAP.get(part.split(":")[1], part.split(":")[1])
-    return None
+def parse_requirement(req: str) -> list[str]:
+    """Parse a requirement string into structure names.
 
+    Examples:
+        'HaveBarracks' -> ['Barracks']
+        'HaveArmoryAndAttachedTechLab' -> ['Armory', 'AttachedTechLab']
+    """
+    if not req:
+        return []
 
-def extract_unit_build_ability(abil_array: list) -> str | None:
-    """Extract build ability name from unit's AbilArray."""
-    if not abil_array:
-        return None
-    for abil in abil_array:
-        if not abil:
-            continue
-        name = abil if isinstance(abil, str) else abil.get("Link")
-        if not name:
-            continue
-        if name.endswith("Build") or name.endswith("AddOns"):
-            return name
-    return None
-
-
-def extract_train_building(abil_array: list) -> str | None:
-    if not abil_array:
-        return None
-    for abil in abil_array:
-        if not abil:
-            continue
-        name = abil if isinstance(abil, str) else abil.get("Link")
-        if not name:
-            continue
-        if name.endswith("Train"):
-            return name.replace("Train", "")
-        if name.endswith("TrainLarge"):
-            return name.replace("TrainLarge", "")
-        if name.endswith("TrainMorph"):
-            return name.replace("TrainMorph", "")
-    return None
-
-
-def is_techlab_unit(unit_data: dict) -> bool:
-    tech_alias = unit_data.get("TechAliasArray")
-    if isinstance(tech_alias, list):
-        return any("TechLab" in alias for alias in tech_alias)
-    return isinstance(tech_alias, str) and "TechLab" in tech_alias
-
-
-def extract_build_requirements(abil_data: dict) -> dict[str, list[str]]:
-    """Extract unit -> requirement mappings from AbilData.InfoArray."""
-    result = {}
-    info_array = abil_data.get("InfoArray", [])
-    if not isinstance(info_array, list):
-        return result
-    for item in info_array:
-        if not isinstance(item, dict):
-            continue
-        button = item.get("Button", {})
-        if not isinstance(button, dict):
-            continue
-        unit = item.get("Unit")
-        if not unit or not isinstance(unit, str):
-            continue
-        requirements = button.get("Requirements", "")
-        if requirements and isinstance(requirements, str):
-            match = re.match(r"Have(\w+)", requirements)
-            if match:
-                reqs = []
-                for part in match.group(1).split("And"):
-                    if part.startswith("Attached") and part.endswith("TechLab"):
-                        part = "AttachedTechLab"
-                    reqs.append(part)
-                result[unit] = reqs
+    parts = req.split('And')
+    result = []
+    for part in parts:
+        if part.startswith('Have'):
+            result.append(part[4:])  # Remove 'Have' prefix
+        else:
+            result.append(part)
     return result
 
 
-def extract_morph_info(abil_data: dict, ability_name: str) -> tuple[dict[str, str], dict[str, list[str]]]:
-    """Extract morph ability -> primary target unit and requirements from CmdButtonArray.
-    Returns (morphsto_map, requires_map) for MorphTo* abilities."""
-    morphsto_map: dict[str, str] = {}
-    requires_map: dict[str, list[str]] = {}
-
-    cmd_button_array = abil_data.get("CmdButtonArray", [])
-    if isinstance(cmd_button_array, dict):
-        cmd_button_array = [cmd_button_array]
-
-    # Get requirement from Execute button
-    ability_requires: list[str] = []
-    for button in cmd_button_array:
-        if not isinstance(button, dict):
-            continue
-        index = button.get("index", "")
-        if index != "Execute":
-            continue
-        requirements = button.get("Requirements", "")
-        if requirements and isinstance(requirements, str):
-            match = re.match(r"Have(\w+)", requirements)
-            if match:
-                for part in match.group(1).split("And"):
-                    if part.startswith("Attached") and part.endswith("TechLab"):
-                        part = "AttachedTechLab"
-                    ability_requires.append(part)
-
-    # Find primary morph target (unit with Score=1, skip intermediate cocoons/eggs)
-    info_array = abil_data.get("InfoArray", [])
-    # Handle InfoArray being either a dict or list
-    if isinstance(info_array, dict):
-        info_array = [info_array] if info_array else []
-    primary_unit = None
-    if isinstance(info_array, list):
-        # First pass: find unit with Score=1 (the actual morph result)
-        for item in info_array:
-            if isinstance(item, dict):
-                unit = item.get("Unit", "")
-                score = item.get("Score")
-                if unit and isinstance(unit, str) and score == 1:
-                    primary_unit = unit
-                    break
-        # Second pass: if no Score=1, take first non-egg, non-cocoon unit
-        if not primary_unit:
-            for item in info_array:
-                if isinstance(item, dict):
-                    unit = item.get("Unit", "")
-                    if unit and isinstance(unit, str) and not unit.endswith("Cocoon") and not unit.endswith("Egg"):
-                        primary_unit = unit
-                        break
-    if primary_unit:
-        morphsto_map[ability_name] = primary_unit
-        requires_map[ability_name] = ability_requires
-    return morphsto_map, requires_map
-
-
-def extract_all_morph_info(abil_data: dict) -> tuple[dict[str, str], dict[str, list[str]]]:
-    """Extract all MorphTo* abilities' morph target and requirements."""
-    morphsto_map: dict[str, str] = {}
-    morph_requires: dict[str, list[str]] = {}
-    for name, data in abil_data.items():
-        if not isinstance(data, dict):
-            continue
-        if not (name.startswith("MorphTo") or name.startswith("UpgradeTo") or name.endswith("LiftOff")):
-            continue
-        ms, mr = extract_morph_info(data, name)
-        morphsto_map.update(ms)
-        morph_requires.update(mr)
-    return morphsto_map, morph_requires
-
-
-def extract_buildable_units(abil_data: dict, valid_units: set[str]) -> dict[str, list[str]]:
-    """Extract build ability -> list of buildable units from *Build and *AddOns abilities in AbilData.
-    Only includes units that exist in valid_units (i.e., have a UnitData.json entry)."""
-    result = {}
-    for name, data in abil_data.items():
-        if not isinstance(data, dict):
-            continue
-        if not (name.endswith("Build") or name.endswith("AddOns")):
-            continue
-        info_array = data.get("InfoArray", [])
-        if isinstance(info_array, dict):
-            info_array = [info_array] if info_array else []
-        buildables = []
-        for item in info_array:
+def get_info_units(info: Any) -> list[str]:
+    """Extract unit names from InfoArray entries (handles both list and dict)."""
+    units = []
+    if isinstance(info, list):
+        for item in info:
             if isinstance(item, dict) and "Unit" in item:
-                unit = item.get("Unit")
-                if unit and isinstance(unit, str) and unit in valid_units:
-                    buildables.append(unit)
-        if buildables:
-            result[name] = sorted(set(buildables))
-    return result
-
-
-def extract_trainable_units(abil_data: dict) -> dict[str, list[str]]:
-    """Extract building -> trainable unit mappings from *Train abilities in AbilData."""
-    result = {}
-    for name, data in abil_data.items():
-        if not isinstance(data, dict):
-            continue
-        if not name.endswith("Train"):
-            continue
-        building = name.replace("Train", "").replace("TrainLarge", "").replace("TrainMorph", "")
-        info_array = data.get("InfoArray", [])
-        if not isinstance(info_array, list):
-            info_array = [info_array] if info_array else []
-        for item in info_array:
-            if isinstance(item, dict) and "Unit" in item:
-                unit = item.get("Unit")
-                if unit and isinstance(unit, str):
-                    if building not in result:
-                        result[building] = []
-                    result[building].append(unit)
-    return result
-
-
-def extract_trainable_units_by_ability(abil_data: dict) -> dict[str, list[str]]:
-    """Extract ability name -> trainable unit mappings from *Train abilities in AbilData."""
-    result = {}
-    for name, data in abil_data.items():
-        if not isinstance(data, dict):
-            continue
-        if not name.endswith("Train"):
-            continue
-        info_array = data.get("InfoArray", [])
-        if not isinstance(info_array, list):
-            info_array = [info_array] if info_array else []
-        units = []
-        for item in info_array:
-            if isinstance(item, dict) and "Unit" in item:
-                unit = item.get("Unit")
-                if unit and isinstance(unit, str):
+                unit = item["Unit"]
+                if isinstance(unit, list):
+                    units.extend(u for u in unit if u and u != "N/A")
+                elif unit and unit != "N/A":
                     units.append(unit)
-        if units:
-            result[name] = sorted(set(units))
-    return result
+    elif isinstance(info, dict) and "Unit" in info:
+        unit = info["Unit"]
+        if isinstance(unit, list):
+            units.extend(u for u in unit if u and u != "N/A")
+        elif unit and unit != "N/A":
+            units.append(unit)
+    return units
 
 
-def extract_researchable_upgrades(abil_data: dict) -> dict[str, list[str]]:
-    """Extract research ability -> list of upgrade names from *Research abilities in AbilData."""
-    result = {}
-    for name, data in abil_data.items():
-        if not isinstance(data, dict):
-            continue
-        if not name.endswith("Research"):
-            continue
-        info_array = data.get("InfoArray", [])
-        if not isinstance(info_array, list):
-            info_array = [info_array] if info_array else []
-        upgrades = []
-        for item in info_array:
-            if isinstance(item, dict) and "Upgrade" in item:
-                upgrade = item.get("Upgrade")
-                if upgrade and isinstance(upgrade, str):
-                    upgrades.append(upgrade)
-        if upgrades:
-            result[name] = upgrades
-    return result
+def get_info_upgrades(info: Any) -> list[str]:
+    """Extract upgrade names from InfoArray entries (only if has DefaultButtonFace)."""
+    upgrades = []
+    if isinstance(info, list):
+        for item in info:
+            if isinstance(item, dict):
+                btn = item.get("Button", {})
+                if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
+                    upgrade = item.get("Upgrade")
+                    if upgrade:
+                        upgrades.append(upgrade)
+    elif isinstance(info, dict):
+        btn = info.get("Button", {})
+        if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
+            upgrade = info.get("Upgrade")
+            if upgrade:
+                upgrades.append(upgrade)
+    return upgrades
 
 
-def extract_morphable_units(abil_data: dict) -> dict[str, list[str]]:
-    """Extract morph ability -> list of morphable units from MorphTo* abilities in AbilData."""
-    result = {}
-    for name, data in abil_data.items():
-        if not isinstance(data, dict):
-            continue
-        if not name.startswith("MorphTo"):
-            continue
-        info_array = data.get("InfoArray", [])
-        if isinstance(info_array, dict):
-            info_array = [info_array] if info_array else []
-        morphables = []
-        for item in info_array:
+# Units to exclude from morph targets (cocoons)
+MORPH_EXCLUDE = {
+    "Cocoon", "CocoonZergling", "CocoonRoach", "CocoonBaneling",
+    "BanelingCocoon", "RoachCocoon", "ZerglingCocoon",
+    "BroodLordCocoon",
+}
+
+
+
+def get_morph_targets(info: Any) -> list[str]:
+    """Extract morph target units from InfoArray (excluding cocoons)."""
+    targets = []
+    if isinstance(info, list):
+        for item in info:
             if isinstance(item, dict) and "Unit" in item:
-                unit = item.get("Unit")
-                if unit and isinstance(unit, str):
-                    morphables.append(unit)
-        if morphables:
-            result[name] = sorted(set(morphables))
-    return result
+                unit = item["Unit"]
+                if isinstance(unit, list):
+                    targets.extend(u for u in unit if u and u not in MORPH_EXCLUDE)
+                elif unit and unit not in MORPH_EXCLUDE:
+                    targets.append(unit)
+    elif isinstance(info, dict) and "Unit" in info:
+        unit = info["Unit"]
+        if isinstance(unit, list):
+            targets.extend(u for u in unit if u and u not in MORPH_EXCLUDE)
+        elif unit and unit not in MORPH_EXCLUDE:
+            targets.append(unit)
+    return targets
 
 
-def main():
-    unit_data = load_json("UnitData.json")
-    abil_data = load_json("AbilData.json")
-    upgrade_data = load_json("UpgradeData.json")
+def get_lift_off_target(abil_data: dict) -> str | None:
+    """Extract the unit a LiftOff ability transforms into from the 'unit' field."""
+    if isinstance(abil_data, dict):
+        return abil_data.get("unit")
+    return None
+
+
+def get_requirement_from_button(item: dict) -> str:
+    """Extract requirement from a button entry in InfoArray."""
+    btn = item.get("Button", {})
+    if isinstance(btn, dict):
+        return btn.get("Requirements", "")
+    return ""
+
+
+def is_structure(data: dict) -> bool:
+    """Check if a unit is a structure."""
+    if isinstance(data, dict):
+        editor_categories = data.get("EditorCategories", "")
+        if isinstance(editor_categories, list):
+            return "ObjectType:Structure" in editor_categories
+        return "ObjectType:Structure" in str(editor_categories)
+    return False
+
+
+def get_race(data: dict) -> str:
+    """Get the race of a unit/structure."""
+    if isinstance(data, dict):
+        race = data.get("Race", "")
+        return RACE_MAP.get(race, race)
+    return ""
+
+
+def generate_techtree() -> dict:
+    """Generate the techtree structure from JSON data files."""
+    units_data = load_json("UnitData.json")
+    abils_data = load_json("AbilData.json")
 
     structures: dict[str, dict] = {}
     units: dict[str, dict] = {}
-    upgrades: dict[str, dict] = {}
     abilities: dict[str, dict] = {}
 
-    building_unlocks: dict[str, list[str]] = {}
-    building_produces: dict[str, list[str]] = {}
-    build_requirements: dict[str, list[str]] = {}
+    # Build index of which ability produces which units and what requirements they have
+    ability_produces: dict[str, list[tuple[str, str]]] = {}
+    ability_upgrades: dict[str, list[str]] = {}
 
-    for name, data in abil_data.items():
-        if not isinstance(data, dict):
+    for abil_name, abil_data in abils_data.items():
+        if not isinstance(abil_data, dict):
             continue
-        build_requirements.update(extract_build_requirements(data))
-
-    requirement_unlocks: dict[str, list[str]] = {}
-    for unit, reqs in build_requirements.items():
-        for req in reqs:
-            if req not in requirement_unlocks:
-                requirement_unlocks[req] = []
-            requirement_unlocks[req].append(unit)
-
-    for name, data in unit_data.items():
-        if not isinstance(data, dict):
+        info = abil_data.get("InfoArray")
+        if not info:
             continue
 
-        categories = data.get("EditorCategories", "")
-        is_structure = "ObjectType:Structure" in categories
+        if isinstance(info, list):
+            for item in info:
+                if isinstance(item, dict):
+                    produced_units = get_info_units(item)
+                    req = get_requirement_from_button(item)
+                    for unit in produced_units:
+                        ability_produces.setdefault(abil_name, []).append((unit, req))
+                    if abil_name.endswith("Research"):
+                        upgrades = get_info_upgrades(item)
+                        for upgrade in upgrades:
+                            ability_upgrades.setdefault(abil_name, []).append(upgrade)
+        elif isinstance(info, dict):
+            produced_units = get_info_units(info)
+            req = get_requirement_from_button(info)
+            for unit in produced_units:
+                ability_produces.setdefault(abil_name, []).append((unit, req))
 
-        if is_structure:
-            produced = data.get("TechTreeProducedUnitArray")
-            if produced:
-                if isinstance(produced, str):
-                    produced = [produced]
-                building_produces[name] = produced
+    # Build unlocks mapping: structure -> list of structures/units it unlocks
+    unlocks: dict[str, set[str]] = {}
+    unit_requirements: dict[str, list[str]] = {}
 
-            unlocked = data.get("TechTreeUnlockedUnitArray")
-            if unlocked:
-                if isinstance(unlocked, str):
-                    unlocked = [unlocked]
-                building_unlocks[name] = unlocked
-
-    trainable_units_by_ability = extract_trainable_units_by_ability(abil_data)
-    researchable_upgrades = extract_researchable_upgrades(abil_data)
-    valid_units = set(unit_data.keys())
-    buildable_units = extract_buildable_units(abil_data, valid_units)
-    morphsto_map, morph_requires = extract_all_morph_info(abil_data)
-
-    for name, data in unit_data.items():
-        if not isinstance(data, dict):
-            continue
-
-        categories = data.get("EditorCategories", "")
-        race = parse_race(categories, data.get("Race"))
-        is_structure = "ObjectType:Structure" in categories
-        is_unit = "ObjectType:Unit" in categories
-
-        if is_structure:
-            produced = building_produces.get(name, [])
-            abil_array = data.get("AbilArray", [])
-            trainable = []
-            if isinstance(abil_array, list):
-                for abil in abil_array:
-                    abil_name = abil if isinstance(abil, str) else abil.get("Link")
-                    if abil_name and abil_name.endswith("Train") and abil_name in trainable_units_by_ability:
-                        trainable.extend(trainable_units_by_ability[abil_name])
-            combined = list({*produced, *trainable})
-            valid_produces = sorted({u for u in combined if isinstance(u, str) and u in valid_units})
-            unlocked = building_unlocks.get(name, [])
-            req_unlocked = requirement_unlocks.get(name, [])
-            filtered_unlocked = [u for u in unlocked if isinstance(u, str)]
-            combined_unlocks = list({*filtered_unlocked, *req_unlocked})
-            unlocks = sorted({u for u in combined_unlocks if isinstance(u, str) and u in valid_units})
-
-            researches = []
-            structure_abilities = []
-            valid_upgrades = set(upgrade_data.keys())
-            if isinstance(abil_array, list):
-                for abil in abil_array:
-                    if isinstance(abil, dict) and abil.get("Link"):
-                        research_name = abil.get("Link")
-                    elif isinstance(abil, str):
-                        research_name = abil
+    for abil_name, prod_list in ability_produces.items():
+        for (produced_unit, req) in prod_list:
+            if req:
+                req_structs = parse_requirement(req)
+                for req_struct in req_structs:
+                    if req_struct in units_data:
+                        unlocks.setdefault(req_struct, set()).add(produced_unit)
+                    # Track requirements for the unit (apply fixes if needed)
+                    if produced_unit in UNIT_REQUIREMENT_FIXES:
+                        unit_requirements.setdefault(produced_unit, []).extend(UNIT_REQUIREMENT_FIXES[produced_unit])
                     else:
-                        continue
-                    if research_name in researchable_upgrades:
-                        for upgrade in researchable_upgrades[research_name]:
-                            if upgrade in valid_upgrades:
-                                researches.append(upgrade)
-                    structure_abilities.append(research_name)
-            elif isinstance(abil_array, dict) and abil_array.get("Link"):
-                research_name = abil_array.get("Link")
-                if research_name in researchable_upgrades:
-                    for upgrade in researchable_upgrades[research_name]:
-                        if upgrade in valid_upgrades:
-                            researches.append(upgrade)
-                structure_abilities.append(research_name)
+                        unit_requirements.setdefault(produced_unit, []).append(req_struct)
 
-            structures[name] = {
-                "produces": valid_produces,
-                "unlocks": unlocks,
-                "race": race,
-            }
-            if researches:
-                structures[name]["researches"] = sorted(set(researches))
-            if structure_abilities:
-                structures[name]["abilities"] = sorted(set(structure_abilities))
-
-        elif is_unit:
-            abil_array = data.get("AbilArray", [])
-            train_building = extract_train_building(abil_array)
-            build_ability = extract_unit_build_ability(abil_array)
-            requires = set()
-
-            if train_building:
-                requires.add(train_building)
-                if is_techlab_unit(data):
-                    requires.add(f"{train_building}TechLab")
-
-            for building, unlocked_units in building_unlocks.items():
-                if name in unlocked_units:
-                    requires.add(building)
-
-            if name in build_requirements:
-                requires.update(build_requirements[name])
-
-            units[name] = {
-                "requires": sorted(requires),
-                "race": race,
-            }
-
-            if build_ability and build_ability in buildable_units:
-                units[name]["builds"] = buildable_units[build_ability]
-
-    for name, data in upgrade_data.items():
-        if not isinstance(data, dict):
+    # Collect produces, builds, researches, morphsto for each structure/unit
+    for unit_name, unit_data in units_data.items():
+        if not isinstance(unit_data, dict):
             continue
 
-        categories = data.get("EditorCategories", "")
-        race = parse_race(categories, data.get("Race"))
+        race = get_race(unit_data)
+        entry: dict[str, Any] = {"race": race}
 
-        affected = data.get("AffectedUnitArray")
-        if isinstance(affected, str):
-            affected = [affected]
-        elif not affected:
-            affected = []
+        produces: list[str] = []
+        builds: list[str] = []
+        researches: list[str] = []
+        morphsto: str | list[str] | None = None
 
-        requires = []
+        for abil_name in unit_data.get("AbilArray", []):
+            if not isinstance(abil_name, str):
+                continue
 
-        upgrades[name] = {
-            "requires": requires,
-            "affected_units": affected,
-            "race": race,
-        }
+            if abil_name in ability_produces:
+                for (produced_unit, req) in ability_produces[abil_name]:
+                    is_train = abil_name.endswith("Train") and abil_name not in ["SCVHarvest"]
+                    is_build = abil_name.endswith("Build")
+                    is_research = abil_name.endswith("Research")
 
-    for name, data in abil_data.items():
-        if not isinstance(data, dict):
+                    if is_train:
+                        produces.append(produced_unit)
+                    elif is_build:
+                        builds.append(produced_unit)
+                    elif is_research:
+                        researches.append(produced_unit)
+
+            if abil_name in ability_upgrades:
+                researches.extend(ability_upgrades[abil_name])
+
+            # Handle morphsto for units with MorphTo, UpgradeTo, or LiftOff abilities
+            is_morph_to = abil_name.startswith("MorphTo") and not abil_name.startswith("MorphZergling")
+            is_upgrade_to = abil_name.startswith("UpgradeTo")
+            is_lift_off = abil_name.endswith("LiftOff")
+
+            if (is_morph_to or is_upgrade_to) and unit_name in units_data:
+                abil = abils_data.get(abil_name)
+                if isinstance(abil, dict):
+                    info = abil.get("InfoArray")
+                    if info:
+                        targets = get_morph_targets(info)
+                        if targets:
+                            if morphsto is None:
+                                morphsto = targets
+                            else:
+                                morphsto.extend(targets)
+
+            # Handle LiftOff abilities - get target from 'unit' field
+            if is_lift_off:
+                abil = abils_data.get(abil_name)
+                target = get_lift_off_target(abil)
+                if target:
+                    if morphsto is None:
+                        morphsto = [target]
+                    else:
+                        if isinstance(morphsto, list):
+                            morphsto.append(target)
+                        else:
+                            morphsto = [morphsto, target]
+
+        if produces:
+            entry["produces"] = sorted(set(produces))
+        if builds:
+            entry["builds"] = sorted(set(builds))
+        if researches:
+            entry["researches"] = sorted(set(researches))
+        if unlocks.get(unit_name):
+            entry["unlocks"] = sorted(unlocks[unit_name])
+        if morphsto:
+            if isinstance(morphsto, list):
+                unique_targets = sorted(set(morphsto))
+                entry["morphsto"] = unique_targets[0] if len(unique_targets) == 1 else unique_targets
+            else:
+                entry["morphsto"] = morphsto
+        if unit_name in unit_requirements:
+            entry["requires"] = sorted(set(unit_requirements[unit_name]))
+
+        # For Larva, morphsto should equal its produces
+        if unit_name == "Larva" and "produces" in entry:
+            entry["morphsto"] = entry["produces"]
+
+        # Separate structures and units
+        if is_structure(unit_data):
+            structures[unit_name] = entry
+        else:
+            units[unit_name] = entry
+
+    # Process abilities for MorphTo, UpgradeTo, and LiftOff abilities
+    for abil_name, abil_data in abils_data.items():
+        if not isinstance(abil_data, dict):
             continue
 
-        categories = data.get("EditorCategories", "")
-        race = parse_race(categories)
+        is_morph_to = abil_name.startswith("MorphTo") and not abil_name.startswith("MorphZergling")
+        is_upgrade_to = abil_name.startswith("UpgradeTo")
+        is_lift_off = abil_name.endswith("LiftOff")
 
-        requires = []
-        if "Burrow" in name:
-            requires.append("Burrow")
+        if is_morph_to or is_upgrade_to:
+            info = abil_data.get("InfoArray")
+            if info:
+                targets = get_morph_targets(info)
+                if targets:
+                    morph_target = targets[0] if len(targets) == 1 else targets
 
-        if requires or race:
-            abilities[name] = {
-                "requires": requires,
-                "race": race,
-            }
+                    race = ""
+                    if isinstance(morph_target, str) and morph_target in units_data:
+                        race = get_race(units_data[morph_target])
 
-            if name in buildable_units:
-                abilities[name]["builds"] = buildable_units[name]
+                    requires = []
+                    cmd_buttons = abil_data.get("CmdButtonArray", [])
+                    if isinstance(cmd_buttons, list):
+                        for btn in cmd_buttons:
+                            if isinstance(btn, dict) and btn.get("index") == "Execute":
+                                req = btn.get("Requirements", "")
+                                if req:
+                                    requires.extend(parse_requirement(req))
 
-            if name == "LarvaTrain" and name in trainable_units_by_ability:
-                abilities[name]["morphs"] = trainable_units_by_ability[name]
+                    abilities[abil_name] = {
+                        "morphsto": morph_target,
+                        "race": race,
+                    }
+                    if requires:
+                        abilities[abil_name]["requires"] = sorted(set(requires))
 
-            if (
-                name.startswith("MorphTo") or name.startswith("UpgradeTo") or name.endswith("LiftOff")
-            ) and name in morphsto_map:
-                abilities[name]["morphsto"] = morphsto_map[name]
-                abilities[name]["requires"] = morph_requires.get(name, [])
+        elif is_lift_off:
+            target = get_lift_off_target(abil_data)
+            if target:
+                race = ""
+                if target in units_data:
+                    race = get_race(units_data[target])
+                abilities[abil_name] = {
+                    "morphsto": target,
+                    "race": race,
+                }
 
-    tech_tree = {
+    return {
         "structures": structures,
         "units": units,
-        "upgrades": upgrades,
         "abilities": abilities,
     }
 
-    with OUTPUT_FILE.open("w") as f:
-        dump_json(tech_tree, f, indent=2, sort_keys=True)
 
-    print(f"Generated {OUTPUT_FILE}")
-    print(f"  Structures: {len(structures)}")
-    print(f"  Units: {len(units)}")
-    print(f"  Upgrades: {len(upgrades)}")
-    print(f"  Abilities: {len(abilities)}")
+def main():
+    """Main entry point."""
+    output_path = Path(__file__).parent / "json" / "techtree.json"
+
+    print("Generating techtree...")
+    techtree = generate_techtree()
+
+    output_path.write_text(
+        dumps_json(techtree, indent=2, ensure_ascii=False, sort_keys=True),
+        encoding="utf-8"
+    )
+
+    print(f"Written to {output_path}")
+    print(f"  Structures: {len(techtree['structures'])}")
+    print(f"  Units: {len(techtree['units'])}")
+    print(f"  Abilities: {len(techtree['abilities'])}")
 
 
 if __name__ == "__main__":

@@ -1,772 +1,16 @@
 {
   "abilities": {
-    "250mmStrikeCannons": {
-      "race": "Terran",
-      "requires": []
-    },
-    "AdeptPhaseShift": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "AdeptPhaseShiftCancel": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "AdeptShadePhaseShiftCancel": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "AggressiveMutation": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "AmorphousArmorcloud": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ArbiterMPRecall": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "ArchonWarp": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "ArmSiloWithNuke": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ArmoryResearch": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ArmoryResearchSwarm": {
-      "race": "Terran",
-      "requires": []
-    },
-    "AssaultMode": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BanelingNestResearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "BansheeCloak": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BarracksAddOns": {
-      "builds": [
-        "BarracksReactor",
-        "BarracksTechLab"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "BarracksReactorMorph": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BarracksTechLabMorph": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BarracksTechLabResearch": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BarracksTrain": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BatteryOvercharge": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "BattlecruiserAttack": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BattlecruiserAttackEvaluator": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BattlecruiserMove": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BattlecruiserStop": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BattlecruiserStopEvaluator": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BlindingCloud": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "Blink": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "BridgeExtend": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "BridgeRetract": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "BroodLordHangar": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "BroodLordQueue2": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "BuildAutoTurret": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BuildNydusCanal": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "BuildinProgressNydusCanal": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "BuildingShield": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "BuildingStasis": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "BunkerTransport": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BurrowBanelingDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowBanelingUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowChargeMP": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowChargeRevD": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowChargeTrial": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowCreepTumorDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowDroneDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowDroneUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowHydraliskDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowHydraliskUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowInfestorDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowInfestorTerranDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowInfestorTerranUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowInfestorUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowLurkerMPDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowLurkerMPUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowQueenDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowQueenUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowRavagerDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowRavagerUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowRoachDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowRoachUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowUltraliskDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowUltraliskUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowZerglingDown": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BurrowZerglingUp": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "BypassArmor": {
-      "race": "Terran",
-      "requires": []
-    },
-    "BypassArmorDroneCU": {
-      "race": "Terran",
-      "requires": []
-    },
-    "CalldownMULE": {
-      "race": "Terran",
-      "requires": []
-    },
-    "CarrierHangar": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "ChannelSnipe": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Charge": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "CloakingDrone": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Clone": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "CommandCenterTrain": {
-      "race": "Terran",
-      "requires": []
-    },
-    "CommandCenterTransport": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Contaminate": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "Corruption": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "CreepTumorBuild": {
-      "builds": [
-        "CreepTumor"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "CyberneticsCoreResearch": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "DarkShrineResearch": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "DarkTemplarBlink": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "DefilerMPBurrow": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "DefilerMPConsume": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "DefilerMPDarkSwarm": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "DefilerMPPlague": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "DefilerMPUnburrow": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "DigesterCreepSpray": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "DigesterTransport": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "DisguiseChangeling": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "DroneHarvest": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "EMP": {
-      "race": "Terran",
-      "requires": []
-    },
-    "EngineeringBayResearch": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Explode": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "EyeStalk": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "FactoryAddOns": {
-      "builds": [
-        "FactoryReactor",
-        "FactoryTechLab"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "FactoryReactorMorph": {
-      "race": "Terran",
-      "requires": []
-    },
-    "FactoryTechLabMorph": {
-      "race": "Terran",
-      "requires": []
-    },
-    "FactoryTechLabResearch": {
-      "race": "Terran",
-      "requires": []
-    },
-    "FactoryTrain": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Feedback": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "FighterMode": {
-      "race": "Terran",
-      "requires": []
-    },
-    "FleetBeaconResearch": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "FlyerShield": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "ForceField": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "ForgeResearch": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "Frenzy": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "FungalGrowth": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "FusionCoreResearch": {
-      "race": "Terran",
-      "requires": []
-    },
-    "GatewayTrain": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "GenerateCreep": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "GhostAcademyResearch": {
-      "race": "Terran",
-      "requires": []
-    },
-    "GhostCloak": {
-      "race": "Terran",
-      "requires": []
-    },
-    "GhostHoldFire": {
-      "race": "Terran",
-      "requires": []
-    },
-    "GhostWeaponsFree": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Grapple": {
-      "race": "Terran",
-      "requires": []
-    },
-    "GravitonBeam": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "GuardianShield": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationAdept": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationArchon": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationColossus": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationDisruptor": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationHighTemplar": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationImmortal": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationOracle": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationPhoenix": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationProbe": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationStalker": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationVoidRay": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationWarpPrism": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HallucinationZealot": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "HangarQueue5": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "HydraliskDenResearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "HydraliskFrenzy": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ImmortalOverload": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "Impale": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "InfestationPitResearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "InfestedTerrans": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "InfestedTerransLayEgg": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "InvulnerabilityShield": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "KD8Charge": {
-      "race": "Terran",
-      "requires": []
-    },
-    "LairResearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LarvaTrain": {
-      "morphs": [
-        "Baneling",
-        "Corruptor",
-        "Drone",
-        "Hydralisk",
-        "Infestor",
-        "Mutalisk",
-        "Overlord",
-        "Roach",
-        "SwarmHostMP",
-        "Ultralisk",
-        "Viper"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "Leech": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LeechResources": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LiberatorAATarget": {
-      "race": "Terran",
-      "requires": []
-    },
-    "LiberatorMorphtoAA": {
-      "race": "Terran",
-      "requires": []
-    },
-    "LiberatorMorphtoAG": {
-      "race": "Terran",
-      "requires": []
-    },
-    "LightningBomb": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "LightofAiur": {
-      "race": "Terran",
-      "requires": []
-    },
-    "LockOn": {
-      "race": "Terran",
-      "requires": []
-    },
-    "LockOnAir": {
-      "race": "Terran",
-      "requires": []
-    },
-    "LockOnCancel": {
-      "race": "Terran",
-      "requires": []
-    },
-    "LocustMPFlyingMorphToGround": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LocustMPFlyingSwoop": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LocustMPFlyingSwoopAttack": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LocustMPMorphToAir": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LocustTrain": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LurkerAspectMP": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LurkerAspectMPFromHydraliskBurrowed": {
-      "race": "Zerg",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "LurkerDenResearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LurkerHoldFire": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LurkerRemoveHoldFire": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "MULEGather": {
-      "race": "Terran",
-      "requires": []
-    },
-    "MULERepair": {
-      "race": "Terran",
-      "requires": []
-    },
-    "MassRecall": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "MaxiumThrust": {
-      "race": "Terran",
-      "requires": []
-    },
-    "MedivacHeal": {
-      "race": "Terran",
-      "requires": []
-    },
-    "MedivacSpeedBoost": {
-      "race": "Terran",
-      "requires": []
-    },
-    "MedivacTransport": {
-      "race": "Terran",
-      "requires": []
-    },
-    "MercCompoundResearch": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Mergeable": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "MetalGateDefaultLower": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "MetalGateDefaultRaise": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "MorphBackToGateway": {
-      "race": "Protoss",
-      "requires": []
+    "BarracksLiftOff": {
+      "morphsto": "BarracksFlying",
+      "race": "Terran"
+    },
+    "CommandCenterLiftOff": {
+      "morphsto": "CommandCenterFlying",
+      "race": "Terran"
+    },
+    "FactoryLiftOff": {
+      "morphsto": "FactoryFlying",
+      "race": "Terran"
     },
     "MorphToBaneling": {
       "morphsto": "Baneling",
@@ -784,95 +28,86 @@
     },
     "MorphToCollapsiblePurifierTowerDebris": {
       "morphsto": "CollapsiblePurifierTowerDebris",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToCollapsibleRockTowerDebris": {
       "morphsto": "CollapsibleRockTowerDebris",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToCollapsibleRockTowerDebrisRampLeft": {
       "morphsto": "CollapsibleRockTowerDebrisRampLeft",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToCollapsibleRockTowerDebrisRampLeftGreen": {
       "morphsto": "CollapsibleRockTowerDebrisRampLeftGreen",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToCollapsibleRockTowerDebrisRampRight": {
       "morphsto": "CollapsibleRockTowerDebrisRampRight",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToCollapsibleRockTowerDebrisRampRightGreen": {
       "morphsto": "CollapsibleRockTowerDebrisRampRightGreen",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToCollapsibleTerranTowerDebris": {
       "morphsto": "CollapsibleTerranTowerDebris",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToCollapsibleTerranTowerDebrisRampLeft": {
       "morphsto": "DebrisRampLeft",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToCollapsibleTerranTowerDebrisRampRight": {
       "morphsto": "DebrisRampRight",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToDevourerMP": {
-      "morphsto": "DevourerMP",
-      "race": "Zerg",
+      "morphsto": [
+        "DevourerCocoonMP",
+        "DevourerMP"
+      ],
+      "race": "",
       "requires": [
         "GreaterSpire"
       ]
     },
     "MorphToGhostAlternate": {
       "morphsto": "GhostAlternate",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToGhostNova": {
       "morphsto": "GhostNova",
-      "race": "Zerg",
-      "requires": []
+      "race": ""
     },
     "MorphToGuardianMP": {
-      "morphsto": "GuardianMP",
-      "race": "Zerg",
+      "morphsto": [
+        "GuardianCocoonMP",
+        "GuardianMP"
+      ],
+      "race": "",
       "requires": [
         "GreaterSpire"
       ]
     },
     "MorphToHellion": {
       "morphsto": "Hellion",
-      "race": "Terran",
-      "requires": [
-        "Armory"
-      ]
+      "race": "Terran"
     },
     "MorphToHellionTank": {
       "morphsto": "HellionTank",
-      "race": "Terran",
-      "requires": [
-        "Armory"
-      ]
+      "race": "Terran"
     },
     "MorphToInfestedTerran": {
       "morphsto": "InfestorTerran",
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
     },
     "MorphToLurker": {
-      "morphsto": "LurkerMP",
-      "race": "Zerg",
+      "morphsto": [
+        "LurkerMP",
+        "LurkerMPEgg"
+      ],
+      "race": "",
       "requires": [
         "LurkerDen"
       ]
@@ -880,679 +115,55 @@
     "MorphToMothership": {
       "morphsto": "Mothership",
       "race": "Protoss",
-      "requires": []
+      "requires": [
+        "MothershipRequirements"
+      ]
     },
     "MorphToOverseer": {
-      "morphsto": "Overseer",
-      "race": "Zerg",
-      "requires": []
+      "morphsto": [
+        "OverlordCocoon",
+        "Overseer"
+      ],
+      "race": "",
+      "requires": [
+        "UseOverseerMorph"
+      ]
     },
     "MorphToRavager": {
-      "morphsto": "Ravager",
-      "race": "Zerg",
+      "morphsto": [
+        "Ravager",
+        "RavagerCocoon"
+      ],
+      "race": "",
       "requires": [
         "BanelingNest2"
       ]
     },
     "MorphToSwarmHostBurrowedMP": {
       "morphsto": "SwarmHostBurrowedMP",
-      "race": "Terran",
-      "requires": []
+      "race": "Zerg"
     },
     "MorphToSwarmHostMP": {
       "morphsto": "SwarmHostMP",
-      "race": "Terran",
-      "requires": []
+      "race": "Zerg"
     },
     "MorphToTransportOverlord": {
-      "morphsto": "OverlordTransport",
-      "race": "Zerg",
+      "morphsto": [
+        "OverlordTransport",
+        "TransportOverlordCocoon"
+      ],
+      "race": "",
       "requires": [
         "Lair"
       ]
     },
-    "MorphZerglingToBaneling": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "MothershipCloak": {
-      "race": "Terran",
-      "requires": []
-    },
-    "MothershipCoreEnergize": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "MothershipCoreMassRecall": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "MothershipCorePurifyNexus": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "MothershipCorePurifyNexusCancel": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "MothershipCoreTeleport": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "MothershipCoreWeapon": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "MothershipMassRecall": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "MothershipStasis": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "NeuralParasite": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "NexusInvulnerability": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "NexusMassRecall": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "NexusPhaseShift": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "NexusShieldOvercharge": {
-      "race": "Terran",
-      "requires": []
-    },
-    "NexusShieldOverchargeOff": {
-      "race": "Terran",
-      "requires": []
-    },
-    "NexusShieldRecharge": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "NexusShieldRechargeOnPylon": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "NexusTrain": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "NexusTrainMothership": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "NexusTrainMothershipCore": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "NydusCanalTransport": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "NydusWormTransport": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ObserverMorphtoObserverSiege": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ObserverSiegeMorphtoObserver": {
-      "race": "Terran",
-      "requires": []
-    },
-    "OracleCloakField": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "OracleCloakingFieldTargeted": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "OracleNormalMode": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "OraclePhaseShift": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "OracleRevelation": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "OracleRevelationMode": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "OracleStasisTrap": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "OracleStasisTrapBuild": {
-      "builds": [
-        "OracleStasisTrap"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "OracleWeapon": {
-      "race": "Terran",
-      "requires": []
-    },
-    "OverlordTransport": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "OverseerMorphtoOverseerSiegeMode": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "OverseerSiegeModeMorphtoOverseer": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ParasiticBomb": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ParasiticBombRelayDodge": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "PenetratingShot": {
-      "race": "Terran",
-      "requires": []
-    },
-    "PhaseShift": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "PhasingMode": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "PlacePointDefenseDrone": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ProbeHarvest": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "ProgressRally": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "ProtossBuild": {
-      "builds": [
-        "Assimilator",
-        "CyberneticsCore",
-        "DarkShrine",
-        "FleetBeacon",
-        "Forge",
-        "Gateway",
-        "Nexus",
-        "PhotonCannon",
-        "Pylon",
-        "RoboticsBay",
-        "RoboticsFacility",
-        "ShieldBattery",
-        "Stargate",
-        "TemplarArchive",
-        "TwilightCouncil"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ProtossBuildingQueue": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "PsiStorm": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "PulsarBeam": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "PurificationNovaMorph": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "PurificationNovaMorphBack": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "PurificationNovaTargeted": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "PurifyMorphPylon": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "PurifyMorphPylonBack": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "QueenBuild": {
-      "builds": [
-        "CreepTumorQueen"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "QueenFly": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "QueenLand": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "QueenMPEnsnare": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "Rally": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "RallyCommand": {
-      "race": "Terran",
-      "requires": []
-    },
-    "RallyHatchery": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "RallyNexus": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "RavagerCorrosiveBile": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "RavenBuild": {
-      "builds": [
-        "AutoTurret"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "RavenRepairDrone": {
-      "race": "Terran",
-      "requires": []
-    },
-    "RavenRepairDroneHeal": {
-      "race": "Terran",
-      "requires": []
-    },
-    "RavenScramblerMissile": {
-      "race": "Terran",
-      "requires": []
-    },
-    "RavenShredderMissile": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ReactorMorph": {
-      "race": "Terran",
-      "requires": []
-    },
-    "RedstoneLavaCritterBurrow": {
-      "race": "Neutral",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "RedstoneLavaCritterInjuredBurrow": {
-      "race": "Neutral",
-      "requires": [
-        "Burrow"
-      ]
-    },
-    "RedstoneLavaCritterInjuredUnburrow": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "RedstoneLavaCritterUnburrow": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "Refund": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ReleaseInterceptors": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "Repair": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ResourceBlocker": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "ResourceStun": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "RestoreShields": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "RoachWarrenResearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "RoboticsBayResearch": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "RoboticsFacilityTrain": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "SC2_Battery": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "SCVHarvest": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Sacrifice": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "Salvage": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SalvageShared": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SapStructure": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ScannerSweep": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Scryer": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "SeekerDummyChannel": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "SeekerMissile": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SelfRepair": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ShieldBatteryRechargeChanneled": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ShieldBatteryRechargeEx5": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "SiegeMode": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SingleRecall": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "Siphon": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "Snipe": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SnipeDoT": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SpawnChangeling": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "SpawnChangelingTarget": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "SpawnInfestedTerran": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "SpawnLarva": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "SpawnLocustsTargeted": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "SpawningPoolResearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "SpectreShield": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SpineCrawlerRoot": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "SpineCrawlerUproot": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "SpireResearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "SporeCrawlerRoot": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "SporeCrawlerUproot": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "SprayParent": {
-      "race": "Terran",
-      "requires": []
-    },
-    "StargateTrain": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "StarportAddOns": {
-      "builds": [
-        "StarportReactor",
-        "StarportTechLab"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "StarportReactorMorph": {
-      "race": "Terran",
-      "requires": []
-    },
-    "StarportTechLabMorph": {
-      "race": "Terran",
-      "requires": []
-    },
-    "StarportTechLabResearch": {
-      "race": "Terran",
-      "requires": []
-    },
-    "StarportTrain": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Stimpack": {
-      "race": "Terran",
-      "requires": []
-    },
-    "StimpackMarauder": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SupplyDepotLower": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SupplyDepotRaise": {
-      "race": "Terran",
-      "requires": []
-    },
-    "SupplyDrop": {
-      "race": "Terran",
-      "requires": []
-    },
-    "TacNukeStrike": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Tarsonis_DoorDefaultLower": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "Tarsonis_DoorDefaultRaise": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "TechLabMorph": {
-      "race": "Terran",
-      "requires": []
-    },
-    "TempestDisruptionBlast": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "TemplarArchivesResearch": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "TemporalField": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "TemporalRift": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "TerranAddOns": {
-      "builds": [
-        "Reactor",
-        "TechLab"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranBuild": {
-      "builds": [
-        "Armory",
-        "Barracks",
-        "Bunker",
-        "CommandCenter",
-        "EngineeringBay",
-        "Factory",
-        "FusionCore",
-        "GhostAcademy",
-        "MissileTurret",
-        "Refinery",
-        "RefineryRich",
-        "SensorTower",
-        "Starport",
-        "SupplyDepot"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranBuildingLand": {
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranBuildingLiftOff": {
-      "morphsto": "##unit##",
-      "race": "Terran",
-      "requires": []
-    },
-    "TestZerg": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ThorAPMode": {
-      "race": "Terran",
-      "requires": []
-    },
-    "ThorNormalMode": {
-      "race": "Terran",
-      "requires": []
-    },
-    "TimeWarp": {
-      "race": "Terran",
-      "requires": []
-    },
-    "TornadoMissile": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "TrainQueen": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "Transfusion": {
-      "race": "Terran",
-      "requires": []
-    },
-    "TransportMode": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "TwilightCouncilResearch": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "UltraliskCavernResearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "Unsiege": {
-      "race": "Terran",
-      "requires": []
+    "OrbitalLiftOff": {
+      "morphsto": "OrbitalCommandFlying",
+      "race": "Terran"
+    },
+    "StarportLiftOff": {
+      "morphsto": "StarportFlying",
+      "race": "Terran"
     },
     "UpgradeToGreaterSpire": {
       "morphsto": "GreaterSpire",
@@ -1599,243 +210,54 @@
     "UpgradeToWarpGate": {
       "morphsto": "WarpGate",
       "race": "Protoss",
-      "requires": []
-    },
-    "ViperConsume": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ViperConsumeMinerals": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ViperConsumeStructure": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ViperParasiticBombRelay": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "VoidMPImmortalReviveDeath": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "VoidMPImmortalReviveRebuild": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "VoidRaySwarmDamageBoost": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "VoidSiphon": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "VoidSwarmHostSpawnLocust": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "VolatileBurstBuilding": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "Vortex": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "WarpGateTrain": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "WarpPrismTransport": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "Warpable": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "WidowMineBurrow": {
-      "race": "Terran",
       "requires": [
-        "Burrow"
+        "UseWarpGate"
       ]
-    },
-    "WidowMineUnburrow": {
-      "race": "Terran",
-      "requires": []
-    },
-    "WormholeTransit": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "XelNaga_Caverns_DoorDefaultClose": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "XelNaga_Caverns_DoorDefaultOpen": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "Yamato": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Yoink": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "ZergBuild": {
-      "builds": [
-        "BanelingNest",
-        "CreepTumor",
-        "EvolutionChamber",
-        "Extractor",
-        "Hatchery",
-        "HydraliskDen",
-        "InfestationPit",
-        "LurkerDenMP",
-        "NydusNetwork",
-        "RoachWarren",
-        "SpawningPool",
-        "SpineCrawler",
-        "Spire",
-        "SporeCrawler",
-        "UltraliskCavern"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "attackProtossBuilding": {
-      "race": "Protoss",
-      "requires": []
-    },
-    "burrowedBanelingStop": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "burrowedStop": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "evolutionchamberresearch": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "que1": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "que5": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "que5Addon": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "que5CancelToSelection": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "que5LongBlend": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "que5Passive": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "que5PassiveCancelToSelection": {
-      "race": "Neutral",
-      "requires": []
-    },
-    "que8": {
-      "race": "Neutral",
-      "requires": []
     }
   },
   "structures": {
     "AccelerationZoneBase": {
-      "produces": [],
-      "race": null,
-      "unlocks": []
+      "race": ""
     },
     "AccelerationZoneFlyingBase": {
-      "produces": [],
-      "race": null,
-      "unlocks": []
+      "race": ""
     },
     "Armory": {
-      "abilities": [
-        "ArmoryResearch",
-        "ArmoryResearchSwarm",
-        "BuildInProgress",
-        "que5"
-      ],
-      "produces": [],
       "race": "Terran",
+      "requires": [
+        "Factory"
+      ],
       "researches": [
-        "TerranShipArmorsLevel1",
-        "TerranShipArmorsLevel2",
-        "TerranShipArmorsLevel3",
         "TerranShipWeaponsLevel1",
         "TerranShipWeaponsLevel2",
         "TerranShipWeaponsLevel3",
         "TerranVehicleAndShipArmorsLevel1",
         "TerranVehicleAndShipArmorsLevel2",
         "TerranVehicleAndShipArmorsLevel3",
-        "TerranVehicleArmorsLevel1",
-        "TerranVehicleArmorsLevel2",
-        "TerranVehicleArmorsLevel3",
         "TerranVehicleWeaponsLevel1",
         "TerranVehicleWeaponsLevel2",
         "TerranVehicleWeaponsLevel3"
       ],
       "unlocks": [
         "HellionTank",
-        "Thor",
-        "WidowMine"
+        "Thor"
       ]
     },
     "Assimilator": {
-      "abilities": [
-        "BuildInProgress"
-      ],
-      "produces": [],
-      "race": "Protoss",
-      "unlocks": []
+      "race": "Protoss"
     },
     "AssimilatorRich": {
-      "abilities": [
-        "BuildInProgress"
-      ],
-      "produces": [],
-      "race": "Protoss",
-      "unlocks": []
+      "race": "Protoss"
     },
     "AutoTurret": {
-      "abilities": [
-        "BuildInProgress",
-        "attack",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "BanelingNest": {
-      "abilities": [
-        "BanelingNestResearch",
-        "BuildInProgress",
-        "que5"
-      ],
-      "produces": [],
       "race": "Zerg",
+      "requires": [
+        "SpawningPool"
+      ],
       "researches": [
-        "BanelingBurrowMove",
         "CentrificalHooks"
       ],
       "unlocks": [
@@ -1843,14 +265,7 @@
       ]
     },
     "Barracks": {
-      "abilities": [
-        "BarracksAddOns",
-        "BarracksLiftOff",
-        "BarracksTrain",
-        "BuildInProgress",
-        "Rally",
-        "que5"
-      ],
+      "morphsto": "BarracksFlying",
       "produces": [
         "Ghost",
         "Marauder",
@@ -1858,6 +273,9 @@
         "Reaper"
       ],
       "race": "Terran",
+      "requires": [
+        "SupplyDepot"
+      ],
       "unlocks": [
         "Bunker",
         "Factory",
@@ -1865,58 +283,27 @@
       ]
     },
     "BarracksFlying": {
-      "abilities": [
-        "BarracksAddOns",
-        "BarracksLand",
-        "move",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "BarracksReactor": {
-      "abilities": [
-        "BuildInProgress",
-        "FactoryReactorMorph",
-        "ReactorMorph",
-        "StarportReactorMorph"
-      ],
-      "produces": [],
       "race": "Terran",
-      "unlocks": []
+      "requires": [
+        "HasQueuedAddon"
+      ]
     },
     "Bunker": {
-      "abilities": [
-        "AttackRedirect",
-        "BuildInProgress",
-        "BunkerTransport",
-        "Rally",
-        "SalvageBunkerRefund",
-        "SalvageEffect",
-        "SalvageShared",
-        "StimpackMarauderRedirect",
-        "StimpackRedirect",
-        "StopRedirect"
-      ],
-      "produces": [],
       "race": "Terran",
-      "unlocks": []
+      "requires": [
+        "Barracks"
+      ]
     },
     "CommandCenter": {
-      "abilities": [
-        "BuildInProgress",
-        "CommandCenterLiftOff",
-        "CommandCenterTrain",
-        "CommandCenterTransport",
-        "RallyCommand",
-        "UpgradeToOrbital",
-        "UpgradeToPlanetaryFortress",
-        "que5CancelToSelection"
+      "morphsto": [
+        "CommandCenterFlying",
+        "OrbitalCommand",
+        "PlanetaryFortress"
       ],
       "produces": [
-        "OrbitalCommand",
-        "PlanetaryFortress",
         "SCV"
       ],
       "race": "Terran",
@@ -1925,51 +312,25 @@
       ]
     },
     "CommandCenterFlying": {
-      "abilities": [
-        "CommandCenterLand",
-        "CommandCenterTransport",
-        "move",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "CreepTumor": {
-      "abilities": [
-        "BuildInProgress",
-        "BurrowCreepTumorDown"
-      ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "CreepTumorBurrowed": {
-      "abilities": [
-        "BuildInProgress",
-        "CreepTumorBuild"
+      "builds": [
+        "CreepTumor"
       ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "CreepTumorQueen": {
-      "abilities": [
-        "BuildInProgress",
-        "BurrowCreepTumorDown"
-      ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "CyberneticsCore": {
-      "abilities": [
-        "BuildInProgress",
-        "CyberneticsCoreResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Protoss",
+      "requires": [
+        "Gateway"
+      ],
       "researches": [
         "ProtossAirArmorsLevel1",
         "ProtossAirArmorsLevel2",
@@ -1982,7 +343,6 @@
       ],
       "unlocks": [
         "Adept",
-        "MothershipCore",
         "RoboticsFacility",
         "Sentry",
         "ShieldBattery",
@@ -1992,40 +352,22 @@
       ]
     },
     "DarkShrine": {
-      "abilities": [
-        "BuildInProgress",
-        "DarkShrineResearch",
-        "attackProtossBuilding",
-        "que5",
-        "stopProtossBuilding"
-      ],
-      "produces": [],
       "race": "Protoss",
-      "researches": [
-        "DarkTemplarBlinkUpgrade"
+      "requires": [
+        "TwilightCouncil"
       ],
       "unlocks": [
-        "Archon",
         "DarkTemplar"
       ]
     },
     "Elsecaro_Colonist_Hut": {
-      "abilities": [
-        "HutTransport",
-        "Rally"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "EngineeringBay": {
-      "abilities": [
-        "BuildInProgress",
-        "EngineeringBayResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Terran",
+      "requires": [
+        "CommandCenter"
+      ],
       "researches": [
         "HiSecAutoTracking",
         "NeosteelFrame",
@@ -2043,45 +385,22 @@
       ]
     },
     "EvolutionChamber": {
-      "abilities": [
-        "BuildInProgress",
-        "evolutionchamberresearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Zerg",
-      "unlocks": []
+      "requires": [
+        "Hatchery"
+      ]
     },
     "ExtendingBridge": {
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "Extractor": {
-      "abilities": [
-        "BuildInProgress"
-      ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "ExtractorRich": {
-      "abilities": [
-        "BuildInProgress"
-      ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "Factory": {
-      "abilities": [
-        "BuildInProgress",
-        "FactoryAddOns",
-        "FactoryLiftOff",
-        "FactoryTrain",
-        "Rally",
-        "que5"
-      ],
+      "morphsto": "FactoryFlying",
       "produces": [
         "Cyclone",
         "Hellion",
@@ -2092,41 +411,29 @@
         "WidowMine"
       ],
       "race": "Terran",
+      "requires": [
+        "Barracks"
+      ],
       "unlocks": [
         "Armory",
+        "BomberLaunchPad",
         "Starport"
       ]
     },
     "FactoryFlying": {
-      "abilities": [
-        "FactoryAddOns",
-        "FactoryLand",
-        "move",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "FactoryReactor": {
-      "abilities": [
-        "BarracksReactorMorph",
-        "BuildInProgress",
-        "ReactorMorph",
-        "StarportReactorMorph"
-      ],
-      "produces": [],
       "race": "Terran",
-      "unlocks": []
+      "requires": [
+        "HasQueuedAddon"
+      ]
     },
     "FleetBeacon": {
-      "abilities": [
-        "BuildInProgress",
-        "FleetBeaconResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Protoss",
+      "requires": [
+        "Stargate"
+      ],
       "researches": [
         "AnionPulseCrystals",
         "CarrierLaunchSpeedUpgrade",
@@ -2136,26 +443,17 @@
       ],
       "unlocks": [
         "Carrier",
-        "Mothership",
         "Tempest"
       ]
     },
     "ForceField": {
-      "abilities": [
-        "Shatter"
-      ],
-      "produces": [],
-      "race": "Protoss",
-      "unlocks": []
+      "race": "Protoss"
     },
     "Forge": {
-      "abilities": [
-        "BuildInProgress",
-        "ForgeResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Protoss",
+      "requires": [
+        "Nexus"
+      ],
       "researches": [
         "ProtossGroundArmorsLevel1",
         "ProtossGroundArmorsLevel2",
@@ -2172,13 +470,10 @@
       ]
     },
     "FusionCore": {
-      "abilities": [
-        "BuildInProgress",
-        "FusionCoreResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Terran",
+      "requires": [
+        "Starport"
+      ],
       "researches": [
         "BattlecruiserBehemothReactor",
         "BattlecruiserEnableSpecializations",
@@ -2190,55 +485,36 @@
       ]
     },
     "Gateway": {
-      "abilities": [
-        "BuildInProgress",
-        "GatewayTrain",
-        "Rally",
-        "UpgradeToWarpGate",
-        "que5"
-      ],
+      "morphsto": "WarpGate",
       "produces": [
         "Adept",
         "DarkTemplar",
         "HighTemplar",
         "Sentry",
         "Stalker",
-        "WarpGate",
         "Zealot"
       ],
       "race": "Protoss",
+      "requires": [
+        "Nexus"
+      ],
       "unlocks": [
         "CyberneticsCore"
       ]
     },
     "GhostAcademy": {
-      "abilities": [
-        "ArmSiloWithNuke",
-        "BuildInProgress",
-        "GhostAcademyResearch",
-        "MercCompoundResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Terran",
+      "requires": [
+        "Barracks"
+      ],
       "researches": [
         "EnhancedShockwaves",
         "GhostMoebiusReactor",
         "PersonalCloaking",
         "ReaperSpeed"
-      ],
-      "unlocks": [
-        "Ghost"
       ]
     },
     "GreaterSpire": {
-      "abilities": [
-        "BuildInProgress",
-        "LairResearch",
-        "SpireResearch",
-        "que5CancelToSelection"
-      ],
-      "produces": [],
       "race": "Zerg",
       "researches": [
         "Burrow",
@@ -2250,24 +526,10 @@
         "ZergFlyerWeaponsLevel3",
         "overlordspeed",
         "overlordtransport"
-      ],
-      "unlocks": [
-        "BroodLord"
       ]
     },
     "Hatchery": {
-      "abilities": [
-        "BuildInProgress",
-        "LairResearch",
-        "RallyHatchery",
-        "TrainQueen",
-        "UpgradeToLair",
-        "que5CancelToSelection"
-      ],
-      "produces": [
-        "Larva",
-        "Queen"
-      ],
+      "morphsto": "Lair",
       "race": "Zerg",
       "researches": [
         "Burrow",
@@ -2280,14 +542,6 @@
       ]
     },
     "Hive": {
-      "abilities": [
-        "BuildInProgress",
-        "LairResearch",
-        "RallyHatchery",
-        "TrainQueen",
-        "que5CancelToSelection"
-      ],
-      "produces": [],
       "race": "Zerg",
       "researches": [
         "Burrow",
@@ -2300,13 +554,10 @@
       ]
     },
     "HydraliskDen": {
-      "abilities": [
-        "BuildInProgress",
-        "HydraliskDenResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Zerg",
+      "requires": [
+        "Lair"
+      ],
       "researches": [
         "EvolveGroovedSpines",
         "EvolveMuscularAugments",
@@ -2320,13 +571,10 @@
       ]
     },
     "InfestationPit": {
-      "abilities": [
-        "BuildInProgress",
-        "InfestationPitResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Zerg",
+      "requires": [
+        "Lair"
+      ],
       "researches": [
         "FlyingLocusts",
         "InfestorEnergyUpgrade",
@@ -2339,25 +587,13 @@
       ]
     },
     "InhibitorZoneBase": {
-      "produces": [],
-      "race": null,
-      "unlocks": []
+      "race": ""
     },
     "InhibitorZoneFlyingBase": {
-      "produces": [],
-      "race": null,
-      "unlocks": []
+      "race": ""
     },
     "Lair": {
-      "abilities": [
-        "BuildInProgress",
-        "LairResearch",
-        "RallyHatchery",
-        "TrainQueen",
-        "UpgradeToHive",
-        "que5CancelToSelection"
-      ],
-      "produces": [],
+      "morphsto": "Hive",
       "race": "Zerg",
       "researches": [
         "Burrow",
@@ -2368,19 +604,14 @@
         "HydraliskDen",
         "InfestationPit",
         "NydusNetwork",
-        "Overseer",
         "Spire"
       ]
     },
     "LurkerDenMP": {
-      "abilities": [
-        "BuildInProgress",
-        "HydraliskDenResearch",
-        "LurkerDenResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Zerg",
+      "requires": [
+        "HydraliskDen"
+      ],
       "researches": [
         "DiggingClaws",
         "EvolveGroovedSpines",
@@ -2388,42 +619,16 @@
         "HydraliskSpeedUpgrade",
         "LurkerRange",
         "hydraliskspeed"
-      ],
-      "unlocks": [
-        "LurkerMP"
       ]
     },
     "MissileTurret": {
-      "abilities": [
-        "BuildInProgress",
-        "attack",
-        "stop"
-      ],
-      "produces": [],
       "race": "Terran",
-      "unlocks": []
+      "requires": [
+        "EngineeringBay"
+      ]
     },
     "Nexus": {
-      "abilities": [
-        "BatteryOvercharge",
-        "BuildInProgress",
-        "ChronoBoostEnergyCost",
-        "EnergyRecharge",
-        "NexusInvulnerability",
-        "NexusMassRecall",
-        "NexusTrain",
-        "NexusTrainMothership",
-        "NexusTrainMothershipCore",
-        "RallyNexus",
-        "TimeWarp",
-        "attackProtossBuilding",
-        "que5",
-        "que5Passive",
-        "stopProtossBuilding"
-      ],
       "produces": [
-        "Mothership",
-        "MothershipCore",
         "Probe"
       ],
       "race": "Protoss",
@@ -2433,178 +638,73 @@
       ]
     },
     "NydusCanal": {
-      "abilities": [
-        "BuildinProgressNydusCanal",
-        "NydusCanalTransport",
-        "NydusWormTransport",
-        "Rally",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "NydusCanalAttacker": {
-      "abilities": [
-        "BuildinProgressNydusCanal",
-        "attack",
-        "move",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "NydusCanalCreeper": {
-      "abilities": [
-        "BuildinProgressNydusCanal",
-        "DigesterCreepSpray",
-        "attack",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "NydusNetwork": {
-      "abilities": [
-        "BuildInProgress",
-        "BuildNydusCanal",
-        "NydusCanalTransport",
-        "Rally",
-        "stop"
-      ],
-      "produces": [
-        "NydusCanal"
-      ],
       "race": "Zerg",
-      "unlocks": []
+      "requires": [
+        "Lair"
+      ]
     },
     "OrbitalCommand": {
-      "abilities": [
-        "BuildInProgress",
-        "CalldownMULE",
-        "CommandCenterTrain",
-        "OrbitalLiftOff",
-        "RallyCommand",
-        "ScannerSweep",
-        "SupplyDrop",
-        "que5CancelToSelection"
-      ],
+      "morphsto": "OrbitalCommandFlying",
       "produces": [
         "SCV"
       ],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "OrbitalCommandFlying": {
-      "abilities": [
-        "OrbitalCommandLand",
-        "move",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "PhotonCannon": {
-      "abilities": [
-        "BuildInProgress",
-        "attack",
-        "stop"
-      ],
-      "produces": [],
       "race": "Protoss",
-      "unlocks": []
+      "requires": [
+        "Forge"
+      ]
     },
     "PlanetaryFortress": {
-      "abilities": [
-        "BuildInProgress",
-        "CommandCenterTrain",
-        "CommandCenterTransport",
-        "RallyCommand",
-        "attack",
-        "que5PassiveCancelToSelection",
-        "stop"
-      ],
       "produces": [
         "SCV"
       ],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "Pylon": {
-      "abilities": [
-        "BuildInProgress",
-        "PurifyMorphPylon"
-      ],
-      "produces": [],
-      "race": "Protoss",
-      "unlocks": []
+      "race": "Protoss"
     },
     "Reactor": {
-      "abilities": [
-        "BarracksReactorMorph",
-        "BuildInProgress",
-        "FactoryReactorMorph",
-        "StarportReactorMorph"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "Refinery": {
-      "abilities": [
-        "BuildInProgress"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "RefineryRich": {
-      "abilities": [
-        "BuildInProgress"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "RenegadeMissileTurret": {
-      "abilities": [
-        "BuildInProgress",
-        "attack",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "RoachWarren": {
-      "abilities": [
-        "BuildInProgress",
-        "RoachWarrenResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Zerg",
+      "requires": [
+        "SpawningPool"
+      ],
       "researches": [
         "GlialReconstitution",
         "RoachSupply",
         "TunnelingClaws"
-      ],
-      "unlocks": [
-        "Ravager",
-        "Roach"
       ]
     },
     "RoboticsBay": {
-      "abilities": [
-        "BuildInProgress",
-        "RoboticsBayResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Protoss",
+      "requires": [
+        "RoboticsFa"
+      ],
       "researches": [
         "ExtendedThermalLance",
         "GraviticDrive",
@@ -2617,13 +717,6 @@
       ]
     },
     "RoboticsFacility": {
-      "abilities": [
-        "BuildInProgress",
-        "GatewayTrain",
-        "Rally",
-        "RoboticsFacilityTrain",
-        "que5"
-      ],
       "produces": [
         "Adept",
         "Colossus",
@@ -2638,42 +731,34 @@
         "Zealot"
       ],
       "race": "Protoss",
-      "unlocks": []
+      "requires": [
+        "CyberneticsCore"
+      ]
     },
     "SensorTower": {
-      "abilities": [
-        "BuildInProgress",
-        "SalvageEffect"
-      ],
-      "produces": [],
       "race": "Terran",
-      "unlocks": []
+      "requires": [
+        "EngineeringBay"
+      ]
     },
     "ShieldBattery": {
-      "abilities": [
-        "BuildInProgress",
-        "ShieldBatteryRechargeChanneled",
-        "ShieldBatteryRechargeEx5",
-        "stop"
-      ],
-      "produces": [],
       "race": "Protoss",
-      "unlocks": []
+      "requires": [
+        "CyberneticsCore"
+      ]
     },
     "SpawningPool": {
-      "abilities": [
-        "BuildInProgress",
-        "SpawningPoolResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Zerg",
+      "requires": [
+        "Hatchery"
+      ],
       "researches": [
         "zerglingattackspeed",
         "zerglingmovementspeed"
       ],
       "unlocks": [
         "BanelingNest",
+        "Digester",
         "Queen",
         "RoachWarren",
         "SpineCrawler",
@@ -2682,35 +767,20 @@
       ]
     },
     "SpineCrawler": {
-      "abilities": [
-        "BuildInProgress",
-        "SpineCrawlerUproot",
-        "attack",
-        "stop"
-      ],
-      "produces": [],
       "race": "Zerg",
-      "unlocks": []
+      "requires": [
+        "SpawningPool"
+      ]
     },
     "SpineCrawlerUprooted": {
-      "abilities": [
-        "SpineCrawlerRoot",
-        "move",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "Spire": {
-      "abilities": [
-        "BuildInProgress",
-        "SpireResearch",
-        "UpgradeToGreaterSpire",
-        "que5CancelToSelection"
-      ],
-      "produces": [],
+      "morphsto": "GreaterSpire",
       "race": "Zerg",
+      "requires": [
+        "Lair"
+      ],
       "researches": [
         "ZergFlyerArmorsLevel1",
         "ZergFlyerArmorsLevel2",
@@ -2725,33 +795,15 @@
       ]
     },
     "SporeCrawler": {
-      "abilities": [
-        "BuildInProgress",
-        "SporeCrawlerUproot",
-        "attack",
-        "stop"
-      ],
-      "produces": [],
       "race": "Zerg",
-      "unlocks": []
+      "requires": [
+        "SpawningPool"
+      ]
     },
     "SporeCrawlerUprooted": {
-      "abilities": [
-        "SporeCrawlerRoot",
-        "move",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Zerg",
-      "unlocks": []
+      "race": "Zerg"
     },
     "Stargate": {
-      "abilities": [
-        "BuildInProgress",
-        "Rally",
-        "StargateTrain",
-        "que5"
-      ],
       "produces": [
         "Carrier",
         "Oracle",
@@ -2760,19 +812,15 @@
         "VoidRay"
       ],
       "race": "Protoss",
+      "requires": [
+        "CyberneticsCore"
+      ],
       "unlocks": [
         "FleetBeacon"
       ]
     },
     "Starport": {
-      "abilities": [
-        "BuildInProgress",
-        "Rally",
-        "StarportAddOns",
-        "StarportLiftOff",
-        "StarportTrain",
-        "que5"
-      ],
+      "morphsto": "StarportFlying",
       "produces": [
         "Banshee",
         "Battlecruiser",
@@ -2782,94 +830,52 @@
         "VikingFighter"
       ],
       "race": "Terran",
+      "requires": [
+        "Factory"
+      ],
       "unlocks": [
         "FusionCore"
       ]
     },
     "StarportFlying": {
-      "abilities": [
-        "StarportAddOns",
-        "StarportLand",
-        "move",
-        "stop"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "StarportReactor": {
-      "abilities": [
-        "BarracksReactorMorph",
-        "BuildInProgress",
-        "FactoryReactorMorph",
-        "ReactorMorph"
-      ],
-      "produces": [],
       "race": "Terran",
-      "unlocks": []
+      "requires": [
+        "HasQueuedAddon"
+      ]
     },
     "SupplyDepot": {
-      "abilities": [
-        "BuildInProgress",
-        "SupplyDepotLower"
-      ],
-      "produces": [],
       "race": "Terran",
       "unlocks": [
         "Barracks"
       ]
     },
     "SupplyDepotLowered": {
-      "abilities": [
-        "BuildInProgress",
-        "SupplyDepotRaise"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "Tarsonis_Door": {
-      "produces": [],
-      "race": null,
-      "unlocks": []
+      "race": ""
     },
     "TechLab": {
-      "abilities": [
-        "BarracksTechLabMorph",
-        "BuildInProgress",
-        "FactoryTechLabMorph",
-        "StarportTechLabMorph",
-        "que5Addon"
-      ],
-      "produces": [],
-      "race": "Terran",
-      "unlocks": []
+      "race": "Terran"
     },
     "TemplarArchive": {
-      "abilities": [
-        "BuildInProgress",
-        "TemplarArchivesResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Protoss",
+      "requires": [
+        "TwilightCouncil"
+      ],
       "researches": [
         "HighTemplarKhaydarinAmulet",
         "PsiStormTech"
-      ],
-      "unlocks": [
-        "Archon",
-        "HighTemplar"
       ]
     },
     "TwilightCouncil": {
-      "abilities": [
-        "BuildInProgress",
-        "TwilightCouncilResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Protoss",
+      "requires": [
+        "CyberneticsCore"
+      ],
       "researches": [
         "AdeptShieldUpgrade",
         "AmplifiedShielding",
@@ -2884,13 +890,10 @@
       ]
     },
     "UltraliskCavern": {
-      "abilities": [
-        "BuildInProgress",
-        "UltraliskCavernResearch",
-        "que5"
-      ],
-      "produces": [],
       "race": "Zerg",
+      "requires": [
+        "Hive"
+      ],
       "researches": [
         "AnabolicSynthesis",
         "ChitinousPlating",
@@ -2901,11 +904,6 @@
       ]
     },
     "WarpGate": {
-      "abilities": [
-        "BuildInProgress",
-        "MorphBackToGateway",
-        "WarpGateTrain"
-      ],
       "produces": [
         "Adept",
         "DarkTemplar",
@@ -2914,43 +912,225 @@
         "Stalker",
         "Zealot"
       ],
-      "race": "Protoss",
-      "unlocks": []
+      "race": "Protoss"
     }
   },
   "units": {
+    "ATALaserBatteryLMWeapon": {
+      "race": "Terran"
+    },
+    "ATSLaserBatteryLMWeapon": {
+      "race": "Terran"
+    },
+    "AberrationACGluescreenDummy": {
+      "race": ""
+    },
+    "AccelerationZoneFlyingLarge": {
+      "race": ""
+    },
+    "AccelerationZoneFlyingMedium": {
+      "race": ""
+    },
+    "AccelerationZoneFlyingSmall": {
+      "race": ""
+    },
+    "AccelerationZoneLarge": {
+      "race": ""
+    },
+    "AccelerationZoneMedium": {
+      "race": ""
+    },
+    "AccelerationZoneSmall": {
+      "race": ""
+    },
+    "AcidSalivaWeapon": {
+      "race": "Zerg"
+    },
+    "AcidSpinesWeapon": {
+      "race": "Zerg"
+    },
     "Adept": {
       "race": "Protoss",
       "requires": [
         "CyberneticsCore"
       ]
     },
+    "AdeptFenixACGluescreenDummy": {
+      "race": ""
+    },
     "AdeptPhaseShift": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "AdeptPiercingWeapon": {
+      "race": "Protoss"
+    },
+    "AdeptUpgradeWeapon": {
+      "race": "Protoss"
+    },
+    "AdeptWeapon": {
+      "race": "Protoss"
+    },
+    "AiurLightBridgeAbandonedNE10": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNE10Out": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNE12": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNE12Out": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNE8": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNE8Out": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNW10": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNW10Out": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNW12": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNW12Out": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNW8": {
+      "race": ""
+    },
+    "AiurLightBridgeAbandonedNW8Out": {
+      "race": ""
+    },
+    "AiurLightBridgeNE10": {
+      "race": ""
+    },
+    "AiurLightBridgeNE10Out": {
+      "race": ""
+    },
+    "AiurLightBridgeNE12": {
+      "race": ""
+    },
+    "AiurLightBridgeNE12Out": {
+      "race": ""
+    },
+    "AiurLightBridgeNE8": {
+      "race": ""
+    },
+    "AiurLightBridgeNE8Out": {
+      "race": ""
+    },
+    "AiurLightBridgeNW10": {
+      "race": ""
+    },
+    "AiurLightBridgeNW10Out": {
+      "race": ""
+    },
+    "AiurLightBridgeNW12": {
+      "race": ""
+    },
+    "AiurLightBridgeNW12Out": {
+      "race": ""
+    },
+    "AiurLightBridgeNW8": {
+      "race": ""
+    },
+    "AiurLightBridgeNW8Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleNE10Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleNE12Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleNE8Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleNW10Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleNW12Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleNW8Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleSE10Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleSE12Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleSE8Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleSW10Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleSW12Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeDestructibleSW8Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeNE10Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeNE12Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeNE8Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeNW10Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeNW12Out": {
+      "race": ""
+    },
+    "AiurTempleBridgeNW8Out": {
+      "race": ""
+    },
+    "Anteplott": {
+      "race": ""
     },
     "ArbiterMP": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "ArbiterMPWeaponMissile": {
+      "race": "Protoss"
     },
     "Archon": {
-      "race": "Protoss",
-      "requires": [
-        "DarkShrine",
-        "TemplarArchive"
-      ]
+      "race": "Protoss"
+    },
+    "ArchonACGluescreenDummy": {
+      "race": ""
+    },
+    "ArtilleryMengskACGluescreenDummy": {
+      "race": ""
+    },
+    "Artosilope": {
+      "race": ""
     },
     "AutoTestAttackTargetAir": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "AutoTestAttackTargetGround": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "AutoTestAttacker": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "AutoTurretReleaseWeapon": {
+      "race": "Terran"
+    },
+    "BacklashRocketsLMWeapon": {
+      "race": "Terran"
     },
     "Baneling": {
       "race": "Zerg",
@@ -2958,13 +1138,15 @@
         "BanelingNest"
       ]
     },
+    "BanelingACGluescreenDummy": {
+      "race": ""
+    },
     "BanelingBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
     },
     "BanelingCocoon": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": "Baneling",
+      "race": "Zerg"
     },
     "Banshee": {
       "race": "Terran",
@@ -2972,30 +1154,170 @@
         "AttachedTechLab"
       ]
     },
+    "BansheeACGluescreenDummy": {
+      "race": ""
+    },
+    "BarracksTechLab": {
+      "race": "",
+      "researches": [
+        "CombatDrugs",
+        "PunisherGrenades",
+        "ReaperSpeed",
+        "ShieldWall",
+        "Stimpack"
+      ]
+    },
+    "BattleStationMineralField": {
+      "race": ""
+    },
+    "BattleStationMineralField750": {
+      "race": ""
+    },
     "Battlecruiser": {
       "race": "Terran",
       "requires": [
-        "AttachedTechLab",
+        "AttachedStarportTechLab",
         "FusionCore"
       ]
     },
+    "BattlecruiserACGluescreenDummy": {
+      "race": ""
+    },
+    "BattlecruiserMengskACGluescreenDummy": {
+      "race": ""
+    },
+    "BeaconArmy": {
+      "race": ""
+    },
+    "BeaconAttack": {
+      "race": ""
+    },
+    "BeaconAuto": {
+      "race": ""
+    },
+    "BeaconClaim": {
+      "race": ""
+    },
+    "BeaconCustom1": {
+      "race": ""
+    },
+    "BeaconCustom2": {
+      "race": ""
+    },
+    "BeaconCustom3": {
+      "race": ""
+    },
+    "BeaconCustom4": {
+      "race": ""
+    },
+    "BeaconDefend": {
+      "race": ""
+    },
+    "BeaconDetect": {
+      "race": ""
+    },
+    "BeaconExpand": {
+      "race": ""
+    },
+    "BeaconHarass": {
+      "race": ""
+    },
+    "BeaconIdle": {
+      "race": ""
+    },
+    "BeaconRally": {
+      "race": ""
+    },
+    "BeaconScout": {
+      "race": ""
+    },
+    "Beacon_Nova": {
+      "race": ""
+    },
+    "Beacon_NovaSmall": {
+      "race": ""
+    },
+    "Beacon_Protoss": {
+      "race": ""
+    },
+    "Beacon_ProtossSmall": {
+      "race": ""
+    },
+    "Beacon_Terran": {
+      "race": ""
+    },
+    "Beacon_TerranSmall": {
+      "race": ""
+    },
+    "Beacon_Zerg": {
+      "race": ""
+    },
+    "Beacon_ZergSmall": {
+      "race": ""
+    },
+    "BileLauncherACGluescreenDummy": {
+      "race": ""
+    },
+    "BlackOpsMissileTurretACGluescreenDummy": {
+      "race": ""
+    },
+    "BlasterBillyACGluescreenDummy": {
+      "race": ""
+    },
+    "BlimpMengskACGluescreenDummy": {
+      "race": ""
+    },
+    "BraxisAlphaDestructible1x1": {
+      "race": ""
+    },
+    "BraxisAlphaDestructible2x2": {
+      "race": ""
+    },
     "BroodLord": {
-      "race": "Zerg",
-      "requires": [
-        "GreaterSpire"
-      ]
+      "race": "Zerg"
+    },
+    "BroodLordACGluescreenDummy": {
+      "race": ""
+    },
+    "BroodLordAWeapon": {
+      "race": "Zerg"
+    },
+    "BroodLordBWeapon": {
+      "race": "Zerg"
     },
     "BroodLordCocoon": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": "BroodLord",
+      "race": "Zerg"
+    },
+    "BroodLordWeapon": {
+      "race": "Zerg"
+    },
+    "Broodling": {
+      "race": ""
     },
     "BroodlingDefault": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "BroodlingEscort": {
+      "race": "",
+      "requires": [
+        "ArmBroodlingEscort"
+      ]
+    },
+    "BrutaliskACGluescreenDummy": {
+      "race": ""
+    },
+    "BunkerACGluescreenDummy": {
+      "race": ""
+    },
+    "BunkerDepotMengskACGluescreenDummy": {
+      "race": ""
+    },
+    "BunkerUpgradedACGluescreenDummy": {
+      "race": ""
     },
     "BypassArmorDrone": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "Carrier": {
       "race": "Protoss",
@@ -3003,9 +1325,142 @@
         "FleetBeacon"
       ]
     },
+    "CarrierACGluescreenDummy": {
+      "race": ""
+    },
+    "CarrierAiurACGluescreenDummy": {
+      "race": ""
+    },
+    "CarrierFenixACGluescreenDummy": {
+      "race": ""
+    },
+    "CarrionBird": {
+      "race": ""
+    },
+    "CausticSprayMissile": {
+      "race": "Zerg"
+    },
     "Changeling": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "ChangelingMarine": {
+      "race": "Zerg"
+    },
+    "ChangelingMarineShield": {
+      "race": "Zerg"
+    },
+    "ChangelingZealot": {
+      "race": "Zerg"
+    },
+    "ChangelingZergling": {
+      "race": ""
+    },
+    "ChangelingZerglingWings": {
+      "race": ""
+    },
+    "CleaningBot": {
+      "race": ""
+    },
+    "CollapsiblePurifierTowerDebris": {
+      "race": ""
+    },
+    "CollapsiblePurifierTowerDiagonal": {
+      "morphsto": "CollapsiblePurifierTowerDebris",
+      "race": ""
+    },
+    "CollapsiblePurifierTowerPushUnit": {
+      "morphsto": "CollapsiblePurifierTowerDebris",
+      "race": ""
+    },
+    "CollapsibleRockTower": {
+      "morphsto": "CollapsibleRockTowerDebris",
+      "race": ""
+    },
+    "CollapsibleRockTowerDebris": {
+      "race": ""
+    },
+    "CollapsibleRockTowerDebrisRampLeft": {
+      "race": ""
+    },
+    "CollapsibleRockTowerDebrisRampLeftGreen": {
+      "race": ""
+    },
+    "CollapsibleRockTowerDebrisRampRight": {
+      "race": ""
+    },
+    "CollapsibleRockTowerDebrisRampRightGreen": {
+      "race": ""
+    },
+    "CollapsibleRockTowerDiagonal": {
+      "morphsto": "CollapsibleRockTowerDebris",
+      "race": ""
+    },
+    "CollapsibleRockTowerPushUnit": {
+      "morphsto": "CollapsibleRockTowerDebris",
+      "race": ""
+    },
+    "CollapsibleRockTowerPushUnitRampLeft": {
+      "morphsto": "CollapsibleRockTowerDebrisRampLeft",
+      "race": ""
+    },
+    "CollapsibleRockTowerPushUnitRampLeftGreen": {
+      "morphsto": "CollapsibleRockTowerDebrisRampLeftGreen",
+      "race": ""
+    },
+    "CollapsibleRockTowerPushUnitRampRight": {
+      "morphsto": "CollapsibleRockTowerDebrisRampRight",
+      "race": ""
+    },
+    "CollapsibleRockTowerPushUnitRampRightGreen": {
+      "morphsto": "CollapsibleRockTowerDebrisRampRightGreen",
+      "race": ""
+    },
+    "CollapsibleRockTowerRampLeft": {
+      "morphsto": "CollapsibleRockTowerDebrisRampLeft",
+      "race": ""
+    },
+    "CollapsibleRockTowerRampLeftGreen": {
+      "morphsto": "CollapsibleRockTowerDebrisRampLeftGreen",
+      "race": ""
+    },
+    "CollapsibleRockTowerRampRight": {
+      "morphsto": "CollapsibleRockTowerDebrisRampRight",
+      "race": ""
+    },
+    "CollapsibleRockTowerRampRightGreen": {
+      "morphsto": "CollapsibleRockTowerDebrisRampRightGreen",
+      "race": ""
+    },
+    "CollapsibleTerranTower": {
+      "morphsto": "CollapsibleTerranTowerDebris",
+      "race": ""
+    },
+    "CollapsibleTerranTowerDebris": {
+      "race": ""
+    },
+    "CollapsibleTerranTowerDiagonal": {
+      "morphsto": "CollapsibleTerranTowerDebris",
+      "race": ""
+    },
+    "CollapsibleTerranTowerPushUnit": {
+      "morphsto": "CollapsibleTerranTowerDebris",
+      "race": ""
+    },
+    "CollapsibleTerranTowerPushUnitRampLeft": {
+      "morphsto": "DebrisRampLeft",
+      "race": ""
+    },
+    "CollapsibleTerranTowerPushUnitRampRight": {
+      "morphsto": "DebrisRampRight",
+      "race": ""
+    },
+    "CollapsibleTerranTowerRampLeft": {
+      "morphsto": "DebrisRampLeft",
+      "race": ""
+    },
+    "CollapsibleTerranTowerRampRight": {
+      "morphsto": "DebrisRampRight",
+      "race": ""
     },
     "Colossus": {
       "race": "Protoss",
@@ -3013,23 +1468,108 @@
         "RoboticsBay"
       ]
     },
+    "ColossusACGluescreenDummy": {
+      "race": ""
+    },
+    "ColossusFenixACGluescreenDummy": {
+      "race": ""
+    },
+    "ColossusPurifierACGluescreenDummy": {
+      "race": ""
+    },
+    "ColossusTaldarimACGluescreenDummy": {
+      "race": ""
+    },
+    "CommentatorBot1": {
+      "race": ""
+    },
+    "CommentatorBot2": {
+      "race": ""
+    },
+    "CommentatorBot3": {
+      "race": ""
+    },
+    "CommentatorBot4": {
+      "race": ""
+    },
+    "CompoundMansion_DoorE": {
+      "race": ""
+    },
+    "CompoundMansion_DoorELowered": {
+      "race": ""
+    },
+    "CompoundMansion_DoorN": {
+      "race": ""
+    },
+    "CompoundMansion_DoorNE": {
+      "race": ""
+    },
+    "CompoundMansion_DoorNELowered": {
+      "race": ""
+    },
+    "CompoundMansion_DoorNLowered": {
+      "race": ""
+    },
+    "CompoundMansion_DoorNW": {
+      "race": ""
+    },
+    "CompoundMansion_DoorNWLowered": {
+      "race": ""
+    },
+    "ContaminateWeapon": {
+      "race": "Zerg"
+    },
+    "CorrosiveParasiteWeapon": {
+      "race": "Zerg"
+    },
+    "CorruptionWeapon": {
+      "race": "Zerg"
+    },
     "Corruptor": {
+      "morphsto": "BroodLord",
       "race": "Zerg",
       "requires": [
         "Spire"
       ]
     },
+    "CorruptorACGluescreenDummy": {
+      "race": ""
+    },
+    "CorsairACGluescreenDummy": {
+      "race": ""
+    },
     "CorsairMP": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "CovertBansheeACGluescreenDummy": {
+      "race": ""
+    },
+    "Cow": {
+      "race": ""
+    },
+    "Crabeetle": {
+      "race": ""
+    },
+    "CreepBlocker1x1": {
+      "race": ""
+    },
+    "CreepBlocker4x4": {
+      "race": ""
+    },
+    "CreepOnlyBlocker4x4": {
+      "race": ""
+    },
+    "CreepTumorMissile": {
+      "race": "Zerg"
+    },
+    "CreeperHostACGluescreenDummy": {
+      "race": ""
     },
     "Critter": {
-      "race": null,
-      "requires": []
+      "race": ""
     },
     "CritterStationary": {
-      "race": null,
-      "requires": []
+      "race": ""
     },
     "Cyclone": {
       "race": "Terran",
@@ -3037,27 +1577,273 @@
         "AttachedTechLab"
       ]
     },
+    "CycloneACGluescreenDummy": {
+      "race": ""
+    },
+    "CycloneMissile": {
+      "race": "Terran"
+    },
+    "CycloneMissileLarge": {
+      "race": "Terran"
+    },
+    "CycloneMissileLargeAir": {
+      "race": "Terran"
+    },
+    "CycloneMissileLargeAirAlternative": {
+      "race": "Terran"
+    },
+    "D8ChargeWeapon": {
+      "race": "Terran"
+    },
+    "DarkArchonACGluescreenDummy": {
+      "race": ""
+    },
+    "DarkPylonACGluescreenDummy": {
+      "race": ""
+    },
     "DarkTemplar": {
       "race": "Protoss",
       "requires": [
         "DarkShrine"
       ]
     },
+    "DarkTemplarShakurasACGluescreenDummy": {
+      "race": ""
+    },
+    "Debris2x2NonConjoined": {
+      "race": ""
+    },
+    "DebrisRampLeft": {
+      "race": ""
+    },
+    "DebrisRampRight": {
+      "race": ""
+    },
     "DefilerMP": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
     },
     "DefilerMPBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "DefilerMPDarkSwarmWeapon": {
+      "race": "Zerg"
+    },
+    "DefilerMPPlagueWeapon": {
+      "race": "Zerg"
+    },
+    "DesertPlanetSearchlight": {
+      "race": ""
+    },
+    "DesertPlanetStreetlight": {
+      "race": ""
+    },
+    "DestructibleBillboardScrollingText": {
+      "race": ""
+    },
+    "DestructibleBillboardTall": {
+      "race": ""
+    },
+    "DestructibleBullhornLights": {
+      "race": ""
+    },
+    "DestructibleCityDebris2x4Horizontal": {
+      "race": ""
+    },
+    "DestructibleCityDebris2x4Vertical": {
+      "race": ""
+    },
+    "DestructibleCityDebris2x6Horizontal": {
+      "race": ""
+    },
+    "DestructibleCityDebris2x6Vertical": {
+      "race": ""
+    },
+    "DestructibleCityDebris4x4": {
+      "race": ""
+    },
+    "DestructibleCityDebris6x6": {
+      "race": ""
+    },
+    "DestructibleCityDebrisHugeDiagonalBLUR": {
+      "race": ""
+    },
+    "DestructibleCityDebrisHugeDiagonalULBR": {
+      "race": ""
+    },
+    "DestructibleDebris4x4": {
+      "race": ""
+    },
+    "DestructibleDebris6x6": {
+      "race": ""
+    },
+    "DestructibleDebrisRampDiagonalHugeBLUR": {
+      "race": ""
+    },
+    "DestructibleDebrisRampDiagonalHugeULBR": {
+      "race": ""
+    },
+    "DestructibleExpeditionGate6x6": {
+      "race": ""
+    },
+    "DestructibleGarage": {
+      "race": ""
+    },
+    "DestructibleGarageLarge": {
+      "race": ""
+    },
+    "DestructibleIce2x4Horizontal": {
+      "race": ""
+    },
+    "DestructibleIce2x4Vertical": {
+      "race": ""
+    },
+    "DestructibleIce2x6Horizontal": {
+      "race": ""
+    },
+    "DestructibleIce2x6Vertical": {
+      "race": ""
+    },
+    "DestructibleIce4x4": {
+      "race": ""
+    },
+    "DestructibleIce6x6": {
+      "race": ""
+    },
+    "DestructibleIceDiagonalHugeBLUR": {
+      "race": ""
+    },
+    "DestructibleIceDiagonalHugeULBR": {
+      "race": ""
+    },
+    "DestructibleIceHorizontalHuge": {
+      "race": ""
+    },
+    "DestructibleIceVerticalHuge": {
+      "race": ""
+    },
+    "DestructibleRampDiagonalHugeBLUR": {
+      "race": ""
+    },
+    "DestructibleRampDiagonalHugeULBR": {
+      "race": ""
+    },
+    "DestructibleRampHorizontalHuge": {
+      "race": ""
+    },
+    "DestructibleRampVerticalHuge": {
+      "race": ""
+    },
+    "DestructibleRock2x4Horizontal": {
+      "race": ""
+    },
+    "DestructibleRock2x4Vertical": {
+      "race": ""
+    },
+    "DestructibleRock2x6Horizontal": {
+      "race": ""
+    },
+    "DestructibleRock2x6Vertical": {
+      "race": ""
+    },
+    "DestructibleRock4x4": {
+      "race": ""
+    },
+    "DestructibleRock6x6": {
+      "race": ""
+    },
+    "DestructibleRock6x6Weak": {
+      "race": ""
+    },
+    "DestructibleRockEx12x4Horizontal": {
+      "race": ""
+    },
+    "DestructibleRockEx12x4Vertical": {
+      "race": ""
+    },
+    "DestructibleRockEx12x6Horizontal": {
+      "race": ""
+    },
+    "DestructibleRockEx12x6Vertical": {
+      "race": ""
+    },
+    "DestructibleRockEx14x4": {
+      "race": ""
+    },
+    "DestructibleRockEx16x6": {
+      "race": ""
+    },
+    "DestructibleRockEx1DiagonalHugeBLUR": {
+      "race": ""
+    },
+    "DestructibleRockEx1DiagonalHugeULBR": {
+      "race": ""
+    },
+    "DestructibleRockEx1HorizontalHuge": {
+      "race": ""
+    },
+    "DestructibleRockEx1VerticalHuge": {
+      "race": ""
+    },
+    "DestructibleSearchlight": {
+      "race": ""
+    },
+    "DestructibleSignsConstruction": {
+      "race": ""
+    },
+    "DestructibleSignsDirectional": {
+      "race": ""
+    },
+    "DestructibleSignsFunny": {
+      "race": ""
+    },
+    "DestructibleSignsIcons": {
+      "race": ""
+    },
+    "DestructibleSignsWarning": {
+      "race": ""
+    },
+    "DestructibleSpacePlatformBarrier": {
+      "race": ""
+    },
+    "DestructibleSpacePlatformSign": {
+      "race": ""
+    },
+    "DestructibleStoreFrontCityProps": {
+      "race": ""
+    },
+    "DestructibleStreetlight": {
+      "race": ""
+    },
+    "DestructibleTrafficSignal": {
+      "race": ""
+    },
+    "DestructibleZergInfestation3x3": {
+      "race": ""
+    },
+    "DevastationTurretACGluescreenDummy": {
+      "race": ""
+    },
+    "DevourerACGluescreenDummy": {
+      "race": ""
     },
     "DevourerCocoonMP": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": [
+        "DevourerCocoonMP",
+        "DevourerMP"
+      ],
+      "race": "Zerg"
     },
     "DevourerMP": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "DevourerMPWeaponMissile": {
+      "race": "Protoss"
+    },
+    "DigesterCreepSprayTargetUnit": {
+      "race": ""
+    },
+    "DigesterCreepSprayUnit": {
+      "race": ""
     },
     "Disruptor": {
       "race": "Protoss",
@@ -3065,14 +1851,23 @@
         "RoboticsBay"
       ]
     },
+    "DisruptorACGluescreenDummy": {
+      "race": ""
+    },
     "DisruptorPhased": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "Dog": {
+      "race": ""
+    },
+    "DragoonACGluescreenDummy": {
+      "race": ""
     },
     "Drone": {
       "builds": [
         "BanelingNest",
         "CreepTumor",
+        "Digester",
         "EvolutionChamber",
         "Extractor",
         "Hatchery",
@@ -3087,83 +1882,303 @@
         "SporeCrawler",
         "UltraliskCavern"
       ],
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
     },
     "DroneBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "EMP2Weapon": {
+      "race": "Terran"
     },
     "Egg": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "EliteMarineACGluescreenDummy": {
+      "race": ""
+    },
+    "EnemyPathingBlocker16x16": {
+      "race": ""
+    },
+    "EnemyPathingBlocker1x1": {
+      "race": ""
+    },
+    "EnemyPathingBlocker2x2": {
+      "race": ""
+    },
+    "EnemyPathingBlocker4x4": {
+      "race": ""
+    },
+    "EnemyPathingBlocker8x8": {
+      "race": ""
+    },
+    "ExtendingBridgeNEWide10": {
+      "race": ""
+    },
+    "ExtendingBridgeNEWide10Out": {
+      "race": ""
+    },
+    "ExtendingBridgeNEWide12": {
+      "race": ""
+    },
+    "ExtendingBridgeNEWide12Out": {
+      "race": ""
+    },
+    "ExtendingBridgeNEWide8": {
+      "race": ""
+    },
+    "ExtendingBridgeNEWide8Out": {
+      "race": ""
+    },
+    "ExtendingBridgeNWWide10": {
+      "race": ""
+    },
+    "ExtendingBridgeNWWide10Out": {
+      "race": ""
+    },
+    "ExtendingBridgeNWWide12": {
+      "race": ""
+    },
+    "ExtendingBridgeNWWide12Out": {
+      "race": ""
+    },
+    "ExtendingBridgeNWWide8": {
+      "race": ""
+    },
+    "ExtendingBridgeNWWide8Out": {
+      "race": ""
+    },
+    "ExtendingBridgeNoMinimap": {
+      "race": ""
+    },
+    "EyeStalkWeapon": {
+      "race": "Zerg"
+    },
+    "FactoryTechLab": {
+      "race": "",
+      "researches": [
+        "ArmorPiercingRockets",
+        "CycloneAirUpgrade",
+        "CycloneLockOnDamageUpgrade",
+        "CycloneLockOnRangeUpgrade",
+        "CycloneRapidFireLaunchers",
+        "DrillClaws",
+        "HighCapacityBarrels",
+        "HurricaneThrusters",
+        "SiegeTech",
+        "StrikeCannons",
+        "TransformationServos"
+      ]
+    },
+    "FireRoachACGluescreenDummy": {
+      "race": ""
+    },
+    "FirebatACGluescreenDummy": {
+      "race": ""
+    },
+    "FlamingBettyACGluescreenDummy": {
+      "race": ""
+    },
+    "FlyoverUnit": {
+      "race": ""
+    },
+    "FrenzyWeapon": {
+      "race": "Zerg"
+    },
+    "FungalGrowthMissile": {
+      "race": "Zerg"
     },
     "Ghost": {
       "race": "Terran",
       "requires": [
-        "AttachedTechLab",
-        "GhostAcademy",
+        "AttachedBarrTechLab",
         "ShadowOps"
       ]
     },
+    "GhostAlternate": {
+      "morphsto": "GhostNova",
+      "race": ""
+    },
+    "GhostMengskACGluescreenDummy": {
+      "race": ""
+    },
+    "GhostNova": {
+      "race": ""
+    },
+    "GlaiveWurmBounceWeapon": {
+      "race": ""
+    },
+    "GlaiveWurmM2Weapon": {
+      "race": ""
+    },
+    "GlaiveWurmM3Weapon": {
+      "race": ""
+    },
+    "GlaiveWurmWeapon": {
+      "race": "Zerg"
+    },
+    "GlobeStatue": {
+      "race": ""
+    },
+    "GoliathACGluescreenDummy": {
+      "race": ""
+    },
+    "GrappleWeapon": {
+      "race": "Terran"
+    },
+    "GuardianACGluescreenDummy": {
+      "race": ""
+    },
     "GuardianCocoonMP": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": [
+        "GuardianCocoonMP",
+        "GuardianMP"
+      ],
+      "race": "Zerg"
     },
     "GuardianMP": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "GuardianMPWeapon": {
+      "race": "Zerg"
     },
     "HERC": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "HERCPlacement": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "HHBattlecruiserACGluescreenDummy": {
+      "race": ""
+    },
+    "HHBomberPlatformACGluescreenDummy": {
+      "race": ""
+    },
+    "HHHellionTankACGluescreenDummy": {
+      "race": ""
+    },
+    "HHMercStarportACGluescreenDummy": {
+      "race": ""
+    },
+    "HHMissileTurretACGluescreenDummy": {
+      "race": ""
+    },
+    "HHRavenACGluescreenDummy": {
+      "race": ""
+    },
+    "HHReaperACGluescreenDummy": {
+      "race": ""
+    },
+    "HHVikingACGluescreenDummy": {
+      "race": ""
+    },
+    "HHWidowMineACGluescreenDummy": {
+      "race": ""
+    },
+    "HHWraithACGluescreenDummy": {
+      "race": ""
+    },
+    "HeavySiegeTankACGluescreenDummy": {
+      "race": ""
+    },
+    "HellbatACGluescreenDummy": {
+      "race": ""
+    },
+    "HellbatRangerACGluescreenDummy": {
+      "race": ""
     },
     "Hellion": {
-      "race": "Terran",
-      "requires": []
+      "morphsto": "HellionTank",
+      "race": "Terran"
     },
     "HellionTank": {
+      "morphsto": "Hellion",
       "race": "Terran",
       "requires": [
         "Armory"
       ]
     },
+    "HelperEmitterSelectionArrow": {
+      "race": ""
+    },
+    "HerculesACGluescreenDummy": {
+      "race": ""
+    },
     "HighTemplar": {
       "race": "Protoss",
       "requires": [
-        "TemplarArchive",
         "TemplarArchives"
       ]
     },
+    "HighTemplarACGluescreenDummy": {
+      "race": ""
+    },
     "HighTemplarSkinPreview": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "HighTemplarTaldarimACGluescreenDummy": {
+      "race": ""
+    },
+    "HighTemplarWeaponMissile": {
+      "race": "Protoss"
+    },
+    "HunterSeekerWeapon": {
+      "race": "Terran"
     },
     "Hydralisk": {
+      "morphsto": [
+        "LurkerMP",
+        "LurkerMPEgg"
+      ],
       "race": "Zerg",
       "requires": [
         "HydraliskDen"
       ]
     },
+    "HydraliskACGluescreenDummy": {
+      "race": ""
+    },
     "HydraliskBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "HydraliskImpaleMissile": {
+      "race": "Zerg"
+    },
+    "HydraliskLurkerACGluescreenDummy": {
+      "race": ""
+    },
+    "Ice2x2NonConjoined": {
+      "race": ""
+    },
+    "IceProtossCrates": {
+      "race": "Protoss"
     },
     "Immortal": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "ImmortalACGluescreenDummy": {
+      "race": ""
+    },
+    "ImmortalFenixACGluescreenDummy": {
+      "race": ""
+    },
+    "ImmortalKaraxACGluescreenDummy": {
+      "race": ""
+    },
+    "ImmortalTaldarimACGluescreenDummy": {
+      "race": ""
+    },
+    "InfestedAcidSpinesWeapon": {
+      "race": "Zerg"
     },
     "InfestedTerransEgg": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": "InfestorTerran",
+      "race": "Zerg"
     },
     "InfestedTerransEggPlacement": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "InfestedTerransWeapon": {
+      "race": "Zerg"
     },
     "Infestor": {
       "race": "Zerg",
@@ -3172,68 +2187,219 @@
       ]
     },
     "InfestorBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "InfestorEnsnareAttackMissile": {
+      "race": ""
     },
     "InfestorTerran": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
     },
     "InfestorTerranBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "InfestorTerransWeapon": {
+      "race": "Zerg"
+    },
+    "InhibitorZoneFlyingLarge": {
+      "race": ""
+    },
+    "InhibitorZoneFlyingMedium": {
+      "race": ""
+    },
+    "InhibitorZoneFlyingSmall": {
+      "race": ""
+    },
+    "InhibitorZoneLarge": {
+      "race": ""
+    },
+    "InhibitorZoneMedium": {
+      "race": ""
+    },
+    "InhibitorZoneSmall": {
+      "race": ""
     },
     "Interceptor": {
       "race": "Protoss",
-      "requires": []
-    },
-    "KD8Charge": {
-      "race": "Terran",
-      "requires": []
-    },
-    "Larva": {
-      "race": "Zerg",
       "requires": [
-        "Larva"
+        "ArmInterceptor"
       ]
     },
+    "InvisibleTargetDummy": {
+      "race": ""
+    },
+    "IonCannonsWeapon": {
+      "race": "Protoss"
+    },
+    "KD8Charge": {
+      "race": "Terran"
+    },
+    "KD8ChargeWeapon": {
+      "race": "Terran"
+    },
+    "KarakFemale": {
+      "race": ""
+    },
+    "KarakMale": {
+      "race": ""
+    },
+    "KhaydarinMonolithACGluescreenDummy": {
+      "race": ""
+    },
+    "LabBot": {
+      "race": ""
+    },
+    "LabMineralField": {
+      "race": ""
+    },
+    "LabMineralField750": {
+      "race": ""
+    },
+    "Larva": {
+      "morphsto": [
+        "Baneling",
+        "Corruptor",
+        "Drone",
+        "Hydralisk",
+        "Infestor",
+        "Mutalisk",
+        "Overlord",
+        "Roach",
+        "SwarmHostMP",
+        "Ultralisk",
+        "Viper",
+        "Zergling"
+      ],
+      "produces": [
+        "Baneling",
+        "Corruptor",
+        "Drone",
+        "Hydralisk",
+        "Infestor",
+        "Mutalisk",
+        "Overlord",
+        "Roach",
+        "SwarmHostMP",
+        "Ultralisk",
+        "Viper",
+        "Zergling"
+      ],
+      "race": "Zerg"
+    },
+    "LarvaReleaseMissile": {
+      "race": "Zerg"
+    },
+    "LeviathanACGluescreenDummy": {
+      "race": ""
+    },
     "Liberator": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "LiberatorAG": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "LiberatorAGMissile": {
+      "race": "Terran"
+    },
+    "LiberatorDamageMissile": {
+      "race": "Terran"
+    },
+    "LiberatorMissile": {
+      "race": "Terran"
     },
     "LiberatorSkinPreview": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "LightningBombWeapon": {
+      "race": "Protoss"
+    },
+    "LoadOutSpray@1": {
+      "race": ""
+    },
+    "LoadOutSpray@10": {
+      "race": ""
+    },
+    "LoadOutSpray@11": {
+      "race": ""
+    },
+    "LoadOutSpray@12": {
+      "race": ""
+    },
+    "LoadOutSpray@13": {
+      "race": ""
+    },
+    "LoadOutSpray@14": {
+      "race": ""
+    },
+    "LoadOutSpray@2": {
+      "race": ""
+    },
+    "LoadOutSpray@3": {
+      "race": ""
+    },
+    "LoadOutSpray@4": {
+      "race": ""
+    },
+    "LoadOutSpray@5": {
+      "race": ""
+    },
+    "LoadOutSpray@6": {
+      "race": ""
+    },
+    "LoadOutSpray@7": {
+      "race": ""
+    },
+    "LoadOutSpray@8": {
+      "race": ""
+    },
+    "LoadOutSpray@9": {
+      "race": ""
     },
     "LocustMP": {
       "race": "Zerg",
-      "requires": []
-    },
-    "LocustMPFlying": {
-      "race": "Zerg",
-      "requires": []
-    },
-    "LurkerMP": {
-      "race": "Zerg",
       "requires": [
-        "LurkerDenMP"
+        "SwarmHostSpawn"
       ]
     },
+    "LocustMPEggAMissileWeapon": {
+      "race": "Zerg"
+    },
+    "LocustMPEggBMissileWeapon": {
+      "race": "Zerg"
+    },
+    "LocustMPFlying": {
+      "race": "Zerg"
+    },
+    "LocustMPPrecursor": {
+      "race": ""
+    },
+    "LocustMPWeapon": {
+      "race": "Zerg"
+    },
+    "LongboltMissileWeapon": {
+      "race": "Terran"
+    },
+    "LurkerACGluescreenDummy": {
+      "race": ""
+    },
+    "LurkerMP": {
+      "race": "Zerg"
+    },
     "LurkerMPBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
     },
     "LurkerMPEgg": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": [
+        "LurkerMP",
+        "LurkerMPEgg"
+      ],
+      "race": "Zerg"
+    },
+    "Lyote": {
+      "race": ""
     },
     "MULE": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "Marauder": {
       "race": "Terran",
@@ -3241,25 +2407,114 @@
         "AttachedTechLab"
       ]
     },
+    "MarauderACGluescreenDummy": {
+      "race": ""
+    },
+    "MarauderCommandoACGluescreenDummy": {
+      "race": ""
+    },
+    "MarauderMengskACGluescreenDummy": {
+      "race": ""
+    },
     "Marine": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "MarineACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaBanelingACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaBattlecarrierLordACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaCorruptorACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaHydraliskACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaInfestorACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaLurkerACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaOverseerACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaSpineCrawlerACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaSporeCrawlerACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaUltraliskACGluescreenDummy": {
+      "race": ""
+    },
+    "MechaZerglingACGluescreenDummy": {
+      "race": ""
+    },
+    "MedicACGluescreenDummy": {
+      "race": ""
     },
     "Medivac": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "MedivacMengskACGluescreenDummy": {
+      "race": ""
+    },
+    "MengskStatue": {
+      "race": ""
+    },
+    "MengskStatueAlone": {
+      "race": ""
+    },
+    "MineralField": {
+      "race": ""
+    },
+    "MineralField450": {
+      "race": ""
+    },
+    "MineralField750": {
+      "race": ""
+    },
+    "MineralFieldDefault": {
+      "race": ""
+    },
+    "MineralFieldOpaque": {
+      "race": ""
+    },
+    "MineralFieldOpaque900": {
+      "race": ""
+    },
+    "MissileTurretACGluescreenDummy": {
+      "race": ""
+    },
+    "MissileTurretMengskACGluescreenDummy": {
+      "race": ""
+    },
+    "Moopy": {
+      "race": ""
     },
     "Mothership": {
       "race": "Protoss",
       "requires": [
-        "FleetBeacon"
+        "MothershipRequirements"
       ]
     },
     "MothershipCore": {
+      "morphsto": "Mothership",
       "race": "Protoss",
       "requires": [
-        "CyberneticsCore"
+        "MothershipCoreRequirements"
       ]
+    },
+    "MothershipCoreWeaponWeapon": {
+      "race": "Protoss"
+    },
+    "MultiKillObject": {
+      "race": ""
     },
     "Mutalisk": {
       "race": "Zerg",
@@ -3267,46 +2522,373 @@
         "Spire"
       ]
     },
+    "MutaliskACGluescreenDummy": {
+      "race": ""
+    },
+    "MutaliskBroodlordACGluescreenDummy": {
+      "race": ""
+    },
+    "NeedleSpinesWeapon": {
+      "race": ""
+    },
+    "NeuralParasiteTentacleMissile": {
+      "race": "Zerg"
+    },
+    "NeuralParasiteWeapon": {
+      "race": "Zerg"
+    },
+    "Nuke": {
+      "race": "Terran",
+      "requires": [
+        "TrainNuke"
+      ]
+    },
+    "NydusCanalAttackerWeapon": {
+      "race": "Zerg"
+    },
+    "NydusNetworkACGluescreenDummy": {
+      "race": ""
+    },
     "Observer": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "ObserverACGluescreenDummy": {
+      "race": ""
+    },
+    "ObserverFenixACGluescreenDummy": {
+      "race": ""
+    },
+    "ObserverSiegeMode": {
+      "race": ""
+    },
+    "OmegaNetworkACGluescreenDummy": {
+      "race": ""
     },
     "Oracle": {
       "builds": [
         "OracleStasisTrap"
       ],
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "OracleACGluescreenDummy": {
+      "race": ""
     },
     "OracleStasisTrap": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "OracleWeapon": {
+      "race": "Protoss"
+    },
+    "OrbitalCommandACGluescreenDummy": {
+      "race": ""
     },
     "Overlord": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": [
+        "OverlordCocoon",
+        "OverlordTransport",
+        "Overseer",
+        "TransportOverlordCocoon"
+      ],
+      "race": "Zerg"
     },
     "OverlordCocoon": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": [
+        "OverlordCocoon",
+        "Overseer"
+      ],
+      "race": "Zerg"
+    },
+    "OverlordGenerateCreepKeybind": {
+      "race": ""
     },
     "OverlordTransport": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": [
+        "OverlordCocoon",
+        "Overseer"
+      ],
+      "race": "Zerg"
     },
     "Overseer": {
-      "race": "Zerg",
-      "requires": [
-        "Lair"
-      ]
+      "race": "Zerg"
+    },
+    "OverseerACGluescreenDummy": {
+      "race": ""
+    },
+    "OverseerSiegeMode": {
+      "race": ""
+    },
+    "OverseerZagaraACGluescreenDummy": {
+      "race": ""
+    },
+    "ParasiteSporeWeapon": {
+      "race": "Zerg"
+    },
+    "ParasiticBombDummy": {
+      "race": "Zerg"
+    },
+    "ParasiticBombMissile": {
+      "race": "Zerg"
+    },
+    "ParasiticBombRelayDummy": {
+      "race": ""
+    },
+    "PathingBlocker1x1": {
+      "race": ""
+    },
+    "PathingBlocker2x2": {
+      "race": ""
+    },
+    "PathingBlockerRadius1": {
+      "race": ""
+    },
+    "PerditionTurretACGluescreenDummy": {
+      "race": ""
+    },
+    "PermanentCreepBlocker1x1": {
+      "race": ""
     },
     "Phoenix": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "PhoenixAiurACGluescreenDummy": {
+      "race": ""
+    },
+    "PhoenixPurifierACGluescreenDummy": {
+      "race": ""
+    },
+    "PhotonCannonACGluescreenDummy": {
+      "race": ""
+    },
+    "PhotonCannonFenixACGluescreenDummy": {
+      "race": ""
+    },
+    "PhotonCannonTaldarimACGluescreenDummy": {
+      "race": ""
+    },
+    "PhotonCannonWeapon": {
+      "race": "Protoss"
+    },
+    "PhysicsCapsule": {
+      "race": ""
+    },
+    "PhysicsCube": {
+      "race": ""
+    },
+    "PhysicsCylinder": {
+      "race": ""
+    },
+    "PhysicsKnot": {
+      "race": ""
+    },
+    "PhysicsL": {
+      "race": ""
+    },
+    "PhysicsPrimitiveParent": {
+      "race": ""
+    },
+    "PhysicsPrimitives": {
+      "race": ""
+    },
+    "PhysicsSphere": {
+      "race": ""
+    },
+    "PhysicsStar": {
+      "race": ""
+    },
+    "PickupPalletGas": {
+      "race": ""
+    },
+    "PickupPalletMinerals": {
+      "race": ""
+    },
+    "PickupScrapSalvage1x1": {
+      "race": ""
+    },
+    "PickupScrapSalvage2x2": {
+      "race": ""
+    },
+    "PickupScrapSalvage3x3": {
+      "race": ""
     },
     "PointDefenseDrone": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "PointDefenseDroneReleaseWeapon": {
+      "race": "Terran"
+    },
+    "PortCity_Bridge_UnitE10": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitE10Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitE12": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitE12Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitE8": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitE8Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitN10": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitN10Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitN12": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitN12Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitN8": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitN8Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNE10": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNE10Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNE12": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNE12Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNE8": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNE8Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNW10": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNW10Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNW12": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNW12Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNW8": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitNW8Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitS10": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitS10Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitS12": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitS12Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitS8": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitS8Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSE10": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSE10Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSE12": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSE12Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSE8": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSE8Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSW10": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSW10Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSW12": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSW12Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSW8": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitSW8Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitW10": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitW10Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitW12": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitW12Out": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitW8": {
+      "race": ""
+    },
+    "PortCity_Bridge_UnitW8Out": {
+      "race": ""
+    },
+    "PreviewBunkerUpgraded": {
+      "race": "Terran"
+    },
+    "PrimalGuardianACGluescreenDummy": {
+      "race": ""
+    },
+    "PrimalHydraliskACGluescreenDummy": {
+      "race": ""
+    },
+    "PrimalImpalerACGluescreenDummy": {
+      "race": ""
+    },
+    "PrimalMutaliskACGluescreenDummy": {
+      "race": ""
+    },
+    "PrimalRoachACGluescreenDummy": {
+      "race": ""
+    },
+    "PrimalSwarmHostACGluescreenDummy": {
+      "race": ""
+    },
+    "PrimalUltraliskACGluescreenDummy": {
+      "race": ""
+    },
+    "PrimalWurmACGluescreenDummy": {
+      "race": ""
+    },
+    "PrimalZerglingACGluescreenDummy": {
+      "race": ""
     },
     "Probe": {
       "builds": [
@@ -3326,12 +2908,37 @@
         "TemplarArchive",
         "TwilightCouncil"
       ],
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "ProtossCrates": {
+      "race": "Protoss"
     },
     "ProtossSnakeSegmentDemo": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "ProtossVespeneGeyser": {
+      "race": ""
+    },
+    "PunisherGrenadesLMWeapon": {
+      "race": "Terran"
+    },
+    "PurifierMineralField": {
+      "race": ""
+    },
+    "PurifierMineralField750": {
+      "race": ""
+    },
+    "PurifierRichMineralField": {
+      "race": ""
+    },
+    "PurifierRichMineralField750": {
+      "race": ""
+    },
+    "PurifierVespeneGeyser": {
+      "race": ""
+    },
+    "PylonOvercharged": {
+      "race": ""
     },
     "Queen": {
       "builds": [
@@ -3343,26 +2950,56 @@
       ]
     },
     "QueenBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "QueenCoopACGluescreenDummy": {
+      "race": ""
     },
     "QueenMP": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "QueenMPEnsnareMissile": {
+      "race": "Zerg"
+    },
+    "QueenMPSpawnBroodlingsMissile": {
+      "race": "Zerg"
+    },
+    "QueenZagaraACGluescreenDummy": {
+      "race": ""
+    },
+    "RaidLiberatorACGluescreenDummy": {
+      "race": ""
+    },
+    "RailgunTurretACGluescreenDummy": {
+      "race": ""
+    },
+    "RaptorACGluescreenDummy": {
+      "race": ""
     },
     "Ravager": {
-      "race": "Zerg",
-      "requires": [
-        "RoachWarren"
-      ]
+      "race": "Zerg"
+    },
+    "RavagerACGluescreenDummy": {
+      "race": ""
     },
     "RavagerBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
     },
     "RavagerCocoon": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": [
+        "Ravager",
+        "RavagerCocoon"
+      ],
+      "race": "Zerg"
+    },
+    "RavagerCorrosiveBileMissile": {
+      "race": "Zerg"
+    },
+    "RavagerWeaponMissile": {
+      "race": "Zerg"
+    },
+    "RavasaurACGluescreenDummy": {
+      "race": ""
     },
     "Raven": {
       "race": "Terran",
@@ -3371,46 +3008,108 @@
       ]
     },
     "RavenRepairDrone": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "RavenRepairDroneReleaseWeapon": {
+      "race": "Terran"
+    },
+    "RavenScramblerMissile": {
+      "race": "Terran"
+    },
+    "RavenShredderMissileWeapon": {
+      "race": "Terran"
+    },
+    "RavenTypeIIACGluescreenDummy": {
+      "race": ""
     },
     "Reaper": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "ReaperPlaceholder": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "ReaverACGluescreenDummy": {
+      "race": ""
+    },
+    "RedstoneLavaCritter": {
+      "race": ""
+    },
+    "RedstoneLavaCritterBurrowed": {
+      "race": ""
+    },
+    "RedstoneLavaCritterInjured": {
+      "race": ""
+    },
+    "RedstoneLavaCritterInjuredBurrowed": {
+      "race": ""
     },
     "ReleaseInterceptorsBeacon": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "RenegadeLongboltMissileWeapon": {
+      "race": "Terran"
     },
     "Replicant": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "ReptileCrate": {
+      "race": ""
+    },
+    "RepulsorCannonWeapon": {
+      "race": "Protoss"
+    },
+    "ResourceBlocker": {
+      "race": "Protoss"
+    },
+    "RichMineralField": {
+      "race": ""
+    },
+    "RichMineralField750": {
+      "race": ""
+    },
+    "RichMineralFieldDefault": {
+      "race": ""
+    },
+    "RichVespeneGeyser": {
+      "race": ""
     },
     "Roach": {
+      "morphsto": [
+        "Ravager",
+        "RavagerCocoon"
+      ],
       "race": "Zerg",
       "requires": [
-        "BanelingNest2",
         "RoachWarren"
       ]
     },
+    "RoachACGluescreenDummy": {
+      "race": ""
+    },
     "RoachBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "RoachVileACGluescreenDummy": {
+      "race": ""
+    },
+    "Rocks2x2NonConjoined": {
+      "race": ""
+    },
+    "RoughTerrain": {
+      "race": ""
     },
     "SCV": {
       "builds": [
         "Armory",
         "Barracks",
+        "BomberLaunchPad",
         "Bunker",
         "CommandCenter",
         "EngineeringBay",
         "Factory",
         "FusionCore",
         "GhostAcademy",
+        "MercCompound",
         "MissileTurret",
         "Refinery",
         "RefineryRich",
@@ -3418,24 +3117,43 @@
         "Starport",
         "SupplyDepot"
       ],
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "SILiberatorACGluescreenDummy": {
+      "race": ""
+    },
+    "SNARE_PLACEHOLDER": {
+      "race": ""
+    },
+    "Scantipede": {
+      "race": ""
+    },
+    "ScienceVesselACGluescreenDummy": {
+      "race": ""
     },
     "ScopeTest": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "ScourgeACGluescreenDummy": {
+      "race": ""
     },
     "ScourgeMP": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "ScoutACGluescreenDummy": {
+      "race": ""
     },
     "ScoutMP": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "ScoutMPAirWeaponLeft": {
+      "race": "Protoss"
+    },
+    "ScoutMPAirWeaponRight": {
+      "race": "Protoss"
     },
     "SeekerMissile": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "Sentry": {
       "race": "Protoss",
@@ -3443,39 +3161,371 @@
         "CyberneticsCore"
       ]
     },
+    "SentryACGluescreenDummy": {
+      "race": ""
+    },
+    "SentryFenixACGluescreenDummy": {
+      "race": ""
+    },
+    "SentryPurifierACGluescreenDummy": {
+      "race": ""
+    },
+    "SentryTaldarimACGluescreenDummy": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNE10": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNE10Out": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNE12": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNE12Out": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNE8": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNE8Out": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNW10": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNW10Out": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNW12": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNW12Out": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNW8": {
+      "race": ""
+    },
+    "ShakurasLightBridgeNW8Out": {
+      "race": ""
+    },
+    "ShakurasVespeneGeyser": {
+      "race": ""
+    },
+    "Shape": {
+      "race": ""
+    },
+    "Shape4PointStar": {
+      "race": ""
+    },
+    "Shape5PointStar": {
+      "race": ""
+    },
+    "Shape6PointStar": {
+      "race": ""
+    },
+    "Shape8PointStar": {
+      "race": ""
+    },
+    "ShapeApple": {
+      "race": ""
+    },
+    "ShapeArrowPointer": {
+      "race": ""
+    },
+    "ShapeBanana": {
+      "race": ""
+    },
+    "ShapeBaseball": {
+      "race": ""
+    },
+    "ShapeBaseballBat": {
+      "race": ""
+    },
+    "ShapeBasketball": {
+      "race": ""
+    },
+    "ShapeBowl": {
+      "race": ""
+    },
+    "ShapeBox": {
+      "race": ""
+    },
+    "ShapeCapsule": {
+      "race": ""
+    },
+    "ShapeCarrot": {
+      "race": ""
+    },
+    "ShapeCashLarge": {
+      "race": ""
+    },
+    "ShapeCashMedium": {
+      "race": ""
+    },
+    "ShapeCashSmall": {
+      "race": ""
+    },
+    "ShapeCherry": {
+      "race": ""
+    },
+    "ShapeCone": {
+      "race": ""
+    },
+    "ShapeCrescentMoon": {
+      "race": ""
+    },
+    "ShapeCube": {
+      "race": ""
+    },
+    "ShapeCylinder": {
+      "race": ""
+    },
+    "ShapeDecahedron": {
+      "race": ""
+    },
+    "ShapeDiamond": {
+      "race": ""
+    },
+    "ShapeDodecahedron": {
+      "race": ""
+    },
+    "ShapeDollarSign": {
+      "race": ""
+    },
+    "ShapeEgg": {
+      "race": ""
+    },
+    "ShapeEuroSign": {
+      "race": ""
+    },
+    "ShapeFootball": {
+      "race": ""
+    },
+    "ShapeFootballColored": {
+      "race": ""
+    },
+    "ShapeGemstone": {
+      "race": ""
+    },
+    "ShapeGolfClub": {
+      "race": ""
+    },
+    "ShapeGolfball": {
+      "race": ""
+    },
+    "ShapeGrape": {
+      "race": ""
+    },
+    "ShapeHand": {
+      "race": ""
+    },
+    "ShapeHeart": {
+      "race": ""
+    },
+    "ShapeHockeyPuck": {
+      "race": ""
+    },
+    "ShapeHockeyStick": {
+      "race": ""
+    },
+    "ShapeHorseshoe": {
+      "race": ""
+    },
+    "ShapeIcosahedron": {
+      "race": ""
+    },
+    "ShapeJack": {
+      "race": ""
+    },
+    "ShapeLemon": {
+      "race": ""
+    },
+    "ShapeLemonSmall": {
+      "race": ""
+    },
+    "ShapeMoneyBag": {
+      "race": ""
+    },
+    "ShapeO": {
+      "race": ""
+    },
+    "ShapeOctahedron": {
+      "race": ""
+    },
+    "ShapeOrange": {
+      "race": ""
+    },
+    "ShapeOrangeSmall": {
+      "race": ""
+    },
+    "ShapePeanut": {
+      "race": ""
+    },
+    "ShapePear": {
+      "race": ""
+    },
+    "ShapePineapple": {
+      "race": ""
+    },
+    "ShapePlusSign": {
+      "race": ""
+    },
+    "ShapePoundSign": {
+      "race": ""
+    },
+    "ShapePyramid": {
+      "race": ""
+    },
+    "ShapeRainbow": {
+      "race": ""
+    },
+    "ShapeRoundedCube": {
+      "race": ""
+    },
+    "ShapeSadFace": {
+      "race": ""
+    },
+    "ShapeShamrock": {
+      "race": ""
+    },
+    "ShapeSmileyFace": {
+      "race": ""
+    },
+    "ShapeSoccerball": {
+      "race": ""
+    },
+    "ShapeSpade": {
+      "race": ""
+    },
+    "ShapeSphere": {
+      "race": ""
+    },
+    "ShapeStrawberry": {
+      "race": ""
+    },
+    "ShapeTennisball": {
+      "race": ""
+    },
+    "ShapeTetrahedron": {
+      "race": ""
+    },
+    "ShapeThickTorus": {
+      "race": ""
+    },
+    "ShapeThinTorus": {
+      "race": ""
+    },
+    "ShapeTorus": {
+      "race": ""
+    },
+    "ShapeTreasureChestClosed": {
+      "race": ""
+    },
+    "ShapeTreasureChestOpen": {
+      "race": ""
+    },
+    "ShapeTube": {
+      "race": ""
+    },
+    "ShapeWatermelon": {
+      "race": ""
+    },
+    "ShapeWatermelonSmall": {
+      "race": ""
+    },
+    "ShapeWonSign": {
+      "race": ""
+    },
+    "ShapeX": {
+      "race": ""
+    },
+    "ShapeYenSign": {
+      "race": ""
+    },
+    "Sheep": {
+      "race": ""
+    },
+    "ShieldBatteryACGluescreenDummy": {
+      "race": ""
+    },
     "SiegeTank": {
       "race": "Terran",
       "requires": [
         "AttachedTechLab"
       ]
     },
+    "SiegeTankACGluescreenDummy": {
+      "race": ""
+    },
+    "SiegeTankMengskACGluescreenDummy": {
+      "race": ""
+    },
     "SiegeTankSieged": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "SiegeTankSkinPreview": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "SlaynElemental": {
-      "race": null,
-      "requires": []
+      "race": ""
     },
     "SlaynElementalGrabAirUnit": {
-      "race": null,
-      "requires": []
+      "race": ""
     },
     "SlaynElementalGrabGroundUnit": {
-      "race": null,
-      "requires": []
+      "race": ""
+    },
+    "SlaynElementalGrabWeapon": {
+      "race": ""
+    },
+    "SlaynElementalWeapon": {
+      "race": ""
     },
     "SlaynSwarmHostSpawnFlyer": {
-      "race": null,
-      "requires": []
+      "race": ""
+    },
+    "SnowGlazeStarterMP": {
+      "race": ""
+    },
+    "SnowRefinery_Terran_ExtendingBridgeNEShort8": {
+      "race": ""
+    },
+    "SnowRefinery_Terran_ExtendingBridgeNEShort8Out": {
+      "race": ""
+    },
+    "SnowRefinery_Terran_ExtendingBridgeNWShort8": {
+      "race": ""
+    },
+    "SnowRefinery_Terran_ExtendingBridgeNWShort8Out": {
+      "race": ""
+    },
+    "SpacePlatformGeyser": {
+      "race": ""
+    },
+    "SpecOpsGhostACGluescreenDummy": {
+      "race": ""
+    },
+    "SpineCrawlerACGluescreenDummy": {
+      "race": ""
+    },
+    "SpineCrawlerWeapon": {
+      "race": "Zerg"
+    },
+    "SpinningDizzyACGluescreenDummy": {
+      "race": ""
+    },
+    "SplitterlingACGluescreenDummy": {
+      "race": ""
+    },
+    "SporeCrawlerACGluescreenDummy": {
+      "race": ""
+    },
+    "SporeCrawlerWeapon": {
+      "race": "Zerg"
     },
     "SprayDefault": {
-      "race": null,
-      "requires": []
+      "race": ""
     },
     "Stalker": {
       "race": "Protoss",
@@ -3483,15 +3533,112 @@
         "CyberneticsCore"
       ]
     },
+    "StalkerShakurasACGluescreenDummy": {
+      "race": ""
+    },
+    "StalkerTaldarimACGluescreenDummy": {
+      "race": ""
+    },
+    "StalkerWeapon": {
+      "race": "Protoss"
+    },
+    "StarportTechLab": {
+      "race": "",
+      "researches": [
+        "BansheeCloak",
+        "BansheeSpeed",
+        "DurableMaterials",
+        "HunterSeeker",
+        "InterferenceMatrix",
+        "LiberatorAGRangeUpgrade",
+        "LiberatorMorph",
+        "MedivacCaduceusReactor",
+        "MedivacIncreaseSpeedBoost",
+        "MedivacRapidDeployment",
+        "RavenCorvidReactor",
+        "RavenEnhancedMunitions",
+        "RavenRecalibratedExplosives"
+      ]
+    },
+    "StrikeGoliathACGluescreenDummy": {
+      "race": ""
+    },
+    "StukovBroodQueenACGluescreenDummy": {
+      "race": ""
+    },
+    "StukovInfestedBansheeACGluescreenDummy": {
+      "race": ""
+    },
+    "StukovInfestedBunkerACGluescreenDummy": {
+      "race": ""
+    },
+    "StukovInfestedCivilianACGluescreenDummy": {
+      "race": ""
+    },
+    "StukovInfestedDiamondbackACGluescreenDummy": {
+      "race": ""
+    },
+    "StukovInfestedMarineACGluescreenDummy": {
+      "race": ""
+    },
+    "StukovInfestedMissileTurretACGluescreenDummy": {
+      "race": ""
+    },
+    "StukovInfestedSiegeTankACGluescreenDummy": {
+      "race": ""
+    },
+    "StukovInfestedTrooperACGluescreenDummy": {
+      "race": ""
+    },
+    "SupplicantACGluescreenDummy": {
+      "race": ""
+    },
+    "SwarmHostACGluescreenDummy": {
+      "race": ""
+    },
     "SwarmHostBurrowedMP": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": "SwarmHostMP",
+      "race": "Zerg"
     },
     "SwarmHostMP": {
+      "morphsto": "SwarmHostBurrowedMP",
       "race": "Zerg",
       "requires": [
         "InfestationPit"
       ]
+    },
+    "SwarmQueenACGluescreenDummy": {
+      "race": ""
+    },
+    "SwarmlingACGluescreenDummy": {
+      "race": ""
+    },
+    "TalonsMissileWeapon": {
+      "race": "Zerg"
+    },
+    "Tarsonis_DoorE": {
+      "race": ""
+    },
+    "Tarsonis_DoorELowered": {
+      "race": ""
+    },
+    "Tarsonis_DoorN": {
+      "race": ""
+    },
+    "Tarsonis_DoorNE": {
+      "race": ""
+    },
+    "Tarsonis_DoorNELowered": {
+      "race": ""
+    },
+    "Tarsonis_DoorNLowered": {
+      "race": ""
+    },
+    "Tarsonis_DoorNW": {
+      "race": ""
+    },
+    "Tarsonis_DoorNWLowered": {
+      "race": ""
     },
     "Tempest": {
       "race": "Protoss",
@@ -3499,9 +3646,17 @@
         "FleetBeacon"
       ]
     },
+    "TempestACGluescreenDummy": {
+      "race": ""
+    },
+    "TempestWeapon": {
+      "race": "Protoss"
+    },
+    "TempestWeaponGround": {
+      "race": "Protoss"
+    },
     "TestZerg": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
     },
     "Thor": {
       "race": "Terran",
@@ -3510,13 +3665,78 @@
         "AttachedTechLab"
       ]
     },
+    "ThorAALance": {
+      "race": "Terran"
+    },
+    "ThorAAWeapon": {
+      "race": "Terran"
+    },
+    "ThorACGluescreenDummy": {
+      "race": ""
+    },
     "ThorAP": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "ThorMengskACGluescreenDummy": {
+      "race": ""
+    },
+    "ThornLizard": {
+      "race": ""
+    },
+    "TornadoMissileDummyWeapon": {
+      "race": "Terran"
+    },
+    "TornadoMissileWeapon": {
+      "race": "Terran"
+    },
+    "TorrasqueACGluescreenDummy": {
+      "race": ""
+    },
+    "TowerMine": {
+      "race": "Terran"
+    },
+    "TrafficSignal": {
+      "race": ""
     },
     "TransportOverlordCocoon": {
-      "race": "Zerg",
-      "requires": []
+      "morphsto": [
+        "OverlordTransport",
+        "TransportOverlordCocoon"
+      ],
+      "race": "Zerg"
+    },
+    "TrooperMengskACGluescreenDummy": {
+      "race": ""
+    },
+    "TychusFirebatACGluescreenDummy": {
+      "race": ""
+    },
+    "TychusGhostACGluescreenDummy": {
+      "race": ""
+    },
+    "TychusHERCACGluescreenDummy": {
+      "race": ""
+    },
+    "TychusMarauderACGluescreenDummy": {
+      "race": ""
+    },
+    "TychusMedicACGluescreenDummy": {
+      "race": ""
+    },
+    "TychusReaperACGluescreenDummy": {
+      "race": ""
+    },
+    "TychusSCVAutoTurretACGluescreenDummy": {
+      "race": ""
+    },
+    "TychusSpectreACGluescreenDummy": {
+      "race": ""
+    },
+    "TychusWarhoundACGluescreenDummy": {
+      "race": ""
+    },
+    "TyrannozorACGluescreenDummy": {
+      "race": ""
     },
     "Ultralisk": {
       "race": "Zerg",
@@ -3524,21 +3744,83 @@
         "UltraliskCavern"
       ]
     },
+    "UltraliskACGluescreenDummy": {
+      "race": ""
+    },
     "UltraliskBurrowed": {
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
+    },
+    "UnbuildableBricksDestructible": {
+      "race": ""
+    },
+    "UnbuildableBricksSmallUnit": {
+      "race": ""
+    },
+    "UnbuildableBricksUnit": {
+      "race": ""
+    },
+    "UnbuildablePlatesDestructible": {
+      "race": ""
+    },
+    "UnbuildablePlatesSmallUnit": {
+      "race": ""
+    },
+    "UnbuildablePlatesUnit": {
+      "race": ""
+    },
+    "UnbuildableRocksDestructible": {
+      "race": ""
+    },
+    "UnbuildableRocksSmallUnit": {
+      "race": ""
+    },
+    "UnbuildableRocksUnit": {
+      "race": ""
+    },
+    "UrsadakCalf": {
+      "race": ""
+    },
+    "UrsadakFemale": {
+      "race": ""
+    },
+    "UrsadakFemaleExotic": {
+      "race": ""
+    },
+    "UrsadakMale": {
+      "race": ""
+    },
+    "UrsadakMaleExotic": {
+      "race": ""
+    },
+    "Ursadon": {
+      "race": ""
+    },
+    "Ursula": {
+      "race": ""
+    },
+    "UtilityBot": {
+      "race": ""
+    },
+    "VespeneGeyser": {
+      "race": ""
     },
     "Viking": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "VikingACGluescreenDummy": {
+      "race": ""
     },
     "VikingAssault": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
     },
     "VikingFighter": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "VikingFighterWeapon": {
+      "race": "Terran"
+    },
+    "VikingMengskACGluescreenDummy": {
+      "race": ""
     },
     "Viper": {
       "race": "Zerg",
@@ -3546,1835 +3828,375 @@
         "Hive"
       ]
     },
+    "ViperACGluescreenDummy": {
+      "race": ""
+    },
+    "ViperConsumeStructureWeapon": {
+      "race": "Zerg"
+    },
     "VoidMPImmortalReviveCorpse": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
     },
     "VoidRay": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "VoidRayACGluescreenDummy": {
+      "race": ""
+    },
+    "VoidRayShakurasACGluescreenDummy": {
+      "race": ""
+    },
+    "VultureACGluescreenDummy": {
+      "race": ""
     },
     "WarHound": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "WarHoundWeapon": {
+      "race": "Terran"
     },
     "WarpPrism": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
     },
     "WarpPrismPhasing": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
     },
     "WarpPrismSkinPreview": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "WarpPrismTaldarimACGluescreenDummy": {
+      "race": ""
+    },
+    "Weapon": {
+      "race": "Zerg"
     },
     "WidowMine": {
-      "race": "Terran",
-      "requires": [
-        "Armory"
-      ]
+      "race": "Terran"
+    },
+    "WidowMineAirWeapon": {
+      "race": "Terran"
     },
     "WidowMineBurrowed": {
-      "race": "Terran",
-      "requires": []
+      "race": "Terran"
+    },
+    "WidowMineWeapon": {
+      "race": "Terran"
+    },
+    "WizSimpleMissile": {
+      "race": ""
+    },
+    "WolfStatue": {
+      "race": ""
+    },
+    "WraithACGluescreenDummy": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker6E": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker6N": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker6NE": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker6NW": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker6S": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker6SE": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker6SW": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker6W": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker8E": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker8N": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker8NE": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker8NW": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker8S": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker8SE": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker8SW": {
+      "race": ""
+    },
+    "XelNagaDestructibleBlocker8W": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker6E": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker6N": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker6NE": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker6NW": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker6S": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker6SE": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker6SW": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker6W": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker8E": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker8N": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker8NE": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker8NW": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker8S": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker8SE": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker8SW": {
+      "race": ""
+    },
+    "XelNagaDestructibleRampBlocker8W": {
+      "race": ""
     },
     "XelNagaHealingShrine": {
-      "race": null,
-      "requires": []
+      "race": ""
+    },
+    "XelNagaTower": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Door": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorE": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorEOpened": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorN": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorNE": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorNEOpened": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorNOpened": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorNW": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorNWOpened": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorS": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorSE": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorSEOpened": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorSOpened": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorSW": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorSWOpened": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorW": {
+      "race": ""
+    },
+    "XelNaga_Caverns_DoorWOpened": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeH10": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeH10Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeH12": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeH12Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeH8": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeH8Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNE10": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNE10Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNE12": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNE12Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNE8": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNE8Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNW10": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNW10Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNW12": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNW12Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNW8": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeNW8Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeV10": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeV10Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeV12": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeV12Out": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeV8": {
+      "race": ""
+    },
+    "XelNaga_Caverns_Floating_BridgeV8Out": {
+      "race": ""
+    },
+    "YamatoWeapon": {
+      "race": "Terran"
+    },
+    "YoinkMissile": {
+      "race": "Zerg"
+    },
+    "YoinkSiegeTankMissile": {
+      "race": "Zerg"
+    },
+    "YoinkVikingAirMissile": {
+      "race": "Zerg"
+    },
+    "YoinkVikingGroundMissile": {
+      "race": "Zerg"
     },
     "Zealot": {
-      "race": "Protoss",
-      "requires": []
+      "race": "Protoss"
+    },
+    "ZealotACGluescreenDummy": {
+      "race": ""
+    },
+    "ZealotAiurACGluescreenDummy": {
+      "race": ""
+    },
+    "ZealotFenixACGluescreenDummy": {
+      "race": ""
+    },
+    "ZealotPurifierACGluescreenDummy": {
+      "race": ""
+    },
+    "ZealotShakurasACGluescreenDummy": {
+      "race": ""
+    },
+    "ZealotVorazunACGluescreenDummy": {
+      "race": ""
+    },
+    "ZeratulDarkTemplarACGluescreenDummy": {
+      "race": ""
+    },
+    "ZeratulDisruptorACGluescreenDummy": {
+      "race": ""
+    },
+    "ZeratulImmortalACGluescreenDummy": {
+      "race": ""
+    },
+    "ZeratulObserverACGluescreenDummy": {
+      "race": ""
+    },
+    "ZeratulPhotonCannonACGluescreenDummy": {
+      "race": ""
+    },
+    "ZeratulSentryACGluescreenDummy": {
+      "race": ""
+    },
+    "ZeratulStalkerACGluescreenDummy": {
+      "race": ""
+    },
+    "ZeratulWarpPrismACGluescreenDummy": {
+      "race": ""
     },
     "Zergling": {
+      "morphsto": "Baneling",
       "race": "Zerg",
       "requires": [
         "SpawningPool"
       ]
     },
     "ZerglingBurrowed": {
-      "race": "Zerg",
-      "requires": []
-    }
-  },
-  "upgrades": {
-    "AbdominalFortitude": {
-      "affected_units": [
-        "Baneling",
-        "BanelingBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
+      "race": "Zerg"
     },
-    "AdeptKillBounce": {
-      "affected_units": [
-        "Adept"
-      ],
-      "race": "Protoss",
-      "requires": []
+    "ZerglingKerriganACGluescreenDummy": {
+      "race": ""
     },
-    "AdeptPiercingAttack": {
-      "affected_units": [
-        "Adept"
-      ],
-      "race": "Protoss",
-      "requires": []
+    "ZerglingZagaraACGluescreenDummy": {
+      "race": ""
     },
-    "AdeptShieldUpgrade": {
-      "affected_units": [
-        "Adept"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "AdeptSkin": {
-      "affected_units": [
-        "Adept"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "AdeptTaldarim": {
-      "affected_units": [],
-      "race": "Protoss",
-      "requires": []
-    },
-    "AmplifiedShielding": {
-      "affected_units": [
-        "Adept"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "AnabolicSynthesis": {
-      "affected_units": [
-        "Ultralisk"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "AnionPulseCrystals": {
-      "affected_units": [
-        "Phoenix"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ArmorPiercingRockets": {
-      "affected_units": [
-        "Cyclone"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "BanelingBurrowMove": {
-      "affected_units": [
-        "Baneling",
-        "BanelingBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "BansheeCloak": {
-      "affected_units": [
-        "Banshee"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "BansheeSpeed": {
-      "affected_units": [
-        "Banshee"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "BattlecruiserBehemothReactor": {
-      "affected_units": [
-        "Battlecruiser"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "BattlecruiserEnableSpecializations": {
-      "affected_units": [
-        "Battlecruiser"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "BlinkTech": {
-      "affected_units": [
-        "Stalker"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "Burrow": {
-      "affected_units": [
-        "Baneling",
-        "BanelingBurrowed",
-        "Drone",
-        "DroneBurrowed",
-        "Hydralisk",
-        "HydraliskBurrowed",
-        "Infestor",
-        "InfestorBurrowed",
-        "InfestorTerran",
-        "InfestorTerranBurrowed",
-        "Queen",
-        "QueenBurrowed",
-        "Ravager",
-        "RavagerBurrowed",
-        "Roach",
-        "RoachBurrowed",
-        "SwarmHostBurrowedMP",
-        "SwarmHostMP",
-        "Ultralisk",
-        "UltraliskBurrowed",
-        "Zergling",
-        "ZerglingBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "CarrierCarrierCapacity": {
-      "affected_units": [
-        "Carrier"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "CarrierLaunchSpeedUpgrade": {
-      "affected_units": [
-        "Carrier"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "CarrierLeashRangeUpgrade": {
-      "affected_units": [
-        "Carrier"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "CentrificalHooks": {
-      "affected_units": [
-        "Baneling",
-        "BanelingBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "Charge": {
-      "affected_units": [
-        "Zealot"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ChitinousPlating": {
-      "affected_units": [
-        "Ultralisk",
-        "UltraliskBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "CinematicMode": {
-      "affected_units": [
-        "DarkShrine",
-        "FleetBeacon",
-        "Forge",
-        "Gateway",
-        "PhotonCannon",
-        "RoboticsBay",
-        "RoboticsFacility",
-        "Stargate",
-        "TemplarArchive",
-        "WarpGate"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "CollectionSkinDeluxe": {
-      "affected_units": [],
-      "race": "##race##",
-      "requires": []
-    },
-    "CollectionSkinDeluxeProtoss": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "ColossusSkin": {
-      "affected_units": [
-        "Colossus"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ColossusTal": {
-      "affected_units": [
-        "Colossus"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "CombatDrugs": {
-      "affected_units": [
-        "Reaper"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "Confetti": {
-      "affected_units": [],
-      "race": "Terran",
-      "requires": []
-    },
-    "CursorDebug": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "CycloneAirUpgrade": {
-      "affected_units": [
-        "Cyclone"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "CycloneLockOnDamageUpgrade": {
-      "affected_units": [
-        "Cyclone"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "CycloneLockOnRangeUpgrade": {
-      "affected_units": [
-        "Cyclone"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "CycloneRapidFireLaunchers": {
-      "affected_units": [
-        "Cyclone"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "DarkTemplarBlinkUpgrade": {
-      "affected_units": [
-        "DarkTemplar"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "DiggingClaws": {
-      "affected_units": [
-        "LurkerMP",
-        "LurkerMPBurrowed"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "DrillClaws": {
-      "affected_units": [
-        "WidowMine",
-        "WidowMineBurrowed"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "DurableMaterials": {
-      "affected_units": [
-        "Raven"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "EnhancedShockwaves": {
-      "affected_units": [
-        "Ghost",
-        "GhostAlternate",
-        "GhostNova"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "EvolveGroovedSpines": {
-      "affected_units": [
-        "Hydralisk",
-        "HydraliskBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "EvolveMuscularAugments": {
-      "affected_units": [
-        "Hydralisk",
-        "HydraliskBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ExtendedThermalLance": {
-      "affected_units": [
-        "Colossus"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "FlyingLocusts": {
-      "affected_units": [
-        "SwarmHostMP"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "Frenzy": {
-      "affected_units": [
-        "Hydralisk"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "GhostAlternate": {
-      "affected_units": [
-        "Ghost"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "GhostMoebiusReactor": {
-      "affected_units": [
-        "Ghost",
-        "GhostAlternate",
-        "GhostNova"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "GhostSkinJunker": {
-      "affected_units": [
-        "Ghost"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "GhostSkinNova": {
-      "affected_units": [
-        "Ghost"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "GlialReconstitution": {
-      "affected_units": [
-        "Roach",
-        "RoachBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "GraviticDrive": {
-      "affected_units": [
-        "WarpPrism",
-        "WarpPrismPhasing"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "HiSecAutoTracking": {
-      "affected_units": [
-        "AutoTurret",
-        "MissileTurret",
-        "PlanetaryFortress",
-        "PointDefenseDrone"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "HighCapacityBarrels": {
-      "affected_units": [
-        "Hellion",
-        "HellionTank"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "HighTemplarKhaydarinAmulet": {
-      "affected_units": [
-        "HighTemplar"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "HunterSeeker": {
-      "affected_units": [
-        "Raven"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "HurricaneThrusters": {
-      "affected_units": [
-        "Cyclone"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "HydraliskSpeedUpgrade": {
-      "affected_units": [
-        "Hydralisk",
-        "HydraliskBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ImmortalBarrier": {
-      "affected_units": [
-        "Immortal"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ImmortalRevive": {
-      "affected_units": [
-        "Immortal"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "IncreasedRange": {
-      "affected_units": [
-        "Immortal"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "InfestorEnergyUpgrade": {
-      "affected_units": [
-        "Infestor",
-        "InfestorBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "InfestorPeristalsis": {
-      "affected_units": [
-        "InfestorBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "InterferenceMatrix": {
-      "affected_units": [
-        "Raven"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "LiberatorAGRangeUpgrade": {
-      "affected_units": [
-        "Liberator",
-        "LiberatorAG"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "LiberatorMorph": {
-      "affected_units": [
-        "Liberator"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "LocustLifetimeIncrease": {
-      "affected_units": [
-        "SwarmHostMP"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "LurkerRange": {
-      "affected_units": [
-        "LurkerMP",
-        "LurkerMPBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "MagFieldLaunchers": {
-      "affected_units": [
-        "Cyclone"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "MarineSkin": {
-      "affected_units": [
-        "Marine"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "MedivacCaduceusReactor": {
-      "affected_units": [
-        "Medivac"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "MedivacIncreaseSpeedBoost": {
-      "affected_units": [
-        "Medivac"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "MedivacRapidDeployment": {
-      "affected_units": [
-        "Medivac"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "MicrobialShroud": {
-      "affected_units": [
-        "Infestor"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "NeosteelFrame": {
-      "affected_units": [
-        "Bunker",
-        "CommandCenter",
-        "CommandCenterFlying"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "NeuralParasite": {
-      "affected_units": [
-        "Infestor"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ObserverGraviticBooster": {
-      "affected_units": [
-        "Observer"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ObverseIncubation": {
-      "affected_units": [
-        "Zergling"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "OracleEnergyUpgrade": {
-      "affected_units": [
-        "Oracle"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "OrganicCarapace": {
-      "affected_units": [
-        "Roach",
-        "RoachBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "OverlordSkin": {
-      "affected_units": [
-        "Overlord"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "PersonalCloaking": {
-      "affected_units": [
-        "Ghost",
-        "GhostAlternate",
-        "GhostNova"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "PhoenixRangeUpgrade": {
-      "affected_units": [
-        "Phoenix"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ProtossAirArmors": {
-      "affected_units": [
-        "Carrier",
-        "Interceptor",
-        "Mothership",
-        "Observer",
-        "Phoenix",
-        "VoidRay",
-        "WarpPrism",
-        "WarpPrismPhasing"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ProtossAirArmorsLevel1": {
-      "affected_units": [
-        "ObserverSiegeMode"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossAirArmorsLevel2": {
-      "affected_units": [
-        "ObserverSiegeMode"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossAirArmorsLevel3": {
-      "affected_units": [
-        "ObserverSiegeMode"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossAirWeapons": {
-      "affected_units": [
-        "Interceptor",
-        "Mothership",
-        "Phoenix",
-        "VoidRay"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ProtossAirWeaponsLevel1": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "ProtossAirWeaponsLevel2": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "ProtossAirWeaponsLevel3": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "ProtossGroundArmors": {
-      "affected_units": [
-        "Archon",
-        "Colossus",
-        "DarkTemplar",
-        "HighTemplar",
-        "Immortal",
-        "Probe",
-        "Sentry",
-        "Stalker",
-        "Zealot"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ProtossGroundArmorsLevel1": {
-      "affected_units": [
-        "Adept",
-        "Disruptor",
-        "DisruptorPhased"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossGroundArmorsLevel2": {
-      "affected_units": [
-        "Adept",
-        "Disruptor",
-        "DisruptorPhased"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossGroundArmorsLevel3": {
-      "affected_units": [
-        "Adept",
-        "Disruptor",
-        "DisruptorPhased"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossGroundWeapons": {
-      "affected_units": [
-        "Archon",
-        "Colossus",
-        "DarkTemplar",
-        "HighTemplar",
-        "Immortal",
-        "Sentry",
-        "Stalker",
-        "Zealot"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ProtossGroundWeaponsLevel1": {
-      "affected_units": [
-        "Adept"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossGroundWeaponsLevel2": {
-      "affected_units": [
-        "Adept"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossGroundWeaponsLevel3": {
-      "affected_units": [
-        "Adept"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossShields": {
-      "affected_units": [
-        "Archon",
-        "Assimilator",
-        "Carrier",
-        "Colossus",
-        "CyberneticsCore",
-        "DarkShrine",
-        "DarkTemplar",
-        "FleetBeacon",
-        "Forge",
-        "Gateway",
-        "HighTemplar",
-        "Immortal",
-        "Interceptor",
-        "Mothership",
-        "Nexus",
-        "Observer",
-        "Phoenix",
-        "PhotonCannon",
-        "Probe",
-        "Pylon",
-        "RoboticsBay",
-        "RoboticsFacility",
-        "Sentry",
-        "Stalker",
-        "Stargate",
-        "TemplarArchive",
-        "TwilightCouncil",
-        "VoidRay",
-        "WarpGate",
-        "WarpPrism",
-        "WarpPrismPhasing",
-        "Zealot"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ProtossShieldsLevel1": {
-      "affected_units": [
-        "Adept",
-        "AssimilatorRich",
-        "Disruptor",
-        "DisruptorPhased",
-        "ObserverSiegeMode",
-        "PylonOvercharged",
-        "ShieldBattery"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossShieldsLevel2": {
-      "affected_units": [
-        "Adept",
-        "AssimilatorRich",
-        "Disruptor",
-        "DisruptorPhased",
-        "ObserverSiegeMode",
-        "PylonOvercharged"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ProtossShieldsLevel3": {
-      "affected_units": [
-        "Adept",
-        "AssimilatorRich",
-        "Disruptor",
-        "DisruptorPhased",
-        "ObserverSiegeMode",
-        "PylonOvercharged"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "PsiStormTech": {
-      "affected_units": [
-        "HighTemplar"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "PsionicAmplifiers": {
-      "affected_units": [
-        "Adept"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "PunisherGrenades": {
-      "affected_units": [
-        "Marauder"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "PylonSkin": {
-      "affected_units": [
-        "Pylon"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "RavagerRange": {
-      "affected_units": [
-        "Ravager"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "RavenCorvidReactor": {
-      "affected_units": [
-        "Raven"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "RavenDamageUpgrade": {
-      "affected_units": [
-        "AutoTurret",
-        "Raven"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "RavenEnhancedMunitions": {
-      "affected_units": [
-        "Raven"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "RavenRecalibratedExplosives": {
-      "affected_units": [
-        "Raven"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "ReaperJump": {
-      "affected_units": [
-        "Reaper"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "ReaperSpeed": {
-      "affected_units": [
-        "Reaper"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "RestoreShields": {
-      "affected_units": [
-        "Oracle"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "RewardDanceColossus": {
-      "affected_units": [
-        "Colossus"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "RewardDanceGhost": {
-      "affected_units": [
-        "Ghost",
-        "GhostAlternate",
-        "GhostNova"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "RewardDanceInfestor": {
-      "affected_units": [
-        "Infestor",
-        "InfestorBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "RewardDanceMule": {
-      "affected_units": [
-        "MULE"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "RewardDanceOracle": {
-      "affected_units": [
-        "Oracle"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "RewardDanceOverlord": {
-      "affected_units": [
-        "Overlord"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "RewardDanceRoach": {
-      "affected_units": [
-        "Roach",
-        "RoachBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "RewardDanceStalker": {
-      "affected_units": [
-        "Stalker"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "RewardDanceViking": {
-      "affected_units": [
-        "VikingAssault",
-        "VikingFighter"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "RoachSupply": {
-      "affected_units": [
-        "Roach",
-        "RoachBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "SecretedCoating": {
-      "affected_units": [
-        "NydusCanal",
-        "NydusNetwork"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ShieldWall": {
-      "affected_units": [
-        "Marine"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "SiegeTech": {
-      "affected_units": [
-        "SiegeTank"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "SmartServos": {
-      "affected_units": [
-        "Hellion",
-        "HellionTank",
-        "Thor",
-        "ThorAP",
-        "VikingAssault",
-        "VikingFighter"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "SnowVisualMP": {
-      "affected_units": [
-        "CommandCenter",
-        "CommandCenterFlying",
-        "Hatchery",
-        "Nexus",
-        "XelNagaTower"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "SprayProtoss": {
-      "affected_units": [
-        "Probe"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "SprayTerran": {
-      "affected_units": [
-        "SCV"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "SprayZerg": {
-      "affected_units": [
-        "Drone"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "Stimpack": {
-      "affected_units": [
-        "Marauder",
-        "Marine"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "StrikeCannons": {
-      "affected_units": [
-        "Thor"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "SunderingImpact": {
-      "affected_units": [
-        "Zealot"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "SupplyDepotSkin": {
-      "affected_units": [
-        "SupplyDepot",
-        "SupplyDepotLowered"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TempestGroundAttackUpgrade": {
-      "affected_units": [
-        "Tempest"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TempestRangeUpgrade": {
-      "affected_units": [
-        "Tempest"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "TerranBuildingArmor": {
-      "affected_units": [
-        "Armory",
-        "AutoTurret",
-        "Barracks",
-        "BarracksFlying",
-        "BarracksReactor",
-        "BarracksTechLab",
-        "Bunker",
-        "BypassArmorDrone",
-        "CommandCenter",
-        "CommandCenterFlying",
-        "EngineeringBay",
-        "Factory",
-        "FactoryFlying",
-        "FactoryReactor",
-        "FactoryTechLab",
-        "FusionCore",
-        "GhostAcademy",
-        "MissileTurret",
-        "OrbitalCommand",
-        "OrbitalCommandFlying",
-        "PlanetaryFortress",
-        "PointDefenseDrone",
-        "RavenRepairDrone",
-        "Reactor",
-        "Refinery",
-        "RefineryRich",
-        "SensorTower",
-        "Starport",
-        "StarportFlying",
-        "StarportReactor",
-        "StarportTechLab",
-        "SupplyDepot",
-        "SupplyDepotLowered",
-        "TechLab"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranInfantryArmors": {
-      "affected_units": [
-        "Ghost",
-        "Marauder",
-        "Marine",
-        "Reaper",
-        "SCV"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranInfantryArmorsLevel1": {
-      "affected_units": [
-        "GhostAlternate",
-        "GhostNova",
-        "HERC"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranInfantryArmorsLevel2": {
-      "affected_units": [
-        "GhostAlternate",
-        "GhostNova",
-        "HERC"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranInfantryArmorsLevel3": {
-      "affected_units": [
-        "GhostAlternate",
-        "GhostNova",
-        "HERC"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranInfantryWeapons": {
-      "affected_units": [
-        "Ghost",
-        "Marauder",
-        "Marine",
-        "Reaper"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranInfantryWeaponsLevel1": {
-      "affected_units": [
-        "HERC"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranInfantryWeaponsLevel2": {
-      "affected_units": [
-        "HERC"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranInfantryWeaponsLevel3": {
-      "affected_units": [
-        "HERC"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranShipArmors": {
-      "affected_units": [
-        "Banshee",
-        "Battlecruiser",
-        "Medivac",
-        "Raven",
-        "VikingAssault",
-        "VikingFighter"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranShipArmorsLevel1": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranShipArmorsLevel2": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranShipArmorsLevel3": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranShipWeapons": {
-      "affected_units": [
-        "Banshee",
-        "Battlecruiser",
-        "BattlecruiserDefensiveMatrix",
-        "BattlecruiserHurricane",
-        "BattlecruiserYamato",
-        "VikingAssault",
-        "VikingFighter"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranShipWeaponsLevel1": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranShipWeaponsLevel2": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranShipWeaponsLevel3": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleAndShipArmors": {
-      "affected_units": [
-        "Banshee",
-        "Battlecruiser",
-        "Hellion",
-        "HellionTank",
-        "Liberator",
-        "LiberatorAG",
-        "Medivac",
-        "Raven",
-        "SiegeTank",
-        "SiegeTankSieged",
-        "Thor",
-        "ThorAP",
-        "VikingAssault",
-        "VikingFighter",
-        "WidowMine",
-        "WidowMineBurrowed"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranVehicleAndShipArmorsLevel1": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleAndShipArmorsLevel2": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleAndShipArmorsLevel3": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleAndShipWeapons": {
-      "affected_units": [
-        "Banshee",
-        "Battlecruiser",
-        "Hellion",
-        "HellionTank",
-        "SiegeTank",
-        "SiegeTankSieged",
-        "Thor",
-        "ThorAP",
-        "VikingAssault",
-        "VikingFighter",
-        "WidowMine",
-        "WidowMineBurrowed"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranVehicleAndShipWeaponsLevel1": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleAndShipWeaponsLevel2": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleAndShipWeaponsLevel3": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleArmors": {
-      "affected_units": [
-        "Hellion",
-        "SiegeTank",
-        "SiegeTankSieged",
-        "Thor"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranVehicleArmorsLevel1": {
-      "affected_units": [
-        "HellionTank",
-        "MPOdin",
-        "ThorAP",
-        "WarHound",
-        "WidowMine",
-        "WidowMineBurrowed"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleArmorsLevel2": {
-      "affected_units": [
-        "HellionTank",
-        "MPOdin",
-        "ThorAP",
-        "WarHound",
-        "WidowMine",
-        "WidowMineBurrowed"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleArmorsLevel3": {
-      "affected_units": [
-        "HellionTank",
-        "MPOdin",
-        "ThorAP",
-        "WarHound",
-        "WidowMine",
-        "WidowMineBurrowed"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleWeapons": {
-      "affected_units": [
-        "Hellion",
-        "SiegeTank",
-        "SiegeTankSieged",
-        "Thor"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TerranVehicleWeaponsLevel1": {
-      "affected_units": [
-        "HellionTank",
-        "MPOdin",
-        "ThorAP",
-        "WarHound",
-        "WidowMine",
-        "WidowMineBurrowed"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleWeaponsLevel2": {
-      "affected_units": [
-        "HellionTank",
-        "MPOdin",
-        "ThorAP",
-        "WarHound",
-        "WidowMine",
-        "WidowMineBurrowed"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "TerranVehicleWeaponsLevel3": {
-      "affected_units": [
-        "HellionTank",
-        "MPOdin",
-        "ThorAP",
-        "WarHound",
-        "WidowMine",
-        "WidowMineBurrowed"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ThorSkin": {
-      "affected_units": [
-        "Thor"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TransformationServos": {
-      "affected_units": [
-        "Hellion",
-        "HellionTank"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "TunnelingClaws": {
-      "affected_units": [
-        "Roach",
-        "RoachBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "UltraliskBurrowChargeUpgrade": {
-      "affected_units": [
-        "Ultralisk",
-        "UltraliskBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "UltraliskSkin": {
-      "affected_units": [
-        "Ultralisk",
-        "UltraliskBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "VikingJotunBoosters": {
-      "affected_units": [
-        "VikingFighter"
-      ],
-      "race": "Terran",
-      "requires": []
-    },
-    "VoidRaySpeedUpgrade": {
-      "affected_units": [
-        "VoidRay"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "WarpGateResearch": {
-      "affected_units": [
-        "Gateway"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "ZealotSkin": {
-      "affected_units": [
-        "Zealot"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergBurrowMove": {
-      "affected_units": [],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ZergFlyerArmors": {
-      "affected_units": [
-        "BroodLord",
-        "Corruptor",
-        "Mutalisk",
-        "Overlord",
-        "Overseer"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ZergFlyerArmorsLevel1": {
-      "affected_units": [
-        "OverlordTransport",
-        "OverseerSiegeMode",
-        "TransportOverlordCocoon",
-        "Viper"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergFlyerArmorsLevel2": {
-      "affected_units": [
-        "OverlordTransport",
-        "OverseerSiegeMode",
-        "TransportOverlordCocoon",
-        "Viper"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergFlyerArmorsLevel3": {
-      "affected_units": [
-        "OverlordTransport",
-        "OverseerSiegeMode",
-        "TransportOverlordCocoon",
-        "Viper"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergFlyerWeapons": {
-      "affected_units": [
-        "BroodLord",
-        "Corruptor",
-        "Mutalisk"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ZergFlyerWeaponsLevel1": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "ZergFlyerWeaponsLevel2": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "ZergFlyerWeaponsLevel3": {
-      "affected_units": [],
-      "race": null,
-      "requires": []
-    },
-    "ZergGroundArmors": {
-      "affected_units": [
-        "Baneling",
-        "BanelingBurrowed",
-        "Broodling",
-        "Drone",
-        "DroneBurrowed",
-        "Hydralisk",
-        "HydraliskBurrowed",
-        "Infestor",
-        "InfestorBurrowed",
-        "Queen",
-        "QueenBurrowed",
-        "Roach",
-        "RoachBurrowed",
-        "Ultralisk",
-        "UltraliskBurrowed",
-        "Zergling",
-        "ZerglingBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ZergGroundArmorsLevel1": {
-      "affected_units": [
-        "InfestorTerran",
-        "InfestorTerranBurrowed",
-        "LocustMP",
-        "LocustMPFlying",
-        "LurkerMP",
-        "LurkerMPBurrowed",
-        "Ravager",
-        "RavagerBurrowed",
-        "SwarmHostBurrowedMP",
-        "SwarmHostMP"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergGroundArmorsLevel2": {
-      "affected_units": [
-        "InfestorTerran",
-        "InfestorTerranBurrowed",
-        "LocustMP",
-        "LocustMPFlying",
-        "LurkerMP",
-        "LurkerMPBurrowed",
-        "Ravager",
-        "RavagerBurrowed",
-        "SwarmHostBurrowedMP",
-        "SwarmHostMP"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergGroundArmorsLevel3": {
-      "affected_units": [
-        "InfestorTerran",
-        "InfestorTerranBurrowed",
-        "LocustMP",
-        "LocustMPFlying",
-        "LurkerMP",
-        "LurkerMPBurrowed",
-        "Ravager",
-        "RavagerBurrowed",
-        "SwarmHostBurrowedMP",
-        "SwarmHostMP"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergMeleeWeapons": {
-      "affected_units": [
-        "Baneling",
-        "BanelingBurrowed",
-        "Broodling",
-        "Ultralisk",
-        "UltraliskBurrowed",
-        "Zergling",
-        "ZerglingBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ZergMeleeWeaponsLevel1": {
-      "affected_units": [
-        "LocustMP"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergMeleeWeaponsLevel2": {
-      "affected_units": [
-        "LocustMP"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergMeleeWeaponsLevel3": {
-      "affected_units": [
-        "LocustMP"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergMissileWeapons": {
-      "affected_units": [
-        "Hydralisk",
-        "HydraliskBurrowed",
-        "Queen",
-        "QueenBurrowed",
-        "Roach",
-        "RoachBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "ZergMissileWeaponsLevel1": {
-      "affected_units": [
-        "InfestorTerran",
-        "InfestorTerranBurrowed",
-        "LocustMP",
-        "LurkerMP",
-        "LurkerMPBurrowed",
-        "Ravager"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergMissileWeaponsLevel2": {
-      "affected_units": [
-        "InfestorTerran",
-        "InfestorTerranBurrowed",
-        "LocustMP",
-        "LurkerMP",
-        "LurkerMPBurrowed",
-        "Ravager"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZergMissileWeaponsLevel3": {
-      "affected_units": [
-        "InfestorTerran",
-        "InfestorTerranBurrowed",
-        "LocustMP",
-        "LurkerMP",
-        "LurkerMPBurrowed",
-        "Ravager"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "ZerglingSkin": {
-      "affected_units": [
-        "Zergling",
-        "ZerglingBurrowed"
-      ],
-      "race": null,
-      "requires": []
-    },
-    "haltech": {
-      "affected_units": [
-        "Sentry"
-      ],
-      "race": "Protoss",
-      "requires": []
-    },
-    "hydraliskspeed": {
-      "affected_units": [
-        "Hydralisk",
-        "HydraliskBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "overlordspeed": {
-      "affected_units": [
-        "Overlord",
-        "OverlordTransport",
-        "Overseer",
-        "OverseerSiegeMode"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "overlordtransport": {
-      "affected_units": [
-        "Overlord"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "zerglingattackspeed": {
-      "affected_units": [
-        "Zergling",
-        "ZerglingBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
-    },
-    "zerglingmovementspeed": {
-      "affected_units": [
-        "Zergling",
-        "ZerglingBurrowed"
-      ],
-      "race": "Zerg",
-      "requires": []
+    "ZerusDestructibleArch": {
+      "race": ""
     }
   }
 }
