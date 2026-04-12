@@ -52,3 +52,24 @@ class TestOracleRevelation:
         oracle = abil_data["OracleRevelation"]
         assert "Range" in oracle
         assert oracle["Range"] == 12
+
+
+class TestBarracksAddOns:
+    def test_barracks_add_ons_exists(self, abil_data: dict) -> None:
+        assert "BarracksAddOns" in abil_data
+
+    def test_barracks_add_ons_contains_barracks_tech_lab(self, abil_data: dict) -> None:
+        info_units = {
+            entry["Unit"]
+            for entry in abil_data["BarracksAddOns"]["InfoArray"]
+            if "Unit" in entry and isinstance(entry["Unit"], str)
+        }
+        assert "BarracksTechLab" in info_units
+
+    def test_barracks_add_ons_contains_barracks_reactor(self, abil_data: dict) -> None:
+        info_units = {
+            entry["Unit"]
+            for entry in abil_data["BarracksAddOns"]["InfoArray"]
+            if "Unit" in entry and isinstance(entry["Unit"], str)
+        }
+        assert "BarracksReactor" in info_units
