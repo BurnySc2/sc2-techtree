@@ -22,6 +22,140 @@ UNIT_REQUIREMENT_FIXES = {
     "Roach": ["RoachWarren"],
 }
 
+# Units to exclude from morph targets (cocoons)
+MORPH_EXCLUDE = {
+    "Cocoon",
+    "CocoonZergling",
+    "CocoonRoach",
+    "CocoonBaneling",
+    "BanelingCocoon",
+    "RoachCocoon",
+    "ZerglingCocoon",
+    "BroodLordCocoon",
+}
+
+# Research upgrades to exclude (they're not direct research abilities for this structure)
+RESEARCH_EXCLUDE = {
+    # TemplarArchive - HighTemplarKhaydarinAmulet is from TemplarArchivesResearch but not TemplarArchive's research
+    "HighTemplarKhaydarinAmulet",
+    # CyberneticsCore - haltech is not a research
+    "haltech",
+    # EngineeringBay - TerranBuildingArmor is not an Engineering Bay research
+    "TerranBuildingArmor",
+    # UltraliskCavern - UltraliskBurrowChargeUpgrade is not an Ultralisk Cavern research
+    "UltraliskBurrowChargeUpgrade",
+    # RoboticsBay - ImmortalRevive is not a Robotics Bay research
+    "ImmortalRevive",
+    # TwilightCouncil - these are not Twilight Council researches
+    "SunderingImpact",
+    "AmplifiedShielding",
+    # Note: AdeptShieldUpgrade is mapped to AdeptPiercingAttack via RESEARCH_NAME_MAP
+    # RoachWarren - RoachSupply is not a research
+    "RoachSupply",
+    # Lair/Hive/GreaterSpire - Burrow, overlord upgrades are from LairResearch
+    "Burrow",
+    "overlordspeed",
+    "overlordtransport",
+    # InfestationPit - extra researches from other sources
+    "FlyingLocusts",
+    "InfestorEnergyUpgrade",
+    "LocustLifetimeIncrease",
+    # FleetBeacon - extra researches from other sources
+    "CarrierLaunchSpeedUpgrade",
+    "TempestRangeUpgrade",
+    # GhostAcademy - extra researches from MercCompoundResearch
+    "EnhancedShockwaves",
+    "GhostMoebiusReactor",
+    "ReaperSpeed",
+}
+
+# Structure-specific research excludes (overrides general RESEARCH_EXCLUDE)
+# Key: structure name, Value: set of upgrade names to exclude for that structure
+STRUCTURE_RESEARCH_EXCLUDE = {
+    "BarracksTechLab": {
+        "CombatDrugs",
+    },
+    "FactoryTechLab": {
+        "ArmorPiercingRockets",
+        "CycloneAirUpgrade",
+        "CycloneLockOnRangeUpgrade",
+        "CycloneRapidFireLaunchers",
+        "HurricaneThrusters",
+        "SiegeTech",
+        "StrikeCannons",
+    },
+    "StarportTechLab": {
+        "DurableMaterials",
+        "HunterSeeker",
+        "LiberatorAGRangeUpgrade",
+        "LiberatorMorph",
+        "MedivacCaduceusReactor",
+        "MedivacRapidDeployment",
+        "MedivacIncreaseSpeedBoost",
+        "RavenCorvidReactor",
+        "RavenEnhancedMunitions",
+        "RavenRecalibratedExplosives",
+    },
+    "FusionCore": {
+        "MedivacIncreaseSpeedBoost",
+    },
+    "HydraliskDen": {
+        "HydraliskSpeedUpgrade",
+        "LurkerRange",
+        "hydraliskspeed",
+    },
+}
+
+# Additional researches to add (hard-coded for structures where data is missing)
+# Key: structure name, Value: list of upgrade names to add
+STRUCTURE_ADDITIONAL_RESEARCHES = {
+    "FusionCore": ["LiberatorAGRangeUpgrade"],
+    "HydraliskDen": ["Frenzy"],
+    "InfestationPit": ["MicrobialShroud"],
+}
+
+# Requirement name fixes (maps incorrect names to correct ones)
+REQUIREMENT_NAME_FIXES = {
+    "RoboticsFa": "RoboticsFacility",
+}
+# Map research upgrade names to canonical names
+RESEARCH_NAME_MAP = {
+    "AdeptShieldUpgrade": "AdeptPiercingAttack",
+    "LurkerRangeMP": "LurkerRange",
+    "BattlecruiserBehemothReactor": "BattlecruiserEnableSpecializations",
+}
+
+# Additional structures that should be included (tech labs)
+TECH_LABS = {
+    "BarracksTechLab",
+    "FactoryTechLab",
+    "StarportTechLab",
+}
+
+# Ability to structure mapping for shared abilities
+# Key: ability name, Value: structure prefix it belongs to
+ABILITY_STRUCTURE_MAP = {
+    # Train abilities
+    "GatewayTrain": "Gateway",
+    "WarpGateTrain": "WarpGate",
+    "BarracksTrain": "Barracks",
+    "FactoryTrain": "Factory",
+    "StarportTrain": "Starport",
+    "SpireTrain": "Spire",
+    "CommandCenterTrain": ["CommandCenter", "OrbitalCommand", "PlanetaryFortress"],
+    # Research abilities where structure name doesn't match ability prefix
+    "SpireResearch": "GreaterSpire",  # GreaterSpire gets SpireResearch
+    "LurkerDenResearch": "LurkerDenMP",  # LurkerDenMP gets LurkerDenResearch
+}
+
+# Research abilities shared between multiple structures
+# Key: ability name, Value: set of structures that should NOT get this research
+SHARED_RESEARCH_EXCLUDE = {
+    "LairResearch": {"GreaterSpire"},  # GreaterSpire should NOT get LairResearch upgrades
+    "HydraliskDenResearch": {"LurkerDenMP"},  # LurkerDenMP should NOT get HydraliskDenResearch upgrades
+    "MercCompoundResearch": {"BarracksTechLab", "GhostAcademy"},  # These get Merc upgrades elsewhere
+}
+
 
 def load_json(filename: str) -> dict:
     """Load a JSON data file."""
@@ -36,6 +170,7 @@ def parse_requirement(req: str) -> list[str]:
     Examples:
         'HaveBarracks' -> ['Barracks']
         'HaveArmoryAndAttachedTechLab' -> ['Armory', 'AttachedTechLab']
+        'HaveRoboticsBay' -> ['RoboticsBay']
     """
     if not req:
         return []
@@ -44,7 +179,13 @@ def parse_requirement(req: str) -> list[str]:
     result = []
     for part in parts:
         if part.startswith("Have"):
-            result.append(part[4:])  # Remove 'Have' prefix
+            name = part[4:]  # Remove 'Have' prefix
+            # Apply requirement name fixes
+            name = REQUIREMENT_NAME_FIXES.get(name, name)
+            result.append(name)
+        elif part.startswith("Learn"):
+            # Skip LearnX requirements - these are prerequisite unlocks
+            pass
         else:
             result.append(part)
     return result
@@ -79,28 +220,17 @@ def get_info_upgrades(info: Any) -> list[str]:
                 btn = item.get("Button", {})
                 if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
                     upgrade = item.get("Upgrade")
-                    if upgrade:
-                        upgrades.append(upgrade)
+                    if upgrade and upgrade not in RESEARCH_EXCLUDE:
+                        mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
+                        upgrades.append(mapped)
     elif isinstance(info, dict):
         btn = info.get("Button", {})
         if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
             upgrade = info.get("Upgrade")
-            if upgrade:
-                upgrades.append(upgrade)
+            if upgrade and upgrade not in RESEARCH_EXCLUDE:
+                mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
+                upgrades.append(mapped)
     return upgrades
-
-
-# Units to exclude from morph targets (cocoons)
-MORPH_EXCLUDE = {
-    "Cocoon",
-    "CocoonZergling",
-    "CocoonRoach",
-    "CocoonBaneling",
-    "BanelingCocoon",
-    "RoachCocoon",
-    "ZerglingCocoon",
-    "BroodLordCocoon",
-}
 
 
 def get_morph_targets(info: Any) -> list[str]:
@@ -148,12 +278,55 @@ def is_structure(data: dict) -> bool:
     return False
 
 
+def is_campaign_unit(data: dict) -> bool:
+    """Check if a unit is from Campaign (should be excluded)."""
+    if isinstance(data, dict):
+        editor_categories = data.get("EditorCategories", "")
+        if isinstance(editor_categories, list):
+            return "ObjectFamily:Campaign" in editor_categories
+        return "ObjectFamily:Campaign" in str(editor_categories)
+    return False
+
+
 def get_race(data: dict) -> str:
     """Get the race of a unit/structure."""
     if isinstance(data, dict):
         race = data.get("Race", "")
         return RACE_MAP.get(race, race)
     return ""
+
+
+def ability_matches_structure(abil_name: str, structure_name: str) -> bool:
+    """Check if an ability name matches a structure name (handles shared abilities)."""
+    # Direct match (ability name starts with structure name)
+    if abil_name.startswith(structure_name):
+        return True
+    # Check shared ability mapping
+    expected = ABILITY_STRUCTURE_MAP.get(abil_name)
+    if expected:
+        if isinstance(expected, list):
+            return structure_name in expected
+        return structure_name.startswith(expected)
+    return False
+
+
+def research_matches_structure(abil_name: str, structure_name: str) -> bool:
+    """Check if a research ability matches a structure."""
+    # Direct match (ability name starts with structure name)
+    if abil_name.startswith(structure_name):
+        return True
+    # Check shared ability mapping
+    expected_prefix = ABILITY_STRUCTURE_MAP.get(abil_name)
+    if expected_prefix:
+        if isinstance(expected_prefix, list):
+            return structure_name in expected_prefix
+        return structure_name.startswith(expected_prefix)
+    # Check if this is a shared research that should be excluded for this structure
+    if abil_name in SHARED_RESEARCH_EXCLUDE:
+        excluded_structures = SHARED_RESEARCH_EXCLUDE[abil_name]
+        if structure_name in excluded_structures:
+            return False
+    return False
 
 
 def generate_techtree() -> dict:
@@ -223,6 +396,10 @@ def generate_techtree() -> dict:
         researches: list[str] = []
         morphsto: str | list[str] | None = None
 
+        # Get structure-specific excludes and additional researches
+        excludes = STRUCTURE_RESEARCH_EXCLUDE.get(unit_name, set())
+        additional = STRUCTURE_ADDITIONAL_RESEARCHES.get(unit_name, [])
+
         for abil_name in unit_data.get("AbilArray", []):
             if not isinstance(abil_name, str):
                 continue
@@ -236,25 +413,41 @@ def generate_techtree() -> dict:
                     is_research = abil_name.endswith("Research")
 
                     if is_train:
-                        produces.append(produced_unit)
+                        # Check if this unit's ability matches the structure name
+                        if ability_matches_structure(abil_name, unit_name):
+                            # Exclude campaign units like WarHound
+                            if not is_campaign_unit(units_data.get(produced_unit, {})):
+                                produces.append(produced_unit)
                     elif is_build:
-                        # Exclude mercenary buildings (Race=NOT_FOUND or N/A)
+                        # Exclude mercenary buildings (Race=NOT_FOUND or N/A) and campaign units
                         if produced_unit in units_data:
-                            unit_info = units_data[produced_unit]
-                            race = unit_info.get("Race", "")
-                            # Exclude if race is empty, 'N/A', or 'NOT_FOUND'
-                            if race and race not in ("N/A", "NOT_FOUND", ""):
+                            prod_data = units_data[produced_unit]
+                            prod_race = prod_data.get("Race", "")
+                            if (
+                                prod_race
+                                and prod_race not in ("N/A", "NOT_FOUND", "")
+                                and not is_campaign_unit(prod_data)
+                            ):
                                 builds.append(produced_unit)
                         else:
                             builds.append(produced_unit)
                     elif is_research:
-                        researches.append(produced_unit)
+                        # Only add research if it matches the structure
+                        if research_matches_structure(abil_name, unit_name):
+                            if produced_unit not in excludes:
+                                researches.append(produced_unit)
 
             if abil_name in ability_upgrades:
-                researches.extend(ability_upgrades[abil_name])
+                # Only add upgrades if the ability matches the structure
+                if research_matches_structure(abil_name, unit_name):
+                    for upgrade in ability_upgrades[abil_name]:
+                        if upgrade not in excludes:
+                            researches.append(upgrade)
 
-            # Handle morphsto for units with MorphTo, UpgradeTo, or LiftOff abilities
-            is_morph_to = abil_name.startswith("MorphTo") and not abil_name.startswith("MorphZergling")
+            # Handle morphsto for units with MorphTo, MorphZergling, UpgradeTo, or LiftOff abilities
+            is_morph_to = (
+                abil_name.startswith("MorphTo") or abil_name.startswith("MorphZergling")
+            ) and abil_name != "MorphToBaneling"
             is_upgrade_to = abil_name.startswith("UpgradeTo")
             is_lift_off = abil_name.endswith("LiftOff")
 
@@ -287,8 +480,10 @@ def generate_techtree() -> dict:
             entry["produces"] = sorted(set(produces))
         if builds:
             entry["builds"] = sorted(set(builds))
-        if researches:
-            entry["researches"] = sorted(set(researches))
+        if researches or additional:
+            # Add additional researches (for structures where data is incomplete)
+            all_researches = list(researches) + [r for r in additional if r not in researches]
+            entry["researches"] = sorted(set(all_researches))
         if unlocks.get(unit_name):
             entry["unlocks"] = sorted(unlocks[unit_name])
         if morphsto:
@@ -305,7 +500,8 @@ def generate_techtree() -> dict:
             entry["morphsto"] = entry["produces"]
 
         # Separate structures and units
-        if is_structure(unit_data):
+        # Tech labs are structures even without ObjectType:Structure
+        if is_structure(unit_data) or unit_name in TECH_LABS:
             structures[unit_name] = entry
         else:
             units[unit_name] = entry

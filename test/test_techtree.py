@@ -423,3 +423,10 @@ class TestNexus:
         nexus = techtree_data["structures"]["Nexus"]
         assert "produces" in nexus
         assert nexus["produces"] == ["Mothership", "Probe"]
+
+
+class TestPlanetaryFortress:
+    def test_planetary_fortress_produces(self, techtree_data: dict) -> None:
+        pf = techtree_data["structures"]["PlanetaryFortress"]
+        assert "produces" in pf
+        assert pf["produces"] == ["SCV"]

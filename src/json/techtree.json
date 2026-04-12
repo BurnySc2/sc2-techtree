@@ -291,6 +291,14 @@
         "HasQueuedAddon"
       ]
     },
+    "BarracksTechLab": {
+      "race": "",
+      "researches": [
+        "PunisherGrenades",
+        "ShieldWall",
+        "Stimpack"
+      ]
+    },
     "Bunker": {
       "race": "Terran",
       "requires": [
@@ -338,8 +346,7 @@
         "ProtossAirWeaponsLevel1",
         "ProtossAirWeaponsLevel2",
         "ProtossAirWeaponsLevel3",
-        "WarpGateResearch",
-        "haltech"
+        "WarpGateResearch"
       ],
       "unlocks": [
         "Adept",
@@ -371,7 +378,6 @@
       "researches": [
         "HiSecAutoTracking",
         "NeosteelFrame",
-        "TerranBuildingArmor",
         "TerranInfantryArmorsLevel1",
         "TerranInfantryArmorsLevel2",
         "TerranInfantryArmorsLevel3",
@@ -406,9 +412,7 @@
         "Hellion",
         "HellionTank",
         "SiegeTank",
-        "Thor",
-        "WarHound",
-        "WidowMine"
+        "Thor"
       ],
       "race": "Terran",
       "requires": [
@@ -429,6 +433,15 @@
         "HasQueuedAddon"
       ]
     },
+    "FactoryTechLab": {
+      "race": "",
+      "researches": [
+        "CycloneLockOnDamageUpgrade",
+        "DrillClaws",
+        "HighCapacityBarrels",
+        "TransformationServos"
+      ]
+    },
     "FleetBeacon": {
       "race": "Protoss",
       "requires": [
@@ -436,9 +449,7 @@
       ],
       "researches": [
         "AnionPulseCrystals",
-        "CarrierLaunchSpeedUpgrade",
         "TempestGroundAttackUpgrade",
-        "TempestRangeUpgrade",
         "VoidRaySpeedUpgrade"
       ],
       "unlocks": [
@@ -475,10 +486,9 @@
         "Starport"
       ],
       "researches": [
-        "BattlecruiserBehemothReactor",
         "BattlecruiserEnableSpecializations",
-        "MedivacCaduceusReactor",
-        "MedivacIncreaseSpeedBoost"
+        "LiberatorAGRangeUpgrade",
+        "MedivacCaduceusReactor"
       ],
       "unlocks": [
         "Battlecruiser"
@@ -508,34 +518,23 @@
         "Barracks"
       ],
       "researches": [
-        "EnhancedShockwaves",
-        "GhostMoebiusReactor",
-        "PersonalCloaking",
-        "ReaperSpeed"
+        "PersonalCloaking"
       ]
     },
     "GreaterSpire": {
       "race": "Zerg",
       "researches": [
-        "Burrow",
         "ZergFlyerArmorsLevel1",
         "ZergFlyerArmorsLevel2",
         "ZergFlyerArmorsLevel3",
         "ZergFlyerWeaponsLevel1",
         "ZergFlyerWeaponsLevel2",
-        "ZergFlyerWeaponsLevel3",
-        "overlordspeed",
-        "overlordtransport"
+        "ZergFlyerWeaponsLevel3"
       ]
     },
     "Hatchery": {
       "morphsto": "Lair",
       "race": "Zerg",
-      "researches": [
-        "Burrow",
-        "overlordspeed",
-        "overlordtransport"
-      ],
       "unlocks": [
         "EvolutionChamber",
         "SpawningPool"
@@ -543,11 +542,6 @@
     },
     "Hive": {
       "race": "Zerg",
-      "researches": [
-        "Burrow",
-        "overlordspeed",
-        "overlordtransport"
-      ],
       "unlocks": [
         "UltraliskCavern",
         "Viper"
@@ -561,9 +555,7 @@
       "researches": [
         "EvolveGroovedSpines",
         "EvolveMuscularAugments",
-        "HydraliskSpeedUpgrade",
-        "LurkerRange",
-        "hydraliskspeed"
+        "Frenzy"
       ],
       "unlocks": [
         "Hydralisk",
@@ -576,9 +568,7 @@
         "Lair"
       ],
       "researches": [
-        "FlyingLocusts",
-        "InfestorEnergyUpgrade",
-        "LocustLifetimeIncrease",
+        "MicrobialShroud",
         "NeuralParasite"
       ],
       "unlocks": [
@@ -595,11 +585,6 @@
     "Lair": {
       "morphsto": "Hive",
       "race": "Zerg",
-      "researches": [
-        "Burrow",
-        "overlordspeed",
-        "overlordtransport"
-      ],
       "unlocks": [
         "HydraliskDen",
         "InfestationPit",
@@ -614,11 +599,7 @@
       ],
       "researches": [
         "DiggingClaws",
-        "EvolveGroovedSpines",
-        "EvolveMuscularAugments",
-        "HydraliskSpeedUpgrade",
-        "LurkerRange",
-        "hydraliskspeed"
+        "LurkerRange"
       ]
     },
     "MissileTurret": {
@@ -697,19 +678,17 @@
       ],
       "researches": [
         "GlialReconstitution",
-        "RoachSupply",
         "TunnelingClaws"
       ]
     },
     "RoboticsBay": {
       "race": "Protoss",
       "requires": [
-        "RoboticsFa"
+        "RoboticsFacility"
       ],
       "researches": [
         "ExtendedThermalLance",
         "GraviticDrive",
-        "ImmortalRevive",
         "ObserverGraviticBooster"
       ],
       "unlocks": [
@@ -719,21 +698,18 @@
     },
     "RoboticsFacility": {
       "produces": [
-        "Adept",
         "Colossus",
-        "DarkTemplar",
         "Disruptor",
-        "HighTemplar",
         "Immortal",
         "Observer",
-        "Sentry",
-        "Stalker",
-        "WarpPrism",
-        "Zealot"
+        "WarpPrism"
       ],
       "race": "Protoss",
       "requires": [
         "CyberneticsCore"
+      ],
+      "unlocks": [
+        "RoboticsBay"
       ]
     },
     "SensorTower": {
@@ -847,6 +823,14 @@
         "HasQueuedAddon"
       ]
     },
+    "StarportTechLab": {
+      "race": "",
+      "researches": [
+        "BansheeCloak",
+        "BansheeSpeed",
+        "InterferenceMatrix"
+      ]
+    },
     "SupplyDepot": {
       "race": "Terran",
       "unlocks": [
@@ -868,7 +852,6 @@
         "TwilightCouncil"
       ],
       "researches": [
-        "HighTemplarKhaydarinAmulet",
         "PsiStormTech"
       ]
     },
@@ -878,12 +861,10 @@
         "CyberneticsCore"
       ],
       "researches": [
-        "AdeptShieldUpgrade",
-        "AmplifiedShielding",
+        "AdeptPiercingAttack",
         "BlinkTech",
         "Charge",
-        "PsionicAmplifiers",
-        "SunderingImpact"
+        "PsionicAmplifiers"
       ],
       "unlocks": [
         "DarkShrine",
@@ -897,8 +878,7 @@
       ],
       "researches": [
         "AnabolicSynthesis",
-        "ChitinousPlating",
-        "UltraliskBurrowChargeUpgrade"
+        "ChitinousPlating"
       ],
       "unlocks": [
         "Ultralisk"
@@ -1146,7 +1126,6 @@
       "race": "Zerg"
     },
     "BanelingCocoon": {
-      "morphsto": "Baneling",
       "race": "Zerg"
     },
     "Banshee": {
@@ -1157,16 +1136,6 @@
     },
     "BansheeACGluescreenDummy": {
       "race": ""
-    },
-    "BarracksTechLab": {
-      "race": "",
-      "researches": [
-        "CombatDrugs",
-        "PunisherGrenades",
-        "ReaperSpeed",
-        "ShieldWall",
-        "Stimpack"
-      ]
     },
     "BattleStationMineralField": {
       "race": ""
@@ -1953,22 +1922,6 @@
     },
     "EyeStalkWeapon": {
       "race": "Zerg"
-    },
-    "FactoryTechLab": {
-      "race": "",
-      "researches": [
-        "ArmorPiercingRockets",
-        "CycloneAirUpgrade",
-        "CycloneLockOnDamageUpgrade",
-        "CycloneLockOnRangeUpgrade",
-        "CycloneRapidFireLaunchers",
-        "DrillClaws",
-        "HighCapacityBarrels",
-        "HurricaneThrusters",
-        "SiegeTech",
-        "StrikeCannons",
-        "TransformationServos"
-      ]
     },
     "FireRoachACGluescreenDummy": {
       "race": ""
@@ -3542,24 +3495,6 @@
     },
     "StalkerWeapon": {
       "race": "Protoss"
-    },
-    "StarportTechLab": {
-      "race": "",
-      "researches": [
-        "BansheeCloak",
-        "BansheeSpeed",
-        "DurableMaterials",
-        "HunterSeeker",
-        "InterferenceMatrix",
-        "LiberatorAGRangeUpgrade",
-        "LiberatorMorph",
-        "MedivacCaduceusReactor",
-        "MedivacIncreaseSpeedBoost",
-        "MedivacRapidDeployment",
-        "RavenCorvidReactor",
-        "RavenEnhancedMunitions",
-        "RavenRecalibratedExplosives"
-      ]
     },
     "StrikeGoliathACGluescreenDummy": {
       "race": ""

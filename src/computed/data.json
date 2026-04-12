@@ -4645,6 +4645,82 @@
       ],
       "name": "RoachWarrenResearch"
     },
+    "RoboticsBayResearch": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchExtendedThermalLance",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnExtendedThermalLance",
+            "State": "Restricted"
+          },
+          "Resource": [
+            150,
+            150
+          ],
+          "Time": 140,
+          "Upgrade": "ExtendedThermalLance",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchGraviticBooster",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnGraviticBooster",
+            "State": "Restricted"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 80,
+          "Upgrade": "ObserverGraviticBooster",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchGraviticDrive",
+            "Flags": "ShowInGlossary",
+            "Requirements": "LearnGraviticDrive",
+            "State": "Restricted"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 80,
+          "Upgrade": "GraviticDrive",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchImmortalRevive",
+            "Requirements": "LearnImmortalRevive"
+          },
+          "Resource": [
+            100,
+            100
+          ],
+          "Time": 80,
+          "Upgrade": "ImmortalRevive",
+          "index": "Research8"
+        },
+        {
+          "Time": "140",
+          "index": "Research4"
+        },
+        {
+          "Time": "140",
+          "index": "Research5"
+        },
+        {
+          "Time": "70",
+          "index": "Research1"
+        }
+      ],
+      "name": "RoboticsBayResearch"
+    },
     "RoboticsFacilityTrain": {
       "Activity": "UI/Warping",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
@@ -5727,26 +5803,6 @@
       ],
       "name": "ThorAPMode"
     },
-    "TornadoMissile": {
-      "AbilCmd": "attack,Execute",
-      "AutoCastFilters": "Ground,Mechanical,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
-      "CmdButtonArray": {
-        "DefaultButtonFace": "TornadoMissile",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Cooldown": {
-          "TimeUse": "6"
-        }
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": "TornadoMissileCP",
-      "Flags": [
-        "AutoCast",
-        "AutoCastOn"
-      ],
-      "name": "TornadoMissile"
-    },
     "Transfusion": {
       "Alignment": "Positive",
       "CastIntroTime": 0.2,
@@ -6074,104 +6130,6 @@
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "PowerUserBehavior": "PowerUserWarpable",
       "name": "Warpable"
-    },
-    "WidowMineAttack": {
-      "Arc": 360,
-      "AutoCastFilters": "Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign",
-      "AutoCastRange": 5,
-      "AutoCastValidatorArray": [
-        "IsNotDisguisedChangeling",
-        "IsNotNeuralParasited",
-        "NotHallucinationOrNotDetected",
-        "NotLarvaEgg",
-        "noMarkers"
-      ],
-      "CancelEffect": "WidowMineTargetTintRemoveBehavior",
-      "CmdButtonArray": {
-        "DefaultButtonFace": "WidowMineAttack",
-        "Flags": "ShowInGlossary",
-        "Requirements": "WidowMineArmed",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Cooldown": {
-          "TimeUse": "40"
-        }
-      },
-      "Flags": [
-        "AutoCast",
-        "AutoCastOn",
-        "ReExecutable",
-        "Smart"
-      ],
-      "PrepEffect": "WidowMineTargetingBeamDummy",
-      "PrepTime": 1.5,
-      "Range": 5,
-      "RangeSlop": 0,
-      "TargetFilters": "Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
-      "name": "WidowMineAttack"
-    },
-    "WidowMineBurrow": {
-      "AbilSetId": "BrwD",
-      "ActorKey": "BurrowDown",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "Cancel",
-          "index": "Cancel"
-        },
-        {
-          "DefaultButtonFace": "WidowMineBurrow",
-          "Flags": "ToSelection",
-          "index": "Execute"
-        }
-      ],
-      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
-      "Flags": [
-        "IgnoreFacing",
-        "IgnorePlacement",
-        "Interruptible",
-        "SuppressMovement"
-      ],
-      "InfoArray": [
-        {
-          "RandomDelayMax": 0.25,
-          "SectionArray": [
-            {
-              "DurationArray": 0.6806,
-              "index": "Collide"
-            },
-            {
-              "DurationArray": 3.125,
-              "EffectArray": "WidowMineNotificationSearch",
-              "index": "Actor"
-            },
-            {
-              "DurationArray": 3.125,
-              "index": "Stats"
-            }
-          ],
-          "index": 0
-        },
-        {
-          "RandomDelayMax": 0.5,
-          "SectionArray": [
-            {
-              "DurationArray": 0.5556,
-              "index": "Collide"
-            },
-            {
-              "DurationArray": 3,
-              "index": "Actor"
-            },
-            {
-              "DurationArray": 3,
-              "index": "Stats"
-            }
-          ],
-          "Unit": "WidowMineBurrowed"
-        }
-      ],
-      "name": "WidowMineBurrow"
     },
     "WorkerStopIdleAbilityVespene": {
       "AutoCastFilters": "HarvestableResource,Visible,UnderConstruction;Ally,Neutral,Enemy",
@@ -8161,8 +8119,7 @@
         "ProtossAirWeaponsLevel1",
         "ProtossAirWeaponsLevel2",
         "ProtossAirWeaponsLevel3",
-        "WarpGateResearch",
-        "haltech"
+        "WarpGateResearch"
       ],
       "unlocks": [
         "Adept",
@@ -8510,7 +8467,6 @@
       "researches": [
         "HiSecAutoTracking",
         "NeosteelFrame",
-        "TerranBuildingArmor",
         "TerranInfantryArmorsLevel1",
         "TerranInfantryArmorsLevel2",
         "TerranInfantryArmorsLevel3",
@@ -8971,9 +8927,7 @@
         "Hellion",
         "HellionTank",
         "SiegeTank",
-        "Thor",
-        "WarHound",
-        "WidowMine"
+        "Thor"
       ],
       "race": "Terran",
       "requires": [
@@ -9257,9 +9211,7 @@
       ],
       "researches": [
         "AnionPulseCrystals",
-        "CarrierLaunchSpeedUpgrade",
         "TempestGroundAttackUpgrade",
-        "TempestRangeUpgrade",
         "VoidRaySpeedUpgrade"
       ],
       "unlocks": [
@@ -9585,10 +9537,9 @@
         "Starport"
       ],
       "researches": [
-        "BattlecruiserBehemothReactor",
         "BattlecruiserEnableSpecializations",
-        "MedivacCaduceusReactor",
-        "MedivacIncreaseSpeedBoost"
+        "LiberatorAGRangeUpgrade",
+        "MedivacCaduceusReactor"
       ],
       "unlocks": [
         "Battlecruiser"
@@ -9967,10 +9918,7 @@
         "Barracks"
       ],
       "researches": [
-        "EnhancedShockwaves",
-        "GhostMoebiusReactor",
-        "PersonalCloaking",
-        "ReaperSpeed"
+        "PersonalCloaking"
       ]
     },
     "Hatchery": {
@@ -10150,11 +10098,6 @@
       "morphsto": "Lair",
       "name": "Hatchery",
       "race": "Zerg",
-      "researches": [
-        "Burrow",
-        "overlordspeed",
-        "overlordtransport"
-      ],
       "unlocks": [
         "EvolutionChamber",
         "SpawningPool"
@@ -10293,9 +10236,7 @@
       "researches": [
         "EvolveGroovedSpines",
         "EvolveMuscularAugments",
-        "HydraliskSpeedUpgrade",
-        "LurkerRange",
-        "hydraliskspeed"
+        "Frenzy"
       ],
       "unlocks": [
         "Hydralisk",
@@ -10438,9 +10379,7 @@
         "Lair"
       ],
       "researches": [
-        "FlyingLocusts",
-        "InfestorEnergyUpgrade",
-        "LocustLifetimeIncrease",
+        "MicrobialShroud",
         "NeuralParasite"
       ],
       "unlocks": [
@@ -10573,11 +10512,7 @@
       ],
       "researches": [
         "DiggingClaws",
-        "EvolveGroovedSpines",
-        "EvolveMuscularAugments",
-        "HydraliskSpeedUpgrade",
-        "LurkerRange",
-        "hydraliskspeed"
+        "LurkerRange"
       ]
     },
     "MercCompound": {
@@ -11790,7 +11725,6 @@
       ],
       "researches": [
         "GlialReconstitution",
-        "RoachSupply",
         "TunnelingClaws"
       ]
     },
@@ -11910,12 +11844,11 @@
       "name": "RoboticsBay",
       "race": "Protoss",
       "requires": [
-        "RoboticsFa"
+        "RoboticsFacility"
       ],
       "researches": [
         "ExtendedThermalLance",
         "GraviticDrive",
-        "ImmortalRevive",
         "ObserverGraviticBooster"
       ],
       "unlocks": [
@@ -12070,21 +12003,18 @@
       "TurningRate": 719.4726,
       "name": "RoboticsFacility",
       "produces": [
-        "Adept",
         "Colossus",
-        "DarkTemplar",
         "Disruptor",
-        "HighTemplar",
         "Immortal",
         "Observer",
-        "Sentry",
-        "Stalker",
-        "WarpPrism",
-        "Zealot"
+        "WarpPrism"
       ],
       "race": "Protoss",
       "requires": [
         "CyberneticsCore"
+      ],
+      "unlocks": [
+        "RoboticsBay"
       ]
     },
     "SensorTower": {
@@ -13661,7 +13591,6 @@
         "TwilightCouncil"
       ],
       "researches": [
-        "HighTemplarKhaydarinAmulet",
         "PsiStormTech"
       ]
     },
@@ -13793,12 +13722,10 @@
         "CyberneticsCore"
       ],
       "researches": [
-        "AdeptShieldUpgrade",
-        "AmplifiedShielding",
+        "AdeptPiercingAttack",
         "BlinkTech",
         "Charge",
-        "PsionicAmplifiers",
-        "SunderingImpact"
+        "PsionicAmplifiers"
       ],
       "unlocks": [
         "DarkShrine",
@@ -13937,8 +13864,7 @@
       ],
       "researches": [
         "AnabolicSynthesis",
-        "ChitinousPlating",
-        "UltraliskBurrowChargeUpgrade"
+        "ChitinousPlating"
       ],
       "unlocks": [
         "Ultralisk"
@@ -23670,6 +23596,121 @@
       "TurningRate": 719.4726,
       "name": "RoachWarren"
     },
+    "RoboticsBay": {
+      "AbilArray": [
+        "BuildInProgress",
+        "RoboticsBayResearch",
+        "que5"
+      ],
+      "AttackTargetPriority": 11,
+      "Attributes": [
+        "Armored",
+        "Structure"
+      ],
+      "BehaviorArray": [
+        "PowerUserQueue"
+      ],
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "BuildInProgress,Cancel",
+            "Column": "4",
+            "Face": "CancelBuilding",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "RoboticsBayResearch,Research2",
+            "Column": "0",
+            "Face": "ResearchGraviticBooster",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "RoboticsBayResearch,Research3",
+            "Column": "1",
+            "Face": "ResearchGraviticDrive",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "RoboticsBayResearch,Research6",
+            "Column": "2",
+            "Face": "ResearchExtendedThermalLance",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "que5,CancelLast",
+            "Column": "4",
+            "Face": "Cancel",
+            "Row": "2",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": [
+        "Burrow",
+        "ForceField",
+        "Ground",
+        "Locust",
+        "Phased",
+        "RoachBurrow",
+        "Small",
+        "Structure"
+      ],
+      "CostCategory": "Technology",
+      "CostResource": {
+        "Minerals": 150,
+        "Vespene": 150
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "FlagArray": [
+        "ArmorDisabledWhileConstructing",
+        "NoPortraitTalk",
+        "PenaltyRevealed",
+        "PreventDefeat",
+        "PreventDestroy",
+        "TownAlert",
+        "Turnable",
+        "UseLineOfSight"
+      ],
+      "FogVisibility": "Snapshot",
+      "Footprint": "Footprint3x3Contour",
+      "GlossaryPriority": 219,
+      "HotkeyCategory": "Unit/Category/ProtossUnits",
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/ProtossBuildingPlating",
+      "LifeMax": 500,
+      "LifeStart": 500,
+      "MinimapRadius": 1.5,
+      "Mob": "Multiplayer",
+      "PlacementFootprint": "Footprint3x3",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Prot",
+      "Radius": 1.5,
+      "ScoreKill": 300,
+      "ScoreMake": 300,
+      "ScoreResult": "BuildOrder",
+      "SeparationRadius": 1.5,
+      "ShieldArmorName": "Unit/ShieldArmorName/ProtossPlasmaShields",
+      "ShieldRegenDelay": 10,
+      "ShieldRegenRate": 2,
+      "ShieldsMax": 500,
+      "ShieldsStart": 500,
+      "Sight": 9,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 6,
+      "TechTreeUnlockedUnitArray": [
+        "Colossus",
+        "Disruptor"
+      ],
+      "TurningRate": 719.4726,
+      "name": "RoboticsBay"
+    },
     "RoboticsFacility": {
       "AbilArray": [
         "BuildInProgress",
@@ -27109,129 +27150,6 @@
       "name": "VoidRay",
       "race": "Protoss"
     },
-    "WarHound": {
-      "AbilArray": [
-        "TornadoMissile",
-        "attack",
-        "move",
-        "stop"
-      ],
-      "Acceleration": 1000,
-      "AttackTargetPriority": 20,
-      "Attributes": [
-        "Armored",
-        "Mechanical"
-      ],
-      "CardLayouts": {
-        "LayoutButtons": [
-          {
-            "AbilCmd": "TornadoMissile,Execute",
-            "Column": "0",
-            "Face": "TornadoMissile",
-            "Row": "2",
-            "Type": "AbilCmd"
-          },
-          {
-            "AbilCmd": "attack,Execute",
-            "Column": "4",
-            "Face": "Attack",
-            "Row": "0",
-            "Type": "AbilCmd"
-          },
-          {
-            "AbilCmd": "move,HoldPos",
-            "Column": "2",
-            "Face": "MoveHoldPosition",
-            "Row": "0",
-            "Type": "AbilCmd"
-          },
-          {
-            "AbilCmd": "move,Move",
-            "Column": "0",
-            "Face": "Move",
-            "Row": "0",
-            "Type": "AbilCmd"
-          },
-          {
-            "AbilCmd": "move,Patrol",
-            "Column": "3",
-            "Face": "MovePatrol",
-            "Row": "0",
-            "Type": "AbilCmd"
-          },
-          {
-            "AbilCmd": "stop,Stop",
-            "Column": "1",
-            "Face": "Stop",
-            "Row": "0",
-            "Type": "AbilCmd"
-          }
-        ]
-      },
-      "CargoSize": 4,
-      "Collide": [
-        "ForceField",
-        "Ground",
-        "Small"
-      ],
-      "CostCategory": "Army",
-      "CostResource": {
-        "Minerals": 150,
-        "Vespene": 75
-      },
-      "DeathRevealRadius": 3,
-      "EditorCategories": "ObjectFamily:Campaign,ObjectType:Unit",
-      "FlagArray": [
-        "ArmySelect",
-        "PreventDestroy",
-        "TurnBeforeMove",
-        "UseLineOfSight"
-      ],
-      "Food": -3,
-      "GlossaryCategory": "",
-      "GlossaryPriority": 126,
-      "GlossaryStrongArray": [
-        "SiegeTankSieged",
-        "Stalker"
-      ],
-      "GlossaryWeakArray": [
-        "Marauder",
-        "Roach",
-        "Zealot"
-      ],
-      "HotkeyAlias": "",
-      "HotkeyCategory": "",
-      "InnerRadius": 0.5,
-      "LateralAcceleration": 46.0625,
-      "LifeArmor": 1,
-      "LifeArmorName": "Unit/LifeArmorName/TerranVehiclePlating",
-      "LifeMax": 220,
-      "LifeStart": 220,
-      "MinimapRadius": 1,
-      "Mob": "Multiplayer",
-      "PlaneArray": [
-        "Ground"
-      ],
-      "Race": "Terr",
-      "Radius": 0.8125,
-      "RepairTime": 45,
-      "ScoreKill": 225,
-      "ScoreMake": 225,
-      "SeparationRadius": 0.625,
-      "Sight": 11,
-      "Speed": 2.8125,
-      "SubgroupPriority": 8,
-      "TauntDuration": [
-        5
-      ],
-      "TurningRate": 360,
-      "WeaponArray": [
-        "WarHound",
-        "WarHoundMelee"
-      ],
-      "name": "WarHound",
-      "race": "Terran"
-    },
     "WarpPrism": {
       "AIEvalFactor": 0,
       "AbilArray": [
@@ -27373,175 +27291,6 @@
       "VisionHeight": 15,
       "name": "WarpPrism",
       "race": "Protoss"
-    },
-    "WidowMine": {
-      "AbilArray": [
-        "WidowMineAttack",
-        "WidowMineBurrow",
-        "move",
-        "stop"
-      ],
-      "Acceleration": 1000,
-      "AttackTargetPriority": 19,
-      "Attributes": [
-        "Light",
-        "Mechanical"
-      ],
-      "BehaviorArray": [
-        "WidowMineArmoryTracker",
-        "WidowMineDrillingClawsTracker"
-      ],
-      "CardLayouts": [
-        {
-          "LayoutButtons": [
-            {
-              "AbilCmd": "WidowMineAttack,Execute",
-              "Column": "0",
-              "Face": "WidowMineAttack",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "WidowMineBurrow,Execute",
-              "Column": "1",
-              "Face": "WidowMineBurrow",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "attack,Execute",
-              "Column": "4",
-              "Face": "Attack",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,AcquireMove",
-              "Column": "4",
-              "Face": "AcquireMove",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,HoldPos",
-              "Column": "2",
-              "Face": "MoveHoldPosition",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,Move",
-              "Column": "0",
-              "Face": "Move",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,Patrol",
-              "Column": "3",
-              "Face": "MovePatrol",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "stop,Stop",
-              "Column": "1",
-              "Face": "Stop",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "Column": "3",
-              "Face": "WidowMineBioSplash",
-              "Row": "2",
-              "Type": "Passive"
-            }
-          ]
-        },
-        {
-          "LayoutButtons": [
-            {
-              "Column": "0",
-              "Face": "WidowMineBioSplash",
-              "Row": "2",
-              "Type": "Passive",
-              "index": "6"
-            },
-            {
-              "Column": "4",
-              "Face": "WidowMineConcealment",
-              "Requirements": "HaveArmory",
-              "Row": "2",
-              "Type": "Passive"
-            }
-          ],
-          "index": 0
-        }
-      ],
-      "CargoSize": 2,
-      "Collide": [
-        "ForceField",
-        "Ground",
-        "Locust",
-        "Small"
-      ],
-      "CostCategory": "Army",
-      "CostResource": {
-        "Minerals": 75,
-        "Vespene": 25
-      },
-      "DeathRevealDuration": 3,
-      "DeathRevealRadius": 7,
-      "EditorCategories": "ObjectType:Unit,ObjectFamily:Campaign",
-      "FlagArray": [
-        "AISplash",
-        "AIThreatAir",
-        "AIThreatGround",
-        "AlwaysThreatens",
-        "ArmySelect",
-        "PreventDestroy",
-        "UseLineOfSight"
-      ],
-      "Food": -2,
-      "GlossaryCategory": "Unit/Category/TerranUnits",
-      "GlossaryPriority": 129,
-      "GlossaryStrongArray": [
-        "Baneling",
-        "Immortal",
-        "Marauder",
-        "Marine",
-        "Oracle",
-        "Roach",
-        "Stalker"
-      ],
-      "GlossaryWeakArray": [
-        "Observer",
-        "Overseer",
-        "Raven"
-      ],
-      "HotkeyCategory": "Unit/Category/TerranUnits",
-      "KillDisplay": "Always",
-      "LifeArmorName": "Unit/LifeArmorName/TerranVehiclePlating",
-      "LifeMax": 90,
-      "LifeStart": 90,
-      "Mob": "Multiplayer",
-      "PlaneArray": [
-        "Ground"
-      ],
-      "Race": "Terr",
-      "RankDisplay": "Always",
-      "RepairTime": 20,
-      "ScoreKill": 100,
-      "ScoreMake": 100,
-      "ScoreResult": "BuildOrder",
-      "Sight": 7,
-      "Speed": 2.8125,
-      "StationaryTurningRate": 2292.8906,
-      "SubgroupPriority": 54,
-      "TacticalAIThink": "AIThinkWidowMine",
-      "TechAliasArray": "Alias_WidowMine",
-      "name": "WidowMine",
-      "race": "Terran"
     },
     "Zealot": {
       "AbilArray": [
@@ -28014,43 +27763,17 @@
     }
   },
   "upgrades": {
-    "AdeptShieldUpgrade": {
-      "AffectedUnitArray": "Adept",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
-      "EffectArray": [
-        {
-          "Reference": "Unit,Adept,ShieldsMax",
-          "Value": "50"
-        },
-        {
-          "Reference": "Unit,Adept,ShieldsStart",
-          "Value": "50"
-        }
-      ],
-      "Icon": "Assets\\Textures\\BTN-Upgrade-Protoss-AdeptShieldUpgrade.dds",
-      "Race": "Prot",
-      "ScoreAmount": 200,
-      "ScoreResult": "BuildOrder",
-      "name": "AdeptShieldUpgrade"
-    },
-    "AmplifiedShielding": {
+    "AdeptPiercingAttack": {
       "AffectedUnitArray": "Adept",
       "EditorCategories": "Race:Protoss,UpgradeType:AttackBonus",
-      "EffectArray": [
-        {
-          "Reference": "Unit,Adept,ShieldsMax",
-          "Value": "20"
-        },
-        {
-          "Reference": "Unit,Adept,ShieldsStart",
-          "Value": "20"
-        }
-      ],
-      "Icon": "Assets\\Textures\\btn-upgrade-protoss-adeptshieldupgrade.dds",
+      "EffectArray": {
+        "Reference": "Weapon,Adept,RateMultiplier",
+        "Value": "0.45"
+      },
+      "Icon": "Assets\\Textures\\btn-upgrade-protoss-resonatingglaives-orange.dds",
       "ScoreAmount": 200,
       "ScoreResult": "BuildOrder",
-      "name": "AmplifiedShielding"
+      "name": "AdeptPiercingAttack"
     },
     "AnabolicSynthesis": {
       "AffectedUnitArray": "Ultralisk",
@@ -28105,22 +27828,6 @@
     "BanelingNest": {
       "name": "BanelingNest"
     },
-    "BattlecruiserBehemothReactor": {
-      "AffectedUnitArray": "Battlecruiser",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Terran,UpgradeType:Talents",
-      "EffectArray": {
-        "Reference": "Unit,Battlecruiser,EnergyStart",
-        "Value": "25"
-      },
-      "Flags": "TechTreeCheat",
-      "Icon": "Assets\\Textures\\btn-upgrade-terran-behemothreactor.dds",
-      "InfoTooltipPriority": 11,
-      "Race": "Terr",
-      "ScoreAmount": 300,
-      "ScoreResult": "BuildOrder",
-      "name": "BattlecruiserBehemothReactor"
-    },
     "BattlecruiserEnableSpecializations": {
       "AffectedUnitArray": "Battlecruiser",
       "Alert": "ResearchComplete",
@@ -28141,55 +27848,6 @@
       "ScoreAmount": 300,
       "ScoreResult": "BuildOrder",
       "name": "BlinkTech"
-    },
-    "Burrow": {
-      "AffectedUnitArray": [
-        "Baneling",
-        "BanelingBurrowed",
-        "Drone",
-        "DroneBurrowed",
-        "Hydralisk",
-        "HydraliskBurrowed",
-        "Infestor",
-        "InfestorBurrowed",
-        "InfestorTerran",
-        "InfestorTerranBurrowed",
-        "Queen",
-        "QueenBurrowed",
-        "Ravager",
-        "RavagerBurrowed",
-        "Roach",
-        "RoachBurrowed",
-        "SwarmHostBurrowedMP",
-        "SwarmHostMP",
-        "Ultralisk",
-        "UltraliskBurrowed",
-        "Zergling",
-        "ZerglingBurrowed"
-      ],
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-      "Icon": "Assets\\Textures\\btn-ability-zerg-burrow-color.dds",
-      "Race": "Zerg",
-      "ScoreAmount": 200,
-      "ScoreResult": "BuildOrder",
-      "name": "Burrow"
-    },
-    "CarrierLaunchSpeedUpgrade": {
-      "AffectedUnitArray": "Carrier",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Protoss,UpgradeType:Talents",
-      "EffectArray": {
-        "Operation": "Set",
-        "Reference": "Weapon,InterceptorLaunch,Effect",
-        "Value": "InterceptorLaunchUpgradedPersistent"
-      },
-      "Flags": "TechTreeCheat",
-      "Icon": "Assets\\Textures\\btn-upgrade-protoss-gravitoncatapult.dds",
-      "Race": "Prot",
-      "ScoreAmount": 300,
-      "ScoreResult": "BuildOrder",
-      "name": "CarrierLaunchSpeedUpgrade"
     },
     "CentrificalHooks": {
       "AffectedUnitArray": [
@@ -28305,24 +27963,6 @@
       "ScoreResult": "BuildOrder",
       "name": "DiggingClaws"
     },
-    "EnhancedShockwaves": {
-      "AffectedUnitArray": [
-        "Ghost",
-        "GhostAlternate",
-        "GhostNova"
-      ],
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
-      "EffectArray": {
-        "Reference": "Effect,EMPSearch,AreaArray[0].Radius",
-        "Value": "0.5"
-      },
-      "Icon": "Assets\\Textures\\btn-ability-terran-electricfield.dds",
-      "Race": "Terr",
-      "ScoreAmount": 300,
-      "ScoreResult": "BuildOrder",
-      "name": "EnhancedShockwaves"
-    },
     "EvolveGroovedSpines": {
       "AffectedUnitArray": [
         "Hydralisk",
@@ -28400,34 +28040,18 @@
     "FleetBeacon": {
       "name": "FleetBeacon"
     },
-    "FlyingLocusts": {
-      "AffectedUnitArray": "SwarmHostMP",
+    "Frenzy": {
+      "AffectedUnitArray": "Hydralisk",
       "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-      "Icon": "Assets\\Textures\\btn-unit-zerg-locustflyer.dds",
-      "name": "FlyingLocusts"
+      "EditorCategories": "Race:Zerg,UpgradeType:SpellResearch",
+      "Icon": "Assets\\Textures\\btn-upgrade-zerg-frenzy.dds",
+      "Race": "Zerg",
+      "ScoreAmount": 200,
+      "ScoreResult": "BuildOrder",
+      "name": "Frenzy"
     },
     "FusionCore": {
       "name": "FusionCore"
-    },
-    "GhostMoebiusReactor": {
-      "AffectedUnitArray": [
-        "Ghost",
-        "GhostAlternate",
-        "GhostNova"
-      ],
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Terran,UpgradeType:Talents",
-      "EffectArray": {
-        "Reference": "Unit,Ghost,EnergyStart",
-        "Value": "25"
-      },
-      "Flags": "TechTreeCheat",
-      "Icon": "Assets\\Textures\\btn-upgrade-terran-moebiusreactor.dds",
-      "Race": "Terr",
-      "ScoreAmount": 200,
-      "ScoreResult": "BuildOrder",
-      "name": "GhostMoebiusReactor"
     },
     "GlialReconstitution": {
       "AffectedUnitArray": [
@@ -28516,93 +28140,32 @@
       "name": "HiSecAutoTracking",
       "parent": "Research"
     },
-    "HighTemplarKhaydarinAmulet": {
-      "AffectedUnitArray": "HighTemplar",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Protoss,UpgradeType:Talents",
-      "EffectArray": {
-        "Reference": "Unit,HighTemplar,EnergyStart",
-        "Value": "25"
-      },
-      "Icon": "Assets\\Textures\\btn-upgrade-protoss-khaydarinamulet.dds",
-      "Race": "Prot",
-      "ScoreAmount": 299,
-      "ScoreResult": "BuildOrder",
-      "name": "HighTemplarKhaydarinAmulet"
-    },
     "HydraliskDen": {
       "name": "HydraliskDen"
-    },
-    "HydraliskSpeedUpgrade": {
-      "AffectedUnitArray": [
-        "Hydralisk",
-        "HydraliskBurrowed"
-      ],
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-      "EffectArray": [
-        {
-          "Operation": "Set",
-          "Reference": "Unit,Hydralisk,Speed",
-          "Value": "2.812500"
-        },
-        {
-          "Operation": "Set",
-          "Reference": "Unit,Hydralisk,SpeedMultiplierCreep",
-          "Value": "1.2"
-        }
-      ],
-      "Icon": "Assets\\Textures\\BTN-Upgrade-Zerg-EvolveMuscularAugments.dds",
-      "InfoTooltipPriority": 1,
-      "ScoreAmount": 300,
-      "ScoreResult": "BuildOrder",
-      "name": "HydraliskSpeedUpgrade"
-    },
-    "ImmortalRevive": {
-      "AffectedUnitArray": "Immortal",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
-      "Icon": "Assets\\Textures\\btn-techupgrade-terran-immortalityprotocol.dds",
-      "Race": "Prot",
-      "ScoreAmount": 200,
-      "ScoreResult": "BuildOrder",
-      "name": "ImmortalRevive"
     },
     "InfestationPit": {
       "name": "InfestationPit"
     },
-    "InfestorEnergyUpgrade": {
+    "LiberatorAGRangeUpgrade": {
       "AffectedUnitArray": [
-        "Infestor",
-        "InfestorBurrowed"
+        "Liberator",
+        "LiberatorAG"
       ],
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Terran,UpgradeType:Talents",
-      "EffectArray": {
-        "Reference": "Unit,Infestor,EnergyStart",
-        "Value": "25"
-      },
-      "Flags": "TechTreeCheat",
-      "Icon": "Assets\\Textures\\btn-upgrade-zerg-pathogenglands.dds",
-      "Race": "Zerg",
+      "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
+      "EffectArray": [
+        {
+          "Reference": "Abil,LiberatorAGTarget,Range[0]",
+          "Value": "2"
+        },
+        {
+          "Reference": "Weapon,LiberatorAGWeapon,Range",
+          "Value": "2"
+        }
+      ],
+      "Icon": "Assets\\Textures\\btn-upgrade-terran-advanceballistics.dds",
       "ScoreAmount": 300,
       "ScoreResult": "BuildOrder",
-      "name": "InfestorEnergyUpgrade"
-    },
-    "LocustLifetimeIncrease": {
-      "AffectedUnitArray": "SwarmHostMP",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Protoss,UpgradeType:Talents",
-      "EffectArray": {
-        "Reference": "Behavior,LocustMPTimedLife,Duration",
-        "Value": "10"
-      },
-      "Flags": "TechTreeCheat",
-      "Icon": "Assets\\Textures\\BTN-Upgrade-Zerg-EvolveIncreasedLocustLifetime.dds",
-      "Race": "Zerg",
-      "ScoreAmount": 400,
-      "ScoreResult": "BuildOrder",
-      "name": "LocustLifetimeIncrease"
+      "name": "LiberatorAGRangeUpgrade"
     },
     "LurkerRange": {
       "AffectedUnitArray": [
@@ -28651,31 +28214,15 @@
       "ScoreResult": "BuildOrder",
       "name": "MedivacCaduceusReactor"
     },
-    "MedivacIncreaseSpeedBoost": {
-      "AffectedUnitArray": "Medivac",
-      "EditorCategories": "Race:Terran,UpgradeType:Talents",
-      "EffectArray": [
-        {
-          "Operation": "Set",
-          "Reference": "Behavior,MedivacSpeedBoost,Modification.MoveSpeedMultiplier",
-          "Value": "1.4406"
-        },
-        {
-          "Operation": "Set",
-          "Reference": "Unit,Medivac,Speed",
-          "Value": "2.949200"
-        },
-        {
-          "Operation": "Subtract",
-          "Reference": "Abil,MedivacSpeedBoost,Cost[0].Cooldown.TimeUse",
-          "Value": "7.000000"
-        }
-      ],
-      "Flags": "UpgradeCheat",
-      "Icon": "Assets\\Textures\\btn-upgrade-terran-highcapacityfueltanks.dds",
-      "ScoreAmount": 200,
+    "MicrobialShroud": {
+      "AffectedUnitArray": "Infestor",
+      "Alert": "ResearchComplete",
+      "EditorCategories": "Race:Zerg,UpgradeType:SpellResearch",
+      "Icon": "Assets\\Textures\\btn-ability-zerg-darkswarm.dds",
+      "Race": "Zerg",
+      "ScoreAmount": 300,
       "ScoreResult": "BuildOrder",
-      "name": "MedivacIncreaseSpeedBoost"
+      "name": "MicrobialShroud"
     },
     "MothershipRequirements": {
       "name": "MothershipRequirements"
@@ -30200,40 +29747,6 @@
       "ScoreResult": "BuildOrder",
       "name": "PsionicAmplifiers"
     },
-    "ReaperSpeed": {
-      "AffectedUnitArray": "Reaper",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Terran,UpgradeType:Talents",
-      "EffectArray": [
-        {
-          "Reference": "Unit,Reaper,Speed",
-          "Value": "0.875000",
-          "index": "0"
-        },
-        {
-          "Reference": "Unit,Reaper,Speed",
-          "Value": "0.886700"
-        }
-      ],
-      "Flags": "TechTreeCheat",
-      "Icon": "Assets\\Textures\\btn-upgrade-terran-reapernitropacks.dds",
-      "Race": "Terr",
-      "ScoreAmount": 100,
-      "ScoreResult": "BuildOrder",
-      "name": "ReaperSpeed"
-    },
-    "RoachSupply": {
-      "AffectedUnitArray": [
-        "Roach",
-        "RoachBurrowed"
-      ],
-      "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-      "EffectArray": {
-        "Reference": "Unit,Roach,Food",
-        "Value": "1"
-      },
-      "name": "RoachSupply"
-    },
     "RoboticsBay": {
       "name": "RoboticsBay"
     },
@@ -30245,18 +29758,6 @@
     },
     "Spire": {
       "name": "Spire"
-    },
-    "SunderingImpact": {
-      "AffectedUnitArray": "Zealot",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Protoss,UpgradeType:Talents",
-      "Flags": "TechTreeCheat",
-      "Icon": "Assets\\Textures\\btn-ability-protoss-shadowblade.dds",
-      "LeaderAlias": "Charge",
-      "Race": "Prot",
-      "ScoreAmount": 200,
-      "ScoreResult": "BuildOrder",
-      "name": "SunderingImpact"
     },
     "TempestGroundAttackUpgrade": {
       "AffectedUnitArray": "Tempest",
@@ -30275,337 +29776,8 @@
       "ScoreResult": "BuildOrder",
       "name": "TempestGroundAttackUpgrade"
     },
-    "TempestRangeUpgrade": {
-      "AffectedUnitArray": "Tempest",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Protoss,UpgradeType:Talents",
-      "EffectArray": {
-        "Operation": "Set",
-        "Reference": "Effect,TempestDamage,AttributeBonus[Massive]",
-        "Value": "35"
-      },
-      "Icon": "Assets\\Textures\\BTN-Upgrade-Protoss-ResearchGravitySling.dds",
-      "InfoTooltipPriority": 1,
-      "Race": "Prot",
-      "ScoreAmount": 300,
-      "ScoreResult": "BuildOrder",
-      "name": "TempestRangeUpgrade"
-    },
     "TemplarArchives": {
       "name": "TemplarArchives"
-    },
-    "TerranBuildingArmor": {
-      "AffectedUnitArray": [
-        "Armory",
-        "AutoTurret",
-        "Barracks",
-        "BarracksFlying",
-        "BarracksReactor",
-        "BarracksTechLab",
-        "Bunker",
-        "BypassArmorDrone",
-        "CommandCenter",
-        "CommandCenterFlying",
-        "EngineeringBay",
-        "Factory",
-        "FactoryFlying",
-        "FactoryReactor",
-        "FactoryTechLab",
-        "FusionCore",
-        "GhostAcademy",
-        "MissileTurret",
-        "OrbitalCommand",
-        "OrbitalCommandFlying",
-        "PlanetaryFortress",
-        "PointDefenseDrone",
-        "RavenRepairDrone",
-        "Reactor",
-        "Refinery",
-        "RefineryRich",
-        "SensorTower",
-        "Starport",
-        "StarportFlying",
-        "StarportReactor",
-        "StarportTechLab",
-        "SupplyDepot",
-        "SupplyDepotLowered",
-        "TechLab"
-      ],
-      "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
-      "EffectArray": [
-        {
-          "Reference": "Unit,Armory,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,Armory,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,AutoTurret,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,AutoTurret,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,Barracks,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,Barracks,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,BarracksFlying,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,BarracksFlying,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,BarracksReactor,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,BarracksReactor,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,BarracksTechLab,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,BarracksTechLab,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,Bunker,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,Bunker,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,BypassArmorDrone,LifeArmor",
-          "index": "61"
-        },
-        {
-          "Reference": "Unit,BypassArmorDrone,LifeArmorLevel",
-          "index": "60"
-        },
-        {
-          "Reference": "Unit,CommandCenter,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,CommandCenter,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,CommandCenterFlying,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,CommandCenterFlying,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,EngineeringBay,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,EngineeringBay,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,Factory,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,Factory,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,FactoryFlying,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,FactoryFlying,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,FactoryReactor,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,FactoryReactor,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,FactoryTechLab,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,FactoryTechLab,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,FusionCore,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,FusionCore,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,GhostAcademy,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,GhostAcademy,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,MissileTurret,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,MissileTurret,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,OrbitalCommand,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,OrbitalCommand,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,OrbitalCommandFlying,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,OrbitalCommandFlying,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,PlanetaryFortress,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,PlanetaryFortress,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,PointDefenseDrone,LifeArmor",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,PointDefenseDrone,LifeArmor",
-          "index": "59"
-        },
-        {
-          "Reference": "Unit,PointDefenseDrone,LifeArmorLevel",
-          "Value": "2",
-          "index": "58"
-        },
-        {
-          "Reference": "Unit,PointDefenseDrone,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,Reactor,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,Reactor,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,Refinery,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,Refinery,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,SensorTower,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,SensorTower,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,Starport,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,Starport,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,StarportFlying,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,StarportFlying,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,StarportReactor,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,StarportReactor,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,StarportTechLab,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,StarportTechLab,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,SupplyDepot,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,SupplyDepot,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,SupplyDepotLowered,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,SupplyDepotLowered,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,TechLab,LifeArmor",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Unit,TechLab,LifeArmorLevel",
-          "Value": "2"
-        }
-      ],
-      "Icon": "Assets\\Textures\\btn-upgrade-terran-buildingarmor.dds",
-      "InfoTooltipPriority": 41,
-      "ScoreAmount": 300,
-      "ScoreCount": "ArmorTechnologyCount",
-      "ScoreResult": "BuildOrder",
-      "ScoreValue": "ArmorTechnologyValue",
-      "name": "TerranBuildingArmor"
     },
     "TerranInfantryArmorsLevel1": {
       "AffectedUnitArray": [
@@ -31539,20 +30711,6 @@
       "ScoreResult": "BuildOrder",
       "name": "TunnelingClaws"
     },
-    "UltraliskBurrowChargeUpgrade": {
-      "AffectedUnitArray": [
-        "Ultralisk",
-        "UltraliskBurrowed"
-      ],
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-      "Icon": "Assets\\Textures\\btn-upgrade-zerg-burrowcharge.dds",
-      "InfoTooltipPriority": 1,
-      "Race": "Zerg",
-      "ScoreAmount": 400,
-      "ScoreResult": "BuildOrder",
-      "name": "UltraliskBurrowChargeUpgrade"
-    },
     "UltraliskCavern": {
       "name": "UltraliskCavern"
     },
@@ -31854,80 +31012,6 @@
       "ScoreAmount": 500,
       "name": "ZergFlyerWeaponsLevel3",
       "parent": "ZergFlyerWeapons"
-    },
-    "haltech": {
-      "AffectedUnitArray": "Sentry",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
-      "Icon": "Assets\\Textures\\btn-ability-protoss-hallucination-color.dds",
-      "Race": "Prot",
-      "ScoreAmount": 200,
-      "ScoreResult": "BuildOrder",
-      "name": "haltech"
-    },
-    "hydraliskspeed": {
-      "AffectedUnitArray": [
-        "Hydralisk",
-        "HydraliskBurrowed"
-      ],
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-      "EffectArray": {
-        "Reference": "Weapon,NeedleSpines,Range",
-        "Value": "1"
-      },
-      "Flags": "TechTreeCheat",
-      "Icon": "Assets\\Textures\\btn-upgrade-zerg-groovedspines.dds",
-      "Race": "Zerg",
-      "ScoreAmount": 300,
-      "ScoreResult": "BuildOrder",
-      "name": "hydraliskspeed"
-    },
-    "overlordspeed": {
-      "AffectedUnitArray": [
-        "Overlord",
-        "OverlordTransport",
-        "Overseer",
-        "OverseerSiegeMode"
-      ],
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-      "EffectArray": [
-        {
-          "Reference": "Unit,Overlord,Speed",
-          "Value": "1.289000",
-          "index": "1"
-        },
-        {
-          "Reference": "Unit,Overlord,Speed",
-          "Value": "1.406200"
-        },
-        {
-          "Reference": "Unit,Overseer,Speed",
-          "Value": "0.875000"
-        },
-        {
-          "Reference": "Unit,Overseer,Speed",
-          "Value": "1.500000",
-          "index": "0"
-        }
-      ],
-      "Flags": "TechTreeCheat",
-      "Icon": "Assets\\Textures\\btn-upgrade-zerg-pneumatizedcarapace.dds",
-      "Race": "Zerg",
-      "ScoreAmount": 200,
-      "ScoreResult": "BuildOrder",
-      "name": "overlordspeed"
-    },
-    "overlordtransport": {
-      "AffectedUnitArray": "Overlord",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Zerg,UpgradeType:Talents",
-      "Icon": "Assets\\Textures\\btn-upgrade-zerg-ventralsacs.dds",
-      "Race": "Zerg",
-      "ScoreAmount": 400,
-      "ScoreResult": "BuildOrder",
-      "name": "overlordtransport"
     },
     "zerglingattackspeed": {
       "AffectedUnitArray": [
