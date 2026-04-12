@@ -5115,30 +5115,32 @@
     "GlossaryCategory": "",
     "GlossaryPriority": 0,
     "GlossaryStrongArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "GlossaryWeakArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "HotkeyAlias": "Changeling",
     "HotkeyCategory": "",
@@ -5206,30 +5208,32 @@
     "GlossaryCategory": "",
     "GlossaryPriority": 0,
     "GlossaryStrongArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "GlossaryWeakArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "HotkeyAlias": "Changeling",
     "HotkeyCategory": "",
@@ -5311,30 +5315,32 @@
     "GlossaryCategory": "",
     "GlossaryPriority": 0,
     "GlossaryStrongArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "GlossaryWeakArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "HotkeyAlias": "Changeling",
     "HotkeyCategory": "",
@@ -5416,30 +5422,32 @@
     "GlossaryCategory": "",
     "GlossaryPriority": 0,
     "GlossaryStrongArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "GlossaryWeakArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "HotkeyAlias": "Changeling",
     "HotkeyCategory": "",
@@ -5521,30 +5529,32 @@
     "GlossaryCategory": "",
     "GlossaryPriority": 0,
     "GlossaryStrongArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "GlossaryWeakArray": [
-      [
-        "0",
-        "1"
-      ],
-      [
-        "1",
-        "2"
-      ],
-      [
-        "1"
-      ]
+      {
+        "index": "0",
+        "removed": "1"
+      },
+      {
+        "index": "1",
+        "removed": "1"
+      },
+      {
+        "index": "2",
+        "removed": "1"
+      }
     ],
     "HotkeyAlias": "Changeling",
     "HotkeyCategory": "",
