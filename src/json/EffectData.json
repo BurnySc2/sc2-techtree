@@ -5663,14 +5663,9 @@
     },
     "ValidatorArray": [
       "NoGravitonBeamInProgress",
-      "NoGravitonBeamInProgress",
       "NoReaperKD8Knockback",
       "NotAbducted",
-      "NotFrenzied",
-      {
-        "index": "1",
-        "removed": "1"
-      }
+      "NotFrenzied"
     ],
     "WhichLocation": {
       "Value": "TargetUnit"
@@ -7922,13 +7917,7 @@
     "Player": {
       "Value": "Source"
     },
-    "ValidatorArray": [
-      "HaveFlyingLocusts",
-      {
-        "index": "0",
-        "removed": "1"
-      }
-    ],
+    "ValidatorArray": "HaveFlyingLocusts",
     "WhichUnit": {
       "Value": "Source"
     }
@@ -9226,11 +9215,7 @@
     }
   },
   "NexusMassRecallPhased": {
-    "Behavior": "NexusMassRecallTargetPhased",
-    "ValidatorArray": {
-      "index": "0",
-      "removed": "1"
-    }
+    "Behavior": "NexusMassRecallTargetPhased"
   },
   "NexusMassRecallPostBehavior": {
     "Behavior": "NexusRecalled",
@@ -9285,11 +9270,7 @@
     ]
   },
   "NexusMassRecallWarpOutAB": {
-    "Behavior": "NexusMassRecallWarpOut",
-    "ValidatorArray": {
-      "index": "0",
-      "removed": "1"
-    }
+    "Behavior": "NexusMassRecallWarpOut"
   },
   "NexusMassRecallWarpOutSet": {
     "EditorCategories": "Race:Protoss",
@@ -14471,11 +14452,7 @@
       "ColossusAttackDamageMaxRange",
       "FriendlyTarget",
       "MultipleHitSelfAlliedOnlyGroundOnlyAttackTargetFilter",
-      "noMarkers",
-      {
-        "index": "3",
-        "removed": "1"
-      }
+      "noMarkers"
     ],
     "parent": "ThermalLancesMU"
   },
@@ -16413,14 +16390,8 @@
     "Marker": "WidowMineAttack",
     "ValidatorArray": [
       "NoMineDroneCountdown",
-      "NoMineDroneCountdown",
       "NotLarva",
-      "NotLarva",
-      "noMarkers",
-      {
-        "index": "2",
-        "removed": "1"
-      }
+      "noMarkers"
     ]
   },
   "WidowMineDelayRemoveAB": {
@@ -16593,26 +16564,14 @@
     "EditorCategories": "Race:Zerg",
     "ImpactEffect": "WidowMineExplodeSet",
     "Marker": "WidowMineAttack",
-    "ValidatorArray": [
-      "noMarkers",
-      {
-        "index": "1",
-        "removed": "1"
-      }
-    ]
+    "ValidatorArray": "noMarkers"
   },
   "WidowMineLMAir": {
     "AmmoUnit": "WidowMineAirWeapon",
     "EditorCategories": "Race:Zerg",
     "ImpactEffect": "WidowMineExplodeSet",
     "Marker": "WidowMineAttack",
-    "ValidatorArray": [
-      "noMarkers",
-      {
-        "index": "1",
-        "removed": "1"
-      }
-    ]
+    "ValidatorArray": "noMarkers"
   },
   "WidowMineLMSwitch": {
     "CaseArray": {
@@ -17487,25 +17446,12 @@
     "EffectArray": [
       "AbductDummyDamage",
       "InstantUnburrow",
-      "InstantUnburrow",
       "RemoveCoreRecallingBehavior",
       "RemoveRecallingBehavior",
       "YoinkApplyBehavior",
-      "YoinkApplyBehavior",
-      "YoinkApplyTentacleBehavior",
       "YoinkApplyTentacleBehavior",
       "YoinkCancelOrders",
-      "YoinkCancelOrders",
-      "YoinkDelayPersistent",
-      "YoinkDelayPersistent",
-      {
-        "index": "5",
-        "removed": "1"
-      },
-      {
-        "index": "6",
-        "removed": "1"
-      }
+      "YoinkDelayPersistent"
     ],
     "Marker": "YoinkMarker",
     "ValidatorArray": [

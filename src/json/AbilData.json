@@ -3800,13 +3800,7 @@
           "DefaultButtonFace": ""
         },
         "Time": 45,
-        "Unit": [
-          "WarHound",
-          {
-            "index": "0",
-            "removed": "1"
-          }
-        ],
+        "Unit": "WarHound",
         "index": "Train13"
       },
       {
@@ -5152,13 +5146,7 @@
           "DefaultButtonFace": ""
         },
         "Time": 35,
-        "Unit": [
-          "Baneling",
-          {
-            "index": "0",
-            "removed": "1"
-          }
-        ],
+        "Unit": "Baneling",
         "index": "Train8"
       },
       {
@@ -11142,13 +11130,7 @@
         },
         "Effect": "WarpInEffect",
         "Time": 120,
-        "Unit": [
-          "Carrier",
-          {
-            "index": "0",
-            "removed": "1"
-          }
-        ],
+        "Unit": "Carrier",
         "index": "Train3"
       },
       {
@@ -13269,13 +13251,7 @@
       "Cooldown": "Vortex",
       "Energy": 100
     },
-    "CursorEffect": [
-      "VortexSearchArea",
-      {
-        "index": "0",
-        "removed": "1"
-      }
-    ],
+    "CursorEffect": "VortexSearchArea",
     "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
     "Effect": "VortexKillSet",
     "Flags": "AbortOnAllianceChange",

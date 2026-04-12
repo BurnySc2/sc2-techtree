@@ -2228,13 +2228,7 @@
             "DefaultButtonFace": ""
           },
           "Time": 45,
-          "Unit": [
-            "WarHound",
-            {
-              "index": "0",
-              "removed": "1"
-            }
-          ],
+          "Unit": "WarHound",
           "index": "Train13"
         },
         {
@@ -3484,13 +3478,7 @@
             "DefaultButtonFace": ""
           },
           "Time": 35,
-          "Unit": [
-            "Baneling",
-            {
-              "index": "0",
-              "removed": "1"
-            }
-          ],
+          "Unit": "Baneling",
           "index": "Train8"
         },
         {
@@ -3588,6 +3576,7 @@
       "MorphUnit": "Egg",
       "Range": 4,
       "morphs": [
+        "Baneling",
         "Corruptor",
         "Drone",
         "Hydralisk",
@@ -6801,13 +6790,7 @@
           },
           "Effect": "WarpInEffect",
           "Time": 120,
-          "Unit": [
-            "Carrier",
-            {
-              "index": "0",
-              "removed": "1"
-            }
-          ],
+          "Unit": "Carrier",
           "index": "Train3"
         },
         {
@@ -7498,6 +7481,28 @@
       "race": "Terran",
       "requires": []
     },
+    "TornadoMissile": {
+      "AbilCmd": "attack,Execute",
+      "AutoCastFilters": "Ground,Mechanical,Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "TornadoMissile",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "6"
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": "TornadoMissileCP",
+      "Flags": [
+        "AutoCast",
+        "AutoCastOn"
+      ],
+      "name": "TornadoMissile",
+      "race": "Protoss",
+      "requires": []
+    },
     "TrainQueen": {
       "Activity": "UI/Spawning",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
@@ -8131,13 +8136,7 @@
         "Cooldown": "Vortex",
         "Energy": 100
       },
-      "CursorEffect": [
-        "VortexSearchArea",
-        {
-          "index": "0",
-          "removed": "1"
-        }
-      ],
+      "CursorEffect": "VortexSearchArea",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": "VortexKillSet",
       "Flags": "AbortOnAllianceChange",
@@ -9089,6 +9088,10 @@
               "index": "0"
             },
             {
+              "index": "12",
+              "removed": "1"
+            },
+            {
               "index": "13",
               "removed": "1"
             },
@@ -9741,24 +9744,15 @@
       "AIEvalFactor": 1.1,
       "AbilArray": [
         "AttackRedirect",
-        "AttackRedirect",
         "BuildInProgress",
         "BunkerTransport",
-        "Rally",
         "Rally",
         "SalvageBunkerRefund",
         "SalvageEffect",
         "SalvageShared",
         "StimpackMarauderRedirect",
-        "StimpackMarauderRedirect",
         "StimpackRedirect",
-        "StimpackRedirect",
-        "StopRedirect",
-        "StopRedirect",
-        {
-          "index": "8",
-          "removed": "1"
-        }
+        "StopRedirect"
       ],
       "AttackTargetPriority": 19,
       "Attributes": [
@@ -10171,21 +10165,15 @@
       "BehaviorArray": [
         "makeCreep4x4"
       ],
-      "CardLayouts": [
-        {
-          "LayoutButtons": {
-            "AbilCmd": "BuildInProgress,Cancel",
-            "Column": "4",
-            "Face": "CancelBuilding",
-            "Row": "2",
-            "Type": "AbilCmd"
-          }
-        },
-        {
-          "index": "0",
-          "removed": "1"
+      "CardLayouts": {
+        "LayoutButtons": {
+          "AbilCmd": "BuildInProgress,Cancel",
+          "Column": "4",
+          "Face": "CancelBuilding",
+          "Row": "2",
+          "Type": "AbilCmd"
         }
-      ],
+      },
       "Collide": [
         "Burrow",
         "CreepTumor",
@@ -10259,21 +10247,15 @@
       "BehaviorArray": [
         "makeCreep4x4"
       ],
-      "CardLayouts": [
-        {
-          "LayoutButtons": {
-            "AbilCmd": "BuildInProgress,Cancel",
-            "Column": "4",
-            "Face": "CancelBuilding",
-            "Row": "2",
-            "Type": "AbilCmd"
-          }
-        },
-        {
-          "index": "0",
-          "removed": "1"
+      "CardLayouts": {
+        "LayoutButtons": {
+          "AbilCmd": "BuildInProgress,Cancel",
+          "Column": "4",
+          "Face": "CancelBuilding",
+          "Row": "2",
+          "Type": "AbilCmd"
         }
-      ],
+      },
       "Collide": [
         "Burrow",
         "ForceField",
@@ -10423,11 +10405,7 @@
           ]
         },
         {
-          "LayoutButtons": {
-            "index": "9",
-            "removed": "1"
-          },
-          "index": 0
+          "index": "0"
         }
       ],
       "Collide": [
@@ -10487,14 +10465,9 @@
       "SubgroupPriority": 16,
       "TechTreeUnlockedUnitArray": [
         "Adept",
-        "Adept",
         "MothershipCore",
         "Sentry",
-        "Stalker",
-        {
-          "index": "3",
-          "removed": "1"
-        }
+        "Stalker"
       ],
       "TurningRate": 719.4726,
       "abilities": [
@@ -10709,10 +10682,6 @@
               "AbilCmd": "EngineeringBayResearch,Research9",
               "Face": "TerranInfantryArmorLevel3",
               "index": "10"
-            },
-            {
-              "index": "12",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -11355,6 +11324,7 @@
         "HellionTank",
         "SiegeTank",
         "Thor",
+        "WarHound",
         "WidowMine"
       ],
       "race": "Terran",
@@ -11431,14 +11401,6 @@
               "Face": "TempestResearchGroundAttackUpgrade",
               "Row": "0",
               "Type": "AbilCmd"
-            },
-            {
-              "index": "4",
-              "removed": "1"
-            },
-            {
-              "index": "5",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -12059,11 +12021,7 @@
         "BuildInProgress",
         "GhostAcademyResearch",
         "MercCompoundResearch",
-        "que5",
-        {
-          "index": "4",
-          "removed": "1"
-        }
+        "que5"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -12260,14 +12218,7 @@
         "BuildInProgress",
         "LairResearch",
         "SpireResearch",
-        "SpireResearch",
-        "SpireResearch",
-        "que5CancelToSelection",
-        "que5CancelToSelection",
-        {
-          "index": "3",
-          "removed": "1"
-        }
+        "que5CancelToSelection"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -12522,11 +12473,7 @@
           ]
         },
         {
-          "LayoutButtons": {
-            "index": "10",
-            "removed": "1"
-          },
-          "index": 0
+          "index": "0"
         }
       ],
       "Collide": [
@@ -12709,11 +12656,7 @@
           ]
         },
         {
-          "LayoutButtons": {
-            "index": "8",
-            "removed": "1"
-          },
-          "index": 0
+          "index": "0"
         }
       ],
       "Collide": [
@@ -13203,11 +13146,7 @@
           ]
         },
         {
-          "LayoutButtons": {
-            "index": "10",
-            "removed": "1"
-          },
-          "index": 0
+          "index": "0"
         }
       ],
       "Collide": [
@@ -13414,13 +13353,7 @@
       "Sight": 9,
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 16,
-      "TechAliasArray": [
-        "Alias_HydraliskDen",
-        {
-          "index": "0",
-          "removed": "1"
-        }
-      ],
+      "TechAliasArray": "Alias_HydraliskDen",
       "TechTreeUnlockedUnitArray": "LurkerMP",
       "TurningRate": 719.4726,
       "abilities": [
@@ -13698,10 +13631,6 @@
               "Face": "Stop",
               "Row": "0",
               "Type": "AbilCmd"
-            },
-            {
-              "index": "8",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -13967,10 +13896,6 @@
               "Face": "NydusWormIncreasedArmorPassive",
               "Row": "2",
               "Type": "Passive"
-            },
-            {
-              "index": "7",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -14978,19 +14903,13 @@
           ]
         },
         {
-          "LayoutButtons": [
-            {
-              "AbilCmd": "RoachWarrenResearch,Research3",
-              "Column": "1",
-              "Face": "EvolveTunnelingClaws",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "index": "4",
-              "removed": "1"
-            }
-          ],
+          "LayoutButtons": {
+            "AbilCmd": "RoachWarrenResearch,Research3",
+            "Column": "1",
+            "Face": "EvolveTunnelingClaws",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
           "index": 0
         }
       ],
@@ -15203,18 +15122,10 @@
     "RoboticsFacility": {
       "AbilArray": [
         "BuildInProgress",
-        "BuildInProgress",
         "GatewayTrain",
         "Rally",
-        "Rally",
         "RoboticsFacilityTrain",
-        "RoboticsFacilityTrain",
-        "que5",
-        "que5",
-        {
-          "index": "4",
-          "removed": "1"
-        }
+        "que5"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -15509,11 +15420,7 @@
         "BuildInProgress",
         "ShieldBatteryRechargeChanneled",
         "ShieldBatteryRechargeEx5",
-        "stop",
-        {
-          "index": "2",
-          "removed": "1"
-        }
+        "stop"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -15559,12 +15466,14 @@
               "index": "0"
             },
             {
-              "index": "1",
-              "removed": "1"
+              "AbilCmd": "ShieldBatteryRechargeEx5,Execute",
+              "Column": "0",
+              "Face": "ShieldBatteryRecharge",
+              "index": "2"
             },
             {
-              "index": "2",
-              "removed": "1"
+              "Face": "CancelBuilding",
+              "index": "1"
             }
           ],
           "index": 0
@@ -16800,11 +16709,7 @@
           ]
         },
         {
-          "LayoutButtons": {
-            "index": "3",
-            "removed": "1"
-          },
-          "index": 0
+          "index": "0"
         }
       ],
       "Collide": [
@@ -17094,10 +16999,6 @@
               "Row": "0",
               "Type": "AbilCmd",
               "index": "2"
-            },
-            {
-              "index": "3",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -17523,11 +17424,7 @@
       "BehaviorArray": [
         "MassiveVoidRayVulnerability",
         "MassiveVoidRayVulnerability",
-        null,
-        [
-          "0",
-          "1"
-        ]
+        null
       ],
       "CardLayouts": {
         "LayoutButtons": [
@@ -17603,11 +17500,7 @@
         "Adept",
         "Marine",
         "Mutalisk",
-        "Mutalisk",
-        "Zealot",
-        [
-          "1"
-        ]
+        "Zealot"
       ],
       "GlossaryWeakArray": [
         "Hydralisk",
@@ -17766,6 +17659,10 @@
               "Row": "2",
               "Type": "AbilCmd",
               "index": "0"
+            },
+            {
+              "index": "12",
+              "removed": "1"
             },
             {
               "index": "13",
@@ -18611,11 +18508,7 @@
         "Mechanical"
       ],
       "BehaviorArray": [
-        "MassiveVoidRayVulnerability",
-        [
-          "0",
-          "1"
-        ]
+        "MassiveVoidRayVulnerability"
       ],
       "CardLayouts": [
         {
@@ -18773,10 +18666,6 @@
         {
           "Link": "ATSLaserBattery",
           "Turret": "Battlecruiser"
-        },
-        {
-          "index": "1",
-          "removed": "1"
         }
       ],
       "name": "Battlecruiser",
@@ -18804,11 +18693,7 @@
       ],
       "BehaviorArray": [
         "Frenzy",
-        "MassiveVoidRayVulnerability",
-        [
-          "0",
-          "1"
-        ]
+        "MassiveVoidRayVulnerability"
       ],
       "CardLayouts": [
         {
@@ -18939,24 +18824,15 @@
       "AIEvalFactor": 1.1,
       "AbilArray": [
         "AttackRedirect",
-        "AttackRedirect",
         "BuildInProgress",
         "BunkerTransport",
-        "Rally",
         "Rally",
         "SalvageBunkerRefund",
         "SalvageEffect",
         "SalvageShared",
         "StimpackMarauderRedirect",
-        "StimpackMarauderRedirect",
         "StimpackRedirect",
-        "StimpackRedirect",
-        "StopRedirect",
-        "StopRedirect",
-        {
-          "index": "8",
-          "removed": "1"
-        }
+        "StopRedirect"
       ],
       "AttackTargetPriority": 19,
       "Attributes": [
@@ -19137,11 +19013,7 @@
         "Warpable",
         "attack",
         "move",
-        "stop",
-        {
-          "index": "5",
-          "removed": "1"
-        }
+        "stop"
       ],
       "Acceleration": 1.0625,
       "AttackTargetPriority": 20,
@@ -19151,11 +19023,7 @@
         "Mechanical"
       ],
       "BehaviorArray": [
-        "MassiveVoidRayVulnerability",
-        [
-          "0",
-          "1"
-        ]
+        "MassiveVoidRayVulnerability"
       ],
       "CardLayouts": [
         {
@@ -19219,11 +19087,7 @@
           ]
         },
         {
-          "LayoutButtons": {
-            "index": "7",
-            "removed": "1"
-          },
-          "index": 0
+          "index": "0"
         }
       ],
       "Collide": [
@@ -19309,11 +19173,7 @@
         "Warpable",
         "attack",
         "move",
-        "stop",
-        {
-          "index": "3",
-          "removed": "1"
-        }
+        "stop"
       ],
       "Acceleration": 1000,
       "AttackTargetPriority": 20,
@@ -19323,11 +19183,7 @@
         "Mechanical"
       ],
       "BehaviorArray": [
-        "MassiveVoidRayVulnerability",
-        [
-          "0",
-          "1"
-        ]
+        "MassiveVoidRayVulnerability"
       ],
       "CardLayouts": {
         "LayoutButtons": [
@@ -19702,11 +19558,7 @@
           ]
         },
         {
-          "LayoutButtons": {
-            "index": "9",
-            "removed": "1"
-          },
-          "index": 0
+          "index": "0"
         }
       ],
       "Collide": [
@@ -19766,14 +19618,9 @@
       "SubgroupPriority": 16,
       "TechTreeUnlockedUnitArray": [
         "Adept",
-        "Adept",
         "MothershipCore",
         "Sentry",
-        "Stalker",
-        {
-          "index": "3",
-          "removed": "1"
-        }
+        "Stalker"
       ],
       "TurningRate": 719.4726,
       "name": "CyberneticsCore"
@@ -20796,10 +20643,6 @@
               "AbilCmd": "EngineeringBayResearch,Research9",
               "Face": "TerranInfantryArmorLevel3",
               "index": "10"
-            },
-            {
-              "index": "12",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -21376,14 +21219,6 @@
               "Face": "TempestResearchGroundAttackUpgrade",
               "Row": "0",
               "Type": "AbilCmd"
-            },
-            {
-              "index": "4",
-              "removed": "1"
-            },
-            {
-              "index": "5",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -22180,11 +22015,7 @@
         "BuildInProgress",
         "GhostAcademyResearch",
         "MercCompoundResearch",
-        "que5",
-        {
-          "index": "4",
-          "removed": "1"
-        }
+        "que5"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -22602,13 +22433,7 @@
         "SCV",
         "SiegeTankSieged",
         "Zealot",
-        "Zealot",
-        "Zergling",
-        "Zergling",
-        [
-          "1",
-          "2"
-        ]
+        "Zergling"
       ],
       "GlossaryWeakArray": [
         "Baneling",
@@ -23293,11 +23118,7 @@
         "Warpable",
         "attack",
         "move",
-        "stop",
-        {
-          "index": "3",
-          "removed": "1"
-        }
+        "stop"
       ],
       "Acceleration": 1000,
       "AttackTargetPriority": 20,
@@ -23585,18 +23406,12 @@
         "AmorphousArmorcloud",
         "BurrowInfestorDown",
         "FungalGrowth",
-        "FungalGrowth",
-        "InfestedTerrans",
         "InfestedTerrans",
         "InfestorEnsnare",
         "Leech",
         "NeuralParasite",
         "move",
-        "stop",
-        {
-          "index": "6",
-          "removed": "1"
-        }
+        "stop"
       ],
       "Acceleration": 1000,
       "AttackTargetPriority": 20,
@@ -24300,13 +24115,7 @@
       "Sight": 9,
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 16,
-      "TechAliasArray": [
-        "Alias_HydraliskDen",
-        {
-          "index": "0",
-          "removed": "1"
-        }
-      ],
+      "TechAliasArray": "Alias_HydraliskDen",
       "TechTreeUnlockedUnitArray": "LurkerMP",
       "TurningRate": 719.4726,
       "name": "LurkerDenMP"
@@ -25118,15 +24927,7 @@
         "MassiveVoidRayVulnerability",
         "MothershipLastTargetTracker",
         "MothershipResetEnergy",
-        "MothershipResetEnergy",
-        "MothershipTargetFireTracker",
-        [
-          "1",
-          "2"
-        ],
-        [
-          "1"
-        ]
+        "MothershipTargetFireTracker"
       ],
       "CardLayouts": [
         {
@@ -25317,11 +25118,7 @@
         "Psionic"
       ],
       "BehaviorArray": [
-        "MassiveVoidRayVulnerability",
-        [
-          "0",
-          "1"
-        ]
+        "MassiveVoidRayVulnerability"
       ],
       "CardLayouts": [
         {
@@ -25864,10 +25661,6 @@
               "Face": "NydusWormIncreasedArmorPassive",
               "Row": "2",
               "Type": "Passive"
-            },
-            {
-              "index": "7",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -25936,11 +25729,7 @@
         "ObserverMorphtoObserverSiege",
         "Warpable",
         "move",
-        "stop",
-        {
-          "index": "2",
-          "removed": "1"
-        }
+        "stop"
       ],
       "Acceleration": 2.125,
       "AttackTargetPriority": 20,
@@ -26652,11 +26441,7 @@
         "Warpable",
         "attack",
         "move",
-        "stop",
-        {
-          "index": "4",
-          "removed": "1"
-        }
+        "stop"
       ],
       "Acceleration": 3.25,
       "AttackTargetPriority": 20,
@@ -28838,19 +28623,13 @@
           ]
         },
         {
-          "LayoutButtons": [
-            {
-              "AbilCmd": "RoachWarrenResearch,Research3",
-              "Column": "1",
-              "Face": "EvolveTunnelingClaws",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "index": "4",
-              "removed": "1"
-            }
-          ],
+          "LayoutButtons": {
+            "AbilCmd": "RoachWarrenResearch,Research3",
+            "Column": "1",
+            "Face": "EvolveTunnelingClaws",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
           "index": 0
         }
       ],
@@ -28915,18 +28694,10 @@
     "RoboticsFacility": {
       "AbilArray": [
         "BuildInProgress",
-        "BuildInProgress",
         "GatewayTrain",
         "Rally",
-        "Rally",
         "RoboticsFacilityTrain",
-        "RoboticsFacilityTrain",
-        "que5",
-        "que5",
-        {
-          "index": "4",
-          "removed": "1"
-        }
+        "que5"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -29826,11 +29597,7 @@
         "BuildInProgress",
         "ShieldBatteryRechargeChanneled",
         "ShieldBatteryRechargeEx5",
-        "stop",
-        {
-          "index": "2",
-          "removed": "1"
-        }
+        "stop"
       ],
       "AttackTargetPriority": 11,
       "Attributes": [
@@ -29876,12 +29643,14 @@
               "index": "0"
             },
             {
-              "index": "1",
-              "removed": "1"
+              "AbilCmd": "ShieldBatteryRechargeEx5,Execute",
+              "Column": "0",
+              "Face": "ShieldBatteryRecharge",
+              "index": "2"
             },
             {
-              "index": "2",
-              "removed": "1"
+              "Face": "CancelBuilding",
+              "index": "1"
             }
           ],
           "index": 0
@@ -31169,14 +30938,7 @@
       ],
       "BehaviorArray": [
         "SpawnLocusts",
-        "TrainInfestedTerran",
-        [
-          "0",
-          "1"
-        ],
-        [
-          "1"
-        ]
+        "TrainInfestedTerran"
       ],
       "CardLayouts": [
         {
@@ -31524,11 +31286,7 @@
         "Warpable",
         "attack",
         "move",
-        "stop",
-        {
-          "index": "4",
-          "removed": "1"
-        }
+        "stop"
       ],
       "Acceleration": 1.5,
       "AttackTargetPriority": 20,
@@ -31538,11 +31296,7 @@
         "Mechanical"
       ],
       "BehaviorArray": [
-        "MassiveVoidRayVulnerability",
-        [
-          "0",
-          "1"
-        ]
+        "MassiveVoidRayVulnerability"
       ],
       "CardLayouts": [
         {
@@ -31728,11 +31482,7 @@
           ]
         },
         {
-          "LayoutButtons": {
-            "index": "3",
-            "removed": "1"
-          },
-          "index": 0
+          "index": "0"
         }
       ],
       "Collide": [
@@ -31815,13 +31565,30 @@
         "Mechanical"
       ],
       "BehaviorArray": [
-        "MassiveVoidRayVulnerability",
-        [
-          "0",
-          "1"
-        ]
+        "MassiveVoidRayVulnerability"
       ],
       "CardLayouts": [
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "",
+              "Column": "2",
+              "Face": "ResearchSmartServos",
+              "Requirements": "HaveSmartServos",
+              "Type": "Passive",
+              "index": "6"
+            },
+            {
+              "AbilCmd": "ThorAPMode,Execute",
+              "Column": "0",
+              "Face": "ArmorpiercingMode",
+              "Row": "2",
+              "Type": "AbilCmd",
+              "index": "5"
+            }
+          ],
+          "index": 0
+        },
         {
           "LayoutButtons": [
             {
@@ -31874,23 +31641,6 @@
               "Type": "AbilCmd"
             }
           ]
-        },
-        {
-          "LayoutButtons": [
-            {
-              "AbilCmd": "ThorAPMode,Execute",
-              "Column": "0",
-              "Face": "ArmorpiercingMode",
-              "Row": "2",
-              "Type": "AbilCmd",
-              "index": "5"
-            },
-            {
-              "index": "6",
-              "removed": "1"
-            }
-          ],
-          "index": 0
         }
       ],
       "CargoSize": 8,
@@ -32345,10 +32095,6 @@
               "Row": "0",
               "Type": "AbilCmd",
               "index": "2"
-            },
-            {
-              "index": "3",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -32735,11 +32481,7 @@
         "Warpable",
         "attack",
         "move",
-        "stop",
-        {
-          "index": "3",
-          "removed": "1"
-        }
+        "stop"
       ],
       "Acceleration": 2,
       "AttackTargetPriority": 20,
@@ -32890,6 +32632,130 @@
       "race": "Protoss",
       "requires": []
     },
+    "WarHound": {
+      "AbilArray": [
+        "TornadoMissile",
+        "attack",
+        "move",
+        "stop"
+      ],
+      "Acceleration": 1000,
+      "AttackTargetPriority": 20,
+      "Attributes": [
+        "Armored",
+        "Mechanical"
+      ],
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "TornadoMissile,Execute",
+            "Column": "0",
+            "Face": "TornadoMissile",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "attack,Execute",
+            "Column": "4",
+            "Face": "Attack",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,HoldPos",
+            "Column": "2",
+            "Face": "MoveHoldPosition",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Move",
+            "Column": "0",
+            "Face": "Move",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Patrol",
+            "Column": "3",
+            "Face": "MovePatrol",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "stop,Stop",
+            "Column": "1",
+            "Face": "Stop",
+            "Row": "0",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "CargoSize": 4,
+      "Collide": [
+        "ForceField",
+        "Ground",
+        "Small"
+      ],
+      "CostCategory": "Army",
+      "CostResource": {
+        "Minerals": 150,
+        "Vespene": 75
+      },
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectFamily:Campaign,ObjectType:Unit",
+      "FlagArray": [
+        "ArmySelect",
+        "PreventDestroy",
+        "TurnBeforeMove",
+        "UseLineOfSight"
+      ],
+      "Food": -3,
+      "GlossaryCategory": "",
+      "GlossaryPriority": 126,
+      "GlossaryStrongArray": [
+        "SiegeTankSieged",
+        "Stalker"
+      ],
+      "GlossaryWeakArray": [
+        "Marauder",
+        "Roach",
+        "Zealot"
+      ],
+      "HotkeyAlias": "",
+      "HotkeyCategory": "",
+      "InnerRadius": 0.5,
+      "LateralAcceleration": 46.0625,
+      "LifeArmor": 1,
+      "LifeArmorName": "Unit/LifeArmorName/TerranVehiclePlating",
+      "LifeMax": 220,
+      "LifeStart": 220,
+      "MinimapRadius": 1,
+      "Mob": "Multiplayer",
+      "PlaneArray": [
+        "Ground"
+      ],
+      "Race": "Terr",
+      "Radius": 0.8125,
+      "RepairTime": 45,
+      "ScoreKill": 225,
+      "ScoreMake": 225,
+      "SeparationRadius": 0.625,
+      "Sight": 11,
+      "Speed": 2.8125,
+      "SubgroupPriority": 8,
+      "TauntDuration": [
+        5
+      ],
+      "TurningRate": 360,
+      "WeaponArray": [
+        "WarHound",
+        "WarHoundMelee"
+      ],
+      "name": "WarHound",
+      "race": "Terran",
+      "requires": []
+    },
     "WarpGate": {
       "AbilArray": [
         "BuildInProgress",
@@ -33036,11 +32902,7 @@
         "WarpPrismTransport",
         "Warpable",
         "move",
-        "stop",
-        {
-          "index": "4",
-          "removed": "1"
-        }
+        "stop"
       ],
       "Acceleration": 2.625,
       "AttackTargetPriority": 20,
@@ -36369,13 +36231,7 @@
       "requires": []
     },
     "ReaperSpeed": {
-      "AffectedUnitArray": [
-        "Reaper",
-        {
-          "index": "0",
-          "removed": "1"
-        }
-      ],
+      "AffectedUnitArray": "Reaper",
       "Alert": "ResearchComplete",
       "EditorCategories": "Race:Terran,UpgradeType:Talents",
       "EffectArray": [
@@ -36395,11 +36251,7 @@
       "ScoreAmount": 100,
       "ScoreResult": "BuildOrder",
       "affected_units": [
-        "Reaper",
-        {
-          "index": "0",
-          "removed": "1"
-        }
+        "Reaper"
       ],
       "name": "ReaperSpeed",
       "race": "Terran",

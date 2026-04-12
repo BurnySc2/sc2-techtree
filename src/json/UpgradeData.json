@@ -1056,11 +1056,7 @@
   "HighCapacityBarrels": {
     "AffectedUnitArray": [
       "Hellion",
-      "HellionTank",
-      {
-        "index": "1",
-        "removed": "1"
-      }
+      "HellionTank"
     ],
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
@@ -1078,26 +1074,6 @@
         "Reference": "Effect,InfernalFlameThrower,AttributeBonus[Light]",
         "Value": "5",
         "index": "0"
-      },
-      {
-        "index": "2",
-        "removed": "1"
-      },
-      {
-        "index": "3",
-        "removed": "1"
-      },
-      {
-        "index": "4",
-        "removed": "1"
-      },
-      {
-        "index": "5",
-        "removed": "1"
-      },
-      {
-        "index": "6",
-        "removed": "1"
       }
     ],
     "Flags": "TechTreeCheat",
@@ -3717,13 +3693,7 @@
     "ScoreResult": "BuildOrder"
   },
   "ReaperSpeed": {
-    "AffectedUnitArray": [
-      "Reaper",
-      {
-        "index": "0",
-        "removed": "1"
-      }
-    ],
+    "AffectedUnitArray": "Reaper",
     "Alert": "ResearchComplete",
     "EditorCategories": "Race:Terran,UpgradeType:Talents",
     "EffectArray": [
@@ -7398,22 +7368,6 @@
       {
         "Reference": "Unit,ZerglingBurrowed,LifeArmorLevel",
         "Value": "1"
-      },
-      {
-        "index": "36",
-        "removed": "1"
-      },
-      {
-        "index": "37",
-        "removed": "1"
-      },
-      {
-        "index": "38",
-        "removed": "1"
-      },
-      {
-        "index": "39",
-        "removed": "1"
       }
     ],
     "LeaderAlias": "ZergGroundArmors",
@@ -7508,6 +7462,12 @@
       {
         "Operation": "Set",
         "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level0.dds",
+        "index": "49"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds"
       },
       {
@@ -7563,26 +7523,6 @@
         "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
         "Value": "1",
         "index": "34"
-      },
-      {
-        "index": "46",
-        "removed": "1"
-      },
-      {
-        "index": "47",
-        "removed": "1"
-      },
-      {
-        "index": "48",
-        "removed": "1"
-      },
-      {
-        "index": "49",
-        "removed": "1"
-      },
-      {
-        "index": "50",
-        "removed": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
@@ -7674,6 +7614,12 @@
       {
         "Operation": "Set",
         "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level0.dds",
+        "index": "49"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds"
       },
       {
@@ -7729,26 +7675,6 @@
         "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
         "Value": "1",
         "index": "34"
-      },
-      {
-        "index": "46",
-        "removed": "1"
-      },
-      {
-        "index": "47",
-        "removed": "1"
-      },
-      {
-        "index": "48",
-        "removed": "1"
-      },
-      {
-        "index": "49",
-        "removed": "1"
-      },
-      {
-        "index": "50",
-        "removed": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
@@ -7840,6 +7766,12 @@
       {
         "Operation": "Set",
         "Reference": "Actor,InfestorTerran,LifeArmorIcon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level0.dds",
+        "index": "49"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Actor,InfestorTerran,LifeArmorIcon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds"
       },
       {
@@ -7895,26 +7827,6 @@
         "Reference": "Unit,BanelingCocoon,LifeArmorLevel",
         "Value": "1",
         "index": "34"
-      },
-      {
-        "index": "46",
-        "removed": "1"
-      },
-      {
-        "index": "47",
-        "removed": "1"
-      },
-      {
-        "index": "48",
-        "removed": "1"
-      },
-      {
-        "index": "49",
-        "removed": "1"
-      },
-      {
-        "index": "50",
-        "removed": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
@@ -8288,14 +8200,6 @@
       {
         "Reference": "Weapon,Talons,Level",
         "Value": "1"
-      },
-      {
-        "index": "10",
-        "removed": "1"
-      },
-      {
-        "index": "11",
-        "removed": "1"
       }
     ],
     "LeaderAlias": "ZergMissileWeapons",
@@ -8348,6 +8252,12 @@
       {
         "Operation": "Set",
         "Reference": "Weapon,InfestedGuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+        "index": "16"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfestedGuassRifle,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
       },
       {
@@ -8381,14 +8291,6 @@
         "Reference": "Effect,LocustMPMeleeDamage,Amount",
         "Value": "1",
         "index": "23"
-      },
-      {
-        "index": "15",
-        "removed": "1"
-      },
-      {
-        "index": "16",
-        "removed": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds",
@@ -8438,6 +8340,12 @@
       {
         "Operation": "Set",
         "Reference": "Weapon,InfestedGuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+        "index": "16"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfestedGuassRifle,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
       },
       {
@@ -8471,14 +8379,6 @@
         "Reference": "Effect,LocustMPMeleeDamage,Amount",
         "Value": "1",
         "index": "23"
-      },
-      {
-        "index": "15",
-        "removed": "1"
-      },
-      {
-        "index": "16",
-        "removed": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds",
@@ -8528,6 +8428,12 @@
       {
         "Operation": "Set",
         "Reference": "Weapon,InfestedGuassRifle,Icon",
+        "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
+        "index": "16"
+      },
+      {
+        "Operation": "Set",
+        "Reference": "Weapon,InfestedGuassRifle,Icon",
         "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
       },
       {
@@ -8561,14 +8467,6 @@
         "Reference": "Effect,LocustMPMeleeDamage,Amount",
         "Value": "1",
         "index": "23"
-      },
-      {
-        "index": "15",
-        "removed": "1"
-      },
-      {
-        "index": "16",
-        "removed": "1"
       }
     ],
     "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds",

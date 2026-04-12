@@ -623,6 +623,7 @@
     },
     "LarvaTrain": {
       "morphs": [
+        "Baneling",
         "Corruptor",
         "Drone",
         "Hydralisk",
@@ -2087,6 +2088,7 @@
         "HellionTank",
         "SiegeTank",
         "Thor",
+        "WarHound",
         "WidowMine"
       ],
       "race": "Terran",
@@ -4002,11 +4004,7 @@
     "HighCapacityBarrels": {
       "affected_units": [
         "Hellion",
-        "HellionTank",
-        {
-          "index": "1",
-          "removed": "1"
-        }
+        "HellionTank"
       ],
       "race": "Terran",
       "requires": []
@@ -4508,11 +4506,7 @@
     },
     "ReaperSpeed": {
       "affected_units": [
-        "Reaper",
-        {
-          "index": "0",
-          "removed": "1"
-        }
+        "Reaper"
       ],
       "race": "Terran",
       "requires": []

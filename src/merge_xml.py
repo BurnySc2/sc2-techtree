@@ -100,14 +100,22 @@ def get_child_key(elem: etree._Element) -> tuple:
     For other elements, use (tag,) with empty string index.
     For *Array tags, include value to differentiate (accumulate multiple values).
     For Cost elements, ignore index since Cost doesn't use indexed children.
+    For elements with removed="1", use just (tag,) since they signal removal of that slot.
     """
     tag = str(elem.tag)
     index = elem.get("index", "")
     link = elem.get("Link", "")
+    value = elem.get("value", "")
+    removed = elem.get("removed", "")
+
     if tag in OVERRIDE_TAGS:
         return (tag,)
+
+    # Elements with removed="1" signal removal - match by tag only
+    if removed == "1":
+        return (tag,)
+
     if tag.endswith("Array"):
-        value = elem.get("value", "")
         return (tag, index, link, value)
     return (tag, index, link)
 
@@ -134,6 +142,12 @@ def merge_child_elements(base_elem: etree._Element, override_elem: etree._Elemen
         key = get_child_key(base_child)
         if key in override_lookup:
             override_child = override_lookup[key]
+
+            # If override has removed="1", remove base child entirely
+            if override_child.get("removed") == "1":
+                base_elem.remove(base_child)
+                del override_lookup[key]
+                continue
 
             # If both have children, recurse for deep merge
             if len(override_child) > 0 or len(base_child) > 0:
@@ -174,6 +188,9 @@ def merge_child_elements(base_elem: etree._Element, override_elem: etree._Elemen
 
     # Add remaining override children that weren't in base
     for key, override_child in override_lookup.items():
+        # Skip removed="1" elements - they signal removal, not addition
+        if override_child.get("removed") == "1":
+            continue
         base_elem.append(deepcopy(override_child))
 
 
