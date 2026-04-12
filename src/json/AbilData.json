@@ -7458,15 +7458,24 @@
         "Score": 1,
         "SectionArray": [
           {
-            "DurationArray": 21,
+            "DurationArray": [
+              16.6665,
+              21
+            ],
             "index": "Abils"
           },
           {
-            "DurationArray": 21,
+            "DurationArray": [
+              16.6665,
+              21
+            ],
             "index": "Actor"
           },
           {
-            "DurationArray": 21,
+            "DurationArray": [
+              16.6665,
+              21
+            ],
             "index": "Stats"
           }
         ],

@@ -9086,22 +9086,6 @@
               "Row": "2",
               "Type": "AbilCmd",
               "index": "0"
-            },
-            {
-              "index": "12",
-              "removed": "1"
-            },
-            {
-              "index": "13",
-              "removed": "1"
-            },
-            {
-              "index": "14",
-              "removed": "1"
-            },
-            {
-              "index": "15",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -9326,9 +9310,7 @@
       ],
       "BuildOnAs": "AssimilatorRich",
       "BuiltOn": [
-        "RichVespeneGeyser",
-        "ShakurasVespeneGeyser",
-        "SpacePlatformGeyser"
+        "ShakurasVespeneGeyser"
       ],
       "CardLayouts": {
         "LayoutButtons": {
@@ -11033,9 +11015,7 @@
       ],
       "BuildOnAs": "ExtractorRich",
       "BuiltOn": [
-        "RichVespeneGeyser",
-        "ShakurasVespeneGeyser",
-        "SpacePlatformGeyser"
+        "ShakurasVespeneGeyser"
       ],
       "CardLayouts": {
         "LayoutButtons": {
@@ -12802,9 +12782,9 @@
               "Type": "AbilCmd"
             },
             {
-              "AbilCmd": "HydraliskDenResearch,Research4",
+              "AbilCmd": "HydraliskDenResearch,Research2",
               "Column": "1",
-              "Face": "MuscularAugments",
+              "Face": "EvolveMuscularAugments",
               "Row": "0",
               "Type": "AbilCmd"
             },
@@ -13877,19 +13857,18 @@
               "index": "6"
             },
             {
-              "AbilCmd": "BuildNydusCanal,Build3",
-              "Column": "2",
-              "Face": "SummonNydusCanalCreeper",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
               "Column": "0",
               "index": "1"
             },
             {
               "Column": "1",
               "index": "2"
+            },
+            {
+              "Column": "2",
+              "Face": "NydusWormIncreasedArmorPassive",
+              "Row": "2",
+              "Type": "Passive"
             },
             {
               "Column": "2",
@@ -14652,9 +14631,7 @@
       ],
       "BuildOnAs": "RefineryRich",
       "BuiltOn": [
-        "RichVespeneGeyser",
-        "ShakurasVespeneGeyser",
-        "SpacePlatformGeyser"
+        "ShakurasVespeneGeyser"
       ],
       "CardLayouts": {
         "LayoutButtons": [
@@ -15458,24 +15435,12 @@
           ]
         },
         {
-          "LayoutButtons": [
-            {
-              "AbilCmd": "BuildInProgress,Cancel",
-              "Column": "4",
-              "Face": "Cancel",
-              "index": "0"
-            },
-            {
-              "AbilCmd": "ShieldBatteryRechargeEx5,Execute",
-              "Column": "0",
-              "Face": "ShieldBatteryRecharge",
-              "index": "2"
-            },
-            {
-              "Face": "CancelBuilding",
-              "index": "1"
-            }
-          ],
+          "LayoutButtons": {
+            "AbilCmd": "BuildInProgress,Cancel",
+            "Column": "4",
+            "Face": "Cancel",
+            "index": "0"
+          },
           "index": 0
         }
       ],
@@ -17659,22 +17624,6 @@
               "Row": "2",
               "Type": "AbilCmd",
               "index": "0"
-            },
-            {
-              "index": "12",
-              "removed": "1"
-            },
-            {
-              "index": "13",
-              "removed": "1"
-            },
-            {
-              "index": "14",
-              "removed": "1"
-            },
-            {
-              "index": "15",
-              "removed": "1"
             }
           ],
           "index": 0
@@ -17893,9 +17842,9 @@
               "Type": "AbilCmd"
             },
             {
-              "AbilCmd": "VolatileBurstBuilding,Off",
-              "Column": "2",
-              "Face": "DisableBuildingAttack",
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
               "Row": "2",
               "Type": "AbilCmd"
             },
@@ -20256,73 +20205,6 @@
           "CardId": "ZBl1",
           "LayoutButtons": [
             {
-              "AbilCmd": "ZergBuild,Build1",
-              "Column": "0",
-              "Face": "Hatchery",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build11",
-              "Column": "1",
-              "Face": "BanelingNest",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build14",
-              "Column": "0",
-              "Face": "RoachWarren",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build15",
-              "Column": "2",
-              "Face": "SpineCrawler",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build16",
-              "Column": "2",
-              "Face": "SporeCrawler",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build3",
-              "Column": "1",
-              "Face": "Extractor",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build4",
-              "Column": "0",
-              "Face": "SpawningPool",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build5",
-              "Column": "1",
-              "Face": "EvolutionChamber",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "Column": "4",
-              "Face": "Cancel",
-              "Row": "2",
-              "Type": "CancelSubmenu"
-            }
-          ]
-        },
-        {
-          "CardId": "ZBl1",
-          "LayoutButtons": [
-            {
               "AbilCmd": "ZergBuild,Build11",
               "Column": "3",
               "Face": "BanelingNest",
@@ -20358,42 +20240,96 @@
           "index": 1
         },
         {
+          "CardId": "ZBl1",
+          "LayoutButtons": [
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            }
+          ]
+        },
+        {
           "CardId": "ZBl2",
           "LayoutButtons": [
             {
-              "AbilCmd": "ZergBuild,Build10",
-              "Column": "1",
-              "Face": "NydusNetwork",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build6",
-              "Column": "0",
-              "Face": "HydraliskDen",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build7",
-              "Column": "0",
-              "Face": "Spire",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ZergBuild,Build8",
-              "Column": "0",
-              "Face": "UltraliskCavern",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "ZergBuild,Build9",
-              "Column": "1",
-              "Face": "InfestationPit",
-              "Row": "0",
-              "Type": "AbilCmd"
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
               "Column": "4",
@@ -20432,55 +20368,6 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "BurrowDroneDown,Execute",
-              "Column": "4",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "DroneHarvest,Gather",
-              "Column": "0",
-              "Face": "GatherZerg",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "DroneHarvest,Return",
-              "Column": "1",
-              "Face": "ReturnCargo",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "attack,Execute",
-              "Column": "4",
-              "Face": "AttackWorker",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,HoldPos",
-              "Column": "2",
-              "Face": "MoveHoldPosition",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,Patrol",
-              "Column": "3",
-              "Face": "MovePatrol",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "stop,Stop",
-              "Column": "1",
-              "Face": "Stop",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
               "AbilCmd": 255,
               "Column": 0,
               "Face": "ZergBuild",
@@ -20495,6 +20382,48 @@
               "Row": 2,
               "SubmenuCardId": "ZBl2",
               "Type": "Submenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
               "Column": "4",
@@ -22688,183 +22617,6 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "BurrowBanelingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowBanelingUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowDroneUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowZerglingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowZerglingUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "HydraliskFrenzy,Execute",
-              "Column": "0",
-              "Face": "HydraliskFrenzy",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToLurker,Execute",
-              "Column": "1",
-              "Face": "LurkerMP",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostBurrowedMP,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostMP,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "Column": "3",
-              "index": "5"
-            }
-          ],
-          "index": 0
-        },
-        {
-          "LayoutButtons": [
-            {
               "AbilCmd": "BurrowHydraliskDown,Execute",
               "Column": "4",
               "Face": "BurrowDown",
@@ -22907,6 +22659,183 @@
               "Type": "AbilCmd"
             }
           ]
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "3",
+              "index": "5"
+            }
+          ],
+          "index": 0
         }
       ],
       "CargoSize": 2,
@@ -23039,9 +22968,9 @@
               "Type": "AbilCmd"
             },
             {
-              "AbilCmd": "HydraliskDenResearch,Research4",
+              "AbilCmd": "HydraliskDenResearch,Research2",
               "Column": "1",
-              "Face": "MuscularAugments",
+              "Face": "EvolveMuscularAugments",
               "Row": "0",
               "Type": "AbilCmd"
             },
@@ -25642,19 +25571,18 @@
               "index": "6"
             },
             {
-              "AbilCmd": "BuildNydusCanal,Build3",
-              "Column": "2",
-              "Face": "SummonNydusCanalCreeper",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
               "Column": "0",
               "index": "1"
             },
             {
               "Column": "1",
               "index": "2"
+            },
+            {
+              "Column": "2",
+              "Face": "NydusWormIncreasedArmorPassive",
+              "Row": "2",
+              "Type": "Passive"
             },
             {
               "Column": "2",
@@ -25927,9 +25855,9 @@
               "Type": "AbilCmd"
             },
             {
-              "AbilCmd": "OracleWeapon,Off",
-              "Column": "3",
-              "Face": "OracleWeaponOff",
+              "AbilCmd": "OracleStasisTrapBuild,Halt",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
               "Type": "AbilCmd"
             },
@@ -26306,52 +26234,46 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "SpawnChangeling,Execute",
-              "Column": "0",
-              "Face": "SpawnChangeling",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "attack,Execute",
               "Column": "4",
-              "Face": "Attack",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,AcquireMove",
-              "Column": "4",
-              "Face": "AcquireMove",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,HoldPos",
-              "Column": "2",
-              "Face": "MoveHoldPosition",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,Patrol",
-              "Column": "3",
-              "Face": "MovePatrol",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "stop,Stop",
-              "Column": "1",
-              "Face": "Stop",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "Column": "3",
-              "Face": "Detector",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "Passive"
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
               "Column": "4",
@@ -26882,53 +26804,46 @@
           "CardId": "PBl1",
           "LayoutButtons": [
             {
-              "AbilCmd": "ProtossBuild,Build1",
-              "Column": "0",
-              "Face": "Nexus",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ProtossBuild,Build15",
-              "Column": "0",
-              "Face": "CyberneticsCore",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "ProtossBuild,Build2",
-              "Column": "2",
-              "Face": "Pylon",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ProtossBuild,Build3",
-              "Column": "1",
-              "Face": "Assimilator",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ProtossBuild,Build4",
-              "Column": "0",
-              "Face": "Gateway",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ProtossBuild,Build5",
-              "Column": "1",
-              "Face": "Forge",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ProtossBuild,Build8",
-              "Column": "1",
-              "Face": "PhotonCannon",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
               "Column": "4",
@@ -26942,53 +26857,46 @@
           "CardId": "PBl2",
           "LayoutButtons": [
             {
-              "AbilCmd": "ProtossBuild,Build10",
-              "Column": "1",
-              "Face": "Stargate",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ProtossBuild,Build11",
-              "Column": "0",
-              "Face": "TemplarArchive",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ProtossBuild,Build12",
-              "Column": "0",
-              "Face": "DarkShrine",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "ProtossBuild,Build13",
-              "Column": "2",
-              "Face": "RoboticsBay",
-              "Row": "1",
-              "Type": "AbilCmd"
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "ProtossBuild,Build14",
-              "Column": "2",
-              "Face": "RoboticsFacility",
-              "Row": "0",
-              "Type": "AbilCmd"
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "ProtossBuild,Build6",
-              "Column": "1",
-              "Face": "FleetBeacon",
-              "Row": "1",
-              "Type": "AbilCmd"
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "ProtossBuild,Build7",
-              "Column": "0",
-              "Face": "TwilightCouncil",
-              "Row": "0",
-              "Type": "AbilCmd"
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
               "Column": "4",
@@ -27069,48 +26977,6 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "ProbeHarvest,Gather",
-              "Column": "0",
-              "Face": "GatherProt",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "ProbeHarvest,Return",
-              "Column": "1",
-              "Face": "ReturnCargo",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "attack,Execute",
-              "Column": "4",
-              "Face": "AttackWorker",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,HoldPos",
-              "Column": "2",
-              "Face": "MoveHoldPosition",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,Patrol",
-              "Column": "3",
-              "Face": "MovePatrol",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "stop,Stop",
-              "Column": "1",
-              "Face": "Stop",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
               "AbilCmd": 255,
               "Column": 0,
               "Face": "ProtossBuild",
@@ -27125,6 +26991,42 @@
               "Row": 2,
               "SubmenuCardId": "PBl2",
               "Type": "Submenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
               "Column": "4",
@@ -27236,169 +27138,6 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "BurrowBanelingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowBanelingUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowDroneUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowZerglingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowZerglingUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostBurrowedMP,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostMP,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "Column": "3",
-              "index": "8"
-            }
-          ],
-          "index": 0
-        },
-        {
-          "LayoutButtons": [
-            {
               "AbilCmd": "BurrowQueenDown,Execute",
               "Column": "4",
               "Face": "BurrowDown",
@@ -27462,6 +27201,169 @@
               "Type": "AbilCmd"
             }
           ]
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "3",
+              "index": "8"
+            }
+          ],
+          "index": 0
         }
       ],
       "CargoSize": 2,
@@ -27573,176 +27475,6 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "BurrowBanelingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowBanelingUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowDroneDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowDroneUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowZerglingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowZerglingUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostBurrowedMP,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostMP,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "Column": "3",
-              "index": "5"
-            }
-          ],
-          "index": 0
-        },
-        {
-          "LayoutButtons": [
-            {
               "AbilCmd": "BurrowRavagerDown,Execute",
               "Column": "4",
               "Face": "BurrowDown",
@@ -27785,6 +27517,176 @@
               "Type": "AbilCmd"
             }
           ]
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "3",
+              "index": "5"
+            }
+          ],
+          "index": 0
         }
       ],
       "CargoSize": 4,
@@ -28269,180 +28171,6 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "BurrowBanelingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowBanelingUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowDroneDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowDroneUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowZerglingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowZerglingUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostBurrowedMP,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostMP,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "Column": "1",
-              "index": "5"
-            },
-            {
-              "Column": "3",
-              "index": "6"
-            }
-          ],
-          "index": 0
-        },
-        {
-          "LayoutButtons": [
-            {
               "AbilCmd": "BurrowRoachDown,Execute",
               "Column": "4",
               "Face": "BurrowDown",
@@ -28491,6 +28219,180 @@
               "Type": "Passive"
             }
           ]
+        },
+        {
+          "LayoutButtons": [
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "Column": "1",
+              "index": "5"
+            },
+            {
+              "Column": "3",
+              "index": "6"
+            }
+          ],
+          "index": 0
         }
       ],
       "CargoSize": 2,
@@ -28863,60 +28765,52 @@
           "CardId": "TBl1",
           "LayoutButtons": [
             {
-              "AbilCmd": "TerranBuild,Build1",
-              "Column": "0",
-              "Face": "CommandCenter",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "TerranBuild,Build2",
-              "Column": "2",
-              "Face": "SupplyDepot",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "TerranBuild,Build3",
-              "Column": "1",
-              "Face": "Refinery",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "TerranBuild,Build4",
-              "Column": "0",
-              "Face": "Barracks",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "TerranBuild,Build5",
-              "Column": "1",
-              "Face": "EngineeringBay",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "TerranBuild,Build6",
-              "Column": "1",
-              "Face": "MissileTurret",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "TerranBuild,Build7",
-              "Column": "0",
-              "Face": "Bunker",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "TerranBuild,Build9",
-              "Column": "2",
-              "Face": "SensorTower",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
               "Column": "4",
@@ -28930,39 +28824,34 @@
           "CardId": "TBl2",
           "LayoutButtons": [
             {
-              "AbilCmd": "TerranBuild,Build10",
-              "Column": "0",
-              "Face": "GhostAcademy",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "TerranBuild,Build11",
-              "Column": "0",
-              "Face": "Factory",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "TerranBuild,Build12",
-              "Column": "0",
-              "Face": "Starport",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "TerranBuild,Build14",
-              "Column": "1",
-              "Face": "Armory",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "TerranBuild,Build16",
-              "Column": "1",
-              "Face": "FusionCore",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
               "Column": "4",
@@ -28975,74 +28864,64 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "Repair,Execute",
-              "Column": "2",
-              "Face": "Repair",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "SCVHarvest,Gather",
-              "Column": "0",
-              "Face": "GatherTerr",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "SCVHarvest,Return",
-              "Column": "1",
-              "Face": "ReturnCargo",
-              "Row": "1",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "TerranBuild,Halt",
               "Column": "4",
-              "Face": "Halt",
+              "Face": "Cancel",
               "Row": "2",
-              "Type": "AbilCmd"
+              "Type": "CancelSubmenu"
             },
             {
-              "AbilCmd": "attack,Execute",
               "Column": "4",
-              "Face": "AttackWorker",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,HoldPos",
-              "Column": "2",
-              "Face": "MoveHoldPosition",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "move,Patrol",
-              "Column": "3",
-              "Face": "MovePatrol",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "stop,Stop",
-              "Column": "1",
-              "Face": "Stop",
-              "Row": "0",
-              "Type": "AbilCmd"
-            },
-            {
-              "Column": "0",
-              "Face": "TerranBuild",
+              "Face": "Cancel",
               "Row": "2",
-              "SubmenuCardId": "TBl1",
-              "Type": "Submenu"
+              "Type": "CancelSubmenu"
             },
             {
-              "Column": "1",
-              "Face": "TerranBuildAdvanced",
+              "Column": "4",
+              "Face": "Cancel",
               "Row": "2",
-              "SubmenuCardId": "TBl2",
-              "Type": "Submenu"
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
+            },
+            {
+              "Column": "4",
+              "Face": "Cancel",
+              "Row": "2",
+              "Type": "CancelSubmenu"
             },
             {
               "Column": "4",
@@ -29635,24 +29514,12 @@
           ]
         },
         {
-          "LayoutButtons": [
-            {
-              "AbilCmd": "BuildInProgress,Cancel",
-              "Column": "4",
-              "Face": "Cancel",
-              "index": "0"
-            },
-            {
-              "AbilCmd": "ShieldBatteryRechargeEx5,Execute",
-              "Column": "0",
-              "Face": "ShieldBatteryRecharge",
-              "index": "2"
-            },
-            {
-              "Face": "CancelBuilding",
-              "index": "1"
-            }
-          ],
+          "LayoutButtons": {
+            "AbilCmd": "BuildInProgress,Cancel",
+            "Column": "4",
+            "Face": "Cancel",
+            "index": "0"
+          },
           "index": 0
         }
       ],
@@ -31571,27 +31438,6 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "",
-              "Column": "2",
-              "Face": "ResearchSmartServos",
-              "Requirements": "HaveSmartServos",
-              "Type": "Passive",
-              "index": "6"
-            },
-            {
-              "AbilCmd": "ThorAPMode,Execute",
-              "Column": "0",
-              "Face": "ArmorpiercingMode",
-              "Row": "2",
-              "Type": "AbilCmd",
-              "index": "5"
-            }
-          ],
-          "index": 0
-        },
-        {
-          "LayoutButtons": [
-            {
               "AbilCmd": "250mmStrikeCannons,Cancel",
               "Column": "4",
               "Face": "Cancel",
@@ -31641,6 +31487,17 @@
               "Type": "AbilCmd"
             }
           ]
+        },
+        {
+          "LayoutButtons": {
+            "AbilCmd": "ThorAPMode,Execute",
+            "Column": "0",
+            "Face": "ArmorpiercingMode",
+            "Row": "2",
+            "Type": "AbilCmd",
+            "index": "5"
+          },
+          "index": 0
         }
       ],
       "CargoSize": 8,
@@ -33380,114 +33237,16 @@
         {
           "LayoutButtons": [
             {
-              "AbilCmd": "BurrowBanelingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowBanelingUp,Execute",
+              "AbilCmd": "BurrowUltraliskUp,Execute",
               "Column": "4",
               "Face": "BurrowUp",
               "Row": "2",
               "Type": "AbilCmd"
             },
             {
-              "AbilCmd": "BurrowDroneUp,Execute",
+              "AbilCmd": "BurrowUltraliskUp,Execute",
               "Column": "4",
               "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowHydraliskUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorTerranUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowInfestorUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowQueenUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRavagerUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowRoachUp,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "BurrowUltraliskDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
               "Row": "2",
               "Type": "AbilCmd"
             },
@@ -33506,14 +33265,126 @@
               "Type": "AbilCmd"
             },
             {
-              "AbilCmd": "BurrowZerglingDown,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
               "Row": "2",
               "Type": "AbilCmd"
             },
             {
-              "AbilCmd": "BurrowZerglingUp,Execute",
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
+              "Column": "4",
+              "Face": "BurrowUp",
+              "Row": "2",
+              "Type": "AbilCmd"
+            },
+            {
+              "AbilCmd": "BurrowUltraliskUp,Execute",
               "Column": "4",
               "Face": "BurrowUp",
               "Row": "2",
@@ -33522,20 +33393,6 @@
             {
               "AbilCmd": "MorphToBaneling,Execute",
               "index": "5"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostBurrowedMP,Execute",
-              "Column": "3",
-              "Face": "BurrowDown",
-              "Row": "2",
-              "Type": "AbilCmd"
-            },
-            {
-              "AbilCmd": "MorphToSwarmHostMP,Execute",
-              "Column": "4",
-              "Face": "BurrowUp",
-              "Row": "2",
-              "Type": "AbilCmd"
             },
             {
               "Column": "3",

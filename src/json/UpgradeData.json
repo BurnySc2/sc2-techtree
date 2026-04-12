@@ -1062,11 +1062,6 @@
     "EditorCategories": "Race:Terran,UpgradeType:SpellResearch",
     "EffectArray": [
       {
-        "Reference": "Effect,HellionTankDamage,AttributeBonus[Light]",
-        "Value": "12",
-        "index": "1"
-      },
-      {
         "Reference": "Effect,InfernalFlameThrower,AttributeBonus[Light]",
         "Value": "10.000000"
       },

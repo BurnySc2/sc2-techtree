@@ -59,7 +59,7 @@ uv run src/reconstruct_data.py
 
 All in one:
 ```sh
-uv run src/merge_xml.py && uv run src/convert_xml_to_json.py && uv run src/generate_techtree.py && uv run src/reconstruct_data.py 
+uv run src/merge_xml.py && uv run src/convert_xml_to_json.py && uv run src/generate_techtree.py && uv run src/reconstruct_data.py
 ```
 
 Resulting files should be:
