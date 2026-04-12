@@ -35,7 +35,7 @@ class TestSupplyDepot:
 
 class TestThor:
     def test_thor_requires(self, techtree_data: dict) -> None:
-        thor = techtree_data["structures"]["Thor"]
+        thor = techtree_data["units"]["Thor"]
         assert "requires" in thor
         assert thor["requires"] == ["Armory", "AttachedTechLab"]
 
@@ -116,6 +116,18 @@ class TestLarva:
         }
 
 
+class TestCommandCenter:
+    def test_command_center_morphsto_orbital_command(self, techtree_data: dict) -> None:
+        cc = techtree_data["structures"]["CommandCenter"]
+        assert "morphsto" in cc
+        assert cc["morphsto"] == "OrbitalCommand"
+
+    def test_command_center_produces(self, techtree_data: dict) -> None:
+        cc = techtree_data["structures"]["CommandCenter"]
+        assert "produces" in cc
+        assert cc["produces"] == ["SCV"]
+
+
 class TestArmory:
     def test_armory_researches(self, techtree_data: dict) -> None:
         armory = techtree_data["structures"]["Armory"]
@@ -142,7 +154,18 @@ class TestOrbitalCommand:
     def test_orbital_command_produces_scv(self, techtree_data: dict) -> None:
         orbital = techtree_data["structures"]["OrbitalCommand"]
         assert "produces" in orbital
-        assert "SCV" in orbital["produces"]
+        assert orbital["produces"] == ["SCV"]
+
+
+class TestUpgradeToOrbital:
+    def test_upgrade_to_orbital_morphsto(self, techtree_data: dict) -> None:
+        upgrade = techtree_data["abilities"]["UpgradeToOrbital"]
+        assert upgrade["morphsto"] == "OrbitalCommand"
+
+    def test_upgrade_to_orbital_requires(self, techtree_data: dict) -> None:
+        upgrade = techtree_data["abilities"]["UpgradeToOrbital"]
+        assert "requires" in upgrade
+        assert upgrade["requires"] == ["Barracks"]
 
 
 class TestUpgradeToGreaterSpire:
