@@ -16,14 +16,12 @@ This is crucial for SC2 delta files where:
 - Result should have CostResource[Minerals]=125 and CostResource[Vespene]=75
 
 Usage:
-    uv run merge_xml [--data-type UnitData] [--output merged_UnitData.xml]
-    uv run merge_xml --all  # Merge all 5 data types
+    uv run src/merge_xml.py
 
 Dependencies:
     pip install lxml
 """
 
-import argparse
 from pathlib import Path
 from lxml import etree
 from copy import deepcopy
@@ -317,38 +315,16 @@ def merge_mods(data_type: str, output_path: Path) -> int:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Merge SC2 mod XML files with second-file-wins deep child merging")
-    parser.add_argument(
-        "--data-type", choices=DATA_TYPES, default="UnitData", help="Type of data to merge (default: UnitData)"
-    )
-    parser.add_argument("--output", type=Path, help="Output file path (default: merged_{data_type}.xml)")
-    parser.add_argument("--all", action="store_true", help="Merge all 4 data types")
-
-    args = parser.parse_args()
-
-    if args.all:
-        print("Merging all SC2 mod data types...")
-        total_mods = 0
-        for data_type in DATA_TYPES:
-            output_folder = Path(__file__).parent / "merged"
-            output_folder.mkdir(exist_ok=True)
-            output_path = output_folder / f"{data_type}.xml"
-            print(f"\n[{data_type}]")
-            count = merge_mods(data_type, output_path)
-            total_mods += count
-        print(f"\nDone! Merged {total_mods} mod files across {len(DATA_TYPES)} data types.")
-    else:
-        data_type = args.data_type
-        output_path = args.output or Path(f"merged_{data_type}.xml")
-
-        print(f"Merging {data_type}.xml from MOD_ORDER:")
-        for mod in MOD_ORDER:
-            print(f"  - {mod}")
-        print()
-
-        mods_merged = merge_mods(data_type, output_path)
-        print(f"\nDone! Merged {mods_merged} mod files -> {output_path}")
-
+    print("Merging all SC2 mod data types...")
+    total_mods = 0
+    for data_type in DATA_TYPES:
+        output_folder = Path(__file__).parent / "merged"
+        output_folder.mkdir(exist_ok=True)
+        output_path = output_folder / f"{data_type}.xml"
+        print(f"\n[{data_type}]")
+        count = merge_mods(data_type, output_path)
+        total_mods += count
+    print(f"\nDone! Merged {total_mods} mod files across {len(DATA_TYPES)} data types.")
 
 if __name__ == "__main__":
     main()

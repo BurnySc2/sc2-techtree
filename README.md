@@ -36,7 +36,7 @@ liberty.sc2mod -> libertymulti.sc2mod -> swarm.sc2mod -> swarmmulti.sc2mod -> vo
 Run
 ```sh
 # Creates src/merged/*Data.xml
-uv run src/merge_xml.py --all
+uv run src/merge_xml.py
 ```
 
 Now we can convert the data from .xml to .json with
@@ -59,7 +59,7 @@ uv run src/reconstruct_data.py
 
 All in one:
 ```sh
-uv run src/merge_xml.py --all && uv run src/convert_xml_to_json.py && uv run src/generate_techtree.py && uv run src/reconstruct_data.py 
+uv run src/merge_xml.py && uv run src/convert_xml_to_json.py && uv run src/generate_techtree.py && uv run src/reconstruct_data.py 
 ```
 
 Resulting files should be:
