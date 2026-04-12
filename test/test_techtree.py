@@ -47,6 +47,19 @@ class TestZerglingMorphsto:
         assert zergling["morphsto"] == "Baneling"
 
 
+class TestCorruptor:
+    def test_corruptor_morphsto_broodlord(self, techtree_data: dict) -> None:
+        corruptor = techtree_data["units"]["Corruptor"]
+        assert "morphsto" in corruptor
+        assert corruptor["morphsto"] == "BroodLord"
+
+
+class TestMorphToBroodLord:
+    def test_morph_to_broodlord_morphsto(self, techtree_data: dict) -> None:
+        morph = techtree_data["abilities"]["MorphToBroodLord"]
+        assert morph["morphsto"] == "BroodLord"
+
+
 class TestRoach:
     def test_roach_requires(self, techtree_data: dict) -> None:
         roach = techtree_data["units"]["Roach"]
@@ -120,7 +133,7 @@ class TestCommandCenter:
     def test_command_center_morphsto_orbital_command(self, techtree_data: dict) -> None:
         cc = techtree_data["structures"]["CommandCenter"]
         assert "morphsto" in cc
-        assert cc["morphsto"] == "OrbitalCommand"
+        assert cc["morphsto"] == ["CommandCenterFlying", "OrbitalCommand", "PlanetaryFortress"]
 
     def test_command_center_produces(self, techtree_data: dict) -> None:
         cc = techtree_data["structures"]["CommandCenter"]
@@ -155,6 +168,11 @@ class TestOrbitalCommand:
         orbital = techtree_data["structures"]["OrbitalCommand"]
         assert "produces" in orbital
         assert orbital["produces"] == ["SCV"]
+
+    def test_orbital_command_morphsto_flying(self, techtree_data: dict) -> None:
+        orbital = techtree_data["structures"]["OrbitalCommand"]
+        assert "morphsto" in orbital
+        assert orbital["morphsto"] == "OrbitalCommandFlying"
 
 
 class TestUpgradeToOrbital:
