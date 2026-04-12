@@ -40,10 +40,10 @@ def parse_requirement(req: str) -> list[str]:
     if not req:
         return []
 
-    parts = req.split('And')
+    parts = req.split("And")
     result = []
     for part in parts:
-        if part.startswith('Have'):
+        if part.startswith("Have"):
             result.append(part[4:])  # Remove 'Have' prefix
         else:
             result.append(part)
@@ -92,11 +92,15 @@ def get_info_upgrades(info: Any) -> list[str]:
 
 # Units to exclude from morph targets (cocoons)
 MORPH_EXCLUDE = {
-    "Cocoon", "CocoonZergling", "CocoonRoach", "CocoonBaneling",
-    "BanelingCocoon", "RoachCocoon", "ZerglingCocoon",
+    "Cocoon",
+    "CocoonZergling",
+    "CocoonRoach",
+    "CocoonBaneling",
+    "BanelingCocoon",
+    "RoachCocoon",
+    "ZerglingCocoon",
     "BroodLordCocoon",
 }
-
 
 
 def get_morph_targets(info: Any) -> list[str]:
@@ -194,7 +198,7 @@ def generate_techtree() -> dict:
     unit_requirements: dict[str, list[str]] = {}
 
     for abil_name, prod_list in ability_produces.items():
-        for (produced_unit, req) in prod_list:
+        for produced_unit, req in prod_list:
             if req:
                 req_structs = parse_requirement(req)
                 for req_struct in req_structs:
@@ -224,15 +228,25 @@ def generate_techtree() -> dict:
                 continue
 
             if abil_name in ability_produces:
-                for (produced_unit, req) in ability_produces[abil_name]:
-                    is_train = abil_name.endswith("Train") and abil_name not in ["SCVHarvest"]
+                for produced_unit, req in ability_produces[abil_name]:
+                    is_train = (
+                        abil_name.endswith("Train") or abil_name.startswith("NexusTrain")
+                    ) and abil_name not in ["SCVHarvest", "NexusTrainMothershipCore"]
                     is_build = abil_name.endswith("Build")
                     is_research = abil_name.endswith("Research")
 
                     if is_train:
                         produces.append(produced_unit)
                     elif is_build:
-                        builds.append(produced_unit)
+                        # Exclude mercenary buildings (Race=NOT_FOUND or N/A)
+                        if produced_unit in units_data:
+                            unit_info = units_data[produced_unit]
+                            race = unit_info.get("Race", "")
+                            # Exclude if race is empty, 'N/A', or 'NOT_FOUND'
+                            if race and race not in ("N/A", "NOT_FOUND", ""):
+                                builds.append(produced_unit)
+                        else:
+                            builds.append(produced_unit)
                     elif is_research:
                         researches.append(produced_unit)
 
@@ -357,10 +371,7 @@ def main():
     print("Generating techtree...")
     techtree = generate_techtree()
 
-    output_path.write_text(
-        dumps_json(techtree, indent=2, ensure_ascii=False, sort_keys=True),
-        encoding="utf-8"
-    )
+    output_path.write_text(dumps_json(techtree, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")
 
     print(f"Written to {output_path}")
     print(f"  Structures: {len(techtree['structures'])}")

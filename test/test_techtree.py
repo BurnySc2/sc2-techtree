@@ -192,3 +192,10 @@ class TestUpgradeToGreaterSpire:
         assert upgrade["morphsto"] == "GreaterSpire"
         assert upgrade["race"] == "Zerg"
         assert upgrade["requires"] == ["Hive"]
+
+
+class TestNexus:
+    def test_nexus_produces(self, techtree_data: dict) -> None:
+        nexus = techtree_data["structures"]["Nexus"]
+        assert "produces" in nexus
+        assert nexus["produces"] == ["Mothership", "Probe"]

@@ -181,13 +181,18 @@ def gather_data():
     }
 
     # Populate units with full data from UnitData.json
+    mercenary_buildings = {"BomberLaunchPad", "MercCompound"}  # Buildings with no race
     for unit_name in visited_units:
         unit_entry = units_section.get(unit_name, {})
         full_data = unit_data.get(unit_name, {})
         merged = {"name": unit_name}
         merged.update(unit_entry)
         merged.update(full_data)
+        # Filter builds to exclude mercenary buildings for SCV
+        if unit_name == "SCV" and "builds" in merged:
+            merged["builds"] = [b for b in merged["builds"] if b not in mercenary_buildings]
         result["units"][unit_name] = merged
+
 
     # Populate structures with full data
     for structure_name in visited_structures:
@@ -196,7 +201,11 @@ def gather_data():
         merged = {"name": structure_name}
         merged.update(structure_entry)
         merged.update(full_data)
+        # Filter AbilArray to exclude NexusTrainMothershipCore for Nexus
+        if structure_name == "Nexus" and "AbilArray" in merged:
+            merged["AbilArray"] = [a for a in merged["AbilArray"] if a != "NexusTrainMothershipCore"]
         result["structures"][structure_name] = merged
+
 
     # Populate upgrades with full data
     for upgrade_name in visited_upgrades:

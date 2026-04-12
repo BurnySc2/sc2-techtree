@@ -629,6 +629,7 @@
     },
     "Nexus": {
       "produces": [
+        "Mothership",
         "Probe"
       ],
       "race": "Protoss",
