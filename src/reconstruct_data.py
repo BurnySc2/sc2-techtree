@@ -127,9 +127,11 @@ def gather_data():
 
             # Add units unlocked by this structure
             unlocks = structure_info.get("unlocks", [])
-            for unit_name in unlocks:
-                if unit_name not in visited_units:
-                    queue.append(("unit", unit_name))
+            for unlocked_name in unlocks:
+                if unlocked_name in structures_section and unlocked_name not in visited_structures:
+                    queue.append(("structure", unlocked_name))
+                elif unlocked_name in units_section and unlocked_name not in visited_units:
+                    queue.append(("unit", unlocked_name))
 
             # Add upgrades researched at this structure
             researches = structure_info.get("researches", [])
