@@ -186,6 +186,230 @@ class TestUpgradeToOrbital:
         assert upgrade["requires"] == ["Barracks"]
 
 
+class TestFactory:
+    def test_factory_produces_excludes_war_hound(self, techtree_data: dict) -> None:
+        factory = techtree_data["structures"]["Factory"]
+        assert "produces" in factory
+        assert "WarHound" not in factory["produces"]
+
+
+class TestRoboticsFacility:
+    def test_robotics_facility_produces(self, techtree_data: dict) -> None:
+        facility = techtree_data["structures"]["RoboticsFacility"]
+        assert "produces" in facility
+        assert facility["produces"] == [
+            "Colossus",
+            "Disruptor",
+            "Immortal",
+            "Observer",
+            "WarpPrism",
+        ]
+
+
+class TestTemplarArchive:
+    def test_templar_archive_researches(self, techtree_data: dict) -> None:
+        archive = techtree_data["structures"]["TemplarArchive"]
+        assert "researches" in archive
+        assert archive["researches"] == ["PsiStormTech"]
+
+
+class TestTwilightCouncil:
+    def test_twilight_council_researches(self, techtree_data: dict) -> None:
+        council = techtree_data["structures"]["TwilightCouncil"]
+        assert "researches" in council
+        assert council["researches"] == [
+            "AdeptPiercingAttack",
+            "BlinkTech",
+            "Charge",
+            "PsionicAmplifiers",
+        ]
+
+
+class TestBarracksTechLab:
+    def test_barracks_tech_lab_researches(self, techtree_data: dict) -> None:
+        lab = techtree_data["structures"]["BarracksTechLab"]
+        assert "researches" in lab
+        assert lab["researches"] == [
+            "PunisherGrenades",
+            "ShieldWall",
+            "Stimpack",
+        ]
+
+
+class TestUltraliskCavern:
+    def test_ultralisk_cavern_researches(self, techtree_data: dict) -> None:
+        cavern = techtree_data["structures"]["UltraliskCavern"]
+        assert "researches" in cavern
+        assert cavern["researches"] == [
+            "AnabolicSynthesis",
+            "ChitinousPlating",
+        ]
+
+
+class TestFactoryTechLab:
+    def test_factory_tech_lab_researches(self, techtree_data: dict) -> None:
+        lab = techtree_data["structures"]["FactoryTechLab"]
+        assert "researches" in lab
+        assert lab["researches"] == [
+            "CycloneLockOnDamageUpgrade",
+            "DrillClaws",
+            "HighCapacityBarrels",
+            "TransformationServos",
+        ]
+
+
+class TestStarportTechLab:
+    def test_starport_tech_lab_researches(self, techtree_data: dict) -> None:
+        lab = techtree_data["structures"]["StarportTechLab"]
+        assert "researches" in lab
+        assert lab["researches"] == [
+            "BansheeCloak",
+            "BansheeSpeed",
+            "InterferenceMatrix",
+        ]
+
+
+class TestCyberneticsCore:
+    def test_cybernetics_core_researches(self, techtree_data: dict) -> None:
+        core = techtree_data["structures"]["CyberneticsCore"]
+        assert "researches" in core
+        assert core["researches"] == [
+            "ProtossAirArmorsLevel1",
+            "ProtossAirArmorsLevel2",
+            "ProtossAirArmorsLevel3",
+            "ProtossAirWeaponsLevel1",
+            "ProtossAirWeaponsLevel2",
+            "ProtossAirWeaponsLevel3",
+            "WarpGateResearch",
+        ]
+
+    def test_cybernetics_core_researches_excludes_haltech(self, techtree_data: dict) -> None:
+        core = techtree_data["structures"]["CyberneticsCore"]
+        assert "researches" in core
+        assert "haltech" not in core["researches"]
+
+
+class TestEngineeringBay:
+    def test_engineering_bay_researches(self, techtree_data: dict) -> None:
+        bay = techtree_data["structures"]["EngineeringBay"]
+        assert "researches" in bay
+        assert bay["researches"] == [
+            "HiSecAutoTracking",
+            "NeosteelFrame",
+            "TerranInfantryArmorsLevel1",
+            "TerranInfantryArmorsLevel2",
+            "TerranInfantryArmorsLevel3",
+            "TerranInfantryWeaponsLevel1",
+            "TerranInfantryWeaponsLevel2",
+            "TerranInfantryWeaponsLevel3",
+        ]
+
+    def test_engineering_bay_researches_excludes_terran_building_armor(self, techtree_data: dict) -> None:
+        bay = techtree_data["structures"]["EngineeringBay"]
+        assert "researches" in bay
+        assert "TerranBuildingArmor" not in bay["researches"]
+
+
+class TestFleetBeacon:
+    def test_fleet_beacon_researches(self, techtree_data: dict) -> None:
+        beacon = techtree_data["structures"]["FleetBeacon"]
+        assert "researches" in beacon
+        assert beacon["researches"] == [
+            "AnionPulseCrystals",
+            "TempestGroundAttackUpgrade",
+            "VoidRaySpeedUpgrade",
+        ]
+
+
+class TestFusionCore:
+    def test_fusion_core_researches(self, techtree_data: dict) -> None:
+        core = techtree_data["structures"]["FusionCore"]
+        assert "researches" in core
+        assert core["researches"] == [
+            "BattlecruiserEnableSpecializations",
+            "LiberatorAGRangeUpgrade",
+            "MedivacCaduceusReactor",
+        ]
+
+
+class TestGhostAcademy:
+    def test_ghost_academy_researches(self, techtree_data: dict) -> None:
+        academy = techtree_data["structures"]["GhostAcademy"]
+        assert "researches" in academy
+        assert academy["researches"] == ["PersonalCloaking"]
+
+
+class TestGreaterSpire:
+    def test_greater_spire_researches(self, techtree_data: dict) -> None:
+        spire = techtree_data["structures"]["GreaterSpire"]
+        assert "researches" in spire
+        assert spire["researches"] == [
+            "ZergFlyerArmorsLevel1",
+            "ZergFlyerArmorsLevel2",
+            "ZergFlyerArmorsLevel3",
+            "ZergFlyerWeaponsLevel1",
+            "ZergFlyerWeaponsLevel2",
+            "ZergFlyerWeaponsLevel3",
+        ]
+
+
+class TestHydraliskDen:
+    def test_hydralisk_den_researches(self, techtree_data: dict) -> None:
+        den = techtree_data["structures"]["HydraliskDen"]
+        assert "researches" in den
+        assert den["researches"] == [
+            "EvolveGroovedSpines",
+            "EvolveMuscularAugments",
+            "Frenzy",
+        ]
+
+
+class TestInfestationPit:
+    def test_infestation_pit_researches(self, techtree_data: dict) -> None:
+        pit = techtree_data["structures"]["InfestationPit"]
+        assert "researches" in pit
+        assert pit["researches"] == [
+            "MicrobialShroud",
+            "NeuralParasite",
+        ]
+
+
+class TestLurkerDenMP:
+    def test_lurker_den_mp_researches(self, techtree_data: dict) -> None:
+        den = techtree_data["structures"]["LurkerDenMP"]
+        assert "researches" in den
+        assert den["researches"] == [
+            "DiggingClaws",
+            "LurkerRange",
+        ]
+
+
+class TestRoachWarren:
+    def test_roach_warren_researches(self, techtree_data: dict) -> None:
+        warren = techtree_data["structures"]["RoachWarren"]
+        assert "researches" in warren
+        assert warren["researches"] == [
+            "GlialReconstitution",
+            "TunnelingClaws",
+        ]
+
+
+class TestRoboticsBay:
+    def test_robotics_bay_requires(self, techtree_data: dict) -> None:
+        bay = techtree_data["structures"]["RoboticsBay"]
+        assert "requires" in bay
+        assert bay["requires"] == ["RoboticsFacility"]
+
+    def test_robotics_bay_researches(self, techtree_data: dict) -> None:
+        bay = techtree_data["structures"]["RoboticsBay"]
+        assert "researches" in bay
+        assert bay["researches"] == [
+            "ExtendedThermalLance",
+            "GraviticDrive",
+            "ObserverGraviticBooster",
+        ]
+
+
 class TestUpgradeToGreaterSpire:
     def test_upgrade_to_greater_spire(self, techtree_data: dict) -> None:
         upgrade = techtree_data["abilities"]["UpgradeToGreaterSpire"]
