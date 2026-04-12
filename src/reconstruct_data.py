@@ -190,9 +190,8 @@ def gather_data():
         merged.update(full_data)
         # Filter builds to exclude mercenary buildings for SCV
         if unit_name == "SCV" and "builds" in merged:
-            merged["builds"] = [b for b in merged["builds"] if b not in mercenary_buildings]
+            merged["builds"] = [b for b in merged["builds"] if b not in mercenary_buildings]  # type: ignore[assignment]
         result["units"][unit_name] = merged
-
 
     # Populate structures with full data
     for structure_name in visited_structures:
@@ -203,9 +202,8 @@ def gather_data():
         merged.update(full_data)
         # Filter AbilArray to exclude NexusTrainMothershipCore for Nexus
         if structure_name == "Nexus" and "AbilArray" in merged:
-            merged["AbilArray"] = [a for a in merged["AbilArray"] if a != "NexusTrainMothershipCore"]
+            merged["AbilArray"] = [a for a in merged["AbilArray"] if a != "NexusTrainMothershipCore"]  # type: ignore[assignment]
         result["structures"][structure_name] = merged
-
 
     # Populate upgrades with full data
     for upgrade_name in visited_upgrades:

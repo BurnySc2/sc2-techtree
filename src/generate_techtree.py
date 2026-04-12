@@ -26,7 +26,7 @@ UNIT_REQUIREMENT_FIXES = {
 def load_json(filename: str) -> dict:
     """Load a JSON data file."""
     path = Path(__file__).parent / "json" / filename
-    with open(path, encoding="utf-8") as f:
+    with path.open(encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -123,7 +123,7 @@ def get_morph_targets(info: Any) -> list[str]:
     return targets
 
 
-def get_lift_off_target(abil_data: dict) -> str | None:
+def get_lift_off_target(abil_data: Any) -> str | None:
     """Extract the unit a LiftOff ability transforms into from the 'unit' field."""
     if isinstance(abil_data, dict):
         return abil_data.get("unit")
@@ -267,18 +267,18 @@ def generate_techtree() -> dict:
                         if targets:
                             if morphsto is None:
                                 morphsto = targets
-                            else:
+                            elif isinstance(morphsto, list):
                                 morphsto.extend(targets)
 
             # Handle LiftOff abilities - get target from 'unit' field
             if is_lift_off:
                 abil = abils_data.get(abil_name)
-                target = get_lift_off_target(abil)
-                if target:
-                    if morphsto is None:
-                        morphsto = [target]
-                    else:
-                        if isinstance(morphsto, list):
+                if isinstance(abil, dict):
+                    target = get_lift_off_target(abil)
+                    if target:
+                        if morphsto is None:
+                            morphsto = [target]
+                        elif isinstance(morphsto, list):
                             morphsto.append(target)
                         else:
                             morphsto = [morphsto, target]
