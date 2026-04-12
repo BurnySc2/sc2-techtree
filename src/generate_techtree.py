@@ -412,12 +412,9 @@ def generate_techtree() -> dict:
                     is_build = abil_name.endswith("Build")
                     is_research = abil_name.endswith("Research")
 
-                    if is_train:
-                        # Check if this unit's ability matches the structure name
-                        if ability_matches_structure(abil_name, unit_name):
-                            # Exclude campaign units like WarHound
-                            if not is_campaign_unit(units_data.get(produced_unit, {})):
-                                produces.append(produced_unit)
+                    if is_train and ability_matches_structure(abil_name, unit_name):
+                        if not is_campaign_unit(units_data.get(produced_unit, {})):
+                            produces.append(produced_unit)
                     elif is_build:
                         # Exclude mercenary buildings (Race=NOT_FOUND or N/A) and campaign units
                         if produced_unit in units_data:
@@ -431,18 +428,17 @@ def generate_techtree() -> dict:
                                 builds.append(produced_unit)
                         else:
                             builds.append(produced_unit)
-                    elif is_research:
-                        # Only add research if it matches the structure
-                        if research_matches_structure(abil_name, unit_name):
-                            if produced_unit not in excludes:
-                                researches.append(produced_unit)
+                    elif (
+                        is_research
+                        and research_matches_structure(abil_name, unit_name)
+                        and produced_unit not in excludes
+                    ):
+                        researches.append(produced_unit)
 
-            if abil_name in ability_upgrades:
-                # Only add upgrades if the ability matches the structure
-                if research_matches_structure(abil_name, unit_name):
-                    for upgrade in ability_upgrades[abil_name]:
-                        if upgrade not in excludes:
-                            researches.append(upgrade)
+            if abil_name in ability_upgrades and research_matches_structure(abil_name, unit_name):
+                for upgrade in ability_upgrades[abil_name]:
+                    if upgrade not in excludes:
+                        researches.append(upgrade)
 
             # Handle morphsto for units with MorphTo, MorphZergling, UpgradeTo, or LiftOff abilities
             is_morph_to = (
