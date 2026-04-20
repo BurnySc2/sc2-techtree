@@ -31,12 +31,6 @@ def get_xml_path(mod_name: str, data_type: str) -> Path:
     return Path(__file__).parent / f"xml/mods/{mod_name}/base.sc2data/GameData/{data_type}.xml"
 
 
-def get_fallback_tree(data_type: str) -> etree._ElementTree | None:
-    """Load fallback XML tree for a data type if it exists."""
-    fallback_path = Path(__file__).parent / "fallback" / f"{data_type}.xml"
-    return etree.parse(str(fallback_path)) if fallback_path.exists() else None
-
-
 def get_child_key(elem: etree._Element) -> tuple:
     """Get unique key for child element matching: (tag, index, link).
     - Cost/Range use (tag,) only
@@ -73,25 +67,9 @@ def merge_child_elements(base: etree._Element, override: etree._Element) -> None
             base.remove(base_child)
             continue
 
-        tag = str(base_child.tag)
-        if len(override_child) > 0 or len(base_child) > 0:
+        base_child.attrib.update(override_child.attrib)
+        if len(override_child) > 0:
             merge_child_elements(base_child, override_child)
-        elif tag.endswith("Array"):
-            override_val = override_child.get("value")
-            override_link = override_child.get("Link")
-
-            if override_val:
-                existing = {c.get("value") for c in base if str(c.tag) == tag}
-                if override_val not in existing:
-                    base.append(deepcopy(override_child))
-            elif override_link:
-                existing = {c.get("Link") for c in base if str(c.tag) == tag}
-                if override_link not in existing:
-                    base.append(deepcopy(override_child))
-        else:
-            base_child.text = override_child.text
-            base_child.attrib.clear()
-            base_child.attrib.update(override_child.attrib)
 
     # Add remaining override children not in base
     base_keys = _build_lookup(base)
@@ -121,28 +99,6 @@ def merge_trees(base: etree._ElementTree, override: etree._ElementTree) -> etree
     return base
 
 
-def fill_missing_from_fallback(result: etree._ElementTree, data_type: str) -> None:
-    """Fill missing children from fallback source."""
-    fallback = get_fallback_tree(data_type)
-    if fallback is None:
-        return
-
-    for parent in result.findall(".//*[@id]"):
-        parent_id = parent.get("id")
-        fallback_parent = fallback.find(f".//*[@id='{parent_id}']")
-        if fallback_parent is None:
-            continue
-
-        base_keys = {get_child_key(c) for c in parent}
-
-        for fb_child in fallback_parent:
-            key = get_child_key(fb_child)
-            if key not in base_keys:
-                idx = fb_child.get("index", fb_child.get("Link", ""))
-                print(f"  [FALLBACK] Adding missing {fb_child.tag}[@{idx}] to {parent_id}")
-                parent.append(deepcopy(fb_child))
-
-
 def merge_mods(data_type: str, output_path: Path) -> int:
     """Merge all mod XML files for a data type. Returns count of merged mods."""
     result = None
@@ -165,7 +121,6 @@ def merge_mods(data_type: str, output_path: Path) -> int:
             print(f"  [ERROR] Failed to parse {xml_path}: {e}")
 
     if result is not None:
-        fill_missing_from_fallback(result, data_type)
         result.write(str(output_path), xml_declaration=True, encoding="UTF-8", pretty_print=True)
         print(f"  [WRITE] {output_path}")
 
