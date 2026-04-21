@@ -34,86 +34,6 @@ MORPH_EXCLUDE = {
     "BroodLordCocoon",
 }
 
-# Research upgrades to exclude (they're not direct research abilities for this structure)
-RESEARCH_EXCLUDE = {
-    # TemplarArchive - HighTemplarKhaydarinAmulet is from TemplarArchivesResearch but not TemplarArchive's research
-    "HighTemplarKhaydarinAmulet",
-    # CyberneticsCore - haltech is not a research
-    "haltech",
-    # EngineeringBay - TerranBuildingArmor is not an Engineering Bay research
-    "TerranBuildingArmor",
-    # UltraliskCavern - UltraliskBurrowChargeUpgrade is not an Ultralisk Cavern research
-    "UltraliskBurrowChargeUpgrade",
-    # RoboticsBay - ImmortalRevive is not a Robotics Bay research
-    "ImmortalRevive",
-    # TwilightCouncil - these are not Twilight Council researches
-    "SunderingImpact",
-    "AmplifiedShielding",
-    # Note: AdeptShieldUpgrade is mapped to AdeptPiercingAttack via RESEARCH_NAME_MAP
-    # RoachWarren - RoachSupply is not a research
-    "RoachSupply",
-    # Lair/Hive/GreaterSpire - Burrow, overlord upgrades are from LairResearch
-    "Burrow",
-    "overlordspeed",
-    "overlordtransport",
-    # InfestationPit - extra researches from other sources
-    "FlyingLocusts",
-    "InfestorEnergyUpgrade",
-    "LocustLifetimeIncrease",
-    # FleetBeacon - extra researches from other sources
-    "CarrierLaunchSpeedUpgrade",
-    "TempestRangeUpgrade",
-    # GhostAcademy - extra researches from MercCompoundResearch
-    "EnhancedShockwaves",
-    "GhostMoebiusReactor",
-    "ReaperSpeed",
-}
-
-# Structure-specific research excludes (overrides general RESEARCH_EXCLUDE)
-# Key: structure name, Value: set of upgrade names to exclude for that structure
-STRUCTURE_RESEARCH_EXCLUDE = {
-    "BarracksTechLab": {
-        "CombatDrugs",
-    },
-    "FactoryTechLab": {
-        "ArmorPiercingRockets",
-        "CycloneAirUpgrade",
-        "CycloneLockOnRangeUpgrade",
-        "CycloneRapidFireLaunchers",
-        "HurricaneThrusters",
-        "SiegeTech",
-        "StrikeCannons",
-    },
-    "StarportTechLab": {
-        "DurableMaterials",
-        "HunterSeeker",
-        "LiberatorAGRangeUpgrade",
-        "LiberatorMorph",
-        "MedivacCaduceusReactor",
-        "MedivacRapidDeployment",
-        "MedivacIncreaseSpeedBoost",
-        "RavenCorvidReactor",
-        "RavenEnhancedMunitions",
-        "RavenRecalibratedExplosives",
-    },
-    "FusionCore": {
-        "MedivacIncreaseSpeedBoost",
-    },
-    "HydraliskDen": {
-        "HydraliskSpeedUpgrade",
-        "LurkerRange",
-        "hydraliskspeed",
-    },
-}
-
-# Additional researches to add (hard-coded for structures where data is missing)
-# Key: structure name, Value: list of upgrade names to add
-STRUCTURE_ADDITIONAL_RESEARCHES = {
-    "FusionCore": ["LiberatorAGRangeUpgrade"],
-    "HydraliskDen": ["Frenzy"],
-    "InfestationPit": ["MicrobialShroud"],
-}
-
 # Requirement name fixes (maps incorrect names to correct ones)
 REQUIREMENT_NAME_FIXES = {
     "RoboticsFa": "RoboticsFacility",
@@ -220,14 +140,14 @@ def get_info_upgrades(info: Any) -> list[str]:
                 btn = item.get("Button", {})
                 if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
                     upgrade = item.get("Upgrade")
-                    if upgrade and upgrade not in RESEARCH_EXCLUDE:
+                    if upgrade:
                         mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
                         upgrades.append(mapped)
     elif isinstance(info, dict):
         btn = info.get("Button", {})
         if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
             upgrade = info.get("Upgrade")
-            if upgrade and upgrade not in RESEARCH_EXCLUDE:
+            if upgrade:
                 mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
                 upgrades.append(mapped)
     return upgrades
@@ -292,6 +212,8 @@ def get_race(data: dict) -> str:
     """Get the race of a unit/structure."""
     if isinstance(data, dict):
         race = data.get("Race", "")
+        if isinstance(race, list):
+            race = race[0] if race else ""
         return RACE_MAP.get(race, race)
     return ""
 
@@ -397,8 +319,8 @@ def generate_techtree() -> dict:
         morphsto: str | list[str] | None = None
 
         # Get structure-specific excludes and additional researches
-        excludes = STRUCTURE_RESEARCH_EXCLUDE.get(unit_name, set())
-        additional = STRUCTURE_ADDITIONAL_RESEARCHES.get(unit_name, [])
+        # excludes = STRUCTURE_RESEARCH_EXCLUDE.get(unit_name, set())
+        # additional = STRUCTURE_ADDITIONAL_RESEARCHES.get(unit_name, [])
 
         for abil_name in unit_data.get("AbilArray", []):
             if not isinstance(abil_name, str):
@@ -428,17 +350,12 @@ def generate_techtree() -> dict:
                                 builds.append(produced_unit)
                         else:
                             builds.append(produced_unit)
-                    elif (
-                        is_research
-                        and research_matches_structure(abil_name, unit_name)
-                        and produced_unit not in excludes
-                    ):
+                    elif is_research and research_matches_structure(abil_name, unit_name):
                         researches.append(produced_unit)
 
             if abil_name in ability_upgrades and research_matches_structure(abil_name, unit_name):
                 for upgrade in ability_upgrades[abil_name]:
-                    if upgrade not in excludes:
-                        researches.append(upgrade)
+                    researches.append(upgrade)
 
             # Handle morphsto for units with MorphTo, MorphZergling, UpgradeTo, or LiftOff abilities
             is_morph_to = (
@@ -476,9 +393,9 @@ def generate_techtree() -> dict:
             entry["produces"] = sorted(set(produces))
         if builds:
             entry["builds"] = sorted(set(builds))
-        if researches or additional:
+        if researches:
             # Add additional researches (for structures where data is incomplete)
-            all_researches = list(researches) + [r for r in additional if r not in researches]
+            all_researches = list(researches)
             entry["researches"] = sorted(set(all_researches))
         if unlocks.get(unit_name):
             entry["unlocks"] = sorted(unlocks[unit_name])

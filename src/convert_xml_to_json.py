@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any
 
+from loguru import logger
 from utils import dumps_json
 
 # Tags where index+value="1" pairs become arrays of index names
@@ -67,6 +68,9 @@ def to_number(value: str) -> int | float | str:
             return value
 
 
+DEBUG_TAGS_SEEN = set()
+
+
 def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
     """Convert a single XML element to its JSON value."""
     attrs = {k: v for k, v in element.attrib.items() if k != "id"}
@@ -78,8 +82,12 @@ def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
     if len(element) > 0:
         children = list(element)
         by_tag: dict[str, list[ET.Element]] = {}
-        for child in children:
-            by_tag.setdefault(child.tag, []).append(child)
+        for child in sorted(children, key=lambda i: i.tag):
+            if child.tag not in by_tag:
+                by_tag[child.tag] = []
+            elif child.tag not in DEBUG_TAGS_SEEN and child.tag not in FLAG_ARRAY_TAGS:
+                DEBUG_TAGS_SEEN.add(child.tag)
+            by_tag[child.tag].append(child)
 
         result: dict[str, Any] = {}
         for tag, matching in by_tag.items():
@@ -88,7 +96,7 @@ def element_to_value(element: ET.Element, tag_name: str = "") -> Any:
                 result[tag] = values
             elif tag_name == "Cost" and tag == "Vital":
                 result.update(values[0])
-            else:
+            elif not tag_name.endswith("Array"):
                 result[tag] = values[0]
 
         for k, v in attrs.items():
@@ -141,7 +149,10 @@ def convert_xml_to_json(xml_path: Path, output_path: Path) -> dict:
     tree = ET.parse(xml_path)
     root = tree.getroot()
 
+    DEBUG_TAGS_SEEN.clear()
     result = {elem.get("id"): element_to_value(elem) for elem in root.iter() if elem.get("id")}
+    for i in sorted(DEBUG_TAGS_SEEN):
+        logger.warning(f"Duplicate tag detected: {i}, add it to merge_xml.py OVERRIDE_TAGS")
     result = post_process(result)
 
     output_path.write_text(dumps_json(result, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")

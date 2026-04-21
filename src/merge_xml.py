@@ -9,8 +9,6 @@ Usage:
 
 from copy import deepcopy
 from pathlib import Path
-from pprint import PrettyPrinter
-from tkinter import BaseWidget
 
 from lxml import etree
 import lxml
@@ -23,10 +21,146 @@ MOD_ORDER = [
     "swarmmulti.sc2mod",
     "void.sc2mod",
     "voidmulti.sc2mod",
-    "balancemulti.sc2mod",
 ]
 
 DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData", "EffectData"]
+
+# Instead of creating an array, these tags will update the value instead
+OVERRIDE_TAGS = {
+    "Abil",
+    "AbilCmd",
+    "AbilSetId",
+    "Acceleration",
+    "AcquireFilters",
+    "AcquirePrioritization",
+    "AINotifyEffect",
+    "AINotifyFlags",
+    "Alert",
+    "Alignment",
+    "AllowedMovement",
+    "AmmoUnit",
+    "Amount",
+    "Arc",
+    "ArcSlop",
+    "ArmorReduction",
+    "AttackTargetPriority",
+    "AutoCastFilters",
+    "AutoCastRange",
+    "Backswing",
+    "Behavior",
+    "BehaviorLink",
+    "CancelableArray",
+    "CargoSize",
+    "CaseDefault",
+    "Change",
+    "Cooldown",
+    "Cost",
+    "CostCategory",
+    "CostResource",
+    "Count",
+    "CursorEffect",
+    "DamageDealtXP",
+    "DamagePoint",
+    "DamageTakenXP",
+    "Death",
+    "DeathRevealRadius",
+    "DeathType",
+    "DefaultAcquireLevel",
+    "DisplayAttackCount",
+    "DisplayEffect",
+    "EditorCategories",
+    "Effect",
+    "EnergyMax",
+    "EnergyRegenRate",
+    "EnergyStart",
+    "ExpireDelay",
+    "ExpireEffect",
+    "FinalEffect",
+    "FinishEffect",
+    "Food",
+    "Footprint",
+    "Height",
+    "Icon",
+    "ImpactEffect",
+    "ImpactLocation",
+    "InfoTooltipPriority",
+    "InitialEffect",
+    "InnerRadius",
+    "KillDisplay",
+    "KillXP",
+    "Kind",
+    "KindSplash",
+    "LateralAcceleration",
+    "LaunchEffect",
+    "LeaderAlias",
+    "LeaderLevel",
+    "Leash",
+    "LegacyOptions",
+    "LegacyOptions",
+    "LifeArmor",
+    "LifeArmorName",
+    "LifeMax",
+    "LifeRegenDelay",
+    "LifeRegenRate",
+    "LifeStart",
+    "Marker",
+    "MinCount",
+    "MinimapRadius",
+    "MinScanRange",
+    "Mover",
+    "Movers",
+    "Name",
+    "Options",
+    "Period",
+    "PeriodCount",
+    "PeriodicValidator",
+    "Player",
+    "ProgressButton",
+    "Race",
+    "Radius",
+    "RandomDelayMax",
+    "Range",
+    "RangeSlop",
+    "RankDisplay",
+    "RepairTime",
+    "Requirements",
+    "Resource",
+    "ResourceDropOff",
+    "Response",
+    "ScoreAmount",
+    "ScoreCount",
+    "ScoreKill",
+    "ScoreMake",
+    "ScoreResult",
+    "ScoreValue",
+    "SeparationRadius",
+    "ShieldBonus",
+    "ShieldsMax",
+    "ShieldsStart",
+    "Sight",
+    "SpawnCount",
+    "SpawnEffect",
+    "SpawnRange",
+    "SpawnUnit",
+    "Speed",
+    "SpeedMultiplierCreep",
+    "StationaryTurningRate",
+    "Target",
+    "TargetFilters",
+    "TargetLocation",
+    "TargetLocationType",
+    "TechAliasArray",
+    "TeleportResetRange",
+    "TimeScaleSource",
+    "TimeUse",
+    "TurningRate",
+    "Visibility",
+    "VisionHeight",
+    "WeaponArray",
+    "WebPriority",
+    "WhichLocation",
+    "WhichUnit",
+}
 
 
 def get_xml_path(mod_name: str, data_type: str) -> Path:
@@ -57,6 +191,9 @@ def merge_child_elements(base: etree._Element, override: etree._Element) -> None
     base_lookup_with_index = _build_lookup_with_index(base)
     for override_child in override:
         key = get_child_key(override_child)
+        if key[0] in OVERRIDE_TAGS and key in base_lookup:
+            base_lookup[key].attrib.update(override_child.attrib)
+            continue
         key_with_index = get_child_key_with_index(override_child)
         if key in base_lookup and base_lookup[key].getparent() is not None:
             # Tag exists, insert or update child
@@ -70,12 +207,13 @@ def merge_child_elements(base: etree._Element, override: etree._Element) -> None
                     if 0 <= idx < len(parent):
                         del parent[idx]
                     continue
-                if index and index.isnumeric():
+                elif index and index.isnumeric():
                     # Has index, update that entry
                     parent = base_lookup[key].getparent()
                     idx = int(index)
-                    if idx < len(parent):
-                        el = parent[idx]
+                    same_tags = [i for i in parent if i.tag == override_child.tag]
+                    if idx < len(same_tags):
+                        el = same_tags[idx]
                         # Skip comments
                         if not isinstance(el, lxml.etree._Comment):
                             el.attrib.update(override_child.attrib)
