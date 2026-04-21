@@ -25,24 +25,16 @@ MOD_ORDER = [
 DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData", "EffectData"]
 
 
-def elem_to_dict(elem: etree._Element) -> dict:
-    result: dict = dict(elem.attrib)
-    children_by_tag: dict = {}
+def _postprocess_index_value(child_list: list[dict]) -> dict:
+    return {c["index"]: c["value"] for c in child_list}
 
-    for child in elem:
-        if isinstance(child, etree._Comment):
-            continue
-        child_tag = child.tag
-        if not isinstance(child_tag, str):
-            continue
 
-        child_data = elem_to_dict(child)
+def _postprocess_value_only(child_list: list[dict]) -> dict:
+    return {child_list[0].keys().__iter__().__next__(): c["value"] for c in child_list}
 
-        if child_tag in children_by_tag:
-            children_by_tag[child_tag].append(child_data)
-        else:
-            children_by_tag[child_tag] = [child_data]
 
+def _postprocess_entries(children_by_tag: dict) -> dict:
+    result = {}
     for tag, child_list in children_by_tag.items():
         if len(child_list) > 1:
             all_simple = all(
@@ -51,20 +43,45 @@ def elem_to_dict(elem: etree._Element) -> dict:
             )
             if all_simple:
                 if all("index" in c for c in child_list):
-                    result[tag] = {c["index"]: c["value"] for c in child_list}
+                    result[tag] = _postprocess_index_value(child_list)
                 else:
-                    result[tag] = {tag: c["value"] for c in child_list}
+                    result[tag] = _postprocess_value_only(child_list)
             else:
                 result[tag] = child_list
         elif len(child_list) == 1:
             c = child_list[0]
             if set(c.keys()) == {"index", "value"}:
-                result[tag] = {c["index"]: c["value"]}
+                result[tag] = _postprocess_index_value([c])
             elif set(c.keys()) == {"value"}:
                 result[tag] = c["value"]
             else:
                 result[tag] = c
+    return result
 
+
+def _grab_entries(elem: etree._Element) -> tuple[dict, dict]:
+    attrib = dict(elem.attrib)
+    children_by_tag: dict = {}
+    for child in elem:
+        if isinstance(child, etree._Comment):
+            continue
+        child_tag = child.tag
+        if not isinstance(child_tag, str):
+            continue
+        child_data = elem_to_dict(child)
+        if child_tag in children_by_tag:
+            children_by_tag[child_tag].append(child_data)
+        else:
+            children_by_tag[child_tag] = [child_data]
+    return attrib, children_by_tag
+
+
+def elem_to_dict(elem: etree._Element) -> dict:
+    attrib, children_by_tag = _grab_entries(elem)
+    result = _postprocess_entries(children_by_tag)
+    for k, v in attrib.items():
+        if k not in result:
+            result[k] = v
     return result
 
 
