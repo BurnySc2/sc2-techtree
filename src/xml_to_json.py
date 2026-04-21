@@ -7,6 +7,7 @@ Usage:
     uv run src/xml_to_json.py
 """
 
+from contextlib import suppress
 from pathlib import Path
 
 from lxml import etree
@@ -25,22 +26,27 @@ MOD_ORDER = [
 DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData", "EffectData"]
 
 
+def _coerce_value(value: str):
+    with suppress(ValueError):
+        return int(value)
+    with suppress(ValueError):
+        return float(value)
+    return value
+
+
 def _postprocess_index_value(child_list: list[dict]) -> dict:
-    return {c["index"]: c["value"] for c in child_list}
+    return {c["index"]: _coerce_value(c["value"]) for c in child_list}
 
 
 def _postprocess_value_only(child_list: list[dict]) -> dict:
-    return {child_list[0].keys().__iter__().__next__(): c["value"] for c in child_list}
+    return {child_list[0].keys().__iter__().__next__(): _coerce_value(child_list[0]["value"])}
 
 
 def _postprocess_entries(children_by_tag: dict) -> dict:
     result = {}
     for tag, child_list in children_by_tag.items():
         if len(child_list) > 1:
-            all_simple = all(
-                set(c.keys()) == {"index", "value"} or set(c.keys()) == {"value"}
-                for c in child_list
-            )
+            all_simple = all(set(c.keys()) == {"index", "value"} or set(c.keys()) == {"value"} for c in child_list)
             if all_simple:
                 if all("index" in c for c in child_list):
                     result[tag] = _postprocess_index_value(child_list)
@@ -53,7 +59,7 @@ def _postprocess_entries(children_by_tag: dict) -> dict:
             if set(c.keys()) == {"index", "value"}:
                 result[tag] = _postprocess_index_value([c])
             elif set(c.keys()) == {"value"}:
-                result[tag] = c["value"]
+                result[tag] = _coerce_value(c["value"])
             else:
                 result[tag] = c
     return result
