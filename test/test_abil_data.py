@@ -46,7 +46,6 @@ class TestOracleRevelation:
         assert oracle["Cost"] == {
             "Cooldown": {"TimeUse": "14"},
             "Energy": 25,
-            "index": 0,
         }
 
     def test_oracle_revelation_range(self, abil_data: dict) -> None:

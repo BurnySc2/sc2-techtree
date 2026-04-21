@@ -7,6 +7,7 @@ Usage:
     uv run src/merge_xml.py
 """
 
+from contextlib import suppress
 from copy import deepcopy
 from pathlib import Path
 
@@ -192,7 +193,11 @@ def merge_child_elements(base: etree._Element, override: etree._Element) -> None
     for override_child in override:
         key = get_child_key(override_child)
         if key[0] in OVERRIDE_TAGS and key in base_lookup:
+            merge_child_elements(base_lookup[key], override_child)
             base_lookup[key].attrib.update(override_child.attrib)
+            # Don't merge "index" attribute
+            with suppress(KeyError):
+                base_lookup[key].attrib.pop("index")
             continue
         key_with_index = get_child_key_with_index(override_child)
         if key in base_lookup and base_lookup[key].getparent() is not None:

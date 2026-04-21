@@ -64,5 +64,5 @@ class TestTwilightCouncilCardLayouts:
         assert "ResearchStalkerTeleport" in buttons_by_face
         assert buttons_by_face["ResearchStalkerTeleport"]["AbilCmd"] == "TwilightCouncilResearch,Research2"
 
-        assert "ResearchAdeptShieldUpgrade" in buttons_by_face
-        assert buttons_by_face["ResearchAdeptShieldUpgrade"]["AbilCmd"] == "TwilightCouncilResearch,Research3"
+        assert "AdeptResearchPiercingUpgrade" in buttons_by_face
+        assert buttons_by_face["AdeptResearchPiercingUpgrade"]["AbilCmd"] == "TwilightCouncilResearch,Research3"
