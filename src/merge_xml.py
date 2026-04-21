@@ -10,6 +10,7 @@ Usage:
 from copy import deepcopy
 from pathlib import Path
 from pprint import PrettyPrinter
+from tkinter import BaseWidget
 
 from lxml import etree
 import lxml
@@ -41,11 +42,22 @@ def _build_lookup(parent: etree._Element) -> dict[tuple, etree._Element]:
     return {get_child_key(child): child for child in parent}
 
 
+def get_child_key_with_index(elem: etree._Element) -> tuple:
+    return (elem.tag, elem.get("index"))
+
+
+def _build_lookup_with_index(parent: etree._Element) -> dict[tuple, etree._Element]:
+    """Build child key -> element lookup for a parent element."""
+    return {get_child_key_with_index(child): child for child in parent}
+
+
 def merge_child_elements(base: etree._Element, override: etree._Element) -> None:
     """Deep merge override children into base. Second file wins."""
     base_lookup = _build_lookup(base)
+    base_lookup_with_index = _build_lookup_with_index(base)
     for override_child in override:
         key = get_child_key(override_child)
+        key_with_index = get_child_key_with_index(override_child)
         if key in base_lookup and base_lookup[key].getparent() is not None:
             # Tag exists, insert or update child
             if len(override_child) == 0:
@@ -53,29 +65,30 @@ def merge_child_elements(base: etree._Element, override: etree._Element) -> None
                 removed = override_child.get("removed")
                 if removed == "1":
                     # Remove entry
-                    # PrettyPrinter().pprint(etree.tostring(base_lookup[key].getparent(), pretty_print=True))
-                    try:
-                        base_lookup[key].getparent().__delitem__(int(index))
-                    except IndexError:
-                        pass
+                    parent = base_lookup[key].getparent()
+                    idx = int(index)
+                    if 0 <= idx < len(parent):
+                        del parent[idx]
                     continue
                 if index and index.isnumeric():
                     # Has index, update that entry
-                    try:
-                        el = base_lookup[key].getparent()[int(index)]
-                    except IndexError:
-                        continue
-                    # Skip comments
-                    if isinstance(el, lxml.etree._Comment):
-                        continue
-                    el.attrib.update(override_child.attrib)
-                    # Don't merge "index" attribute
-                    el.attrib.pop("index")
+                    parent = base_lookup[key].getparent()
+                    idx = int(index)
+                    if idx < len(parent):
+                        el = parent[idx]
+                        # Skip comments
+                        if not isinstance(el, lxml.etree._Comment):
+                            el.attrib.update(override_child.attrib)
+                            # Don't merge "index" attribute
+                            el.attrib.pop("index")
+                elif index and key_with_index in base_lookup_with_index:
+                    # Update element by index name
+                    base_with_index = base_lookup_with_index[key_with_index]
+                    base_with_index.attrib.update(override_child.attrib)
                 else:
                     # Insert sibling
                     base_lookup[key].getparent().append(override_child)
             else:
-                # Recursively merge
                 merge_child_elements(base_lookup[key], override_child)
         else:
             # Insert new tag
