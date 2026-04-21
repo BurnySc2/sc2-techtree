@@ -9,6 +9,7 @@ Usage:
 
 from copy import deepcopy
 from pathlib import Path
+from pprint import PrettyPrinter
 
 from lxml import etree
 
@@ -18,7 +19,7 @@ MOD_ORDER = [
     "swarm.sc2mod",
     "swarmmulti.sc2mod",
     "void.sc2mod",
-    # "voidmulti.sc2mod",
+    "voidmulti.sc2mod",
     # "balancemulti.sc2mod",
 ]
 
@@ -30,8 +31,7 @@ def get_xml_path(mod_name: str, data_type: str) -> Path:
 
 
 def get_child_key(elem: etree._Element) -> tuple:
-    key = [elem.tag]
-    return tuple(key)
+    return (elem.tag,)
 
 
 def _build_lookup(parent: etree._Element) -> dict[tuple, etree._Element]:
@@ -44,10 +44,54 @@ def merge_child_elements(base: etree._Element, override: etree._Element) -> None
     base_lookup = _build_lookup(base)
     for override_child in override:
         key = get_child_key(override_child)
-        if key in base_lookup and len(override_child) != 0:
-            merge_child_elements(base_lookup[key], override_child)
+        if key in base_lookup:
+            # Tag exists, insert child
+            if len(override_child) == 0:
+                index = override_child.get("index")
+                if index and index.isnumeric():
+                    # Has index, update that entry
+                    el = base_lookup[key].getparent()[int(index)]
+                    el.attrib.update(override_child.attrib)
+                    # Don't merge "index" attribute
+                    el.attrib.pop("index")
+                else:
+                    # Insert sibling
+                    base_lookup[key].getparent().append(override_child)
+            else:
+                # Recursively merge
+                merge_child_elements(base_lookup[key], override_child)
         else:
+            # Insert new tag
             base.append(deepcopy(override_child))
+
+
+# def merge_child_elements(base: etree._Element, override: etree._Element) -> None:
+#     """Deep merge override children into base. Second file wins."""
+#     base_lookup = _build_lookup(base)
+#     for override_child in override:
+#         key = get_child_key(override_child)
+#         index = override_child.get("index")
+#         if index and index.isnumeric():
+#             # Child has index, override attributes
+#             if len(override_child) != 0:
+#                 merge_child_elements(base_lookup[key], override_child)
+#             # else:
+#             #     index_int = int(index)
+#             #     base_lookup[key].getparent()[index_int-1].attrib.update(override_child.attrib)
+#             #     PrettyPrinter().pprint(etree.tostring(base_lookup[key], pretty_print=True))
+#             #     print()
+#             # else:
+#             #     merge_child_elements(base_lookup[key], override_child)
+#         elif key in base_lookup:
+#             # Tag exists, insert
+#             merge_child_elements(base_lookup[key], override_child)
+#             PrettyPrinter().pprint(etree.tostring(base_lookup[key], pretty_print=True))
+#             print()
+#             PrettyPrinter().pprint(etree.tostring(override_child, pretty_print=True))
+#             print()
+#         else:
+#             # Append
+#             base.append(deepcopy(override_child))
 
 
 def merge_trees(base: etree._ElementTree, override: etree._ElementTree) -> etree._ElementTree:
