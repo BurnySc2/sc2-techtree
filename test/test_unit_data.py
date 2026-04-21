@@ -49,3 +49,20 @@ class TestGhostAttributes:
         ghost = unit_data["Ghost"]
         assert "Attributes" in ghost
         assert ghost["Attributes"] == ["Biological", "Light", "Psionic"]
+
+
+class TestTwilightCouncilCardLayouts:
+    def test_twilight_council_research_buttons(self, unit_data: dict) -> None:
+        tc = unit_data["TwilightCouncil"]
+        card_layouts = tc["CardLayouts"]
+        layout_buttons = card_layouts["LayoutButtons"]
+        buttons_by_face = {b["Face"]: b for b in layout_buttons}
+
+        assert "ResearchCharge" in buttons_by_face
+        assert buttons_by_face["ResearchCharge"]["AbilCmd"] == "TwilightCouncilResearch,Research1"
+
+        assert "ResearchStalkerTeleport" in buttons_by_face
+        assert buttons_by_face["ResearchStalkerTeleport"]["AbilCmd"] == "TwilightCouncilResearch,Research2"
+
+        assert "ResearchAdeptShieldUpgrade" in buttons_by_face
+        assert buttons_by_face["ResearchAdeptShieldUpgrade"]["AbilCmd"] == "TwilightCouncilResearch,Research3"

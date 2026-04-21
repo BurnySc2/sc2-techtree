@@ -35,15 +35,23 @@ def get_child_key(elem: etree._Element) -> tuple:
     """Get unique key for child element matching: (tag, index, link).
     - Cost/Range use (tag,) only
     - *Array tags include value
+    - LayoutButtons includes Face for unique identification
+    - index="0" treated as "" (default/unset) since they are semantically equivalent
     """
     tag = str(elem.tag)
 
     if tag in OVERRIDE_TAGS:
         return (tag,)
 
-    key = [tag, elem.get("index", ""), elem.get("Link", "")]
+    index = elem.get("index", "")
+    if index == "0":
+        index = ""
+    key = [tag, index, elem.get("Link", "")]
     if tag.endswith("Array"):
         key.append(elem.get("value", ""))
+    if tag == "LayoutButtons":
+        key.append(elem.get("Row", ""))
+        key.append(elem.get("Column", ""))
     return tuple(key)
 
 
