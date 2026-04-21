@@ -16,12 +16,49 @@ wheels = [
 ]
 
 [[package]]
+name = "beautifulsoup4"
+version = "4.14.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "soupsieve" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c3/b0/1c6a16426d389813b48d95e26898aff79abbde42ad353958ad95cc8c9b21/beautifulsoup4-4.14.3.tar.gz", hash = "sha256:6292b1c5186d356bba669ef9f7f051757099565ad9ada5dd630bd9de5fa7fb86", size = 627737, upload-time = "2025-11-30T15:08:26.084Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1a/39/47f9197bdd44df24d67ac8893641e16f386c984a0619ef2ee4c51fbbc019/beautifulsoup4-4.14.3-py3-none-any.whl", hash = "sha256:0918bfe44902e6ad8d57732ba310582e98da931428d231a5ecb9e7c703a735bb", size = 107721, upload-time = "2025-11-30T15:08:24.087Z" },
+]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697, upload-time = "2022-10-25T02:36:22.414Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335, upload-time = "2022-10-25T02:36:20.889Z" },
+]
+
+[[package]]
+name = "cssselect"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.10'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/72/0a/c3ea9573b1dc2e151abfe88c7fe0c26d1892fe6ed02d0cdb30f0d57029d5/cssselect-1.3.0.tar.gz", hash = "sha256:57f8a99424cfab289a1b6a816a43075a4b00948c86b4dcf3ef4ee7e15f7ab0c7", size = 42870, upload-time = "2025-03-10T09:30:29.638Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ee/58/257350f7db99b4ae12b614a36256d9cc870d71d9e451e79c2dc3b23d7c3c/cssselect-1.3.0-py3-none-any.whl", hash = "sha256:56d1bf3e198080cc1667e137bc51de9cadfca259f03c2d4e09037b3e01e30f0d", size = 18786, upload-time = "2025-03-10T09:30:28.048Z" },
+]
+
+[[package]]
+name = "cssselect"
+version = "1.4.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.10'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ec/2e/cdfd8b01c37cbf4f9482eefd455853a3cf9c995029a46acd31dfaa9c1dd6/cssselect-1.4.0.tar.gz", hash = "sha256:fdaf0a1425e17dfe8c5cf66191d211b357cf7872ae8afc4c6762ddd8ac47fc92", size = 40589, upload-time = "2026-01-29T07:00:26.701Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/20/0c/7bb51e3acfafd16c48875bf3db03607674df16f5b6ef8d056586af7e2b8b/cssselect-1.4.0-py3-none-any.whl", hash = "sha256:c0ec5c0191c8ee39fcc8afc1540331d8b55b0183478c50e9c8a79d44dbceb1d8", size = 18540, upload-time = "2026-01-29T07:00:24.994Z" },
 ]
 
 [[package]]
@@ -465,6 +502,15 @@ wheels = [
 ]
 
 [[package]]
+name = "soupsieve"
+version = "2.8.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7b/ae/2d9c981590ed9999a0d91755b47fc74f74de286b0f5cee14c9269041e6c4/soupsieve-2.8.3.tar.gz", hash = "sha256:3267f1eeea4251fb42728b6dfb746edc9acaffc4a45b27e19450b676586e8349", size = 118627, upload-time = "2026-01-20T04:27:02.457Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/46/2c/1462b1d0a634697ae9e55b3cecdcb64788e8b7d63f54d923fcd0bb140aed/soupsieve-2.8.3-py3-none-any.whl", hash = "sha256:ed64f2ba4eebeab06cc4962affce381647455978ffc1e36bb79a545b91f45a95", size = 37016, upload-time = "2026-01-20T04:27:01.012Z" },
+]
+
+[[package]]
 name = "src"
 version = "0.1.0"
 source = { virtual = "." }
@@ -480,6 +526,7 @@ dev = [
     { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "pytest", version = "9.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "ruff" },
+    { name = "types-lxml" },
 ]
 
 [package.metadata]
@@ -494,6 +541,7 @@ dev = [
     { name = "pyrefly", specifier = ">=0.60.1" },
     { name = "pytest", specifier = ">=8.4.2" },
     { name = "ruff", specifier = ">=0.8.4" },
+    { name = "types-lxml", specifier = ">=2026.2.16" },
 ]
 
 [[package]]
@@ -548,6 +596,77 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/12/64/da524626d3b9cc40c168a13da8335fe1c51be12c0a63685cc6db7308daae/tomli-2.4.1-cp314-cp314t-win_amd64.whl", hash = "sha256:2c1c351919aca02858f740c6d33adea0c5deea37f9ecca1cc1ef9e884a619d26", size = 121196, upload-time = "2026-03-25T20:22:01.169Z" },
     { url = "https://files.pythonhosted.org/packages/5a/cd/e80b62269fc78fc36c9af5a6b89c835baa8af28ff5ad28c7028d60860320/tomli-2.4.1-cp314-cp314t-win_arm64.whl", hash = "sha256:eab21f45c7f66c13f2a9e0e1535309cee140182a9cdae1e041d02e47291e8396", size = 100393, upload-time = "2026-03-25T20:22:02.137Z" },
     { url = "https://files.pythonhosted.org/packages/7b/61/cceae43728b7de99d9b847560c262873a1f6c98202171fd5ed62640b494b/tomli-2.4.1-py3-none-any.whl", hash = "sha256:0d85819802132122da43cb86656f8d1f8c6587d54ae7dcaf30e90533028b49fe", size = 14583, upload-time = "2026-03-25T20:22:03.012Z" },
+]
+
+[[package]]
+name = "types-html5lib"
+version = "1.1.11.20251117"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.10'",
+]
+dependencies = [
+    { name = "types-webencodings", version = "0.5.0.20251108", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c8/f3/d9a1bbba7b42b5558a3f9fe017d967f5338cf8108d35991d9b15fdea3e0d/types_html5lib-1.1.11.20251117.tar.gz", hash = "sha256:1a6a3ac5394aa12bf547fae5d5eff91dceec46b6d07c4367d9b39a37f42f201a", size = 18100, upload-time = "2025-11-17T03:08:00.78Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f0/ab/f5606db367c1f57f7400d3cb3bead6665ee2509621439af1b29c35ef6f9e/types_html5lib-1.1.11.20251117-py3-none-any.whl", hash = "sha256:2a3fc935de788a4d2659f4535002a421e05bea5e172b649d33232e99d4272d08", size = 24302, upload-time = "2025-11-17T03:07:59.996Z" },
+]
+
+[[package]]
+name = "types-html5lib"
+version = "1.1.11.20260408"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.10'",
+]
+dependencies = [
+    { name = "types-webencodings", version = "0.5.0.20260408", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/16/59/914d00107c770e49fa57d4c4572e0371bbce14321385fd2ea3e06691b62d/types_html5lib-1.1.11.20260408.tar.gz", hash = "sha256:8a281aa367bc77dbc758358cd9bef79530f2d154eeed9b33705bb035a0dab9e4", size = 18316, upload-time = "2026-04-08T04:35:49.581Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/61/19/12d95e98e42e120522665ec6850b38df8d2c1cca94e21c4d7f8578acb64e/types_html5lib-1.1.11.20260408-py3-none-any.whl", hash = "sha256:d18dc4b90d6d6745585790b920db13ede43e1f8ff6ee1ac0ceb0dec4223a06fa", size = 24313, upload-time = "2026-04-08T04:35:48.679Z" },
+]
+
+[[package]]
+name = "types-lxml"
+version = "2026.2.16"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "beautifulsoup4" },
+    { name = "cssselect", version = "1.3.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "cssselect", version = "1.4.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "types-html5lib", version = "1.1.11.20251117", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "types-html5lib", version = "1.1.11.20260408", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/dd/ad/c70ac8cbdc28eb58a17301c69b4925af54b614e47f9b2ebc9de5cc10f786/types_lxml-2026.2.16.tar.gz", hash = "sha256:b3a1340cc06db98d541c785732f6f68bea438daff4e2b7809ef748d545d01406", size = 161204, upload-time = "2026-02-17T02:34:50.855Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5f/5c/03ec9befbf4bb5309bfd576c6a5ac1c75633f78f6b64cf1f594e97cd3d23/types_lxml-2026.2.16-py3-none-any.whl", hash = "sha256:5dd81ffa54830e5f361988737c5f1d6a0ae48b2742790637ec560df790ea0401", size = 97040, upload-time = "2026-02-17T02:34:49.286Z" },
+]
+
+[[package]]
+name = "types-webencodings"
+version = "0.5.0.20251108"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.10'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/66/d6/75e381959a2706644f02f7527d264de3216cf6ed333f98eff95954d78e07/types_webencodings-0.5.0.20251108.tar.gz", hash = "sha256:2378e2ceccced3d41bb5e21387586e7b5305e11519fc6b0659c629f23b2e5de4", size = 7470, upload-time = "2025-11-08T02:56:00.132Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/45/4e/8fcf33e193ce4af03c19d0e08483cf5f0838e883f800909c6bc61cb361be/types_webencodings-0.5.0.20251108-py3-none-any.whl", hash = "sha256:e21f81ff750795faffddaffd70a3d8bfff77d006f22c27e393eb7812586249d8", size = 8715, upload-time = "2025-11-08T02:55:59.456Z" },
+]
+
+[[package]]
+name = "types-webencodings"
+version = "0.5.0.20260408"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.10'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1c/d2/21567fac142315580ce3ee37d08a4e8819921dae833bbcd27b9f8b373799/types_webencodings-0.5.0.20260408.tar.gz", hash = "sha256:28c596619f367e43eee393d85f63e8d2fdb6874c654a8d441c37f8afe29c6d0d", size = 7504, upload-time = "2026-04-08T04:28:51.735Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8f/e4/f13be8f6d9a561166f7d963012d0ccc833e13aee3044c4f1a8fb1fee462a/types_webencodings-0.5.0.20260408-py3-none-any.whl", hash = "sha256:19a2afe5c22d9b1e880b49ff823c7b531f473a390fe47ac903c0bdb5cd677dd9", size = 8717, upload-time = "2026-04-08T04:28:50.943Z" },
 ]
 
 [[package]]

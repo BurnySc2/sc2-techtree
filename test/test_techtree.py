@@ -315,7 +315,7 @@ class TestFleetBeacon:
         beacon = techtree_data["structures"]["FleetBeacon"]
         assert "researches" in beacon
         assert beacon["researches"] == [
-            "AnionPulseCrystals",
+            "PhoenixRangeUpgrade",
             "TempestGroundAttackUpgrade",
             "VoidRaySpeedUpgrade",
         ]

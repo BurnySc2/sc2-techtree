@@ -18,13 +18,11 @@ MOD_ORDER = [
     "swarm.sc2mod",
     "swarmmulti.sc2mod",
     "void.sc2mod",
-    "voidmulti.sc2mod",
-    "balancemulti.sc2mod",
+    # "voidmulti.sc2mod",
+    # "balancemulti.sc2mod",
 ]
 
 DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData", "EffectData"]
-
-OVERRIDE_TAGS = {"Cost", "Range"}
 
 
 def get_xml_path(mod_name: str, data_type: str) -> Path:
@@ -32,26 +30,7 @@ def get_xml_path(mod_name: str, data_type: str) -> Path:
 
 
 def get_child_key(elem: etree._Element) -> tuple:
-    """Get unique key for child element matching: (tag, index, link).
-    - Cost/Range use (tag,) only
-    - *Array tags include value
-    - LayoutButtons includes Face for unique identification
-    - index="0" treated as "" (default/unset) since they are semantically equivalent
-    """
-    tag = str(elem.tag)
-
-    if tag in OVERRIDE_TAGS:
-        return (tag,)
-
-    index = elem.get("index", "")
-    if index == "0":
-        index = ""
-    key = [tag, index, elem.get("Link", "")]
-    if tag.endswith("Array"):
-        key.append(elem.get("value", ""))
-    if tag == "LayoutButtons":
-        key.append(elem.get("Row", ""))
-        key.append(elem.get("Column", ""))
+    key = [elem.tag]
     return tuple(key)
 
 
@@ -62,29 +41,12 @@ def _build_lookup(parent: etree._Element) -> dict[tuple, etree._Element]:
 
 def merge_child_elements(base: etree._Element, override: etree._Element) -> None:
     """Deep merge override children into base. Second file wins."""
-    override_lookup = _build_lookup(override)
-
-    for base_child in list(base):
-        key = get_child_key(base_child)
-        override_child = override_lookup.get(key)
-
-        if override_child is None:
-            continue
-
-        if override_child.get("removed") == "1":
-            base.remove(base_child)
-            continue
-
-        base_child.attrib.update(override_child.attrib)
-        if len(override_child) > 0:
-            merge_child_elements(base_child, override_child)
-
-    # Add remaining override children not in base
-    base_keys = _build_lookup(base)
-    for key, override_child in override_lookup.items():
-        if override_child.get("removed") == "1":
-            continue
-        if key not in base_keys:
+    base_lookup = _build_lookup(base)
+    for override_child in override:
+        key = get_child_key(override_child)
+        if key in base_lookup and len(override_child) != 0:
+            merge_child_elements(base_lookup[key], override_child)
+        else:
             base.append(deepcopy(override_child))
 
 
@@ -118,9 +80,7 @@ def merge_mods(data_type: str, output_path: Path) -> int:
         if not xml_path.exists():
             print(f"  [SKIP] {xml_path} - not found")
             continue
-
         print(f"  [MERGE] {mod_name}/{data_type}.xml")
-
         try:
             current = etree.parse(str(xml_path))
             result = current if result is None else merge_trees(result, current)

@@ -16,6 +16,7 @@ dev = [
     "pyrefly>=0.60.1",
     "pytest>=8.4.2",
     "ruff>=0.8.4",
+    "types-lxml>=2026.2.16",
 ]
 
 [tool.pyrefly]
