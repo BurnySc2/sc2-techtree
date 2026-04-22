@@ -29,6 +29,7 @@ ARRAY_TAGS: set[str] = {
     "FlagArray",
     "WeaponArray",
     "CardLayouts",
+    "InfoArray",
 }
 
 
@@ -109,8 +110,29 @@ def merge_values(base: dict, override: dict, tag: str) -> dict:
 
     for override_child in override_children:
         if not isinstance(override_child, dict):
-            base[tag] = override_child
+            # Skip non-dict items (e.g., field name lists like ["Time", "index"])
             continue
+        # Check if this override entry marks the base entry for removal
+        # Pattern: {SomeField: {index: "0"/N, removed: "1"}, index: "SomeId"}
+        # means "remove the base entry at index SomeId"
+        if override_child.get("index") is not None:
+            should_remove = False
+            for field_name in override_child:
+                if field_name == "index":
+                    continue
+                field_val = override_child[field_name]
+                if isinstance(field_val, dict) and field_val.get("removed") == "1":
+                    # This entry marks a base entry for removal
+                    should_remove = True
+                    break
+            if should_remove:
+                # Find and remove the matching base entry
+                idx = override_child.get("index")
+                for i, base_child in enumerate(base_children):
+                    if isinstance(base_child, dict) and base_child.get("index") == idx:
+                        base_children.pop(i)
+                        break
+                continue
         idx = override_child.get("index")
         if idx is not None:
             matched = False
@@ -137,7 +159,16 @@ def merge_values(base: dict, override: dict, tag: str) -> dict:
                             base_lb = _merge_layout_buttons(base_lb, override_lb)
                         base_child["LayoutButtons"] = base_lb
                     else:
-                        base_children[i] = deepcopy(override_child)
+                        # Override lacks LayoutButtons - merge fields (partial update)
+                        # Only copy non-None, non-removed values from override
+                        for k, v in override_child.items():
+                            if k != "index":
+                                # Skip None and {'index': '0', 'removed': '1'} (removal markers)
+                                if v is None:
+                                    continue
+                                if isinstance(v, dict) and v.get("removed") == "1":
+                                    continue
+                                base_children[i][k] = v
                     matched = True
                     break
             if not matched:
@@ -151,10 +182,58 @@ def merge_objects(base: dict, override: dict) -> dict:
     for key, override_val in override.items():
         if key == "index":
             continue
-        if key in base:
-            base[key] = override_val
-        else:
+        if key not in base:
             base[key] = deepcopy(override_val)
+            continue
+
+        # Handle index-based array updates: {Key: {sub_key: value, index: N}}
+        # means "update base[Key][sub_key][N] with value"
+        if isinstance(override_val, dict) and "index" in override_val:
+            idx = override_val["index"]
+            base_val = base[key]
+
+            # Find the sibling key that has an array (skip "index")
+            array_key = None
+            for sub_key in override_val:
+                if sub_key != "index" and isinstance(override_val[sub_key], dict) and "index" in override_val[sub_key]:
+                    # Nested index: recursively handle
+                    if isinstance(base_val, list) and 0 <= idx < len(base_val):
+                        merge_objects(base_val[idx], {sub_key: override_val[sub_key], "index": override_val["index"]})
+                    elif isinstance(base_val, dict) and sub_key in base_val and isinstance(base_val[sub_key], list):
+                        merge_objects(base_val, {sub_key: override_val[sub_key], "index": override_val["index"]})
+                    array_key = sub_key
+                    break
+
+            if array_key is None:
+                # Simple case: find sibling array and replace/merge element at index
+                # Only use numeric indices; non-numeric indices (like 'Ammo1') are field values
+                try:
+                    numeric_idx = int(idx)
+                except (ValueError, TypeError):
+                    numeric_idx = None
+
+                if numeric_idx is not None:
+                    for sub_key in override_val:
+                        if (
+                            sub_key != "index"
+                            and isinstance(base_val, dict)
+                            and isinstance(base_val.get(sub_key), list)
+                        ):
+                            arr = base_val[sub_key]
+                            if 0 <= numeric_idx < len(arr):
+                                if isinstance(override_val[sub_key], dict):
+                                    # Dict value = partial update, merge into array element
+                                    arr[numeric_idx].update(override_val[sub_key])
+                                else:
+                                    # Non-dict value = replace array element
+                                    arr[numeric_idx] = deepcopy(override_val[sub_key])
+                            array_key = sub_key
+                            break
+                    if array_key is not None:
+                        continue  # We handled this key via array index, skip normal assignment
+            continue
+
+        base[key] = override_val
     return base
 
 
@@ -196,11 +275,17 @@ def merge_data_types(data_type: str) -> int:
             if result is None:
                 result = deepcopy(data)
             else:
-                root_key = next(iter(data.keys()))
-                if root_key in result and isinstance(result[root_key], list):
-                    result[root_key] = merge_records(result[root_key], data[root_key])
-                else:
-                    result = merge_objects(result, data)
+                for root_key in data.keys():
+                    if root_key in result:
+                        if isinstance(result[root_key], list) and isinstance(data[root_key], list):
+                            result[root_key] = merge_records(result[root_key], data[root_key])
+                        elif isinstance(result[root_key], dict) and isinstance(data[root_key], dict):
+                            result[root_key] = merge_objects(result[root_key], data[root_key])
+                        else:
+                            # Type mismatch: override wins
+                            result[root_key] = deepcopy(data[root_key])
+                    else:
+                        result[root_key] = deepcopy(data[root_key])
             merged += 1
         except Exception as e:
             print(f"  [ERROR] Failed to load {json_path}: {e}")
