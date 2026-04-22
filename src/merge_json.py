@@ -30,6 +30,7 @@ ARRAY_TAGS: set[str] = {
     "WeaponArray",
     "CardLayouts",
     "InfoArray",
+    "AbilArray",
 }
 
 
@@ -113,26 +114,33 @@ def merge_values(base: dict, override: dict, tag: str) -> dict:
             # Skip non-dict items (e.g., field name lists like ["Time", "index"])
             continue
         # Check if this override entry marks the base entry for removal
-        # Pattern: {SomeField: {index: "0"/N, removed: "1"}, index: "SomeId"}
-        # means "remove the base entry at index SomeId"
+        # Pattern 1 (nested): {SomeField: {index: "0"/N, removed: "1"}, index: "SomeId"}
+        # Pattern 2 (flat):   {index: "N", removed: "1"} -- direct removal marker
+        # Both mean "remove the base entry at index N"
+        should_remove = False
         if override_child.get("index") is not None:
-            should_remove = False
-            for field_name in override_child:
-                if field_name == "index":
-                    continue
-                field_val = override_child[field_name]
-                if isinstance(field_val, dict) and field_val.get("removed") == "1":
-                    # This entry marks a base entry for removal
-                    should_remove = True
-                    break
-            if should_remove:
-                # Find and remove the matching base entry
-                idx = override_child.get("index")
-                for i, base_child in enumerate(base_children):
-                    if isinstance(base_child, dict) and base_child.get("index") == idx:
-                        base_children.pop(i)
+            # Check for flat removal marker: {"index": N, "removed": "1"}
+            if override_child.get("removed") == "1":
+                should_remove = True
+            else:
+                # Check for nested removal pattern
+                for field_name in override_child:
+                    if field_name == "index":
+                        continue
+                    field_val = override_child[field_name]
+                    if isinstance(field_val, dict) and field_val.get("removed") == "1":
+                        # This entry marks a base entry for removal
+                        should_remove = True
                         break
-                continue
+        if should_remove:
+            # Find and remove the matching base entry
+            idx = override_child.get("index")
+            for i, base_child in enumerate(base_children):
+                if isinstance(base_child, dict) and base_child.get("index") == idx:
+                    base_children.pop(i)
+                    break
+            # Always skip - removal markers are directives, never entries to append
+            continue
         idx = override_child.get("index")
         if idx is not None:
             matched = False

@@ -81,3 +81,12 @@ class TestTwilightCouncilCardLayouts:
 
         assert "AdeptResearchPiercingUpgrade" in buttons_by_face
         assert buttons_by_face["AdeptResearchPiercingUpgrade"]["AbilCmd"] == "TwilightCouncilResearch,Research3"
+
+
+class TestBarracksTechLabAbilArray:
+    def test_barracks_tech_lab_abil_array_has_research(self, unit_data: dict) -> None:
+        btlab = unit_data["BarracksTechLab"]
+        assert "AbilArray" in btlab
+        abil_array = btlab["AbilArray"]
+        links = [entry["Link"] for entry in abil_array]
+        assert "BarracksTechLabResearch" in links

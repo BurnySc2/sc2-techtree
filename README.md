@@ -29,20 +29,20 @@ docker build -t stormex-image ./src
 docker run -v "path/to/starcraft/StarCraft II:/data/sc2data:ro" -v ./src/xml:/data/output stormex-image /data/sc2data -s .xml -x -o /data/output
 ```
 
-Then merge relevant .xml files using order
+Convert the data from .xml to .json with
+```sh
+# Creates .../*Data.json
+uv run src/xml_to_json.py
 ```
-liberty.sc2mod -> libertymulti.sc2mod -> swarm.sc2mod -> swarmmulti.sc2mod -> void.sc2mod -> voidmulti.sc2mod -> balancemulti.sc2mod 
+
+Then merge relevant .json files using order
+```
+liberty.sc2mod -> libertymulti.sc2mod -> swarm.sc2mod -> swarmmulti.sc2mod -> void.sc2mod -> voidmulti.sc2mod
 ```
 Run
 ```sh
 # Creates src/merged/*Data.xml
-uv run src/merge_xml.py
-```
-
-Now we can convert the data from .xml to .json with
-```sh
-# Creates src/json/*Data.json
-uv run src/convert_xml_to_json.py
+uv run src/merge_json.py
 ```
 
 From here we can generate the techtree (all units, all abilities)
@@ -59,7 +59,7 @@ uv run src/reconstruct_data.py
 
 All in one:
 ```sh
-uv run src/merge_xml.py && uv run src/convert_xml_to_json.py && uv run src/generate_techtree.py && uv run src/reconstruct_data.py
+uv run src/xml_to_json.py && uv run src/merge_json.py && uv run src/generate_techtree.py && uv run src/reconstruct_data.py
 ```
 
 Resulting files should be:
