@@ -221,7 +221,6 @@ class TestTwilightCouncil:
             "AdeptPiercingAttack",
             "BlinkTech",
             "Charge",
-            "PsionicAmplifiers",
         ]
 
 

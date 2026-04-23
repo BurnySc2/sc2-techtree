@@ -67,10 +67,11 @@ class TestGhostAttributes:
 class TestTwilightCouncilCardLayouts:
     def test_twilight_council_research_buttons(self, unit_data: dict) -> None:
         tc = unit_data["TwilightCouncil"]
-        # CardLayouts is a list containing dicts with LayoutButtons
         card_layouts = tc["CardLayouts"]
-        assert isinstance(card_layouts, list) and len(card_layouts) > 0
-        layout_buttons = card_layouts[0]["LayoutButtons"]
+        assert isinstance(card_layouts, dict)
+        assert "LayoutButtons" in card_layouts
+        layout_buttons = card_layouts["LayoutButtons"]
+        assert isinstance(layout_buttons, list)
         buttons_by_face = {b["Face"]: b for b in layout_buttons}
 
         assert "ResearchCharge" in buttons_by_face
@@ -81,6 +82,45 @@ class TestTwilightCouncilCardLayouts:
 
         assert "AdeptResearchPiercingUpgrade" in buttons_by_face
         assert buttons_by_face["AdeptResearchPiercingUpgrade"]["AbilCmd"] == "TwilightCouncilResearch,Research3"
+
+
+class TestBarracksTechLabHasRequiredFaces:
+    def test_barracks_tech_lab_has_required_faces(self, unit_data: dict) -> None:
+        btlab = unit_data["BarracksTechLab"]
+        card_layouts = btlab["CardLayouts"]
+        assert isinstance(card_layouts, dict)
+        assert "LayoutButtons" in card_layouts
+        layout_buttons = card_layouts["LayoutButtons"]
+        assert isinstance(layout_buttons, list)
+        faces = {b["Face"] for b in layout_buttons}
+        assert "Stimpack" in faces
+        assert "ResearchShieldWall" in faces
+        assert "ResearchPunisherGrenades" in faces
+
+
+class TestHydraliskDenNoSpeedOrFrenzy:
+    def test_hydralisk_den_no_speed_or_frenzy_face(self, unit_data: dict) -> None:
+        hd = unit_data["HydraliskDen"]
+        card_layouts = hd["CardLayouts"]
+        assert isinstance(card_layouts, dict)
+        assert "LayoutButtons" in card_layouts
+        layout_buttons = card_layouts["LayoutButtons"]
+        assert isinstance(layout_buttons, list)
+        faces = {b["Face"] for b in layout_buttons}
+        assert "hydraliskspeed" not in faces
+        assert "MuscularAugments" not in faces
+
+
+class TestFusionCoreNoBattlecruiserEnergyUpgrade:
+    def test_fusion_core_no_battlecruiser_energy_upgrade_face(self, unit_data: dict) -> None:
+        fc = unit_data["FusionCore"]
+        card_layouts = fc["CardLayouts"]
+        assert isinstance(card_layouts, dict)
+        assert "LayoutButtons" in card_layouts
+        layout_buttons = card_layouts["LayoutButtons"]
+        assert isinstance(layout_buttons, list)
+        faces = {b["Face"] for b in layout_buttons}
+        assert "ResearchBattlecruiserEnergyUpgrade" not in faces
 
 
 class TestBarracksTechLabAbilArray:
