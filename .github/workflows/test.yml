@@ -23,5 +23,11 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
+      - name: Run pyrefly
+        run: uv run pyrefly check
+
+      - name: Run ruff
+        run: uv run ruff check
+
       - name: Run tests
         run: uv run pytest

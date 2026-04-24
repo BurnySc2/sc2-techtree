@@ -20,8 +20,7 @@ sc2
 .env*
 
 # Extracted xml and json files
-src/json
+# src/json
 src/xml
 src/xml_old
-# stableid.json
-src/extracted
+# src/extracted
