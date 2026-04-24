@@ -6,10 +6,20 @@ Usage: uv run generate_techtree.py
 """
 
 import json
+from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
 from utils import dumps_json
+
+# === Magic Strings ===
+EDITOR_CAT_STRUCTURE = "ObjectType:Structure"
+EDITOR_CAT_CAMPAIGN = "ObjectFamily:Campaign"
+RACE_NA = "N/A"
+RACE_NOT_FOUND = "NOT_FOUND"
+BUTTON_INDEX_EXECUTE = "Execute"
+ABILITY_SCV_HARVEST = "SCVHarvest"
+ABILITY_NEXUS_TRAIN_MOTHERSHIP_CORE = "NexusTrainMothershipCore"
 
 RACE_MAP = {
     "Terr": "Terran",
@@ -33,6 +43,9 @@ MORPH_EXCLUDE = {
     "ZerglingCocoon",
     "BroodLordCocoon",
 }
+
+# Ability name to exclude from morphsto handling
+MORPH_BANELING_EXCLUDE = "MorphToBaneling"
 
 # Requirement name fixes (maps incorrect names to correct ones)
 REQUIREMENT_NAME_FIXES = {
@@ -180,32 +193,29 @@ def parse_requirement(req: str) -> list[str]:
     return result
 
 
+def _extract_units_from_info(info: Any, exclude_set: set | None = None) -> list[str]:
+    """Extract unit names from InfoArray entries (handles both list and dict)."""
+    targets = []
+    items = info if isinstance(info, list) else [info]
+    for item in items:
+        if isinstance(item, dict) and "Unit" in item:
+            unit = item["Unit"]
+            if isinstance(unit, list):
+                targets.extend(u for u in unit if u and u != "N/A")
+            elif isinstance(unit, dict) and "value" in unit:
+                val = unit["value"]
+                if val and val != "N/A":
+                    targets.append(val)
+            elif unit and unit != "N/A":
+                targets.append(unit)
+    if exclude_set:
+        targets = [t for t in targets if t not in exclude_set]
+    return targets
+
+
 def get_info_units(info: Any) -> list[str]:
     """Extract unit names from InfoArray entries (handles both list and dict)."""
-    units = []
-    if isinstance(info, list):
-        for item in info:
-            if isinstance(item, dict) and "Unit" in item:
-                unit = item["Unit"]
-                if isinstance(unit, list):
-                    units.extend(u for u in unit if u and u != "N/A")
-                elif isinstance(unit, dict) and "value" in unit:
-                    val = unit["value"]
-                    if val and val != "N/A":
-                        units.append(val)
-                elif unit and unit != "N/A":
-                    units.append(unit)
-    elif isinstance(info, dict) and "Unit" in info:
-        unit = info["Unit"]
-        if isinstance(unit, list):
-            units.extend(u for u in unit if u and u != "N/A")
-        elif isinstance(unit, dict) and "value" in unit:
-            val = unit["value"]
-            if val and val != "N/A":
-                units.append(val)
-        elif unit and unit != "N/A":
-            units.append(unit)
-    return units
+    return _extract_units_from_info(info)
 
 
 def get_info_upgrades(info: Any) -> list[str]:
@@ -232,30 +242,7 @@ def get_info_upgrades(info: Any) -> list[str]:
 
 def get_morph_targets(info: Any) -> list[str]:
     """Extract morph target units from InfoArray (excluding cocoons)."""
-    targets = []
-    if isinstance(info, list):
-        for item in info:
-            if isinstance(item, dict) and "Unit" in item:
-                unit = item["Unit"]
-                if isinstance(unit, list):
-                    targets.extend(u for u in unit if u and u not in MORPH_EXCLUDE)
-                elif isinstance(unit, dict) and "value" in unit:
-                    val = unit["value"]
-                    if val and val not in MORPH_EXCLUDE:
-                        targets.append(val)
-                elif unit and unit not in MORPH_EXCLUDE:
-                    targets.append(unit)
-    elif isinstance(info, dict) and "Unit" in info:
-        unit = info["Unit"]
-        if isinstance(unit, list):
-            targets.extend(u for u in unit if u and u not in MORPH_EXCLUDE)
-        elif isinstance(unit, dict) and "value" in unit:
-            val = unit["value"]
-            if val and val not in MORPH_EXCLUDE:
-                targets.append(val)
-        elif unit and unit not in MORPH_EXCLUDE:
-            targets.append(unit)
-    return targets
+    return _extract_units_from_info(info, exclude_set=MORPH_EXCLUDE)
 
 
 def get_lift_off_target(abil_data: Any) -> str | None:
@@ -278,8 +265,8 @@ def is_structure(data: dict) -> bool:
     if isinstance(data, dict):
         editor_categories = data.get("EditorCategories", "")
         if isinstance(editor_categories, list):
-            return "ObjectType:Structure" in editor_categories
-        return "ObjectType:Structure" in str(editor_categories)
+            return EDITOR_CAT_STRUCTURE in editor_categories
+        return EDITOR_CAT_STRUCTURE in str(editor_categories)
     return False
 
 
@@ -288,8 +275,8 @@ def is_campaign_unit(data: dict) -> bool:
     if isinstance(data, dict):
         editor_categories = data.get("EditorCategories", "")
         if isinstance(editor_categories, list):
-            return "ObjectFamily:Campaign" in editor_categories
-        return "ObjectFamily:Campaign" in str(editor_categories)
+            return EDITOR_CAT_CAMPAIGN in editor_categories
+        return EDITOR_CAT_CAMPAIGN in str(editor_categories)
     return False
 
 
@@ -303,51 +290,69 @@ def get_race(data: dict) -> str:
     return ""
 
 
-def ability_matches_structure(abil_name: str, structure_name: str) -> bool:
+def _match_ability_to_structure(
+    abil_name: str, structure_name: str, check_shared_exclude: bool = False
+) -> bool:
     """Check if an ability name matches a structure name (handles shared abilities)."""
-    # Direct match (ability name starts with structure name)
     if abil_name.startswith(structure_name):
         return True
-    # Check shared ability mapping
     expected = ABILITY_STRUCTURE_MAP.get(abil_name)
     if expected:
         if isinstance(expected, list):
             return structure_name in expected
         return structure_name.startswith(expected)
+    if check_shared_exclude and abil_name in SHARED_RESEARCH_EXCLUDE:
+        return structure_name not in SHARED_RESEARCH_EXCLUDE[abil_name]
     return False
 
 
-def research_matches_structure(abil_name: str, structure_name: str) -> bool:
-    """Check if a research ability matches a structure."""
-    # Direct match (ability name starts with structure name)
-    if abil_name.startswith(structure_name):
-        return True
-    # Check shared ability mapping
-    expected_prefix = ABILITY_STRUCTURE_MAP.get(abil_name)
-    if expected_prefix:
-        if isinstance(expected_prefix, list):
-            return structure_name in expected_prefix
-        return structure_name.startswith(expected_prefix)
-    # Check if this is a shared research that should be excluded for this structure
-    if abil_name in SHARED_RESEARCH_EXCLUDE:
-        excluded_structures = SHARED_RESEARCH_EXCLUDE[abil_name]
-        if structure_name in excluded_structures:
-            return False
-    return False
+def _is_train_ability(abil_name: str) -> bool:
+    return (
+        (abil_name.endswith("Train") or abil_name.startswith("NexusTrain"))
+        and abil_name not in (ABILITY_SCV_HARVEST, ABILITY_NEXUS_TRAIN_MOTHERSHIP_CORE)
+    )
 
 
-def generate_techtree() -> dict:
-    """Generate the techtree structure from JSON data files."""
-    units_data = load_json("UnitData.json")
-    abils_data = load_json("AbilData.json")
+def _is_build_ability(abil_name: str) -> bool:
+    return abil_name.endswith("Build")
 
-    structures: dict[str, dict] = {}
-    units: dict[str, dict] = {}
-    abilities: dict[str, dict] = {}
 
-    # Build index of which ability produces which units and what requirements they have
-    ability_produces: dict[str, list[tuple[str, str]]] = {}
-    ability_upgrades: dict[str, list[str]] = {}
+def _is_research_ability(abil_name: str) -> bool:
+    return abil_name.endswith("Research")
+
+
+def _is_valid_produce_target(prod_data: dict) -> bool:
+    """Check if a produced unit is valid (not mercenary or campaign)."""
+    prod_race = prod_data.get("Race", "")
+    return bool(
+        prod_race
+        and prod_race not in (RACE_NA, RACE_NOT_FOUND, "")
+        and not is_campaign_unit(prod_data)
+    )
+
+
+def _accumulate_morphsto(
+    current: str | list[str] | None, new_targets: str | list[str]
+) -> str | list[str]:
+    """Accumulate morphsto targets, handling string vs list conversion."""
+    if current is None:
+        return new_targets
+    if isinstance(current, list):
+        if isinstance(new_targets, list):
+            current.extend(new_targets)
+        else:
+            current.append(new_targets)
+        return current
+    # current is a string, new_targets is string or list
+    if isinstance(new_targets, list):
+        return [current] + new_targets
+    return [current, new_targets]
+
+
+def _build_ability_indices(abils_data: dict) -> tuple[dict[str, list[tuple[str, str]]], dict[str, list[str]]]:
+    """Build ability -> produces and ability -> upgrades indices."""
+    ability_produces: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    ability_upgrades: dict[str, list[str]] = defaultdict(list)
 
     for abil_name, abil_data in abils_data.items():
         if not isinstance(abil_data, dict):
@@ -362,20 +367,27 @@ def generate_techtree() -> dict:
                     produced_units = get_info_units(item)
                     req = get_requirement_from_button(item)
                     for unit in produced_units:
-                        ability_produces.setdefault(abil_name, []).append((unit, req))
-                    if abil_name.endswith("Research"):
+                        ability_produces[abil_name].append((unit, req))
+                    if _is_research_ability(abil_name):
                         upgrades = get_info_upgrades(item)
                         for upgrade in upgrades:
-                            ability_upgrades.setdefault(abil_name, []).append(upgrade)
+                            ability_upgrades[abil_name].append(upgrade)
         elif isinstance(info, dict):
             produced_units = get_info_units(info)
             req = get_requirement_from_button(info)
             for unit in produced_units:
-                ability_produces.setdefault(abil_name, []).append((unit, req))
+                ability_produces[abil_name].append((unit, req))
 
-    # Build unlocks mapping: structure -> list of structures/units it unlocks
-    unlocks: dict[str, set[str]] = {}
-    unit_requirements: dict[str, list[str]] = {}
+    return ability_produces, ability_upgrades
+
+
+def _build_unlocks_mapping(
+    ability_produces: dict[str, list[tuple[str, str]]],
+    units_data: dict,
+) -> tuple[dict[str, set[str]], dict[str, list[str]]]:
+    """Build unlocks and unit_requirements mappings from ability produces."""
+    unlocks: dict[str, set[str]] = defaultdict(set)
+    unit_requirements: dict[str, list[str]] = defaultdict(list)
 
     for abil_name, prod_list in ability_produces.items():
         for produced_unit, req in prod_list:
@@ -383,12 +395,30 @@ def generate_techtree() -> dict:
                 req_structs = parse_requirement(req)
                 for req_struct in req_structs:
                     if req_struct in units_data:
-                        unlocks.setdefault(req_struct, set()).add(produced_unit)
+                        unlocks[req_struct].add(produced_unit)
                     # Track requirements for the unit (apply fixes if needed)
                     if produced_unit in UNIT_REQUIREMENT_FIXES:
-                        unit_requirements.setdefault(produced_unit, []).extend(UNIT_REQUIREMENT_FIXES[produced_unit])
+                        unit_requirements[produced_unit].extend(UNIT_REQUIREMENT_FIXES[produced_unit])
                     else:
-                        unit_requirements.setdefault(produced_unit, []).append(req_struct)
+                        unit_requirements[produced_unit].append(req_struct)
+
+    return unlocks, unit_requirements
+
+
+def generate_techtree() -> dict:
+    """Generate the techtree structure from JSON data files."""
+    units_data = load_json("UnitData.json")
+    abils_data = load_json("AbilData.json")
+
+    structures: dict[str, dict] = {}
+    units: dict[str, dict] = {}
+    abilities: dict[str, dict] = {}
+
+    # Build ability indices
+    ability_produces, ability_upgrades = _build_ability_indices(abils_data)
+
+    # Build unlocks mapping
+    unlocks, unit_requirements = _build_unlocks_mapping(ability_produces, units_data)
 
     # Collect produces, builds, researches, morphsto for each structure/unit
     for unit_name, unit_data in units_data.items():
@@ -418,33 +448,22 @@ def generate_techtree() -> dict:
 
             if abil_name in ability_produces:
                 for produced_unit, req in ability_produces[abil_name]:
-                    is_train = (
-                        abil_name.endswith("Train") or abil_name.startswith("NexusTrain")
-                    ) and abil_name not in ["SCVHarvest", "NexusTrainMothershipCore"]
-                    is_build = abil_name.endswith("Build")
-                    is_research = abil_name.endswith("Research")
-
-                    if is_train and ability_matches_structure(abil_name, unit_name):
+                    if _is_train_ability(abil_name) and _match_ability_to_structure(abil_name, unit_name):
                         if not is_campaign_unit(units_data.get(produced_unit, {})):
                             produces.append(produced_unit)
-                    elif is_build:
+                    elif _is_build_ability(abil_name):
                         # Exclude mercenary buildings (Race=NOT_FOUND or N/A) and campaign units
                         if produced_unit in units_data:
                             prod_data = units_data[produced_unit]
-                            prod_race = prod_data.get("Race", "")
-                            if (
-                                prod_race
-                                and prod_race not in ("N/A", "NOT_FOUND", "")
-                                and not is_campaign_unit(prod_data)
-                            ):
+                            if _is_valid_produce_target(prod_data):
                                 builds.append(produced_unit)
                         else:
                             builds.append(produced_unit)
-                    elif is_research and research_matches_structure(abil_name, unit_name):
+                    elif _is_research_ability(abil_name) and _match_ability_to_structure(abil_name, unit_name, check_shared_exclude=True):
                         if produced_unit not in RESEARCH_EXCLUDE and produced_unit not in excludes:
                             researches.append(produced_unit)
 
-            if abil_name in ability_upgrades and research_matches_structure(abil_name, unit_name):
+            if abil_name in ability_upgrades and _match_ability_to_structure(abil_name, unit_name, check_shared_exclude=True):
                 for upgrade in ability_upgrades[abil_name]:
                     if upgrade not in RESEARCH_EXCLUDE and upgrade not in excludes:
                         researches.append(upgrade)
@@ -452,7 +471,7 @@ def generate_techtree() -> dict:
             # Handle morphsto for units with MorphTo, MorphZergling, UpgradeTo, or LiftOff abilities
             is_morph_to = (
                 abil_name.startswith("MorphTo") or abil_name.startswith("MorphZergling")
-            ) and abil_name != "MorphToBaneling"
+            ) and abil_name != MORPH_BANELING_EXCLUDE
             is_upgrade_to = abil_name.startswith("UpgradeTo")
             is_lift_off = abil_name.endswith("LiftOff")
 
@@ -463,10 +482,7 @@ def generate_techtree() -> dict:
                     if info:
                         targets = get_morph_targets(info)
                         if targets:
-                            if morphsto is None:
-                                morphsto = targets
-                            elif isinstance(morphsto, list):
-                                morphsto.extend(targets)
+                            morphsto = _accumulate_morphsto(morphsto, targets)
 
             # Handle LiftOff abilities - get target from 'unit' field
             if is_lift_off:
@@ -474,12 +490,7 @@ def generate_techtree() -> dict:
                 if isinstance(abil, dict):
                     target = get_lift_off_target(abil)
                     if target:
-                        if morphsto is None:
-                            morphsto = [target]
-                        elif isinstance(morphsto, list):
-                            morphsto.append(target)
-                        else:
-                            morphsto = [morphsto, target]
+                        morphsto = _accumulate_morphsto(morphsto, target)
 
         if produces:
             entry["produces"] = sorted(set(produces))
@@ -538,7 +549,7 @@ def generate_techtree() -> dict:
                     cmd_buttons = abil_data.get("CmdButtonArray", [])
                     if isinstance(cmd_buttons, list):
                         for btn in cmd_buttons:
-                            if isinstance(btn, dict) and btn.get("index") == "Execute":
+                            if isinstance(btn, dict) and btn.get("index") == BUTTON_INDEX_EXECUTE:
                                 req = btn.get("Requirements", "")
                                 if req:
                                     requires.extend(parse_requirement(req))

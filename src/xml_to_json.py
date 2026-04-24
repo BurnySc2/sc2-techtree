@@ -34,34 +34,48 @@ def _coerce_value(value: str):
     return value
 
 
+def _is_index_value_entry(c: dict) -> bool:
+    """Check if entry has exactly {'index', 'value'} keys."""
+    return set(c.keys()) == {"index", "value"}
+
+
+def _is_value_only_entry(c: dict) -> bool:
+    """Check if entry has exactly {'value'} key."""
+    return set(c.keys()) == {"value"}
+
+
+def _is_simple_entry(c: dict) -> bool:
+    """Check if entry is either index-value or value-only type."""
+    return _is_index_value_entry(c) or _is_value_only_entry(c)
+
+
 def _postprocess_index_value(child_list: list[dict]) -> dict:
     return {c["index"]: _coerce_value(c["value"]) for c in child_list}
 
 
 def _postprocess_value_only(child_list: list[dict]) -> dict:
-    return {child_list[0].keys().__iter__().__next__(): _coerce_value(child_list[0]["value"])}
+    return {next(iter(child_list[0].keys())): _coerce_value(child_list[0]["value"])}
 
 
 def _postprocess_entries(children_by_tag: dict) -> dict:
     result = {}
     for tag, child_list in children_by_tag.items():
-        if len(child_list) > 1:
-            all_simple = all(set(c.keys()) == {"index", "value"} or set(c.keys()) == {"value"} for c in child_list)
-            if all_simple:
+        if len(child_list) == 1:
+            c = child_list[0]
+            if _is_index_value_entry(c):
+                result[tag] = _postprocess_index_value([c])
+            elif _is_value_only_entry(c):
+                result[tag] = _coerce_value(c["value"])
+            else:
+                result[tag] = c
+        elif len(child_list) > 1:
+            if all(_is_simple_entry(c) for c in child_list):
                 if all("index" in c for c in child_list):
                     result[tag] = _postprocess_index_value(child_list)
                 else:
                     result[tag] = _postprocess_value_only(child_list)
             else:
                 result[tag] = child_list
-        elif len(child_list) == 1:
-            c = child_list[0]
-            if set(c.keys()) == {"index", "value"}:
-                result[tag] = _postprocess_index_value([c])
-            elif set(c.keys()) == {"value"}:
-                result[tag] = _coerce_value(c["value"])
-            else:
-                result[tag] = c
     return result
 
 
