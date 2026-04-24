@@ -905,8 +905,11 @@
     },
     "Charge": {
       "Alignment": "Negative",
+      "gas": 100,
       "id": 1819,
-      "name": "Charge"
+      "minerals": 100,
+      "name": "Charge",
+      "time": 140
     },
     "ChronoBoostEnergyCost": {
       "AINotifyEffect": "ChronoBoost",
@@ -3598,8 +3601,11 @@
         "Channel": 1,
         "Finish": 1
       },
+      "gas": 150,
       "id": 250,
-      "name": "NeuralParasite"
+      "minerals": 150,
+      "name": "NeuralParasite",
+      "time": 110
     },
     "NexusInvulnerability": {
       "Arc": 360,
@@ -5146,8 +5152,11 @@
         "Transient": 1
       },
       "InfoTooltipPriority": 1,
+      "gas": 100,
       "id": 381,
-      "name": "Stimpack"
+      "minerals": 100,
+      "name": "Stimpack",
+      "time": 140
     },
     "StimpackMarauder": {
       "AINotifyEffect": "Stimpack",
@@ -27179,320 +27188,560 @@
   },
   "Upgrades": {
     "AdeptPiercingAttack": {
+      "gas": 100,
       "id": 130,
-      "name": "AdeptPiercingAttack"
+      "minerals": 100,
+      "name": "AdeptPiercingAttack",
+      "time": 140
     },
     "AnabolicSynthesis": {
+      "gas": 150,
       "id": 88,
-      "name": "AnabolicSynthesis"
+      "minerals": 150,
+      "name": "AnabolicSynthesis",
+      "time": 60
     },
     "BansheeCloak": {
+      "gas": 100,
       "id": 20,
-      "name": "BansheeCloak"
+      "minerals": 100,
+      "name": "BansheeCloak",
+      "time": 110
     },
     "BansheeSpeed": {
+      "gas": 125,
       "id": 136,
-      "name": "BansheeSpeed"
+      "minerals": 125,
+      "name": "BansheeSpeed",
+      "time": 110.6
     },
     "BattlecruiserEnableSpecializations": {
+      "gas": 150,
       "id": 76,
-      "name": "BattlecruiserEnableSpecializations"
+      "minerals": 150,
+      "name": "BattlecruiserEnableSpecializations",
+      "time": 140
     },
     "BlinkTech": {
+      "gas": 150,
       "id": 87,
-      "name": "BlinkTech"
+      "minerals": 150,
+      "name": "BlinkTech",
+      "time": 170
     },
     "Burrow": {
+      "gas": 100,
       "id": 64,
-      "name": "Burrow"
+      "minerals": 100,
+      "name": "Burrow",
+      "time": 100
     },
     "CentrificalHooks": {
+      "gas": 100,
       "id": 75,
-      "name": "CentrificalHooks"
+      "minerals": 100,
+      "name": "CentrificalHooks",
+      "time": 100
     },
     "Charge": {
+      "gas": 100,
       "id": 86,
-      "name": "Charge"
+      "minerals": 100,
+      "name": "Charge",
+      "time": 140
     },
     "ChitinousPlating": {
+      "gas": 150,
       "id": 4,
-      "name": "ChitinousPlating"
+      "minerals": 150,
+      "name": "ChitinousPlating",
+      "time": 110
     },
     "CycloneLockOnDamageUpgrade": {
+      "gas": 100,
       "id": 144,
-      "name": "CycloneLockOnDamageUpgrade"
+      "minerals": 100,
+      "name": "CycloneLockOnDamageUpgrade",
+      "time": 140
     },
     "DiggingClaws": {
+      "gas": 100,
       "id": 293,
-      "name": "DiggingClaws"
+      "minerals": 100,
+      "name": "DiggingClaws",
+      "time": 80
     },
     "DrillClaws": {
+      "gas": 75,
       "id": 122,
-      "name": "DrillClaws"
+      "minerals": 75,
+      "name": "DrillClaws",
+      "time": 110
     },
     "EvolveGroovedSpines": {
+      "gas": 75,
       "id": 134,
-      "name": "EvolveGroovedSpines"
+      "minerals": 75,
+      "name": "EvolveGroovedSpines",
+      "time": 70
     },
     "EvolveMuscularAugments": {
+      "gas": 100,
       "id": 135,
-      "name": "EvolveMuscularAugments"
+      "minerals": 100,
+      "name": "EvolveMuscularAugments",
+      "time": 90
     },
     "ExtendedThermalLance": {
+      "gas": 150,
       "id": 50,
-      "name": "ExtendedThermalLance"
+      "minerals": 150,
+      "name": "ExtendedThermalLance",
+      "time": 140
     },
     "Frenzy": {
-      "name": "Frenzy"
+      "gas": 100,
+      "minerals": 100,
+      "name": "Frenzy",
+      "time": 90
     },
     "GlialReconstitution": {
+      "gas": 100,
       "id": 2,
-      "name": "GlialReconstitution"
+      "minerals": 100,
+      "name": "GlialReconstitution",
+      "time": 110
     },
     "GraviticDrive": {
+      "gas": 100,
       "id": 49,
-      "name": "GraviticDrive"
+      "minerals": 100,
+      "name": "GraviticDrive",
+      "time": 80
     },
     "HiSecAutoTracking": {
+      "gas": 100,
       "id": 5,
-      "name": "HiSecAutoTracking"
+      "minerals": 100,
+      "name": "HiSecAutoTracking",
+      "time": 80
     },
     "HighCapacityBarrels": {
+      "gas": 100,
       "id": 19,
-      "name": "HighCapacityBarrels"
+      "minerals": 100,
+      "name": "HighCapacityBarrels",
+      "time": 110
     },
     "InterferenceMatrix": {
-      "name": "InterferenceMatrix"
+      "gas": 50,
+      "minerals": 50,
+      "name": "InterferenceMatrix",
+      "time": 80
     },
     "LiberatorAGRangeUpgrade": {
+      "gas": 150,
       "id": 140,
-      "name": "LiberatorAGRangeUpgrade"
+      "minerals": 150,
+      "name": "LiberatorAGRangeUpgrade",
+      "time": 110
     },
     "LurkerRange": {
+      "gas": 150,
       "id": 127,
-      "name": "LurkerRange"
+      "minerals": 150,
+      "name": "LurkerRange",
+      "time": 80
     },
     "MedivacCaduceusReactor": {
+      "gas": 100,
       "id": 21,
-      "name": "MedivacCaduceusReactor"
+      "minerals": 100,
+      "name": "MedivacCaduceusReactor",
+      "time": 70
     },
     "MicrobialShroud": {
-      "name": "MicrobialShroud"
+      "gas": 150,
+      "minerals": 150,
+      "name": "MicrobialShroud",
+      "time": 110
     },
     "NeosteelFrame": {
+      "gas": 100,
       "id": 10,
-      "name": "NeosteelFrame"
+      "minerals": 100,
+      "name": "NeosteelFrame",
+      "time": 110
     },
     "NeuralParasite": {
+      "gas": 150,
       "id": 101,
-      "name": "NeuralParasite"
+      "minerals": 150,
+      "name": "NeuralParasite",
+      "time": 110
     },
     "ObserverGraviticBooster": {
+      "gas": 100,
       "id": 48,
-      "name": "ObserverGraviticBooster"
+      "minerals": 100,
+      "name": "ObserverGraviticBooster",
+      "time": 80
     },
     "PersonalCloaking": {
+      "gas": 150,
       "id": 25,
-      "name": "PersonalCloaking"
+      "minerals": 150,
+      "name": "PersonalCloaking",
+      "time": 120
     },
     "PhoenixRangeUpgrade": {
+      "gas": 150,
       "id": 99,
-      "name": "PhoenixRangeUpgrade"
+      "minerals": 150,
+      "name": "PhoenixRangeUpgrade",
+      "time": 90
     },
     "ProtossAirArmorsLevel1": {
+      "gas": 100,
       "id": 81,
-      "name": "ProtossAirArmorsLevel1"
+      "minerals": 100,
+      "name": "ProtossAirArmorsLevel1",
+      "time": 180
     },
     "ProtossAirArmorsLevel2": {
+      "gas": 175,
       "id": 82,
-      "name": "ProtossAirArmorsLevel2"
+      "minerals": 175,
+      "name": "ProtossAirArmorsLevel2",
+      "time": 215
     },
     "ProtossAirArmorsLevel3": {
+      "gas": 250,
       "id": 83,
-      "name": "ProtossAirArmorsLevel3"
+      "minerals": 250,
+      "name": "ProtossAirArmorsLevel3",
+      "time": 250
     },
     "ProtossAirWeaponsLevel1": {
+      "gas": 100,
       "id": 78,
-      "name": "ProtossAirWeaponsLevel1"
+      "minerals": 100,
+      "name": "ProtossAirWeaponsLevel1",
+      "time": 180
     },
     "ProtossAirWeaponsLevel2": {
+      "gas": 175,
       "id": 79,
-      "name": "ProtossAirWeaponsLevel2"
+      "minerals": 175,
+      "name": "ProtossAirWeaponsLevel2",
+      "time": 215
     },
     "ProtossAirWeaponsLevel3": {
+      "gas": 250,
       "id": 80,
-      "name": "ProtossAirWeaponsLevel3"
+      "minerals": 250,
+      "name": "ProtossAirWeaponsLevel3",
+      "time": 250
     },
     "ProtossGroundArmorsLevel1": {
+      "gas": 100,
       "id": 42,
-      "name": "ProtossGroundArmorsLevel1"
+      "minerals": 100,
+      "name": "ProtossGroundArmorsLevel1",
+      "time": 170
     },
     "ProtossGroundArmorsLevel2": {
+      "gas": 150,
       "id": 43,
-      "name": "ProtossGroundArmorsLevel2"
+      "minerals": 150,
+      "name": "ProtossGroundArmorsLevel2",
+      "time": 202.5
     },
     "ProtossGroundArmorsLevel3": {
+      "gas": 200,
       "id": 44,
-      "name": "ProtossGroundArmorsLevel3"
+      "minerals": 200,
+      "name": "ProtossGroundArmorsLevel3",
+      "time": 235
     },
     "ProtossGroundWeaponsLevel1": {
+      "gas": 100,
       "id": 39,
-      "name": "ProtossGroundWeaponsLevel1"
+      "minerals": 100,
+      "name": "ProtossGroundWeaponsLevel1",
+      "time": 170
     },
     "ProtossGroundWeaponsLevel2": {
+      "gas": 150,
       "id": 40,
-      "name": "ProtossGroundWeaponsLevel2"
+      "minerals": 150,
+      "name": "ProtossGroundWeaponsLevel2",
+      "time": 202.5
     },
     "ProtossGroundWeaponsLevel3": {
+      "gas": 200,
       "id": 41,
-      "name": "ProtossGroundWeaponsLevel3"
+      "minerals": 200,
+      "name": "ProtossGroundWeaponsLevel3",
+      "time": 235
     },
     "ProtossShieldsLevel1": {
+      "gas": 150,
       "id": 45,
-      "name": "ProtossShieldsLevel1"
+      "minerals": 150,
+      "name": "ProtossShieldsLevel1",
+      "time": 170
     },
     "ProtossShieldsLevel2": {
+      "gas": 200,
       "id": 46,
-      "name": "ProtossShieldsLevel2"
+      "minerals": 200,
+      "name": "ProtossShieldsLevel2",
+      "time": 202.5
     },
     "ProtossShieldsLevel3": {
+      "gas": 250,
       "id": 47,
-      "name": "ProtossShieldsLevel3"
+      "minerals": 250,
+      "name": "ProtossShieldsLevel3",
+      "time": 235
     },
     "PsiStormTech": {
+      "gas": 200,
       "id": 52,
-      "name": "PsiStormTech"
+      "minerals": 200,
+      "name": "PsiStormTech",
+      "time": 110
     },
     "PunisherGrenades": {
+      "gas": 50,
       "id": 17,
-      "name": "PunisherGrenades"
+      "minerals": 50,
+      "name": "PunisherGrenades",
+      "time": 60
     },
     "ShieldWall": {
+      "gas": 100,
       "id": 16,
-      "name": "ShieldWall"
+      "minerals": 100,
+      "name": "ShieldWall",
+      "time": 110
     },
     "Stimpack": {
+      "gas": 100,
       "id": 15,
-      "name": "Stimpack"
+      "minerals": 100,
+      "name": "Stimpack",
+      "time": 140
     },
     "TempestGroundAttackUpgrade": {
-      "name": "TempestGroundAttackUpgrade"
+      "gas": 150,
+      "minerals": 150,
+      "name": "TempestGroundAttackUpgrade",
+      "time": 140
     },
     "TerranInfantryArmorsLevel1": {
+      "gas": 100,
       "id": 11,
-      "name": "TerranInfantryArmorsLevel1"
+      "minerals": 100,
+      "name": "TerranInfantryArmorsLevel1",
+      "time": 160
     },
     "TerranInfantryArmorsLevel2": {
+      "gas": 150,
       "id": 12,
-      "name": "TerranInfantryArmorsLevel2"
+      "minerals": 150,
+      "name": "TerranInfantryArmorsLevel2",
+      "time": 190
     },
     "TerranInfantryArmorsLevel3": {
+      "gas": 200,
       "id": 13,
-      "name": "TerranInfantryArmorsLevel3"
+      "minerals": 200,
+      "name": "TerranInfantryArmorsLevel3",
+      "time": 220
     },
     "TerranInfantryWeaponsLevel1": {
+      "gas": 100,
       "id": 7,
-      "name": "TerranInfantryWeaponsLevel1"
+      "minerals": 100,
+      "name": "TerranInfantryWeaponsLevel1",
+      "time": 160
     },
     "TerranInfantryWeaponsLevel2": {
+      "gas": 150,
       "id": 8,
-      "name": "TerranInfantryWeaponsLevel2"
+      "minerals": 150,
+      "name": "TerranInfantryWeaponsLevel2",
+      "time": 190
     },
     "TerranInfantryWeaponsLevel3": {
+      "gas": 200,
       "id": 9,
-      "name": "TerranInfantryWeaponsLevel3"
+      "minerals": 200,
+      "name": "TerranInfantryWeaponsLevel3",
+      "time": 220
     },
     "TerranShipWeaponsLevel1": {
+      "gas": 100,
       "id": 36,
-      "name": "TerranShipWeaponsLevel1"
+      "minerals": 100,
+      "name": "TerranShipWeaponsLevel1",
+      "time": 160
     },
     "TerranShipWeaponsLevel2": {
+      "gas": 175,
       "id": 37,
-      "name": "TerranShipWeaponsLevel2"
+      "minerals": 175,
+      "name": "TerranShipWeaponsLevel2",
+      "time": 190
     },
     "TerranShipWeaponsLevel3": {
+      "gas": 250,
       "id": 38,
-      "name": "TerranShipWeaponsLevel3"
+      "minerals": 250,
+      "name": "TerranShipWeaponsLevel3",
+      "time": 220
     },
     "TerranVehicleAndShipArmorsLevel1": {
+      "gas": 100,
       "id": 116,
-      "name": "TerranVehicleAndShipArmorsLevel1"
+      "minerals": 100,
+      "name": "TerranVehicleAndShipArmorsLevel1",
+      "time": 160
     },
     "TerranVehicleAndShipArmorsLevel2": {
+      "gas": 175,
       "id": 117,
-      "name": "TerranVehicleAndShipArmorsLevel2"
+      "minerals": 175,
+      "name": "TerranVehicleAndShipArmorsLevel2",
+      "time": 190
     },
     "TerranVehicleAndShipArmorsLevel3": {
+      "gas": 250,
       "id": 118,
-      "name": "TerranVehicleAndShipArmorsLevel3"
+      "minerals": 250,
+      "name": "TerranVehicleAndShipArmorsLevel3",
+      "time": 220
     },
     "TerranVehicleWeaponsLevel1": {
+      "gas": 100,
       "id": 30,
-      "name": "TerranVehicleWeaponsLevel1"
+      "minerals": 100,
+      "name": "TerranVehicleWeaponsLevel1",
+      "time": 160
     },
     "TerranVehicleWeaponsLevel2": {
+      "gas": 175,
       "id": 31,
-      "name": "TerranVehicleWeaponsLevel2"
+      "minerals": 175,
+      "name": "TerranVehicleWeaponsLevel2",
+      "time": 190
     },
     "TerranVehicleWeaponsLevel3": {
+      "gas": 250,
       "id": 32,
-      "name": "TerranVehicleWeaponsLevel3"
+      "minerals": 250,
+      "name": "TerranVehicleWeaponsLevel3",
+      "time": 220
     },
     "TransformationServos": {
+      "gas": 150,
       "id": 98,
-      "name": "TransformationServos"
+      "minerals": 150,
+      "name": "TransformationServos",
+      "time": 110
     },
     "TunnelingClaws": {
+      "gas": 100,
       "id": 3,
-      "name": "TunnelingClaws"
+      "minerals": 100,
+      "name": "TunnelingClaws",
+      "time": 110
     },
     "VoidRaySpeedUpgrade": {
+      "gas": 100,
       "id": 288,
-      "name": "VoidRaySpeedUpgrade"
+      "minerals": 100,
+      "name": "VoidRaySpeedUpgrade",
+      "time": 80
     },
     "WarpGateResearch": {
+      "gas": 50,
       "id": 84,
-      "name": "WarpGateResearch"
+      "minerals": 50,
+      "name": "WarpGateResearch",
+      "time": 140
     },
     "ZergFlyerArmorsLevel1": {
+      "gas": 100,
       "id": 71,
-      "name": "ZergFlyerArmorsLevel1"
+      "minerals": 100,
+      "name": "ZergFlyerArmorsLevel1",
+      "time": 160
     },
     "ZergFlyerArmorsLevel2": {
+      "gas": 175,
       "id": 72,
-      "name": "ZergFlyerArmorsLevel2"
+      "minerals": 175,
+      "name": "ZergFlyerArmorsLevel2",
+      "time": 190
     },
     "ZergFlyerArmorsLevel3": {
+      "gas": 250,
       "id": 73,
-      "name": "ZergFlyerArmorsLevel3"
+      "minerals": 250,
+      "name": "ZergFlyerArmorsLevel3",
+      "time": 220
     },
     "ZergFlyerWeaponsLevel1": {
+      "gas": 100,
       "id": 68,
-      "name": "ZergFlyerWeaponsLevel1"
+      "minerals": 100,
+      "name": "ZergFlyerWeaponsLevel1",
+      "time": 160
     },
     "ZergFlyerWeaponsLevel2": {
+      "gas": 175,
       "id": 69,
-      "name": "ZergFlyerWeaponsLevel2"
+      "minerals": 175,
+      "name": "ZergFlyerWeaponsLevel2",
+      "time": 190
     },
     "ZergFlyerWeaponsLevel3": {
+      "gas": 250,
       "id": 70,
-      "name": "ZergFlyerWeaponsLevel3"
+      "minerals": 250,
+      "name": "ZergFlyerWeaponsLevel3",
+      "time": 220
     },
     "overlordspeed": {
+      "gas": 100,
       "id": 62,
-      "name": "overlordspeed"
+      "minerals": 100,
+      "name": "overlordspeed",
+      "time": 60
     },
     "overlordtransport": {
+      "gas": 200,
       "id": 63,
-      "name": "overlordtransport"
+      "minerals": 200,
+      "name": "overlordtransport",
+      "time": 130
     },
     "zerglingattackspeed": {
+      "gas": 200,
       "id": 65,
-      "name": "zerglingattackspeed"
+      "minerals": 200,
+      "name": "zerglingattackspeed",
+      "time": 130
     },
     "zerglingmovementspeed": {
+      "gas": 100,
       "id": 66,
-      "name": "zerglingmovementspeed"
+      "minerals": 100,
+      "name": "zerglingmovementspeed",
+      "time": 110
     }
   }
 }

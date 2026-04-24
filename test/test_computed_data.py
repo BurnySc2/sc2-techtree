@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from typing import Any
 
 import pytest
 
@@ -420,3 +421,56 @@ class TestStableIdUpgrades:
         assert "id" in burrow, "Burrow should have id field"
         assert isinstance(burrow["id"], int), "id should be integer"
         assert burrow["id"] == upgrade_id_map.get("Burrow")
+
+
+class TestStimpackUpgradeAndAbility:
+    """Test Stimpack upgrade and ability have correct resource costs."""
+
+    def _check_value(self, value: Any, expected: int, field_name: str) -> None:
+        """Check a value is an integer."""
+        assert isinstance(value, int), f"{field_name} should be integer, got {type(value).__name__}: {value}"
+        assert value == expected, f"{field_name} should be {expected}, got {value}"
+
+    def test_stimpack_upgrade_exists(self, computed_data: dict) -> None:
+        """Stimpack upgrade should exist in Upgrades."""
+        assert "Stimpack" in computed_data["Upgrades"], "Stimpack upgrade should exist"
+
+    def test_stimpack_upgrade_minerals(self, computed_data: dict) -> None:
+        """Stimpack upgrade should have minerals = 100."""
+        stimpack = computed_data["Upgrades"]["Stimpack"]
+        assert "minerals" in stimpack, "Stimpack upgrade should have minerals field"
+        self._check_value(stimpack["minerals"], 100, "minerals")
+
+    def test_stimpack_upgrade_gas(self, computed_data: dict) -> None:
+        """Stimpack upgrade should have gas = 100."""
+        stimpack = computed_data["Upgrades"]["Stimpack"]
+        assert "gas" in stimpack, "Stimpack upgrade should have gas field"
+        self._check_value(stimpack["gas"], 100, "gas")
+
+    def test_stimpack_upgrade_time(self, computed_data: dict) -> None:
+        """Stimpack upgrade should have time = 140."""
+        stimpack = computed_data["Upgrades"]["Stimpack"]
+        assert "time" in stimpack, "Stimpack upgrade should have time field"
+        self._check_value(stimpack["time"], 140, "time")
+
+    def test_stimpack_ability_exists(self, computed_data: dict) -> None:
+        """Stimpack ability should exist in Abilities."""
+        assert "Stimpack" in computed_data["Abilities"], "Stimpack ability should exist"
+
+    def test_stimpack_ability_minerals(self, computed_data: dict) -> None:
+        """Stimpack ability should have minerals = 100."""
+        stimpack = computed_data["Abilities"]["Stimpack"]
+        assert "minerals" in stimpack, "Stimpack ability should have minerals field"
+        self._check_value(stimpack["minerals"], 100, "minerals")
+
+    def test_stimpack_ability_gas(self, computed_data: dict) -> None:
+        """Stimpack ability should have gas = 100."""
+        stimpack = computed_data["Abilities"]["Stimpack"]
+        assert "gas" in stimpack, "Stimpack ability should have gas field"
+        self._check_value(stimpack["gas"], 100, "gas")
+
+    def test_stimpack_ability_time(self, computed_data: dict) -> None:
+        """Stimpack ability should have time = 140."""
+        stimpack = computed_data["Abilities"]["Stimpack"]
+        assert "time" in stimpack, "Stimpack ability should have time field"
+        self._check_value(stimpack["time"], 140, "time")

@@ -92,6 +92,54 @@ def load_json(filename: str) -> dict:
     return data
 
 
+def extract_upgrade_costs(abil_data: dict) -> dict[str, dict]:
+    """Extract upgrade cost data from AbilData.json research abilities.
+    
+    Parses research abilities (id ends with 'Research' or contains research InfoArray),
+    finds entries in InfoArray with an 'Upgrade' field, and extracts Resource,
+    Time, and Button.Requirements.
+    
+    Returns a dict mapping upgrade name -> {minerals, gas, time, requires}.
+    """
+    costs: dict[str, dict] = {}
+    
+    for ability_id, ability in abil_data.items():
+        # Check if this is a research ability (id ends with "Research")
+        is_research = ability_id.endswith("Research")
+        
+        # Also check InfoArray for any entry containing an "Upgrade" field
+        info_array = ability.get("InfoArray", [])
+        if not isinstance(info_array, list):
+            continue
+        
+        for entry in info_array:
+            if not isinstance(entry, dict):
+                continue
+            
+            upgrade_name = entry.get("Upgrade")
+            if not upgrade_name:
+                continue
+            
+            # Extract cost data
+            resource = entry.get("Resource", {})
+            minerals = resource.get("Minerals", 0)
+            gas = resource.get("Vespene", 0)
+            time_str = entry.get("Time", "0")
+            # Coerce to int or float (time comes as string like "140")
+            try:
+                time = int(time_str)
+            except ValueError:
+                time = float(time_str)
+            
+            costs[upgrade_name] = {
+                "minerals": minerals,
+                "gas": gas,
+                "time": time,
+            }
+    
+    return costs
+
+
 def enqueue_if_new(
     queue: list[QueueItem],
     visited: set[ItemName],
@@ -509,6 +557,9 @@ def _build_result(
         "Abilities": {},
     }
 
+    # Extract upgrade costs from AbilData.json
+    upgrade_costs = extract_upgrade_costs(abil_data)
+
     # Populate units with full data from UnitData.json
     for unit_name in visited_units:
         unit_entry = units_section.get(unit_name, {})
@@ -547,6 +598,9 @@ def _build_result(
         upgrade_entry = upgrades_section.get(upgrade_name, {})
         full_data = upgrade_data.get(upgrade_name, {})
         merged = merge_entry(upgrade_name, upgrade_entry, full_data)
+        # Add cost data if available
+        if upgrade_name in upgrade_costs:
+            merged.update(upgrade_costs[upgrade_name])
         result["Upgrades"][upgrade_name] = merged
 
     # Populate abilities with full data
@@ -555,6 +609,23 @@ def _build_result(
         full_data = abil_data.get(ability_name) or {}
         merged = merge_entry(ability_name, ability_entry, full_data)
         result["Abilities"][ability_name] = merged
+
+        # Add cost data for research abilities if their upgrade has costs
+        if ability_name.endswith("Research"):
+            # Check if this ability has an InfoArray with Upgrade entries
+            info_array = full_data.get("InfoArray", [])
+            if isinstance(info_array, list):
+                for entry in info_array:
+                    if isinstance(entry, dict) and "Upgrade" in entry:
+                        upgrade_name = entry["Upgrade"]
+                        if upgrade_name in upgrade_costs:
+                            merged.update(upgrade_costs[upgrade_name])
+                            break
+
+        # Also add costs for abilities that share an upgrade name (e.g., Stimpack)
+        # The upgrade costs (research) should also appear on the unit ability
+        if ability_name in upgrade_costs:
+            merged.update(upgrade_costs[ability_name])
 
     # Add weapons data for units that have them
     for unit_name, unit_data_out in result["Units"].items():
