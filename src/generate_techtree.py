@@ -10,7 +10,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from utils import dumps_json
+from utils import dumps_json, load_json
 
 # === Magic Strings ===
 EDITOR_CAT_STRUCTURE = "ObjectType:Structure"
@@ -126,29 +126,6 @@ STRUCTURE_ADDITIONAL_RESEARCHES = {
     "InfestationPit": ["MicrobialShroud"],
     "EngineeringBay": ["HiSecAutoTracking"],
 }
-
-
-def load_json(filename: str) -> dict:
-    """Load a JSON data file and transform to expected format."""
-    path = Path(__file__).parent / "json" / filename
-    with path.open(encoding="utf-8") as f:
-        data = json.load(f)
-
-    # Transform UnitData.json: extract CUnit array and index by id
-    if filename == "UnitData.json" and "CUnit" in data:
-        return {unit["id"]: unit for unit in data["CUnit"]}
-
-    # Transform AbilData.json: flatten all class arrays into single dict keyed by id
-    if filename == "AbilData.json":
-        result = {}
-        for class_name, abilities in data.items():
-            if isinstance(abilities, list):
-                for ability in abilities:
-                    if isinstance(ability, dict) and "id" in ability:
-                        result[ability["id"]] = ability
-        return result
-
-    return data
 
 
 def parse_requirement(req: str) -> list[str]:

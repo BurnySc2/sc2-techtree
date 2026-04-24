@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import TypeAlias
 
-from utils import dump_json
+from utils import dump_json, load_json
 
 DATA_DIR = Path(__file__).parent / "json"
 OUTPUT_FILE = Path(__file__).parent / "computed" / "data.json"
@@ -68,28 +68,6 @@ def is_structure(units_section: dict, name: ItemName) -> bool:
     """Check if an entry in units_section is a structure (has builds or researches)."""
     entry = units_section.get(name, {})
     return bool(entry.get(FIELD_BUILDS) or entry.get(FIELD_RESEARCHES))
-
-
-def load_json(filename: str) -> dict:
-    """Load a JSON data file and transform to expected format."""
-    with (DATA_DIR / filename).open() as f:
-        data = json.load(f)
-
-    # Transform UnitData.json: extract CUnit array and index by id
-    if filename == "UnitData.json" and "CUnit" in data:
-        return {unit["id"]: unit for unit in data["CUnit"]}
-
-    # Transform AbilData.json: flatten all class arrays into single dict keyed by id
-    if filename == "AbilData.json":
-        result = {}
-        for class_name, abilities in data.items():
-            if isinstance(abilities, list):
-                for ability in abilities:
-                    if isinstance(ability, dict) and "id" in ability:
-                        result[ability["id"]] = ability
-        return result
-
-    return data
 
 
 def extract_upgrade_costs(abil_data: dict) -> tuple[dict[str, dict], dict[str, dict]]:
@@ -224,10 +202,10 @@ def process_ability_morphsto(
 def _load_source_data() -> tuple[dict, dict, dict, dict, dict, dict, dict, dict]:
     """Load all source JSON files and extract sections from techtree."""
     techtree = load_json("../computed/techtree.json")
-    unit_data = load_json("UnitData.json")
-    abil_data = load_json("AbilData.json")
-    upgrade_data = load_json("UpgradeData.json")
-    weapon_data = load_json("WeaponData.json")
+    unit_data = load_json("UnitData.json", DATA_DIR)
+    abil_data = load_json("AbilData.json", DATA_DIR)
+    upgrade_data = load_json("UpgradeData.json", DATA_DIR)
+    weapon_data = load_json("WeaponData.json", DATA_DIR)
 
     # Units now contains both structures and units (merged)
     units_section = techtree.get("Units", {})
