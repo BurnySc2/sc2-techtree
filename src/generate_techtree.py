@@ -284,9 +284,12 @@ def _match_ability_to_structure(
 ) -> bool:
     """Check if an ability name matches a structure name (using derived mapping)."""
     # Check shared research excludes FIRST if enabled - this must be before direct mapping check
-    if check_shared_exclude and abil_name in SHARED_RESEARCH_EXCLUDE:
-        if structure_name in SHARED_RESEARCH_EXCLUDE[abil_name]:
-            return False
+    if (
+        check_shared_exclude
+        and abil_name in SHARED_RESEARCH_EXCLUDE
+        and structure_name in SHARED_RESEARCH_EXCLUDE[abil_name]
+    ):
+        return False
     # Check the derived mapping
     if abil_name in ability_to_structures:
         in_mapping = structure_name in ability_to_structures[abil_name]
@@ -301,15 +304,13 @@ def _match_ability_to_structure(
             # by a non-Gateway structure (e.g., GatewayTrain with RoboticsFacility)
             if abil_name.startswith("Gateway"):
                 for other_struct in ability_to_structures[abil_name]:
-                    if other_struct != structure_name and abil_name.startswith(other_struct):
-                        # Reject only if our struct is not Gateway-derived
-                        if not abil_name.startswith(structure_name):
-                            return False
+                    other_is_prefix = abil_name.startswith(other_struct)
+                    curr_is_prefix = abil_name.startswith(structure_name)
+                    if other_struct != structure_name and other_is_prefix and not curr_is_prefix:
+                        return False
             return True
     # Fallback: check if structure_name is a prefix of ability (for "XxxBuild" style)
-    if abil_name.startswith(structure_name):
-        return True
-    return False
+    return bool(abil_name.startswith(structure_name))
 
 
 def _build_ability_to_structures_mapping(units_data: dict) -> dict[str, set[str]]:
@@ -489,9 +490,8 @@ def generate_techtree() -> dict:
                                 builds.append(produced_unit)
                     elif _is_research_ability(abil_name) and _match_ability_to_structure(
                         abil_name, unit_name, ability_to_structures, check_shared_exclude=True
-                    ):
-                        if produced_unit not in RESEARCH_EXCLUDE and produced_unit not in excludes:
-                            researches.append(produced_unit)
+                    ) and produced_unit not in RESEARCH_EXCLUDE and produced_unit not in excludes:
+                        researches.append(produced_unit)
 
             if abil_name in ability_upgrades and _match_ability_to_structure(
                 abil_name, unit_name, ability_to_structures, check_shared_exclude=True
@@ -604,6 +604,33 @@ def generate_techtree() -> dict:
                     "race": race,
                 }
 
+        # Also add research abilities (ending with "Research")
+        # These don't have morphsto, but are needed for STARTING_ABILITIES in reconstruct_data
+        elif _is_research_ability(abil_name):
+            info = abil_data.get("InfoArray")
+            upgrade_name = None
+            if isinstance(info, list):
+                for entry in info:
+                    if isinstance(entry, dict) and "Upgrade" in entry:
+                        upgrade_name = entry["Upgrade"]
+                        break
+
+            if upgrade_name:
+                requires = []
+                cmd_buttons = abil_data.get("CmdButtonArray", [])
+                if isinstance(cmd_buttons, list):
+                    for btn in cmd_buttons:
+                        if isinstance(btn, dict) and btn.get("index") == BUTTON_INDEX_EXECUTE:
+                            req = btn.get("Requirements", "")
+                            if req:
+                                requires.extend(parse_requirement(req))
+
+                abilities[abil_name] = {
+                    "upgrade": upgrade_name,
+                }
+                if requires:
+                    abilities[abil_name]["requires"] = sorted(set(requires))
+
     # Gather Upgrades from all structures' researches
     upgrades = {}
     for struct_data in structures.values():
@@ -613,9 +640,9 @@ def generate_techtree() -> dict:
                     upgrades[upg_name] = {}  # Empty dict - just a container for the name
 
     return {
-        "Units": {**structures, **units},   # MERGE: combine structures + units
-        "Abilities": abilities,            # RENAME: abilities → Abilities
-        "Upgrades": upgrades,             # NEW: gather all unique researches
+        "Units": {**structures, **units},  # MERGE: combine structures + units
+        "Abilities": abilities,  # RENAME: abilities → Abilities
+        "Upgrades": upgrades,  # NEW: gather all unique researches
     }
 
 

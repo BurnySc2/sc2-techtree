@@ -8,9 +8,33 @@
       "morphsto": "CommandCenterFlying",
       "race": "Terran"
     },
+    "CyberneticsCoreResearch": {
+      "upgrade": "ProtossAirArmorsLevel1"
+    },
+    "EngineeringBayResearch": {
+      "upgrade": "NeosteelFrame"
+    },
     "FactoryLiftOff": {
       "morphsto": "FactoryFlying",
       "race": "Terran"
+    },
+    "FleetBeaconResearch": {
+      "upgrade": "PhoenixRangeUpgrade"
+    },
+    "ForgeResearch": {
+      "upgrade": "ProtossGroundArmorsLevel1"
+    },
+    "FusionCoreResearch": {
+      "upgrade": "LiberatorAGRangeUpgrade"
+    },
+    "LairResearch": {
+      "upgrade": "overlordtransport"
+    },
+    "LurkerDenResearch": {
+      "upgrade": "DiggingClaws"
+    },
+    "MercCompoundResearch": {
+      "upgrade": "ReaperSpeed"
     },
     "MorphToBaneling": {
       "morphsto": "Baneling",
@@ -161,9 +185,24 @@
       "morphsto": "OrbitalCommandFlying",
       "race": "Terran"
     },
+    "RoachWarrenResearch": {
+      "upgrade": "GlialReconstitution"
+    },
+    "RoboticsBayResearch": {
+      "upgrade": "ExtendedThermalLance"
+    },
+    "SpawningPoolResearch": {
+      "upgrade": "zerglingattackspeed"
+    },
+    "SpireResearch": {
+      "upgrade": "ZergFlyerArmorsLevel1"
+    },
     "StarportLiftOff": {
       "morphsto": "StarportFlying",
       "race": "Terran"
+    },
+    "TwilightCouncilResearch": {
+      "upgrade": "AdeptPiercingAttack"
     },
     "UpgradeToGreaterSpire": {
       "morphsto": "GreaterSpire",

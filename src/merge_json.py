@@ -136,7 +136,7 @@ def _merge_layout_buttons(base_lb: list, override_lb: dict) -> list:
         return base_lb
 
     idx = override_lb.get("index")
-    has_button_fields = bool(override_lb.get("Type") or override_lb.get("AbilCmd"))
+    bool(override_lb.get("Type") or override_lb.get("AbilCmd"))
 
     if idx is not None:
         # Explicit index provided - find or create target position
@@ -195,9 +195,8 @@ def _handle_layout_buttons_merge(base_child: dict, override_child: dict, overrid
     if isinstance(override_lb, dict) and override_lb.get("removed") == REMOVED_MARKER:
         lb_idx = override_lb.get("index")
         parsed_idx = parse_index(lb_idx)
-        if parsed_idx is not None and isinstance(base_lb, list):
-            if 0 <= parsed_idx < len(base_lb):
-                base_lb.pop(parsed_idx)
+        if parsed_idx is not None and isinstance(base_lb, list) and 0 <= parsed_idx < len(base_lb):
+            base_lb.pop(parsed_idx)
         return True
 
     # Special case: base_children[i] is None (base was null), replace entirely
@@ -243,10 +242,7 @@ def merge_values(base: dict, override: dict, tag: str) -> dict:
     if not isinstance(override_children, list):
         # Single dict entry (e.g., CardLayouts: {LayoutButtons: {...}, index: "0"})
         # Treat as a single item to merge at the specified index
-        if isinstance(override_children, dict):
-            override_children = [override_children]
-        else:
-            override_children = []
+        override_children = [override_children] if isinstance(override_children, dict) else []
 
     for override_child in override_children:
         if not isinstance(override_child, dict):
@@ -277,7 +273,7 @@ def merge_values(base: dict, override: dict, tag: str) -> dict:
                 override_lb = override_child.get("LayoutButtons")
                 # Handle LayoutButtons merge (returns True if processed)
                 if override_lb is not None and isinstance(override_lb, (dict, list)):
-                    lb_processed = _handle_layout_buttons_merge(base_child, override_child, override_lb)
+                    _handle_layout_buttons_merge(base_child, override_child, override_lb)
                 else:
                     # Override lacks LayoutButtons - merge fields (partial update)
                     _merge_child_fields(base_child, override_child)
@@ -399,7 +395,7 @@ def merge_data_types(data_type: str) -> int:
             if result is None:
                 result = deepcopy(data)
             else:
-                for root_key in data.keys():
+                for root_key in data:
                     if root_key in result:
                         if isinstance(result[root_key], list) and isinstance(data[root_key], list):
                             result[root_key] = merge_records(result[root_key], data[root_key])
@@ -411,7 +407,7 @@ def merge_data_types(data_type: str) -> int:
                     else:
                         result[root_key] = deepcopy(data[root_key])
             merged += 1
-        except Exception as e:
+        except (OSError, ValueError, KeyError) as e:
             print(f"  [ERROR] Failed to load {json_path}: {e}")
 
     if result is not None:

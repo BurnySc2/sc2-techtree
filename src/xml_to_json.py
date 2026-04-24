@@ -58,7 +58,7 @@ def _postprocess_value_only(child_list: list[dict]) -> dict:
 
 
 def _postprocess_entries(children_by_tag: dict) -> dict:
-    result = {}
+    result: dict = {}
     for tag, child_list in children_by_tag.items():
         if len(child_list) == 1:
             c = child_list[0]

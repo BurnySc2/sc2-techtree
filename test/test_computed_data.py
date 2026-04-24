@@ -21,7 +21,7 @@ def techtree() -> dict:
 
 @pytest.fixture
 def stableid() -> dict:
-    path = Path(__file__).parent.parent / "src" / "extracted" /"stableid.json"
+    path = Path(__file__).parent.parent / "src" / "extracted" / "stableid.json"
     with path.open() as f:
         return json.load(f)
 
@@ -398,14 +398,9 @@ class TestStableIdMissing:
                 assert isinstance(entry["id"], int), f"{name} id should be integer"
 
         for name, entry in computed_data["Units"].items():
-            if entry.get("type") == "unit":
-                if name in unit_id_map:
-                    assert "id" in entry, f"{name} in stableid should have id"
-                    assert isinstance(entry["id"], int), f"{name} id should be integer"
-            elif entry.get("type") == "structure":
-                if name in unit_id_map:
-                    assert "id" in entry, f"{name} in stableid should have id"
-                    assert isinstance(entry["id"], int), f"{name} id should be integer"
+            if (entry.get("type") == "unit" or entry.get("type") == "structure") and name in unit_id_map:
+                assert "id" in entry, f"{name} in stableid should have id"
+                assert isinstance(entry["id"], int), f"{name} id should be integer"
 
         for name, entry in computed_data["Upgrades"].items():
             if name in upgrade_id_map:
@@ -474,3 +469,79 @@ class TestStimpackUpgradeAndAbility:
         stimpack = computed_data["Abilities"]["Stimpack"]
         assert "time" in stimpack, "Stimpack ability should have time field"
         self._check_value(stimpack["time"], 140, "time")
+
+
+class TestResearchAbilities:
+    """Test all research abilities have correct resource costs."""
+
+    @pytest.fixture
+    def research_abilities_with_costs(self) -> list[tuple[str, dict]]:
+        """Load research abilities and their expected costs from AbilData.json.
+
+        Returns a list of (ability_name, expected_costs) tuples for abilities that exist
+        in computed data's Abilities section.
+        """
+        abil_path = Path(__file__).parent.parent / "src" / "json" / "AbilData.json"
+        with abil_path.open() as f:
+            abil_data = json.load(f)
+
+        # First, find all research buttons with costs from AbilData
+        abil_costs: dict[str, dict] = {}
+        for ability in abil_data.values():
+            if not isinstance(ability, list):
+                continue
+            for entry in ability:
+                if not isinstance(entry, dict):
+                    continue
+                info_array = entry.get("InfoArray", [])
+                if not isinstance(info_array, list):
+                    continue
+                for item in info_array:
+                    if not isinstance(item, dict):
+                        continue
+                    button = item.get("Button", {})
+                    if not isinstance(button, dict):
+                        continue
+                    face = button.get("DefaultButtonFace", "")
+                    if not face:
+                        continue
+                    # Only include abilities starting with "Research"
+                    if not face.startswith("Research"):
+                        continue
+                    resource = item.get("Resource", {})
+                    minerals = resource.get("Minerals", 0)
+                    gas = resource.get("Vespene", 0)
+                    time_str = item.get("Time", "0")
+                    try:
+                        time = int(time_str)
+                    except (ValueError, TypeError):
+                        time = 0
+                    if minerals or gas or time:
+                        abil_costs[face] = {"minerals": minerals, "gas": gas, "time": time}
+
+        # Now find which ones actually exist in computed data Abilities
+        computed_path = Path(__file__).parent.parent / "src" / "computed" / "data.json"
+        with computed_path.open() as f:
+            computed_data = json.load(f)
+
+        result: list[tuple[str, dict]] = []
+        for ability_name in abil_costs:
+            if ability_name in computed_data["Abilities"]:
+                result.append((ability_name, abil_costs[ability_name]))
+
+        return result
+
+    def test_all_research_abilities_have_correct_costs(
+        self, computed_data: dict, research_abilities_with_costs: list[tuple[str, dict]]
+    ) -> None:
+        """Test all discovered research abilities have correct costs in computed data."""
+        abilities = computed_data["Abilities"]
+        for ability_name, expected in research_abilities_with_costs:
+            assert ability_name in abilities, f"{ability_name} should be in Abilities"
+            ability = abilities[ability_name]
+            # Test each expected value
+            for field, expected_value in expected.items():
+                assert field in ability, f"{ability_name} should have {field}"
+                actual = ability[field]
+                assert isinstance(actual, (int, float)), f"{ability_name}.{field} should be numeric"
+                assert actual == expected_value, f"{ability_name}.{field} should be {expected_value}, got {actual}"

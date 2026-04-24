@@ -77,6 +77,12 @@
       "id": 2595,
       "name": "AdeptPhaseShiftCancel"
     },
+    "AdeptResearchPiercingUpgrade": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "AdeptResearchPiercingUpgrade",
+      "time": 140
+    },
     "AmorphousArmorcloud": {
       "AINotifyEffect": "AmorphousArmorcloudCP",
       "CastOutroTime": 0.5,
@@ -148,6 +154,12 @@
       },
       "id": 404,
       "name": "AssaultMode"
+    },
+    "BansheeSpeed": {
+      "gas": 125,
+      "minerals": 125,
+      "name": "BansheeSpeed",
+      "time": 110.6
     },
     "BarracksLiftOff": {
       "Name": "Abil/Name/BarracksLiftOff",
@@ -1050,6 +1062,12 @@
       "id": 1826,
       "name": "Contaminate"
     },
+    "CycloneResearchHurricaneThrusters": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "CycloneResearchHurricaneThrusters",
+      "time": 140
+    },
     "DarkShrineResearch": {
       "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
       "InfoArray": {
@@ -1164,6 +1182,54 @@
       },
       "id": "EnergyRecharge",
       "name": "EnergyRecharge"
+    },
+    "EvolveAmorphousArmorcloud": {
+      "gas": 150,
+      "minerals": 150,
+      "name": "EvolveAmorphousArmorcloud",
+      "time": 110
+    },
+    "EvolveAnabolicSynthesis2": {
+      "gas": 150,
+      "minerals": 150,
+      "name": "EvolveAnabolicSynthesis2",
+      "time": 60
+    },
+    "EvolveCentrificalHooks": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "EvolveCentrificalHooks",
+      "time": 100
+    },
+    "EvolveDiggingClaws": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "EvolveDiggingClaws",
+      "time": 80
+    },
+    "EvolveGlialRegeneration": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "EvolveGlialRegeneration",
+      "time": 110
+    },
+    "EvolveGroovedSpines": {
+      "gas": 75,
+      "minerals": 75,
+      "name": "EvolveGroovedSpines",
+      "time": 70
+    },
+    "EvolvePropulsivePeristalsis": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "EvolvePropulsivePeristalsis",
+      "time": 80
+    },
+    "EvolveVentralSacks": {
+      "gas": 200,
+      "minerals": 200,
+      "name": "EvolveVentralSacks",
+      "time": 130
     },
     "Explode": {
       "CmdButtonArray": {
@@ -4050,6 +4116,12 @@
       "id": 1529,
       "name": "PhasingMode"
     },
+    "PhoenixRangeUpgrade": {
+      "gas": 150,
+      "minerals": 150,
+      "name": "PhoenixRangeUpgrade",
+      "time": 90
+    },
     "PlacePointDefenseDrone": {
       "CmdButtonArray": {
         "DefaultButtonFace": "PointDefenseDrone",
@@ -4095,6 +4167,12 @@
       },
       "id": 202,
       "name": "ProgressRally"
+    },
+    "ProtossAirArmorLevel1": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "ProtossAirArmorLevel1",
+      "time": 180
     },
     "ProtossBuild": {
       "ConstructionMover": "Construction",
@@ -4257,6 +4335,12 @@
       ],
       "id": 910,
       "name": "ProtossBuild"
+    },
+    "ProtossGroundArmorLevel1": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "ProtossGroundArmorLevel1",
+      "time": 170
     },
     "PsiStorm": {
       "Alignment": "Negative",
@@ -4466,6 +4550,12 @@
       "id": 3754,
       "name": "RavenShredderMissile"
     },
+    "ReaperSpeed": {
+      "gas": 50,
+      "minerals": 50,
+      "name": "ReaperSpeed",
+      "time": 100
+    },
     "Repair": {
       "AbilSetId": "Repair",
       "Alignment": "Positive",
@@ -4514,6 +4604,42 @@
       },
       "id": 317,
       "name": "Repair"
+    },
+    "ResearchBallisticRange": {
+      "gas": 150,
+      "minerals": 150,
+      "name": "ResearchBallisticRange",
+      "time": 110
+    },
+    "ResearchExtendedThermalLance": {
+      "gas": 150,
+      "minerals": 150,
+      "name": "ResearchExtendedThermalLance",
+      "time": 140
+    },
+    "ResearchNeosteelFrame": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "ResearchNeosteelFrame",
+      "time": 110
+    },
+    "ResearchPersonalCloaking": {
+      "gas": 150,
+      "minerals": 150,
+      "name": "ResearchPersonalCloaking",
+      "time": 120
+    },
+    "ResearchPsiStorm": {
+      "gas": 200,
+      "minerals": 200,
+      "name": "ResearchPsiStorm",
+      "time": 110
+    },
+    "ResearchPunisherGrenades": {
+      "gas": 50,
+      "minerals": 50,
+      "name": "ResearchPunisherGrenades",
+      "time": 60
     },
     "ResourceStun": {
       "Cost": {
@@ -5514,6 +5640,18 @@
       ],
       "id": 348,
       "name": "TerranBuild"
+    },
+    "TerranShipWeaponsLevel1": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "TerranShipWeaponsLevel1",
+      "time": 160
+    },
+    "TerranVehicleAndShipPlatingLevel1": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "TerranVehicleAndShipPlatingLevel1",
+      "time": 160
     },
     "ThorAPMode": {
       "AbilSetId": "ThorAPMode",
@@ -6680,6 +6818,18 @@
       "QueueSize": 5,
       "id": 1834,
       "name": "que5PassiveCancelToSelection"
+    },
+    "zergflyerarmor1": {
+      "gas": 100,
+      "minerals": 100,
+      "name": "zergflyerarmor1",
+      "time": 160
+    },
+    "zerglingattackspeed": {
+      "gas": 200,
+      "minerals": 200,
+      "name": "zerglingattackspeed",
+      "time": 130
     }
   },
   "Units": {

@@ -92,34 +92,37 @@ def load_json(filename: str) -> dict:
     return data
 
 
-def extract_upgrade_costs(abil_data: dict) -> dict[str, dict]:
+def extract_upgrade_costs(abil_data: dict) -> tuple[dict[str, dict], dict[str, dict]]:
     """Extract upgrade cost data from AbilData.json research abilities.
-    
+
     Parses research abilities (id ends with 'Research' or contains research InfoArray),
     finds entries in InfoArray with an 'Upgrade' field, and extracts Resource,
     Time, and Button.Requirements.
-    
-    Returns a dict mapping upgrade name -> {minerals, gas, time, requires}.
+
+    Returns two dicts:
+    1. upgrade_costs: mapping upgrade name -> {minerals, gas, time, requires}
+    2. button_face_to_upgrade: mapping button face name -> upgrade name
     """
-    costs: dict[str, dict] = {}
-    
+    upgrade_costs: dict[str, dict] = {}
+    button_face_to_upgrade: dict[str, dict] = {}
+
     for ability_id, ability in abil_data.items():
         # Check if this is a research ability (id ends with "Research")
-        is_research = ability_id.endswith("Research")
-        
+        ability_id.endswith("Research")
+
         # Also check InfoArray for any entry containing an "Upgrade" field
         info_array = ability.get("InfoArray", [])
         if not isinstance(info_array, list):
             continue
-        
+
         for entry in info_array:
             if not isinstance(entry, dict):
                 continue
-            
+
             upgrade_name = entry.get("Upgrade")
             if not upgrade_name:
                 continue
-            
+
             # Extract cost data
             resource = entry.get("Resource", {})
             minerals = resource.get("Minerals", 0)
@@ -130,14 +133,23 @@ def extract_upgrade_costs(abil_data: dict) -> dict[str, dict]:
                 time = int(time_str)
             except ValueError:
                 time = float(time_str)
-            
-            costs[upgrade_name] = {
+
+            costs = {
                 "minerals": minerals,
                 "gas": gas,
                 "time": time,
             }
-    
-    return costs
+            upgrade_costs[upgrade_name] = costs
+
+            # Also build button face to upgrade mapping
+            # The button face is stored in Button.DefaultButtonFace
+            button = entry.get("Button", {})
+            if isinstance(button, dict):
+                button_face = button.get("DefaultButtonFace")
+                if button_face:
+                    button_face_to_upgrade[button_face] = upgrade_name
+
+    return upgrade_costs, button_face_to_upgrade
 
 
 def enqueue_if_new(
@@ -352,12 +364,16 @@ def _process_structure(
     # Add units unlocked by this structure - check units_section
     unlocks = structure_info.get(FIELD_UNLOCKS, [])
     for unlocked_name in unlocks:
-        if unlocked_name in units_section and is_structure(units_section, unlocked_name):
-            if unlocked_name not in visited_structures:
-                enqueue_if_new(queue, visited_structures, "structure", unlocked_name)
-        elif unlocked_name in units_section and not is_structure(units_section, unlocked_name):
-            if unlocked_name not in visited_units:
-                enqueue_if_new(queue, visited_units, "unit", unlocked_name)
+        is_struct = unlocked_name not in visited_structures and is_structure(
+            units_section, unlocked_name
+        )
+        if unlocked_name in units_section and is_struct:
+            enqueue_if_new(queue, visited_structures, "structure", unlocked_name)
+        is_unit = unlocked_name not in visited_units and not is_structure(
+            units_section, unlocked_name
+        )
+        if unlocked_name in units_section and is_unit:
+            enqueue_if_new(queue, visited_units, "unit", unlocked_name)
 
     # Add upgrades researched at this structure
     researches = structure_info.get(FIELD_RESEARCHES, [])
@@ -446,6 +462,39 @@ def _bfs_traversal(
                 queue.append(("structure", name))
             else:
                 print(f"Warning: Starting structure {name} not found in techtree")
+
+    # Add explicit STARTING_ABILITIES (e.g., research abilities that aren't discovered via morphsto)
+    # These might be button faces (like ResearchStalkerTeleport) that aren't separate ability IDs
+    for ability_name in STARTING_ABILITIES:
+        if ability_name in abilities_section:
+            queue.append(("ability", ability_name))
+        else:
+            # Add directly to abilities_section with minimal data
+            abilities_section[ability_name] = {}
+            queue.append(("ability", ability_name))
+
+    # Auto-discover research abilities (abilities whose InfoArray has Resource/Time with upgrade)
+    for ability_id, ability in abil_data.items():
+        info_array = ability.get("InfoArray", [])
+        if not isinstance(info_array, list):
+            continue
+        for entry in info_array:
+            if not isinstance(entry, dict):
+                continue
+            # Check if this entry has both upgrade and costs
+            upgrade = entry.get("Upgrade", "")
+            resource = entry.get("Resource", {})
+            time_val = entry.get("Time", "0")
+            if upgrade and (resource or time_val):
+                # This is a research ability with costs
+                button_face = entry.get("Button", {}).get("DefaultButtonFace", "")
+                ability_name = button_face if button_face else ability_id
+                if ability_name not in visited_abilities and ability_name in abilities_section:
+                    queue.append(("ability", ability_name))
+                elif ability_name not in visited_abilities:
+                    abilities_section[ability_name] = {}
+                    queue.append(("ability", ability_name))
+                break  # Found costs for this ability
 
     # Dynamically compute starting abilities from abilities with morphsto
     starting_abilities = compute_starting_abilities(abilities_section)
@@ -558,7 +607,7 @@ def _build_result(
     }
 
     # Extract upgrade costs from AbilData.json
-    upgrade_costs = extract_upgrade_costs(abil_data)
+    upgrade_costs, button_face_to_upgrade = extract_upgrade_costs(abil_data)
 
     # Populate units with full data from UnitData.json
     for unit_name in visited_units:
@@ -627,6 +676,13 @@ def _build_result(
         if ability_name in upgrade_costs:
             merged.update(upgrade_costs[ability_name])
 
+        # Also look up costs using button face to upgrade mapping
+        # (handles abilities like ResearchStalkerTeleport that are button faces in InfoArray)
+        if ability_name in button_face_to_upgrade:
+            upgrade_name = button_face_to_upgrade[ability_name]
+            if upgrade_name in upgrade_costs:
+                merged.update(upgrade_costs[upgrade_name])
+
     # Add weapons data for units that have them
     for unit_name, unit_data_out in result["Units"].items():
         weapons = unit_data_out.get(FIELD_WEAPON, [])
@@ -640,28 +696,24 @@ def _build_result(
     lookups = _load_stableid_lookups()
 
     for name, entry in result["Abilities"].items():
-        if name in lookups["abilities"]:
-            if not isinstance(entry.get("id"), int):
-                entry["id"] = lookups["abilities"][name]
+        if name in lookups["abilities"] and not isinstance(entry.get("id"), int):
+            entry["id"] = lookups["abilities"][name]
 
     for name, entry in result["Units"].items():
         if entry.get("type") != "unit":
             continue
-        if name in lookups["units"]:
-            if not isinstance(entry.get("id"), int):
-                entry["id"] = lookups["units"][name]
+        if name in lookups["units"] and not isinstance(entry.get("id"), int):
+            entry["id"] = lookups["units"][name]
 
     for name, entry in result["Units"].items():
         if entry.get("type") != "structure":
             continue
-        if name in lookups["units"]:
-            if not isinstance(entry.get("id"), int):
-                entry["id"] = lookups["units"][name]
+        if name in lookups["units"] and not isinstance(entry.get("id"), int):
+            entry["id"] = lookups["units"][name]
 
     for name, entry in result["Upgrades"].items():
-        if name in lookups["upgrades"]:
-            if not isinstance(entry.get("id"), int):
-                entry["id"] = lookups["upgrades"][name]
+        if name in lookups["upgrades"] and not isinstance(entry.get("id"), int):
+            entry["id"] = lookups["upgrades"][name]
 
     return result
 
@@ -711,7 +763,9 @@ def main():
     unit_count = sum(1 for e in data["Units"].values() if e.get("type") == "unit")
     struct_count = sum(1 for e in data["Units"].values() if e.get("type") == "structure")
     print(
-        f"Wrote {unit_count} units, {struct_count} structures, {len(data['Upgrades'])} upgrades, {len(data['Abilities'])} abilities to {OUTPUT_FILE}"
+        f"Wrote {unit_count} units, {struct_count} structs, "
+        f"{len(data['Upgrades'])} upgrades, {len(data['Abilities'])} abilities"
+        f" -> {OUTPUT_FILE}"
     )
 
 
