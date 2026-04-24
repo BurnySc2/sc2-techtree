@@ -5,7 +5,6 @@ Generate StarCraft 2 techtree.json from converted JSON data files.
 Usage: uv run generate_techtree.py
 """
 
-import json
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
