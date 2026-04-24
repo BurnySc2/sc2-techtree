@@ -21,12 +21,17 @@ uv run --env-file=.env python run.py
 to generate a new `/data/data.json`.
 
 # src data
-From the SC2 data, .xml files can be srced. Use the Dockerfile for this step:
+From the SC2 data, .xml files can be extracted. Use the Dockerfile for this step:
 
 ```sh
 docker build -t stormex-image ./src
 
 docker run -v "path/to/starcraft/StarCraft II:/data/sc2data:ro" -v ./src/xml:/data/output stormex-image /data/sc2data -s .xml -x -o /data/output
+```
+
+```sh
+# Creates src/extracted/stableid.json
+docker run -v "path/to/starcraft/StarCraft II:/data/sc2data:ro" -v ./src/extracted:/data/output/mods/core.sc2mod/base.sc2data/GameData stormex-image /data/sc2data -s stableid.json -x -o /data/output
 ```
 
 Convert the data from .xml to .json with

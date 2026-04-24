@@ -22,6 +22,19 @@ STARTING_STRUCTURES = {
     "Terran": ["BarracksTechLab", "FactoryTechLab", "StarportTechLab"],
 }
 
+
+def _load_stableid_lookups() -> dict:
+    """Load stableid.json and return lookup dicts: abilities, units, upgrades."""
+    stableid_path = Path(__file__).parent / "extracted" / "stableid.json"
+    with stableid_path.open() as f:
+        stableid = json.load(f)
+    return {
+        "abilities": {entry["name"]: entry["id"] for entry in stableid["Abilities"]},
+        "units": {entry["name"]: entry["id"] for entry in stableid["Units"]},
+        "upgrades": {entry["name"]: entry["id"] for entry in stableid["Upgrades"]},
+    }
+
+
 # Starting abilities that should always be discovered
 STARTING_ABILITIES = [
     "MorphToBaneling",
@@ -49,6 +62,12 @@ Category: TypeAlias = str
 ItemName: TypeAlias = str
 QueueItem: TypeAlias = tuple[Category, ItemName]
 VisitedSets: TypeAlias = dict[str, set[ItemName]]
+
+
+def is_structure(units_section: dict, name: ItemName) -> bool:
+    """Check if an entry in units_section is a structure (has builds or researches)."""
+    entry = units_section.get(name, {})
+    return bool(entry.get(FIELD_BUILDS) or entry.get(FIELD_RESEARCHES))
 
 
 def load_json(filename: str) -> dict:
@@ -97,7 +116,6 @@ def handle_morphsto(
     morphsto: str | list,
     visited_structures: set[ItemName],
     visited_units: set[ItemName],
-    structures_section: dict,
     units_section: dict,
     queue: list[QueueItem],
 ) -> None:
@@ -107,15 +125,16 @@ def handle_morphsto(
 
     if isinstance(morphsto, list):
         for m in morphsto:
-            if m and m not in visited_structures:
-                if m in structures_section:
+            if m and m not in visited_structures and m in units_section:
+                # Use is_structure to identify if this is a structure
+                if is_structure(units_section, m):
                     enqueue_if_new(queue, visited_structures, "structure", m)
-                elif m in units_section:
+                elif m not in visited_units:
                     enqueue_if_new(queue, visited_units, "unit", m)
-    elif morphsto not in visited_structures:
-        if morphsto in structures_section:
+    elif morphsto not in visited_structures and morphsto in units_section:
+        if is_structure(units_section, morphsto):
             enqueue_if_new(queue, visited_structures, "structure", morphsto)
-        elif morphsto in units_section:
+        elif morphsto not in visited_units:
             enqueue_if_new(queue, visited_units, "unit", morphsto)
 
 
@@ -124,7 +143,6 @@ def process_ability_morphsto(
     visited_abilities: set[ItemName],
     visited_structures: set[ItemName],
     visited_units: set[ItemName],
-    structures_section: dict,
     units_section: dict,
     abilities_section: dict,
     queue: list[QueueItem],
@@ -138,7 +156,6 @@ def process_ability_morphsto(
             morphsto,
             visited_structures,
             visited_units,
-            structures_section,
             units_section,
             queue,
         )
@@ -152,10 +169,11 @@ def _load_source_data() -> tuple[dict, dict, dict, dict, dict, dict, dict, dict]
     upgrade_data = load_json("UpgradeData.json")
     weapon_data = load_json("WeaponData.json")
 
-    units_section = techtree.get("units", {})
-    structures_section = techtree.get("structures", {})
-    upgrades_section = techtree.get("upgrades", {})
-    abilities_section = techtree.get("abilities", {})
+    # Units now contains both structures and units (merged)
+    units_section = techtree.get("Units", {})
+    structures_section = {}  # No longer separate - merged into Units
+    upgrades_section = techtree.get("Upgrades", {})
+    abilities_section = techtree.get("Abilities", {})
 
     return (
         unit_data,
@@ -172,7 +190,6 @@ def _load_source_data() -> tuple[dict, dict, dict, dict, dict, dict, dict, dict]
 def _process_unit(
     name: ItemName,
     units_section: dict,
-    structures_section: dict,
     upgrades_section: dict,
     abilities_section: dict,
     unit_data: dict,
@@ -200,7 +217,6 @@ def _process_unit(
             morphsto,
             visited_structures,
             visited_units,
-            structures_section,
             units_section,
             queue,
         )
@@ -227,7 +243,6 @@ def _process_unit(
                 visited_abilities,
                 visited_structures,
                 visited_units,
-                structures_section,
                 units_section,
                 abilities_section,
                 queue,
@@ -256,7 +271,6 @@ def _process_unit(
 
 def _process_structure(
     name: ItemName,
-    structures_section: dict,
     units_section: dict,
     upgrades_section: dict,
     abilities_section: dict,
@@ -267,7 +281,8 @@ def _process_structure(
     queue: list[QueueItem],
 ) -> None:
     """Handle structure produces, unlocks, researches, abilities."""
-    structure_info = structures_section.get(name, {})
+    # Structures are now in units_section
+    structure_info = units_section.get(name, {})
 
     # Handle structure's own morphsto (e.g., Hatchery -> Lair)
     morphsto = structure_info.get(FIELD_MORPHSTO)
@@ -276,7 +291,6 @@ def _process_structure(
             morphsto,
             visited_structures,
             visited_units,
-            structures_section,
             units_section,
             queue,
         )
@@ -287,13 +301,15 @@ def _process_structure(
         if unit_name not in visited_units:
             enqueue_if_new(queue, visited_units, "unit", unit_name)
 
-    # Add units unlocked by this structure
+    # Add units unlocked by this structure - check units_section
     unlocks = structure_info.get(FIELD_UNLOCKS, [])
     for unlocked_name in unlocks:
-        if unlocked_name in structures_section and unlocked_name not in visited_structures:
-            enqueue_if_new(queue, visited_structures, "structure", unlocked_name)
-        elif unlocked_name in units_section and unlocked_name not in visited_units:
-            enqueue_if_new(queue, visited_units, "unit", unlocked_name)
+        if unlocked_name in units_section and is_structure(units_section, unlocked_name):
+            if unlocked_name not in visited_structures:
+                enqueue_if_new(queue, visited_structures, "structure", unlocked_name)
+        elif unlocked_name in units_section and not is_structure(units_section, unlocked_name):
+            if unlocked_name not in visited_units:
+                enqueue_if_new(queue, visited_units, "unit", unlocked_name)
 
     # Add upgrades researched at this structure
     researches = structure_info.get(FIELD_RESEARCHES, [])
@@ -320,7 +336,6 @@ def _process_structure(
             visited_abilities,
             visited_structures,
             visited_units,
-            structures_section,
             units_section,
             abilities_section,
             queue,
@@ -349,7 +364,6 @@ def compute_starting_abilities(abilities_section: dict) -> list[str]:
 
 def _bfs_traversal(
     units_section: dict,
-    structures_section: dict,
     upgrades_section: dict,
     abilities_section: dict,
     unit_data: dict,
@@ -365,19 +379,22 @@ def _bfs_traversal(
     queue: list[QueueItem] = []
 
     # Initialize with starting units and structures (just queue, visited added when popped)
+    # Determine category by checking if it's a structure (has builds/researches)
     for race, names in STARTING_UNITS.items():
         for name in names:
             if name in units_section:
-                queue.append(("unit", name))
-            elif name in structures_section:
-                queue.append(("structure", name))
+                # Use is_structure to determine category
+                if is_structure(units_section, name):
+                    queue.append(("structure", name))
+                else:
+                    queue.append(("unit", name))
             else:
                 print(f"Warning: Starting item {name} not found in techtree")
 
-    # Initialize with starting structures (tech labs)
+    # Initialize with starting structures (tech labs) - check in units_section
     for race, names in STARTING_STRUCTURES.items():
         for name in names:
-            if name in structures_section:
+            if name in units_section:
                 queue.append(("structure", name))
             else:
                 print(f"Warning: Starting structure {name} not found in techtree")
@@ -403,7 +420,6 @@ def _bfs_traversal(
             _process_unit(
                 name,
                 units_section,
-                structures_section,
                 upgrades_section,
                 abilities_section,
                 unit_data,
@@ -423,7 +439,6 @@ def _bfs_traversal(
 
             _process_structure(
                 name,
-                structures_section,
                 units_section,
                 upgrades_section,
                 abilities_section,
@@ -460,7 +475,6 @@ def _bfs_traversal(
                 morphsto,
                 visited_structures,
                 visited_units,
-                structures_section,
                 units_section,
                 queue,
             )
@@ -476,7 +490,6 @@ def _bfs_traversal(
 def _build_result(
     visited_sets: VisitedSets,
     units_section: dict,
-    structures_section: dict,
     upgrades_section: dict,
     abilities_section: dict,
     unit_data: dict,
@@ -491,10 +504,9 @@ def _build_result(
     visited_abilities = visited_sets["abilities"]
 
     result: dict = {
-        "units": {},
-        "structures": {},
-        "upgrades": {},
-        "abilities": {},
+        "Units": {},
+        "Upgrades": {},
+        "Abilities": {},
     }
 
     # Populate units with full data from UnitData.json
@@ -502,16 +514,21 @@ def _build_result(
         unit_entry = units_section.get(unit_name, {})
         full_data = unit_data.get(unit_name, {})
         merged = merge_entry(unit_name, unit_entry, full_data)
+        merged["type"] = "unit"
         # Filter builds to exclude mercenary buildings for SCV
         if unit_name == "SCV" and FIELD_BUILDS in merged:
             merged[FIELD_BUILDS] = [b for b in merged[FIELD_BUILDS] if b not in SCV_MERCENARY_BUILDINGS]
-        result["units"][unit_name] = merged
+        result["Units"][unit_name] = merged
 
-    # Populate structures with full data
+    # Populate structures with full data - structures are now in units_section
     for structure_name in visited_structures:
-        structure_entry = structures_section.get(structure_name, {})
+        structure_entry = units_section.get(structure_name, {})
         full_data = unit_data.get(structure_name, {})
         merged = merge_entry(structure_name, structure_entry, full_data)
+        merged["type"] = "structure"
+        # Filter builds to exclude mercenary buildings for SCV (handles structures loop)
+        if structure_name == "SCV" and FIELD_BUILDS in merged:
+            merged[FIELD_BUILDS] = [b for b in merged[FIELD_BUILDS] if b not in SCV_MERCENARY_BUILDINGS]
         # Filter AbilArray to exclude NexusTrainMothershipCore for Nexus
         if structure_name == "Nexus" and FIELD_ABIL_ARRAY in merged:
             filtered: list[dict | str] = []
@@ -523,30 +540,57 @@ def _build_result(
                 elif isinstance(a, str) and a != NEXUS_EXCLUDED_ABILITY:
                     filtered.append(a)
             merged[FIELD_ABIL_ARRAY] = filtered
-        result["structures"][structure_name] = merged
+        result["Units"][structure_name] = merged
 
     # Populate upgrades with full data
     for upgrade_name in visited_upgrades:
         upgrade_entry = upgrades_section.get(upgrade_name, {})
         full_data = upgrade_data.get(upgrade_name, {})
         merged = merge_entry(upgrade_name, upgrade_entry, full_data)
-        result["upgrades"][upgrade_name] = merged
+        result["Upgrades"][upgrade_name] = merged
 
     # Populate abilities with full data
     for ability_name in visited_abilities:
         ability_entry = abilities_section.get(ability_name, {})
         full_data = abil_data.get(ability_name) or {}
         merged = merge_entry(ability_name, ability_entry, full_data)
-        result["abilities"][ability_name] = merged
+        result["Abilities"][ability_name] = merged
 
     # Add weapons data for units that have them
-    for unit_name, unit_data_out in result["units"].items():
+    for unit_name, unit_data_out in result["Units"].items():
         weapons = unit_data_out.get(FIELD_WEAPON, [])
         if isinstance(weapons, list):
             for weapon_name in weapons:
                 if weapon_name in weapon_data:
                     _weapons: dict[str, object] = unit_data_out.setdefault("_weapons", {})  # type: ignore[arg-type]
                     _weapons[weapon_name] = weapon_data[weapon_name]
+
+    # Add stableid integer ids (only if not already an integer)
+    lookups = _load_stableid_lookups()
+
+    for name, entry in result["Abilities"].items():
+        if name in lookups["abilities"]:
+            if not isinstance(entry.get("id"), int):
+                entry["id"] = lookups["abilities"][name]
+
+    for name, entry in result["Units"].items():
+        if entry.get("type") != "unit":
+            continue
+        if name in lookups["units"]:
+            if not isinstance(entry.get("id"), int):
+                entry["id"] = lookups["units"][name]
+
+    for name, entry in result["Units"].items():
+        if entry.get("type") != "structure":
+            continue
+        if name in lookups["units"]:
+            if not isinstance(entry.get("id"), int):
+                entry["id"] = lookups["units"][name]
+
+    for name, entry in result["Upgrades"].items():
+        if name in lookups["upgrades"]:
+            if not isinstance(entry.get("id"), int):
+                entry["id"] = lookups["upgrades"][name]
 
     return result
 
@@ -567,7 +611,6 @@ def gather_data():
     # Phase 2: BFS traversal
     visited_sets = _bfs_traversal(
         units_section,
-        structures_section,
         upgrades_section,
         abilities_section,
         unit_data,
@@ -578,7 +621,6 @@ def gather_data():
     result = _build_result(
         visited_sets,
         units_section,
-        structures_section,
         upgrades_section,
         abilities_section,
         unit_data,
@@ -595,9 +637,10 @@ def main():
     data = gather_data()
     with OUTPUT_FILE.open("w") as f:
         dump_json(data, f, indent=2)
+    unit_count = sum(1 for e in data["Units"].values() if e.get("type") == "unit")
+    struct_count = sum(1 for e in data["Units"].values() if e.get("type") == "structure")
     print(
-        f"Wrote {len(data['units'])} units, {len(data['structures'])} structures, "
-        f"{len(data['upgrades'])} upgrades, {len(data['abilities'])} abilities to {OUTPUT_FILE}"
+        f"Wrote {unit_count} units, {struct_count} structures, {len(data['Upgrades'])} upgrades, {len(data['Abilities'])} abilities to {OUTPUT_FILE}"
     )
 
 

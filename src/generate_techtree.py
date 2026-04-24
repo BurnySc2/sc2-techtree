@@ -604,10 +604,18 @@ def generate_techtree() -> dict:
                     "race": race,
                 }
 
+    # Gather Upgrades from all structures' researches
+    upgrades = {}
+    for struct_data in structures.values():
+        if "researches" in struct_data:
+            for upg_name in struct_data["researches"]:
+                if upg_name not in upgrades:
+                    upgrades[upg_name] = {}  # Empty dict - just a container for the name
+
     return {
-        "structures": structures,
-        "units": units,
-        "abilities": abilities,
+        "Units": {**structures, **units},   # MERGE: combine structures + units
+        "Abilities": abilities,            # RENAME: abilities → Abilities
+        "Upgrades": upgrades,             # NEW: gather all unique researches
     }
 
 
@@ -621,9 +629,9 @@ def main():
     output_path.write_text(dumps_json(techtree, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")
 
     print(f"Written to {output_path}")
-    print(f"  Structures: {len(techtree['structures'])}")
-    print(f"  Units: {len(techtree['units'])}")
-    print(f"  Abilities: {len(techtree['abilities'])}")
+    print(f"  Units: {len(techtree['Units'])}")
+    print(f"  Abilities: {len(techtree['Abilities'])}")
+    print(f"  Upgrades: {len(techtree['Upgrades'])}")
 
 
 if __name__ == "__main__":
