@@ -364,14 +364,10 @@ def _process_structure(
     # Add units unlocked by this structure - check units_section
     unlocks = structure_info.get(FIELD_UNLOCKS, [])
     for unlocked_name in unlocks:
-        is_struct = unlocked_name not in visited_structures and is_structure(
-            units_section, unlocked_name
-        )
+        is_struct = unlocked_name not in visited_structures and is_structure(units_section, unlocked_name)
         if unlocked_name in units_section and is_struct:
             enqueue_if_new(queue, visited_structures, "structure", unlocked_name)
-        is_unit = unlocked_name not in visited_units and not is_structure(
-            units_section, unlocked_name
-        )
+        is_unit = unlocked_name not in visited_units and not is_structure(units_section, unlocked_name)
         if unlocked_name in units_section and is_unit:
             enqueue_if_new(queue, visited_units, "unit", unlocked_name)
 

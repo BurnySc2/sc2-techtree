@@ -488,9 +488,14 @@ def generate_techtree() -> dict:
                             prod_race = prod_data.get("Race", "")
                             if prod_race and prod_race not in (RACE_NA, RACE_NOT_FOUND, "") or not prod_race:
                                 builds.append(produced_unit)
-                    elif _is_research_ability(abil_name) and _match_ability_to_structure(
-                        abil_name, unit_name, ability_to_structures, check_shared_exclude=True
-                    ) and produced_unit not in RESEARCH_EXCLUDE and produced_unit not in excludes:
+                    elif (
+                        _is_research_ability(abil_name)
+                        and _match_ability_to_structure(
+                            abil_name, unit_name, ability_to_structures, check_shared_exclude=True
+                        )
+                        and produced_unit not in RESEARCH_EXCLUDE
+                        and produced_unit not in excludes
+                    ):
                         researches.append(produced_unit)
 
             if abil_name in ability_upgrades and _match_ability_to_structure(
