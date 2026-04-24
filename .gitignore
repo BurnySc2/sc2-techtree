@@ -19,5 +19,6 @@ generated/
 sc2
 .env*
 
-# Extracted xml files
-*.xml
+# Extracted xml and json files
+src/xml
+src/json

@@ -6,7 +6,7 @@ import pytest
 
 @pytest.fixture
 def techtree_data() -> dict:
-    path = Path(__file__).parent.parent / "src" / "json" / "techtree.json"
+    path = Path(__file__).parent.parent / "src" / "computed" / "techtree.json"
     with path.open() as f:
         return json.load(f)
 

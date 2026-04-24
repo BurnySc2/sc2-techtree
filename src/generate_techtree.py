@@ -475,7 +475,7 @@ def generate_techtree() -> dict:
 
 def main():
     """Main entry point."""
-    output_path = Path(__file__).parent / "json" / "techtree.json"
+    output_path = Path(__file__).parent / "computed" / "techtree.json"
 
     print("Generating techtree...")
     techtree = generate_techtree()
