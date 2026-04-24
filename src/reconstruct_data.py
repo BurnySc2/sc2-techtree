@@ -24,7 +24,7 @@ def load_json(filename: str) -> dict:
 
 def gather_data():
     # Load source data
-    techtree = load_json("techtree.json")
+    techtree = load_json("../computed/techtree.json")
     unit_data = load_json("UnitData.json")
     abil_data = load_json("AbilData.json")
     upgrade_data = load_json("UpgradeData.json")

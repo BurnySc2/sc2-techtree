@@ -76,12 +76,81 @@ SHARED_RESEARCH_EXCLUDE = {
     "MercCompoundResearch": {"BarracksTechLab", "GhostAcademy"},  # These get Merc upgrades elsewhere
 }
 
+# Global research exclusions - items that appear in game data but aren't actual researches
+RESEARCH_EXCLUDE = {
+    "haltech",  # not a research (CyberneticsCore)
+    "TerranBuildingArmor",  # not EngineeringBay research
+    "ImmortalRevive",  # not RoboticsBay research
+    "RoachSupply",  # not RoachWarren research
+    "LocustLifetimeIncrease",  # not InfestationPit research
+    "FlyingLocusts",  # not InfestationPit research
+    "InfestorEnergyUpgrade",  # not InfestationPit research
+    "CarrierLaunchSpeedUpgrade",  # not FleetBeacon research
+    "TempestRangeUpgrade",  # not FleetBeacon research
+    "SunderingImpact",  # not TwilightCouncil research
+    "AmplifiedShielding",  # not TwilightCouncil research
+}
+
+# Per-structure research exclusions (structure gets research ability but shouldn't get these upgrades)
+STRUCTURE_RESEARCH_EXCLUDE = {
+    "BarracksTechLab": {"CombatDrugs"},
+    "FactoryTechLab": {
+        "ArmorPiercingRockets",
+        "CycloneAirUpgrade",
+        "CycloneLockOnRangeUpgrade",
+        "CycloneRapidFireLaunchers",
+        "HurricaneThrusters",
+        "SiegeTech",
+        "SmartServos",
+        "StrikeCannons",
+    },
+    "StarportTechLab": {
+        "DurableMaterials",
+        "HunterSeeker",
+        "LiberatorAGRangeUpgrade",
+        "LiberatorMorph",
+        "MedivacCaduceusReactor",
+        "MedivacRapidDeployment",
+        "MedivacIncreaseSpeedBoost",
+        "RavenCorvidReactor",
+        "RavenEnhancedMunitions",
+        "RavenRecalibratedExplosives",
+    },
+    "FusionCore": {"MedivacIncreaseSpeedBoost"},
+    "HydraliskDen": {"HydraliskSpeedUpgrade", "LurkerRange", "hydraliskspeed"},
+    "TwilightCouncil": {"PsionicAmplifiers"},
+}
+
+# Additional researches for structures where game data is incomplete
+STRUCTURE_ADDITIONAL_RESEARCHES = {
+    "FusionCore": ["LiberatorAGRangeUpgrade"],
+    "HydraliskDen": ["Frenzy"],
+    "InfestationPit": ["MicrobialShroud"],
+    "EngineeringBay": ["HiSecAutoTracking"],
+}
+
 
 def load_json(filename: str) -> dict:
-    """Load a JSON data file."""
+    """Load a JSON data file and transform to expected format."""
     path = Path(__file__).parent / "json" / filename
     with path.open(encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+
+    # Transform UnitData.json: extract CUnit array and index by id
+    if filename == "UnitData.json" and "CUnit" in data:
+        return {unit["id"]: unit for unit in data["CUnit"]}
+
+    # Transform AbilData.json: flatten all class arrays into single dict keyed by id
+    if filename == "AbilData.json":
+        result = {}
+        for class_name, abilities in data.items():
+            if isinstance(abilities, list):
+                for ability in abilities:
+                    if isinstance(ability, dict) and "id" in ability:
+                        result[ability["id"]] = ability
+        return result
+
+    return data
 
 
 def parse_requirement(req: str) -> list[str]:
@@ -120,12 +189,20 @@ def get_info_units(info: Any) -> list[str]:
                 unit = item["Unit"]
                 if isinstance(unit, list):
                     units.extend(u for u in unit if u and u != "N/A")
+                elif isinstance(unit, dict) and "value" in unit:
+                    val = unit["value"]
+                    if val and val != "N/A":
+                        units.append(val)
                 elif unit and unit != "N/A":
                     units.append(unit)
     elif isinstance(info, dict) and "Unit" in info:
         unit = info["Unit"]
         if isinstance(unit, list):
             units.extend(u for u in unit if u and u != "N/A")
+        elif isinstance(unit, dict) and "value" in unit:
+            val = unit["value"]
+            if val and val != "N/A":
+                units.append(val)
         elif unit and unit != "N/A":
             units.append(unit)
     return units
@@ -162,12 +239,20 @@ def get_morph_targets(info: Any) -> list[str]:
                 unit = item["Unit"]
                 if isinstance(unit, list):
                     targets.extend(u for u in unit if u and u not in MORPH_EXCLUDE)
+                elif isinstance(unit, dict) and "value" in unit:
+                    val = unit["value"]
+                    if val and val not in MORPH_EXCLUDE:
+                        targets.append(val)
                 elif unit and unit not in MORPH_EXCLUDE:
                     targets.append(unit)
     elif isinstance(info, dict) and "Unit" in info:
         unit = info["Unit"]
         if isinstance(unit, list):
             targets.extend(u for u in unit if u and u not in MORPH_EXCLUDE)
+        elif isinstance(unit, dict) and "value" in unit:
+            val = unit["value"]
+            if val and val not in MORPH_EXCLUDE:
+                targets.append(val)
         elif unit and unit not in MORPH_EXCLUDE:
             targets.append(unit)
     return targets
@@ -319,11 +404,16 @@ def generate_techtree() -> dict:
         morphsto: str | list[str] | None = None
 
         # Get structure-specific excludes and additional researches
-        # excludes = STRUCTURE_RESEARCH_EXCLUDE.get(unit_name, set())
-        # additional = STRUCTURE_ADDITIONAL_RESEARCHES.get(unit_name, [])
+        excludes = STRUCTURE_RESEARCH_EXCLUDE.get(unit_name, set())
+        additional = STRUCTURE_ADDITIONAL_RESEARCHES.get(unit_name, [])
 
-        for abil_name in unit_data.get("AbilArray", []):
-            if not isinstance(abil_name, str):
+        for abil_entry in unit_data.get("AbilArray", []):
+            # AbilArray entries are dicts with 'Link' key, e.g., {"Link": "BuildInProgress"}
+            if isinstance(abil_entry, dict) and "Link" in abil_entry:
+                abil_name = abil_entry["Link"]
+            elif isinstance(abil_entry, str):
+                abil_name = abil_entry
+            else:
                 continue
 
             if abil_name in ability_produces:
@@ -351,11 +441,13 @@ def generate_techtree() -> dict:
                         else:
                             builds.append(produced_unit)
                     elif is_research and research_matches_structure(abil_name, unit_name):
-                        researches.append(produced_unit)
+                        if produced_unit not in RESEARCH_EXCLUDE and produced_unit not in excludes:
+                            researches.append(produced_unit)
 
             if abil_name in ability_upgrades and research_matches_structure(abil_name, unit_name):
                 for upgrade in ability_upgrades[abil_name]:
-                    researches.append(upgrade)
+                    if upgrade not in RESEARCH_EXCLUDE and upgrade not in excludes:
+                        researches.append(upgrade)
 
             # Handle morphsto for units with MorphTo, MorphZergling, UpgradeTo, or LiftOff abilities
             is_morph_to = (
@@ -396,6 +488,9 @@ def generate_techtree() -> dict:
         if researches:
             # Add additional researches (for structures where data is incomplete)
             all_researches = list(researches)
+            for extra in additional:
+                if extra not in all_researches:
+                    all_researches.append(extra)
             entry["researches"] = sorted(set(all_researches))
         if unlocks.get(unit_name):
             entry["unlocks"] = sorted(unlocks[unit_name])
