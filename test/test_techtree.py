@@ -429,3 +429,33 @@ class TestPlanetaryFortress:
         pf = techtree_data["structures"]["PlanetaryFortress"]
         assert "produces" in pf
         assert pf["produces"] == ["SCV"]
+
+
+class TestHatchery:
+    def test_hatchery_produces_queen(self, techtree_data: dict) -> None:
+        """Hatchery should produce Queen."""
+        hatchery = techtree_data["structures"]["Hatchery"]
+        assert "produces" in hatchery
+        assert "Queen" in hatchery["produces"]
+
+
+class TestStructureBuildsAddons:
+    """Test that structures build their tech lab and reactor addons."""
+
+    def test_barracks_builds_tech_lab_and_reactor(self, techtree_data: dict) -> None:
+        """Barracks should build BarracksTechLab and BarracksReactor."""
+        barracks = techtree_data["structures"]["Barracks"]
+        assert "builds" in barracks
+        assert set(barracks["builds"]) >= {"BarracksTechLab", "BarracksReactor"}
+
+    def test_factory_builds_tech_lab_and_reactor(self, techtree_data: dict) -> None:
+        """Factory should build FactoryTechLab and FactoryReactor."""
+        factory = techtree_data["structures"]["Factory"]
+        assert "builds" in factory
+        assert set(factory["builds"]) >= {"FactoryTechLab", "FactoryReactor"}
+
+    def test_starport_builds_tech_lab_and_reactor(self, techtree_data: dict) -> None:
+        """Starport should build StarportTechLab and StarportReactor."""
+        starport = techtree_data["structures"]["Starport"]
+        assert "builds" in starport
+        assert set(starport["builds"]) >= {"StarportTechLab", "StarportReactor"}

@@ -17,6 +17,17 @@ STARTING_UNITS = {
     "Protoss": ["Probe", "Nexus"],
 }
 
+# Starting structures (tech labs) for each race - always discover these
+STARTING_STRUCTURES = {
+    "Terran": ["BarracksTechLab", "FactoryTechLab", "StarportTechLab"],
+}
+
+# Starting abilities that should always be discovered
+STARTING_ABILITIES = [
+    "MorphToBaneling",
+    "MorphToBroodLord",
+]
+
 # Field names
 FIELD_NAME = "name"
 FIELD_BUILDS = "builds"
@@ -41,16 +52,36 @@ VisitedSets: TypeAlias = dict[str, set[ItemName]]
 
 
 def load_json(filename: str) -> dict:
+    """Load a JSON data file and transform to expected format."""
     with (DATA_DIR / filename).open() as f:
-        return json.load(f)
+        data = json.load(f)
+
+    # Transform UnitData.json: extract CUnit array and index by id
+    if filename == "UnitData.json" and "CUnit" in data:
+        return {unit["id"]: unit for unit in data["CUnit"]}
+
+    # Transform AbilData.json: flatten all class arrays into single dict keyed by id
+    if filename == "AbilData.json":
+        result = {}
+        for class_name, abilities in data.items():
+            if isinstance(abilities, list):
+                for ability in abilities:
+                    if isinstance(ability, dict) and "id" in ability:
+                        result[ability["id"]] = ability
+        return result
+
+    return data
 
 
 def enqueue_if_new(
-    queue: list[QueueItem], visited: set[ItemName], category: Category, name: ItemName
+    queue: list[QueueItem],
+    visited: set[ItemName],
+    category: Category,
+    name: ItemName,
 ) -> None:
-    """Unified 'add to queue if unvisited' pattern."""
-    if name not in visited:
-        visited.add(name)
+    """Add to queue if not already queued (visited is checked in BFS loop)."""
+    # Check if already in queue to avoid duplicates
+    if (category, name) not in queue:
         queue.append((category, name))
 
 
@@ -152,13 +183,39 @@ def _process_unit(
     visited_abilities: set[ItemName],
     queue: list[QueueItem],
 ) -> None:
-    """Handle unit abilities, builds, requirements."""
+    """Handle unit abilities, builds, produces, morphsto, requirements."""
     unit_info = units_section.get(name, {})
     unit_full_data = unit_data.get(name, {})
 
-    # Add abilities from this unit's AbilArray (only if in AbilData)
+    # Handle unit's produces field (e.g., Larva produces units)
+    produces = unit_info.get(FIELD_PRODUCES, [])
+    for unit_name in produces:
+        if unit_name not in visited_units:
+            enqueue_if_new(queue, visited_units, "unit", unit_name)
+
+    # Handle unit's morphsto field (e.g., Larva can morph to various units)
+    morphsto = unit_info.get(FIELD_MORPHSTO)
+    if morphsto:
+        handle_morphsto(
+            morphsto,
+            visited_structures,
+            visited_units,
+            structures_section,
+            units_section,
+            queue,
+        )
+
+    # Add abilities from this unit's AbilArray (extract Link from each entry)
     abil_array = unit_full_data.get(FIELD_ABIL_ARRAY, [])
-    for ability_name in abil_array:
+    for ability_entry in abil_array:
+        # Handle both old format (list of strings) and new format (list of dicts with 'Link')
+        if isinstance(ability_entry, dict):
+            ability_name = ability_entry.get("Link")
+        elif isinstance(ability_entry, str):
+            ability_name = ability_entry
+        else:
+            continue
+
         if (
             ability_name
             and isinstance(ability_name, str)
@@ -191,9 +248,9 @@ def _process_unit(
             ):
                 visited_abilities.add(ability_name)
 
-    # Add requirements (upgrades)
+    # Add requirements (only if they're actual upgrades in upgrades_section)
     for req in unit_info.get(FIELD_REQUIRES, []):
-        if req not in visited_upgrades:
+        if req not in visited_upgrades and req in upgrades_section:
             enqueue_if_new(queue, visited_upgrades, "upgrade", req)
 
 
@@ -211,6 +268,18 @@ def _process_structure(
 ) -> None:
     """Handle structure produces, unlocks, researches, abilities."""
     structure_info = structures_section.get(name, {})
+
+    # Handle structure's own morphsto (e.g., Hatchery -> Lair)
+    morphsto = structure_info.get(FIELD_MORPHSTO)
+    if morphsto:
+        handle_morphsto(
+            morphsto,
+            visited_structures,
+            visited_units,
+            structures_section,
+            units_section,
+            queue,
+        )
 
     # Add units this structure produces
     produces = structure_info.get(FIELD_PRODUCES, [])
@@ -273,6 +342,11 @@ def _process_upgrade(
             enqueue_if_new(queue, visited_upgrades, "upgrade", req)
 
 
+def compute_starting_abilities(abilities_section: dict) -> list[str]:
+    """Discover all abilities that have a morphsto field."""
+    return [name for name, info in abilities_section.items() if isinstance(info, dict) and info.get(FIELD_MORPHSTO)]
+
+
 def _bfs_traversal(
     units_section: dict,
     structures_section: dict,
@@ -290,15 +364,31 @@ def _bfs_traversal(
     # Queue for BFS: (category, name)
     queue: list[QueueItem] = []
 
-    # Initialize with starting units and structures
+    # Initialize with starting units and structures (just queue, visited added when popped)
     for race, names in STARTING_UNITS.items():
         for name in names:
             if name in units_section:
-                enqueue_if_new(queue, visited_units, "unit", name)
+                queue.append(("unit", name))
             elif name in structures_section:
-                enqueue_if_new(queue, visited_structures, "structure", name)
+                queue.append(("structure", name))
             else:
                 print(f"Warning: Starting item {name} not found in techtree")
+
+    # Initialize with starting structures (tech labs)
+    for race, names in STARTING_STRUCTURES.items():
+        for name in names:
+            if name in structures_section:
+                queue.append(("structure", name))
+            else:
+                print(f"Warning: Starting structure {name} not found in techtree")
+
+    # Dynamically compute starting abilities from abilities with morphsto
+    starting_abilities = compute_starting_abilities(abilities_section)
+    for ability_name in starting_abilities:
+        if ability_name in abilities_section:
+            queue.append(("ability", ability_name))
+        else:
+            print(f"Warning: Starting ability {ability_name} not found in techtree")
 
     # BFS traversal
     while queue:
@@ -307,6 +397,8 @@ def _bfs_traversal(
         if category == "unit":
             if name in visited_units:
                 continue
+            # Add to visited BEFORE processing
+            visited_units.add(name)
 
             _process_unit(
                 name,
@@ -326,6 +418,8 @@ def _bfs_traversal(
         elif category == "structure":
             if name in visited_structures:
                 continue
+            # Add to visited BEFORE processing
+            visited_structures.add(name)
 
             _process_structure(
                 name,
@@ -343,12 +437,31 @@ def _bfs_traversal(
         elif category == "upgrade":
             if name in visited_upgrades:
                 continue
+            # Add to visited BEFORE processing
             visited_upgrades.add(name)
 
             _process_upgrade(
                 name,
                 upgrades_section,
                 visited_upgrades,
+                queue,
+            )
+
+        elif category == "ability":
+            if name in visited_abilities:
+                continue
+            # Add to visited BEFORE processing
+            visited_abilities.add(name)
+
+            # Process ability morphsto (abilities can morph to units/structures)
+            ability_info = abilities_section.get(name, {})
+            morphsto = ability_info.get(FIELD_MORPHSTO)
+            handle_morphsto(
+                morphsto,
+                visited_structures,
+                visited_units,
+                structures_section,
+                units_section,
                 queue,
             )
 
@@ -391,9 +504,7 @@ def _build_result(
         merged = merge_entry(unit_name, unit_entry, full_data)
         # Filter builds to exclude mercenary buildings for SCV
         if unit_name == "SCV" and FIELD_BUILDS in merged:
-            merged[FIELD_BUILDS] = [
-                b for b in merged[FIELD_BUILDS] if b not in SCV_MERCENARY_BUILDINGS
-            ]
+            merged[FIELD_BUILDS] = [b for b in merged[FIELD_BUILDS] if b not in SCV_MERCENARY_BUILDINGS]
         result["units"][unit_name] = merged
 
     # Populate structures with full data
@@ -403,9 +514,15 @@ def _build_result(
         merged = merge_entry(structure_name, structure_entry, full_data)
         # Filter AbilArray to exclude NexusTrainMothershipCore for Nexus
         if structure_name == "Nexus" and FIELD_ABIL_ARRAY in merged:
-            merged[FIELD_ABIL_ARRAY] = [
-                a for a in merged[FIELD_ABIL_ARRAY] if a != NEXUS_EXCLUDED_ABILITY
-            ]
+            filtered: list[dict | str] = []
+            for a in merged[FIELD_ABIL_ARRAY]:
+                if isinstance(a, dict):
+                    link = a.get("Link")
+                    if link and link != NEXUS_EXCLUDED_ABILITY:
+                        filtered.append(a)
+                elif isinstance(a, str) and a != NEXUS_EXCLUDED_ABILITY:
+                    filtered.append(a)
+            merged[FIELD_ABIL_ARRAY] = filtered
         result["structures"][structure_name] = merged
 
     # Populate upgrades with full data

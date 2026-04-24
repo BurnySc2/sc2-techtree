@@ -65,22 +65,6 @@ TECH_LABS = {
     "StarportTechLab",
 }
 
-# Ability to structure mapping for shared abilities
-# Key: ability name, Value: structure prefix it belongs to
-ABILITY_STRUCTURE_MAP = {
-    # Train abilities
-    "GatewayTrain": "Gateway",
-    "WarpGateTrain": "WarpGate",
-    "BarracksTrain": "Barracks",
-    "FactoryTrain": "Factory",
-    "StarportTrain": "Starport",
-    "SpireTrain": "Spire",
-    "CommandCenterTrain": ["CommandCenter", "OrbitalCommand", "PlanetaryFortress"],
-    # Research abilities where structure name doesn't match ability prefix
-    "SpireResearch": "GreaterSpire",  # GreaterSpire gets SpireResearch
-    "LurkerDenResearch": "LurkerDenMP",  # LurkerDenMP gets LurkerDenResearch
-}
-
 # Research abilities shared between multiple structures
 # Key: ability name, Value: set of structures that should NOT get this research
 SHARED_RESEARCH_EXCLUDE = {
@@ -106,7 +90,8 @@ RESEARCH_EXCLUDE = {
 
 # Per-structure research exclusions (structure gets research ability but shouldn't get these upgrades)
 STRUCTURE_RESEARCH_EXCLUDE = {
-    "BarracksTechLab": {"CombatDrugs"},
+    "BarracksTechLab": {"CombatDrugs", "ReaperSpeed"},
+    "GhostAcademy": {"ReaperSpeed"},
     "FactoryTechLab": {
         "ArmorPiercingRockets",
         "CycloneAirUpgrade",
@@ -291,30 +276,70 @@ def get_race(data: dict) -> str:
 
 
 def _match_ability_to_structure(
-    abil_name: str, structure_name: str, check_shared_exclude: bool = False
+    abil_name: str,
+    structure_name: str,
+    ability_to_structures: dict[str, set[str]],
+    check_shared_exclude: bool = False,
+    require_prefix_match: bool = False,
 ) -> bool:
-    """Check if an ability name matches a structure name (handles shared abilities)."""
+    """Check if an ability name matches a structure name (using derived mapping)."""
+    # Check shared research excludes FIRST if enabled - this must be before direct mapping check
+    if check_shared_exclude and abil_name in SHARED_RESEARCH_EXCLUDE:
+        if structure_name in SHARED_RESEARCH_EXCLUDE[abil_name]:
+            return False
+    # Check the derived mapping
+    if abil_name in ability_to_structures:
+        in_mapping = structure_name in ability_to_structures[abil_name]
+        if in_mapping:
+            if not require_prefix_match:
+                return True
+            # With require_prefix_match for train abilities:
+            # Allow if this structure's name IS a prefix of ability
+            if abil_name.startswith(structure_name):
+                return True
+            # Block only the specific bad case: Gateway-prefix ability being used
+            # by a non-Gateway structure (e.g., GatewayTrain with RoboticsFacility)
+            if abil_name.startswith("Gateway"):
+                for other_struct in ability_to_structures[abil_name]:
+                    if other_struct != structure_name and abil_name.startswith(other_struct):
+                        # Reject only if our struct is not Gateway-derived
+                        if not abil_name.startswith(structure_name):
+                            return False
+            return True
+    # Fallback: check if structure_name is a prefix of ability (for "XxxBuild" style)
     if abil_name.startswith(structure_name):
         return True
-    expected = ABILITY_STRUCTURE_MAP.get(abil_name)
-    if expected:
-        if isinstance(expected, list):
-            return structure_name in expected
-        return structure_name.startswith(expected)
-    if check_shared_exclude and abil_name in SHARED_RESEARCH_EXCLUDE:
-        return structure_name not in SHARED_RESEARCH_EXCLUDE[abil_name]
     return False
+
+
+def _build_ability_to_structures_mapping(units_data: dict) -> dict[str, set[str]]:
+    """Build a mapping of which structures can use which abilities."""
+    ability_to_structures = defaultdict(set)
+
+    for unit_name, unit_data in units_data.items():
+        if not isinstance(unit_data, dict):
+            continue
+        for abil_entry in unit_data.get("AbilArray", []):
+            # Extract ability name from AbilArray entry
+            if isinstance(abil_entry, dict) and "Link" in abil_entry:
+                abil_name = abil_entry["Link"]
+            elif isinstance(abil_entry, str):
+                abil_name = abil_entry
+            else:
+                continue
+            ability_to_structures[abil_name].add(unit_name)
+
+    return ability_to_structures
 
 
 def _is_train_ability(abil_name: str) -> bool:
     return (
-        (abil_name.endswith("Train") or abil_name.startswith("NexusTrain"))
-        and abil_name not in (ABILITY_SCV_HARVEST, ABILITY_NEXUS_TRAIN_MOTHERSHIP_CORE)
-    )
+        abil_name.startswith("Train") or abil_name.endswith("Train") or abil_name.startswith("NexusTrain")
+    ) and abil_name not in (ABILITY_SCV_HARVEST, ABILITY_NEXUS_TRAIN_MOTHERSHIP_CORE)
 
 
 def _is_build_ability(abil_name: str) -> bool:
-    return abil_name.endswith("Build")
+    return abil_name.endswith("Build") or abil_name.endswith("AddOns")
 
 
 def _is_research_ability(abil_name: str) -> bool:
@@ -324,16 +349,10 @@ def _is_research_ability(abil_name: str) -> bool:
 def _is_valid_produce_target(prod_data: dict) -> bool:
     """Check if a produced unit is valid (not mercenary or campaign)."""
     prod_race = prod_data.get("Race", "")
-    return bool(
-        prod_race
-        and prod_race not in (RACE_NA, RACE_NOT_FOUND, "")
-        and not is_campaign_unit(prod_data)
-    )
+    return bool(prod_race and prod_race not in (RACE_NA, RACE_NOT_FOUND, "") and not is_campaign_unit(prod_data))
 
 
-def _accumulate_morphsto(
-    current: str | list[str] | None, new_targets: str | list[str]
-) -> str | list[str]:
+def _accumulate_morphsto(current: str | list[str] | None, new_targets: str | list[str]) -> str | list[str]:
     """Accumulate morphsto targets, handling string vs list conversion."""
     if current is None:
         return new_targets
@@ -417,6 +436,9 @@ def generate_techtree() -> dict:
     # Build ability indices
     ability_produces, ability_upgrades = _build_ability_indices(abils_data)
 
+    # Build ability to structures mapping from unit AbilArray
+    ability_to_structures = _build_ability_to_structures_mapping(units_data)
+
     # Build unlocks mapping
     unlocks, unit_requirements = _build_unlocks_mapping(ability_produces, units_data)
 
@@ -448,22 +470,32 @@ def generate_techtree() -> dict:
 
             if abil_name in ability_produces:
                 for produced_unit, req in ability_produces[abil_name]:
-                    if _is_train_ability(abil_name) and _match_ability_to_structure(abil_name, unit_name):
+                    if _is_train_ability(abil_name) and _match_ability_to_structure(
+                        abil_name, unit_name, ability_to_structures, require_prefix_match=True
+                    ):
                         if not is_campaign_unit(units_data.get(produced_unit, {})):
                             produces.append(produced_unit)
                     elif _is_build_ability(abil_name):
-                        # Exclude mercenary buildings (Race=NOT_FOUND or N/A) and campaign units
-                        if produced_unit in units_data:
-                            prod_data = units_data[produced_unit]
-                            if _is_valid_produce_target(prod_data):
-                                builds.append(produced_unit)
-                        else:
+                        # For build abilities, include units not in units_data (e.g., tech labs)
+                        # Also include units in units_data even if they have empty race (tech labs)
+                        if produced_unit not in units_data:
                             builds.append(produced_unit)
-                    elif _is_research_ability(abil_name) and _match_ability_to_structure(abil_name, unit_name, check_shared_exclude=True):
+                        else:
+                            prod_data = units_data[produced_unit]
+                            # Include for build abilities even if race is null/empty
+                            # (tech labs have empty race but are valid build targets)
+                            prod_race = prod_data.get("Race", "")
+                            if prod_race and prod_race not in (RACE_NA, RACE_NOT_FOUND, "") or not prod_race:
+                                builds.append(produced_unit)
+                    elif _is_research_ability(abil_name) and _match_ability_to_structure(
+                        abil_name, unit_name, ability_to_structures, check_shared_exclude=True
+                    ):
                         if produced_unit not in RESEARCH_EXCLUDE and produced_unit not in excludes:
                             researches.append(produced_unit)
 
-            if abil_name in ability_upgrades and _match_ability_to_structure(abil_name, unit_name, check_shared_exclude=True):
+            if abil_name in ability_upgrades and _match_ability_to_structure(
+                abil_name, unit_name, ability_to_structures, check_shared_exclude=True
+            ):
                 for upgrade in ability_upgrades[abil_name]:
                     if upgrade not in RESEARCH_EXCLUDE and upgrade not in excludes:
                         researches.append(upgrade)

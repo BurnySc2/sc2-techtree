@@ -104,11 +104,7 @@ def _should_replace_all_buttons(override_lb: list, base_lb: list) -> bool:
     override_indices = [btn.get("index") for btn in override_lb if isinstance(btn, dict)]
     explicit_indices = [idx for idx in override_indices if idx is not None]
 
-    return (
-        len(override_lb) < len(base_lb)
-        and bool(explicit_indices)
-        and len(base_lb) > 0
-    )
+    return len(override_lb) < len(base_lb) and bool(explicit_indices) and len(base_lb) > 0
 
 
 def get_json_path(mod_name: str, data_type: str) -> Path:
