@@ -519,3 +519,121 @@ class TestResearchAbilities:
                 actual = ability[field]
                 assert isinstance(actual, (int, float)), f"{ability_name}.{field} should be numeric"
                 assert actual == expected_value, f"{ability_name}.{field} should be {expected_value}, got {actual}"
+
+
+class TestBFSReachability:
+    """Tests for BFS reachability through the techtree graph."""
+
+    TRAVERSE_KEYS = ["produces", "builds", "researches", "morphsto", "unlocks"]
+
+    def reachable(self, computed_data: dict, start_units: list[str]) -> set[str]:
+        """Do BFS from starting units through the techtree graph."""
+        visited: set[str] = set()
+        queue: list[str] = list(start_units)
+
+        structures = computed_data.get("Structures", {})
+        units = computed_data.get("Units", {})
+        upgrades = computed_data.get("Upgrades", {})
+
+        while queue:
+            current = queue.pop(0)
+            if current in visited:
+                continue
+            visited.add(current)
+
+            # Check structures
+            if current in structures:
+                entry = structures[current]
+                for key in self.TRAVERSE_KEYS:
+                    if key in entry:
+                        value = entry[key]
+                        if isinstance(value, list):
+                            queue.extend(value)
+                        elif isinstance(value, str) and value:
+                            queue.append(value)
+
+            # Check units
+            if current in units:
+                entry = units[current]
+                for key in self.TRAVERSE_KEYS:
+                    if key in entry:
+                        value = entry[key]
+                        if isinstance(value, list):
+                            queue.extend(value)
+                        elif isinstance(value, str) and value:
+                            queue.append(value)
+
+            # Check upgrades
+            if current in upgrades:
+                entry = upgrades[current]
+                for key in self.TRAVERSE_KEYS:
+                    if key in entry:
+                        value = entry[key]
+                        if isinstance(value, list):
+                            queue.extend(value)
+                        elif isinstance(value, str) and value:
+                            queue.append(value)
+
+        return visited
+
+    def test_terran_fusion_core_reachable(self, computed_data: dict) -> None:
+        """Test Fusion Core is reachable from SCV."""
+        reachable = self.reachable(computed_data, ["SCV"])
+        assert "FusionCore" in reachable, "FusionCore should be reachable from SCV"
+
+    def test_terran_starport_techlab_upgrades_reachable(self, computed_data: dict) -> None:
+        """Test Banshee upgrades are reachable from SCV via Starport + Tech Lab."""
+        reachable = self.reachable(computed_data, ["SCV"])
+        assert "BansheeCloak" in reachable, "BansheeCloak should be reachable from SCV"
+        assert "BansheeSpeed" in reachable, "BansheeSpeed should be reachable from SCV"
+
+    def test_terran_banshee_reachable(self, computed_data: dict) -> None:
+        """Test Banshee is reachable from SCV."""
+        reachable = self.reachable(computed_data, ["SCV"])
+        assert "Banshee" in reachable, "Banshee should be reachable from SCV"
+
+    def test_zerg_hive_reachable(self, computed_data: dict) -> None:
+        """Test Hive is reachable from Larva."""
+        reachable = self.reachable(computed_data, ["Larva"])
+        assert "Hive" in reachable, "Hive should be reachable from Larva"
+
+    def test_zerg_greater_spire_reachable(self, computed_data: dict) -> None:
+        """Test GreaterSpire is reachable from Larva."""
+        reachable = self.reachable(computed_data, ["Larva"])
+        assert "GreaterSpire" in reachable, "GreaterSpire should be reachable from Larva"
+
+    def test_zerg_baneling_reachable(self, computed_data: dict) -> None:
+        """Test Baneling is reachable from Larva."""
+        reachable = self.reachable(computed_data, ["Larva"])
+        assert "Baneling" in reachable, "Baneling should be reachable from Larva"
+
+    def test_zerg_ravager_reachable(self, computed_data: dict) -> None:
+        """Test Ravager is reachable from Larva."""
+        reachable = self.reachable(computed_data, ["Larva"])
+        assert "Ravager" in reachable, "Ravager should be reachable from Larva"
+
+    def test_zerg_lurker_upgrades_reachable(self, computed_data: dict) -> None:
+        """Test Lurker MP upgrades are reachable from Larva."""
+        reachable = self.reachable(computed_data, ["Larva"])
+        assert "LurkerMP" in reachable, "LurkerMP should be reachable from Larva"
+
+    def test_protoss_fleet_beacon_reachable(self, computed_data: dict) -> None:
+        """Test FleetBeacon is reachable from Probe."""
+        reachable = self.reachable(computed_data, ["Probe"])
+        assert "FleetBeacon" in reachable, "FleetBeacon should be reachable from Probe"
+
+    def test_protoss_tempest_reachable(self, computed_data: dict) -> None:
+        """Test Tempest is reachable from Probe."""
+        reachable = self.reachable(computed_data, ["Probe"])
+        assert "Tempest" in reachable, "Tempest should be reachable from Probe"
+
+    def test_protoss_oracle_reachable(self, computed_data: dict) -> None:
+        """Test Oracle is reachable from Probe."""
+        reachable = self.reachable(computed_data, ["Probe"])
+        assert "Oracle" in reachable, "Oracle should be reachable from Probe"
+
+    def test_campaign_units_not_reachable(self, computed_data: dict) -> None:
+        """Test that campaign units are NOT reachable (filtered from techtree)."""
+        reachable = self.reachable(computed_data, ["SCV"])
+        # Campaign units should be filtered out, so Sirius should not be in the reachable set
+        assert "Sirius" not in reachable, "Campaign unit Sirius should not be reachable from SCV"
