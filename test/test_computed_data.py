@@ -653,3 +653,21 @@ class TestQueenBuildTime:
         queen = computed_data["Units"]["Queen"]
         assert "time" in queen, "Queen should have time field"
         assert queen["time"] == 50, f"Queen time should be 50, got {queen.get('time')}"
+
+
+class TestHiveBuildTime:
+    def test_hive_build_time(self, computed_data: dict) -> None:
+        """Hive should have a morph time of 100 seconds."""
+        hive = computed_data["Units"]["Hive"]
+        assert "time" in hive, "Hive should have time field"
+        assert hive["time"] == 100, f"Hive time should be 100, got {hive.get('time')}"
+
+    def test_baneling_build_time(self, computed_data: dict) -> None:
+        baneling = computed_data["Units"]["Baneling"]
+        assert "time" in baneling, "Baneling should have time field"
+        assert baneling["time"] == 35, f"Baneling time should be 35, got {baneling.get('time')}"
+
+    def test_lurker_build_time(self, computed_data: dict) -> None:
+        lurker = computed_data["Units"]["LurkerMP"]
+        assert "time" in lurker, "LurkerMP should have time field"
+        assert lurker["time"] == 25, f"LurkerMP time should be 25, got {lurker.get('time')}"

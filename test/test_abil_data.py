@@ -83,3 +83,26 @@ class TestStimpack:
         cost = ss["Cost"]
         assert "Vital" in cost
         assert cost["Vital"].get("Life") == 10
+
+
+class TestUpgradeToHive:
+    def test_upgrade_to_hive_key_exists(self, abil_data: dict) -> None:
+        assert "UpgradeToHive" in abil_data
+
+    def test_upgrade_to_hive_time_is_100(self, abil_data: dict) -> None:
+        hive = abil_data["UpgradeToHive"]
+        assert "InfoArray" in hive
+        info = hive["InfoArray"]
+        assert "SectionArray" in info
+        section_array = info["SectionArray"]
+        # Check that some section has DurationArray with Delay or Duration of 100
+        found_100 = False
+        for section in section_array:
+            if isinstance(section, dict):
+                duration_array = section.get("DurationArray", {})
+                if isinstance(duration_array, dict) and (
+                    duration_array.get("Delay") == 100 or duration_array.get("Duration") == 100
+                ):
+                    found_100 = True
+                    break
+        assert found_100, "Expected to find Delay or Duration of 100 in DurationArray"

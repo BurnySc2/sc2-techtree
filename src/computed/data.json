@@ -13781,6 +13781,7 @@
         "ZergFlyerWeaponsLevel2",
         "ZergFlyerWeaponsLevel3"
       ],
+      "time": 100,
       "type": "structure"
     },
     "GuardianCocoonMP": {
@@ -14881,6 +14882,7 @@
         "overlordspeed",
         "overlordtransport"
       ],
+      "time": 100,
       "type": "structure",
       "unlocks": [
         "UltraliskCavern",
@@ -16269,6 +16271,7 @@
       "id": 7,
       "name": "InfestorTerran",
       "race": "Zerg",
+      "time": 4.875,
       "type": "unit"
     },
     "Lair": {
@@ -16460,6 +16463,7 @@
         "overlordspeed",
         "overlordtransport"
       ],
+      "time": 80,
       "type": "structure",
       "unlocks": [
         "HydraliskDen",
@@ -18977,6 +18981,7 @@
         "SCV"
       ],
       "race": "Terran",
+      "time": 35,
       "type": "unit"
     },
     "OrbitalCommandFlying": {
@@ -20092,6 +20097,7 @@
         "SCV"
       ],
       "race": "Terran",
+      "time": 50,
       "type": "unit"
     },
     "Probe": {
@@ -25332,6 +25338,7 @@
       "morphsto": "SwarmHostMP",
       "name": "SwarmHostBurrowedMP",
       "race": "Zerg",
+      "time": 2.5,
       "type": "unit"
     },
     "SwarmHostMP": {
@@ -27405,6 +27412,7 @@
       "id": 133,
       "name": "WarpGate",
       "race": "Protoss",
+      "time": 10,
       "type": "unit"
     },
     "WarpPrism": {

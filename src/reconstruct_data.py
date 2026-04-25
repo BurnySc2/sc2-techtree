@@ -153,15 +153,48 @@ def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
 
             info_array = entry.get("InfoArray", [])
             if isinstance(info_array, dict):
-                # Handle single-entry InfoArray (e.g., TrainQueen)
                 unit_name = info_array.get("Unit", "")
+
+                # Skip if unit_name is not a string (can be dict like {'value': 'LocustMP'})
+                if not isinstance(unit_name, str):
+                    continue
+
+                # First, check for direct Time field (e.g., TrainQueen with time=50)
+                # This takes priority over SectionArray for train abilities
                 time_str = info_array.get("Time", "0")
                 if unit_name and time_str and time_str != "0":
                     try:
                         time_val = float(time_str) if "." in time_str else int(time_str)
                         unit_build_times[unit_name] = time_val
+                        # Don't process SectionArray if we already have Time
+                        continue
                     except (ValueError, TypeError):
                         pass
+
+                # Fall back to SectionArray.Delay pattern for morph abilities (e.g., UpgradeToHive)
+                # Use max delay since morph build times tend to be longer than animation times
+                section_array = info_array.get("SectionArray", [])
+                if isinstance(section_array, list) and unit_name:
+                    max_delay: float | None = None
+                    for section in section_array:
+                        if not isinstance(section, dict):
+                            continue
+                        duration_array = section.get("DurationArray", {})
+                        if isinstance(duration_array, dict):
+                            delay = duration_array.get("Delay")
+                            if delay is not None and delay != 0:
+                                try:
+                                    delay_val = (
+                                        float(delay)
+                                        if isinstance(delay, float) or (isinstance(delay, str) and "." in delay)
+                                        else int(delay)
+                                    )
+                                    if max_delay is None or delay_val > max_delay:
+                                        max_delay = delay_val
+                                except (ValueError, TypeError):
+                                    pass
+                    if max_delay is not None:
+                        unit_build_times[unit_name] = max_delay
             elif isinstance(info_array, list):
                 for item in info_array:
                     if not isinstance(item, dict):
@@ -176,6 +209,34 @@ def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
                             unit_build_times[unit_name] = time_val
                         except (ValueError, TypeError):
                             pass
+
+                    # Fall back to SectionArray.Delay pattern for list items (e.g., MorphToLurker)
+                    # Keep max delay across all abilities (not just skip if already exists)
+                    if not isinstance(unit_name, str) or not unit_name:
+                        continue
+
+                    section_array = item.get("SectionArray", [])
+                    if isinstance(section_array, list):
+                        max_delay: float | None = None
+                        for section in section_array:
+                            if not isinstance(section, dict):
+                                continue
+                            duration_array = section.get("DurationArray", {})
+                            if isinstance(duration_array, dict):
+                                delay = duration_array.get("Delay")
+                                if delay is not None and delay != 0:
+                                    try:
+                                        delay_val = (
+                                            float(delay)
+                                            if isinstance(delay, float) or (isinstance(delay, str) and "." in delay)
+                                            else int(delay)
+                                        )
+                                        if max_delay is None or delay_val > max_delay:
+                                            max_delay = delay_val
+                                    except (ValueError, TypeError):
+                                        pass
+                        if max_delay is not None:
+                            unit_build_times[unit_name] = max_delay
 
     return unit_build_times
 
