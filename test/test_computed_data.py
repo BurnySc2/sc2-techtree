@@ -53,61 +53,43 @@ class TestNexus:
 class TestStructuresResearches:
     """Structures should have 'researches' field with upgrade names."""
 
-    def test_twilight_council_has_researches(self, computed_data: dict) -> None:
-        """TwilightCouncil should research BlinkTech, Charge, AdeptPiercingAttack."""
-        twilight = computed_data["Units"]["TwilightCouncil"]
-        assert "researches" in twilight
-        assert "BlinkTech" in twilight["researches"]
-        assert "Charge" in twilight["researches"]
-        assert "AdeptPiercingAttack" in twilight["researches"]
-
-    def test_spire_has_researches(self, computed_data: dict) -> None:
-        """Spire should research ZergFlyerArmorsLevel1, etc."""
-        spire = computed_data["Units"]["Spire"]
-        assert "researches" in spire
-        assert "ZergFlyerArmorsLevel1" in spire["researches"]
-
-    def test_armory_has_researches(self, computed_data: dict) -> None:
-        """Armory should research vehicle/ship upgrades."""
-        armory = computed_data["Units"]["Armory"]
-        assert "researches" in armory
-        assert "TerranVehicleWeaponsLevel1" in armory["researches"]
-
-    def test_hatchery_has_researches(self, computed_data: dict) -> None:
-        """Hatchery should research Burrow, overlordspeed, overlordtransport."""
-        hatchery = computed_data["Units"]["Hatchery"]
-        assert "researches" in hatchery
-        assert "Burrow" in hatchery["researches"]
+    @pytest.mark.parametrize(
+        "structure,expected_research",
+        [
+            ("TwilightCouncil", "BlinkTech"),
+            ("TwilightCouncil", "Charge"),
+            ("TwilightCouncil", "AdeptPiercingAttack"),
+            ("Spire", "ZergFlyerArmorsLevel1"),
+            ("Armory", "TerranVehicleWeaponsLevel1"),
+            ("Hatchery", "Burrow"),
+        ],
+    )
+    def test_structure_has_researches(self, computed_data: dict, structure: str, expected_research: str) -> None:
+        """Each structure should have 'researches' field containing expected upgrade names."""
+        unit = computed_data["Units"][structure]
+        assert "researches" in unit
+        assert expected_research in unit["researches"]
 
 
 class TestStructuresProduces:
     """Structures should have 'produces' field with unit names."""
 
-    def test_hatchery_produces_queen(self, computed_data: dict) -> None:
-        """Hatchery should produce Queen."""
-        hatchery = computed_data["Units"]["Hatchery"]
-        assert "produces" in hatchery
-        assert "Queen" in hatchery["produces"]
-
-    def test_barracks_produces_marine_reaper(self, computed_data: dict) -> None:
-        """Barracks should produce Marine, Reaper, Marauder, Ghost."""
-        barracks = computed_data["Units"]["Barracks"]
-        assert "produces" in barracks
-        assert "Marine" in barracks["produces"]
-        assert "Reaper" in barracks["produces"]
-
-    def test_gateway_produces_zealot_stalker(self, computed_data: dict) -> None:
-        """Gateway should produce Zealot, Stalker, Sentry, etc."""
-        gateway = computed_data["Units"]["Gateway"]
-        assert "produces" in gateway
-        assert "Zealot" in gateway["produces"]
-        assert "Stalker" in gateway["produces"]
-
-    def test_orbital_command_produces_scv(self, computed_data: dict) -> None:
-        """OrbitalCommand should produce SCV."""
-        orbital = computed_data["Units"]["OrbitalCommand"]
-        assert "produces" in orbital
-        assert "SCV" in orbital["produces"]
+    @pytest.mark.parametrize(
+        "structure,produces",
+        [
+            ("Hatchery", "Queen"),
+            ("Barracks", "Marine"),
+            ("Barracks", "Reaper"),
+            ("Gateway", "Zealot"),
+            ("Gateway", "Stalker"),
+            ("OrbitalCommand", "SCV"),
+        ],
+    )
+    def test_structure_produces(self, computed_data: dict, structure: str, produces: str) -> None:
+        """Each structure should have 'produces' field containing expected unit names."""
+        unit = computed_data["Units"][structure]
+        assert "produces" in unit
+        assert produces in unit["produces"]
 
 
 class TestStructuresMorphsto:
@@ -262,45 +244,37 @@ class TestUpgradesNotEmpty:
 class TestStructuresUnlocks:
     """Structures should have 'unlocks' field linking to units/structures."""
 
-    def test_barracks_unlocks_factory(self, computed_data: dict) -> None:
-        """Barracks should unlock Factory."""
-        barracks = computed_data["Units"]["Barracks"]
-        assert "unlocks" in barracks
-        assert "Factory" in barracks["unlocks"]
-
-    def test_spawning_pool_unlocks_zergling(self, computed_data: dict) -> None:
-        """SpawningPool should unlock Zergling."""
-        pool = computed_data["Units"]["SpawningPool"]
-        assert "unlocks" in pool
-        assert "Zergling" in pool["unlocks"]
-
-    def test_cybernetics_core_unlocks_stargate(self, computed_data: dict) -> None:
-        """CyberneticsCore should unlock Stargate."""
-        core = computed_data["Units"]["CyberneticsCore"]
-        assert "unlocks" in core
-        assert "Stargate" in core["unlocks"]
+    @pytest.mark.parametrize(
+        "structure,unlocks",
+        [
+            ("Barracks", "Factory"),
+            ("SpawningPool", "Zergling"),
+            ("CyberneticsCore", "Stargate"),
+        ],
+    )
+    def test_structure_unlocks(self, computed_data: dict, structure: str, unlocks: str) -> None:
+        """Each structure should have 'unlocks' field containing expected unit/structure names."""
+        unit = computed_data["Units"][structure]
+        assert "unlocks" in unit
+        assert unlocks in unit["unlocks"]
 
 
 class TestUnitsBuilds:
     """Units should have 'builds' field for structures they can build."""
 
-    def test_drone_builds_spawning_pool(self, computed_data: dict) -> None:
-        """Drone should build SpawningPool."""
-        drone = computed_data["Units"]["Drone"]
-        assert "builds" in drone
-        assert "SpawningPool" in drone["builds"]
-
-    def test_probe_builds_gateway(self, computed_data: dict) -> None:
-        """Probe should build Gateway."""
-        probe = computed_data["Units"]["Probe"]
-        assert "builds" in probe
-        assert "Gateway" in probe["builds"]
-
-    def test_scv_builds_barracks(self, computed_data: dict) -> None:
-        """SCV should build Barracks."""
-        scv = computed_data["Units"]["SCV"]
-        assert "builds" in scv
-        assert "Barracks" in scv["builds"]
+    @pytest.mark.parametrize(
+        "unit,builds",
+        [
+            ("Drone", "SpawningPool"),
+            ("Probe", "Gateway"),
+            ("SCV", "Barracks"),
+        ],
+    )
+    def test_unit_builds(self, computed_data: dict, unit: str, builds: str) -> None:
+        """Each unit should have 'builds' field containing expected structure names."""
+        u = computed_data["Units"][unit]
+        assert "builds" in u
+        assert builds in u["builds"]
 
 
 class TestTechtreeResearchesInUpgrades:

@@ -23,30 +23,11 @@ class TestStargateTrain:
     def test_stargate_train_key_exists(self, abil_data: dict) -> None:
         assert "StargateTrain" in abil_data
 
-    def test_stargate_train_info_array_contains_carrier(self, abil_data: dict) -> None:
+    @pytest.mark.parametrize("unit_name", ["Carrier", "Oracle", "Phoenix", "VoidRay", "Tempest"])
+    def test_stargate_train_info_array_contains(self, abil_data: dict, unit_name: str) -> None:
         st = abil_data["StargateTrain"]
         indexes = {entry.get("Unit") for entry in st.get("InfoArray", []) if isinstance(entry, dict)}
-        assert "Carrier" in indexes
-
-    def test_stargate_train_info_array_contains_oracle(self, abil_data: dict) -> None:
-        st = abil_data["StargateTrain"]
-        indexes = {entry.get("Unit") for entry in st.get("InfoArray", []) if isinstance(entry, dict)}
-        assert "Oracle" in indexes
-
-    def test_stargate_train_info_array_contains_phoenix(self, abil_data: dict) -> None:
-        st = abil_data["StargateTrain"]
-        indexes = {entry.get("Unit") for entry in st.get("InfoArray", []) if isinstance(entry, dict)}
-        assert "Phoenix" in indexes
-
-    def test_stargate_train_info_array_contains_void_ray(self, abil_data: dict) -> None:
-        st = abil_data["StargateTrain"]
-        indexes = {entry.get("Unit") for entry in st.get("InfoArray", []) if isinstance(entry, dict)}
-        assert "VoidRay" in indexes
-
-    def test_stargate_train_info_array_contains_tempest(self, abil_data: dict) -> None:
-        st = abil_data["StargateTrain"]
-        indexes = {entry.get("Unit") for entry in st.get("InfoArray", []) if isinstance(entry, dict)}
-        assert "Tempest" in indexes
+        assert unit_name in indexes
 
 
 class TestOracleRevelation:
@@ -75,12 +56,8 @@ class TestBarracksAddOns:
     def test_barracks_add_ons_exists(self, abil_data: dict) -> None:
         assert "BarracksAddOns" in abil_data
 
-    def test_barracks_add_ons_contains_barracks_tech_lab(self, abil_data: dict) -> None:
+    @pytest.mark.parametrize("unit_name", ["BarracksTechLab", "BarracksReactor"])
+    def test_barracks_add_ons_contains(self, abil_data: dict, unit_name: str) -> None:
         bra = abil_data["BarracksAddOns"]
         indexes = {entry.get("Unit") for entry in bra.get("InfoArray", []) if isinstance(entry, dict)}
-        assert "BarracksTechLab" in indexes
-
-    def test_barracks_add_ons_contains_barracks_reactor(self, abil_data: dict) -> None:
-        bra = abil_data["BarracksAddOns"]
-        indexes = {entry.get("Unit") for entry in bra.get("InfoArray", []) if isinstance(entry, dict)}
-        assert "BarracksReactor" in indexes
+        assert unit_name in indexes
