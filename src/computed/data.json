@@ -14,8 +14,7 @@
       "Cost": {
         "Vital": {
           "Energy": 150
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": {
@@ -120,6 +119,8 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
+        "IgnoreFacing": 1,
+        "IgnorePlacement": 0,
         "WaitUntilStopped": 0
       },
       "InfoArray": {
@@ -386,8 +387,12 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
@@ -427,8 +432,12 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.25",
@@ -468,8 +477,12 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
@@ -509,8 +522,11 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
@@ -543,15 +559,21 @@
       "AbilSetId": "BrwD",
       "ActorKey": "BurrowDown",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowDown",
         "Flags": {
           "ShowInGlossary": 0
         },
+        "Requirements": "UseBurrow",
         "index": "Execute"
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
@@ -623,8 +645,12 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.25",
@@ -664,8 +690,11 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.1",
@@ -705,8 +734,11 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.1",
@@ -739,15 +771,20 @@
       "AbilSetId": "BrwD",
       "ActorKey": "BurrowDown",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowDown",
         "Flags": {
           "ShowInGlossary": 0
         },
+        "Requirements": "UseBurrow",
         "index": "Execute"
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.25",
@@ -795,8 +832,12 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
@@ -1047,10 +1088,15 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": ""
+        },
+        "Cooldown": {
+          "Link": ""
+        },
         "Vital": {
           "Energy": 125
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": {
@@ -1319,6 +1365,7 @@
     "FungalGrowth": {
       "Alignment": "Negative",
       "CmdButtonArray": {
+        "DefaultButtonFace": "FungalGrowth",
         "Flags": {
           "ToSelection": 1
         },
@@ -1496,7 +1543,9 @@
         "Cooldown": {
           "TimeUse": "18"
         },
-        "index": "0"
+        "Vital": {
+          "Energy": 75
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1519,8 +1568,7 @@
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1534,14 +1582,14 @@
     },
     "HallucinationArchon": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Archon",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1555,14 +1603,14 @@
     },
     "HallucinationColossus": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Colossus",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1582,8 +1630,7 @@
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1597,14 +1644,14 @@
     },
     "HallucinationHighTemplar": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "HighTemplar",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1618,14 +1665,14 @@
     },
     "HallucinationImmortal": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Immortal",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1639,14 +1686,14 @@
     },
     "HallucinationOracle": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Oracle",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1660,14 +1707,14 @@
     },
     "HallucinationPhoenix": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Phoenix",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1681,14 +1728,14 @@
     },
     "HallucinationProbe": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Probe",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1702,14 +1749,14 @@
     },
     "HallucinationStalker": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Stalker",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1723,14 +1770,14 @@
     },
     "HallucinationVoidRay": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "VoidRay",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
       "Effect": {
@@ -1744,14 +1791,14 @@
     },
     "HallucinationWarpPrism": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "WarpPrism",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1765,14 +1812,14 @@
     },
     "HallucinationZealot": {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Zealot",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1831,8 +1878,7 @@
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "AbilityorEffectType:Units",
       "Effect": {
@@ -1851,6 +1897,7 @@
         }
       },
       "ProgressButtonArray": {
+        "Channel": "Hyperjump",
         "Prep": "Hyperjump"
       },
       "Range": 500,
@@ -1858,6 +1905,7 @@
         "Channel": 1
       },
       "UninterruptibleArray": {
+        "Channel": 1,
         "Finish": 1,
         "Prep": 1
       },
@@ -1868,6 +1916,7 @@
       "CastIntroTime": 0,
       "CastOutroTime": 0,
       "CmdButtonArray": {
+        "DefaultButtonFace": "InfestedTerrans",
         "Flags": {
           "ToSelection": 1
         },
@@ -1876,8 +1925,7 @@
       "Cost": {
         "Vital": {
           "Energy": 50
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": {
@@ -1925,8 +1973,7 @@
       "Cost": {
         "Cooldown": {
           "TimeUse": "20"
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Range": 5,
@@ -2205,14 +2252,16 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": ""
+        },
         "Cooldown": {
           "Link": "Abil/MassRecall",
           "TimeUse": "125"
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": {
         "0": "MothershipStrategicRecallSearch"
@@ -2283,8 +2332,7 @@
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
@@ -2464,7 +2512,16 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
         "IgnoreFacing": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "Rally": 0,
+        "ShowProgress": 1,
+        "SuppressMovement": 1,
         "WaitUntilStopped": 0
       },
       "InfoArray": [
@@ -3115,7 +3172,17 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
         "IgnoreFacing": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "Rally": 1,
+        "RallyReset": 1,
+        "ShowProgress": 1,
+        "SuppressMovement": 1,
         "WaitUntilStopped": 0
       },
       "InfoArray": [
@@ -3250,7 +3317,8 @@
     },
     "MorphToOverseer": {
       "AbilClassEnableArray": {
-        "CAbilMove": 1
+        "CAbilMove": 1,
+        "CAbilStop": 1
       },
       "ActorKey": "OverseerMut",
       "Alert": "MorphComplete_Zerg",
@@ -3275,7 +3343,15 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "BestUnit": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
         "IgnoreFacing": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "Rally": 0,
+        "ShowProgress": 1,
+        "SuppressMovement": 1,
         "WaitUntilStopped": 0
       },
       "InfoArray": [
@@ -3339,7 +3415,17 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
         "IgnoreFacing": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "Rally": 1,
+        "RallyReset": 1,
+        "ShowProgress": 1,
+        "SuppressMovement": 1,
         "WaitUntilStopped": 0
       },
       "InfoArray": [
@@ -3421,8 +3507,13 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "RallyReset": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RallyResetPhase": "Delay",
@@ -3452,6 +3543,7 @@
       "AbilSetId": "BrwU",
       "ActorKey": "BurrowUp",
       "CmdButtonArray": {
+        "DefaultButtonFace": "MorphToSwarmHostMP",
         "Flags": {
           "ShowInGlossary": 0
         },
@@ -3459,8 +3551,11 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnoreUnitCost": 1,
+        "RallyReset": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.5",
@@ -3643,10 +3738,13 @@
         }
       ],
       "Cost": {
+        "Cooldown": {
+          "Link": "Abil/Leech",
+          "Location": "Unit"
+        },
         "Vital": {
           "Energy": 100
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": {
@@ -3882,8 +3980,7 @@
         },
         "Vital": {
           "Energy": 25
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": "OracleRevelationSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -3946,12 +4043,16 @@
         }
       ],
       "Cost": {
+        "Charge": {
+          "Link": "Abil/OracleWeapon"
+        },
         "Cooldown": {
           "TimeUse": "4"
         },
         "Vital": {
           "Energy": 25
-        }
+        },
+        "index": "0"
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
@@ -4066,8 +4167,7 @@
       "Cost": {
         "Vital": {
           "Energy": 125
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": {
@@ -4356,8 +4456,7 @@
         },
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": "PsiStormSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -4383,10 +4482,12 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": "Abil/PurificationNovaTargetted"
+        },
         "Cooldown": {
           "TimeUse": "23.8"
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
       "Effect": {
@@ -4645,8 +4746,7 @@
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": "ResourceStunDummyCastSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -4733,8 +4833,7 @@
       "Cost": {
         "Resource": {
           "Minerals": -75
-        },
-        "index": "0"
+        }
       },
       "Name": "Abil/Name/SalvageBunkerRefund",
       "id": 1625,
@@ -4801,6 +4900,7 @@
       "CursorEffect": "ScannerSweep",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
+        "RequireTargetVision": 0,
         "Transient": 1
       },
       "Range": 500,
@@ -4813,14 +4913,20 @@
       "Arc": 29.9926,
       "ArcSlop": 0,
       "CmdButtonArray": {
+        "DefaultButtonFace": "HunterSeekerMissile",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": "Abil/HunterSeekerMissile"
+        },
+        "Cooldown": {
+          "Link": "Abil/HunterSeekerMissile"
+        },
         "Vital": {
           "Energy": 125
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": {
@@ -4935,12 +5041,17 @@
     "SiegeMode": {
       "AbilSetId": "SiegeMode",
       "CmdButtonArray": {
+        "DefaultButtonFace": "SiegeMode",
+        "Flags": {
+          "ToSelection": 1
+        },
         "Requirements": "",
         "index": "Execute"
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
-        "IgnoreCollision": 0
+        "IgnoreCollision": 0,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.5",
@@ -4994,8 +5105,7 @@
       "Cost": {
         "Vital": {
           "Energy": 50
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": {
@@ -5271,7 +5381,9 @@
         "Cooldown": {
           "TimeUse": "1"
         },
-        "index": "0"
+        "Vital": {
+          "Life": 10
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
@@ -5296,10 +5408,15 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": "Abil/Stimpack"
+        },
         "Cooldown": {
           "TimeUse": "1"
         },
-        "index": "0"
+        "Vital": {
+          "Life": 20
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
@@ -5458,8 +5575,7 @@
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": {
         "0": "TemporalFieldAfterBubbleSearchArea"
@@ -5740,8 +5856,7 @@
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "AbilityorEffectType:Units,Race:Terran",
       "Effect": {
@@ -5768,6 +5883,7 @@
       "Alignment": "Positive",
       "CastIntroTime": 0.2,
       "CmdButtonArray": {
+        "DefaultButtonFace": "Transfusion",
         "Requirements": "QueenOnCreep",
         "index": "Execute"
       },
@@ -6173,7 +6289,13 @@
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
         "AutoCast": 1,
-        "AutoCastOn": 1
+        "AutoCastOn": 1,
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
+        "Produce": 1,
+        "ShowProgress": 1
       },
       "InfoArray": {
         "SectionArray": [
@@ -6222,7 +6344,10 @@
         "0": "ViperConsumeStructureLaunchMissile"
       },
       "Flags": {
+        "AllowMovement": 1,
         "BestUnit": 0,
+        "DeferCooldown": 1,
+        "NoDeceleration": 1,
         "WaitToSpend": 1
       },
       "Range": 7,
@@ -6913,12 +7038,14 @@
       "GlossaryStrongArray": {
         "0": "Marine",
         "1": "Zergling",
-        "2": "Zealot"
+        "2": "Zealot",
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "0": "Marauder",
         "1": "Roach",
-        "2": "Stalker"
+        "2": "Stalker",
+        "value": "Roach"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -6959,6 +7086,7 @@
       "requires": [
         "CyberneticsCore"
       ],
+      "time": 42,
       "type": "unit"
     },
     "Armory": {
@@ -7050,11 +7178,18 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
+        "Minerals": 150,
         "Vespene": 50
       },
       "DeathRevealRadius": 3,
@@ -7114,6 +7249,7 @@
         "TerranVehicleWeaponsLevel2",
         "TerranVehicleWeaponsLevel3"
       ],
+      "time": 65,
       "type": "structure",
       "unlocks": [
         "HellionTank",
@@ -7146,8 +7282,14 @@
         }
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -7200,6 +7342,7 @@
       "id": 61,
       "name": "Assimilator",
       "race": "Protoss",
+      "time": 30,
       "type": "structure"
     },
     "Baneling": {
@@ -7243,7 +7386,9 @@
       "Attributes": {
         "Biological": 1
       },
-      "BehaviorArray": {},
+      "BehaviorArray": {
+        "Link": "BanelingExplode"
+      },
       "CardLayouts": {
         "LayoutButtons": [
           {
@@ -7468,7 +7613,10 @@
       "CargoOverlapFilters": "-;Player,Ally,Neutral,Structure",
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -7496,10 +7644,14 @@
       "GlossaryPriority": 60,
       "GlossaryStrongArray": {
         "1": "Zergling",
-        "2": "Zealot"
+        "2": "Zealot",
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
-        "1": "Infestor"
+        "0": "Marauder",
+        "1": "Infestor",
+        "2": "Stalker",
+        "value": "Thor"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.375,
@@ -7549,6 +7701,7 @@
       "requires": [
         "BanelingNest"
       ],
+      "time": 35,
       "type": "unit"
     },
     "BanelingNest": {
@@ -7606,8 +7759,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -7662,6 +7821,7 @@
       "researches": [
         "CentrificalHooks"
       ],
+      "time": 60,
       "type": "structure",
       "unlocks": [
         "Baneling"
@@ -7767,10 +7927,12 @@
       "GlossaryStrongArray": {
         "0": "SiegeTank",
         "1": "Ravager",
-        "2": "Adept"
+        "2": "Adept",
+        "value": "SiegeTankSieged"
       },
       "GlossaryWeakArray": {
-        "0": "VikingFighter"
+        "0": "VikingFighter",
+        "value": "Marine"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -7806,6 +7968,7 @@
       "requires": [
         "AttachedTechLab"
       ],
+      "time": 60,
       "type": "unit"
     },
     "Barracks": {
@@ -7881,8 +8044,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -7947,6 +8116,7 @@
       "requires": [
         "SupplyDepot"
       ],
+      "time": 65,
       "type": "structure",
       "unlocks": [
         "Bunker",
@@ -8180,6 +8350,7 @@
         "ShieldWall",
         "Stimpack"
       ],
+      "time": 25,
       "type": "structure"
     },
     "Battlecruiser": {
@@ -8220,7 +8391,7 @@
         "Mechanical": 1
       },
       "BehaviorArray": {
-        "index": "0",
+        "Link": "MassiveVoidRayVulnerability",
         "removed": "1"
       },
       "CardLayouts": {
@@ -8317,7 +8488,9 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 210,
       "GlossaryStrongArray": {
-        "0": "Liberator"
+        "0": "Liberator",
+        "2": "Marine",
+        "value": "Thor"
       },
       "GlossaryWeakArray": {
         "value": "VikingFighter"
@@ -8366,10 +8539,12 @@
         "AttachedStarportTechLab",
         "FusionCore"
       ],
+      "time": 90,
       "type": "unit"
     },
     "BomberLaunchPad": {
       "name": "BomberLaunchPad",
+      "time": 30,
       "type": "structure"
     },
     "BroodLord": {
@@ -8399,7 +8574,7 @@
         "Massive": 1
       },
       "BehaviorArray": {
-        "index": "0",
+        "Link": "Frenzy",
         "removed": "1"
       },
       "CardLayouts": {
@@ -8477,10 +8652,13 @@
       "GlossaryStrongArray": {
         "0": "SiegeTank",
         "1": "Ultralisk",
-        "2": "HighTemplar"
+        "2": "HighTemplar",
+        "index": "Marine"
       },
       "GlossaryWeakArray": {
-        "2": "Tempest"
+        "1": "Corruptor",
+        "2": "Tempest",
+        "value": "VikingFighter"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -8668,8 +8846,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -8698,7 +8882,8 @@
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "2": "Immortal"
+        "2": "Immortal",
+        "value": "SiegeTankSieged"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "LifeArmor": 1,
@@ -8727,6 +8912,7 @@
       "requires": [
         "Barracks"
       ],
+      "time": 40,
       "type": "structure"
     },
     "Carrier": {
@@ -8758,7 +8944,7 @@
         "Mechanical": 1
       },
       "BehaviorArray": {
-        "index": "0",
+        "Link": "MassiveVoidRayVulnerability",
         "removed": "1"
       },
       "CardLayouts": {
@@ -8840,10 +9026,13 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 170,
       "GlossaryStrongArray": {
-        "0": "SiegeTank"
+        "0": "SiegeTank",
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
-        "2": "Tempest"
+        "1": "Corruptor",
+        "2": "Tempest",
+        "value": "VikingFighter"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -8886,6 +9075,7 @@
       "requires": [
         "FleetBeacon"
       ],
+      "time": 120,
       "type": "unit"
     },
     "CollapsiblePurifierTowerDebris": {
@@ -8897,7 +9087,13 @@
         "Link": "RockCrushSearch"
       },
       "Collide": {
-        "Locust": 1
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Destructible,ObjectFamily:Melee",
@@ -9265,7 +9461,7 @@
         "Mechanical": 1
       },
       "BehaviorArray": {
-        "index": "0",
+        "Link": "MassiveVoidRayVulnerability",
         "removed": "1"
       },
       "CardLayouts": {
@@ -9340,10 +9536,14 @@
       "GlossaryPriority": 130,
       "GlossaryStrongArray": {
         "1": "Zergling",
-        "2": "Zealot"
+        "2": "Zealot",
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
-        "2": "Tempest"
+        "0": "VikingFighter",
+        "1": "Corruptor",
+        "2": "Tempest",
+        "value": "Thor"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5625,
@@ -9386,6 +9586,7 @@
       "requires": [
         "RoboticsBay"
       ],
+      "time": 75,
       "type": "unit"
     },
     "CommandCenter": {
@@ -9520,8 +9721,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -9593,6 +9800,7 @@
         "SCV"
       ],
       "race": "Terran",
+      "time": 100,
       "type": "structure",
       "unlocks": [
         "EngineeringBay"
@@ -9843,11 +10051,14 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 140,
       "GlossaryStrongArray": {
+        "0": "Battlecruiser",
         "1": "BroodLord",
-        "2": "Tempest"
+        "2": "Tempest",
+        "value": "Phoenix"
       },
       "GlossaryWeakArray": {
-        "0": "Thor"
+        "0": "Thor",
+        "value": "VikingFighter"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -9887,6 +10098,7 @@
       "requires": [
         "Spire"
       ],
+      "time": 40,
       "type": "unit"
     },
     "CreepTumorQueen": {
@@ -9973,6 +10185,7 @@
       "id": 138,
       "name": "CreepTumorQueen",
       "race": "Zerg",
+      "time": 15,
       "type": "structure"
     },
     "CyberneticsCore": {
@@ -10063,8 +10276,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -10137,6 +10356,7 @@
         "ProtossAirWeaponsLevel3",
         "WarpGateResearch"
       ],
+      "time": 50,
       "type": "structure",
       "unlocks": [
         "Adept",
@@ -10244,6 +10464,7 @@
       },
       "CostCategory": "Army",
       "CostResource": {
+        "Minerals": 150,
         "Vespene": 100
       },
       "DamageDealtXP": 1,
@@ -10269,11 +10490,13 @@
       "GlossaryStrongArray": {
         "0": "Marauder",
         "1": "Roach",
-        "2": "Adept"
+        "2": "Adept",
+        "value": "Thor"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "2": "Immortal"
+        "2": "Immortal",
+        "value": "Marine"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.5,
@@ -10315,6 +10538,7 @@
       "requires": [
         "AttachedTechLab"
       ],
+      "time": 45,
       "type": "unit"
     },
     "DarkShrine": {
@@ -10372,8 +10596,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -10431,6 +10661,7 @@
       "requires": [
         "TwilightCouncil"
       ],
+      "time": 100,
       "type": "structure",
       "unlocks": [
         "DarkTemplar"
@@ -10535,7 +10766,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -10599,6 +10833,7 @@
       "requires": [
         "DarkShrine"
       ],
+      "time": 55,
       "type": "unit"
     },
     "DebrisRampLeft": {
@@ -10923,6 +11158,7 @@
     },
     "Digester": {
       "name": "Digester",
+      "time": 30,
       "type": "structure"
     },
     "Disruptor": {
@@ -11014,10 +11250,14 @@
       },
       "CargoSize": 4,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
+        "Minerals": 150,
         "Vespene": 150
       },
       "DamageDealtXP": 1,
@@ -11042,10 +11282,12 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 135,
       "GlossaryStrongArray": {
-        "2": "Stalker"
+        "2": "Stalker",
+        "value": "Marauder"
       },
       "GlossaryWeakArray": {
-        "2": "Tempest"
+        "2": "Tempest",
+        "value": "Thor"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5,
@@ -11085,6 +11327,7 @@
       "requires": [
         "RoboticsBay"
       ],
+      "time": 50,
       "type": "unit"
     },
     "Drone": {
@@ -11546,7 +11789,10 @@
       ],
       "CargoSize": 1,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -11615,6 +11861,7 @@
       "id": 104,
       "name": "Drone",
       "race": "Zerg",
+      "time": 17,
       "type": "structure"
     },
     "EngineeringBay": {
@@ -11683,8 +11930,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -11744,6 +11997,7 @@
         "TerranInfantryWeaponsLevel2",
         "TerranInfantryWeaponsLevel3"
       ],
+      "time": 35,
       "type": "structure",
       "unlocks": [
         "MissileTurret",
@@ -11861,8 +12115,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -11912,6 +12172,7 @@
       "requires": [
         "Hatchery"
       ],
+      "time": 35,
       "type": "structure"
     },
     "Extractor": {
@@ -11941,8 +12202,14 @@
         }
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -11991,6 +12258,7 @@
       "id": 88,
       "name": "Extractor",
       "race": "Zerg",
+      "time": 30,
       "type": "structure"
     },
     "Factory": {
@@ -12062,8 +12330,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -12130,6 +12404,7 @@
       "requires": [
         "Barracks"
       ],
+      "time": 60,
       "type": "structure",
       "unlocks": [
         "Armory",
@@ -12366,6 +12641,7 @@
         "HighCapacityBarrels",
         "TransformationServos"
       ],
+      "time": 25,
       "type": "structure"
     },
     "FleetBeacon": {
@@ -12406,8 +12682,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -12456,7 +12738,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 14,
       "TechTreeUnlockedUnitArray": {
-        "index": "Mothership"
+        "value": "Carrier"
       },
       "TurningRate": 719.4726,
       "id": 64,
@@ -12470,6 +12752,7 @@
         "TempestGroundAttackUpgrade",
         "VoidRaySpeedUpgrade"
       ],
+      "time": 60,
       "type": "structure",
       "unlocks": [
         "Carrier",
@@ -12578,8 +12861,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -12644,6 +12933,7 @@
         "ProtossShieldsLevel2",
         "ProtossShieldsLevel3"
       ],
+      "time": 45,
       "type": "structure",
       "unlocks": [
         "PhotonCannon"
@@ -12699,8 +12989,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -12754,6 +13050,7 @@
         "LiberatorAGRangeUpgrade",
         "MedivacCaduceusReactor"
       ],
+      "time": 65,
       "type": "structure",
       "unlocks": [
         "Battlecruiser"
@@ -12872,8 +13169,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -12923,7 +13226,7 @@
       "TacticalAIThink": "AIThinkGateway",
       "TechAliasArray": "Alias_Gateway",
       "TechTreeProducedUnitArray": {
-        "index": "Adept"
+        "value": "WarpGate"
       },
       "TurningRate": 719.4726,
       "id": 62,
@@ -12941,6 +13244,7 @@
       "requires": [
         "Nexus"
       ],
+      "time": 65,
       "type": "structure",
       "unlocks": [
         "CyberneticsCore"
@@ -13045,7 +13349,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -13079,7 +13386,9 @@
       },
       "GlossaryWeakArray": {
         "0": "Thor",
-        "1": "Roach"
+        "1": "Roach",
+        "2": "Stalker",
+        "value": "Marauder"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.375,
@@ -13116,6 +13425,7 @@
         "AttachedBarrTechLab",
         "ShadowOps"
       ],
+      "time": 40,
       "type": "unit"
     },
     "GhostAcademy": {
@@ -13195,8 +13505,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -13252,6 +13568,7 @@
       "researches": [
         "PersonalCloaking"
       ],
+      "time": 40,
       "type": "structure"
     },
     "GhostAlternate": {
@@ -13399,8 +13716,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -13781,8 +14104,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -13853,6 +14182,7 @@
         "overlordspeed",
         "overlordtransport"
       ],
+      "time": 100,
       "type": "structure",
       "unlocks": [
         "EvolutionChamber",
@@ -13942,7 +14272,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -13962,10 +14295,11 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 80,
       "GlossaryStrongArray": {
-        "index": "SCV"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
-        "0": "Cyclone"
+        "0": "Cyclone",
+        "value": "Marauder"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.5,
@@ -14000,6 +14334,7 @@
       "morphsto": "HellionTank",
       "name": "Hellion",
       "race": "Terran",
+      "time": 30,
       "type": "unit"
     },
     "HellionTank": {
@@ -14093,7 +14428,10 @@
       },
       "CargoSize": 4,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -14119,7 +14457,8 @@
       "GlossaryWeakArray": {
         "0": "Marauder",
         "1": "Baneling",
-        "2": "Stalker"
+        "2": "Stalker",
+        "value": "Baneling"
       },
       "HotkeyAlias": "Hellion",
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -14162,6 +14501,7 @@
       "requires": [
         "Armory"
       ],
+      "time": 30,
       "type": "unit"
     },
     "HighTemplar": {
@@ -14278,7 +14618,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -14310,11 +14653,13 @@
       "GlossaryPriority": 80,
       "GlossaryStrongArray": {
         "1": "Hydralisk",
-        "2": "Sentry"
+        "2": "Sentry",
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
         "1": "Roach",
-        "2": "Colossus"
+        "2": "Colossus",
+        "value": "Ghost"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -14360,6 +14705,7 @@
       "requires": [
         "TemplarArchives"
       ],
+      "time": 55,
       "type": "unit"
     },
     "Hive": {
@@ -14459,12 +14805,19 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
-        "Minerals": 675
+        "Minerals": 675,
+        "Vespene": 250
       },
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
@@ -14782,7 +15135,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -14804,10 +15160,14 @@
       "GlossaryStrongArray": {
         "0": "Banshee",
         "1": "Mutalisk",
-        "2": "VoidRay"
+        "2": "VoidRay",
+        "value": "Battlecruiser"
       },
       "GlossaryWeakArray": {
-        "0": "SiegeTank"
+        "0": "SiegeTank",
+        "1": "Zergling",
+        "2": "Colossus",
+        "value": "Marine"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.375,
@@ -14856,6 +15216,7 @@
       "requires": [
         "HydraliskDen"
       ],
+      "time": 33,
       "type": "unit"
     },
     "HydraliskDen": {
@@ -14923,8 +15284,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -14982,6 +15349,7 @@
         "EvolveMuscularAugments",
         "Frenzy"
       ],
+      "time": 40,
       "type": "structure",
       "unlocks": [
         "Hydralisk",
@@ -15068,7 +15436,10 @@
       },
       "CargoSize": 4,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -15095,11 +15466,15 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 120,
       "GlossaryStrongArray": {
-        "0": "Cyclone"
+        "0": "Cyclone",
+        "1": "Roach",
+        "2": "Stalker",
+        "value": "SiegeTankSieged"
       },
       "GlossaryWeakArray": {
         "1": "Zergling",
-        "2": "Zealot"
+        "2": "Zealot",
+        "value": "Marine"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5,
@@ -15139,6 +15514,7 @@
       "id": 83,
       "name": "Immortal",
       "race": "Protoss",
+      "time": 55,
       "type": "unit"
     },
     "InfestationPit": {
@@ -15185,8 +15561,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -15242,6 +15624,7 @@
         "MicrobialShroud",
         "NeuralParasite"
       ],
+      "time": 50,
       "type": "structure",
       "unlocks": [
         "Infestor",
@@ -15525,7 +15908,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -15555,7 +15941,9 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 150,
       "GlossaryStrongArray": {
-        "2": "VoidRay"
+        "1": "Mutalisk",
+        "2": "VoidRay",
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
         "value": "Ultralisk"
@@ -15593,6 +15981,7 @@
       "requires": [
         "InfestationPit"
       ],
+      "time": 50,
       "type": "unit"
     },
     "InfestorTerran": {
@@ -15818,7 +16207,10 @@
         ]
       },
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "DamageDealtXP": 1,
@@ -15993,12 +16385,19 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
-        "Minerals": 475
+        "Minerals": 475,
+        "Vespene": 100
       },
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
@@ -16145,6 +16544,7 @@
         ]
       },
       "Collide": {
+        "Larva": 1,
         "Structure": 0
       },
       "DamageDealtXP": 1,
@@ -16181,7 +16581,7 @@
       "Speed": 0.5625,
       "SubgroupPriority": 58,
       "TechTreeProducedUnitArray": {
-        "index": "Viper"
+        "value": "Drone"
       },
       "id": 151,
       "morphsto": [
@@ -16298,6 +16698,7 @@
       },
       "CostCategory": "Army",
       "CostResource": {
+        "Minerals": 150,
         "Vespene": 125
       },
       "DamageDealtXP": 1,
@@ -16317,10 +16718,12 @@
       "GlossaryPriority": 188,
       "GlossaryStrongArray": {
         "0": "SiegeTank",
-        "1": "Ultralisk"
+        "1": "Ultralisk",
+        "value": "VikingFighter"
       },
       "GlossaryWeakArray": {
-        "2": "Tempest"
+        "2": "Tempest",
+        "value": "Battlecruiser"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -16360,6 +16763,7 @@
       "id": 689,
       "name": "Liberator",
       "race": "Terran",
+      "time": 60,
       "type": "unit"
     },
     "LurkerDenMP": {
@@ -16409,8 +16813,12 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostResource": {
         "Minerals": 150,
@@ -16469,6 +16877,7 @@
         "DiggingClaws",
         "LurkerRange"
       ],
+      "time": 80,
       "type": "structure"
     },
     "LurkerMP": {
@@ -16549,7 +16958,9 @@
       "CargoSize": 4,
       "Collide": {
         "ForceField": 1,
-        "Locust": 1
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -16561,8 +16972,7 @@
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
       "EquipmentArray": {
-        "Weapon": "Spinesdisabled",
-        "index": "0"
+        "Weapon": "Spinesdisabled"
       },
       "Facing": 45,
       "FlagArray": [
@@ -16584,11 +16994,13 @@
       "GlossaryPriority": 71,
       "GlossaryStrongArray": {
         "1": "Roach",
-        "2": "Stalker"
+        "2": "Stalker",
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "1": "Viper"
+        "1": "Viper",
+        "value": "Thor"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -16687,7 +17099,9 @@
       },
       "Collide": {
         "ForceField": 1,
-        "Locust": 1
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "DamageDealtXP": 1,
@@ -16805,7 +17219,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -16873,6 +17290,7 @@
       "requires": [
         "AttachedTechLab"
       ],
+      "time": 30,
       "type": "unit"
     },
     "Marine": {
@@ -16944,7 +17362,10 @@
       },
       "CargoSize": 1,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -16970,10 +17391,12 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 21,
       "GlossaryStrongArray": {
-        "1": "Mutalisk"
+        "1": "Mutalisk",
+        "value": "Marauder"
       },
       "GlossaryWeakArray": {
-        "0": "SiegeTank"
+        "0": "SiegeTank",
+        "value": "SiegeTankSieged"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.375,
@@ -17009,6 +17432,7 @@
       "id": 48,
       "name": "Marine",
       "race": "Terran",
+      "time": 25,
       "type": "unit"
     },
     "Medivac": {
@@ -17196,6 +17620,7 @@
       "id": 54,
       "name": "Medivac",
       "race": "Terran",
+      "time": 42,
       "type": "unit"
     },
     "MissileTurret": {
@@ -17281,8 +17706,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -17306,7 +17737,8 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 310,
       "GlossaryStrongArray": {
-        "2": "Phoenix"
+        "2": "Phoenix",
+        "value": "Banshee"
       },
       "GlossaryWeakArray": {
         "value": "Marine"
@@ -17340,6 +17772,7 @@
       "requires": [
         "EngineeringBay"
       ],
+      "time": 25,
       "type": "structure"
     },
     "Mothership": {
@@ -17438,7 +17871,8 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 190,
       "GlossaryWeakArray": {
-        "2": "Tempest"
+        "2": "Tempest",
+        "value": "VikingFighter"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -17494,6 +17928,7 @@
       "requires": [
         "MothershipRequirements"
       ],
+      "time": 125,
       "type": "unit"
     },
     "Mutalisk": {
@@ -17588,10 +18023,14 @@
       "GlossaryStrongArray": {
         "0": "SCV",
         "1": "Drone",
-        "2": "Probe"
+        "2": "Probe",
+        "value": "VikingFighter"
       },
       "GlossaryWeakArray": {
-        "1": "Viper"
+        "0": "Thor",
+        "1": "Viper",
+        "2": "Phoenix",
+        "value": "Marine"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -17624,6 +18063,7 @@
       "requires": [
         "Spire"
       ],
+      "time": 33,
       "type": "unit"
     },
     "Nexus": {
@@ -17728,8 +18168,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -17793,7 +18239,8 @@
       "SubgroupPriority": 28,
       "TacticalAIThink": "AIThinkNexus",
       "TechTreeProducedUnitArray": {
-        "1": "Mothership"
+        "1": "Mothership",
+        "value": "Probe"
       },
       "TurningRate": 719.4726,
       "WeaponArray": [
@@ -17811,6 +18258,7 @@
         "Probe"
       ],
       "race": "Protoss",
+      "time": 100,
       "type": "structure",
       "unlocks": [
         "Forge",
@@ -17880,11 +18328,18 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
+        "Minerals": 200,
         "Vespene": 150
       },
       "DeathRevealRadius": 3,
@@ -17933,6 +18388,7 @@
       "requires": [
         "Lair"
       ],
+      "time": 50,
       "type": "structure"
     },
     "Observer": {
@@ -18003,7 +18459,8 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 110,
       "GlossaryStrongArray": {
-        "1": "LurkerMP"
+        "1": "LurkerMP",
+        "value": "Banshee"
       },
       "GlossaryWeakArray": {
         "value": "MissileTurret"
@@ -18036,6 +18493,7 @@
       "id": 82,
       "name": "Observer",
       "race": "Protoss",
+      "time": 25,
       "type": "unit"
     },
     "Oracle": {
@@ -18248,6 +18706,7 @@
       "id": 495,
       "name": "Oracle",
       "race": "Protoss",
+      "time": 52,
       "type": "unit"
     },
     "OracleStasisTrap": {
@@ -18345,6 +18804,7 @@
       "id": 732,
       "name": "OracleStasisTrap",
       "race": "Protoss",
+      "time": 5,
       "type": "structure"
     },
     "OrbitalCommand": {
@@ -18444,8 +18904,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -18746,6 +19212,7 @@
       ],
       "name": "Overlord",
       "race": "Zerg",
+      "time": 25,
       "type": "unit"
     },
     "OverlordCocoon": {
@@ -19100,6 +19567,7 @@
       },
       "CostCategory": "Army",
       "CostResource": {
+        "Minerals": 150,
         "Vespene": 50
       },
       "DamageDealtXP": 1,
@@ -19124,7 +19592,8 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 210,
       "GlossaryStrongArray": {
-        "1": "LurkerMP"
+        "1": "LurkerMP",
+        "value": "Banshee"
       },
       "GlossaryWeakArray": {
         "value": "VikingFighter"
@@ -19266,10 +19735,13 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 140,
       "GlossaryStrongArray": {
-        "2": "Oracle"
+        "2": "Oracle",
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
-        "1": "Corruptor"
+        "1": "Corruptor",
+        "2": "Carrier",
+        "value": "Battlecruiser"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -19308,6 +19780,7 @@
       "id": 78,
       "name": "Phoenix",
       "race": "Protoss",
+      "time": 35,
       "type": "unit"
     },
     "PhotonCannon": {
@@ -19372,8 +19845,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -19400,7 +19879,8 @@
         "value": "Banshee"
       },
       "GlossaryWeakArray": {
-        "0": "SiegeTank"
+        "0": "SiegeTank",
+        "value": "SiegeTankSieged"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "LifeArmor": 1,
@@ -19436,6 +19916,7 @@
       "requires": [
         "Forge"
       ],
+      "time": 40,
       "type": "structure"
     },
     "PlanetaryFortress": {
@@ -19533,8 +20014,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -19564,7 +20051,8 @@
         "value": "Marine"
       },
       "GlossaryWeakArray": {
-        "0": "SiegeTank"
+        "0": "SiegeTank",
+        "value": "Banshee"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "LifeArmor": 2,
@@ -19843,7 +20331,10 @@
       ],
       "CargoSize": 1,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -19914,6 +20405,7 @@
       "id": 84,
       "name": "Probe",
       "race": "Protoss",
+      "time": 17,
       "type": "structure"
     },
     "Pylon": {
@@ -19957,8 +20449,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -20013,6 +20511,7 @@
       "id": 60,
       "name": "Pylon",
       "race": "Protoss",
+      "time": 25,
       "type": "structure"
     },
     "Queen": {
@@ -20273,7 +20772,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -20303,7 +20805,8 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 217,
       "GlossaryStrongArray": {
-        "2": "Oracle"
+        "2": "Oracle",
+        "value": "Hellion"
       },
       "GlossaryWeakArray": {
         "value": "Marine"
@@ -20361,6 +20864,7 @@
       "requires": [
         "SpawningPool"
       ],
+      "time": 50,
       "type": "structure"
     },
     "Ravager": {
@@ -20596,7 +21100,10 @@
       },
       "CargoSize": 4,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -20614,10 +21121,12 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 66,
       "GlossaryStrongArray": {
-        "0": "Liberator"
+        "0": "Liberator",
+        "value": "SiegeTankSieged"
       },
       "GlossaryWeakArray": {
-        "1": "Mutalisk"
+        "1": "Mutalisk",
+        "value": "Marauder"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -20693,7 +21202,10 @@
         ]
       },
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "DeathRevealRadius": 3,
@@ -20835,6 +21347,7 @@
       },
       "CostCategory": "Army",
       "CostResource": {
+        "Minerals": 100,
         "Vespene": 150
       },
       "DamageDealtXP": 1,
@@ -20868,12 +21381,14 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 190,
       "GlossaryStrongArray": {
-        "1": "LurkerMP"
+        "1": "LurkerMP",
+        "value": "Banshee"
       },
       "GlossaryWeakArray": {
         "0": "VikingFighter",
         "1": "Mutalisk",
-        "2": "HighTemplar"
+        "2": "HighTemplar",
+        "value": "Ghost"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -20910,6 +21425,7 @@
       "requires": [
         "AttachedTechLab"
       ],
+      "time": 48,
       "type": "unit"
     },
     "Reaper": {
@@ -20960,7 +21476,10 @@
       },
       "CargoSize": 1,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -21037,6 +21556,7 @@
       "id": 49,
       "name": "Reaper",
       "race": "Terran",
+      "time": 45,
       "type": "unit"
     },
     "Refinery": {
@@ -21081,8 +21601,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -21134,6 +21660,7 @@
       "id": 20,
       "name": "Refinery",
       "race": "Terran",
+      "time": 30,
       "type": "structure"
     },
     "RefineryRich": {
@@ -21236,6 +21763,7 @@
       "id": "RefineryRich",
       "name": "RefineryRich",
       "race": "Terran",
+      "time": 30,
       "type": "structure"
     },
     "Roach": {
@@ -21479,7 +22007,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -21506,10 +22037,14 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 65,
       "GlossaryStrongArray": {
-        "2": "Adept"
+        "1": "Zergling",
+        "2": "Adept",
+        "value": "Hellion"
       },
       "GlossaryWeakArray": {
-        "1": "LurkerMP"
+        "1": "LurkerMP",
+        "2": "Immortal",
+        "value": "Marauder"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.625,
@@ -21554,6 +22089,7 @@
       "requires": [
         "RoachWarren"
       ],
+      "time": 27,
       "type": "unit"
     },
     "RoachWarren": {
@@ -21618,8 +22154,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -21674,6 +22216,7 @@
         "GlialReconstitution",
         "TunnelingClaws"
       ],
+      "time": 55,
       "type": "structure"
     },
     "RoboticsBay": {
@@ -21736,8 +22279,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -21797,6 +22346,7 @@
         "GraviticDrive",
         "ObserverGraviticBooster"
       ],
+      "time": 65,
       "type": "structure",
       "unlocks": [
         "Colossus",
@@ -21902,12 +22452,19 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
-        "Minerals": 150
+        "Minerals": 150,
+        "Vespene": 100
       },
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
@@ -21965,6 +22522,7 @@
       "requires": [
         "CyberneticsCore"
       ],
+      "time": 65,
       "type": "structure",
       "unlocks": [
         "RoboticsBay"
@@ -22230,7 +22788,10 @@
       ],
       "CargoSize": 1,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -22303,6 +22864,7 @@
       "id": 45,
       "name": "SCV",
       "race": "Terran",
+      "time": 17,
       "type": "structure"
     },
     "SensorTower": {
@@ -22349,8 +22911,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -22400,6 +22968,7 @@
       "requires": [
         "EngineeringBay"
       ],
+      "time": 25,
       "type": "structure"
     },
     "Sentry": {
@@ -22676,7 +23245,10 @@
       ],
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -22709,12 +23281,15 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 25,
       "GlossaryStrongArray": {
-        "index": "Marine"
+        "0": "Zergling",
+        "1": "Zealot",
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
         "0": "Thor",
         "1": "Ravager",
-        "2": "Archon"
+        "2": "Archon",
+        "value": "Hellion"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -22755,6 +23330,7 @@
       "requires": [
         "CyberneticsCore"
       ],
+      "time": 32,
       "type": "unit"
     },
     "ShieldBattery": {
@@ -22872,6 +23448,7 @@
       "requires": [
         "CyberneticsCore"
       ],
+      "time": 40,
       "type": "structure"
     },
     "SiegeTank": {
@@ -22945,7 +23522,10 @@
       },
       "CargoSize": 4,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -23020,6 +23600,7 @@
       "requires": [
         "AttachedTechLab"
       ],
+      "time": 45,
       "type": "unit"
     },
     "SpawningPool": {
@@ -23084,8 +23665,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -23141,6 +23728,7 @@
         "zerglingattackspeed",
         "zerglingmovementspeed"
       ],
+      "time": 65,
       "type": "structure",
       "unlocks": [
         "BanelingNest",
@@ -23216,8 +23804,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -23247,7 +23841,8 @@
         "value": "Marine"
       },
       "GlossaryWeakArray": {
-        "0": "SiegeTank"
+        "0": "SiegeTank",
+        "value": "Marauder"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillDisplay": "Always",
@@ -23286,6 +23881,7 @@
       "requires": [
         "SpawningPool"
       ],
+      "time": 50,
       "type": "structure"
     },
     "Spire": {
@@ -23395,8 +23991,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -23460,6 +24062,7 @@
         "ZergFlyerWeaponsLevel2",
         "ZergFlyerWeaponsLevel3"
       ],
+      "time": 92.4,
       "type": "structure",
       "unlocks": [
         "Corruptor",
@@ -23543,8 +24146,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -23571,7 +24180,8 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 230,
       "GlossaryStrongArray": {
-        "2": "Oracle"
+        "2": "Oracle",
+        "value": "Banshee"
       },
       "GlossaryWeakArray": {
         "value": "Marine"
@@ -23613,6 +24223,7 @@
       "requires": [
         "SpawningPool"
       ],
+      "time": 30,
       "type": "structure"
     },
     "Stalker": {
@@ -23697,7 +24308,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -23725,11 +24339,13 @@
       "GlossaryPriority": 30,
       "GlossaryStrongArray": {
         "1": "Corruptor",
-        "2": "Tempest"
+        "2": "Tempest",
+        "value": "Reaper"
       },
       "GlossaryWeakArray": {
         "1": "Zergling",
-        "2": "Immortal"
+        "2": "Immortal",
+        "value": "Marauder"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5,
@@ -23770,6 +24386,7 @@
       "requires": [
         "CyberneticsCore"
       ],
+      "time": 38,
       "type": "unit"
     },
     "Stargate": {
@@ -23847,8 +24464,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -23897,7 +24520,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 20,
       "TechTreeProducedUnitArray": {
-        "index": "Oracle"
+        "value": "Phoenix"
       },
       "TurningRate": 719.4726,
       "id": 67,
@@ -23913,6 +24536,7 @@
       "requires": [
         "CyberneticsCore"
       ],
+      "time": 60,
       "type": "structure",
       "unlocks": [
         "FleetBeacon"
@@ -23974,8 +24598,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -24021,7 +24651,7 @@
       "SubgroupPriority": 20,
       "TechAliasArray": "Alias_Starport",
       "TechTreeProducedUnitArray": {
-        "index": "Liberator"
+        "value": "VikingFighter"
       },
       "TurningRate": 719.4726,
       "builds": [
@@ -24043,6 +24673,7 @@
       "requires": [
         "Factory"
       ],
+      "time": 50,
       "type": "structure",
       "unlocks": [
         "FusionCore"
@@ -24274,6 +24905,7 @@
         "BansheeSpeed",
         "InterferenceMatrix"
       ],
+      "time": 25,
       "type": "structure"
     },
     "SupplyDepot": {
@@ -24326,8 +24958,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Economy",
       "CostResource": {
@@ -24376,6 +25014,7 @@
       "id": 19,
       "name": "SupplyDepot",
       "race": "Terran",
+      "time": 30,
       "type": "structure",
       "unlocks": [
         "Barracks"
@@ -24633,6 +25272,7 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
         "RoachBurrow": 0
       },
       "CostCategory": "Army",
@@ -24933,11 +25573,14 @@
       "GlossaryStrongArray": {
         "0": "SCV",
         "1": "Drone",
-        "2": "Probe"
+        "2": "Probe",
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
         "0": "Banshee",
-        "2": "Stalker"
+        "1": "Mutalisk",
+        "2": "Stalker",
+        "value": "Baneling"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -24972,6 +25615,7 @@
       "requires": [
         "InfestationPit"
       ],
+      "time": 40,
       "type": "unit"
     },
     "Tempest": {
@@ -25000,7 +25644,7 @@
         "Mechanical": 1
       },
       "BehaviorArray": {
-        "index": "0",
+        "Link": "MassiveVoidRayVulnerability",
         "removed": "1"
       },
       "CardLayouts": {
@@ -25046,7 +25690,8 @@
       "GlossaryPriority": 170,
       "GlossaryStrongArray": {
         "0": "Liberator",
-        "1": "BroodLord"
+        "1": "BroodLord",
+        "value": "SwarmHostMP"
       },
       "GlossaryWeakArray": {
         "value": "VikingFighter"
@@ -25100,6 +25745,7 @@
       "requires": [
         "FleetBeacon"
       ],
+      "time": 60,
       "type": "unit"
     },
     "TemplarArchive": {
@@ -25148,8 +25794,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -25210,6 +25862,7 @@
       "researches": [
         "PsiStormTech"
       ],
+      "time": 50,
       "type": "structure"
     },
     "Thor": {
@@ -25240,7 +25893,7 @@
         "Mechanical": 1
       },
       "BehaviorArray": {
-        "index": "0",
+        "Link": "MassiveVoidRayVulnerability",
         "removed": "1"
       },
       "CardLayouts": {
@@ -25285,7 +25938,9 @@
       },
       "CargoSize": 8,
       "Collide": {
-        "Locust": 1
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -25317,7 +25972,8 @@
       "GlossaryPriority": 140,
       "GlossaryStrongArray": {
         "0": "VikingFighter",
-        "2": "Phoenix"
+        "2": "Phoenix",
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
         "value": "Marauder"
@@ -25367,6 +26023,7 @@
         "Armory",
         "AttachedTechLab"
       ],
+      "time": 60,
       "type": "unit"
     },
     "TransportOverlordCocoon": {
@@ -25545,8 +26202,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -25606,6 +26269,7 @@
         "BlinkTech",
         "Charge"
       ],
+      "time": 50,
       "type": "structure",
       "unlocks": [
         "DarkShrine",
@@ -25883,11 +26547,14 @@
       },
       "CargoSize": 8,
       "Collide": {
-        "Locust": 1
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
-        "Minerals": 275
+        "Minerals": 275,
+        "Vespene": 200
       },
       "DamageDealtXP": 1,
       "DamageTakenXP": 1,
@@ -25912,12 +26579,14 @@
       "GlossaryStrongArray": {
         "0": "Marine",
         "1": "Zergling",
-        "2": "Zealot"
+        "2": "Zealot",
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
         "0": "Ghost",
         "1": "BroodLord",
-        "2": "Immortal"
+        "2": "Immortal",
+        "value": "Marauder"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.75,
@@ -25969,6 +26638,7 @@
       "requires": [
         "UltraliskCavern"
       ],
+      "time": 55,
       "type": "unit"
     },
     "UltraliskCavern": {
@@ -26032,8 +26702,14 @@
         ]
       },
       "Collide": {
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
         "Locust": 1,
-        "Phased": 1
+        "Phased": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -26089,6 +26765,7 @@
         "AnabolicSynthesis",
         "ChitinousPlating"
       ],
+      "time": 65,
       "type": "structure",
       "unlocks": [
         "Ultralisk"
@@ -26173,7 +26850,8 @@
       },
       "CostCategory": "Army",
       "CostResource": {
-        "Minerals": 125
+        "Minerals": 125,
+        "Vespene": 75
       },
       "DamageDealtXP": 1,
       "DamageTakenXP": 1,
@@ -26191,10 +26869,12 @@
       "GlossaryPriority": 150,
       "GlossaryStrongArray": {
         "1": "BroodLord",
-        "2": "Tempest"
+        "2": "Tempest",
+        "value": "Battlecruiser"
       },
       "GlossaryWeakArray": {
-        "1": "Hydralisk"
+        "1": "Hydralisk",
+        "value": "Marine"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -26231,6 +26911,7 @@
       "id": 35,
       "name": "VikingFighter",
       "race": "Terran",
+      "time": 42,
       "type": "unit"
     },
     "Viper": {
@@ -26378,12 +27059,14 @@
       "GlossaryStrongArray": {
         "0": "SiegeTank",
         "1": "Mutalisk",
-        "2": "Colossus"
+        "2": "Colossus",
+        "value": "SiegeTankSieged"
       },
       "GlossaryWeakArray": {
         "0": "Ghost",
         "1": "Corruptor",
-        "2": "HighTemplar"
+        "2": "HighTemplar",
+        "value": "VikingFighter"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -26422,6 +27105,7 @@
       "requires": [
         "Hive"
       ],
+      "time": 40,
       "type": "unit"
     },
     "VoidRay": {
@@ -26532,11 +27216,14 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 160,
       "GlossaryStrongArray": {
-        "2": "Immortal"
+        "2": "Immortal",
+        "value": "Battlecruiser"
       },
       "GlossaryWeakArray": {
         "0": "Marine",
-        "1": "Hydralisk"
+        "1": "Hydralisk",
+        "2": "Phoenix",
+        "value": "VikingFighter"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -26575,6 +27262,7 @@
       "id": 80,
       "name": "VoidRay",
       "race": "Protoss",
+      "time": 60.2,
       "type": "unit"
     },
     "WarpGate": {
@@ -26658,7 +27346,13 @@
         ]
       },
       "Collide": {
-        "Locust": 1
+        "Burrow": 1,
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "RoachBurrow": 1,
+        "Small": 1,
+        "Structure": 1
       },
       "CostCategory": "Technology",
       "CostResource": {
@@ -26863,6 +27557,7 @@
       "id": 81,
       "name": "WarpPrism",
       "race": "Protoss",
+      "time": 50,
       "type": "unit"
     },
     "Zealot": {
@@ -26947,7 +27642,10 @@
       },
       "CargoSize": 2,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -26974,10 +27672,14 @@
       "GlossaryPriority": 20,
       "GlossaryStrongArray": {
         "1": "Zergling",
-        "2": "Immortal"
+        "2": "Immortal",
+        "value": "Marauder"
       },
       "GlossaryWeakArray": {
-        "0": "HellionTank"
+        "0": "HellionTank",
+        "1": "Roach",
+        "2": "Colossus",
+        "value": "Hellion"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -27017,6 +27719,7 @@
       "id": 73,
       "name": "Zealot",
       "race": "Protoss",
+      "time": 38,
       "type": "unit"
     },
     "Zergling": {
@@ -27261,7 +27964,10 @@
       },
       "CargoSize": 1,
       "Collide": {
-        "Locust": 1
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
       },
       "CostCategory": "Army",
       "CostResource": {
@@ -27288,10 +27994,14 @@
       "GlossaryPriority": 50,
       "GlossaryStrongArray": {
         "1": "Hydralisk",
-        "2": "Stalker"
+        "2": "Stalker",
+        "value": "Marauder"
       },
       "GlossaryWeakArray": {
-        "0": "HellionTank"
+        "0": "HellionTank",
+        "1": "Baneling",
+        "2": "Colossus",
+        "value": "Hellion"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillDisplay": "Always",

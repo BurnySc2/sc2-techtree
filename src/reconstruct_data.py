@@ -130,6 +130,56 @@ def extract_upgrade_costs(abil_data: dict) -> tuple[dict[str, dict], dict[str, d
     return upgrade_costs, button_face_to_upgrade
 
 
+def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
+    """Extract build times from AbilData.json for train/build abilities.
+
+    Iterates through AbilData.json and looks for abilities with InfoArray entries
+    that have both a "Unit" field and a "Time" field. These indicate units or
+    structures that can be trained/built and their construction time.
+
+    Returns:
+        dict mapping unit/structure name -> build time in seconds
+    """
+    unit_build_times: dict[str, float] = {}
+
+    for ability_id, ability in abil_data.items():
+        # AbilData.json has entries where ability can be a list or a dict
+        # If it's a list, iterate through; if it's a dict, process directly
+        entries = ability if isinstance(ability, list) else [ability]
+
+        for entry in entries:
+            if not isinstance(entry, dict):
+                continue
+
+            info_array = entry.get("InfoArray", [])
+            if isinstance(info_array, dict):
+                # Handle single-entry InfoArray (e.g., TrainQueen)
+                unit_name = info_array.get("Unit", "")
+                time_str = info_array.get("Time", "0")
+                if unit_name and time_str and time_str != "0":
+                    try:
+                        time_val = float(time_str) if "." in time_str else int(time_str)
+                        unit_build_times[unit_name] = time_val
+                    except (ValueError, TypeError):
+                        pass
+            elif isinstance(info_array, list):
+                for item in info_array:
+                    if not isinstance(item, dict):
+                        continue
+
+                    unit_name = item.get("Unit", "")
+                    time_str = item.get("Time", "0")
+
+                    if unit_name and time_str and time_str != "0":
+                        try:
+                            time_val = float(time_str) if "." in time_str else int(time_str)
+                            unit_build_times[unit_name] = time_val
+                        except (ValueError, TypeError):
+                            pass
+
+    return unit_build_times
+
+
 def enqueue_if_new(
     queue: list[QueueItem],
     visited: set[ItemName],
@@ -583,6 +633,9 @@ def _build_result(
     # Extract upgrade costs from AbilData.json
     upgrade_costs, button_face_to_upgrade = extract_upgrade_costs(abil_data)
 
+    # Extract unit/structure build times from AbilData.json
+    unit_build_times = extract_unit_build_times(abil_data)
+
     # Populate units with full data from UnitData.json
     for unit_name in visited_units:
         unit_entry = units_section.get(unit_name, {})
@@ -592,6 +645,9 @@ def _build_result(
         # Filter builds to exclude mercenary buildings for SCV
         if unit_name == "SCV" and FIELD_BUILDS in merged:
             merged[FIELD_BUILDS] = [b for b in merged[FIELD_BUILDS] if b not in SCV_MERCENARY_BUILDINGS]
+        # Add build time if available
+        if unit_name in unit_build_times:
+            merged["time"] = unit_build_times[unit_name]
         result["Units"][unit_name] = merged
 
     # Populate structures with full data - structures are now in units_section
@@ -614,6 +670,9 @@ def _build_result(
                 elif isinstance(a, str) and a != NEXUS_EXCLUDED_ABILITY:
                     filtered.append(a)
             merged[FIELD_ABIL_ARRAY] = filtered
+        # Add build time if available
+        if structure_name in unit_build_times:
+            merged["time"] = unit_build_times[structure_name]
         result["Units"][structure_name] = merged
 
     # Populate upgrades with full data

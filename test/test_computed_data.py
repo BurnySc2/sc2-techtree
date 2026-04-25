@@ -637,3 +637,19 @@ class TestBFSReachability:
         reachable = self.reachable(computed_data, ["SCV"])
         # Campaign units should be filtered out, so Sirius should not be in the reachable set
         assert "Sirius" not in reachable, "Campaign unit Sirius should not be reachable from SCV"
+
+
+class TestSpireBuildTime:
+    def test_spire_build_time(self, computed_data: dict) -> None:
+        """Spire should have a build time of 92.4 seconds."""
+        spire = computed_data["Units"]["Spire"]
+        assert "time" in spire, "Spire should have time field"
+        assert spire["time"] == 92.4, f"Spire time should be 92.4, got {spire.get('time')}"
+
+
+class TestQueenBuildTime:
+    def test_queen_build_time(self, computed_data: dict) -> None:
+        """Queen should have a build time of 50 seconds."""
+        queen = computed_data["Units"]["Queen"]
+        assert "time" in queen, "Queen should have time field"
+        assert queen["time"] == 50, f"Queen time should be 50, got {queen.get('time')}"
