@@ -369,7 +369,11 @@ def merge_records(base_list: list[dict], override_list: list[dict]) -> list[dict
             for key, val in override_rec.items():
                 if key == "id" or key in ARRAY_TAGS:
                     continue
-                base_rec[key] = deepcopy(val)
+                # Recursively merge nested dicts instead of replacing
+                if isinstance(val, dict) and key in base_rec and isinstance(base_rec[key], dict):
+                    merge_objects(base_rec[key], val)
+                else:
+                    base_rec[key] = deepcopy(val)
         else:
             base_list.append(deepcopy(override_rec))
     return base_list

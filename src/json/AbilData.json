@@ -88,12 +88,16 @@
         }
       ],
       "Cost": {
+        "Charge": {
+          "Link": "Abil/OracleWeapon"
+        },
         "Cooldown": {
           "TimeUse": "4"
         },
         "Vital": {
           "Energy": 25
-        }
+        },
+        "index": "0"
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
@@ -957,7 +961,9 @@
         "Cooldown": {
           "TimeUse": "18"
         },
-        "index": "0"
+        "Vital": {
+          "Energy": 75
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -983,10 +989,15 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": "Abil/Stimpack"
+        },
         "Cooldown": {
           "TimeUse": "1"
         },
-        "index": "0"
+        "Vital": {
+          "Life": 20
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
@@ -1036,7 +1047,9 @@
         "Cooldown": {
           "TimeUse": "1"
         },
-        "index": "0"
+        "Vital": {
+          "Life": 10
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
@@ -1156,8 +1169,7 @@
       "Cost": {
         "Cooldown": {
           "TimeUse": "45"
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1165,7 +1177,8 @@
       },
       "Flags": {
         "AutoCast": 1,
-        "AutoCastOn": 1
+        "AutoCastOn": 1,
+        "TransientPreferred": 1
       },
       "id": "ImmortalOverload"
     },
@@ -1248,6 +1261,26 @@
     },
     {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Archon",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "HallucinationCreateArchon"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationArchon"
+    },
+    {
+      "CmdButtonArray": {
         "DefaultButtonFace": "Cancel",
         "Requirements": "AdeptPhaseShifting",
         "index": "Execute"
@@ -1285,6 +1318,26 @@
     },
     {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Colossus",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "HallucinationCreateColossus"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationColossus"
+    },
+    {
+      "CmdButtonArray": {
         "DefaultButtonFace": "Explode",
         "index": "Execute"
       },
@@ -1293,6 +1346,26 @@
         "0": "VolatileBurst"
       },
       "id": "Explode"
+    },
+    {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "HighTemplar",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "HallucinationCreateHighTemplar"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationHighTemplar"
     },
     {
       "CmdButtonArray": {
@@ -1309,6 +1382,26 @@
         "Transient": 1
       },
       "id": "GhostHoldFire"
+    },
+    {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "Immortal",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "HallucinationCreateImmortal"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationImmortal"
     },
     {
       "CmdButtonArray": {
@@ -1451,8 +1544,7 @@
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
@@ -1523,6 +1615,26 @@
     },
     {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Oracle",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "HallucinationCreateOracle"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationOracle"
+    },
+    {
+      "CmdButtonArray": {
         "DefaultButtonFace": "OracleCloakField",
         "index": "Execute"
       },
@@ -1568,14 +1680,53 @@
     },
     {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Phoenix",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "HallucinationCreatePhoenix"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationPhoenix"
+    },
+    {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "Probe",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "HallucinationCreateProbe"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationProbe"
+    },
+    {
+      "CmdButtonArray": {
         "DefaultButtonFace": "PurificationNova",
         "index": "Execute"
       },
       "Cost": {
         "Cooldown": {
           "TimeUse": "23.8"
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "AbilityorEffectType:Units",
       "Effect": {
@@ -1626,8 +1777,7 @@
       "Cost": {
         "Vital": {
           "Energy": 50
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": {
@@ -1635,6 +1785,26 @@
       },
       "ProducedUnitArray": "Changeling",
       "id": "SpawnChangeling"
+    },
+    {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "Stalker",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "HallucinationCreateStalker"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationStalker"
     },
     {
       "CmdButtonArray": {
@@ -1651,6 +1821,26 @@
         "RequireTargetVision": 0
       },
       "id": "UltraliskWeaponCooldown"
+    },
+    {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "VoidRay",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
+      "Effect": {
+        "0": "HallucinationCreateVoidRay"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationVoidRay"
     },
     {
       "CmdButtonArray": {
@@ -1679,8 +1869,7 @@
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1693,14 +1882,33 @@
     },
     {
       "CmdButtonArray": {
+        "DefaultButtonFace": "WarpPrism",
+        "Requirements": "",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "HallucinationCreateWarpPrism"
+      },
+      "Flags": {
+        "BestUnit": 1
+      },
+      "id": "HallucinationWarpPrism"
+    },
+    {
+      "CmdButtonArray": {
         "DefaultButtonFace": "WarpinDisruptor",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -1729,214 +1937,14 @@
     },
     {
       "CmdButtonArray": {
+        "DefaultButtonFace": "Zealot",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
-      "Effect": {
-        "0": "HallucinationCreateVoidRay"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationVoidRay"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "HallucinationCreateArchon"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationArchon"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "HallucinationCreateColossus"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationColossus"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "HallucinationCreateHighTemplar"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationHighTemplar"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "HallucinationCreateImmortal"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationImmortal"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "HallucinationCreateOracle"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationOracle"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "HallucinationCreatePhoenix"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationPhoenix"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "HallucinationCreateProbe"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationProbe"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "HallucinationCreateStalker"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationStalker"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "HallucinationCreateWarpPrism"
-      },
-      "Flags": {
-        "BestUnit": 1
-      },
-      "id": "HallucinationWarpPrism"
-    },
-    {
-      "CmdButtonArray": {
-        "Requirements": "",
-        "index": "Execute"
-      },
-      "Cost": {
-        "Vital": {
-          "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -2087,8 +2095,7 @@
       "Cost": {
         "Resource": {
           "Minerals": -75
-        },
-        "index": "0"
+        }
       },
       "Name": "Abil/Name/SalvageBunkerRefund",
       "id": "SalvageBunkerRefund",
@@ -2187,14 +2194,16 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": ""
+        },
         "Cooldown": {
           "Link": "Abil/MassRecall",
           "TimeUse": "125"
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": {
         "0": "MothershipStrategicRecallSearch"
@@ -2268,10 +2277,15 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": ""
+        },
+        "Cooldown": {
+          "Link": ""
+        },
         "Vital": {
           "Energy": 125
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": {
@@ -2289,10 +2303,15 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": ""
+        },
+        "Cooldown": {
+          "Link": ""
+        },
         "Vital": {
           "Energy": 25
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": {
@@ -2454,8 +2473,7 @@
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "AbilityorEffectType:Units,Race:Terran",
       "Effect": {
@@ -2564,14 +2582,20 @@
       "Arc": 29.9926,
       "ArcSlop": 0,
       "CmdButtonArray": {
+        "DefaultButtonFace": "HunterSeekerMissile",
         "Requirements": "",
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": "Abil/HunterSeekerMissile"
+        },
+        "Cooldown": {
+          "Link": "Abil/HunterSeekerMissile"
+        },
         "Vital": {
           "Energy": 125
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": {
@@ -2598,10 +2622,15 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": ""
+        },
+        "Cooldown": {
+          "Link": ""
+        },
         "Vital": {
           "Energy": 50
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": "MothershipCoreMassRecallSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -2623,10 +2652,15 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": ""
+        },
+        "Cooldown": {
+          "Link": ""
+        },
         "Vital": {
           "Energy": 50
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": "MothershipMassRecallSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -2779,8 +2813,7 @@
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": {
         "0": "TemporalFieldAfterBubbleSearchArea"
@@ -3233,13 +3266,14 @@
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
         "AbortOnAllianceChange": 0,
-        "IgnoreOrderPlayerIdInStageValidate": 1
+        "AllowMovement": 1,
+        "IgnoreOrderPlayerIdInStageValidate": 1,
+        "NoDeceleration": 1
       },
       "InterruptCost": {
         "Cooldown": {
@@ -3356,8 +3390,7 @@
       "Cost": {
         "Cooldown": {
           "TimeUse": "20"
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Range": 5,
@@ -3378,8 +3411,7 @@
         },
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": "PsiStormSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -3427,6 +3459,34 @@
       "Range": 2,
       "TargetFilters": "Structure,Visible;Self,Player,Ally,Neutral,Heroic,Stasis,Invulnerable",
       "id": "LeechResources"
+    },
+    {
+      "Alignment": "Negative",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "FungalGrowth",
+        "Flags": {
+          "ToSelection": 1
+        },
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "Link": "Abil/Leech",
+          "Location": "Unit"
+        },
+        "Vital": {
+          "Energy": 75
+        }
+      },
+      "CursorEffect": "FungalGrowthSearch",
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Effect": {
+        "0": "FungalGrowthLaunchMissile"
+      },
+      "Range": {
+        "0": 10
+      },
+      "id": "FungalGrowth"
     },
     {
       "Alignment": "Negative",
@@ -3551,33 +3611,6 @@
     },
     {
       "Alignment": "Negative",
-      "CmdButtonArray": {
-        "Flags": {
-          "ToSelection": 1
-        },
-        "index": "Execute"
-      },
-      "Cost": {
-        "Cooldown": {
-          "Link": "Abil/Leech",
-          "Location": "Unit"
-        },
-        "Vital": {
-          "Energy": 75
-        }
-      },
-      "CursorEffect": "FungalGrowthSearch",
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
-      "Effect": {
-        "0": "FungalGrowthLaunchMissile"
-      },
-      "Range": {
-        "0": 10
-      },
-      "id": "FungalGrowth"
-    },
-    {
-      "Alignment": "Negative",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "id": "BurrowChargeTrial"
     },
@@ -3585,6 +3618,7 @@
       "Alignment": "Positive",
       "CastIntroTime": 0.2,
       "CmdButtonArray": {
+        "DefaultButtonFace": "Transfusion",
         "Requirements": "QueenOnCreep",
         "index": "Execute"
       },
@@ -3678,7 +3712,10 @@
         "0": "ViperConsumeStructureLaunchMissile"
       },
       "Flags": {
+        "AllowMovement": 1,
         "BestUnit": 0,
+        "DeferCooldown": 1,
+        "NoDeceleration": 1,
         "WaitToSpend": 1
       },
       "Range": 7,
@@ -4406,8 +4443,7 @@
       "Cost": {
         "Vital": {
           "Energy": 50
-        },
-        "index": "0"
+        }
       },
       "DefaultError": "CantTargetThatUnit",
       "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
@@ -4525,10 +4561,12 @@
         "index": "Execute"
       },
       "Cost": {
+        "Charge": {
+          "Link": "Abil/PurificationNovaTargetted"
+        },
         "Cooldown": {
           "TimeUse": "23.8"
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
       "Effect": {
@@ -4558,6 +4596,7 @@
       "CursorEffect": "ScannerSweep",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
+        "RequireTargetVision": 0,
         "Transient": 1
       },
       "Range": 500,
@@ -4909,8 +4948,7 @@
         },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "AbilityorEffectType:Units",
       "Effect": {
@@ -4929,6 +4967,7 @@
         }
       },
       "ProgressButtonArray": {
+        "Channel": "Hyperjump",
         "Prep": "Hyperjump"
       },
       "Range": 500,
@@ -4936,6 +4975,7 @@
         "Channel": 1
       },
       "UninterruptibleArray": {
+        "Channel": 1,
         "Finish": 1,
         "Prep": 1
       },
@@ -4955,8 +4995,7 @@
       "Cost": {
         "Vital": {
           "Energy": 150
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Effect": {
@@ -5021,15 +5060,20 @@
         }
       ],
       "Cost": {
+        "Cooldown": {
+          "TimeStart": "45",
+          "TimeUse": "45"
+        },
         "Vital": {
           "Energy": 0
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": {
+        "AllowMovement": 1,
         "AutoCast": 1,
-        "AutoCastOn": 1
+        "AutoCastOn": 1,
+        "NoDeceleration": 1
       },
       "Range": {
         "0": 6
@@ -5061,10 +5105,13 @@
         }
       ],
       "Cost": {
+        "Cooldown": {
+          "Link": "Abil/Leech",
+          "Location": "Unit"
+        },
         "Vital": {
           "Energy": 100
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": {
@@ -5091,6 +5138,7 @@
       "CastIntroTime": 0,
       "CastOutroTime": 0,
       "CmdButtonArray": {
+        "DefaultButtonFace": "InfestedTerrans",
         "Flags": {
           "ToSelection": 1
         },
@@ -5099,8 +5147,7 @@
       "Cost": {
         "Vital": {
           "Energy": 50
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": {
@@ -5158,8 +5205,7 @@
         },
         "Vital": {
           "Energy": 25
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": "OracleRevelationSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -5744,8 +5790,7 @@
       "Cost": {
         "Vital": {
           "Energy": 125
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": {
@@ -5862,8 +5907,7 @@
       "Cost": {
         "Cooldown": {
           "TimeUse": "40"
-        },
-        "index": "0"
+        }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Effect": {
@@ -5983,8 +6027,7 @@
       "Cost": {
         "Vital": {
           "Energy": 75
-        },
-        "index": "0"
+        }
       },
       "CursorEffect": "ResourceStunDummyCastSearch",
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
@@ -6259,7 +6302,16 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
         "IgnoreFacing": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "Rally": 0,
+        "ShowProgress": 1,
+        "SuppressMovement": 1,
         "WaitUntilStopped": 0
       },
       "InfoArray": [
@@ -6370,6 +6422,82 @@
         }
       ],
       "id": "MorphToGuardianMP"
+    },
+    {
+      "AbilClassEnableArray": {
+        "CAbilMove": 1,
+        "CAbilStop": 1
+      },
+      "ActorKey": "OverseerMut",
+      "Alert": "MorphComplete_Zerg",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "Cancel",
+          "index": "Cancel"
+        },
+        {
+          "DefaultButtonFace": "MorphToOverseer",
+          "Requirements": "UseOverseerMorph",
+          "index": "Execute"
+        }
+      ],
+      "Cost": {
+        "Charge": {
+          "Link": "Abil/OverseerMut"
+        },
+        "Cooldown": {
+          "Link": "Abil/OverseerMut"
+        }
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "BestUnit": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
+        "IgnoreFacing": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "Rally": 0,
+        "ShowProgress": 1,
+        "SuppressMovement": 1,
+        "WaitUntilStopped": 0
+      },
+      "InfoArray": [
+        {
+          "RandomDelayMax": "0.001",
+          "RandomDelayMin": "0.001",
+          "Unit": "OverlordCocoon"
+        },
+        {
+          "Score": "1",
+          "SectionArray": [
+            {
+              "DurationArray": {
+                "Delay": 16.6665
+              },
+              "EffectArray": {
+                "Finish": "PostMorphHeal"
+              },
+              "index": "Stats"
+            },
+            {
+              "DurationArray": {
+                "Delay": 16.6665
+              },
+              "index": "Abils"
+            },
+            {
+              "DurationArray": {
+                "Delay": 16.6665
+              },
+              "index": "Actor"
+            }
+          ],
+          "Unit": "Overseer"
+        }
+      ],
+      "ValidatorArray": "HasNoCargo",
+      "id": "MorphToOverseer"
     },
     {
       "AbilClassEnableArray": {
@@ -6547,73 +6675,6 @@
       "id": "MorphToInfestedTerran"
     },
     {
-      "AbilClassEnableArray": {
-        "CAbilMove": 1
-      },
-      "ActorKey": "OverseerMut",
-      "Alert": "MorphComplete_Zerg",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "Cancel",
-          "index": "Cancel"
-        },
-        {
-          "DefaultButtonFace": "MorphToOverseer",
-          "Requirements": "UseOverseerMorph",
-          "index": "Execute"
-        }
-      ],
-      "Cost": {
-        "Charge": {
-          "Link": "Abil/OverseerMut"
-        },
-        "Cooldown": {
-          "Link": "Abil/OverseerMut"
-        }
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFacing": 1,
-        "WaitUntilStopped": 0
-      },
-      "InfoArray": [
-        {
-          "RandomDelayMax": "0.001",
-          "RandomDelayMin": "0.001",
-          "Unit": "OverlordCocoon"
-        },
-        {
-          "Score": "1",
-          "SectionArray": [
-            {
-              "DurationArray": {
-                "Delay": 16.6665
-              },
-              "EffectArray": {
-                "Finish": "PostMorphHeal"
-              },
-              "index": "Stats"
-            },
-            {
-              "DurationArray": {
-                "Delay": 16.6665
-              },
-              "index": "Abils"
-            },
-            {
-              "DurationArray": {
-                "Delay": 16.6665
-              },
-              "index": "Actor"
-            }
-          ],
-          "Unit": "Overseer"
-        }
-      ],
-      "ValidatorArray": "HasNoCargo",
-      "id": "MorphToOverseer"
-    },
-    {
       "AbilSetId": "AssaultMode",
       "CmdButtonArray": {
         "DefaultButtonFace": "AssaultMode",
@@ -6624,6 +6685,8 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
+        "IgnoreFacing": 1,
+        "IgnorePlacement": 0,
         "WaitUntilStopped": 0
       },
       "InfoArray": {
@@ -6657,6 +6720,58 @@
         "index": "0"
       },
       "id": "AssaultMode"
+    },
+    {
+      "AbilSetId": "BrwD",
+      "ActorKey": "BurrowDown",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "BurrowDown",
+          "Flags": {
+            "ToSelection": 1
+          },
+          "Requirements": "UseBurrow",
+          "index": "Execute"
+        },
+        {
+          "DefaultButtonFace": "Cancel",
+          "index": "Cancel"
+        }
+      ],
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.3703",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 0.5556
+            },
+            "index": "Collide"
+          },
+          {
+            "DurationArray": {
+              "Delay": 1
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 1.333
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "ZerglingBurrowed"
+      },
+      "id": "BurrowZerglingDown"
     },
     {
       "AbilSetId": "BrwD",
@@ -6719,54 +6834,6 @@
       "ActorKey": "BurrowDown",
       "CmdButtonArray": [
         {
-          "DefaultButtonFace": "BurrowDown",
-          "Flags": {
-            "ToSelection": 1
-          },
-          "Requirements": "UseBurrow",
-          "index": "Execute"
-        },
-        {
-          "DefaultButtonFace": "Cancel",
-          "index": "Cancel"
-        }
-      ],
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.3703",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 0.5556
-            },
-            "index": "Collide"
-          },
-          {
-            "DurationArray": {
-              "Delay": 1
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 1.333
-            },
-            "index": "Actor"
-          }
-        ],
-        "Unit": "ZerglingBurrowed"
-      },
-      "id": "BurrowZerglingDown"
-    },
-    {
-      "AbilSetId": "BrwD",
-      "ActorKey": "BurrowDown",
-      "CmdButtonArray": [
-        {
           "DefaultButtonFace": "Cancel",
           "index": "Cancel"
         },
@@ -6813,6 +6880,97 @@
         "Unit": "WidowMineBurrowed"
       },
       "id": "WidowMineBurrow"
+    },
+    {
+      "AbilSetId": "BrwD",
+      "ActorKey": "BurrowDown",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowDown",
+        "Flags": {
+          "ShowInGlossary": 0
+        },
+        "Requirements": "UseBurrow",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.3703",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 0.5556
+            },
+            "index": "Collide"
+          },
+          {
+            "DurationArray": {
+              "Delay": 1
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 1.333
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "InfestorTerranBurrowed"
+      },
+      "id": "BurrowInfestorTerranDown"
+    },
+    {
+      "AbilSetId": "BrwD",
+      "ActorKey": "BurrowDown",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowDown",
+        "Flags": {
+          "ShowInGlossary": 0
+        },
+        "Requirements": "UseBurrow",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.25",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 0.9375
+            },
+            "index": "Collide"
+          },
+          {
+            "DurationArray": {
+              "Delay": 1.1457
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 1.25
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "UltraliskBurrowed"
+      },
+      "id": "BurrowUltraliskDown"
     },
     {
       "AbilSetId": "BrwD",
@@ -6974,8 +7132,13 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "RallyReset": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RallyResetPhase": "Delay",
@@ -7009,88 +7172,12 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.1",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 0.5556
-            },
-            "index": "Collide"
-          },
-          {
-            "DurationArray": {
-              "Delay": 0.5556
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 0.5556
-            },
-            "index": "Actor"
-          }
-        ],
-        "Unit": "RavagerBurrowed"
-      },
-      "id": "BurrowRavagerDown"
-    },
-    {
-      "AbilSetId": "BrwD",
-      "ActorKey": "BurrowDown",
-      "CmdButtonArray": {
-        "Flags": {
-          "ShowInGlossary": 0
-        },
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.1",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 0.5556
-            },
-            "index": "Collide"
-          },
-          {
-            "DurationArray": {
-              "Delay": 0.5556
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 0.5556
-            },
-            "index": "Actor"
-          }
-        ],
-        "Unit": "RoachBurrowed"
-      },
-      "id": "BurrowRoachDown"
-    },
-    {
-      "AbilSetId": "BrwD",
-      "ActorKey": "BurrowDown",
-      "CmdButtonArray": {
-        "Flags": {
-          "ShowInGlossary": 0
-        },
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.25",
@@ -7129,8 +7216,12 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.25",
@@ -7169,48 +7260,12 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.25",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 0.9375
-            },
-            "index": "Collide"
-          },
-          {
-            "DurationArray": {
-              "Delay": 1.1457
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 1.25
-            },
-            "index": "Actor"
-          }
-        ],
-        "Unit": "UltraliskBurrowed"
-      },
-      "id": "BurrowUltraliskDown"
-    },
-    {
-      "AbilSetId": "BrwD",
-      "ActorKey": "BurrowDown",
-      "CmdButtonArray": {
-        "Flags": {
-          "ShowInGlossary": 0
-        },
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
@@ -7249,48 +7304,12 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.3703",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 0.5556
-            },
-            "index": "Collide"
-          },
-          {
-            "DurationArray": {
-              "Delay": 1
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 1.333
-            },
-            "index": "Actor"
-          }
-        ],
-        "Unit": "InfestorTerranBurrowed"
-      },
-      "id": "BurrowInfestorTerranDown"
-    },
-    {
-      "AbilSetId": "BrwD",
-      "ActorKey": "BurrowDown",
-      "CmdButtonArray": {
-        "Flags": {
-          "ShowInGlossary": 0
-        },
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
@@ -7329,8 +7348,97 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.1",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 0.5556
+            },
+            "index": "Collide"
+          },
+          {
+            "DurationArray": {
+              "Delay": 0.5556
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 0.5556
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "RavagerBurrowed"
+      },
+      "id": "BurrowRavagerDown"
+    },
+    {
+      "AbilSetId": "BrwD",
+      "ActorKey": "BurrowDown",
+      "CmdButtonArray": {
+        "Flags": {
+          "ShowInGlossary": 0
+        },
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.1",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 0.5556
+            },
+            "index": "Collide"
+          },
+          {
+            "DurationArray": {
+              "Delay": 0.5556
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 0.5556
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "RoachBurrowed"
+      },
+      "id": "BurrowRoachDown"
+    },
+    {
+      "AbilSetId": "BrwD",
+      "ActorKey": "BurrowDown",
+      "CmdButtonArray": {
+        "Flags": {
+          "ShowInGlossary": 0
+        },
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnorePlacement": 0,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
@@ -7366,6 +7474,7 @@
       "AutoCastRange": 5,
       "AutoCastValidatorArray": "TargetNotChangeling",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
         "Flags": {
           "ShowInGlossary": 0
         },
@@ -7373,8 +7482,10 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.125",
@@ -7404,6 +7515,7 @@
       "AutoCastRange": 1,
       "AutoCastValidatorArray": "TargetNotChangeling",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
         "Flags": {
           "ShowInGlossary": 0
         },
@@ -7411,8 +7523,11 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "AutoCast": 1,
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.5",
@@ -7434,6 +7549,7 @@
       "AutoCastRange": 2,
       "AutoCastValidatorArray": "TargetNotChangeling",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
         "Flags": {
           "ShowInGlossary": 0
         },
@@ -7441,8 +7557,11 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "AutoCast": 1,
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.1",
@@ -7472,6 +7591,7 @@
       "AutoCastRange": 2,
       "AutoCastValidatorArray": "TargetNotChangeling",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
         "Flags": {
           "ShowInGlossary": 0
         },
@@ -7479,8 +7599,11 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "AutoCast": 1,
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.1",
@@ -7510,6 +7633,7 @@
       "AutoCastRange": 2,
       "AutoCastValidatorArray": "TargetNotChangeling",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
         "Flags": {
           "ShowInGlossary": 0
         },
@@ -7517,8 +7641,11 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "AutoCast": 1,
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.1125",
@@ -7548,6 +7675,7 @@
       "AutoCastRange": 2,
       "AutoCastValidatorArray": "TargetNotChangeling",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
         "Flags": {
           "ShowInGlossary": 0
         },
@@ -7555,8 +7683,11 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "AutoCast": 1,
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.5",
@@ -7569,6 +7700,124 @@
         "Unit": "Ultralisk"
       },
       "id": "BurrowUltraliskUp"
+    },
+    {
+      "AbilSetId": "BrwU",
+      "ActorKey": "BurrowUp",
+      "AutoCastCountMin": 1,
+      "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden",
+      "AutoCastRange": 5,
+      "AutoCastValidatorArray": "TargetNotChangeling",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
+        "Flags": {
+          "ShowInGlossary": 0
+        },
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "AutoCast": 1,
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.1125",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Duration": 0.2221
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 0.5
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "Hydralisk"
+      },
+      "id": "BurrowHydraliskUp"
+    },
+    {
+      "AbilSetId": "BrwU",
+      "ActorKey": "BurrowUp",
+      "AutoCastCountMin": 1,
+      "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden",
+      "AutoCastRange": 5,
+      "AutoCastValidatorArray": "TargetNotChangeling",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
+        "Flags": {
+          "ShowInGlossary": 0
+        },
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "AutoCast": 1,
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.5",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Duration": 0.4443
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 1
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "Queen"
+      },
+      "id": "BurrowQueenUp"
+    },
+    {
+      "AbilSetId": "BrwU",
+      "ActorKey": "BurrowUp",
+      "AutoCastCountMin": 1,
+      "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden",
+      "AutoCastRange": 5,
+      "AutoCastValidatorArray": "TargetNotChangeling",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
+        "Flags": {
+          "ShowInGlossary": 0
+        },
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "AutoCast": 1,
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.5",
+        "SectionArray": {
+          "DurationArray": {
+            "Duration": 1
+          },
+          "index": "Actor"
+        },
+        "Unit": "InfestorTerran"
+      },
+      "id": "BurrowInfestorTerranUp"
     },
     {
       "AbilSetId": "BrwU",
@@ -7615,112 +7864,6 @@
         "Unit": "DefilerMP"
       },
       "id": "DefilerMPUnburrow"
-    },
-    {
-      "AbilSetId": "BrwU",
-      "ActorKey": "BurrowUp",
-      "AutoCastCountMin": 1,
-      "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden",
-      "AutoCastRange": 5,
-      "AutoCastValidatorArray": "TargetNotChangeling",
-      "CmdButtonArray": {
-        "Flags": {
-          "ShowInGlossary": 0
-        },
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.1125",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Duration": 0.2221
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 0.5
-            },
-            "index": "Actor"
-          }
-        ],
-        "Unit": "Hydralisk"
-      },
-      "id": "BurrowHydraliskUp"
-    },
-    {
-      "AbilSetId": "BrwU",
-      "ActorKey": "BurrowUp",
-      "AutoCastCountMin": 1,
-      "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden",
-      "AutoCastRange": 5,
-      "AutoCastValidatorArray": "TargetNotChangeling",
-      "CmdButtonArray": {
-        "Flags": {
-          "ShowInGlossary": 0
-        },
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.5",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Duration": 0.4443
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 1
-            },
-            "index": "Actor"
-          }
-        ],
-        "Unit": "Queen"
-      },
-      "id": "BurrowQueenUp"
-    },
-    {
-      "AbilSetId": "BrwU",
-      "ActorKey": "BurrowUp",
-      "AutoCastCountMin": 1,
-      "AutoCastFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden",
-      "AutoCastRange": 5,
-      "AutoCastValidatorArray": "TargetNotChangeling",
-      "CmdButtonArray": {
-        "Flags": {
-          "ShowInGlossary": 0
-        },
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.5",
-        "SectionArray": {
-          "DurationArray": {
-            "Duration": 1
-          },
-          "index": "Actor"
-        },
-        "Unit": "InfestorTerran"
-      },
-      "id": "BurrowInfestorTerranUp"
     },
     {
       "AbilSetId": "BrwU",
@@ -7815,6 +7958,7 @@
       "ActorKey": "BurrowUp",
       "AutoCastValidatorArray": "TargetNotChangeling",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
         "Flags": {
           "ShowInGlossary": 0
         },
@@ -7822,8 +7966,10 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
+        "IgnoreUnitCost": 1,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.25",
@@ -7844,6 +7990,44 @@
         "Unit": "Drone"
       },
       "id": "BurrowDroneUp"
+    },
+    {
+      "AbilSetId": "BrwU",
+      "ActorKey": "BurrowUp",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "MorphToSwarmHostMP",
+        "Flags": {
+          "ShowInGlossary": 0
+        },
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "Flags": {
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnoreUnitCost": 1,
+        "RallyReset": 1,
+        "SuppressMovement": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.5",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 0
+            },
+            "index": "Abils"
+          },
+          {
+            "DurationArray": {
+              "Delay": 0
+            },
+            "index": "Mover"
+          }
+        ],
+        "Unit": "SwarmHostMP"
+      },
+      "id": "MorphToSwarmHostMP"
     },
     {
       "AbilSetId": "BrwU",
@@ -7885,40 +8069,6 @@
         "Unit": "WidowMine"
       },
       "id": "WidowMineUnburrow"
-    },
-    {
-      "AbilSetId": "BrwU",
-      "ActorKey": "BurrowUp",
-      "CmdButtonArray": {
-        "Flags": {
-          "ShowInGlossary": 0
-        },
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
-      "Flags": {
-        "IgnoreFood": 1,
-        "IgnoreUnitCost": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.5",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 0
-            },
-            "index": "Abils"
-          },
-          {
-            "DurationArray": {
-              "Delay": 0
-            },
-            "index": "Mover"
-          }
-        ],
-        "Unit": "SwarmHostMP"
-      },
-      "id": "MorphToSwarmHostMP"
     },
     {
       "AbilSetId": "FighterMode",
@@ -8147,12 +8297,17 @@
     {
       "AbilSetId": "SiegeMode",
       "CmdButtonArray": {
+        "DefaultButtonFace": "SiegeMode",
+        "Flags": {
+          "ToSelection": 1
+        },
         "Requirements": "",
         "index": "Execute"
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
-        "IgnoreCollision": 0
+        "IgnoreCollision": 0,
+        "SuppressMovement": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.5",
@@ -8293,6 +8448,7 @@
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
+        "IgnoreFacing": 1,
         "SuppressMovement": 0
       },
       "InfoArray": {
@@ -8617,7 +8773,13 @@
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
         "AutoCast": 1,
-        "AutoCastOn": 1
+        "AutoCastOn": 1,
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
+        "Produce": 1,
+        "ShowProgress": 1
       },
       "InfoArray": {
         "SectionArray": [
@@ -8782,6 +8944,7 @@
     {
       "ActorKey": "BurrowUp",
       "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowUp",
         "Flags": {
           "ShowInGlossary": 0
         },
@@ -9145,7 +9308,17 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
         "IgnoreFacing": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "Rally": 1,
+        "RallyReset": 1,
+        "ShowProgress": 1,
+        "SuppressMovement": 1,
         "WaitUntilStopped": 0
       },
       "InfoArray": [
@@ -9221,7 +9394,17 @@
       ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
         "IgnoreFacing": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "Rally": 1,
+        "RallyReset": 1,
+        "ShowProgress": 1,
+        "SuppressMovement": 1,
         "WaitUntilStopped": 0
       },
       "InfoArray": [
@@ -9911,6 +10094,27 @@
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
         "IgnoreFacing": 1,
+        "Transient": 1,
+        "WaitUntilStopped": 0
+      },
+      "InfoArray": [
+        {
+          "Unit": "LocustMP"
+        },
+        {
+          "Unit": "LocustMP"
+        }
+      ],
+      "id": "LocustMPFlyingMorphToGround"
+    },
+    {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "LocustMPFlyingSwoop",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "IgnoreFacing": 1,
         "WaitUntilStopped": 0
       },
       "InfoArray": [
@@ -9934,25 +10138,6 @@
         }
       ],
       "id": "LocustMPMorphToAir"
-    },
-    {
-      "CmdButtonArray": {
-        "DefaultButtonFace": "LocustMPFlyingSwoop",
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "Transient": 1
-      },
-      "InfoArray": [
-        {
-          "Unit": "LocustMP"
-        },
-        {
-          "Unit": "LocustMP"
-        }
-      ],
-      "id": "LocustMPFlyingMorphToGround"
     },
     {
       "CmdButtonArray": {

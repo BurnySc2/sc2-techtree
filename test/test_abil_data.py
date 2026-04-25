@@ -61,3 +61,25 @@ class TestBarracksAddOns:
         bra = abil_data["BarracksAddOns"]
         indexes = {entry.get("Unit") for entry in bra.get("InfoArray", []) if isinstance(entry, dict)}
         assert unit_name in indexes
+
+
+class TestStimpack:
+    def test_stimpack_marauder_key_exists(self, abil_data: dict) -> None:
+        assert "StimpackMarauder" in abil_data
+
+    def test_stimpack_marauder_cost_life(self, abil_data: dict) -> None:
+        sm = abil_data["StimpackMarauder"]
+        assert "Cost" in sm
+        cost = sm["Cost"]
+        assert "Vital" in cost
+        assert cost["Vital"].get("Life") == 20
+
+    def test_stimpack_key_exists(self, abil_data: dict) -> None:
+        assert "Stimpack" in abil_data
+
+    def test_stimpack_cost_life(self, abil_data: dict) -> None:
+        ss = abil_data["Stimpack"]
+        assert "Cost" in ss
+        cost = ss["Cost"]
+        assert "Vital" in cost
+        assert cost["Vital"].get("Life") == 10

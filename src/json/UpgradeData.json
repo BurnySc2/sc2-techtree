@@ -1418,8 +1418,7 @@
       "EffectArray": {
         "Operation": "Multiply",
         "Reference": "Unit,Medivac,EnergyRegenRate",
-        "Value": "2.000000",
-        "index": "0"
+        "Value": "2.000000"
       },
       "Flags": {
         "TechTreeCheat": 1
@@ -1781,23 +1780,7 @@
       "Alert": "ResearchComplete",
       "EditorCategories": "Race:Terran,UpgradeType:Talents",
       "EffectArray": {
-        "Reference": "Unit,Raven,EnergyStart",
-        "Value": "25"
-      },
-      "Flags": {
-        "TechTreeCheat": 1
-      },
-      "Icon": "Assets\\Textures\\btn-upgrade-terran-corvidreactor.dds",
-      "Race": "Terr",
-      "ScoreAmount": 300,
-      "ScoreResult": "BuildOrder",
-      "id": "RavenCorvidReactor"
-    },
-    {
-      "AffectedUnitArray": "Raven",
-      "Alert": "ResearchComplete",
-      "EditorCategories": "Race:Terran,UpgradeType:Talents",
-      "EffectArray": {
+        "Reference": "Behavior,PointDefenseDroneTimedLife,Duration",
         "Value": "10.000000",
         "index": "1"
       },
@@ -1809,6 +1792,23 @@
       "ScoreAmount": 300,
       "ScoreResult": "BuildOrder",
       "id": "DurableMaterials"
+    },
+    {
+      "AffectedUnitArray": "Raven",
+      "Alert": "ResearchComplete",
+      "EditorCategories": "Race:Terran,UpgradeType:Talents",
+      "EffectArray": {
+        "Reference": "Unit,Raven,EnergyStart",
+        "Value": "25"
+      },
+      "Flags": {
+        "TechTreeCheat": 1
+      },
+      "Icon": "Assets\\Textures\\btn-upgrade-terran-corvidreactor.dds",
+      "Race": "Terr",
+      "ScoreAmount": 300,
+      "ScoreResult": "BuildOrder",
+      "id": "RavenCorvidReactor"
     },
     {
       "AffectedUnitArray": "Raven",
@@ -2412,8 +2412,8 @@
       "Alert": "ResearchComplete",
       "EditorCategories": "Race:Protoss,UpgradeType:Talents",
       "EffectArray": {
-        "Value": "1.125000",
-        "index": "0"
+        "Reference": "Unit,Zealot,Speed",
+        "Value": "1.125000"
       },
       "Flags": {
         "TechTreeCheat": 1
@@ -2468,8 +2468,7 @@
       "EditorCategories": "Race:Terran,UpgradeType:Talents",
       "EffectArray": {
         "Reference": "Unit,Reaper,Speed",
-        "Value": "0.875000",
-        "index": "0"
+        "Value": "0.875000"
       },
       "Flags": {
         "TechTreeCheat": 1
@@ -2479,80 +2478,6 @@
       "ScoreAmount": 100,
       "ScoreResult": "BuildOrder",
       "id": "ReaperSpeed"
-    },
-    {
-      "AffectedUnitArray": {
-        "index": "PointDefenseDrone"
-      },
-      "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
-      "EffectArray": [
-        {
-          "Operation": "Set",
-          "Reference": "Actor,Bunker,GroupIcon.Image[0]",
-          "Value": "Assets\\Textures\\wireframe-terran-bunker-neosteelframe.dds"
-        },
-        {
-          "Operation": "Set",
-          "Reference": "Actor,Bunker,Wireframe.Image[0]",
-          "Value": "Assets\\Textures\\wireframe-terran-bunker-neosteelframe.dds"
-        },
-        {
-          "Reference": "Abil,BunkerTransport,MaxCargoCount",
-          "Value": "2"
-        },
-        {
-          "Reference": "Abil,BunkerTransport,TotalCargoSpace",
-          "Value": "2"
-        },
-        {
-          "Reference": "Abil,CommandCenterTransport,MaxCargoCount",
-          "Value": "5"
-        },
-        {
-          "Reference": "Abil,CommandCenterTransport,TotalCargoSpace",
-          "Value": "5"
-        },
-        {
-          "Reference": "Unit,BypassArmorDrone,LifeArmor",
-          "index": "61"
-        },
-        {
-          "Reference": "Unit,BypassArmorDrone,LifeArmorLevel",
-          "index": "60"
-        },
-        {
-          "Reference": "Unit,PointDefenseDrone,LifeArmor",
-          "index": "59"
-        },
-        {
-          "Reference": "Unit,PointDefenseDrone,LifeArmorLevel",
-          "Value": "2",
-          "index": "58"
-        },
-        {
-          "Reference": "Unit,RavenRepairDrone,LifeArmor",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,RavenRepairDrone,LifeArmorLevel",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,RefineryRich,LifeArmor",
-          "Value": "2"
-        },
-        {
-          "Reference": "Unit,RefineryRich,LifeArmorLevel",
-          "Value": "2"
-        }
-      ],
-      "Icon": "Assets\\Textures\\btn-upgrade-terran-buildingarmor.dds",
-      "InfoTooltipPriority": 41,
-      "ScoreAmount": 300,
-      "ScoreCount": "ArmorTechnologyCount",
-      "ScoreResult": "BuildOrder",
-      "ScoreValue": "ArmorTechnologyValue",
-      "id": "TerranBuildingArmor"
     },
     {
       "AffectedUnitArray": {
@@ -3137,6 +3062,80 @@
       "WebPriority": 0,
       "default": "1",
       "id": "ProtossGroundWeapons"
+    },
+    {
+      "AffectedUnitArray": {
+        "value": "Armory"
+      },
+      "EditorCategories": "Race:Terran,UpgradeType:ArmorBonus",
+      "EffectArray": [
+        {
+          "Operation": "Set",
+          "Reference": "Actor,Bunker,GroupIcon.Image[0]",
+          "Value": "Assets\\Textures\\wireframe-terran-bunker-neosteelframe.dds"
+        },
+        {
+          "Operation": "Set",
+          "Reference": "Actor,Bunker,Wireframe.Image[0]",
+          "Value": "Assets\\Textures\\wireframe-terran-bunker-neosteelframe.dds"
+        },
+        {
+          "Reference": "Abil,BunkerTransport,MaxCargoCount",
+          "Value": "2"
+        },
+        {
+          "Reference": "Abil,BunkerTransport,TotalCargoSpace",
+          "Value": "2"
+        },
+        {
+          "Reference": "Abil,CommandCenterTransport,MaxCargoCount",
+          "Value": "5"
+        },
+        {
+          "Reference": "Abil,CommandCenterTransport,TotalCargoSpace",
+          "Value": "5"
+        },
+        {
+          "Reference": "Unit,BypassArmorDrone,LifeArmor",
+          "index": "61"
+        },
+        {
+          "Reference": "Unit,BypassArmorDrone,LifeArmorLevel",
+          "index": "60"
+        },
+        {
+          "Reference": "Unit,PointDefenseDrone,LifeArmor",
+          "index": "59"
+        },
+        {
+          "Reference": "Unit,PointDefenseDrone,LifeArmorLevel",
+          "Value": "2",
+          "index": "58"
+        },
+        {
+          "Reference": "Unit,RavenRepairDrone,LifeArmor",
+          "Value": "2"
+        },
+        {
+          "Reference": "Unit,RavenRepairDrone,LifeArmorLevel",
+          "Value": "2"
+        },
+        {
+          "Reference": "Unit,RefineryRich,LifeArmor",
+          "Value": "2"
+        },
+        {
+          "Reference": "Unit,RefineryRich,LifeArmorLevel",
+          "Value": "2"
+        }
+      ],
+      "Icon": "Assets\\Textures\\btn-upgrade-terran-buildingarmor.dds",
+      "InfoTooltipPriority": 41,
+      "ScoreAmount": 300,
+      "ScoreCount": "ArmorTechnologyCount",
+      "ScoreResult": "BuildOrder",
+      "ScoreValue": "ArmorTechnologyValue",
+      "id": "TerranBuildingArmor"
     },
     {
       "AffectedUnitArray": {

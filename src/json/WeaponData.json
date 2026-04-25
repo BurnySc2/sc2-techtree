@@ -51,7 +51,9 @@
         }
       },
       "Options": {
-        "Disabled": 1
+        "Disabled": 1,
+        "Hidden": 1,
+        "Melee": 1
       },
       "Period": 0.833,
       "Range": 0.25,
@@ -73,7 +75,9 @@
         }
       },
       "Options": {
-        "Disabled": 0
+        "Disabled": 0,
+        "Hidden": 1,
+        "Melee": 1
       },
       "Period": 0.833,
       "Range": 0.25,
@@ -313,7 +317,9 @@
       },
       "Options": {
         "DisplayCooldown": 1,
-        "LinkedCooldown": 0
+        "LinkedCooldown": 0,
+        "OnlyFireAtAttackOrderTarget": 0,
+        "OnlyFireWhileInAttackOrder": 0
       },
       "Period": 2.21,
       "RandomDelayMax": 0,
@@ -691,6 +697,7 @@
         "NoDeceleration": 1
       },
       "Options": {
+        "Disabled": 1,
         "DisplayCooldown": 1
       },
       "Period": 0.86,

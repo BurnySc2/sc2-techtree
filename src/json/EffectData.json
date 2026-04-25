@@ -1077,6 +1077,7 @@
       "Behavior": "OracleStasisTrapTarget",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
+        "index": "NotFrenzied",
         "value": "NotLarva"
       },
       "id": "OracleStasisTrapActivateAB"
@@ -1313,7 +1314,7 @@
       "Behavior": "Recalling",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "index": "NotLarvaEgg"
+        "0": ""
       },
       "id": "MassRecallApplyBehavior"
     },
@@ -3880,7 +3881,8 @@
       "PeriodCount": 2,
       "PeriodicEffectArray": {
         "0": "IonCannonsLMRight",
-        "1": "IonCannonsLMLeft"
+        "1": "IonCannonsLMLeft",
+        "value": "IonCannonsLMLeft"
       },
       "PeriodicPeriodArray": {
         "value": 0
@@ -4543,6 +4545,7 @@
         "value": "0,-11,0"
       },
       "PeriodicPeriodArray": {
+        "index": 0,
         "value": 0.125
       },
       "PeriodicValidator": "CasterIsAliveandBurrowedLurker",
@@ -4553,6 +4556,24 @@
         "Value": "SourcePoint"
       },
       "id": "LurkerMP"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "Flags": {
+        "Channeled": 1,
+        "PersistUntilDestroyed": 0
+      },
+      "InitialEffect": "NeuralParasite",
+      "PeriodCount": 30,
+      "PeriodicEffectArray": {
+        "0": "NeuralParasitePersistentDestroy"
+      },
+      "PeriodicPeriodArray": 0.5,
+      "PeriodicValidator": "NeuralParasitePeriodicValidator",
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "NeuralParasitePersistent"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -4763,23 +4784,6 @@
         "Value": "TargetUnit"
       },
       "id": "YoinkDelayPersistentVikingGround"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "Flags": {
-        "PersistUntilDestroyed": 0
-      },
-      "InitialEffect": "NeuralParasite",
-      "PeriodCount": 30,
-      "PeriodicEffectArray": {
-        "0": "NeuralParasitePersistentDestroy"
-      },
-      "PeriodicPeriodArray": 0.5,
-      "PeriodicValidator": "NeuralParasitePeriodicValidator",
-      "WhichLocation": {
-        "Value": "CasterUnit"
-      },
-      "id": "NeuralParasitePersistent"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -5683,6 +5687,24 @@
     {
       "CreateFlags": {
         "Birth": 0,
+        "PlacementIgnoreBlockers": 1,
+        "Precursor": 0,
+        "ProvideFood": 0,
+        "TechComplete": 0,
+        "UseFood": 0
+      },
+      "EditorCategories": "Race:Zerg",
+      "SpawnEffect": "LocustMPFlyingSwoopPrecursorSet",
+      "SpawnRange": 3,
+      "SpawnUnit": "LocustMPPrecursor",
+      "WhichLocation": {
+        "Value": "TargetPoint"
+      },
+      "id": "LocustMPFlyingSwoopCreatePrecursor"
+    },
+    {
+      "CreateFlags": {
+        "Birth": 0,
         "SetFacing": 1
       },
       "EditorCategories": "Race:Zerg",
@@ -6259,6 +6281,42 @@
     },
     {
       "CreateFlags": {
+        "PlacementIgnoreBlockers": 1,
+        "TechComplete": 0
+      },
+      "EditorCategories": "Race:Zerg",
+      "RallyUnit": {
+        "Value": "Source"
+      },
+      "SpawnEffect": "LocustMPCreateSetA",
+      "SpawnOffset": "0.4,-0.2",
+      "SpawnRange": 1.5,
+      "SpawnUnit": "LocustMP",
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "LocustMPCreateUnitA"
+    },
+    {
+      "CreateFlags": {
+        "PlacementIgnoreBlockers": 1,
+        "TechComplete": 0
+      },
+      "EditorCategories": "Race:Zerg",
+      "RallyUnit": {
+        "Value": "Source"
+      },
+      "SpawnEffect": "LocustMPCreateSetB",
+      "SpawnOffset": "-0.4,-0.2",
+      "SpawnRange": 1.5,
+      "SpawnUnit": "LocustMP",
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "LocustMPCreateUnitB"
+    },
+    {
+      "CreateFlags": {
         "PlacementIgnoreCliffTest": 1,
         "SetFacing": 1,
         "TechComplete": 0
@@ -6273,19 +6331,6 @@
         "Value": "TargetPoint"
       },
       "id": "ReleaseInterceptorsBeaconCU"
-    },
-    {
-      "CreateFlags": {
-        "Precursor": 0
-      },
-      "EditorCategories": "Race:Zerg",
-      "SpawnEffect": "LocustMPFlyingSwoopPrecursorSet",
-      "SpawnRange": 3,
-      "SpawnUnit": "LocustMPPrecursor",
-      "WhichLocation": {
-        "Value": "TargetPoint"
-      },
-      "id": "LocustMPFlyingSwoopCreatePrecursor"
     },
     {
       "CreateFlags": {
@@ -6505,40 +6550,6 @@
         "Value": "TargetPoint"
       },
       "id": "InfestedTerransLayEgg"
-    },
-    {
-      "CreateFlags": {
-        "TechComplete": 0
-      },
-      "EditorCategories": "Race:Zerg",
-      "RallyUnit": {
-        "Value": "Source"
-      },
-      "SpawnEffect": "LocustMPCreateSetA",
-      "SpawnOffset": "0.4,-0.2",
-      "SpawnRange": 1.5,
-      "SpawnUnit": "LocustMP",
-      "WhichLocation": {
-        "Value": "CasterUnit"
-      },
-      "id": "LocustMPCreateUnitA"
-    },
-    {
-      "CreateFlags": {
-        "TechComplete": 0
-      },
-      "EditorCategories": "Race:Zerg",
-      "RallyUnit": {
-        "Value": "Source"
-      },
-      "SpawnEffect": "LocustMPCreateSetB",
-      "SpawnOffset": "-0.4,-0.2",
-      "SpawnRange": 1.5,
-      "SpawnUnit": "LocustMP",
-      "WhichLocation": {
-        "Value": "CasterUnit"
-      },
-      "id": "LocustMPCreateUnitB"
     },
     {
       "EditorCategories": "",
@@ -7211,7 +7222,8 @@
       "ValidatorArray": {
         "0": "MultipleHitGroundOnlyAttackTargetFilter",
         "1": "noMarkers",
-        "2": "ColossusAttackDamageMaxRange"
+        "2": "ColossusAttackDamageMaxRange",
+        "value": "ThermalLancesCliffLevel"
       },
       "Visibility": "Visible",
       "id": "ThermalLancesMU",
@@ -7748,6 +7760,7 @@
       "KindSplash": "Splash",
       "SearchFilters": "-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
       "SearchFlags": {
+        "OffsetByUnitRadius": 0,
         "SameCliff": 0
       },
       "id": "PsionicShockwaveDamage",
@@ -8434,7 +8447,8 @@
       "Death": "Fire",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "1": "MultipleHitAttackTargetFilter"
+        "1": "MultipleHitAttackTargetFilter",
+        "value": "MothershipRangeCheck"
       },
       "Visibility": "Visible",
       "id": "MothershipBeamDamage",
@@ -8666,8 +8680,8 @@
     },
     {
       "AreaArray": {
-        "Radius": "2.25",
-        "index": "0"
+        "Fraction": "1",
+        "Radius": "2.25"
       },
       "EditorCategories": "Race:Terran",
       "Flags": {
@@ -9644,8 +9658,8 @@
         "HurtFriend": 1
       },
       "AreaArray": {
-        "Radius": "2",
-        "index": "0"
+        "Effect": "PsiStormApplyBehavior",
+        "Radius": "2"
       },
       "EditorCategories": "Race:Protoss",
       "SearchFilters": "-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable",
@@ -9690,7 +9704,7 @@
       },
       "AreaArray": {
         "Effect": "ParasiticBombSecondaryAB",
-        "index": "0"
+        "Radius": "3"
       },
       "EditorCategories": "Race:Zerg",
       "SearchFilters": "Air;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
@@ -9796,8 +9810,7 @@
       "AreaArray": {
         "Arc": "45",
         "Effect": "HellionTankDamage",
-        "Radius": "2",
-        "index": "0"
+        "Radius": "2"
       },
       "EditorCategories": "Race:Terran",
       "ExcludeArray": {
@@ -10452,8 +10465,7 @@
     {
       "AreaArray": {
         "Effect": "EMPSet",
-        "Radius": "1.5",
-        "index": "0"
+        "Radius": "1.5"
       },
       "EditorCategories": "Race:Terran",
       "ImpactLocation": {
@@ -10473,6 +10485,24 @@
       "EditorCategories": "Race:Terran",
       "SearchFilters": "RawResource;-",
       "id": "ExtractorRichSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "FungalGrowthSet",
+        "Radius": "2.25"
+      },
+      "EditorCategories": "Race:Zerg",
+      "ImpactLocation": {
+        "Value": "TargetPoint"
+      },
+      "ResponseFlags": {
+        "Acquire": 1
+      },
+      "SearchFilters": "-;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "SearchFlags": {
+        "CallForHelp": 1
+      },
+      "id": "FungalGrowthSearch"
     },
     {
       "AreaArray": {
@@ -10525,6 +10555,22 @@
       },
       "SearchFilters": "Ground;Self,Player,Ally,Massive,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
       "id": "GrappleKnockbackSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "GuardianShieldApplyBehavior",
+        "Radius": "4.5"
+      },
+      "EditorCategories": "Race:Protoss",
+      "ImpactLocation": {
+        "Value": "TargetUnit"
+      },
+      "SearchFilters": "-;Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "SearchFlags": {
+        "ExtendByUnitRadius": 1,
+        "SameCliff": 0
+      },
+      "id": "GuardianShieldSearch"
     },
     {
       "AreaArray": {
@@ -10662,6 +10708,31 @@
       },
       "SearchFilters": "-;Self,Air,Destructible,Stasis,Dead,Hidden,Invulnerable",
       "id": "CollapsibleTerranTowerRubbleSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "LurkerMPDamage",
+        "Radius": "0.5"
+      },
+      "EditorCategories": "Race:Zerg",
+      "IncludeArray": [
+        {
+          "Effect": "LurkerMP",
+          "Value": "Target"
+        },
+        {
+          "Effect": "LurkerMPExtended",
+          "Value": "Target"
+        }
+      ],
+      "SearchFilters": "Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "SearchFlags": {
+        "CallForHelp": 1
+      },
+      "ValidatorArray": {
+        "0": "WeaponInRange"
+      },
+      "id": "LurkerMPSearch"
     },
     {
       "AreaArray": {
@@ -10960,7 +11031,7 @@
     {
       "AreaArray": {
         "Effect": "ParasiticBombSecondaryAB",
-        "index": "0"
+        "Radius": "3"
       },
       "EditorCategories": "Race:Zerg",
       "SearchFilters": "Air;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
@@ -11010,6 +11081,22 @@
       },
       "ValidatorArray": "CasterIsVisible",
       "id": "PurificationNovaTargettedSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "PurificationNovaDamage",
+        "Radius": "1.75"
+      },
+      "EditorCategories": "",
+      "ImpactLocation": {
+        "Value": "SourceUnitOrPoint"
+      },
+      "SearchFilters": "Ground;Self,Missile,Item,Dead,Hidden,Invulnerable",
+      "SearchFlags": {
+        "SameCliff": 1
+      },
+      "ValidatorArray": "CasterIsVisible",
+      "id": "PurificationNovaSearch"
     },
     {
       "AreaArray": {
@@ -11361,6 +11448,15 @@
     },
     {
       "AreaArray": {
+        "Effect": "TemporalFieldDamageDummy",
+        "Radius": "3.75"
+      },
+      "EditorCategories": "Race:Protoss",
+      "SearchFilters": "-;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "id": "TemporalFieldSearchAreaImpactDummy"
+    },
+    {
+      "AreaArray": {
         "Effect": "TerranBuildingKnockBack2Set",
         "Radius": "0.9"
       },
@@ -11633,6 +11729,18 @@
     },
     {
       "AreaArray": {
+        "Effect": "WidowMineExplodeSplash",
+        "Radius": "1.5"
+      },
+      "EditorCategories": "Race:Terran",
+      "ExcludeArray": {
+        "Value": "Target"
+      },
+      "SearchFilters": "-;Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
+      "id": "WidowMineExplodeSplashSearch"
+    },
+    {
+      "AreaArray": {
         "Effect": "WidowMineExplodeSplashSet2",
         "Radius": "1.5"
       },
@@ -11694,31 +11802,6 @@
     },
     {
       "AreaArray": {
-        "Radius": "0.5",
-        "index": "0"
-      },
-      "EditorCategories": "Race:Zerg",
-      "IncludeArray": [
-        {
-          "Effect": "LurkerMP",
-          "Value": "Target"
-        },
-        {
-          "Effect": "LurkerMPExtended",
-          "Value": "Target"
-        }
-      ],
-      "SearchFilters": "Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
-      "SearchFlags": {
-        "CallForHelp": 1
-      },
-      "ValidatorArray": {
-        "0": "WeaponInRange"
-      },
-      "id": "LurkerMPSearch"
-    },
-    {
-      "AreaArray": {
         "Radius": "0.5"
       },
       "EditorCategories": "Race:Zerg",
@@ -11737,81 +11820,11 @@
     },
     {
       "AreaArray": {
-        "Radius": "1.5",
-        "index": "0"
-      },
-      "EditorCategories": "Race:Terran",
-      "ExcludeArray": {
-        "Value": "Target"
-      },
-      "SearchFilters": "-;Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
-      "id": "WidowMineExplodeSplashSearch"
-    },
-    {
-      "AreaArray": {
         "Radius": "1.7"
       },
       "EditorCategories": "Race:Protoss",
       "SearchFilters": "-;Air,Ground,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable",
       "id": "ForceFieldPlacement"
-    },
-    {
-      "AreaArray": {
-        "Radius": "1.75",
-        "index": "0"
-      },
-      "EditorCategories": "",
-      "ImpactLocation": {
-        "Value": "SourceUnitOrPoint"
-      },
-      "SearchFilters": "Ground;Self,Missile,Item,Dead,Hidden,Invulnerable",
-      "SearchFlags": {
-        "SameCliff": 1
-      },
-      "ValidatorArray": "CasterIsVisible",
-      "id": "PurificationNovaSearch"
-    },
-    {
-      "AreaArray": {
-        "Radius": "2.25",
-        "index": "0"
-      },
-      "EditorCategories": "Race:Zerg",
-      "ImpactLocation": {
-        "Value": "TargetPoint"
-      },
-      "ResponseFlags": {
-        "Acquire": 1
-      },
-      "SearchFilters": "-;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
-      "SearchFlags": {
-        "CallForHelp": 1
-      },
-      "id": "FungalGrowthSearch"
-    },
-    {
-      "AreaArray": {
-        "Radius": "3.75",
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss",
-      "SearchFilters": "-;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
-      "id": "TemporalFieldSearchAreaImpactDummy"
-    },
-    {
-      "AreaArray": {
-        "Radius": "4.5",
-        "index": "0"
-      },
-      "EditorCategories": "Race:Protoss",
-      "ImpactLocation": {
-        "Value": "TargetUnit"
-      },
-      "SearchFilters": "-;Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
-      "SearchFlags": {
-        "SameCliff": 0
-      },
-      "id": "GuardianShieldSearch"
     },
     {
       "AreaArray": {},
@@ -15684,7 +15697,8 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "1": "PurificationNovaPostApply"
+        "1": "PurificationNovaPostApply",
+        "value": "PurificationNovaSearch"
       },
       "id": "PurificationNovaSearchSet"
     },
@@ -16766,7 +16780,8 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "0": ""
+        "0": "",
+        "value": "SurfaceForSpellcast"
       },
       "TargetLocationType": "Point",
       "id": "FungalGrowthInitialSet"
@@ -16781,7 +16796,8 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "0": "ViperConsumeDamage"
+        "0": "ViperConsumeDamage",
+        "value": "ViperConsumeStructureModifyTarget"
       },
       "ValidatorArray": {
         "value": "LifeGT2"
@@ -16791,7 +16807,8 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "1": "FungalGrowthSlowMovementApplyBehavior"
+        "1": "FungalGrowthSlowMovementApplyBehavior",
+        "value": "FungalGrowthApplyBehavior"
       },
       "ValidatorArray": "",
       "id": "FungalGrowthSet"
@@ -16799,31 +16816,18 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "2": "BroodlingTimedLifeBroodLord"
+        "2": "BroodlingTimedLifeBroodLord",
+        "value": "BroodlingEscortMissileB"
       },
       "id": "BroodlingEscortLaunchB"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "3": "BroodlingTimedLifeBroodLord"
+        "3": "BroodlingTimedLifeBroodLord",
+        "value": "BroodlingEscortRelease"
       },
       "id": "BroodlingEscortLaunch"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "index": "BanelingVolatileBurstDirectFallbackSet"
-      },
-      "ValidatorArray": "CasterIsNotHidden",
-      "id": "VolatileBurst"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "index": "ParasiticBombInitialDelayAB"
-      },
-      "id": "ParasiticBombInitialSet"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -16832,6 +16836,14 @@
       },
       "default": "1",
       "id": "DisguiseSetDefault"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "BanelingDontExplode"
+      },
+      "ValidatorArray": "CasterIsNotHidden",
+      "id": "VolatileBurst"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -17143,6 +17155,13 @@
         "value": "ParasiticBombDodgeTimerAB"
       },
       "id": "ParasiticBombDodgeCUSpawnSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "ParasiticBombInitialImpactDummy"
+      },
+      "id": "ParasiticBombInitialSet"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -17836,7 +17855,7 @@
     {
       "CaseArray": {
         "Effect": "CycloneWeaponLaunchMissileRightSetNew",
-        "index": "0"
+        "Validator": "CycloneWeaponLaunchMissileAlternate"
       },
       "CaseDefault": "CycloneWeaponLaunchMissileLeftSetNew",
       "EditorCategories": "Race:Terran",
@@ -17987,6 +18006,7 @@
         "Value": "TargetPoint"
       },
       "TeleportFlags": {
+        "TestFog": 0,
         "TestZone": 1
       },
       "WhichUnit": {
