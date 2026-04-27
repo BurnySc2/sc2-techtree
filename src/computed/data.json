@@ -288,6 +288,48 @@
       "id": 315,
       "name": "BuildInProgress"
     },
+    "BuildNydusCanal": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "EffectArray": {
+        "Start": "NydusAlertDummy"
+      },
+      "FlagArray": {
+        "Cancelable": 0
+      },
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": ""
+          },
+          "Time": "0",
+          "Unit": "",
+          "index": "Build3"
+        },
+        {
+          "Button": {
+            "Requirements": ""
+          },
+          "Time": "20",
+          "Unit": "",
+          "index": "Build2"
+        },
+        {
+          "Button": {
+            "State": "Available"
+          },
+          "Cooldown": {
+            "TimeUse": "20"
+          },
+          "Time": "20",
+          "Unit": "NydusCanal",
+          "index": "Build1"
+        }
+      ],
+      "Range": 500,
+      "id": 1798,
+      "name": "BuildNydusCanal"
+    },
     "BunkerTransport": {
       "AbilSetId": "ULdS",
       "CmdButtonArray": [
@@ -3821,6 +3863,58 @@
       "Offset": "0,0",
       "id": 1882,
       "name": "NexusTrainMothershipCore"
+    },
+    "NydusCanalTransport": {
+      "AbilSetId": "ULdS",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "NydusCanalLoad",
+          "index": "Load"
+        },
+        {
+          "DefaultButtonFace": "NydusCanalUnloadAll",
+          "Flags": {
+            "ToSelection": 1
+          },
+          "index": "UnloadAll"
+        },
+        {
+          "Flags": {
+            "Hidden": 1
+          },
+          "index": "LoadAll"
+        },
+        {
+          "Flags": {
+            "Hidden": 1
+          },
+          "index": "UnloadAt"
+        },
+        {
+          "Flags": {
+            "Hidden": 1
+          },
+          "index": "UnloadUnit"
+        }
+      ],
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "Flags": {
+        "CargoDeath": 1,
+        "PlayerHold": 1,
+        "ShowCargoSize": 0
+      },
+      "InitialUnloadDelay": 0.5,
+      "LoadPeriod": 0.25,
+      "LoadValidatorArray": "NotWidowMineTarget",
+      "MaxCargoCount": 255,
+      "MaxCargoSize": 8,
+      "MaxUnloadRange": 4,
+      "Range": 0.5,
+      "TotalCargoSpace": 1020,
+      "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
+      "UnloadPeriod": 0.5,
+      "id": 1441,
+      "name": "NydusCanalTransport"
     },
     "ObserverMorphtoObserverSiege": {
       "CmdButtonArray": {
@@ -18407,130 +18501,6 @@
         "Gateway"
       ]
     },
-    "NydusCanal": {
-      "AIEvalFactor": 0.2,
-      "AbilArray": [
-        {
-          "Link": "BuildinProgressNydusCanal"
-        },
-        {
-          "Link": "NydusCanalTransport"
-        },
-        {
-          "Link": "NydusWormTransport",
-          "index": "2"
-        },
-        {
-          "Link": "Rally"
-        },
-        {
-          "Link": "stop"
-        }
-      ],
-      "AttackTargetPriority": 11,
-      "Attributes": {
-        "Armored": 1,
-        "Biological": 1,
-        "Structure": 1
-      },
-      "BehaviorArray": [
-        {
-          "Link": "NydusCreepGrowth",
-          "index": "0"
-        },
-        {
-          "Link": "NydusWormArmor"
-        }
-      ],
-      "CardLayouts": {
-        "LayoutButtons": [
-          {
-            "AbilCmd": "NydusWormTransport,Load",
-            "Column": "0",
-            "Face": "Load",
-            "Row": "2",
-            "Type": "AbilCmd",
-            "index": "2"
-          },
-          {
-            "AbilCmd": "NydusWormTransport,UnloadAll",
-            "Column": "1",
-            "Face": "NydusCanalUnloadAll",
-            "Row": "2",
-            "Type": "AbilCmd",
-            "index": "3"
-          }
-        ]
-      },
-      "Collide": {
-        "Burrow": 1,
-        "ForceField": 1,
-        "Ground": 1,
-        "Locust": 1,
-        "Phased": 1,
-        "RoachBurrow": 1,
-        "Small": 1,
-        "Structure": 1
-      },
-      "CostCategory": "Technology",
-      "CostResource": {
-        "Minerals": 75,
-        "Vespene": 75
-      },
-      "DeathRevealRadius": 3,
-      "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
-      "Facing": 29.9707,
-      "FlagArray": [
-        {
-          "AIDefense": 1,
-          "AIHighPrioTarget": 1,
-          "AIThreatAir": 1,
-          "AIThreatGround": 1,
-          "ArmorDisabledWhileConstructing": 1,
-          "NoPortraitTalk": 1,
-          "PenaltyRevealed": 1,
-          "PreventDefeat": 1,
-          "PreventDestroy": 1,
-          "TownAlert": 1,
-          "Turnable": 0,
-          "UseLineOfSight": 1
-        },
-        {
-          "ArmorDisabledWhileConstructing": 0
-        }
-      ],
-      "FogVisibility": "Snapshot",
-      "Footprint": "Footprint3x3IgnoreCreepContour",
-      "GlossaryCategory": "Unit/Category/ZergUnits",
-      "GlossaryPriority": 261,
-      "HotkeyCategory": "Unit/Category/ZergUnits",
-      "LifeArmor": 1,
-      "LifeArmorName": "Unit/LifeArmorName/ZergBuildingArmor",
-      "LifeMax": 300,
-      "LifeRegenRate": 0.2734,
-      "LifeStart": 300,
-      "MinimapRadius": 1,
-      "Mob": "Multiplayer",
-      "PlacementFootprint": "Footprint3x3IgnoreCreepContour",
-      "PlaneArray": {
-        "Ground": 1
-      },
-      "Race": "Zerg",
-      "Radius": 1,
-      "ScoreKill": 150,
-      "ScoreMake": 150,
-      "ScoreResult": "BuildOrder",
-      "SeparationRadius": 1,
-      "Sight": 10,
-      "StationaryTurningRate": 719.4726,
-      "SubgroupPriority": 10,
-      "TurningRate": 719.4726,
-      "id": 142,
-      "name": "NydusCanal",
-      "race": "Zerg",
-      "time": 20,
-      "type": "structure"
-    },
     "NydusNetwork": {
       "AbilArray": [
         {
@@ -18648,9 +18618,6 @@
       "SubgroupPriority": 10,
       "TechTreeProducedUnitArray": "NydusCanal",
       "TurningRate": 719.4726,
-      "builds": [
-        "NydusCanal"
-      ],
       "id": 95,
       "name": "NydusNetwork",
       "race": "Zerg",

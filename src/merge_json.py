@@ -37,7 +37,7 @@ ARRAY_TAGS: set[str] = {
 REMOVED_MARKER = "1"
 
 
-def parse_index(idx, default=None):
+def parse_index(idx: str | None, default: int | None = None) -> int | None:
     """Parse index to int, returning default on failure."""
     if idx is None:
         return default
@@ -76,7 +76,7 @@ def _detect_removal_type(override_child: dict) -> str | None:
     return None
 
 
-def _find_matching_child(base_children: list, idx) -> int | None:
+def _find_matching_child(base_children: list[dict], idx: str | None) -> int | None:
     """Find index of matching child in base_children.
 
     Match logic:
@@ -178,7 +178,7 @@ def _merge_child_fields(base_child: dict, override_child: dict) -> None:
         base_child[k] = v
 
 
-def _handle_layout_buttons_merge(base_child: dict, override_child: dict, override_lb) -> bool:
+def _handle_layout_buttons_merge(base_child: dict, override_child: dict, override_lb: dict | list) -> bool:
     """Handle LayoutButtons merge for a matched child.
 
     Returns True if LayoutButtons were processed.
@@ -292,7 +292,7 @@ def merge_values(base: dict, override: dict, tag: str) -> dict:
     return base
 
 
-def _find_array_key_for_index(override_val: dict, base_val, idx) -> str | None:
+def _find_array_key_for_index(override_val: dict, base_val: dict | list, idx: str) -> str | None:
     """Find the array key used for index-based array updates.
 
     Handles two cases:
@@ -306,9 +306,12 @@ def _find_array_key_for_index(override_val: dict, base_val, idx) -> str | None:
         if sub_key == "index":
             continue
         if isinstance(override_val[sub_key], dict) and "index" in override_val[sub_key]:
+            numeric_idx = parse_index(idx)
+            if numeric_idx is None:
+                return None
             # Nested index: recursively handle
-            if isinstance(base_val, list) and 0 <= idx < len(base_val):
-                merge_objects(base_val[idx], {sub_key: override_val[sub_key], "index": override_val["index"]})
+            if isinstance(base_val, list) and 0 <= numeric_idx < len(base_val):
+                merge_objects(base_val[numeric_idx], {sub_key: override_val[sub_key], "index": override_val["index"]})
             elif isinstance(base_val, dict) and sub_key in base_val and isinstance(base_val[sub_key], list):
                 merge_objects(base_val, {sub_key: override_val[sub_key], "index": override_val["index"]})
             return sub_key
@@ -424,7 +427,7 @@ def merge_data_types(data_type: str) -> int:
     return merged
 
 
-def main():
+def main() -> None:
     print("Merging all SC2 mod JSON files...")
     total = 0
     for data_type in DATA_TYPES:

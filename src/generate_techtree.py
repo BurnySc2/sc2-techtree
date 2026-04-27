@@ -9,20 +9,14 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from utils import (
-    REQUIREMENT_NAME_FIXES,
-    dumps_json,
-    extract_abil_name,
-    get_execute_button_requirements,
-    load_json,
-    parse_requirement,
-)
+from utils import dumps_json, load_json
 
 # === Magic Strings ===
 EDITOR_CAT_STRUCTURE = "ObjectType:Structure"
 EDITOR_CAT_CAMPAIGN = "ObjectFamily:Campaign"
 RACE_NA = "N/A"
 RACE_NOT_FOUND = "NOT_FOUND"
+BUTTON_INDEX_EXECUTE = "Execute"
 ABILITY_SCV_HARVEST = "SCVHarvest"
 ABILITY_NEXUS_TRAIN_MOTHERSHIP_CORE = "NexusTrainMothershipCore"
 
@@ -47,10 +41,8 @@ MORPH_EXCLUDE = {
     "RoachCocoon",
     "ZerglingCocoon",
     "BroodLordCocoon",
+    "MorphToBaneling",
 }
-
-# Ability name to exclude from morphsto handling
-MORPH_BANELING_EXCLUDE = "MorphToBaneling"
 
 # Requirement name fixes (maps incorrect names to correct ones)
 REQUIREMENT_NAME_FIXES = {
@@ -303,8 +295,12 @@ def _build_ability_to_structures_mapping(units_data: dict) -> dict[str, set[str]
         if not isinstance(unit_data, dict):
             continue
         for abil_entry in unit_data.get("AbilArray", []):
-            abil_name = extract_abil_name(abil_entry)
-            if abil_name is None:
+            # Extract ability name from AbilArray entry
+            if isinstance(abil_entry, dict) and "Link" in abil_entry:
+                abil_name = abil_entry["Link"]
+            elif isinstance(abil_entry, str):
+                abil_name = abil_entry
+            else:
                 continue
             ability_to_structures[abil_name].add(unit_name)
 
@@ -318,7 +314,7 @@ def _is_train_ability(abil_name: str) -> bool:
 
 
 def _is_build_ability(abil_name: str) -> bool:
-    return "Build" in abil_name or abil_name.endswith("AddOns")
+    return abil_name.endswith("Build") or abil_name.endswith("AddOns")
 
 
 def _is_research_ability(abil_name: str) -> bool:
@@ -439,8 +435,12 @@ def generate_techtree() -> dict:
         additional = STRUCTURE_ADDITIONAL_RESEARCHES.get(unit_name, [])
 
         for abil_entry in unit_data.get("AbilArray", []):
-            abil_name = extract_abil_name(abil_entry)
-            if abil_name is None:
+            # AbilArray entries are dicts with 'Link' key, e.g., {"Link": "BuildInProgress"}
+            if isinstance(abil_entry, dict) and "Link" in abil_entry:
+                abil_name = abil_entry["Link"]
+            elif isinstance(abil_entry, str):
+                abil_name = abil_entry
+            else:
                 continue
 
             if abil_name in ability_produces:
@@ -482,7 +482,7 @@ def generate_techtree() -> dict:
             # Handle morphsto for units with MorphTo, MorphZergling, UpgradeTo, or LiftOff abilities
             is_morph_to = (
                 abil_name.startswith("MorphTo") or abil_name.startswith("MorphZergling")
-            ) and abil_name != MORPH_BANELING_EXCLUDE
+            ) and abil_name not in MORPH_EXCLUDE
             is_upgrade_to = abil_name.startswith("UpgradeTo")
             is_lift_off = abil_name.endswith("LiftOff")
 
@@ -556,7 +556,14 @@ def generate_techtree() -> dict:
                     if isinstance(morph_target, str) and morph_target in units_data:
                         race = get_race(units_data[morph_target])
 
-                    requires = get_execute_button_requirements(abil_data)
+                    requires = []
+                    cmd_buttons = abil_data.get("CmdButtonArray", [])
+                    if isinstance(cmd_buttons, list):
+                        for btn in cmd_buttons:
+                            if isinstance(btn, dict) and btn.get("index") == BUTTON_INDEX_EXECUTE:
+                                req = btn.get("Requirements", "")
+                                if req:
+                                    requires.extend(parse_requirement(req))
 
                     abilities[abil_name] = {
                         "morphsto": morph_target,
@@ -588,7 +595,14 @@ def generate_techtree() -> dict:
                         break
 
             if upgrade_name:
-                requires = get_execute_button_requirements(abil_data)
+                requires = []
+                cmd_buttons = abil_data.get("CmdButtonArray", [])
+                if isinstance(cmd_buttons, list):
+                    for btn in cmd_buttons:
+                        if isinstance(btn, dict) and btn.get("index") == BUTTON_INDEX_EXECUTE:
+                            req = btn.get("Requirements", "")
+                            if req:
+                                requires.extend(parse_requirement(req))
 
                 abilities[abil_name] = {
                     "upgrade": upgrade_name,

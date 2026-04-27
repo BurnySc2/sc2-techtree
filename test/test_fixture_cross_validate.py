@@ -71,6 +71,7 @@ INTERNAL_AUXILIARY_UNITS = {
     "Interceptor",
     "LocustMP",
     "LocustMPFlying",
+    "NydusCanal",
     "NydusCanalAttacker",
     "NydusCanalCreeper",
     "OverseerSiegeMode",

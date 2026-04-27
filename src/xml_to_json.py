@@ -26,7 +26,7 @@ MOD_ORDER = [
 DATA_TYPES = ["UnitData", "AbilData", "UpgradeData", "WeaponData", "EffectData"]
 
 
-def _coerce_value(value: str):
+def _coerce_value(value: str) -> int | float | str:
     with suppress(ValueError):
         return int(value)
     with suppress(ValueError):
@@ -119,7 +119,7 @@ def convert_xml_to_json(xml_path: Path) -> bool:
         return False
 
 
-def convert_mods():
+def convert_mods() -> int:
     total = 0
     for mod_name in MOD_ORDER:
         for data_type in DATA_TYPES:
@@ -134,7 +134,7 @@ def convert_mods():
     return total
 
 
-def main():
+def main() -> None:
     print("Converting SC2 mod XML files to JSON...")
     total = convert_mods()
     print(f"\nDone! Converted {total} files.")

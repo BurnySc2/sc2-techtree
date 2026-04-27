@@ -2284,9 +2284,6 @@
       "race": "Zerg"
     },
     "NydusNetwork": {
-      "builds": [
-        "NydusCanal"
-      ],
       "race": "Zerg",
       "requires": [
         "Lair"
