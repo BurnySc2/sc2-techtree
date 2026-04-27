@@ -1,0 +1,1892 @@
+{
+  "units": [
+    {
+      "name": "Adept",
+      "race": "Protoss",
+      "minerals": 100,
+      "gas": 25,
+      "buildtime": 672.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Archon",
+      "race": "Protoss",
+      "minerals": 175,
+      "gas": 275,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Armory",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 50,
+      "buildtime": 1040.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Assimilator",
+      "race": "Protoss",
+      "minerals": 75,
+      "gas": 0,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "AssimilatorRich",
+      "race": "Protoss",
+      "minerals": 75,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "AutoTurret",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 16.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Baneling",
+      "race": "Zerg",
+      "minerals": 50,
+      "gas": 25,
+      "buildtime": 320.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "BanelingBurrowed",
+      "race": "Zerg",
+      "minerals": 50,
+      "gas": 25,
+      "buildtime": 18.962890625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "BanelingCocoon",
+      "race": "Zerg",
+      "minerals": 50,
+      "gas": 25,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "BanelingNest",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 50,
+      "buildtime": 960.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Banshee",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 960.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Barracks",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 0,
+      "buildtime": 1040.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "BarracksFlying",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 0,
+      "buildtime": 32.0,
+      "built_from": [
+        21
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "BarracksReactor",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 50,
+      "buildtime": 800.0,
+      "built_from": [
+        6
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "BarracksTechLab",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 25,
+      "buildtime": 400.0,
+      "built_from": [
+        5
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "Battlecruiser",
+      "race": "Terran",
+      "minerals": 400,
+      "gas": 300,
+      "buildtime": 1440.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "BroodLord",
+      "race": "Zerg",
+      "minerals": 300,
+      "gas": 250,
+      "buildtime": 541.34765625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "BroodLordCocoon",
+      "race": "Zerg",
+      "minerals": 300,
+      "gas": 250,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Broodling",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Bunker",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 640.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "BypassArmorDrone",
+      "race": "Terran",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Carrier",
+      "race": "Protoss",
+      "minerals": 350,
+      "gas": 250,
+      "buildtime": 1440.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Changeling",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ChangelingMarine",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 8.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ChangelingMarineShield",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 8.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ChangelingZealot",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 8.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ChangelingZergling",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 8.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ChangelingZerglingWings",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 8.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Colossus",
+      "race": "Protoss",
+      "minerals": 300,
+      "gas": 200,
+      "buildtime": 1200.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "CommandCenter",
+      "race": "Terran",
+      "minerals": 400,
+      "gas": 0,
+      "buildtime": 1600.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "CommandCenterFlying",
+      "race": "Terran",
+      "minerals": 400,
+      "gas": 0,
+      "buildtime": 32.0,
+      "built_from": [
+        18
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "Corruptor",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 640.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "CorsairMP",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "CreepTumor",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 240.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "CreepTumorBurrowed",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 18.9609375,
+      "built_from": [
+        87
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "CreepTumorQueen",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 240.0,
+      "built_from": [
+        87
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "CyberneticsCore",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 0,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Cyclone",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 720.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "DarkShrine",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 150,
+      "buildtime": 1600.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "DarkTemplar",
+      "race": "Protoss",
+      "minerals": 125,
+      "gas": 125,
+      "buildtime": 880.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "DefilerMP",
+      "race": "Zerg",
+      "minerals": 50,
+      "gas": 150,
+      "buildtime": 8.80078125,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "DefilerMPBurrowed",
+      "race": "Zerg",
+      "minerals": 50,
+      "gas": 150,
+      "buildtime": 24.291015625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "DevourerCocoonMP",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 200,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "DevourerMP",
+      "race": "Zerg",
+      "minerals": 250,
+      "gas": 150,
+      "buildtime": 640.015625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Disruptor",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 150,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "DisruptorPhased",
+      "race": "Protoss",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Drone",
+      "race": "Zerg",
+      "minerals": 50,
+      "gas": 0,
+      "buildtime": 272.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "DroneBurrowed",
+      "race": "Zerg",
+      "minerals": 50,
+      "gas": 0,
+      "buildtime": 23.328125,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Egg",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Elsecaro_Colonist_Hut",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "EngineeringBay",
+      "race": "Terran",
+      "minerals": 125,
+      "gas": 0,
+      "buildtime": 560.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "EvolutionChamber",
+      "race": "Zerg",
+      "minerals": 125,
+      "gas": 0,
+      "buildtime": 560.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Extractor",
+      "race": "Zerg",
+      "minerals": 75,
+      "gas": 0,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "ExtractorRich",
+      "race": "Zerg",
+      "minerals": 75,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Factory",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 960.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "FactoryFlying",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 32.0,
+      "built_from": [
+        27
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "FactoryReactor",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 50,
+      "buildtime": 800.0,
+      "built_from": [
+        6
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "FactoryTechLab",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 25,
+      "buildtime": 400.0,
+      "built_from": [
+        5
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "FleetBeacon",
+      "race": "Protoss",
+      "minerals": 300,
+      "gas": 200,
+      "buildtime": 960.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Forge",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 0,
+      "buildtime": 720.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "FusionCore",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 150,
+      "buildtime": 1040.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Gateway",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 0,
+      "buildtime": 1040.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Ghost",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 125,
+      "buildtime": 640.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "GhostAcademy",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 50,
+      "buildtime": 640.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "GhostNova",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 125,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "GreaterSpire",
+      "race": "Zerg",
+      "minerals": 350,
+      "gas": 350,
+      "buildtime": 1600.0,
+      "built_from": [
+        92
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "GuardianCocoonMP",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 200,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "GuardianMP",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 200,
+      "buildtime": 640.015625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "HERC",
+      "race": "Terran",
+      "minerals": 200,
+      "gas": 100,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "HERCPlacement",
+      "race": "Terran",
+      "minerals": 200,
+      "gas": 100,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Hatchery",
+      "race": "Zerg",
+      "minerals": 325,
+      "gas": 0,
+      "buildtime": 1600.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Hellion",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "HellionTank",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "HighTemplar",
+      "race": "Protoss",
+      "minerals": 50,
+      "gas": 150,
+      "buildtime": 880.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Hive",
+      "race": "Zerg",
+      "minerals": 675,
+      "gas": 250,
+      "buildtime": 1600.0,
+      "built_from": [
+        86
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "Hydralisk",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 50,
+      "buildtime": 528.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "HydraliskBurrowed",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 50,
+      "buildtime": 24.291015625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "HydraliskDen",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 640.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "IceProtossCrates",
+      "race": "Protoss",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Immortal",
+      "race": "Protoss",
+      "minerals": 250,
+      "gas": 100,
+      "buildtime": 880.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "InfestationPit",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "InfestedTerransEgg",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "InfestedTerransEggPlacement",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Infestor",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 150,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "InfestorBurrowed",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 150,
+      "buildtime": 10.962890625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "InfestorTerran",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 78.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "InfestorTerranBurrowed",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 24.291015625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Interceptor",
+      "race": "Protoss",
+      "minerals": 15,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Lair",
+      "race": "Zerg",
+      "minerals": 475,
+      "gas": 100,
+      "buildtime": 1280.0,
+      "built_from": [
+        86
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "Larva",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Liberator",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 125,
+      "buildtime": 960.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "LiberatorAG",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 125,
+      "buildtime": 64.66796875,
+      "built_from": [
+        689
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "LocustMP",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "LocustMPFlying",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 8.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "LurkerDenMP",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 150,
+      "buildtime": 1280.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "LurkerMP",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 150,
+      "buildtime": 553.328125,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "LurkerMPBurrowed",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 150,
+      "buildtime": 42.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "LurkerMPEgg",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "MULE",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Marauder",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 25,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Marine",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 0,
+      "buildtime": 400.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Medivac",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 100,
+      "buildtime": 672.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "MissileTurret",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 400.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Mothership",
+      "race": "Protoss",
+      "minerals": 400,
+      "gas": 400,
+      "buildtime": 2000.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "MothershipCore",
+      "race": "Protoss",
+      "minerals": 100,
+      "gas": 100,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Mutalisk",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 100,
+      "buildtime": 528.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Nexus",
+      "race": "Protoss",
+      "minerals": 400,
+      "gas": 0,
+      "buildtime": 1600.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Nuke",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 100,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "NydusCanal",
+      "race": "Zerg",
+      "minerals": 75,
+      "gas": 75,
+      "buildtime": 320.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "NydusCanalAttacker",
+      "race": "Zerg",
+      "minerals": 200,
+      "gas": 0,
+      "buildtime": 320.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "NydusCanalCreeper",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 75,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "NydusNetwork",
+      "race": "Zerg",
+      "minerals": 200,
+      "gas": 150,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Observer",
+      "race": "Protoss",
+      "minerals": 25,
+      "gas": 75,
+      "buildtime": 400.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ObserverSiegeMode",
+      "race": "Protoss",
+      "minerals": 25,
+      "gas": 75,
+      "buildtime": 12.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Oracle",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 150,
+      "buildtime": 832.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "OracleStasisTrap",
+      "race": "Protoss",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 80.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "OrbitalCommand",
+      "race": "Terran",
+      "minerals": 550,
+      "gas": 0,
+      "buildtime": 560.0,
+      "built_from": [
+        18
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "OrbitalCommandFlying",
+      "race": "Terran",
+      "minerals": 550,
+      "gas": 0,
+      "buildtime": 32.0,
+      "built_from": [
+        18
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "Overlord",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 400.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "OverlordCocoon",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "OverlordTransport",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 336.015625,
+      "built_from": [
+        106
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "Overseer",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 50,
+      "buildtime": 266.6796875,
+      "built_from": [
+        106
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "OverseerSiegeMode",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 50,
+      "buildtime": 12.0,
+      "built_from": [
+        106
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "Phoenix",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 560.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "PhotonCannon",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 0,
+      "buildtime": 640.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "PlanetaryFortress",
+      "race": "Terran",
+      "minerals": 550,
+      "gas": 150,
+      "buildtime": 800.0,
+      "built_from": [
+        18
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "PointDefenseDrone",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Probe",
+      "race": "Protoss",
+      "minerals": 50,
+      "gas": 0,
+      "buildtime": 272.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ProtossCrates",
+      "race": "Protoss",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Pylon",
+      "race": "Protoss",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 400.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "PylonOvercharged",
+      "race": "Protoss",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [
+        60
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "Queen",
+      "race": "Zerg",
+      "minerals": 175,
+      "gas": 0,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "QueenBurrowed",
+      "race": "Zerg",
+      "minerals": 175,
+      "gas": 0,
+      "buildtime": 15.33203125,
+      "built_from": [
+        126
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "QueenMP",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Ravager",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 100,
+      "buildtime": 272.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "RavagerBurrowed",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 100,
+      "buildtime": 9.69140625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "RavagerCocoon",
+      "race": "Zerg",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Raven",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 150,
+      "buildtime": 768.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "RavenRepairDrone",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Reactor",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 50,
+      "buildtime": 2.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Reaper",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 50,
+      "buildtime": 720.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Refinery",
+      "race": "Terran",
+      "minerals": 75,
+      "gas": 0,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "RefineryRich",
+      "race": "Terran",
+      "minerals": 75,
+      "gas": 0,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "ReleaseInterceptorsBeacon",
+      "race": "Protoss",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Replicant",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 300,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ResourceBlocker",
+      "race": "Protoss",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Roach",
+      "race": "Zerg",
+      "minerals": 75,
+      "gas": 25,
+      "buildtime": 432.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "RoachBurrowed",
+      "race": "Zerg",
+      "minerals": 75,
+      "gas": 25,
+      "buildtime": 9.69140625,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "RoachWarren",
+      "race": "Zerg",
+      "minerals": 200,
+      "gas": 0,
+      "buildtime": 880.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "RoboticsBay",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 150,
+      "buildtime": 1040.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "RoboticsFacility",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 1040.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "SCV",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 0,
+      "buildtime": 272.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ScourgeMP",
+      "race": "Zerg",
+      "minerals": 12,
+      "gas": 37,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ScoutMP",
+      "race": "Protoss",
+      "minerals": 275,
+      "gas": 125,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "SensorTower",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 50,
+      "buildtime": 400.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Sentry",
+      "race": "Protoss",
+      "minerals": 50,
+      "gas": 100,
+      "buildtime": 512.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ShieldBattery",
+      "race": "Protoss",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 640.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "SiegeTank",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 125,
+      "buildtime": 720.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "SiegeTankSieged",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 125,
+      "buildtime": 68.66796875,
+      "built_from": [
+        33
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "SpawningPool",
+      "race": "Zerg",
+      "minerals": 250,
+      "gas": 0,
+      "buildtime": 1040.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "SpineCrawler",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 0,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "SpineCrawlerUprooted",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 0,
+      "buildtime": 16.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Spire",
+      "race": "Zerg",
+      "minerals": 250,
+      "gas": 200,
+      "buildtime": 1600.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "SporeCrawler",
+      "race": "Zerg",
+      "minerals": 125,
+      "gas": 0,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "SporeCrawlerUprooted",
+      "race": "Zerg",
+      "minerals": 125,
+      "gas": 0,
+      "buildtime": 16.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Stalker",
+      "race": "Protoss",
+      "minerals": 125,
+      "gas": 50,
+      "buildtime": 608.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Stargate",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 150,
+      "buildtime": 960.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Starport",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "StarportFlying",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 32.0,
+      "built_from": [
+        28
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "StarportReactor",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 50,
+      "buildtime": 800.0,
+      "built_from": [
+        6
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "StarportTechLab",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 25,
+      "buildtime": 400.0,
+      "built_from": [
+        5
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "SupplyDepot",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "SupplyDepotLowered",
+      "race": "Terran",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 20.80078125,
+      "built_from": [
+        19
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "SwarmHostBurrowedMP",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 75,
+      "buildtime": 42.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "SwarmHostMP",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 75,
+      "buildtime": 640.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "TechLab",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 25,
+      "buildtime": 2.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Tempest",
+      "race": "Protoss",
+      "minerals": 250,
+      "gas": 175,
+      "buildtime": 960.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "TemplarArchive",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 200,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Thor",
+      "race": "Terran",
+      "minerals": 300,
+      "gas": 200,
+      "buildtime": 960.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ThorAALance",
+      "race": "Terran",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ThorAP",
+      "race": "Terran",
+      "minerals": 300,
+      "gas": 200,
+      "buildtime": 42.0,
+      "built_from": [
+        52
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "TowerMine",
+      "race": "Terran",
+      "minerals": 50,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "TransportOverlordCocoon",
+      "race": "Zerg",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "TwilightCouncil",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 100,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Ultralisk",
+      "race": "Zerg",
+      "minerals": 275,
+      "gas": 200,
+      "buildtime": 880.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "UltraliskBurrowed",
+      "race": "Zerg",
+      "minerals": 275,
+      "gas": 200,
+      "buildtime": 22.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "UltraliskCavern",
+      "race": "Zerg",
+      "minerals": 200,
+      "gas": 200,
+      "buildtime": 1040.0,
+      "built_from": [],
+      "is_structure": true
+    },
+    {
+      "name": "Viking",
+      "race": "Terran",
+      "minerals": 0,
+      "gas": 0,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "VikingAssault",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 75,
+      "buildtime": 41.44140625,
+      "built_from": [
+        1940
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "VikingFighter",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 75,
+      "buildtime": 672.0,
+      "built_from": [
+        1940
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "Viper",
+      "race": "Zerg",
+      "minerals": 100,
+      "gas": 200,
+      "buildtime": 640.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "VoidMPImmortalReviveCorpse",
+      "race": "Protoss",
+      "minerals": 250,
+      "gas": 100,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "VoidRay",
+      "race": "Protoss",
+      "minerals": 250,
+      "gas": 150,
+      "buildtime": 963.19921875,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "WarHound",
+      "race": "Terran",
+      "minerals": 150,
+      "gas": 75,
+      "buildtime": 0.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "WarpGate",
+      "race": "Protoss",
+      "minerals": 150,
+      "gas": 0,
+      "buildtime": 160.0,
+      "built_from": [
+        62
+      ],
+      "is_structure": true
+    },
+    {
+      "name": "WarpPrism",
+      "race": "Protoss",
+      "minerals": 250,
+      "gas": 0,
+      "buildtime": 800.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "WarpPrismPhasing",
+      "race": "Protoss",
+      "minerals": 250,
+      "gas": 0,
+      "buildtime": 24.0,
+      "built_from": [
+        81
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "WidowMine",
+      "race": "Terran",
+      "minerals": 75,
+      "gas": 25,
+      "buildtime": 480.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "WidowMineBurrowed",
+      "race": "Terran",
+      "minerals": 75,
+      "gas": 25,
+      "buildtime": 52.0,
+      "built_from": [
+        498
+      ],
+      "is_structure": false
+    },
+    {
+      "name": "Zealot",
+      "race": "Protoss",
+      "minerals": 100,
+      "gas": 0,
+      "buildtime": 608.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "Zergling",
+      "race": "Zerg",
+      "minerals": 25,
+      "gas": 0,
+      "buildtime": 384.0,
+      "built_from": [],
+      "is_structure": false
+    },
+    {
+      "name": "ZerglingBurrowed",
+      "race": "Zerg",
+      "minerals": 25,
+      "gas": 0,
+      "buildtime": 24.291015625,
+      "built_from": [],
+      "is_structure": false
+    }
+  ],
+  "metadata": {
+    "source": "sc2-techtree processed data",
+    "note": "One-time ground-truth extracted from game XML via pipeline",
+    "extracted": "2026-04-27",
+    "total_units": 204
+  }
+}
