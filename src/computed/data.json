@@ -8691,6 +8691,7 @@
       "id": 114,
       "name": "BroodLord",
       "race": "Zerg",
+      "time": 33.8332,
       "type": "unit"
     },
     "Bunker": {
@@ -11154,6 +11155,7 @@
       "id": 729,
       "name": "DevourerMP",
       "race": "Zerg",
+      "time": 40,
       "type": "unit"
     },
     "Digester": {
@@ -13989,6 +13991,7 @@
       "id": 727,
       "name": "GuardianMP",
       "race": "Zerg",
+      "time": 40,
       "type": "unit"
     },
     "Hatchery": {
@@ -16881,7 +16884,7 @@
         "DiggingClaws",
         "LurkerRange"
       ],
-      "time": 80,
+      "time": 120,
       "type": "structure"
     },
     "LurkerMP": {
@@ -17037,6 +17040,7 @@
       "id": 502,
       "name": "LurkerMP",
       "race": "Zerg",
+      "time": 25,
       "type": "unit"
     },
     "LurkerMPEgg": {
@@ -19510,6 +19514,7 @@
       ],
       "name": "OverlordTransport",
       "race": "Zerg",
+      "time": 21,
       "type": "unit"
     },
     "Overseer": {
@@ -19636,6 +19641,7 @@
       "id": 129,
       "name": "Overseer",
       "race": "Zerg",
+      "time": 16.6665,
       "type": "unit"
     },
     "Phoenix": {
@@ -21167,6 +21173,7 @@
       "id": 688,
       "name": "Ravager",
       "race": "Zerg",
+      "time": 12,
       "type": "unit"
     },
     "RavagerCocoon": {
@@ -25020,7 +25027,7 @@
       "id": 19,
       "name": "SupplyDepot",
       "race": "Terran",
-      "time": 30,
+      "time": 1.3,
       "type": "structure",
       "unlocks": [
         "Barracks"
