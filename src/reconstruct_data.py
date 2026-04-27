@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Gather reachable units, structures, and upgrades from SC2 techtree."""
 
+from collections import deque
 import json
 from pathlib import Path
 from typing import TypeAlias
 
-from utils import dump_json, load_json
+from utils import dump_json, load_json, extract_abil_name
 
 DATA_DIR = Path(__file__).parent / "json"
 OUTPUT_FILE = Path(__file__).parent / "computed" / "data.json"
@@ -237,7 +238,7 @@ def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
 
 
 def enqueue_if_new(
-    queue: list[QueueItem],
+    queue: deque[QueueItem],
     visited: set[ItemName],
     category: Category,
     name: ItemName,
@@ -261,7 +262,7 @@ def handle_morphsto(
     visited_structures: set[ItemName],
     visited_units: set[ItemName],
     units_section: dict,
-    queue: list[QueueItem],
+    queue: deque[QueueItem],
 ) -> None:
     """Process morphsto field, enqueueing structures or units as needed."""
     if not morphsto:
@@ -289,7 +290,7 @@ def process_ability_morphsto(
     visited_units: set[ItemName],
     units_section: dict,
     abilities_section: dict,
-    queue: list[QueueItem],
+    queue: deque[QueueItem],
 ) -> None:
     """Wrapper for handling ability morphsto processing."""
     if ability_name not in visited_abilities:
@@ -342,7 +343,7 @@ def _process_unit(
     visited_structures: set[ItemName],
     visited_upgrades: set[ItemName],
     visited_abilities: set[ItemName],
-    queue: list[QueueItem],
+    queue: deque[QueueItem],
 ) -> None:
     """Handle unit abilities, builds, produces, morphsto, requirements."""
     unit_info = units_section.get(name, {})
@@ -368,13 +369,7 @@ def _process_unit(
     # Add abilities from this unit's AbilArray (extract Link from each entry)
     abil_array = unit_full_data.get(FIELD_ABIL_ARRAY, [])
     for ability_entry in abil_array:
-        # Handle both old format (list of strings) and new format (list of dicts with 'Link')
-        if isinstance(ability_entry, dict):
-            ability_name = ability_entry.get("Link")
-        elif isinstance(ability_entry, str):
-            ability_name = ability_entry
-        else:
-            continue
+        ability_name = extract_abil_name(ability_entry)
 
         if (
             ability_name
@@ -422,7 +417,7 @@ def _process_structure(
     visited_units: set[ItemName],
     visited_upgrades: set[ItemName],
     visited_abilities: set[ItemName],
-    queue: list[QueueItem],
+    queue: deque[QueueItem],
 ) -> None:
     """Handle structure produces, unlocks, researches, abilities."""
     # Structures are now in units_section
@@ -454,6 +449,12 @@ def _process_structure(
         is_unit = unlocked_name not in visited_units and not is_structure(units_section, unlocked_name)
         if unlocked_name in units_section and is_unit:
             enqueue_if_new(queue, visited_units, "unit", unlocked_name)
+
+    # Add structures this structure can build (e.g., NydusNetwork -> NydusCanal)
+    builds = structure_info.get(FIELD_BUILDS, [])
+    for structure_name in builds:
+        if structure_name not in visited_structures:
+            enqueue_if_new(queue, visited_structures, "structure", structure_name)
 
     # Add upgrades researched at this structure
     researches = structure_info.get(FIELD_RESEARCHES, [])
@@ -490,7 +491,7 @@ def _process_upgrade(
     name: ItemName,
     upgrades_section: dict,
     visited_upgrades: set[ItemName],
-    queue: list[QueueItem],
+    queue: deque[QueueItem],
 ) -> None:
     """Handle upgrade requirements."""
     upgrade_info = upgrades_section.get(name, {})
@@ -520,7 +521,7 @@ def _bfs_traversal(
     visited_abilities: set[str] = set()
 
     # Queue for BFS: (category, name)
-    queue: list[QueueItem] = []
+    queue: deque[QueueItem] = deque()
 
     # Initialize with starting units and structures (just queue, visited added when popped)
     # Determine category by checking if it's a structure (has builds/researches)
@@ -586,7 +587,7 @@ def _bfs_traversal(
 
     # BFS traversal
     while queue:
-        category, name = queue.pop(0)
+        category, name = queue.popleft()
 
         if category == "unit":
             if name in visited_units:
