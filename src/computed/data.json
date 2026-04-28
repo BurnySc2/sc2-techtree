@@ -7689,6 +7689,99 @@
       "time": 35,
       "type": "unit"
     },
+    "BanelingCocoon": {
+      "AbilArray": [
+        {
+          "Link": "MorphToBaneling"
+        },
+        {
+          "Link": "que1"
+        }
+      ],
+      "AttackTargetPriority": 10,
+      "Attributes": {
+        "Biological": 1
+      },
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "MorphToBaneling,Cancel",
+            "Column": "4",
+            "Face": "Rally",
+            "Row": "2",
+            "Type": "AbilCmd",
+            "index": "0"
+          },
+          {
+            "AbilCmd": "attack,Execute",
+            "Column": "4",
+            "Face": "Attack",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "que1,CancelLast",
+            "Column": "4",
+            "Face": "CancelCocoonMorph",
+            "Row": "2",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": {
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
+      },
+      "CostResource": {
+        "Minerals": 50,
+        "Vespene": 25
+      },
+      "DamageDealtXP": 1,
+      "DamageTakenXP": 1,
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "FlagArray": [
+        {
+          "ArmySelect": 1
+        },
+        {
+          "ArmySelect": 1
+        },
+        {
+          "NoScore": 1,
+          "PreventDestroy": 1,
+          "UseLineOfSight": 1
+        }
+      ],
+      "Food": -0.5,
+      "InnerRadius": 0.375,
+      "KillXP": 25,
+      "LifeArmor": 2,
+      "LifeArmorName": "Unit/LifeArmorName/ZergGroundArmor",
+      "LifeMax": 50,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 50,
+      "PlaneArray": {
+        "Ground": 1
+      },
+      "Race": "Zerg",
+      "Radius": 0.375,
+      "ScoreKill": 75,
+      "SeparationRadius": 0.375,
+      "Sight": 5,
+      "Speed": 2.5,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 54,
+      "TacticalAI": "BanelingEgg",
+      "TurningRate": 719.4726,
+      "id": 8,
+      "morphsto": "Baneling",
+      "name": "BanelingCocoon",
+      "race": "Zerg",
+      "type": "unit"
+    },
     "BanelingNest": {
       "AbilArray": [
         {
@@ -8791,6 +8884,127 @@
       "name": "BroodLord",
       "race": "Zerg",
       "time": 33.8332,
+      "type": "unit"
+    },
+    "BroodLordCocoon": {
+      "AbilArray": [
+        {
+          "Link": "MorphToBroodLord"
+        },
+        {
+          "Link": "move"
+        }
+      ],
+      "AttackTargetPriority": 10,
+      "Attributes": [
+        {
+          "Biological": 1
+        },
+        {
+          "Massive": 1
+        },
+        {
+          "Massive": 1
+        }
+      ],
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "MorphToBroodLord,Cancel",
+            "Column": "4",
+            "Face": "CancelCocoonMorph",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "attack,Execute",
+            "Column": "4",
+            "Face": "Attack",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,HoldPos",
+            "Column": "2",
+            "Face": "MoveHoldPosition",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Move",
+            "Column": "0",
+            "Face": "Move",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Patrol",
+            "Column": "3",
+            "Face": "MovePatrol",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "stop,Stop",
+            "Column": "1",
+            "Face": "Stop",
+            "Row": "0",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": {
+        "Flying": 1
+      },
+      "CostResource": {
+        "Minerals": 300,
+        "Vespene": 250
+      },
+      "DamageDealtXP": 1,
+      "DamageTakenXP": 1,
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "FlagArray": [
+        {
+          "ArmySelect": 1
+        },
+        {
+          "ArmySelect": 1
+        },
+        {
+          "NoScore": 1,
+          "PreventDestroy": 1,
+          "UseLineOfSight": 1
+        }
+      ],
+      "Food": -2,
+      "Height": 3.75,
+      "HotkeyAlias": "",
+      "KillXP": 30,
+      "LifeArmor": 2,
+      "LifeArmorName": "Unit/LifeArmorName/ZergAirArmor",
+      "LifeMax": 200,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 200,
+      "MinimapRadius": 0.625,
+      "Mover": "Fly",
+      "PlaneArray": {
+        "Air": 1
+      },
+      "Race": "Zerg",
+      "Radius": 0.625,
+      "ScoreKill": 550,
+      "SeparationRadius": 0.625,
+      "Sight": 5,
+      "Speed": 1.4062,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 1,
+      "TurningRate": 719.4726,
+      "VisionHeight": 15,
+      "id": 113,
+      "morphsto": "BroodLord",
+      "name": "BroodLordCocoon",
+      "race": "Zerg",
       "type": "unit"
     },
     "Bunker": {
@@ -11036,6 +11250,112 @@
       "id": 487,
       "name": "DebrisRampRight",
       "race": "",
+      "type": "unit"
+    },
+    "DevourerCocoonMP": {
+      "AbilArray": [
+        {
+          "Link": "MorphToDevourerMP"
+        },
+        {
+          "Link": "move"
+        }
+      ],
+      "AttackTargetPriority": 10,
+      "Attributes": {
+        "Biological": 1,
+        "Massive": 1
+      },
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "MorphToDevourerMP,Cancel",
+            "Column": "4",
+            "Face": "CancelCocoonMorph",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "attack,Execute",
+            "Column": "4",
+            "Face": "Attack",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,HoldPos",
+            "Column": "2",
+            "Face": "MoveHoldPosition",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Move",
+            "Column": "0",
+            "Face": "Move",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Patrol",
+            "Column": "3",
+            "Face": "MovePatrol",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "stop,Stop",
+            "Column": "1",
+            "Face": "Stop",
+            "Row": "0",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": {
+        "Flying": 1
+      },
+      "CostResource": {
+        "Minerals": 150,
+        "Vespene": 200
+      },
+      "DamageDealtXP": 1,
+      "DamageTakenXP": 1,
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "FlagArray": {
+        "NoScore": 1,
+        "PreventDestroy": 1,
+        "UseLineOfSight": 1
+      },
+      "Food": -2,
+      "Height": 3.75,
+      "HotkeyAlias": "",
+      "KillXP": 30,
+      "LifeArmor": 2,
+      "LifeArmorName": "Unit/LifeArmorName/ZergAirArmor",
+      "LifeMax": 200,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 200,
+      "MinimapRadius": 0.625,
+      "Mover": "Fly",
+      "PlaneArray": {
+        "Air": 1
+      },
+      "Race": "Zerg",
+      "Radius": 0.625,
+      "ScoreKill": 550,
+      "SeparationRadius": 0.625,
+      "Sight": 5,
+      "Speed": 1.4062,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 1,
+      "TurningRate": 719.4726,
+      "VisionHeight": 4,
+      "id": 728,
+      "morphsto": "DevourerMP",
+      "name": "DevourerCocoonMP",
+      "race": "Zerg",
       "type": "unit"
     },
     "DevourerMP": {
@@ -13889,6 +14209,112 @@
       ],
       "time": 100,
       "type": "structure"
+    },
+    "GuardianCocoonMP": {
+      "AbilArray": [
+        {
+          "Link": "MorphToGuardianMP"
+        },
+        {
+          "Link": "move"
+        }
+      ],
+      "AttackTargetPriority": 10,
+      "Attributes": {
+        "Biological": 1,
+        "Massive": 1
+      },
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "MorphToGuardianMP,Cancel",
+            "Column": "4",
+            "Face": "CancelCocoonMorph",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "attack,Execute",
+            "Column": "4",
+            "Face": "Attack",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,HoldPos",
+            "Column": "2",
+            "Face": "MoveHoldPosition",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Move",
+            "Column": "0",
+            "Face": "Move",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Patrol",
+            "Column": "3",
+            "Face": "MovePatrol",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "stop,Stop",
+            "Column": "1",
+            "Face": "Stop",
+            "Row": "0",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": {
+        "Flying": 1
+      },
+      "CostResource": {
+        "Minerals": 150,
+        "Vespene": 200
+      },
+      "DamageDealtXP": 1,
+      "DamageTakenXP": 1,
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "FlagArray": {
+        "NoScore": 1,
+        "PreventDestroy": 1,
+        "UseLineOfSight": 1
+      },
+      "Food": -2,
+      "Height": 3.75,
+      "HotkeyAlias": "",
+      "KillXP": 30,
+      "LifeArmor": 2,
+      "LifeArmorName": "Unit/LifeArmorName/ZergAirArmor",
+      "LifeMax": 200,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 200,
+      "MinimapRadius": 0.625,
+      "Mover": "Fly",
+      "PlaneArray": {
+        "Air": 1
+      },
+      "Race": "Zerg",
+      "Radius": 0.625,
+      "ScoreKill": 550,
+      "SeparationRadius": 0.625,
+      "Sight": 5,
+      "Speed": 1.4062,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 1,
+      "TurningRate": 719.4726,
+      "VisionHeight": 4,
+      "id": 726,
+      "morphsto": "GuardianMP",
+      "name": "GuardianCocoonMP",
+      "race": "Zerg",
+      "type": "unit"
     },
     "GuardianMP": {
       "AbilArray": [
@@ -19217,6 +19643,121 @@
       "time": 25,
       "type": "unit"
     },
+    "OverlordCocoon": {
+      "AIEvalFactor": 0,
+      "AbilArray": [
+        {
+          "Link": "MorphToOverseer"
+        },
+        {
+          "Link": "move"
+        }
+      ],
+      "AttackTargetPriority": 10,
+      "Attributes": {
+        "Biological": 1
+      },
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "MorphToOverseer,Cancel",
+            "Column": "4",
+            "Face": "CancelCocoonMorph",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "attack,Execute",
+            "Column": "4",
+            "Face": "Attack",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,HoldPos",
+            "Column": "2",
+            "Face": "MoveHoldPosition",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Move",
+            "Column": "0",
+            "Face": "Move",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Patrol",
+            "Column": "3",
+            "Face": "MovePatrol",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "stop,Stop",
+            "Column": "1",
+            "Face": "Stop",
+            "Row": "0",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": {
+        "Flying": 1
+      },
+      "CostResource": {
+        "Minerals": 150,
+        "Vespene": 100
+      },
+      "DamageDealtXP": 1,
+      "DamageTakenXP": 1,
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "Facing": 45,
+      "FlagArray": [
+        {
+          "ArmySelect": 1
+        },
+        {
+          "ArmySelect": 1
+        },
+        {
+          "NoScore": 1,
+          "PreventDestroy": 1,
+          "UseLineOfSight": 1
+        }
+      ],
+      "Food": 8,
+      "Height": 3.75,
+      "HotkeyAlias": "",
+      "KillXP": 30,
+      "LifeArmor": 2,
+      "LifeArmorName": "Unit/LifeArmorName/ZergAirArmor",
+      "LifeMax": 200,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 200,
+      "MinimapRadius": 1,
+      "Mover": "Fly",
+      "PlaneArray": {
+        "Air": 1
+      },
+      "Race": "Zerg",
+      "Radius": 0.625,
+      "ScoreKill": 200,
+      "SeparationRadius": 0.625,
+      "Sight": 5,
+      "Speed": 1.875,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 1,
+      "TurningRate": 719.4726,
+      "VisionHeight": 15,
+      "id": 128,
+      "morphsto": "Overseer",
+      "name": "OverlordCocoon",
+      "race": "Zerg",
+      "type": "unit"
+    },
     "OverlordTransport": {
       "AIEvalFactor": 0,
       "AbilArray": [
@@ -21046,6 +21587,80 @@
       "name": "Ravager",
       "race": "Zerg",
       "time": 12,
+      "type": "unit"
+    },
+    "RavagerCocoon": {
+      "AbilArray": [
+        {
+          "Link": "MorphToRavager"
+        },
+        {
+          "Link": "Rally"
+        }
+      ],
+      "AttackTargetPriority": 10,
+      "Attributes": {
+        "Biological": 1
+      },
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "MorphToRavager,Cancel",
+            "Column": "4",
+            "Face": "CancelCocoonMorph",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "Rally,Rally1",
+            "Column": "4",
+            "Face": "Rally",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "attack,Execute",
+            "Column": "4",
+            "Face": "Attack",
+            "Row": "0",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": {
+        "ForceField": 1,
+        "Ground": 1,
+        "Locust": 1,
+        "Small": 1
+      },
+      "CostCategory": "Army",
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "FlagArray": {
+        "ArmySelect": 1,
+        "NoScore": 1,
+        "PreventDestroy": 1,
+        "UseLineOfSight": 1
+      },
+      "Food": -2,
+      "InnerRadius": 0.5,
+      "LifeArmor": 5,
+      "LifeMax": 100,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 100,
+      "Mob": "Multiplayer",
+      "PlaneArray": {
+        "Ground": 1
+      },
+      "Race": "Zerg",
+      "Radius": 0.75,
+      "ScoreKill": 200,
+      "Sight": 5,
+      "SubgroupPriority": 54,
+      "id": 687,
+      "morphsto": "Ravager",
+      "name": "RavagerCocoon",
+      "race": "Zerg",
       "type": "unit"
     },
     "Raven": {
@@ -25945,6 +26560,113 @@
         "AttachedTechLab"
       ],
       "time": 60,
+      "type": "unit"
+    },
+    "TransportOverlordCocoon": {
+      "AIEvalFactor": 0,
+      "AbilArray": [
+        {
+          "Link": "MorphToTransportOverlord"
+        },
+        {
+          "Link": "move"
+        }
+      ],
+      "AttackTargetPriority": 10,
+      "Attributes": {
+        "Biological": 1
+      },
+      "CardLayouts": {
+        "LayoutButtons": [
+          {
+            "AbilCmd": "MorphToTransportOverlord,Cancel",
+            "Column": "4",
+            "Face": "CancelCocoonMorph",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "attack,Execute",
+            "Column": "4",
+            "Face": "Attack",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,HoldPos",
+            "Column": "2",
+            "Face": "MoveHoldPosition",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Move",
+            "Column": "0",
+            "Face": "Move",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "move,Patrol",
+            "Column": "3",
+            "Face": "MovePatrol",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "stop,Stop",
+            "Column": "1",
+            "Face": "Stop",
+            "Row": "0",
+            "Type": "AbilCmd"
+          }
+        ]
+      },
+      "Collide": {
+        "Flying": 1
+      },
+      "CostResource": {
+        "Minerals": 150,
+        "Vespene": 100
+      },
+      "DamageDealtXP": 1,
+      "DamageTakenXP": 1,
+      "DeathRevealRadius": 3,
+      "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "Facing": 45,
+      "FlagArray": {
+        "NoScore": 1,
+        "PreventDestroy": 1,
+        "UseLineOfSight": 1
+      },
+      "Food": 8,
+      "Height": 3.75,
+      "HotkeyAlias": "",
+      "KillXP": 30,
+      "LifeArmor": 2,
+      "LifeArmorName": "Unit/LifeArmorName/ZergAirArmor",
+      "LifeMax": 200,
+      "LifeRegenRate": 0.2734,
+      "LifeStart": 200,
+      "MinimapRadius": 1,
+      "Mover": "Fly",
+      "PlaneArray": {
+        "Air": 1
+      },
+      "Race": "Zerg",
+      "Radius": 0.625,
+      "ScoreKill": 150,
+      "SeparationRadius": 0.625,
+      "Sight": 5,
+      "Speed": 1.875,
+      "StationaryTurningRate": 719.4726,
+      "SubgroupPriority": 1,
+      "TurningRate": 719.4726,
+      "VisionHeight": 15,
+      "id": 892,
+      "morphsto": "OverlordTransport",
+      "name": "TransportOverlordCocoon",
+      "race": "Zerg",
       "type": "unit"
     },
     "TwilightCouncil": {

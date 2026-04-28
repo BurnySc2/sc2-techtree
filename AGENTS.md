@@ -109,5 +109,18 @@ Processes the merged JSON into a clean techtree structure with:
 ```bash
 uv run src/xml_to_json.py    # Convert XMLs to JSON
 uv run src/merge_json.py     # Merge JSONs
-uv run src/generate_techtree.py  # Generate techtree.json
+uv run src/generate_techtree.py  # Generate computed/techtree.json
+uv run src/reconstruct_data.py  # Generate computed/data.json
+```
+
+## Verify
+```bash
+uv run pytest
+```
+
+## Formatting and linting
+```bash
+uv run ruff check
+uv run ruff format
+uv run pyrefly check
 ```

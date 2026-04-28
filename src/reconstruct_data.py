@@ -257,12 +257,28 @@ def merge_entry(name: ItemName, entry: dict, full_data: dict) -> dict:
     return merged
 
 
+def _build_cocoon_index(units_section: dict) -> dict[str, list[str]]:
+    """Build a reverse index mapping morph target -> cocoon unit names.
+
+    Cocoon units are intermediate morph forms (e.g., RavagerCocoon morphs to Ravager).
+    They need to be discovered alongside their morph target during BFS traversal.
+    """
+    cocoon_index: dict[str, list[str]] = {}
+    for unit_name, unit_info in units_section.items():
+        if "Cocoon" in unit_name and isinstance(unit_info, dict):
+            morphsto = unit_info.get(FIELD_MORPHSTO)
+            if morphsto and isinstance(morphsto, str):
+                cocoon_index.setdefault(morphsto, []).append(unit_name)
+    return cocoon_index
+
+
 def handle_morphsto(
     morphsto: str | list,
     visited_structures: set[ItemName],
     visited_units: set[ItemName],
     units_section: dict,
     queue: deque[QueueItem],
+    cocoon_index: dict[str, list[str]] | None = None,
 ) -> None:
     """Process morphsto field, enqueueing structures or units as needed."""
     if not morphsto:
@@ -282,6 +298,15 @@ def handle_morphsto(
         elif morphsto not in visited_units:
             enqueue_if_new(queue, visited_units, "unit", morphsto)
 
+    # Also discover cocoon units that morph into the same target
+    if cocoon_index:
+        targets = [morphsto] if isinstance(morphsto, str) else morphsto
+        if isinstance(targets, list):
+            for target in targets:
+                for cocoon_name in cocoon_index.get(target, []):
+                    if cocoon_name not in visited_units:
+                        enqueue_if_new(queue, visited_units, "unit", cocoon_name)
+
 
 def process_ability_morphsto(
     ability_name: ItemName,
@@ -291,6 +316,7 @@ def process_ability_morphsto(
     units_section: dict,
     abilities_section: dict,
     queue: deque[QueueItem],
+    cocoon_index: dict[str, list[str]] | None = None,
 ) -> None:
     """Wrapper for handling ability morphsto processing."""
     if ability_name not in visited_abilities:
@@ -303,6 +329,7 @@ def process_ability_morphsto(
             visited_units,
             units_section,
             queue,
+            cocoon_index,
         )
 
 
@@ -344,6 +371,7 @@ def _process_unit(
     visited_upgrades: set[ItemName],
     visited_abilities: set[ItemName],
     queue: deque[QueueItem],
+    cocoon_index: dict[str, list[str]] | None = None,
 ) -> None:
     """Handle unit abilities, builds, produces, morphsto, requirements."""
     unit_info = units_section.get(name, {})
@@ -364,6 +392,7 @@ def _process_unit(
             visited_units,
             units_section,
             queue,
+            cocoon_index,
         )
 
     # Add abilities from this unit's AbilArray (extract Link from each entry)
@@ -385,6 +414,7 @@ def _process_unit(
                 units_section,
                 abilities_section,
                 queue,
+                cocoon_index,
             )
 
     # Add structures this unit can build
@@ -418,6 +448,7 @@ def _process_structure(
     visited_upgrades: set[ItemName],
     visited_abilities: set[ItemName],
     queue: deque[QueueItem],
+    cocoon_index: dict[str, list[str]] | None = None,
 ) -> None:
     """Handle structure produces, unlocks, researches, abilities."""
     # Structures are now in units_section
@@ -432,6 +463,7 @@ def _process_structure(
             visited_units,
             units_section,
             queue,
+            cocoon_index,
         )
 
     # Add units this structure produces
@@ -484,6 +516,7 @@ def _process_structure(
             units_section,
             abilities_section,
             queue,
+            cocoon_index,
         )
 
 
@@ -519,6 +552,9 @@ def _bfs_traversal(
     visited_structures: set[str] = set()
     visited_upgrades: set[str] = set()
     visited_abilities: set[str] = set()
+
+    # Build cocoon index for discovering intermediate morph forms
+    cocoon_index = _build_cocoon_index(units_section)
 
     # Queue for BFS: (category, name)
     queue: deque[QueueItem] = deque()
@@ -607,6 +643,7 @@ def _bfs_traversal(
                 visited_upgrades,
                 visited_abilities,
                 queue,
+                cocoon_index,
             )
 
         elif category == "structure":
@@ -625,6 +662,7 @@ def _bfs_traversal(
                 visited_upgrades,
                 visited_abilities,
                 queue,
+                cocoon_index,
             )
 
         elif category == "upgrade":
@@ -655,6 +693,7 @@ def _bfs_traversal(
                 visited_units,
                 units_section,
                 queue,
+                cocoon_index,
             )
 
     return {
