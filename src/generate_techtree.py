@@ -31,18 +31,18 @@ UNIT_REQUIREMENT_FIXES = {
     "Roach": ["RoachWarren"],
 }
 
-# Units to exclude from morph targets (cocoons)
-MORPH_EXCLUDE = {
-    "Cocoon",
-    "CocoonZergling",
-    "CocoonRoach",
-    "CocoonBaneling",
-    "BanelingCocoon",
-    "RoachCocoon",
-    "ZerglingCocoon",
-    "BroodLordCocoon",
-    "MorphToBaneling",
-}
+# Units to exclude from morph targets (cocoons) - loaded dynamically from game data
+MORPH_EXCLUDE: set[str] = set()
+
+
+def _load_cocoon_units(units_data: Any) -> set[str]:
+    """Extract cocoon-type units from UnitData (units whose id contains 'Cocoon')."""
+    cocoons: set[str] = set()
+    if isinstance(units_data, dict):
+        for unit_id in units_data.keys():
+            if "Cocoon" in unit_id:
+                cocoons.add(unit_id)
+    return cocoons
 
 # Requirement name fixes (maps incorrect names to correct ones)
 REQUIREMENT_NAME_FIXES = {
@@ -403,6 +403,10 @@ def generate_techtree() -> dict:
     """Generate the techtree structure from JSON data files."""
     units_data = load_json("UnitData.json")
     abils_data = load_json("AbilData.json")
+
+    # Load cocoon units dynamically from game data
+    global MORPH_EXCLUDE
+    MORPH_EXCLUDE = _load_cocoon_units(units_data)
 
     structures: dict[str, dict] = {}
     units: dict[str, dict] = {}

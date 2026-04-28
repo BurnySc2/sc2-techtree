@@ -87,11 +87,8 @@
       "race": ""
     },
     "MorphToDevourerMP": {
-      "morphsto": [
-        "DevourerCocoonMP",
-        "DevourerMP"
-      ],
-      "race": "",
+      "morphsto": "DevourerMP",
+      "race": "Zerg",
       "requires": [
         "GreaterSpire"
       ]
@@ -105,11 +102,8 @@
       "race": ""
     },
     "MorphToGuardianMP": {
-      "morphsto": [
-        "GuardianCocoonMP",
-        "GuardianMP"
-      ],
-      "race": "",
+      "morphsto": "GuardianMP",
+      "race": "Zerg",
       "requires": [
         "GreaterSpire"
       ]
@@ -144,21 +138,15 @@
       ]
     },
     "MorphToOverseer": {
-      "morphsto": [
-        "OverlordCocoon",
-        "Overseer"
-      ],
-      "race": "",
+      "morphsto": "Overseer",
+      "race": "Zerg",
       "requires": [
         "UseOverseerMorph"
       ]
     },
     "MorphToRavager": {
-      "morphsto": [
-        "Ravager",
-        "RavagerCocoon"
-      ],
-      "race": "",
+      "morphsto": "Ravager",
+      "race": "Zerg",
       "requires": [
         "BanelingNest2"
       ]
@@ -172,11 +160,8 @@
       "race": "Zerg"
     },
     "MorphToTransportOverlord": {
-      "morphsto": [
-        "OverlordTransport",
-        "TransportOverlordCocoon"
-      ],
-      "race": "",
+      "morphsto": "OverlordTransport",
+      "race": "Zerg",
       "requires": [
         "Lair"
       ]
@@ -517,6 +502,7 @@
       "race": "Zerg"
     },
     "BanelingCocoon": {
+      "morphsto": "Baneling",
       "race": "Zerg"
     },
     "BanelingNest": {
@@ -1291,10 +1277,7 @@
       "race": ""
     },
     "DevourerCocoonMP": {
-      "morphsto": [
-        "DevourerCocoonMP",
-        "DevourerMP"
-      ],
+      "morphsto": "DevourerMP",
       "race": "Zerg"
     },
     "DevourerMP": {
@@ -1652,10 +1635,7 @@
       "race": ""
     },
     "GuardianCocoonMP": {
-      "morphsto": [
-        "GuardianCocoonMP",
-        "GuardianMP"
-      ],
+      "morphsto": "GuardianMP",
       "race": "Zerg"
     },
     "GuardianMP": {
@@ -2337,28 +2317,20 @@
     },
     "Overlord": {
       "morphsto": [
-        "OverlordCocoon",
         "OverlordTransport",
-        "Overseer",
-        "TransportOverlordCocoon"
+        "Overseer"
       ],
       "race": "Zerg"
     },
     "OverlordCocoon": {
-      "morphsto": [
-        "OverlordCocoon",
-        "Overseer"
-      ],
+      "morphsto": "Overseer",
       "race": "Zerg"
     },
     "OverlordGenerateCreepKeybind": {
       "race": ""
     },
     "OverlordTransport": {
-      "morphsto": [
-        "OverlordCocoon",
-        "Overseer"
-      ],
+      "morphsto": "Overseer",
       "race": "Zerg"
     },
     "Overseer": {
@@ -2754,10 +2726,7 @@
       "race": "Zerg"
     },
     "RavagerCocoon": {
-      "morphsto": [
-        "Ravager",
-        "RavagerCocoon"
-      ],
+      "morphsto": "Ravager",
       "race": "Zerg"
     },
     "RavagerCorrosiveBileMissile": {
@@ -2854,10 +2823,7 @@
       "race": ""
     },
     "Roach": {
-      "morphsto": [
-        "Ravager",
-        "RavagerCocoon"
-      ],
+      "morphsto": "Ravager",
       "race": "Zerg",
       "requires": [
         "RoachWarren"
@@ -3655,10 +3621,7 @@
       "race": ""
     },
     "TransportOverlordCocoon": {
-      "morphsto": [
-        "OverlordTransport",
-        "TransportOverlordCocoon"
-      ],
+      "morphsto": "OverlordTransport",
       "race": "Zerg"
     },
     "TrooperMengskACGluescreenDummy": {
