@@ -671,3 +671,31 @@ class TestHiveBuildTime:
         lurker = computed_data["Units"]["LurkerMP"]
         assert "time" in lurker, "LurkerMP should have time field"
         assert lurker["time"] == 25, f"LurkerMP time should be 25, got {lurker.get('time')}"
+
+
+class TestCocoonUnits:
+    """Cocoon units should be present in computed data.json."""
+
+    KNOWN_COCOONS = [
+        "BanelingCocoon",
+        "DevourerCocoonMP",
+        "GuardianCocoonMP",
+        "OverlordCocoon",
+        "OverlordCocoon",
+        "RavagerCocoon",
+        "TransportOverlordCocoon",
+    ]
+
+    @pytest.mark.parametrize(
+        "cocoon",
+        KNOWN_COCOONS,
+    )
+    def test_cocoon_exists(self, computed_data: dict, cocoon: str) -> None:
+        """Each cocoon unit should exist in Units."""
+        assert cocoon in computed_data["Units"]
+
+    def test_cocoons_are_zerg(self, computed_data: dict) -> None:
+        """Cocoon units should have Zerg race."""
+        for cocoon in self.KNOWN_COCOONS:
+            unit = computed_data["Units"][cocoon]
+            assert unit.get("Race") == "Zerg"
