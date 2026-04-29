@@ -100,7 +100,6 @@ def extract_unit_name(name_field: str) -> str:
 def build_fixture() -> list[dict]:
     computed = load_computed_data()
     unit_list = computed.get("Unit", [])
-    unit_data = load_unit_data()
 
     units = []
     seen_ids = set()
@@ -123,8 +122,6 @@ def build_fixture() -> list[dict]:
         built_from = []
         if entry.get("is_structure") or tech_alias:
             built_from = tech_alias[:1] if tech_alias else []
-        else:
-            built_from = []
 
         units.append(
             {

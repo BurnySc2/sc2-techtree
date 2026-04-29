@@ -90,8 +90,11 @@ def fetch_page_wikitext(page_title: str) -> str | None:
                 raw = gzip.decompress(raw)
             data = json.loads(raw.decode("utf-8"))
             return data.get("parse", {}).get("wikitext", {}).get("*")
-    except Exception as e:
+    except urllib.error.URLError as e:
         print(f"  ERROR fetching {page_title}: {e}")
+        return None
+    except json.JSONDecodeError as e:
+        print(f"  ERROR decoding {page_title}: {e}")
         return None
 
 

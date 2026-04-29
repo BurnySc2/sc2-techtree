@@ -39,10 +39,11 @@ def _load_cocoon_units(units_data: Any) -> set[str]:
     """Extract cocoon-type units from UnitData (units whose id contains 'Cocoon')."""
     cocoons: set[str] = set()
     if isinstance(units_data, dict):
-        for unit_id in units_data.keys():
+        for unit_id in units_data:
             if "Cocoon" in unit_id:
                 cocoons.add(unit_id)
     return cocoons
+
 
 # Requirement name fixes (maps incorrect names to correct ones)
 REQUIREMENT_NAME_FIXES = {
