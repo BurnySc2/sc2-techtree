@@ -115,7 +115,7 @@ class TestLarva:
     def test_larva_morphsto(self, techtree_data: dict) -> None:
         larva = techtree_data["Units"]["Larva"]
         assert "morphsto" in larva
-        assert set(larva["morphsto"]) >= {
+        assert set(larva["morphsto"]) == {
             "Corruptor",
             "Drone",
             "Hydralisk",
@@ -126,6 +126,7 @@ class TestLarva:
             "SwarmHostMP",
             "Ultralisk",
             "Viper",
+            "Zergling",
         }
 
 

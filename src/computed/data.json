@@ -16879,7 +16879,6 @@
       },
       "id": 151,
       "morphsto": [
-        "Baneling",
         "Corruptor",
         "Drone",
         "Hydralisk",
@@ -16894,7 +16893,6 @@
       ],
       "name": "Larva",
       "produces": [
-        "Baneling",
         "Corruptor",
         "Drone",
         "Hydralisk",

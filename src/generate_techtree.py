@@ -35,6 +35,9 @@ UNIT_REQUIREMENT_FIXES = {
 # Units to exclude from morph targets (cocoons) - loaded dynamically from game data
 MORPH_EXCLUDE: set[str] = set()
 
+# Units that should NOT appear in Larva's produces list (not trainable from Larva)
+LARVA_EXCLUDE = {"Baneling"}
+
 
 def _load_cocoon_units(units_data: Any) -> set[str]:
     """Extract cocoon-type units from UnitData (units whose id contains 'Cocoon')."""
@@ -521,7 +524,8 @@ def generate_techtree() -> dict:
                         abil_name, unit_name, ability_to_structures, require_prefix_match=True
                     ):
                         if not is_campaign_unit(units_data.get(produced_unit, {})):
-                            produces.append(produced_unit)
+                            if unit_name != "Larva" or produced_unit not in LARVA_EXCLUDE:
+                                produces.append(produced_unit)
                     elif _is_build_ability(abil_name):
                         # For build abilities, include units not in units_data (e.g., tech labs)
                         # Also include units in units_data even if they have empty race (tech labs)

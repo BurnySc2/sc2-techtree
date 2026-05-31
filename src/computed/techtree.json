@@ -1983,7 +1983,6 @@
     },
     "Larva": {
       "morphsto": [
-        "Baneling",
         "Corruptor",
         "Drone",
         "Hydralisk",
@@ -1997,7 +1996,6 @@
         "Zergling"
       ],
       "produces": [
-        "Baneling",
         "Corruptor",
         "Drone",
         "Hydralisk",
