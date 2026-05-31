@@ -88,6 +88,55 @@ RESEARCH_EXCLUDE = {
     "overlordtransport",  # not a research
 }
 
+
+# Hardcoded upgrade requirements: upgrade_name -> [required_structures_and_upgrades]
+UPGRADE_REQUIREMENTS = {
+    # Level1 upgrades with no requirements (auto-detect incorrectly adds structure)
+    "TerranInfantryArmorsLevel1": [],
+    "TerranInfantryWeaponsLevel1": [],
+    "TerranVehicleWeaponsLevel1": [],
+    "TerranVehicleArmorsLevel1": [],
+    "TerranShipWeaponsLevel1": [],
+    "TerranVehicleAndShipArmorsLevel1": [],
+    "ProtossAirArmorsLevel1": [],
+    "ProtossAirWeaponsLevel1": [],
+    "ProtossGroundArmorsLevel1": [],
+    "ProtossGroundWeaponsLevel1": [],
+    "ProtossShieldsLevel1": [],
+    # Tier upgrades needing Armory + previous level
+    "TerranInfantryArmorsLevel2": ["Armory", "TerranInfantryArmorsLevel1"],
+    "TerranInfantryArmorsLevel3": ["Armory", "TerranInfantryArmorsLevel2"],
+    "TerranInfantryWeaponsLevel2": ["Armory", "TerranInfantryWeaponsLevel1"],
+    "TerranInfantryWeaponsLevel3": ["Armory", "TerranInfantryWeaponsLevel2"],
+    # FleetBeacon + previous level
+    "ProtossAirArmorsLevel2": ["FleetBeacon", "ProtossAirArmorsLevel1"],
+    "ProtossAirArmorsLevel3": ["FleetBeacon", "ProtossAirArmorsLevel2"],
+    "ProtossAirWeaponsLevel2": ["FleetBeacon", "ProtossAirWeaponsLevel1"],
+    "ProtossAirWeaponsLevel3": ["FleetBeacon", "ProtossAirWeaponsLevel2"],
+    # TwilightCouncil + previous level
+    "ProtossGroundArmorsLevel2": ["TwilightCouncil", "ProtossGroundArmorsLevel1"],
+    "ProtossGroundArmorsLevel3": ["TwilightCouncil", "ProtossGroundArmorsLevel2"],
+    "ProtossGroundWeaponsLevel2": ["TwilightCouncil", "ProtossGroundWeaponsLevel1"],
+    "ProtossGroundWeaponsLevel3": ["TwilightCouncil", "ProtossGroundWeaponsLevel2"],
+    "ProtossShieldsLevel2": ["TwilightCouncil", "ProtossShieldsLevel1"],
+    "ProtossShieldsLevel3": ["TwilightCouncil", "ProtossShieldsLevel2"],
+    # Lair/Hive specific tiers
+    "ZergFlyerArmorsLevel2": ["Lair", "ZergFlyerArmorsLevel1"],
+    "ZergFlyerArmorsLevel3": ["Hive", "ZergFlyerArmorsLevel2"],
+    "ZergFlyerWeaponsLevel2": ["Lair", "ZergFlyerWeaponsLevel1"],
+    "ZergFlyerWeaponsLevel3": ["Hive", "ZergFlyerWeaponsLevel2"],
+    # Special cases
+    "DrillClaws": ["Armory"],
+    "TransformationServos": ["Armory"],
+    "CentrificalHooks": ["Lair"],
+    "zerglingattackspeed": ["Hive"],
+    "GlialReconstitution": ["Lair"],
+    "TunnelingClaws": ["Lair"],
+    "Frenzy": ["Hive"],
+    "DiggingClaws": ["Hive"],
+    "LurkerRange": ["Hive"],
+}
+
 # Per-structure research exclusions (structure gets research ability but shouldn't get these upgrades)
 STRUCTURE_RESEARCH_EXCLUDE = {
     "BarracksTechLab": {"CombatDrugs", "ReaperSpeed"},
@@ -629,23 +678,27 @@ def generate_techtree() -> dict:
             for upg_name in struct_data["researches"]:
                 structure_to_upgrades[struct_name].append(upg_name)
 
-    # Determine upgrade requirements: structure provides + previous tier
+    # Determine upgrade requirements: check UPGRADE_REQUIREMENTS first, then auto-detect
     upgrades = {}
     for struct_name, struct_upgrades in structure_to_upgrades.items():
         for upg_name in struct_upgrades:
-            requires = []
-            # Find previous tier upgrade (e.g., Level1 before Level2)
-            if "Level" in upg_name:
-                # Try to find Level(N-1) where N is the current level
-                level_match = re.search(r"Level(\d+)$", upg_name)
-                if level_match:
-                    current_level = int(level_match.group(1))
-                    if current_level > 1:
-                        prev_level = current_level - 1
-                        prev_name = re.sub(r"Level\d+$", f"Level{prev_level}", upg_name)
-                        if prev_name in upgrades or any(u == prev_name for u in struct_upgrades):
-                            requires.append(prev_name)
-            upgrades[upg_name] = {"requires": sorted(requires)}
+            # First check UPGRADE_REQUIREMENTS for explicit mapping
+            if upg_name in UPGRADE_REQUIREMENTS:
+                requires = list(UPGRADE_REQUIREMENTS[upg_name])  # Keep original order
+            else:
+                # Auto-detect: only add previous tier
+                requires = []
+                # Find previous tier upgrade (e.g., Level1 before Level2)
+                if "Level" in upg_name:
+                    level_match = re.search(r"Level(\d+)$", upg_name)
+                    if level_match:
+                        current_level = int(level_match.group(1))
+                        if current_level > 1:
+                            prev_level = current_level - 1
+                            prev_name = re.sub(r"Level\d+$", f"Level{prev_level}", upg_name)
+                            if prev_name in upgrades or any(u == prev_name for u in struct_upgrades):
+                                requires.append(prev_name)
+            upgrades[upg_name] = {"requires": requires}
 
     return {
         "Units": {**structures, **units},  # MERGE: combine structures + units

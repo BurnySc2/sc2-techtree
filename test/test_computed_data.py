@@ -315,7 +315,8 @@ class TestTechtreeResearchesInUpgrades:
         assert not unexpected, f"Unexpectedly missing upgrades: {unexpected}"
 
     def test_techtree_buildings_do_not_exist_in_upgrades(self, techtree: dict, computed_data: dict) -> None:
-        structures = ["Spire", "SpawningPool", "Armory", "DarkShrine"]
+        # Structures do not belong in the upgrade section
+        structures = ["Spire", "SpawningPool", "Armory", "DarkShrine", "FleetBeacon", "Hive", "Lair", "TwilightCouncil"]
         for structure in structures:
             assert structure not in computed_data["Upgrades"], f"Structure in upgrades section: {structure}"
 

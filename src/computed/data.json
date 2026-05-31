@@ -28621,7 +28621,9 @@
       "id": 75,
       "minerals": 100,
       "name": "CentrificalHooks",
-      "requires": [],
+      "requires": [
+        "Lair"
+      ],
       "time": 100
     },
     "Charge": {
@@ -28658,7 +28660,9 @@
       "id": 293,
       "minerals": 100,
       "name": "DiggingClaws",
-      "requires": [],
+      "requires": [
+        "Hive"
+      ],
       "time": 80
     },
     "DrillClaws": {
@@ -28666,7 +28670,9 @@
       "id": 122,
       "minerals": 75,
       "name": "DrillClaws",
-      "requires": [],
+      "requires": [
+        "Armory"
+      ],
       "time": 110
     },
     "EvolveGroovedSpines": {
@@ -28697,7 +28703,9 @@
       "gas": 100,
       "minerals": 100,
       "name": "Frenzy",
-      "requires": [],
+      "requires": [
+        "Hive"
+      ],
       "time": 90
     },
     "GlialReconstitution": {
@@ -28705,7 +28713,9 @@
       "id": 2,
       "minerals": 100,
       "name": "GlialReconstitution",
-      "requires": [],
+      "requires": [
+        "Lair"
+      ],
       "time": 110
     },
     "GraviticDrive": {
@@ -28752,7 +28762,9 @@
       "id": 127,
       "minerals": 150,
       "name": "LurkerRange",
-      "requires": [],
+      "requires": [
+        "Hive"
+      ],
       "time": 80
     },
     "MedivacCaduceusReactor": {
@@ -28824,6 +28836,7 @@
       "minerals": 175,
       "name": "ProtossAirArmorsLevel2",
       "requires": [
+        "FleetBeacon",
         "ProtossAirArmorsLevel1"
       ],
       "time": 215
@@ -28834,6 +28847,7 @@
       "minerals": 250,
       "name": "ProtossAirArmorsLevel3",
       "requires": [
+        "FleetBeacon",
         "ProtossAirArmorsLevel2"
       ],
       "time": 250
@@ -28852,6 +28866,7 @@
       "minerals": 175,
       "name": "ProtossAirWeaponsLevel2",
       "requires": [
+        "FleetBeacon",
         "ProtossAirWeaponsLevel1"
       ],
       "time": 215
@@ -28862,6 +28877,7 @@
       "minerals": 250,
       "name": "ProtossAirWeaponsLevel3",
       "requires": [
+        "FleetBeacon",
         "ProtossAirWeaponsLevel2"
       ],
       "time": 250
@@ -28880,7 +28896,8 @@
       "minerals": 150,
       "name": "ProtossGroundArmorsLevel2",
       "requires": [
-        "ProtossGroundArmorsLevel1"
+        "ProtossGroundArmorsLevel1",
+        "TwilightCouncil"
       ],
       "time": 202.5
     },
@@ -28890,7 +28907,8 @@
       "minerals": 200,
       "name": "ProtossGroundArmorsLevel3",
       "requires": [
-        "ProtossGroundArmorsLevel2"
+        "ProtossGroundArmorsLevel2",
+        "TwilightCouncil"
       ],
       "time": 235
     },
@@ -28908,7 +28926,8 @@
       "minerals": 150,
       "name": "ProtossGroundWeaponsLevel2",
       "requires": [
-        "ProtossGroundWeaponsLevel1"
+        "ProtossGroundWeaponsLevel1",
+        "TwilightCouncil"
       ],
       "time": 202.5
     },
@@ -28918,7 +28937,8 @@
       "minerals": 200,
       "name": "ProtossGroundWeaponsLevel3",
       "requires": [
-        "ProtossGroundWeaponsLevel2"
+        "ProtossGroundWeaponsLevel2",
+        "TwilightCouncil"
       ],
       "time": 235
     },
@@ -28936,7 +28956,8 @@
       "minerals": 200,
       "name": "ProtossShieldsLevel2",
       "requires": [
-        "ProtossShieldsLevel1"
+        "ProtossShieldsLevel1",
+        "TwilightCouncil"
       ],
       "time": 202.5
     },
@@ -28946,7 +28967,8 @@
       "minerals": 250,
       "name": "ProtossShieldsLevel3",
       "requires": [
-        "ProtossShieldsLevel2"
+        "ProtossShieldsLevel2",
+        "TwilightCouncil"
       ],
       "time": 235
     },
@@ -29003,6 +29025,7 @@
       "minerals": 150,
       "name": "TerranInfantryArmorsLevel2",
       "requires": [
+        "Armory",
         "TerranInfantryArmorsLevel1"
       ],
       "time": 190
@@ -29013,6 +29036,7 @@
       "minerals": 200,
       "name": "TerranInfantryArmorsLevel3",
       "requires": [
+        "Armory",
         "TerranInfantryArmorsLevel2"
       ],
       "time": 220
@@ -29031,6 +29055,7 @@
       "minerals": 150,
       "name": "TerranInfantryWeaponsLevel2",
       "requires": [
+        "Armory",
         "TerranInfantryWeaponsLevel1"
       ],
       "time": 190
@@ -29041,6 +29066,7 @@
       "minerals": 200,
       "name": "TerranInfantryWeaponsLevel3",
       "requires": [
+        "Armory",
         "TerranInfantryWeaponsLevel2"
       ],
       "time": 220
@@ -29134,7 +29160,9 @@
       "id": 98,
       "minerals": 150,
       "name": "TransformationServos",
-      "requires": [],
+      "requires": [
+        "Armory"
+      ],
       "time": 110
     },
     "TunnelingClaws": {
@@ -29142,7 +29170,9 @@
       "id": 3,
       "minerals": 100,
       "name": "TunnelingClaws",
-      "requires": [],
+      "requires": [
+        "Lair"
+      ],
       "time": 110
     },
     "VoidRaySpeedUpgrade": {
@@ -29175,6 +29205,7 @@
       "minerals": 175,
       "name": "ZergFlyerArmorsLevel2",
       "requires": [
+        "Lair",
         "ZergFlyerArmorsLevel1"
       ],
       "time": 190
@@ -29185,6 +29216,7 @@
       "minerals": 250,
       "name": "ZergFlyerArmorsLevel3",
       "requires": [
+        "Hive",
         "ZergFlyerArmorsLevel2"
       ],
       "time": 220
@@ -29203,6 +29235,7 @@
       "minerals": 175,
       "name": "ZergFlyerWeaponsLevel2",
       "requires": [
+        "Lair",
         "ZergFlyerWeaponsLevel1"
       ],
       "time": 190
@@ -29213,6 +29246,7 @@
       "minerals": 250,
       "name": "ZergFlyerWeaponsLevel3",
       "requires": [
+        "Hive",
         "ZergFlyerWeaponsLevel2"
       ],
       "time": 220
@@ -29230,7 +29264,9 @@
       "id": 65,
       "minerals": 200,
       "name": "zerglingattackspeed",
-      "requires": [],
+      "requires": [
+        "Hive"
+      ],
       "time": 130
     },
     "zerglingmovementspeed": {

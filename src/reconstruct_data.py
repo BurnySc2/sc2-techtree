@@ -523,7 +523,9 @@ def _process_structure(
 def _process_upgrade(
     name: ItemName,
     upgrades_section: dict,
+    units_section: dict,
     visited_upgrades: set[ItemName],
+    visited_structures: set[ItemName],
     queue: deque[QueueItem],
 ) -> None:
     """Handle upgrade requirements."""
@@ -531,7 +533,11 @@ def _process_upgrade(
 
     # Add requirements for this upgrade
     for req in upgrade_info.get(FIELD_REQUIRES, []):
-        if req not in visited_upgrades:
+        # Check if this requirement is a structure (if it exists in units_section)
+        # Some upgrades require structures, not other upgrades
+        if req in units_section and req not in visited_structures:
+            enqueue_if_new(queue, visited_structures, "structure", req)
+        elif req not in visited_upgrades:
             enqueue_if_new(queue, visited_upgrades, "upgrade", req)
 
 
@@ -668,13 +674,31 @@ def _bfs_traversal(
         elif category == "upgrade":
             if name in visited_upgrades:
                 continue
+            # Skip if this is actually a structure (shouldn't happen, but guard anyway)
+            if name in units_section:
+                # Redirect to structure processing instead
+                _process_structure(
+                    name,
+                    units_section,
+                    upgrades_section,
+                    abilities_section,
+                    visited_structures,
+                    visited_units,
+                    visited_upgrades,
+                    visited_abilities,
+                    queue,
+                    cocoon_index,
+                )
+                continue
             # Add to visited BEFORE processing
             visited_upgrades.add(name)
 
             _process_upgrade(
                 name,
                 upgrades_section,
+                units_section,
                 visited_upgrades,
+                visited_structures,
                 queue,
             )
 

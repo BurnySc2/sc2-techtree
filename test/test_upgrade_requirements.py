@@ -38,14 +38,14 @@ FLEETBEACON_UPGRADES = [
 # Upgrades that require TwilightCouncil + previous level
 TWILIGHT_COUNCIL_UPGRADES = [
     ("ProtossGroundArmorsLevel1", []),
-    ("ProtossGroundArmorsLevel2", ["TwilightCouncil", "ProtossGroundArmorsLevel1"]),
-    ("ProtossGroundArmorsLevel3", ["TwilightCouncil", "ProtossGroundArmorsLevel2"]),
+    ("ProtossGroundArmorsLevel2", ["ProtossGroundArmorsLevel1", "TwilightCouncil"]),
+    ("ProtossGroundArmorsLevel3", ["ProtossGroundArmorsLevel2", "TwilightCouncil"]),
     ("ProtossGroundWeaponsLevel1", []),
-    ("ProtossGroundWeaponsLevel2", ["TwilightCouncil", "ProtossGroundWeaponsLevel1"]),
-    ("ProtossGroundWeaponsLevel3", ["TwilightCouncil", "ProtossGroundWeaponsLevel2"]),
+    ("ProtossGroundWeaponsLevel2", ["ProtossGroundWeaponsLevel1", "TwilightCouncil"]),
+    ("ProtossGroundWeaponsLevel3", ["ProtossGroundWeaponsLevel2", "TwilightCouncil"]),
     ("ProtossShieldsLevel1", []),
-    ("ProtossShieldsLevel2", ["TwilightCouncil", "ProtossShieldsLevel1"]),
-    ("ProtossShieldsLevel3", ["TwilightCouncil", "ProtossShieldsLevel2"]),
+    ("ProtossShieldsLevel2", ["ProtossShieldsLevel1", "TwilightCouncil"]),
+    ("ProtossShieldsLevel3", ["ProtossShieldsLevel2", "TwilightCouncil"]),
 ]
 
 

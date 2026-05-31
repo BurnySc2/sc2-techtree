@@ -4172,7 +4172,9 @@
       "requires": []
     },
     "CentrificalHooks": {
-      "requires": []
+      "requires": [
+        "Lair"
+      ]
     },
     "Charge": {
       "requires": []
@@ -4187,10 +4189,14 @@
       "requires": []
     },
     "DiggingClaws": {
-      "requires": []
+      "requires": [
+        "Hive"
+      ]
     },
     "DrillClaws": {
-      "requires": []
+      "requires": [
+        "Armory"
+      ]
     },
     "EvolveGroovedSpines": {
       "requires": []
@@ -4202,10 +4208,14 @@
       "requires": []
     },
     "Frenzy": {
-      "requires": []
+      "requires": [
+        "Hive"
+      ]
     },
     "GlialReconstitution": {
-      "requires": []
+      "requires": [
+        "Lair"
+      ]
     },
     "GraviticDrive": {
       "requires": []
@@ -4223,7 +4233,9 @@
       "requires": []
     },
     "LurkerRange": {
-      "requires": []
+      "requires": [
+        "Hive"
+      ]
     },
     "MedivacCaduceusReactor": {
       "requires": []
@@ -4251,11 +4263,13 @@
     },
     "ProtossAirArmorsLevel2": {
       "requires": [
+        "FleetBeacon",
         "ProtossAirArmorsLevel1"
       ]
     },
     "ProtossAirArmorsLevel3": {
       "requires": [
+        "FleetBeacon",
         "ProtossAirArmorsLevel2"
       ]
     },
@@ -4264,11 +4278,13 @@
     },
     "ProtossAirWeaponsLevel2": {
       "requires": [
+        "FleetBeacon",
         "ProtossAirWeaponsLevel1"
       ]
     },
     "ProtossAirWeaponsLevel3": {
       "requires": [
+        "FleetBeacon",
         "ProtossAirWeaponsLevel2"
       ]
     },
@@ -4277,12 +4293,14 @@
     },
     "ProtossGroundArmorsLevel2": {
       "requires": [
-        "ProtossGroundArmorsLevel1"
+        "ProtossGroundArmorsLevel1",
+        "TwilightCouncil"
       ]
     },
     "ProtossGroundArmorsLevel3": {
       "requires": [
-        "ProtossGroundArmorsLevel2"
+        "ProtossGroundArmorsLevel2",
+        "TwilightCouncil"
       ]
     },
     "ProtossGroundWeaponsLevel1": {
@@ -4290,12 +4308,14 @@
     },
     "ProtossGroundWeaponsLevel2": {
       "requires": [
-        "ProtossGroundWeaponsLevel1"
+        "ProtossGroundWeaponsLevel1",
+        "TwilightCouncil"
       ]
     },
     "ProtossGroundWeaponsLevel3": {
       "requires": [
-        "ProtossGroundWeaponsLevel2"
+        "ProtossGroundWeaponsLevel2",
+        "TwilightCouncil"
       ]
     },
     "ProtossShieldsLevel1": {
@@ -4303,12 +4323,14 @@
     },
     "ProtossShieldsLevel2": {
       "requires": [
-        "ProtossShieldsLevel1"
+        "ProtossShieldsLevel1",
+        "TwilightCouncil"
       ]
     },
     "ProtossShieldsLevel3": {
       "requires": [
-        "ProtossShieldsLevel2"
+        "ProtossShieldsLevel2",
+        "TwilightCouncil"
       ]
     },
     "PsiStormTech": {
@@ -4331,11 +4353,13 @@
     },
     "TerranInfantryArmorsLevel2": {
       "requires": [
+        "Armory",
         "TerranInfantryArmorsLevel1"
       ]
     },
     "TerranInfantryArmorsLevel3": {
       "requires": [
+        "Armory",
         "TerranInfantryArmorsLevel2"
       ]
     },
@@ -4344,11 +4368,13 @@
     },
     "TerranInfantryWeaponsLevel2": {
       "requires": [
+        "Armory",
         "TerranInfantryWeaponsLevel1"
       ]
     },
     "TerranInfantryWeaponsLevel3": {
       "requires": [
+        "Armory",
         "TerranInfantryWeaponsLevel2"
       ]
     },
@@ -4392,10 +4418,14 @@
       ]
     },
     "TransformationServos": {
-      "requires": []
+      "requires": [
+        "Armory"
+      ]
     },
     "TunnelingClaws": {
-      "requires": []
+      "requires": [
+        "Lair"
+      ]
     },
     "VoidRaySpeedUpgrade": {
       "requires": []
@@ -4408,11 +4438,13 @@
     },
     "ZergFlyerArmorsLevel2": {
       "requires": [
+        "Lair",
         "ZergFlyerArmorsLevel1"
       ]
     },
     "ZergFlyerArmorsLevel3": {
       "requires": [
+        "Hive",
         "ZergFlyerArmorsLevel2"
       ]
     },
@@ -4421,11 +4453,13 @@
     },
     "ZergFlyerWeaponsLevel2": {
       "requires": [
+        "Lair",
         "ZergFlyerWeaponsLevel1"
       ]
     },
     "ZergFlyerWeaponsLevel3": {
       "requires": [
+        "Hive",
         "ZergFlyerWeaponsLevel2"
       ]
     },
@@ -4433,7 +4467,9 @@
       "requires": []
     },
     "zerglingattackspeed": {
-      "requires": []
+      "requires": [
+        "Hive"
+      ]
     },
     "zerglingmovementspeed": {
       "requires": []
