@@ -99,19 +99,19 @@ class TestStructuresMorphsto:
         """Spire should morphsto GreaterSpire."""
         spire = computed_data["Units"]["Spire"]
         assert "morphsto" in spire
-        assert spire["morphsto"] == "GreaterSpire"
+        assert spire["morphsto"] == ["GreaterSpire"]
 
     def test_hatchery_morphsto_lair(self, computed_data: dict) -> None:
         """Hatchery should morphsto Lair."""
         hatchery = computed_data["Units"]["Hatchery"]
         assert "morphsto" in hatchery
-        assert hatchery["morphsto"] == "Lair"
+        assert hatchery["morphsto"] == ["Lair"]
 
     def test_lair_morphsto_hive(self, computed_data: dict) -> None:
         """Lair should morphsto Hive."""
         lair = computed_data["Units"]["Lair"]
         assert "morphsto" in lair
-        assert lair["morphsto"] == "Hive"
+        assert lair["morphsto"] == ["Hive"]
 
     def test_command_center_morphsto_options(self, computed_data: dict) -> None:
         """CommandCenter should have multiple morphsto options."""
@@ -124,7 +124,7 @@ class TestStructuresMorphsto:
         """Factory should morphsto FactoryFlying."""
         factory = computed_data["Units"]["Factory"]
         assert "morphsto" in factory
-        assert factory["morphsto"] == "FactoryFlying"
+        assert factory["morphsto"] == ["FactoryFlying"]
 
 
 class TestUnitsAbilArray:

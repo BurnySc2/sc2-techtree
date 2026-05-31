@@ -580,9 +580,9 @@ def generate_techtree() -> dict:
         if morphsto:
             if isinstance(morphsto, list):
                 unique_targets = sorted(set(morphsto))
-                entry["morphsto"] = unique_targets[0] if len(unique_targets) == 1 else unique_targets
             else:
-                entry["morphsto"] = morphsto
+                unique_targets = [morphsto]
+            entry["morphsto"] = unique_targets
         if unit_name in unit_requirements:
             entry["requires"] = sorted(set(unit_requirements[unit_name]))
 

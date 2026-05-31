@@ -502,7 +502,9 @@
       "race": "Zerg"
     },
     "BanelingCocoon": {
-      "morphsto": "Baneling",
+      "morphsto": [
+        "Baneling"
+      ],
       "race": "Zerg"
     },
     "BanelingNest": {
@@ -531,7 +533,9 @@
         "BarracksReactor",
         "BarracksTechLab"
       ],
-      "morphsto": "BarracksFlying",
+      "morphsto": [
+        "BarracksFlying"
+      ],
       "produces": [
         "Ghost",
         "Marauder",
@@ -691,7 +695,9 @@
       "race": "Zerg"
     },
     "BroodLordCocoon": {
-      "morphsto": "BroodLord",
+      "morphsto": [
+        "BroodLord"
+      ],
       "race": "Zerg"
     },
     "BroodLordWeapon": {
@@ -931,7 +937,9 @@
       "race": "Zerg"
     },
     "Corruptor": {
-      "morphsto": "BroodLord",
+      "morphsto": [
+        "BroodLord"
+      ],
       "race": "Zerg",
       "requires": [
         "Spire"
@@ -1280,7 +1288,9 @@
       "race": ""
     },
     "DevourerCocoonMP": {
-      "morphsto": "DevourerMP",
+      "morphsto": [
+        "DevourerMP"
+      ],
       "race": "Zerg"
     },
     "DevourerMP": {
@@ -1445,7 +1455,9 @@
         "FactoryReactor",
         "FactoryTechLab"
       ],
-      "morphsto": "FactoryFlying",
+      "morphsto": [
+        "FactoryFlying"
+      ],
       "produces": [
         "Cyclone",
         "Hellion",
@@ -1559,7 +1571,9 @@
       ]
     },
     "Gateway": {
-      "morphsto": "WarpGate",
+      "morphsto": [
+        "WarpGate"
+      ],
       "produces": [
         "Adept",
         "DarkTemplar",
@@ -1593,7 +1607,9 @@
       ]
     },
     "GhostAlternate": {
-      "morphsto": "GhostNova",
+      "morphsto": [
+        "GhostNova"
+      ],
       "race": ""
     },
     "GhostMengskACGluescreenDummy": {
@@ -1638,7 +1654,9 @@
       "race": ""
     },
     "GuardianCocoonMP": {
-      "morphsto": "GuardianMP",
+      "morphsto": [
+        "GuardianMP"
+      ],
       "race": "Zerg"
     },
     "GuardianMP": {
@@ -1684,7 +1702,9 @@
       "race": ""
     },
     "Hatchery": {
-      "morphsto": "Lair",
+      "morphsto": [
+        "Lair"
+      ],
       "produces": [
         "Queen"
       ],
@@ -1708,11 +1728,15 @@
       "race": ""
     },
     "Hellion": {
-      "morphsto": "HellionTank",
+      "morphsto": [
+        "HellionTank"
+      ],
       "race": "Terran"
     },
     "HellionTank": {
-      "morphsto": "Hellion",
+      "morphsto": [
+        "Hellion"
+      ],
       "race": "Terran",
       "requires": [
         "Armory"
@@ -1835,7 +1859,9 @@
       "race": "Zerg"
     },
     "InfestedTerransEgg": {
-      "morphsto": "InfestorTerran",
+      "morphsto": [
+        "InfestorTerran"
+      ],
       "race": "Zerg"
     },
     "InfestedTerransEggPlacement": {
@@ -1923,7 +1949,9 @@
       "race": ""
     },
     "Lair": {
-      "morphsto": "Hive",
+      "morphsto": [
+        "Hive"
+      ],
       "produces": [
         "Queen"
       ],
@@ -2204,7 +2232,9 @@
       ]
     },
     "MothershipCore": {
-      "morphsto": "Mothership",
+      "morphsto": [
+        "Mothership"
+      ],
       "race": "Protoss",
       "requires": [
         "MothershipCoreRequirements"
@@ -2303,7 +2333,9 @@
       "race": "Protoss"
     },
     "OrbitalCommand": {
-      "morphsto": "OrbitalCommandFlying",
+      "morphsto": [
+        "OrbitalCommandFlying"
+      ],
       "produces": [
         "SCV"
       ],
@@ -2323,14 +2355,18 @@
       "race": "Zerg"
     },
     "OverlordCocoon": {
-      "morphsto": "Overseer",
+      "morphsto": [
+        "Overseer"
+      ],
       "race": "Zerg"
     },
     "OverlordGenerateCreepKeybind": {
       "race": ""
     },
     "OverlordTransport": {
-      "morphsto": "Overseer",
+      "morphsto": [
+        "Overseer"
+      ],
       "race": "Zerg"
     },
     "Overseer": {
@@ -2726,7 +2762,9 @@
       "race": "Zerg"
     },
     "RavagerCocoon": {
-      "morphsto": "Ravager",
+      "morphsto": [
+        "Ravager"
+      ],
       "race": "Zerg"
     },
     "RavagerCorrosiveBileMissile": {
@@ -2823,7 +2861,9 @@
       "race": ""
     },
     "Roach": {
-      "morphsto": "Ravager",
+      "morphsto": [
+        "Ravager"
+      ],
       "race": "Zerg",
       "requires": [
         "RoachWarren"
@@ -3342,7 +3382,9 @@
       "race": ""
     },
     "Spire": {
-      "morphsto": "GreaterSpire",
+      "morphsto": [
+        "GreaterSpire"
+      ],
       "race": "Zerg",
       "requires": [
         "Lair"
@@ -3417,7 +3459,9 @@
         "StarportReactor",
         "StarportTechLab"
       ],
-      "morphsto": "StarportFlying",
+      "morphsto": [
+        "StarportFlying"
+      ],
       "produces": [
         "Banshee",
         "Battlecruiser",
@@ -3504,11 +3548,15 @@
       "race": ""
     },
     "SwarmHostBurrowedMP": {
-      "morphsto": "SwarmHostMP",
+      "morphsto": [
+        "SwarmHostMP"
+      ],
       "race": "Zerg"
     },
     "SwarmHostMP": {
-      "morphsto": "SwarmHostBurrowedMP",
+      "morphsto": [
+        "SwarmHostBurrowedMP"
+      ],
       "race": "Zerg",
       "requires": [
         "InfestationPit"
@@ -3621,7 +3669,9 @@
       "race": ""
     },
     "TransportOverlordCocoon": {
-      "morphsto": "OverlordTransport",
+      "morphsto": [
+        "OverlordTransport"
+      ],
       "race": "Zerg"
     },
     "TrooperMengskACGluescreenDummy": {
@@ -4130,7 +4180,9 @@
       "race": ""
     },
     "Zergling": {
-      "morphsto": "Baneling",
+      "morphsto": [
+        "Baneling"
+      ],
       "race": "Zerg",
       "requires": [
         "SpawningPool"

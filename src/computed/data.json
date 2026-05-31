@@ -7756,7 +7756,9 @@
       "TacticalAI": "BanelingEgg",
       "TurningRate": 719.4726,
       "id": 8,
-      "morphsto": "Baneling",
+      "morphsto": [
+        "Baneling"
+      ],
       "name": "BanelingCocoon",
       "race": "Zerg",
       "type": "unit"
@@ -8161,7 +8163,9 @@
         "BarracksTechLab"
       ],
       "id": 21,
-      "morphsto": "BarracksFlying",
+      "morphsto": [
+        "BarracksFlying"
+      ],
       "name": "Barracks",
       "produces": [
         "Ghost",
@@ -8981,7 +8985,9 @@
       "TurningRate": 719.4726,
       "VisionHeight": 15,
       "id": 113,
-      "morphsto": "BroodLord",
+      "morphsto": [
+        "BroodLord"
+      ],
       "name": "BroodLordCocoon",
       "race": "Zerg",
       "type": "unit"
@@ -10385,7 +10391,9 @@
         "Link": "ParasiteSpore"
       },
       "id": 112,
-      "morphsto": "BroodLord",
+      "morphsto": [
+        "BroodLord"
+      ],
       "name": "Corruptor",
       "race": "Zerg",
       "requires": [
@@ -11335,7 +11343,9 @@
       "TurningRate": 719.4726,
       "VisionHeight": 4,
       "id": 728,
-      "morphsto": "DevourerMP",
+      "morphsto": [
+        "DevourerMP"
+      ],
       "name": "DevourerCocoonMP",
       "race": "Zerg",
       "type": "unit"
@@ -12685,7 +12695,9 @@
         "FactoryTechLab"
       ],
       "id": 27,
-      "morphsto": "FactoryFlying",
+      "morphsto": [
+        "FactoryFlying"
+      ],
       "name": "Factory",
       "produces": [
         "Cyclone",
@@ -13638,7 +13650,9 @@
       },
       "TurningRate": 719.4726,
       "id": 62,
-      "morphsto": "WarpGate",
+      "morphsto": [
+        "WarpGate"
+      ],
       "name": "Gateway",
       "produces": [
         "Adept",
@@ -14005,7 +14019,9 @@
         "1": "Zergling"
       },
       "id": 144,
-      "morphsto": "GhostNova",
+      "morphsto": [
+        "GhostNova"
+      ],
       "name": "GhostAlternate",
       "parent": "Ghost",
       "race": "",
@@ -14293,7 +14309,9 @@
       "TurningRate": 719.4726,
       "VisionHeight": 4,
       "id": 726,
-      "morphsto": "GuardianMP",
+      "morphsto": [
+        "GuardianMP"
+      ],
       "name": "GuardianCocoonMP",
       "race": "Zerg",
       "type": "unit"
@@ -14578,7 +14596,9 @@
       },
       "TurningRate": 719.4726,
       "id": 86,
-      "morphsto": "Lair",
+      "morphsto": [
+        "Lair"
+      ],
       "name": "Hatchery",
       "produces": [
         "Queen"
@@ -14737,7 +14757,9 @@
         "Turret": "Hellion"
       },
       "id": 53,
-      "morphsto": "HellionTank",
+      "morphsto": [
+        "HellionTank"
+      ],
       "name": "Hellion",
       "race": "Terran",
       "time": 30,
@@ -14901,7 +14923,9 @@
         "Link": "HellionTank"
       },
       "id": 484,
-      "morphsto": "Hellion",
+      "morphsto": [
+        "Hellion"
+      ],
       "name": "HellionTank",
       "race": "Terran",
       "requires": [
@@ -16856,7 +16880,9 @@
       "TechTreeUnlockedUnitArray": "Overseer",
       "TurningRate": 719.4726,
       "id": 100,
-      "morphsto": "Hive",
+      "morphsto": [
+        "Hive"
+      ],
       "name": "Lair",
       "produces": [
         "Queen"
@@ -19379,7 +19405,9 @@
       "TechAliasArray": "Alias_CommandCenter",
       "TurningRate": 719.4726,
       "id": 132,
-      "morphsto": "OrbitalCommandFlying",
+      "morphsto": [
+        "OrbitalCommandFlying"
+      ],
       "name": "OrbitalCommand",
       "produces": [
         "SCV"
@@ -19732,7 +19760,9 @@
       "TurningRate": 719.4726,
       "VisionHeight": 15,
       "id": 128,
-      "morphsto": "Overseer",
+      "morphsto": [
+        "Overseer"
+      ],
       "name": "OverlordCocoon",
       "race": "Zerg",
       "type": "unit"
@@ -19903,7 +19933,9 @@
       "TurningRate": 999.8437,
       "VisionHeight": 15,
       "id": 893,
-      "morphsto": "Overseer",
+      "morphsto": [
+        "Overseer"
+      ],
       "name": "OverlordTransport",
       "race": "Zerg",
       "time": 21,
@@ -21637,7 +21669,9 @@
       "Sight": 5,
       "SubgroupPriority": 54,
       "id": 687,
-      "morphsto": "Ravager",
+      "morphsto": [
+        "Ravager"
+      ],
       "name": "RavagerCocoon",
       "race": "Zerg",
       "type": "unit"
@@ -22482,7 +22516,9 @@
         }
       ],
       "id": 110,
-      "morphsto": "Ravager",
+      "morphsto": [
+        "Ravager"
+      ],
       "name": "Roach",
       "race": "Zerg",
       "requires": [
@@ -24447,7 +24483,9 @@
       },
       "TurningRate": 719.4726,
       "id": 92,
-      "morphsto": "GreaterSpire",
+      "morphsto": [
+        "GreaterSpire"
+      ],
       "name": "Spire",
       "race": "Zerg",
       "requires": [
@@ -25058,7 +25096,9 @@
         "StarportTechLab"
       ],
       "id": 28,
-      "morphsto": "StarportFlying",
+      "morphsto": [
+        "StarportFlying"
+      ],
       "name": "Starport",
       "produces": [
         "Banshee",
@@ -25843,7 +25883,9 @@
       "SubgroupPriority": 86,
       "TacticalAIThink": "AIThinkSwarmHostMP",
       "id": 493,
-      "morphsto": "SwarmHostMP",
+      "morphsto": [
+        "SwarmHostMP"
+      ],
       "name": "SwarmHostBurrowedMP",
       "race": "Zerg",
       "time": 2.5,
@@ -26124,7 +26166,9 @@
       "TechAliasArray": "Alias_SwarmHost",
       "TurningRate": 360,
       "id": 494,
-      "morphsto": "SwarmHostBurrowedMP",
+      "morphsto": [
+        "SwarmHostBurrowedMP"
+      ],
       "name": "SwarmHostMP",
       "race": "Zerg",
       "requires": [
@@ -26643,7 +26687,9 @@
       "TurningRate": 719.4726,
       "VisionHeight": 15,
       "id": 892,
-      "morphsto": "OverlordTransport",
+      "morphsto": [
+        "OverlordTransport"
+      ],
       "name": "TransportOverlordCocoon",
       "race": "Zerg",
       "type": "unit"
@@ -28550,7 +28596,9 @@
         "Link": "Claws"
       },
       "id": 105,
-      "morphsto": "Baneling",
+      "morphsto": [
+        "Baneling"
+      ],
       "name": "Zergling",
       "race": "Zerg",
       "requires": [

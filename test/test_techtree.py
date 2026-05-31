@@ -44,14 +44,14 @@ class TestZerglingMorphsto:
     def test_zergling_morphsto_baneling(self, techtree_data: dict) -> None:
         zergling = techtree_data["Units"]["Zergling"]
         assert "morphsto" in zergling
-        assert zergling["morphsto"] == "Baneling"
+        assert zergling["morphsto"] == ["Baneling"]
 
 
 class TestCorruptor:
     def test_corruptor_morphsto_broodlord(self, techtree_data: dict) -> None:
         corruptor = techtree_data["Units"]["Corruptor"]
         assert "morphsto" in corruptor
-        assert corruptor["morphsto"] == "BroodLord"
+        assert corruptor["morphsto"] == ["BroodLord"]
 
 
 class TestMorphToBroodLord:
@@ -92,7 +92,7 @@ class TestSpire:
     def test_spire_morphsto(self, techtree_data: dict) -> None:
         spire = techtree_data["Units"]["Spire"]
         assert "morphsto" in spire
-        assert spire["morphsto"] == "GreaterSpire"
+        assert spire["morphsto"] == ["GreaterSpire"]
 
     def test_spire_unlocks(self, techtree_data: dict) -> None:
         spire = techtree_data["Units"]["Spire"]
@@ -172,7 +172,7 @@ class TestOrbitalCommand:
     def test_orbital_command_morphsto_flying(self, techtree_data: dict) -> None:
         orbital = techtree_data["Units"]["OrbitalCommand"]
         assert "morphsto" in orbital
-        assert orbital["morphsto"] == "OrbitalCommandFlying"
+        assert orbital["morphsto"] == ["OrbitalCommandFlying"]
 
 
 class TestUpgradeToOrbital:

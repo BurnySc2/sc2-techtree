@@ -267,8 +267,16 @@ def _build_cocoon_index(units_section: dict) -> dict[str, list[str]]:
     for unit_name, unit_info in units_section.items():
         if "Cocoon" in unit_name and isinstance(unit_info, dict):
             morphsto = unit_info.get(FIELD_MORPHSTO)
-            if morphsto and isinstance(morphsto, str):
-                cocoon_index.setdefault(morphsto, []).append(unit_name)
+            if morphsto:
+                if isinstance(morphsto, str):
+                    targets = [morphsto]
+                elif isinstance(morphsto, list):
+                    targets = morphsto
+                else:
+                    continue
+                for target in targets:
+                    if isinstance(target, str):
+                        cocoon_index.setdefault(target, []).append(unit_name)
     return cocoon_index
 
 
