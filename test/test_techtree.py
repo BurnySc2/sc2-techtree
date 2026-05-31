@@ -409,6 +409,13 @@ class TestRoboticsBay:
         ]
 
 
+class TestDarkShrine:
+    def test_dark_shrine_researches(self, techtree_data: dict) -> None:
+        shrine = techtree_data["Units"]["DarkShrine"]
+        assert "researches" in shrine
+        assert shrine["researches"] == ["DarkTemplarBlinkUpgrade"]
+
+
 class TestUpgradeToGreaterSpire:
     def test_upgrade_to_greater_spire(self, techtree_data: dict) -> None:
         upgrade = techtree_data["Abilities"]["UpgradeToGreaterSpire"]
@@ -437,6 +444,40 @@ class TestHatchery:
         hatchery = techtree_data["Units"]["Hatchery"]
         assert "produces" in hatchery
         assert "Queen" in hatchery["produces"]
+
+    def test_hatchery_researches(self, techtree_data: dict) -> None:
+        """Hatchery researches: Burrow and overlordspeed, but NOT overlordtransport."""
+        hatchery = techtree_data["Units"]["Hatchery"]
+        assert "researches" in hatchery
+        # Should have Burrow and overlordspeed
+        assert "Burrow" in hatchery["researches"]
+        assert "overlordspeed" in hatchery["researches"]
+        # Should NOT have overlordtransport
+        assert "overlordtransport" not in hatchery["researches"]
+
+
+class TestLair:
+    def test_lair_researches(self, techtree_data: dict) -> None:
+        """Lair researches: Burrow and overlordspeed, but NOT overlordtransport."""
+        lair = techtree_data["Units"]["Lair"]
+        assert "researches" in lair
+        # Should have Burrow and overlordspeed
+        assert "Burrow" in lair["researches"]
+        assert "overlordspeed" in lair["researches"]
+        # Should NOT have overlordtransport
+        assert "overlordtransport" not in lair["researches"]
+
+
+class TestHive:
+    def test_hive_researches(self, techtree_data: dict) -> None:
+        """Hive researches: Burrow and overlordspeed, but NOT overlordtransport."""
+        hive = techtree_data["Units"]["Hive"]
+        assert "researches" in hive
+        # Should have Burrow and overlordspeed
+        assert "Burrow" in hive["researches"]
+        assert "overlordspeed" in hive["researches"]
+        # Should NOT have overlordtransport
+        assert "overlordtransport" not in hive["researches"]
 
 
 class TestStructureBuildsAddons:
