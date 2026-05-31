@@ -86,6 +86,7 @@ RESEARCH_EXCLUDE = {
     "SunderingImpact",  # not TwilightCouncil research
     "AmplifiedShielding",  # not TwilightCouncil research
     "overlordtransport",  # not a research
+    "SecretedCoating",  # not a EvolutionChamper research
 }
 
 
@@ -125,6 +126,16 @@ UPGRADE_REQUIREMENTS = {
     "ZergFlyerArmorsLevel3": ["Hive", "ZergFlyerArmorsLevel2"],
     "ZergFlyerWeaponsLevel2": ["Lair", "ZergFlyerWeaponsLevel1"],
     "ZergFlyerWeaponsLevel3": ["Hive", "ZergFlyerWeaponsLevel2"],
+    # Zerg ground upgrades (Lair/Hive + previous level)
+    "ZergMeleeWeaponsLevel1": [],
+    "ZergMeleeWeaponsLevel2": ["Lair", "ZergMeleeWeaponsLevel1"],
+    "ZergMeleeWeaponsLevel3": ["Hive", "ZergMeleeWeaponsLevel2"],
+    "ZergGroundArmorsLevel1": [],
+    "ZergGroundArmorsLevel2": ["Lair", "ZergGroundArmorsLevel1"],
+    "ZergGroundArmorsLevel3": ["Hive", "ZergGroundArmorsLevel2"],
+    "ZergMissileWeaponsLevel1": [],
+    "ZergMissileWeaponsLevel2": ["Lair", "ZergMissileWeaponsLevel1"],
+    "ZergMissileWeaponsLevel3": ["Hive", "ZergMissileWeaponsLevel2"],
     # Special cases
     "DrillClaws": ["Armory"],
     "TransformationServos": ["Armory"],
@@ -370,7 +381,7 @@ def _is_build_ability(abil_name: str) -> bool:
 
 
 def _is_research_ability(abil_name: str) -> bool:
-    return abil_name.endswith("Research")
+    return abil_name.lower().endswith("research")
 
 
 def _is_valid_produce_target(prod_data: dict) -> bool:

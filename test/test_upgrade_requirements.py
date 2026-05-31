@@ -446,3 +446,32 @@ class TestUltraliskCavernRequires:
         assert upgrade["requires"] == expected_requires, (
             f"{upgrade_name}: expected {expected_requires}, got {upgrade['requires']}"
         )
+
+
+class TestZergGroundWeaponArmorRequires:
+    """Tests for Zerg ground weapon/armor upgrades that require Lair/Hive + previous level."""
+
+    @pytest.mark.parametrize(
+        "upgrade_name,expected_requires",
+        [
+            # ZergMeleeWeapons
+            ("ZergMeleeWeaponsLevel1", []),
+            ("ZergMeleeWeaponsLevel2", ["Lair", "ZergMeleeWeaponsLevel1"]),
+            ("ZergMeleeWeaponsLevel3", ["Hive", "ZergMeleeWeaponsLevel2"]),
+            # ZergGroundArmors
+            ("ZergGroundArmorsLevel1", []),
+            ("ZergGroundArmorsLevel2", ["Lair", "ZergGroundArmorsLevel1"]),
+            ("ZergGroundArmorsLevel3", ["Hive", "ZergGroundArmorsLevel2"]),
+            # ZergMissileWeapons
+            ("ZergMissileWeaponsLevel1", []),
+            ("ZergMissileWeaponsLevel2", ["Lair", "ZergMissileWeaponsLevel1"]),
+            ("ZergMissileWeaponsLevel3", ["Hive", "ZergMissileWeaponsLevel2"]),
+        ],
+    )
+    def test_upgrade_requires(self, techtree_data: dict, upgrade_name: str, expected_requires: list) -> None:
+        upgrades = techtree_data.get("Upgrades", {})
+        upgrade = upgrades.get(upgrade_name, {})
+        assert "requires" in upgrade, f"{upgrade_name} missing 'requires' field"
+        assert upgrade["requires"] == expected_requires, (
+            f"{upgrade_name}: expected {expected_requires}, got {upgrade['requires']}"
+        )

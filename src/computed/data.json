@@ -6703,156 +6703,6 @@
       "id": 1182,
       "name": "ZergBuild"
     },
-    "evolutionchamberresearch": {
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
-      "InfoArray": [
-        {
-          "Button": {
-            "DefaultButtonFace": "EvolvePropulsivePeristalsis",
-            "Flags": {
-              "ShowInGlossary": 1
-            },
-            "Requirements": "LearnEvolveSecretedCoating",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 100,
-            "Vespene": 100
-          },
-          "Time": "80",
-          "Upgrade": "SecretedCoating",
-          "index": "Research10"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "zerggroundarmor1",
-            "Requirements": "LearnZergGroundArmor1",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 150,
-            "Vespene": 150
-          },
-          "Time": "160",
-          "Upgrade": "ZergGroundArmorsLevel1",
-          "index": "Research4"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "zerggroundarmor2",
-            "Requirements": "LearnZergGroundArmor2",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 200,
-            "Vespene": 200
-          },
-          "Time": "190",
-          "Upgrade": "ZergGroundArmorsLevel2",
-          "index": "Research5"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "zerggroundarmor3",
-            "Requirements": "LearnZergGroundArmor3",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 250,
-            "Vespene": 250
-          },
-          "Time": "220",
-          "Upgrade": "ZergGroundArmorsLevel3",
-          "index": "Research6"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "zergmeleeweapons1",
-            "Requirements": "LearnZergMeleeWeapon1",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 100,
-            "Vespene": 100
-          },
-          "Time": "160",
-          "Upgrade": "ZergMeleeWeaponsLevel1",
-          "index": "Research1"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "zergmeleeweapons2",
-            "Requirements": "LearnZergMeleeWeapon2",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 150,
-            "Vespene": 150
-          },
-          "Time": "190",
-          "Upgrade": "ZergMeleeWeaponsLevel2",
-          "index": "Research2"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "zergmeleeweapons3",
-            "Requirements": "LearnZergMeleeWeapon3",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 200,
-            "Vespene": 200
-          },
-          "Time": "220",
-          "Upgrade": "ZergMeleeWeaponsLevel3",
-          "index": "Research3"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "zergmissileweapons1",
-            "Requirements": "LearnZergMissileWeapon1",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 100,
-            "Vespene": 100
-          },
-          "Time": "160",
-          "Upgrade": "ZergMissileWeaponsLevel1",
-          "index": "Research7"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "zergmissileweapons2",
-            "Requirements": "LearnZergMissileWeapon2",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 150,
-            "Vespene": 150
-          },
-          "Time": "190",
-          "Upgrade": "ZergMissileWeaponsLevel2",
-          "index": "Research8"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "zergmissileweapons3",
-            "Requirements": "LearnZergMissileWeapon3",
-            "State": "Restricted"
-          },
-          "Resource": {
-            "Minerals": 200,
-            "Vespene": 200
-          },
-          "Time": "220",
-          "Upgrade": "ZergMissileWeaponsLevel3",
-          "index": "Research9"
-        }
-      ],
-      "id": 1215,
-      "name": "evolutionchamberresearch"
-    },
     "move": {
       "AbilSetId": "Move",
       "id": 20,
@@ -12475,6 +12325,17 @@
       "race": "Zerg",
       "requires": [
         "Hatchery"
+      ],
+      "researches": [
+        "ZergGroundArmorsLevel1",
+        "ZergGroundArmorsLevel2",
+        "ZergGroundArmorsLevel3",
+        "ZergMeleeWeaponsLevel1",
+        "ZergMeleeWeaponsLevel2",
+        "ZergMeleeWeaponsLevel3",
+        "ZergMissileWeaponsLevel1",
+        "ZergMissileWeaponsLevel2",
+        "ZergMissileWeaponsLevel3"
       ],
       "time": 35,
       "type": "structure"
@@ -29296,6 +29157,96 @@
       "requires": [
         "Hive",
         "ZergFlyerWeaponsLevel2"
+      ],
+      "time": 220
+    },
+    "ZergGroundArmorsLevel1": {
+      "gas": 150,
+      "id": 56,
+      "minerals": 150,
+      "name": "ZergGroundArmorsLevel1",
+      "requires": [],
+      "time": 160
+    },
+    "ZergGroundArmorsLevel2": {
+      "gas": 200,
+      "id": 57,
+      "minerals": 200,
+      "name": "ZergGroundArmorsLevel2",
+      "requires": [
+        "Lair",
+        "ZergGroundArmorsLevel1"
+      ],
+      "time": 190
+    },
+    "ZergGroundArmorsLevel3": {
+      "gas": 250,
+      "id": 58,
+      "minerals": 250,
+      "name": "ZergGroundArmorsLevel3",
+      "requires": [
+        "Hive",
+        "ZergGroundArmorsLevel2"
+      ],
+      "time": 220
+    },
+    "ZergMeleeWeaponsLevel1": {
+      "gas": 100,
+      "id": 53,
+      "minerals": 100,
+      "name": "ZergMeleeWeaponsLevel1",
+      "requires": [],
+      "time": 160
+    },
+    "ZergMeleeWeaponsLevel2": {
+      "gas": 150,
+      "id": 54,
+      "minerals": 150,
+      "name": "ZergMeleeWeaponsLevel2",
+      "requires": [
+        "Lair",
+        "ZergMeleeWeaponsLevel1"
+      ],
+      "time": 190
+    },
+    "ZergMeleeWeaponsLevel3": {
+      "gas": 200,
+      "id": 55,
+      "minerals": 200,
+      "name": "ZergMeleeWeaponsLevel3",
+      "requires": [
+        "Hive",
+        "ZergMeleeWeaponsLevel2"
+      ],
+      "time": 220
+    },
+    "ZergMissileWeaponsLevel1": {
+      "gas": 100,
+      "id": 59,
+      "minerals": 100,
+      "name": "ZergMissileWeaponsLevel1",
+      "requires": [],
+      "time": 160
+    },
+    "ZergMissileWeaponsLevel2": {
+      "gas": 150,
+      "id": 60,
+      "minerals": 150,
+      "name": "ZergMissileWeaponsLevel2",
+      "requires": [
+        "Lair",
+        "ZergMissileWeaponsLevel1"
+      ],
+      "time": 190
+    },
+    "ZergMissileWeaponsLevel3": {
+      "gas": 200,
+      "id": 61,
+      "minerals": 200,
+      "name": "ZergMissileWeaponsLevel3",
+      "requires": [
+        "Hive",
+        "ZergMissileWeaponsLevel2"
       ],
       "time": 220
     },

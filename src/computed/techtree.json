@@ -234,6 +234,9 @@
       "requires": [
         "UseWarpGate"
       ]
+    },
+    "evolutionchamberresearch": {
+      "upgrade": "SecretedCoating"
     }
   },
   "Units": {
@@ -1397,6 +1400,17 @@
       "race": "Zerg",
       "requires": [
         "Hatchery"
+      ],
+      "researches": [
+        "ZergGroundArmorsLevel1",
+        "ZergGroundArmorsLevel2",
+        "ZergGroundArmorsLevel3",
+        "ZergMeleeWeaponsLevel1",
+        "ZergMeleeWeaponsLevel2",
+        "ZergMeleeWeaponsLevel3",
+        "ZergMissileWeaponsLevel1",
+        "ZergMissileWeaponsLevel2",
+        "ZergMissileWeaponsLevel3"
       ]
     },
     "ExtendingBridge": {
@@ -4513,6 +4527,51 @@
       "requires": [
         "Hive",
         "ZergFlyerWeaponsLevel2"
+      ]
+    },
+    "ZergGroundArmorsLevel1": {
+      "requires": []
+    },
+    "ZergGroundArmorsLevel2": {
+      "requires": [
+        "Lair",
+        "ZergGroundArmorsLevel1"
+      ]
+    },
+    "ZergGroundArmorsLevel3": {
+      "requires": [
+        "Hive",
+        "ZergGroundArmorsLevel2"
+      ]
+    },
+    "ZergMeleeWeaponsLevel1": {
+      "requires": []
+    },
+    "ZergMeleeWeaponsLevel2": {
+      "requires": [
+        "Lair",
+        "ZergMeleeWeaponsLevel1"
+      ]
+    },
+    "ZergMeleeWeaponsLevel3": {
+      "requires": [
+        "Hive",
+        "ZergMeleeWeaponsLevel2"
+      ]
+    },
+    "ZergMissileWeaponsLevel1": {
+      "requires": []
+    },
+    "ZergMissileWeaponsLevel2": {
+      "requires": [
+        "Lair",
+        "ZergMissileWeaponsLevel1"
+      ]
+    },
+    "ZergMissileWeaponsLevel3": {
+      "requires": [
+        "Hive",
+        "ZergMissileWeaponsLevel2"
       ]
     },
     "overlordspeed": {
