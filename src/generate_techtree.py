@@ -8,6 +8,7 @@ Usage: uv run generate_techtree.py
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
+import re
 
 from utils import dumps_json, load_json
 
@@ -84,6 +85,7 @@ RESEARCH_EXCLUDE = {
     "TempestRangeUpgrade",  # not FleetBeacon research
     "SunderingImpact",  # not TwilightCouncil research
     "AmplifiedShielding",  # not TwilightCouncil research
+    "overlordtransport",  # not a research
 }
 
 # Per-structure research exclusions (structure gets research ability but shouldn't get these upgrades)
@@ -372,6 +374,11 @@ def _build_ability_indices(abils_data: dict) -> tuple[dict[str, list[tuple[str, 
             req = get_requirement_from_button(info)
             for unit in produced_units:
                 ability_produces[abil_name].append((unit, req))
+            # Extract upgrades from dict InfoArray for research abilities
+            if _is_research_ability(abil_name):
+                upgrades = get_info_upgrades(info)
+                for upgrade in upgrades:
+                    ability_upgrades[abil_name].append(upgrade)
 
     return ability_produces, ability_upgrades
 
@@ -615,13 +622,30 @@ def generate_techtree() -> dict:
                 if requires:
                     abilities[abil_name]["requires"] = sorted(set(requires))
 
-    # Gather Upgrades from all structures' researches
-    upgrades = {}
-    for struct_data in structures.values():
+    # Build structure -> upgrades mapping
+    structure_to_upgrades: dict[str, list[str]] = defaultdict(list)
+    for struct_name, struct_data in structures.items():
         if "researches" in struct_data:
             for upg_name in struct_data["researches"]:
-                if upg_name not in upgrades:
-                    upgrades[upg_name] = {}  # Empty dict - just a container for the name
+                structure_to_upgrades[struct_name].append(upg_name)
+
+    # Determine upgrade requirements: structure provides + previous tier
+    upgrades = {}
+    for struct_name, struct_upgrades in structure_to_upgrades.items():
+        for upg_name in struct_upgrades:
+            requires = []
+            # Find previous tier upgrade (e.g., Level1 before Level2)
+            if "Level" in upg_name:
+                # Try to find Level(N-1) where N is the current level
+                level_match = re.search(r"Level(\d+)$", upg_name)
+                if level_match:
+                    current_level = int(level_match.group(1))
+                    if current_level > 1:
+                        prev_level = current_level - 1
+                        prev_name = re.sub(r"Level\d+$", f"Level{prev_level}", upg_name)
+                        if prev_name in upgrades or any(u == prev_name for u in struct_upgrades):
+                            requires.append(prev_name)
+            upgrades[upg_name] = {"requires": sorted(requires)}
 
     return {
         "Units": {**structures, **units},  # MERGE: combine structures + units

@@ -1047,6 +1047,9 @@
       "requires": [
         "TwilightCouncil"
       ],
+      "researches": [
+        "DarkTemplarBlinkUpgrade"
+      ],
       "unlocks": [
         "DarkTemplar"
       ]
@@ -1688,8 +1691,7 @@
       "race": "Zerg",
       "researches": [
         "Burrow",
-        "overlordspeed",
-        "overlordtransport"
+        "overlordspeed"
       ],
       "unlocks": [
         "EvolutionChamber",
@@ -1747,8 +1749,7 @@
       "race": "Zerg",
       "researches": [
         "Burrow",
-        "overlordspeed",
-        "overlordtransport"
+        "overlordspeed"
       ],
       "unlocks": [
         "UltraliskCavern",
@@ -1929,8 +1930,7 @@
       "race": "Zerg",
       "researches": [
         "Burrow",
-        "overlordspeed",
-        "overlordtransport"
+        "overlordspeed"
       ],
       "unlocks": [
         "HydraliskDen",
@@ -4150,85 +4150,293 @@
     }
   },
   "Upgrades": {
-    "AdeptPiercingAttack": {},
-    "AnabolicSynthesis": {},
-    "BansheeCloak": {},
-    "BansheeSpeed": {},
-    "BattlecruiserEnableSpecializations": {},
-    "BlinkTech": {},
-    "Burrow": {},
-    "CentrificalHooks": {},
-    "Charge": {},
-    "ChitinousPlating": {},
-    "CycloneLockOnDamageUpgrade": {},
-    "DiggingClaws": {},
-    "DrillClaws": {},
-    "EvolveGroovedSpines": {},
-    "EvolveMuscularAugments": {},
-    "ExtendedThermalLance": {},
-    "Frenzy": {},
-    "GlialReconstitution": {},
-    "GraviticDrive": {},
-    "HiSecAutoTracking": {},
-    "HighCapacityBarrels": {},
-    "InterferenceMatrix": {},
-    "LiberatorAGRangeUpgrade": {},
-    "LurkerRange": {},
-    "MedivacCaduceusReactor": {},
-    "MicrobialShroud": {},
-    "NeosteelFrame": {},
-    "NeuralParasite": {},
-    "ObserverGraviticBooster": {},
-    "PersonalCloaking": {},
-    "PhoenixRangeUpgrade": {},
-    "ProtossAirArmorsLevel1": {},
-    "ProtossAirArmorsLevel2": {},
-    "ProtossAirArmorsLevel3": {},
-    "ProtossAirWeaponsLevel1": {},
-    "ProtossAirWeaponsLevel2": {},
-    "ProtossAirWeaponsLevel3": {},
-    "ProtossGroundArmorsLevel1": {},
-    "ProtossGroundArmorsLevel2": {},
-    "ProtossGroundArmorsLevel3": {},
-    "ProtossGroundWeaponsLevel1": {},
-    "ProtossGroundWeaponsLevel2": {},
-    "ProtossGroundWeaponsLevel3": {},
-    "ProtossShieldsLevel1": {},
-    "ProtossShieldsLevel2": {},
-    "ProtossShieldsLevel3": {},
-    "PsiStormTech": {},
-    "PunisherGrenades": {},
-    "ShieldWall": {},
-    "Stimpack": {},
-    "TempestGroundAttackUpgrade": {},
-    "TerranInfantryArmorsLevel1": {},
-    "TerranInfantryArmorsLevel2": {},
-    "TerranInfantryArmorsLevel3": {},
-    "TerranInfantryWeaponsLevel1": {},
-    "TerranInfantryWeaponsLevel2": {},
-    "TerranInfantryWeaponsLevel3": {},
-    "TerranShipWeaponsLevel1": {},
-    "TerranShipWeaponsLevel2": {},
-    "TerranShipWeaponsLevel3": {},
-    "TerranVehicleAndShipArmorsLevel1": {},
-    "TerranVehicleAndShipArmorsLevel2": {},
-    "TerranVehicleAndShipArmorsLevel3": {},
-    "TerranVehicleWeaponsLevel1": {},
-    "TerranVehicleWeaponsLevel2": {},
-    "TerranVehicleWeaponsLevel3": {},
-    "TransformationServos": {},
-    "TunnelingClaws": {},
-    "VoidRaySpeedUpgrade": {},
-    "WarpGateResearch": {},
-    "ZergFlyerArmorsLevel1": {},
-    "ZergFlyerArmorsLevel2": {},
-    "ZergFlyerArmorsLevel3": {},
-    "ZergFlyerWeaponsLevel1": {},
-    "ZergFlyerWeaponsLevel2": {},
-    "ZergFlyerWeaponsLevel3": {},
-    "overlordspeed": {},
-    "overlordtransport": {},
-    "zerglingattackspeed": {},
-    "zerglingmovementspeed": {}
+    "AdeptPiercingAttack": {
+      "requires": []
+    },
+    "AnabolicSynthesis": {
+      "requires": []
+    },
+    "BansheeCloak": {
+      "requires": []
+    },
+    "BansheeSpeed": {
+      "requires": []
+    },
+    "BattlecruiserEnableSpecializations": {
+      "requires": []
+    },
+    "BlinkTech": {
+      "requires": []
+    },
+    "Burrow": {
+      "requires": []
+    },
+    "CentrificalHooks": {
+      "requires": []
+    },
+    "Charge": {
+      "requires": []
+    },
+    "ChitinousPlating": {
+      "requires": []
+    },
+    "CycloneLockOnDamageUpgrade": {
+      "requires": []
+    },
+    "DarkTemplarBlinkUpgrade": {
+      "requires": []
+    },
+    "DiggingClaws": {
+      "requires": []
+    },
+    "DrillClaws": {
+      "requires": []
+    },
+    "EvolveGroovedSpines": {
+      "requires": []
+    },
+    "EvolveMuscularAugments": {
+      "requires": []
+    },
+    "ExtendedThermalLance": {
+      "requires": []
+    },
+    "Frenzy": {
+      "requires": []
+    },
+    "GlialReconstitution": {
+      "requires": []
+    },
+    "GraviticDrive": {
+      "requires": []
+    },
+    "HiSecAutoTracking": {
+      "requires": []
+    },
+    "HighCapacityBarrels": {
+      "requires": []
+    },
+    "InterferenceMatrix": {
+      "requires": []
+    },
+    "LiberatorAGRangeUpgrade": {
+      "requires": []
+    },
+    "LurkerRange": {
+      "requires": []
+    },
+    "MedivacCaduceusReactor": {
+      "requires": []
+    },
+    "MicrobialShroud": {
+      "requires": []
+    },
+    "NeosteelFrame": {
+      "requires": []
+    },
+    "NeuralParasite": {
+      "requires": []
+    },
+    "ObserverGraviticBooster": {
+      "requires": []
+    },
+    "PersonalCloaking": {
+      "requires": []
+    },
+    "PhoenixRangeUpgrade": {
+      "requires": []
+    },
+    "ProtossAirArmorsLevel1": {
+      "requires": []
+    },
+    "ProtossAirArmorsLevel2": {
+      "requires": [
+        "ProtossAirArmorsLevel1"
+      ]
+    },
+    "ProtossAirArmorsLevel3": {
+      "requires": [
+        "ProtossAirArmorsLevel2"
+      ]
+    },
+    "ProtossAirWeaponsLevel1": {
+      "requires": []
+    },
+    "ProtossAirWeaponsLevel2": {
+      "requires": [
+        "ProtossAirWeaponsLevel1"
+      ]
+    },
+    "ProtossAirWeaponsLevel3": {
+      "requires": [
+        "ProtossAirWeaponsLevel2"
+      ]
+    },
+    "ProtossGroundArmorsLevel1": {
+      "requires": []
+    },
+    "ProtossGroundArmorsLevel2": {
+      "requires": [
+        "ProtossGroundArmorsLevel1"
+      ]
+    },
+    "ProtossGroundArmorsLevel3": {
+      "requires": [
+        "ProtossGroundArmorsLevel2"
+      ]
+    },
+    "ProtossGroundWeaponsLevel1": {
+      "requires": []
+    },
+    "ProtossGroundWeaponsLevel2": {
+      "requires": [
+        "ProtossGroundWeaponsLevel1"
+      ]
+    },
+    "ProtossGroundWeaponsLevel3": {
+      "requires": [
+        "ProtossGroundWeaponsLevel2"
+      ]
+    },
+    "ProtossShieldsLevel1": {
+      "requires": []
+    },
+    "ProtossShieldsLevel2": {
+      "requires": [
+        "ProtossShieldsLevel1"
+      ]
+    },
+    "ProtossShieldsLevel3": {
+      "requires": [
+        "ProtossShieldsLevel2"
+      ]
+    },
+    "PsiStormTech": {
+      "requires": []
+    },
+    "PunisherGrenades": {
+      "requires": []
+    },
+    "ShieldWall": {
+      "requires": []
+    },
+    "Stimpack": {
+      "requires": []
+    },
+    "TempestGroundAttackUpgrade": {
+      "requires": []
+    },
+    "TerranInfantryArmorsLevel1": {
+      "requires": []
+    },
+    "TerranInfantryArmorsLevel2": {
+      "requires": [
+        "TerranInfantryArmorsLevel1"
+      ]
+    },
+    "TerranInfantryArmorsLevel3": {
+      "requires": [
+        "TerranInfantryArmorsLevel2"
+      ]
+    },
+    "TerranInfantryWeaponsLevel1": {
+      "requires": []
+    },
+    "TerranInfantryWeaponsLevel2": {
+      "requires": [
+        "TerranInfantryWeaponsLevel1"
+      ]
+    },
+    "TerranInfantryWeaponsLevel3": {
+      "requires": [
+        "TerranInfantryWeaponsLevel2"
+      ]
+    },
+    "TerranShipWeaponsLevel1": {
+      "requires": []
+    },
+    "TerranShipWeaponsLevel2": {
+      "requires": [
+        "TerranShipWeaponsLevel1"
+      ]
+    },
+    "TerranShipWeaponsLevel3": {
+      "requires": [
+        "TerranShipWeaponsLevel2"
+      ]
+    },
+    "TerranVehicleAndShipArmorsLevel1": {
+      "requires": []
+    },
+    "TerranVehicleAndShipArmorsLevel2": {
+      "requires": [
+        "TerranVehicleAndShipArmorsLevel1"
+      ]
+    },
+    "TerranVehicleAndShipArmorsLevel3": {
+      "requires": [
+        "TerranVehicleAndShipArmorsLevel2"
+      ]
+    },
+    "TerranVehicleWeaponsLevel1": {
+      "requires": []
+    },
+    "TerranVehicleWeaponsLevel2": {
+      "requires": [
+        "TerranVehicleWeaponsLevel1"
+      ]
+    },
+    "TerranVehicleWeaponsLevel3": {
+      "requires": [
+        "TerranVehicleWeaponsLevel2"
+      ]
+    },
+    "TransformationServos": {
+      "requires": []
+    },
+    "TunnelingClaws": {
+      "requires": []
+    },
+    "VoidRaySpeedUpgrade": {
+      "requires": []
+    },
+    "WarpGateResearch": {
+      "requires": []
+    },
+    "ZergFlyerArmorsLevel1": {
+      "requires": []
+    },
+    "ZergFlyerArmorsLevel2": {
+      "requires": [
+        "ZergFlyerArmorsLevel1"
+      ]
+    },
+    "ZergFlyerArmorsLevel3": {
+      "requires": [
+        "ZergFlyerArmorsLevel2"
+      ]
+    },
+    "ZergFlyerWeaponsLevel1": {
+      "requires": []
+    },
+    "ZergFlyerWeaponsLevel2": {
+      "requires": [
+        "ZergFlyerWeaponsLevel1"
+      ]
+    },
+    "ZergFlyerWeaponsLevel3": {
+      "requires": [
+        "ZergFlyerWeaponsLevel2"
+      ]
+    },
+    "overlordspeed": {
+      "requires": []
+    },
+    "zerglingattackspeed": {
+      "requires": []
+    },
+    "zerglingmovementspeed": {
+      "requires": []
+    }
   }
 }

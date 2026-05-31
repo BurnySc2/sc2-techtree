@@ -1114,27 +1114,6 @@
       "name": "CycloneResearchHurricaneThrusters",
       "time": 140
     },
-    "DarkShrineResearch": {
-      "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
-      "InfoArray": {
-        "Button": {
-          "DefaultButtonFace": "ResearchDarkTemplarBlink",
-          "Flags": {
-            "ShowInGlossary": 1
-          },
-          "Requirements": "LearnDarkTemplarBlink"
-        },
-        "Resource": {
-          "Minerals": 100,
-          "Vespene": 100
-        },
-        "Time": "140",
-        "Upgrade": "DarkTemplarBlinkUpgrade",
-        "index": "Research1"
-      },
-      "id": 2749,
-      "name": "DarkShrineResearch"
-    },
     "DarkTemplarBlink": {
       "AbilSetId": "Blnk",
       "CmdButtonArray": {
@@ -10975,6 +10954,9 @@
       "requires": [
         "TwilightCouncil"
       ],
+      "researches": [
+        "DarkTemplarBlinkUpgrade"
+      ],
       "time": 100,
       "type": "structure",
       "unlocks": [
@@ -14604,8 +14586,7 @@
       "race": "Zerg",
       "researches": [
         "Burrow",
-        "overlordspeed",
-        "overlordtransport"
+        "overlordspeed"
       ],
       "time": 100,
       "type": "structure",
@@ -15303,8 +15284,7 @@
       "race": "Zerg",
       "researches": [
         "Burrow",
-        "overlordspeed",
-        "overlordtransport"
+        "overlordspeed"
       ],
       "time": 100,
       "type": "structure",
@@ -16884,8 +16864,7 @@
       "race": "Zerg",
       "researches": [
         "Burrow",
-        "overlordspeed",
-        "overlordtransport"
+        "overlordspeed"
       ],
       "time": 80,
       "type": "structure",
@@ -28586,6 +28565,7 @@
       "id": 130,
       "minerals": 100,
       "name": "AdeptPiercingAttack",
+      "requires": [],
       "time": 140
     },
     "AnabolicSynthesis": {
@@ -28593,6 +28573,7 @@
       "id": 88,
       "minerals": 150,
       "name": "AnabolicSynthesis",
+      "requires": [],
       "time": 60
     },
     "BansheeCloak": {
@@ -28600,6 +28581,7 @@
       "id": 20,
       "minerals": 100,
       "name": "BansheeCloak",
+      "requires": [],
       "time": 110
     },
     "BansheeSpeed": {
@@ -28607,6 +28589,7 @@
       "id": 136,
       "minerals": 125,
       "name": "BansheeSpeed",
+      "requires": [],
       "time": 110.6
     },
     "BattlecruiserEnableSpecializations": {
@@ -28614,6 +28597,7 @@
       "id": 76,
       "minerals": 150,
       "name": "BattlecruiserEnableSpecializations",
+      "requires": [],
       "time": 140
     },
     "BlinkTech": {
@@ -28621,6 +28605,7 @@
       "id": 87,
       "minerals": 150,
       "name": "BlinkTech",
+      "requires": [],
       "time": 170
     },
     "Burrow": {
@@ -28628,6 +28613,7 @@
       "id": 64,
       "minerals": 100,
       "name": "Burrow",
+      "requires": [],
       "time": 100
     },
     "CentrificalHooks": {
@@ -28635,6 +28621,7 @@
       "id": 75,
       "minerals": 100,
       "name": "CentrificalHooks",
+      "requires": [],
       "time": 100
     },
     "Charge": {
@@ -28642,6 +28629,7 @@
       "id": 86,
       "minerals": 100,
       "name": "Charge",
+      "requires": [],
       "time": 140
     },
     "ChitinousPlating": {
@@ -28649,6 +28637,7 @@
       "id": 4,
       "minerals": 150,
       "name": "ChitinousPlating",
+      "requires": [],
       "time": 110
     },
     "CycloneLockOnDamageUpgrade": {
@@ -28656,13 +28645,20 @@
       "id": 144,
       "minerals": 100,
       "name": "CycloneLockOnDamageUpgrade",
+      "requires": [],
       "time": 140
+    },
+    "DarkTemplarBlinkUpgrade": {
+      "id": 141,
+      "name": "DarkTemplarBlinkUpgrade",
+      "requires": []
     },
     "DiggingClaws": {
       "gas": 100,
       "id": 293,
       "minerals": 100,
       "name": "DiggingClaws",
+      "requires": [],
       "time": 80
     },
     "DrillClaws": {
@@ -28670,6 +28666,7 @@
       "id": 122,
       "minerals": 75,
       "name": "DrillClaws",
+      "requires": [],
       "time": 110
     },
     "EvolveGroovedSpines": {
@@ -28677,6 +28674,7 @@
       "id": 134,
       "minerals": 75,
       "name": "EvolveGroovedSpines",
+      "requires": [],
       "time": 70
     },
     "EvolveMuscularAugments": {
@@ -28684,6 +28682,7 @@
       "id": 135,
       "minerals": 100,
       "name": "EvolveMuscularAugments",
+      "requires": [],
       "time": 90
     },
     "ExtendedThermalLance": {
@@ -28691,12 +28690,14 @@
       "id": 50,
       "minerals": 150,
       "name": "ExtendedThermalLance",
+      "requires": [],
       "time": 140
     },
     "Frenzy": {
       "gas": 100,
       "minerals": 100,
       "name": "Frenzy",
+      "requires": [],
       "time": 90
     },
     "GlialReconstitution": {
@@ -28704,6 +28705,7 @@
       "id": 2,
       "minerals": 100,
       "name": "GlialReconstitution",
+      "requires": [],
       "time": 110
     },
     "GraviticDrive": {
@@ -28711,6 +28713,7 @@
       "id": 49,
       "minerals": 100,
       "name": "GraviticDrive",
+      "requires": [],
       "time": 80
     },
     "HiSecAutoTracking": {
@@ -28718,6 +28721,7 @@
       "id": 5,
       "minerals": 100,
       "name": "HiSecAutoTracking",
+      "requires": [],
       "time": 80
     },
     "HighCapacityBarrels": {
@@ -28725,12 +28729,14 @@
       "id": 19,
       "minerals": 100,
       "name": "HighCapacityBarrels",
+      "requires": [],
       "time": 110
     },
     "InterferenceMatrix": {
       "gas": 50,
       "minerals": 50,
       "name": "InterferenceMatrix",
+      "requires": [],
       "time": 80
     },
     "LiberatorAGRangeUpgrade": {
@@ -28738,6 +28744,7 @@
       "id": 140,
       "minerals": 150,
       "name": "LiberatorAGRangeUpgrade",
+      "requires": [],
       "time": 110
     },
     "LurkerRange": {
@@ -28745,6 +28752,7 @@
       "id": 127,
       "minerals": 150,
       "name": "LurkerRange",
+      "requires": [],
       "time": 80
     },
     "MedivacCaduceusReactor": {
@@ -28752,12 +28760,14 @@
       "id": 21,
       "minerals": 100,
       "name": "MedivacCaduceusReactor",
+      "requires": [],
       "time": 70
     },
     "MicrobialShroud": {
       "gas": 150,
       "minerals": 150,
       "name": "MicrobialShroud",
+      "requires": [],
       "time": 110
     },
     "NeosteelFrame": {
@@ -28765,6 +28775,7 @@
       "id": 10,
       "minerals": 100,
       "name": "NeosteelFrame",
+      "requires": [],
       "time": 110
     },
     "NeuralParasite": {
@@ -28772,6 +28783,7 @@
       "id": 101,
       "minerals": 150,
       "name": "NeuralParasite",
+      "requires": [],
       "time": 110
     },
     "ObserverGraviticBooster": {
@@ -28779,6 +28791,7 @@
       "id": 48,
       "minerals": 100,
       "name": "ObserverGraviticBooster",
+      "requires": [],
       "time": 80
     },
     "PersonalCloaking": {
@@ -28786,6 +28799,7 @@
       "id": 25,
       "minerals": 150,
       "name": "PersonalCloaking",
+      "requires": [],
       "time": 120
     },
     "PhoenixRangeUpgrade": {
@@ -28793,6 +28807,7 @@
       "id": 99,
       "minerals": 150,
       "name": "PhoenixRangeUpgrade",
+      "requires": [],
       "time": 90
     },
     "ProtossAirArmorsLevel1": {
@@ -28800,6 +28815,7 @@
       "id": 81,
       "minerals": 100,
       "name": "ProtossAirArmorsLevel1",
+      "requires": [],
       "time": 180
     },
     "ProtossAirArmorsLevel2": {
@@ -28807,6 +28823,9 @@
       "id": 82,
       "minerals": 175,
       "name": "ProtossAirArmorsLevel2",
+      "requires": [
+        "ProtossAirArmorsLevel1"
+      ],
       "time": 215
     },
     "ProtossAirArmorsLevel3": {
@@ -28814,6 +28833,9 @@
       "id": 83,
       "minerals": 250,
       "name": "ProtossAirArmorsLevel3",
+      "requires": [
+        "ProtossAirArmorsLevel2"
+      ],
       "time": 250
     },
     "ProtossAirWeaponsLevel1": {
@@ -28821,6 +28843,7 @@
       "id": 78,
       "minerals": 100,
       "name": "ProtossAirWeaponsLevel1",
+      "requires": [],
       "time": 180
     },
     "ProtossAirWeaponsLevel2": {
@@ -28828,6 +28851,9 @@
       "id": 79,
       "minerals": 175,
       "name": "ProtossAirWeaponsLevel2",
+      "requires": [
+        "ProtossAirWeaponsLevel1"
+      ],
       "time": 215
     },
     "ProtossAirWeaponsLevel3": {
@@ -28835,6 +28861,9 @@
       "id": 80,
       "minerals": 250,
       "name": "ProtossAirWeaponsLevel3",
+      "requires": [
+        "ProtossAirWeaponsLevel2"
+      ],
       "time": 250
     },
     "ProtossGroundArmorsLevel1": {
@@ -28842,6 +28871,7 @@
       "id": 42,
       "minerals": 100,
       "name": "ProtossGroundArmorsLevel1",
+      "requires": [],
       "time": 170
     },
     "ProtossGroundArmorsLevel2": {
@@ -28849,6 +28879,9 @@
       "id": 43,
       "minerals": 150,
       "name": "ProtossGroundArmorsLevel2",
+      "requires": [
+        "ProtossGroundArmorsLevel1"
+      ],
       "time": 202.5
     },
     "ProtossGroundArmorsLevel3": {
@@ -28856,6 +28889,9 @@
       "id": 44,
       "minerals": 200,
       "name": "ProtossGroundArmorsLevel3",
+      "requires": [
+        "ProtossGroundArmorsLevel2"
+      ],
       "time": 235
     },
     "ProtossGroundWeaponsLevel1": {
@@ -28863,6 +28899,7 @@
       "id": 39,
       "minerals": 100,
       "name": "ProtossGroundWeaponsLevel1",
+      "requires": [],
       "time": 170
     },
     "ProtossGroundWeaponsLevel2": {
@@ -28870,6 +28907,9 @@
       "id": 40,
       "minerals": 150,
       "name": "ProtossGroundWeaponsLevel2",
+      "requires": [
+        "ProtossGroundWeaponsLevel1"
+      ],
       "time": 202.5
     },
     "ProtossGroundWeaponsLevel3": {
@@ -28877,6 +28917,9 @@
       "id": 41,
       "minerals": 200,
       "name": "ProtossGroundWeaponsLevel3",
+      "requires": [
+        "ProtossGroundWeaponsLevel2"
+      ],
       "time": 235
     },
     "ProtossShieldsLevel1": {
@@ -28884,6 +28927,7 @@
       "id": 45,
       "minerals": 150,
       "name": "ProtossShieldsLevel1",
+      "requires": [],
       "time": 170
     },
     "ProtossShieldsLevel2": {
@@ -28891,6 +28935,9 @@
       "id": 46,
       "minerals": 200,
       "name": "ProtossShieldsLevel2",
+      "requires": [
+        "ProtossShieldsLevel1"
+      ],
       "time": 202.5
     },
     "ProtossShieldsLevel3": {
@@ -28898,6 +28945,9 @@
       "id": 47,
       "minerals": 250,
       "name": "ProtossShieldsLevel3",
+      "requires": [
+        "ProtossShieldsLevel2"
+      ],
       "time": 235
     },
     "PsiStormTech": {
@@ -28905,6 +28955,7 @@
       "id": 52,
       "minerals": 200,
       "name": "PsiStormTech",
+      "requires": [],
       "time": 110
     },
     "PunisherGrenades": {
@@ -28912,6 +28963,7 @@
       "id": 17,
       "minerals": 50,
       "name": "PunisherGrenades",
+      "requires": [],
       "time": 60
     },
     "ShieldWall": {
@@ -28919,6 +28971,7 @@
       "id": 16,
       "minerals": 100,
       "name": "ShieldWall",
+      "requires": [],
       "time": 110
     },
     "Stimpack": {
@@ -28926,12 +28979,14 @@
       "id": 15,
       "minerals": 100,
       "name": "Stimpack",
+      "requires": [],
       "time": 140
     },
     "TempestGroundAttackUpgrade": {
       "gas": 150,
       "minerals": 150,
       "name": "TempestGroundAttackUpgrade",
+      "requires": [],
       "time": 140
     },
     "TerranInfantryArmorsLevel1": {
@@ -28939,6 +28994,7 @@
       "id": 11,
       "minerals": 100,
       "name": "TerranInfantryArmorsLevel1",
+      "requires": [],
       "time": 160
     },
     "TerranInfantryArmorsLevel2": {
@@ -28946,6 +29002,9 @@
       "id": 12,
       "minerals": 150,
       "name": "TerranInfantryArmorsLevel2",
+      "requires": [
+        "TerranInfantryArmorsLevel1"
+      ],
       "time": 190
     },
     "TerranInfantryArmorsLevel3": {
@@ -28953,6 +29012,9 @@
       "id": 13,
       "minerals": 200,
       "name": "TerranInfantryArmorsLevel3",
+      "requires": [
+        "TerranInfantryArmorsLevel2"
+      ],
       "time": 220
     },
     "TerranInfantryWeaponsLevel1": {
@@ -28960,6 +29022,7 @@
       "id": 7,
       "minerals": 100,
       "name": "TerranInfantryWeaponsLevel1",
+      "requires": [],
       "time": 160
     },
     "TerranInfantryWeaponsLevel2": {
@@ -28967,6 +29030,9 @@
       "id": 8,
       "minerals": 150,
       "name": "TerranInfantryWeaponsLevel2",
+      "requires": [
+        "TerranInfantryWeaponsLevel1"
+      ],
       "time": 190
     },
     "TerranInfantryWeaponsLevel3": {
@@ -28974,6 +29040,9 @@
       "id": 9,
       "minerals": 200,
       "name": "TerranInfantryWeaponsLevel3",
+      "requires": [
+        "TerranInfantryWeaponsLevel2"
+      ],
       "time": 220
     },
     "TerranShipWeaponsLevel1": {
@@ -28981,6 +29050,7 @@
       "id": 36,
       "minerals": 100,
       "name": "TerranShipWeaponsLevel1",
+      "requires": [],
       "time": 160
     },
     "TerranShipWeaponsLevel2": {
@@ -28988,6 +29058,9 @@
       "id": 37,
       "minerals": 175,
       "name": "TerranShipWeaponsLevel2",
+      "requires": [
+        "TerranShipWeaponsLevel1"
+      ],
       "time": 190
     },
     "TerranShipWeaponsLevel3": {
@@ -28995,6 +29068,9 @@
       "id": 38,
       "minerals": 250,
       "name": "TerranShipWeaponsLevel3",
+      "requires": [
+        "TerranShipWeaponsLevel2"
+      ],
       "time": 220
     },
     "TerranVehicleAndShipArmorsLevel1": {
@@ -29002,6 +29078,7 @@
       "id": 116,
       "minerals": 100,
       "name": "TerranVehicleAndShipArmorsLevel1",
+      "requires": [],
       "time": 160
     },
     "TerranVehicleAndShipArmorsLevel2": {
@@ -29009,6 +29086,9 @@
       "id": 117,
       "minerals": 175,
       "name": "TerranVehicleAndShipArmorsLevel2",
+      "requires": [
+        "TerranVehicleAndShipArmorsLevel1"
+      ],
       "time": 190
     },
     "TerranVehicleAndShipArmorsLevel3": {
@@ -29016,6 +29096,9 @@
       "id": 118,
       "minerals": 250,
       "name": "TerranVehicleAndShipArmorsLevel3",
+      "requires": [
+        "TerranVehicleAndShipArmorsLevel2"
+      ],
       "time": 220
     },
     "TerranVehicleWeaponsLevel1": {
@@ -29023,6 +29106,7 @@
       "id": 30,
       "minerals": 100,
       "name": "TerranVehicleWeaponsLevel1",
+      "requires": [],
       "time": 160
     },
     "TerranVehicleWeaponsLevel2": {
@@ -29030,6 +29114,9 @@
       "id": 31,
       "minerals": 175,
       "name": "TerranVehicleWeaponsLevel2",
+      "requires": [
+        "TerranVehicleWeaponsLevel1"
+      ],
       "time": 190
     },
     "TerranVehicleWeaponsLevel3": {
@@ -29037,6 +29124,9 @@
       "id": 32,
       "minerals": 250,
       "name": "TerranVehicleWeaponsLevel3",
+      "requires": [
+        "TerranVehicleWeaponsLevel2"
+      ],
       "time": 220
     },
     "TransformationServos": {
@@ -29044,6 +29134,7 @@
       "id": 98,
       "minerals": 150,
       "name": "TransformationServos",
+      "requires": [],
       "time": 110
     },
     "TunnelingClaws": {
@@ -29051,6 +29142,7 @@
       "id": 3,
       "minerals": 100,
       "name": "TunnelingClaws",
+      "requires": [],
       "time": 110
     },
     "VoidRaySpeedUpgrade": {
@@ -29058,6 +29150,7 @@
       "id": 288,
       "minerals": 100,
       "name": "VoidRaySpeedUpgrade",
+      "requires": [],
       "time": 80
     },
     "WarpGateResearch": {
@@ -29065,6 +29158,7 @@
       "id": 84,
       "minerals": 50,
       "name": "WarpGateResearch",
+      "requires": [],
       "time": 140
     },
     "ZergFlyerArmorsLevel1": {
@@ -29072,6 +29166,7 @@
       "id": 71,
       "minerals": 100,
       "name": "ZergFlyerArmorsLevel1",
+      "requires": [],
       "time": 160
     },
     "ZergFlyerArmorsLevel2": {
@@ -29079,6 +29174,9 @@
       "id": 72,
       "minerals": 175,
       "name": "ZergFlyerArmorsLevel2",
+      "requires": [
+        "ZergFlyerArmorsLevel1"
+      ],
       "time": 190
     },
     "ZergFlyerArmorsLevel3": {
@@ -29086,6 +29184,9 @@
       "id": 73,
       "minerals": 250,
       "name": "ZergFlyerArmorsLevel3",
+      "requires": [
+        "ZergFlyerArmorsLevel2"
+      ],
       "time": 220
     },
     "ZergFlyerWeaponsLevel1": {
@@ -29093,6 +29194,7 @@
       "id": 68,
       "minerals": 100,
       "name": "ZergFlyerWeaponsLevel1",
+      "requires": [],
       "time": 160
     },
     "ZergFlyerWeaponsLevel2": {
@@ -29100,6 +29202,9 @@
       "id": 69,
       "minerals": 175,
       "name": "ZergFlyerWeaponsLevel2",
+      "requires": [
+        "ZergFlyerWeaponsLevel1"
+      ],
       "time": 190
     },
     "ZergFlyerWeaponsLevel3": {
@@ -29107,6 +29212,9 @@
       "id": 70,
       "minerals": 250,
       "name": "ZergFlyerWeaponsLevel3",
+      "requires": [
+        "ZergFlyerWeaponsLevel2"
+      ],
       "time": 220
     },
     "overlordspeed": {
@@ -29114,20 +29222,15 @@
       "id": 62,
       "minerals": 100,
       "name": "overlordspeed",
+      "requires": [],
       "time": 60
-    },
-    "overlordtransport": {
-      "gas": 200,
-      "id": 63,
-      "minerals": 200,
-      "name": "overlordtransport",
-      "time": 130
     },
     "zerglingattackspeed": {
       "gas": 200,
       "id": 65,
       "minerals": 200,
       "name": "zerglingattackspeed",
+      "requires": [],
       "time": 130
     },
     "zerglingmovementspeed": {
@@ -29135,6 +29238,7 @@
       "id": 66,
       "minerals": 100,
       "name": "zerglingmovementspeed",
+      "requires": [],
       "time": 110
     }
   }
