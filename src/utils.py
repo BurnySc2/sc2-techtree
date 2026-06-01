@@ -62,6 +62,8 @@ def load_json(filename: str, base_dir: Path | None = None) -> dict:
                 for ability in abilities:
                     if isinstance(ability, dict) and "id" in ability:
                         result[ability["id"]] = ability
+            elif isinstance(abilities, dict) and "id" in abilities:
+                result[abilities["id"]] = abilities
         return result
     return data
 

@@ -58,6 +58,14 @@ FIELD_MORPHSTO = "morphsto"
 SCV_MERCENARY_BUILDINGS = {"BomberLaunchPad", "MercCompound"}
 NEXUS_EXCLUDED_ABILITY = "NexusTrainMothershipCore"
 
+# Structure detection constants (from generate_techtree.py)
+EDITOR_CAT_STRUCTURE = "ObjectType:Structure"
+TECH_LABS = {
+    "BarracksTechLab",
+    "FactoryTechLab",
+    "StarportTechLab",
+}
+
 # Type aliases
 Category: TypeAlias = str
 ItemName: TypeAlias = str
@@ -65,8 +73,22 @@ QueueItem: TypeAlias = tuple[Category, ItemName]
 VisitedSets: TypeAlias = dict[str, set[ItemName]]
 
 
-def is_structure(units_section: dict, name: ItemName) -> bool:
-    """Check if an entry in units_section is a structure (has builds or researches)."""
+def is_structure(units_section: dict, name: ItemName, unit_data: dict | None = None) -> bool:
+    """Check if an entry is a structure using EditorCategories or TECH_LABS, with fallback heuristic."""
+    # Primary check: use unit_data EditorCategories (authoritative source)
+    if unit_data is not None:
+        entry_data = unit_data.get(name)
+        if isinstance(entry_data, dict):
+            editor_categories = entry_data.get("EditorCategories", "")
+            if isinstance(editor_categories, list):
+                if EDITOR_CAT_STRUCTURE in editor_categories:
+                    return True
+            elif EDITOR_CAT_STRUCTURE in str(editor_categories):
+                return True
+            # Check TECH_LABS (structures without ObjectType:Structure)
+            return name in TECH_LABS
+
+    # Fallback heuristic if unit_data not provided or entry not found
     entry = units_section.get(name, {})
     return bool(entry.get(FIELD_BUILDS) or entry.get(FIELD_RESEARCHES))
 
@@ -144,6 +166,8 @@ def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
     unit_build_times: dict[str, float] = {}
 
     for ability_id, ability in abil_data.items():
+        if ability_id == "WarpGateTrain":
+            continue  # Skip warp-in times; use regular train times from GatewayTrain
         # AbilData.json has entries where ability can be a list or a dict
         # If it's a list, iterate through; if it's a dict, process directly
         entries = ability if isinstance(ability, list) else [ability]
@@ -181,7 +205,7 @@ def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
                                         max_delay = delay_val
                                 except (ValueError, TypeError):
                                     pass
-                    if max_delay is not None:
+                    if max_delay is not None and unit_name not in unit_build_times:
                         unit_build_times[unit_name] = max_delay
                         continue
 
@@ -231,7 +255,7 @@ def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
                                             max_delay = delay_val
                                     except (ValueError, TypeError):
                                         pass
-                        if max_delay is not None:
+                        if max_delay is not None and unit_name not in unit_build_times:
                             unit_build_times[unit_name] = max_delay
 
     return unit_build_times
@@ -287,6 +311,7 @@ def handle_morphsto(
     units_section: dict,
     queue: deque[QueueItem],
     cocoon_index: dict[str, list[str]] | None = None,
+    unit_data: dict | None = None,
 ) -> None:
     """Process morphsto field, enqueueing structures or units as needed."""
     if not morphsto:
@@ -296,12 +321,12 @@ def handle_morphsto(
         for m in morphsto:
             if m and m not in visited_structures and m in units_section:
                 # Use is_structure to identify if this is a structure
-                if is_structure(units_section, m):
+                if is_structure(units_section, m, unit_data):
                     enqueue_if_new(queue, visited_structures, "structure", m)
                 elif m not in visited_units:
                     enqueue_if_new(queue, visited_units, "unit", m)
     elif morphsto not in visited_structures and morphsto in units_section:
-        if is_structure(units_section, morphsto):
+        if is_structure(units_section, morphsto, unit_data):
             enqueue_if_new(queue, visited_structures, "structure", morphsto)
         elif morphsto not in visited_units:
             enqueue_if_new(queue, visited_units, "unit", morphsto)
@@ -325,6 +350,7 @@ def process_ability_morphsto(
     abilities_section: dict,
     queue: deque[QueueItem],
     cocoon_index: dict[str, list[str]] | None = None,
+    unit_data: dict | None = None,
 ) -> None:
     """Wrapper for handling ability morphsto processing."""
     if ability_name not in visited_abilities:
@@ -338,6 +364,7 @@ def process_ability_morphsto(
             units_section,
             queue,
             cocoon_index,
+            unit_data,
         )
 
 
@@ -401,6 +428,7 @@ def _process_unit(
             units_section,
             queue,
             cocoon_index,
+            unit_data,
         )
 
     # Add abilities from this unit's AbilArray (extract Link from each entry)
@@ -423,6 +451,7 @@ def _process_unit(
                 abilities_section,
                 queue,
                 cocoon_index,
+                unit_data,
             )
 
     # Add structures this unit can build
@@ -457,6 +486,8 @@ def _process_structure(
     visited_abilities: set[ItemName],
     queue: deque[QueueItem],
     cocoon_index: dict[str, list[str]] | None = None,
+    unit_data: dict | None = None,
+    abil_data: dict | None = None,
 ) -> None:
     """Handle structure produces, unlocks, researches, abilities."""
     # Structures are now in units_section
@@ -472,6 +503,7 @@ def _process_structure(
             units_section,
             queue,
             cocoon_index,
+            unit_data,
         )
 
     # Add units this structure produces
@@ -483,10 +515,10 @@ def _process_structure(
     # Add units unlocked by this structure - check units_section
     unlocks = structure_info.get(FIELD_UNLOCKS, [])
     for unlocked_name in unlocks:
-        is_struct = unlocked_name not in visited_structures and is_structure(units_section, unlocked_name)
+        is_struct = unlocked_name not in visited_structures and is_structure(units_section, unlocked_name, unit_data)
         if unlocked_name in units_section and is_struct:
             enqueue_if_new(queue, visited_structures, "structure", unlocked_name)
-        is_unit = unlocked_name not in visited_units and not is_structure(units_section, unlocked_name)
+        is_unit = unlocked_name not in visited_units and not is_structure(units_section, unlocked_name, unit_data)
         if unlocked_name in units_section and is_unit:
             enqueue_if_new(queue, visited_units, "unit", unlocked_name)
 
@@ -513,6 +545,30 @@ def _process_structure(
                         if unit_name not in visited_units:
                             enqueue_if_new(queue, visited_units, "unit", unit_name)
 
+    # Add abilities from this structure's AbilArray (from UnitData.json)
+    structure_full_data = unit_data.get(name, {}) if unit_data else {}
+    abil_array = structure_full_data.get(FIELD_ABIL_ARRAY, [])
+    for ability_entry in abil_array:
+        ability_name = extract_abil_name(ability_entry)
+        if (
+            ability_name
+            and isinstance(ability_name, str)
+            and abil_data
+            and ability_name in abil_data
+            and ability_name not in visited_abilities
+        ):
+            process_ability_morphsto(
+                ability_name,
+                visited_abilities,
+                visited_structures,
+                visited_units,
+                units_section,
+                abilities_section,
+                queue,
+                cocoon_index,
+                unit_data,
+            )
+
     # Add abilities directly listed on this structure
     abilities_list = structure_info.get(FIELD_ABILITIES, [])
     for ability_name in abilities_list:
@@ -525,6 +581,7 @@ def _process_structure(
             abilities_section,
             queue,
             cocoon_index,
+            unit_data,
         )
 
 
@@ -579,7 +636,7 @@ def _bfs_traversal(
         for name in names:
             if name in units_section:
                 # Use is_structure to determine category
-                if is_structure(units_section, name):
+                if is_structure(units_section, name, unit_data):
                     queue.append(("structure", name))
                 else:
                     queue.append(("unit", name))
@@ -677,6 +734,8 @@ def _bfs_traversal(
                 visited_abilities,
                 queue,
                 cocoon_index,
+                unit_data,
+                abil_data,
             )
 
         elif category == "upgrade":
@@ -696,6 +755,8 @@ def _bfs_traversal(
                     visited_abilities,
                     queue,
                     cocoon_index,
+                    unit_data,
+                    abil_data,
                 )
                 continue
             # Add to visited BEFORE processing
@@ -726,6 +787,7 @@ def _bfs_traversal(
                 units_section,
                 queue,
                 cocoon_index,
+                unit_data,
             )
 
     return {

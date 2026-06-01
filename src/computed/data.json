@@ -108,6 +108,344 @@
       "id": "AmorphousArmorcloud",
       "name": "AmorphousArmorcloud"
     },
+    "ArchonWarp": {
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "AWrp",
+          "Flags": {
+            "ToSelection": 1
+          },
+          "State": "Restricted",
+          "index": "SelectedUnits"
+        },
+        {
+          "DefaultButtonFace": "ArchonWarpTarget",
+          "State": "Restricted",
+          "index": "WithTarget"
+        }
+      ],
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Flags": {
+        "IgnoreUnitCost": 1
+      },
+      "Info": {
+        "Resource": {
+          "Minerals": 0,
+          "Vespene": 0
+        },
+        "Time": "12"
+      },
+      "id": 1767,
+      "name": "ArchonWarp"
+    },
+    "ArmoryResearch": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": "",
+            "State": "Available"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": "",
+            "State": "Available"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research9"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": "",
+            "State": "Available"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research10"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": "",
+            "State": "Available"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": "",
+            "State": "Available"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research11"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": "",
+            "State": "Available"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranShipWeaponsLevel1",
+            "Requirements": "LearnTerranShipWeapon1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "TerranShipWeaponsLevel1",
+          "index": "Research12"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranShipWeaponsLevel2",
+            "Requirements": "LearnTerranShipWeapon2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "190",
+          "Upgrade": "TerranShipWeaponsLevel2",
+          "index": "Research13"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranShipWeaponsLevel3",
+            "Requirements": "LearnTerranShipWeapon3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "220",
+          "Upgrade": "TerranShipWeaponsLevel3",
+          "index": "Research14"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleAndShipPlatingLevel1",
+            "Requirements": "LearnTerranVehicleAndShipArmor1"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "TerranVehicleAndShipArmorsLevel1",
+          "index": "Research15"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleAndShipPlatingLevel2",
+            "Requirements": "LearnTerranVehicleAndShipArmor2"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "190",
+          "Upgrade": "TerranVehicleAndShipArmorsLevel2",
+          "index": "Research16"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleAndShipPlatingLevel3",
+            "Requirements": "LearnTerranVehicleAndShipArmor3"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "220",
+          "Upgrade": "TerranVehicleAndShipArmorsLevel3",
+          "index": "Research17"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleWeaponsLevel1",
+            "Requirements": "LearnTerranVehicleWeapon1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "TerranVehicleWeaponsLevel1",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleWeaponsLevel2",
+            "Requirements": "LearnTerranVehicleWeapon2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "190",
+          "Upgrade": "TerranVehicleWeaponsLevel2",
+          "index": "Research7"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleWeaponsLevel3",
+            "Requirements": "LearnTerranVehicleWeapon3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "220",
+          "Upgrade": "TerranVehicleWeaponsLevel3",
+          "index": "Research8"
+        }
+      ],
+      "gas": 100,
+      "id": 879,
+      "minerals": 100,
+      "name": "ArmoryResearch",
+      "time": 160
+    },
+    "ArmoryResearchSwarm": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleAndShipPlatingLevel1",
+            "Requirements": "LearnTerranVehicleAndShipArmor1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "TerranVehicleAndShipArmorsLevel1",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleAndShipPlatingLevel2",
+            "Requirements": "LearnTerranVehicleAndShipArmor2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "190",
+          "Upgrade": "TerranVehicleAndShipArmorsLevel2",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleAndShipPlatingLevel3",
+            "Requirements": "LearnTerranVehicleAndShipArmor3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "220",
+          "Upgrade": "TerranVehicleAndShipArmorsLevel3",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleAndShipWeaponsLevel1",
+            "Requirements": "LearnTerranVehicleAndShipWeapon1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "TerranVehicleAndShipWeaponsLevel1",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleAndShipWeaponsLevel2",
+            "Requirements": "LearnTerranVehicleAndShipWeapon2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "190",
+          "Upgrade": "TerranVehicleAndShipWeaponsLevel2",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranVehicleAndShipWeaponsLevel3",
+            "Requirements": "LearnTerranVehicleAndShipWeapon3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "220",
+          "Upgrade": "TerranVehicleAndShipWeaponsLevel3",
+          "index": "Research3"
+        }
+      ],
+      "id": 2323,
+      "name": "ArmoryResearchSwarm"
+    },
     "AssaultMode": {
       "AbilSetId": "AssaultMode",
       "CmdButtonArray": {
@@ -156,11 +494,96 @@
       "id": 404,
       "name": "AssaultMode"
     },
+    "AttackRedirect": {
+      "Abil": "attack",
+      "Alignment": "Negative",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "AttackRedirect",
+        "Flags": {
+          "ToSelection": 1
+        },
+        "index": "Execute"
+      },
+      "id": 1682,
+      "name": "AttackRedirect"
+    },
+    "BanelingNestResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": ""
+          },
+          "Resource": {
+            "Minerals": 0,
+            "Vespene": 0
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveCentrificalHooks",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnCentrificalHooks",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "100",
+          "Upgrade": "CentrificalHooks",
+          "index": "Research1"
+        }
+      ],
+      "gas": 100,
+      "id": 1511,
+      "minerals": 100,
+      "name": "BanelingNestResearch",
+      "time": 100
+    },
     "BansheeSpeed": {
       "gas": 125,
       "minerals": 125,
       "name": "BansheeSpeed",
       "time": 110.6
+    },
+    "BarracksAddOns": {
+      "BuildMorphAbil": "BarracksLiftOff",
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "HasQueuedAddon"
+          },
+          "Time": "25",
+          "Unit": "BarracksTechLab",
+          "index": "Build1"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "HasQueuedAddon"
+          },
+          "Time": "50",
+          "Unit": "BarracksReactor",
+          "index": "Build2"
+        }
+      ],
+      "Name": "Abil/Name/BarracksAddOns",
+      "id": 451,
+      "name": "BarracksAddOns",
+      "parent": "TerranAddOns"
     },
     "BarracksLiftOff": {
       "Name": "Abil/Name/BarracksLiftOff",
@@ -172,11 +595,175 @@
       "race": "Terran",
       "unit": "BarracksFlying"
     },
+    "BarracksReactorMorph": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "Reactor",
+        "Requirements": "ShowIfHaveBarrAddOnParent",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "Flags": {
+        "Automatic": 1,
+        "Produce": 1
+      },
+      "InfoArray": {
+        "Unit": "BarracksReactor"
+      },
+      "id": 1677,
+      "name": "BarracksReactorMorph"
+    },
+    "BarracksTechLabResearch": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Flags": {
+              "ShowInGlossary": 0
+            },
+            "Requirements": ""
+          },
+          "Resource": {
+            "Minerals": 0,
+            "Vespene": 0
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchPunisherGrenades",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnPunisherGrenades",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 50,
+            "Vespene": 50
+          },
+          "Time": "60",
+          "Upgrade": "PunisherGrenades",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchShieldWall",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnShieldWall",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "110",
+          "Upgrade": "ShieldWall",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Stimpack",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnStimpack",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "140",
+          "Upgrade": "Stimpack",
+          "index": "Research1"
+        }
+      ],
+      "gas": 50,
+      "id": 759,
+      "minerals": 50,
+      "name": "BarracksTechLabResearch",
+      "time": 60
+    },
+    "BarracksTrain": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "Ghost",
+            "Requirements": "HaveAttachedBarrTechLabAndShadowOps",
+            "State": "Restricted"
+          },
+          "Time": "40",
+          "Unit": "Ghost",
+          "index": "Train3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Marauder",
+            "Requirements": "HaveAttachedTechLab",
+            "State": "Restricted"
+          },
+          "Time": "30",
+          "Unit": "Marauder",
+          "index": "Train4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Marine",
+            "State": "Restricted"
+          },
+          "Time": "25",
+          "Unit": "Marine",
+          "index": "Train1"
+        },
+        {
+          "Button": {
+            "Requirements": ""
+          },
+          "Time": "45",
+          "Unit": "Reaper",
+          "index": "Train2"
+        },
+        {
+          "Button": {
+            "Requirements": "HaveAttachedTechLab",
+            "State": "Restricted"
+          },
+          "Time": "40",
+          "index": "Train5"
+        }
+      ],
+      "id": 589,
+      "name": "BarracksTrain"
+    },
+    "BattlecruiserAttack": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "AttackBuilding",
+        "Requirements": "PurifyNexusRequirements",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "MaxAttackSpeedMultiplier": 128,
+      "MinAttackSpeedMultiplier": 0.25,
+      "TargetMessage": "Abil/TargetMessage/attack",
+      "id": 3773,
+      "name": "BattlecruiserAttack"
+    },
     "BattlecruiserMove": {
       "AbilSetId": "Move",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "id": 3780,
       "name": "BattlecruiserMove"
+    },
+    "BattlecruiserStop": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "id": 3788,
+      "name": "BattlecruiserStop"
     },
     "BlindingCloud": {
       "AINotifyEffect": "BlindingCloudCP",
@@ -420,6 +1007,55 @@
       },
       "id": 1375,
       "name": "BurrowBanelingDown"
+    },
+    "BurrowCreepTumorDown": {
+      "AbilSetId": "BrwD",
+      "ActorKey": "BurrowDown",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "BurrowDown",
+        "Flags": {
+          "ToSelection": 1
+        },
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "Link": "BurrowCreepTumorDown",
+          "Location": "Unit"
+        }
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "Automatic": 1,
+        "IgnoreFacing": 1,
+        "SuppressMovement": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.37",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 0.5556
+            },
+            "index": "Collide"
+          },
+          {
+            "DurationArray": {
+              "Delay": 1
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 1
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "CreepTumorBurrowed"
+      },
+      "id": 1663,
+      "name": "BurrowCreepTumorDown"
     },
     "BurrowDroneDown": {
       "AbilSetId": "BrwD",
@@ -1108,11 +1744,165 @@
       "id": 1826,
       "name": "Contaminate"
     },
+    "CyberneticsCoreResearch": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossAirArmorLevel1",
+            "Requirements": "LearnProtossAirArmor1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "180",
+          "Upgrade": "ProtossAirArmorsLevel1",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossAirArmorLevel2",
+            "Requirements": "LearnProtossAirArmor2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "215",
+          "Upgrade": "ProtossAirArmorsLevel2",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossAirArmorLevel3",
+            "Requirements": "LearnProtossAirArmor3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "250",
+          "Upgrade": "ProtossAirArmorsLevel3",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossAirWeaponsLevel1",
+            "Requirements": "LearnProtossAirWeapon1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "180",
+          "Upgrade": "ProtossAirWeaponsLevel1",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossAirWeaponsLevel2",
+            "Requirements": "LearnProtossAirWeapon2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "215",
+          "Upgrade": "ProtossAirWeaponsLevel2",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossAirWeaponsLevel3",
+            "Requirements": "LearnProtossAirWeapon3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "250",
+          "Upgrade": "ProtossAirWeaponsLevel3",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchHallucination",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnHallucination",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "haltech",
+          "index": "Research10"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchWarpGate",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnWarpGate",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 50,
+            "Vespene": 50
+          },
+          "Time": "140",
+          "Upgrade": "WarpGateResearch",
+          "index": "Research7"
+        },
+        {
+          "Time": "110",
+          "index": "Research11"
+        }
+      ],
+      "gas": 100,
+      "id": 1591,
+      "minerals": 100,
+      "name": "CyberneticsCoreResearch",
+      "time": 180,
+      "upgrade": "ProtossAirArmorsLevel1"
+    },
     "CycloneResearchHurricaneThrusters": {
       "gas": 100,
       "minerals": 100,
       "name": "CycloneResearchHurricaneThrusters",
       "time": 140
+    },
+    "DarkShrineResearch": {
+      "EditorCategories": "AbilityorEffectType:Units,Race:Protoss",
+      "InfoArray": {
+        "Button": {
+          "DefaultButtonFace": "ResearchDarkTemplarBlink",
+          "Flags": {
+            "ShowInGlossary": 1
+          },
+          "Requirements": "LearnDarkTemplarBlink"
+        },
+        "Resource": {
+          "Minerals": 100,
+          "Vespene": 100
+        },
+        "Time": "140",
+        "Upgrade": "DarkTemplarBlinkUpgrade",
+        "index": "Research1"
+      },
+      "id": 2749,
+      "name": "DarkShrineResearch"
     },
     "DarkTemplarBlink": {
       "AbilSetId": "Blnk",
@@ -1208,6 +1998,146 @@
       "id": "EnergyRecharge",
       "name": "EnergyRecharge"
     },
+    "EngineeringBayResearch": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchNeosteelFrame",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnNeosteelFrame",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "110",
+          "Upgrade": "NeosteelFrame",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranInfantryArmorLevel1",
+            "Requirements": "LearnTerranInfantryArmor1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "TerranInfantryArmorsLevel1",
+          "index": "Research7"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranInfantryArmorLevel2",
+            "Requirements": "LearnTerranInfantryArmor2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "190",
+          "Upgrade": "TerranInfantryArmorsLevel2",
+          "index": "Research8"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranInfantryArmorLevel3",
+            "Requirements": "LearnTerranInfantryArmor3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "220",
+          "Upgrade": "TerranInfantryArmorsLevel3",
+          "index": "Research9"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranInfantryWeaponsLevel1",
+            "Requirements": "LearnTerranInfantryWeapon1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "TerranInfantryWeaponsLevel1",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranInfantryWeaponsLevel2",
+            "Requirements": "LearnTerranInfantryWeapon2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "190",
+          "Upgrade": "TerranInfantryWeaponsLevel2",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TerranInfantryWeaponsLevel3",
+            "Requirements": "LearnTerranInfantryWeapon3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "220",
+          "Upgrade": "TerranInfantryWeaponsLevel3",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ShowInGlossary": 1
+            }
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "HiSecAutoTracking",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ShowInGlossary": 1
+            }
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "140",
+          "Upgrade": "TerranBuildingArmor",
+          "index": "Research2"
+        }
+      ],
+      "gas": 100,
+      "id": 679,
+      "minerals": 100,
+      "name": "EngineeringBayResearch",
+      "time": 110,
+      "upgrade": "NeosteelFrame"
+    },
     "EvolveAmorphousArmorcloud": {
       "gas": 150,
       "minerals": 150,
@@ -1268,6 +2198,38 @@
       "id": 43,
       "name": "Explode"
     },
+    "FactoryAddOns": {
+      "BuildMorphAbil": "FactoryLiftOff",
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "HasQueuedAddon"
+          },
+          "Time": "25",
+          "Unit": "FactoryTechLab",
+          "index": "Build1"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "HasQueuedAddon"
+          },
+          "Time": "50",
+          "Unit": "FactoryReactor",
+          "index": "Build2"
+        }
+      ],
+      "Name": "Abil/Name/FactoryAddOns",
+      "id": 484,
+      "name": "FactoryAddOns",
+      "parent": "TerranAddOns"
+    },
     "FactoryLiftOff": {
       "Name": "Abil/Name/FactoryLiftOff",
       "ValidatorArray": "AddonIsNotWorking",
@@ -1277,6 +2239,272 @@
       "parent": "TerranBuildingLiftOff",
       "race": "Terran",
       "unit": "FactoryFlying"
+    },
+    "FactoryReactorMorph": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "Reactor",
+        "Requirements": "ShowIfHaveFactAddOnParent",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "Flags": {
+        "Automatic": 1,
+        "Produce": 1
+      },
+      "InfoArray": {
+        "Unit": "FactoryReactor"
+      },
+      "id": 1679,
+      "name": "FactoryReactorMorph"
+    },
+    "FactoryTechLabResearch": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": ""
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": ""
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "CycloneResearchHurricaneThrusters",
+            "Requirements": "LearnCycloneSpeedUpgrade"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "140",
+          "Upgrade": "HurricaneThrusters",
+          "index": "Research11"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "CycloneResearchLockOnDamageUpgrade",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnCycloneLockOnDamageUpgrade"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "140",
+          "Upgrade": "CycloneLockOnDamageUpgrade",
+          "index": "Research10"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchArmorPiercingRockets",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnArmorPiercingRockets"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "ArmorPiercingRockets",
+          "index": "Research8"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchCycloneRapidFireLaunchers",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnCycloneRapidFireLaunchers"
+          },
+          "Resource": {
+            "Minerals": 75,
+            "Vespene": 75
+          },
+          "Time": "110",
+          "Upgrade": "CycloneRapidFireLaunchers",
+          "index": "Research9"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchDrillClaws",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnDrillingClaws"
+          },
+          "Resource": {
+            "Minerals": 75,
+            "Vespene": 75
+          },
+          "Time": "110",
+          "Upgrade": "DrillClaws",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchHighCapacityBarrels",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnHighCapacityBarrels",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "110",
+          "Upgrade": "HighCapacityBarrels",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchLockOnRangeUpgrade",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnCycloneLockOnRangeUpgrade"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "CycloneLockOnRangeUpgrade",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchSmartServos",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnSmartServos"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "110",
+          "Upgrade": "SmartServos",
+          "index": "Research7"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchTransformationServos",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnTransformationServos",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "TransformationServos",
+          "index": "Research4"
+        }
+      ],
+      "gas": 100,
+      "id": 789,
+      "minerals": 100,
+      "name": "FactoryTechLabResearch",
+      "time": 140
+    },
+    "FactoryTrain": {
+      "Activity": "UI/Building",
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": ""
+          },
+          "Time": "45",
+          "Unit": "WarHound",
+          "index": "Train13"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "BuildCyclone",
+            "Requirements": "HaveAttachedTechLab"
+          },
+          "Time": "45",
+          "Unit": "Cyclone",
+          "index": "Train8"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Hellion",
+            "State": "Restricted"
+          },
+          "Time": "30",
+          "Unit": "Hellion",
+          "index": "Train6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "HellionTank",
+            "Requirements": "HaveArmory"
+          },
+          "Time": "30",
+          "Unit": "HellionTank",
+          "index": "Train7"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "SiegeTank",
+            "Requirements": "HaveAttachedTechLab",
+            "State": "Restricted"
+          },
+          "Time": "45",
+          "Unit": "SiegeTank",
+          "index": "Train2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Thor",
+            "Requirements": "HaveArmoryAndAttachedTechLab",
+            "State": "Restricted"
+          },
+          "Time": "60",
+          "Unit": "Thor",
+          "index": "Train5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "WidowMine"
+          },
+          "Time": "30",
+          "Unit": "WidowMine",
+          "index": "Train25"
+        }
+      ],
+      "Range": 3,
+      "id": 619,
+      "name": "FactoryTrain"
     },
     "Feedback": {
       "AINotifyEffect": "",
@@ -1312,6 +2540,108 @@
       "id": 141,
       "name": "Feedback"
     },
+    "FleetBeaconResearch": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "PhoenixRangeUpgrade",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnPhoenixRangeUpgrade"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "90",
+          "Upgrade": "PhoenixRangeUpgrade",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchInterceptorLaunchSpeedUpgrade",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnInterceptorLaunchSpeedUpgrade",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "80",
+          "Upgrade": "CarrierLaunchSpeedUpgrade",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchInterceptorLaunchSpeedUpgrade",
+            "Requirements": "LearnInterceptorLaunchSpeedUpgrade"
+          },
+          "Resource": {
+            "Minerals": 0,
+            "Vespene": 0
+          },
+          "Time": "0",
+          "Upgrade": "CarrierLaunchSpeedUpgrade",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchVoidRaySpeedUpgrade",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnVoidRaySpeedUpgrade"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "VoidRaySpeedUpgrade",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TempestRangeUpgrade",
+            "Requirements": "LearnTempestRangeUpgrade"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "110",
+          "Upgrade": "TempestRangeUpgrade",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "TempestResearchGroundAttackUpgrade",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnTempestGroundAttackUpgrade"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "140",
+          "Upgrade": "TempestGroundAttackUpgrade",
+          "index": "Research6"
+        }
+      ],
+      "gas": 150,
+      "id": 73,
+      "minerals": 150,
+      "name": "FleetBeaconResearch",
+      "time": 90,
+      "upgrade": "PhoenixRangeUpgrade"
+    },
     "ForceField": {
       "CmdButtonArray": [
         {
@@ -1341,6 +2671,143 @@
       "id": 1527,
       "name": "ForceField"
     },
+    "ForgeResearch": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossGroundArmorLevel1",
+            "Requirements": "LearnProtossGroundArmor1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "170",
+          "Upgrade": "ProtossGroundArmorsLevel1",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossGroundArmorLevel2",
+            "Requirements": "LearnProtossGroundArmor2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "202.5",
+          "Upgrade": "ProtossGroundArmorsLevel2",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossGroundArmorLevel3",
+            "Requirements": "LearnProtossGroundArmor3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "235",
+          "Upgrade": "ProtossGroundArmorsLevel3",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossGroundWeaponsLevel1",
+            "Requirements": "LearnProtossGroundWeapon1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "170",
+          "Upgrade": "ProtossGroundWeaponsLevel1",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossGroundWeaponsLevel2",
+            "Requirements": "LearnProtossGroundWeapon2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "202.5",
+          "Upgrade": "ProtossGroundWeaponsLevel2",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossGroundWeaponsLevel3",
+            "Requirements": "LearnProtossGroundWeapon3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "235",
+          "Upgrade": "ProtossGroundWeaponsLevel3",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossShieldsLevel1",
+            "Requirements": "LearnProtossShield1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "170",
+          "Upgrade": "ProtossShieldsLevel1",
+          "index": "Research7"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossShieldsLevel2",
+            "Requirements": "LearnProtossShield2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "202.5",
+          "Upgrade": "ProtossShieldsLevel2",
+          "index": "Research8"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ProtossShieldsLevel3",
+            "Requirements": "LearnProtossShield3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "235",
+          "Upgrade": "ProtossShieldsLevel3",
+          "index": "Research9"
+        }
+      ],
+      "gas": 100,
+      "id": 1091,
+      "minerals": 100,
+      "name": "ForgeResearch",
+      "time": 170,
+      "upgrade": "ProtossGroundArmorsLevel1"
+    },
     "FungalGrowth": {
       "Alignment": "Negative",
       "CmdButtonArray": {
@@ -1369,6 +2836,77 @@
       },
       "id": 75,
       "name": "FungalGrowth"
+    },
+    "FusionCoreResearch": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchBallisticRange",
+            "Requirements": "LearnLiberatorRange",
+            "State": "Available"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "LiberatorAGRangeUpgrade",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchBattlecruiserSpecializations",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnBattlecruiserSpecializations",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "140",
+          "Upgrade": "BattlecruiserEnableSpecializations",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchMedivacEnergyUpgrade",
+            "Requirements": "LearnCaduceusReactor"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "70",
+          "Upgrade": "MedivacCaduceusReactor",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchRapidReignitionSystem",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnMedivacSpeedBoostUpgrade"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "MedivacIncreaseSpeedBoost",
+          "index": "Research3"
+        }
+      ],
+      "gas": 150,
+      "id": 1561,
+      "minerals": 150,
+      "name": "FusionCoreResearch",
+      "time": 110,
+      "upgrade": "LiberatorAGRangeUpgrade"
     },
     "GatewayTrain": {
       "Activity": "UI/Warping",
@@ -1436,6 +2974,46 @@
       ],
       "id": 945,
       "name": "GatewayTrain"
+    },
+    "GhostAcademyResearch": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": ""
+          },
+          "Resource": {
+            "Minerals": 0,
+            "Vespene": 0
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchPersonalCloaking",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnPersonnelCloaking",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "120",
+          "Upgrade": "PersonalCloaking",
+          "index": "Research1"
+        }
+      ],
+      "gas": 150,
+      "id": 849,
+      "minerals": 150,
+      "name": "GhostAcademyResearch",
+      "time": 120
     },
     "GhostHoldFire": {
       "CmdButtonArray": {
@@ -1819,6 +3397,93 @@
       "id": 1039,
       "name": "HangarQueue5"
     },
+    "HydraliskDenResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Flags": {
+              "ShowInGlossary": 0
+            },
+            "Requirements": ""
+          },
+          "Resource": {
+            "Minerals": 0,
+            "Vespene": 0
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveGroovedSpines",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnEvolveGroovedSpines",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 75,
+            "Vespene": 75
+          },
+          "Time": "70",
+          "Upgrade": "EvolveGroovedSpines",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveMuscularAugments",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnEvolveMuscularAugments",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "90",
+          "Upgrade": "EvolveMuscularAugments",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchFrenzy",
+            "Requirements": "LearnEvolveFrenzy"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "90",
+          "Upgrade": "Frenzy",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ShowInGlossary": 1
+            }
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "110",
+          "Upgrade": "LurkerRange",
+          "index": "Research5"
+        }
+      ],
+      "gas": 75,
+      "id": 1311,
+      "minerals": 75,
+      "name": "HydraliskDenResearch",
+      "time": 70
+    },
     "HydraliskFrenzy": {
       "CmdButtonArray": {
         "Requirements": "UseFrenzy",
@@ -1891,6 +3556,77 @@
       "id": 2359,
       "name": "Hyperjump"
     },
+    "InfestationPitResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Requirements": ""
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "80",
+          "Upgrade": "",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveAmorphousArmorcloud",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnAmorphousArmorcloud"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "MicrobialShroud",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchLocustLifetimeIncrease",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnLocustLifetimeIncrease"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "120",
+          "Upgrade": "LocustLifetimeIncrease",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchNeuralParasite",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnNeuralParasite"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "NeuralParasite",
+          "index": "Research4"
+        }
+      ],
+      "gas": 150,
+      "id": 1481,
+      "minerals": 150,
+      "name": "InfestationPitResearch",
+      "time": 110
+    },
     "InfestedTerrans": {
       "CastIntroTime": 0,
       "CastOutroTime": 0,
@@ -1959,6 +3695,75 @@
       "TargetFilters": "Ground,Visible;-",
       "id": 2589,
       "name": "KD8Charge"
+    },
+    "LairResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveVentralSacks",
+            "Flags": {
+              "ShowInGlossary": 1,
+              "ToSelection": 1
+            },
+            "Requirements": "LearnVentralSacs",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "130",
+          "Upgrade": "overlordtransport",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchBurrow",
+            "Flags": {
+              "ShowInGlossary": 1,
+              "ToSelection": 1
+            },
+            "Requirements": "LearnBurrow",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "100",
+          "Upgrade": "Burrow",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "overlordspeed",
+            "Flags": {
+              "ShowInGlossary": 1,
+              "ToSelection": 1
+            },
+            "Requirements": "LearnPneumatizedCarapace",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "60",
+          "Upgrade": "overlordspeed",
+          "index": "Research2"
+        },
+        {
+          "Time": "70",
+          "index": "Research1"
+        }
+      ],
+      "gas": 200,
+      "id": 1251,
+      "minerals": 200,
+      "name": "LairResearch",
+      "time": 130,
+      "upgrade": "overlordtransport"
     },
     "LarvaTrain": {
       "Activity": "UI/Morphing",
@@ -2223,6 +4028,51 @@
       "id": 2355,
       "name": "LockOnCancel"
     },
+    "LurkerDenResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveDiggingClaws",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnEvolveDiggingClaws",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "DiggingClaws",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchLurkerRange",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnEvolveSeismicSpines",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "80",
+          "Upgrade": "LurkerRange",
+          "index": "Research2"
+        }
+      ],
+      "gas": 100,
+      "id": 3738,
+      "minerals": 100,
+      "name": "LurkerDenResearch",
+      "time": 80,
+      "upgrade": "DiggingClaws"
+    },
     "MassRecall": {
       "AINotifyEffect": "",
       "Arc": 360,
@@ -2364,6 +4214,45 @@
       "UnloadPeriod": 1,
       "id": 398,
       "name": "MedivacTransport"
+    },
+    "MercCompoundResearch": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "ReaperSpeed",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnReaperSpeed",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 50,
+            "Vespene": 50
+          },
+          "Time": "100",
+          "Upgrade": "ReaperSpeed",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "Requirements": "LearnStimpack"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "110",
+          "index": "Research1"
+        }
+      ],
+      "gas": 50,
+      "id": 709,
+      "minerals": 50,
+      "name": "MercCompoundResearch",
+      "time": 100,
+      "upgrade": "ReaperSpeed"
     },
     "MorphBackToGateway": {
       "Alert": "TransformationComplete",
@@ -3960,6 +5849,31 @@
       "id": 2147,
       "name": "OracleRevelation"
     },
+    "OracleStasisTrapActivate": {
+      "Arc": 360,
+      "AutoCastRange": 3,
+      "AutoCastValidatorArray": "ActivateStasisWardTargetInRange",
+      "CmdButtonArray": {
+        "DefaultButtonFace": "ActivateStasisWard",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "0.5"
+        }
+      },
+      "Effect": {
+        "0": "OracleStasisTrapActivateSet"
+      },
+      "Flags": {
+        "AutoCast": 1,
+        "AutoCastOn": 1,
+        "ReExecutable": 1
+      },
+      "PrepTime": 0,
+      "id": 2537,
+      "name": "OracleStasisTrapActivate"
+    },
     "OracleStasisTrapBuild": {
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "EffectArray": {
@@ -4468,6 +6382,21 @@
       "id": 2347,
       "name": "PurificationNovaTargeted"
     },
+    "PurifyMorphPylon": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "MothershipCoreWeapon",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "Flags": {
+        "Transient": 1
+      },
+      "InfoArray": {
+        "Unit": "PylonOvercharged"
+      },
+      "id": 2717,
+      "name": "PurifyMorphPylon"
+    },
     "QueenBuild": {
       "Alert": "BuildComplete_Zerg",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
@@ -4519,6 +6448,28 @@
       },
       "id": 206,
       "name": "RallyCommand"
+    },
+    "RallyHatchery": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "SetOnGround": "0",
+          "SetValidators": "Failure"
+        },
+        {
+          "SetOnGround": "0",
+          "UseFilters": "Worker;-",
+          "UseValidators": "NotQueen"
+        },
+        {
+          "SetValidators": "NotResourcesOrEnemyTargetType",
+          "UseFilters": "-;Worker",
+          "UseValidators": "NotQueen",
+          "index": "0"
+        }
+      ],
+      "id": 214,
+      "name": "RallyHatchery"
     },
     "RallyNexus": {
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
@@ -4614,6 +6565,28 @@
       "TargetFilters": "Visible;Self,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable",
       "id": 3754,
       "name": "RavenShredderMissile"
+    },
+    "ReactorMorph": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "TechLab",
+        "Requirements": "ShowIfHaveNoAddOnParent",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "Flags": {
+        "Automatic": 1
+      },
+      "InfoArray": {
+        "SectionArray": {
+          "DurationArray": {
+            "Delay": 0.125
+          },
+          "index": "Stats"
+        },
+        "Unit": "Reactor"
+      },
+      "id": 1675,
+      "name": "ReactorMorph"
     },
     "ReaperSpeed": {
       "gas": 50,
@@ -4725,6 +6698,150 @@
       "TargetFilters": "-;Player,Ally,Enemy",
       "id": 2005,
       "name": "ResourceStun"
+    },
+    "RoachWarrenResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveGlialRegeneration",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnGlialReconstitution",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "110",
+          "Upgrade": "GlialReconstitution",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveTunnelingClaws",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnTunnelingClaws"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "110",
+          "Upgrade": "TunnelingClaws",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "RoachSupply",
+            "Requirements": "LearnRoachSupply"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "130",
+          "Upgrade": "RoachSupply",
+          "index": "Research4"
+        }
+      ],
+      "gas": 100,
+      "id": 244,
+      "minerals": 100,
+      "name": "RoachWarrenResearch",
+      "time": 110,
+      "upgrade": "GlialReconstitution"
+    },
+    "RoboticsBayResearch": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchExtendedThermalLance",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnExtendedThermalLance",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "140",
+          "Upgrade": "ExtendedThermalLance",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchGraviticBooster",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnGraviticBooster",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "ObserverGraviticBooster",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchGraviticDrive",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnGraviticDrive",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "GraviticDrive",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchImmortalRevive",
+            "Requirements": "LearnImmortalRevive"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "ImmortalRevive",
+          "index": "Research8"
+        },
+        {
+          "Time": "140",
+          "index": "Research4"
+        },
+        {
+          "Time": "140",
+          "index": "Research5"
+        },
+        {
+          "Time": "70",
+          "index": "Research1"
+        }
+      ],
+      "gas": 150,
+      "id": 1121,
+      "minerals": 150,
+      "name": "RoboticsBayResearch",
+      "time": 140,
+      "upgrade": "ExtendedThermalLance"
     },
     "RoboticsFacilityTrain": {
       "Activity": "UI/Warping",
@@ -5142,6 +7259,51 @@
       "id": 2705,
       "name": "SpawnLocustsTargeted"
     },
+    "SpawningPoolResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "zerglingattackspeed",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnAdrenalGlands",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "130",
+          "Upgrade": "zerglingattackspeed",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zerglingmovementspeed",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnMetabolicBoost",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "110",
+          "Upgrade": "zerglingmovementspeed",
+          "index": "Research2"
+        }
+      ],
+      "gas": 200,
+      "id": 1281,
+      "minerals": 200,
+      "name": "SpawningPoolResearch",
+      "time": 130,
+      "upgrade": "zerglingattackspeed"
+    },
     "SpineCrawlerUproot": {
       "ActorKey": "Uproot",
       "CmdButtonArray": [
@@ -5183,6 +7345,119 @@
       },
       "id": 1726,
       "name": "SpineCrawlerUproot"
+    },
+    "SpireResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerarmor1",
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "LearnZergFlyerArmor1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "ZergFlyerArmorsLevel1",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerarmor2",
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "LearnZergFlyerArmor2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "190",
+          "Upgrade": "ZergFlyerArmorsLevel2",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerarmor3",
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "LearnZergFlyerArmor3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "220",
+          "Upgrade": "ZergFlyerArmorsLevel3",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerattack1",
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "LearnZergFlyerAttack1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "ZergFlyerWeaponsLevel1",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerattack2",
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "LearnZergFlyerAttack2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 175,
+            "Vespene": 175
+          },
+          "Time": "190",
+          "Upgrade": "ZergFlyerWeaponsLevel2",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergflyerattack3",
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "LearnZergFlyerAttack3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "220",
+          "Upgrade": "ZergFlyerWeaponsLevel3",
+          "index": "Research3"
+        }
+      ],
+      "gas": 100,
+      "id": 1341,
+      "minerals": 100,
+      "name": "SpireResearch",
+      "time": 160,
+      "upgrade": "ZergFlyerArmorsLevel1"
     },
     "SporeCrawlerUproot": {
       "ActorKey": "Uproot",
@@ -5321,6 +7596,38 @@
       "id": 975,
       "name": "StargateTrain"
     },
+    "StarportAddOns": {
+      "BuildMorphAbil": "StarportLiftOff",
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "HasQueuedAddon"
+          },
+          "Time": "25",
+          "Unit": "StarportTechLab",
+          "index": "Build1"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            },
+            "Requirements": "HasQueuedAddon"
+          },
+          "Time": "50",
+          "Unit": "StarportReactor",
+          "index": "Build2"
+        }
+      ],
+      "Name": "Abil/Name/StarportAddOns",
+      "id": 517,
+      "name": "StarportAddOns",
+      "parent": "TerranAddOns"
+    },
     "StarportLiftOff": {
       "Name": "Abil/Name/StarportLiftOff",
       "ValidatorArray": "AddonIsNotWorking",
@@ -5330,6 +7637,300 @@
       "parent": "TerranBuildingLiftOff",
       "race": "Terran",
       "unit": "StarportFlying"
+    },
+    "StarportReactorMorph": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "Reactor",
+        "Requirements": "ShowIfHaveStarportAddOnParent",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "Flags": {
+        "Automatic": 1,
+        "Produce": 1
+      },
+      "InfoArray": {
+        "Unit": "StarportReactor"
+      },
+      "id": 1681,
+      "name": "StarportReactorMorph"
+    },
+    "StarportTechLabResearch": {
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": ""
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "",
+          "index": "Research7"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "BansheeSpeed",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnBansheeSpeed"
+          },
+          "Resource": {
+            "Minerals": 125,
+            "Vespene": 125
+          },
+          "Time": "110.6",
+          "Upgrade": "BansheeSpeed",
+          "index": "Research10"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "RavenResearchEnhancedMunitions",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnRavenEnhancedMunitions"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "RavenEnhancedMunitions",
+          "index": "Research17"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchBallisticRange",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnLiberatorRange"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "LiberatorAGRangeUpgrade",
+          "index": "Research16"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchBansheeCloak",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnCloakingField",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "110",
+          "Upgrade": "BansheeCloak",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchDurableMaterials",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnDurableMaterials",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "DurableMaterials",
+          "index": "Research8"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchHighCapacityFuelTanks",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnMedivacSpeedBoostUpgrade"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "MedivacIncreaseSpeedBoost",
+          "index": "Research15"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchMedivacEnergyUpgrade",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnMedivacEnergyUpgrade",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "MedivacCaduceusReactor",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchRapidDeployment",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnRapidDeployment"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "120",
+          "Upgrade": "MedivacRapidDeployment",
+          "index": "Research13"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchRavenEnergyUpgrade",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnRavenEnergyUpgrade",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "RavenCorvidReactor",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchRavenInterferenceMatrix",
+            "Requirements": "LearnRavenInterferenceMatrixUpgrade"
+          },
+          "Resource": {
+            "Minerals": 50,
+            "Vespene": 50
+          },
+          "Time": "80",
+          "Upgrade": "InterferenceMatrix",
+          "index": "Research18"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchRavenRecalibratedExplosives",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnRavenRecalibratedExplosives"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "RavenRecalibratedExplosives",
+          "index": "Research14"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ShowInGlossary": 1
+            }
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "LiberatorMorph",
+          "index": "Research11"
+        }
+      ],
+      "gas": 125,
+      "id": 819,
+      "minerals": 125,
+      "name": "StarportTechLabResearch",
+      "time": 110.6
+    },
+    "StarportTrain": {
+      "Activity": "UI/Building",
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "Banshee",
+            "Requirements": "HaveAttachedTechLab",
+            "State": "Restricted"
+          },
+          "Time": "60",
+          "Unit": "Banshee",
+          "index": "Train2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Battlecruiser",
+            "Requirements": "HaveAttachedStarportTechLabAndFusionCore",
+            "State": "Restricted"
+          },
+          "Time": "90",
+          "Unit": "Battlecruiser",
+          "index": "Train4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Medivac",
+            "State": "Restricted"
+          },
+          "Time": "42",
+          "Unit": "Medivac",
+          "index": "Train1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Raven",
+            "Requirements": "HaveAttachedTechLab",
+            "State": "Restricted"
+          },
+          "Time": "48",
+          "Unit": "Raven",
+          "index": "Train3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "VikingFighter",
+            "State": "Restricted"
+          },
+          "Time": "42",
+          "Unit": "VikingFighter",
+          "index": "Train5"
+        },
+        {
+          "Button": {
+            "State": "Available"
+          },
+          "Time": "60",
+          "Unit": "Liberator",
+          "index": "Train7"
+        }
+      ],
+      "id": 649,
+      "name": "StarportTrain"
     },
     "Stimpack": {
       "AbilSetId": "Stimpack",
@@ -5433,6 +8034,51 @@
       "id": 1691,
       "name": "StopRedirect"
     },
+    "SupplyDepotLower": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "Lower",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "InfoArray": {
+        "CollideRange": "0",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 1.3
+            },
+            "index": "Collide"
+          },
+          {
+            "DurationArray": {
+              "Delay": 1.3
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 1.3
+            },
+            "index": "Actor"
+          },
+          {
+            "DurationArray": {
+              "Duration": 1.3
+            },
+            "index": "Mover"
+          },
+          {
+            "EffectArray": {
+              "Start": "SupplyDepotMorphingApplyBehavior"
+            },
+            "index": "Abils"
+          }
+        ],
+        "Unit": "SupplyDepotLowered"
+      },
+      "id": 557,
+      "name": "SupplyDepotLower"
+    },
     "SupplyDrop": {
       "Arc": 360,
       "CmdButtonArray": {
@@ -5525,6 +8171,72 @@
       },
       "id": 1623,
       "name": "TacNukeStrike"
+    },
+    "TechLabMorph": {
+      "CmdButtonArray": {
+        "DefaultButtonFace": "TechLab",
+        "Requirements": "ShowIfHaveNoAddOnParent",
+        "index": "Execute"
+      },
+      "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
+      "Flags": {
+        "Automatic": 1
+      },
+      "InfoArray": {
+        "SectionArray": {
+          "DurationArray": {
+            "Delay": 0.125
+          },
+          "index": "Stats"
+        },
+        "Unit": "TechLab"
+      },
+      "id": 1667,
+      "name": "TechLabMorph"
+    },
+    "TemplarArchivesResearch": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "",
+            "Flags": {
+              "ShowInGlossary": 0
+            },
+            "Requirements": "",
+            "State": "Available"
+          },
+          "Resource": {
+            "Minerals": 0,
+            "Vespene": 0
+          },
+          "Time": "0",
+          "Upgrade": "",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchPsiStorm",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnPsiStorm",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "110",
+          "Upgrade": "PsiStormTech",
+          "index": "Research5"
+        }
+      ],
+      "gas": 200,
+      "id": 1151,
+      "minerals": 200,
+      "name": "TemplarArchivesResearch",
+      "time": 110
     },
     "TemporalField": {
       "AINotifyEffect": "TemporalFieldCreatePersistent",
@@ -5843,6 +8555,25 @@
       "id": 262,
       "name": "TimeWarp"
     },
+    "TrainQueen": {
+      "Activity": "UI/Spawning",
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": {
+        "Button": {
+          "DefaultButtonFace": "Queen",
+          "Flags": {
+            "ToSelection": 1
+          },
+          "Requirements": "HaveSpawningPool"
+        },
+        "Effect": "",
+        "Time": "50",
+        "Unit": "Queen",
+        "index": "Train1"
+      },
+      "id": 1661,
+      "name": "TrainQueen"
+    },
     "Transfusion": {
       "Alignment": "Positive",
       "CastIntroTime": 0.2,
@@ -5878,6 +8609,169 @@
       },
       "id": 1665,
       "name": "Transfusion"
+    },
+    "TwilightCouncilResearch": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "AdeptResearchPiercingUpgrade",
+            "Requirements": "LearnAdeptPiercingAttack"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "140",
+          "Upgrade": "AdeptPiercingAttack",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchAmplifiedShielding",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnAdeptAmplifiedShielding",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "140",
+          "Upgrade": "AmplifiedShielding",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchCharge",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnCharge",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "140",
+          "Upgrade": "Charge",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchPsionicAmplifiers",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnAdeptPsionicAmplifiers",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "140",
+          "Upgrade": "PsionicAmplifiers",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchPsionicSurge",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnSunderingImpact",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "140",
+          "Upgrade": "SunderingImpact",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "ResearchStalkerTeleport",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnBlink",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "170",
+          "Upgrade": "BlinkTech",
+          "index": "Research2"
+        }
+      ],
+      "gas": 100,
+      "id": 1621,
+      "minerals": 100,
+      "name": "TwilightCouncilResearch",
+      "time": 140,
+      "upgrade": "AdeptPiercingAttack"
+    },
+    "UltraliskCavernResearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": ""
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "130",
+          "Upgrade": "",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveAnabolicSynthesis2",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnAnabolicSynthesis"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "60",
+          "Upgrade": "AnabolicSynthesis",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolveChitinousPlating",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnChitinousPlating"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "110",
+          "Upgrade": "ChitinousPlating",
+          "index": "Research3"
+        }
+      ],
+      "gas": 150,
+      "id": 292,
+      "minerals": 150,
+      "name": "UltraliskCavernResearch",
+      "time": 60
     },
     "UltraliskWeaponCooldown": {
       "CmdButtonArray": {
@@ -6433,6 +9327,154 @@
       "id": 1631,
       "name": "Vortex"
     },
+    "WarpGateTrain": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Structures",
+      "Flags": {
+        "IgnoreRampTest": 1
+      },
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "DarkTemplar",
+            "Requirements": "HaveDarkShrine",
+            "State": "Restricted"
+          },
+          "Charge": {
+            "CountMax": 1,
+            "CountStart": 1,
+            "CountUse": 1,
+            "Flags": {
+              "EnableChargeTimeQueuing": 1
+            },
+            "Link": "WarpGateTrain",
+            "TimeUse": 45
+          },
+          "Cooldown": {
+            "TimeUse": "0"
+          },
+          "Time": "16",
+          "Unit": "DarkTemplar",
+          "index": "Train5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "HighTemplar",
+            "Requirements": "HaveTemplarArchives",
+            "State": "Restricted"
+          },
+          "Charge": {
+            "CountMax": 1,
+            "CountStart": 1,
+            "CountUse": 1,
+            "Flags": {
+              "EnableChargeTimeQueuing": 1
+            },
+            "Link": "WarpGateTrain",
+            "TimeUse": 45
+          },
+          "Cooldown": {
+            "TimeUse": "0"
+          },
+          "Time": "16",
+          "Unit": "HighTemplar",
+          "index": "Train4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Sentry",
+            "Requirements": "HaveCyberneticsCore",
+            "State": "Restricted"
+          },
+          "Charge": {
+            "CountMax": 1,
+            "CountStart": 1,
+            "CountUse": 1,
+            "Flags": {
+              "EnableChargeTimeQueuing": 1
+            },
+            "Link": "WarpGateTrain",
+            "TimeUse": 32
+          },
+          "Cooldown": {
+            "TimeUse": "0"
+          },
+          "Time": "16",
+          "Unit": "Sentry",
+          "index": "Train6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Stalker",
+            "Requirements": "HaveCyberneticsCore",
+            "State": "Restricted"
+          },
+          "Charge": {
+            "CountMax": 1,
+            "CountStart": 1,
+            "CountUse": 1,
+            "Flags": {
+              "EnableChargeTimeQueuing": 1
+            },
+            "Link": "WarpGateTrain",
+            "TimeUse": 32
+          },
+          "Cooldown": {
+            "TimeUse": "0"
+          },
+          "Time": "16",
+          "Unit": "Stalker",
+          "index": "Train2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "WarpInAdept",
+            "Requirements": "HaveCyberneticsCore",
+            "State": "Restricted"
+          },
+          "Charge": {
+            "CountMax": 1,
+            "CountStart": 1,
+            "CountUse": 1,
+            "Flags": {
+              "EnableChargeTimeQueuing": 1
+            },
+            "Link": "WarpGateTrain",
+            "TimeUse": 28
+          },
+          "Cooldown": {
+            "Link": "WarpGateTrain"
+          },
+          "Time": "16",
+          "Unit": "Adept",
+          "index": "Train7"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "Zealot",
+            "State": "Restricted"
+          },
+          "Charge": {
+            "CountMax": 1,
+            "CountStart": 1,
+            "CountUse": 1,
+            "Flags": {
+              "EnableChargeTimeQueuing": 1
+            },
+            "Link": "WarpGateTrain",
+            "TimeStart": 30,
+            "TimeUse": 28
+          },
+          "Cooldown": {
+            "TimeUse": "0"
+          },
+          "Time": "16",
+          "Unit": "Zealot",
+          "index": "Train1"
+        }
+      ],
+      "id": 1432,
+      "name": "WarpGateTrain"
+    },
     "WarpPrismTransport": {
       "AbilSetId": "ULdM",
       "CmdButtonArray": [
@@ -6479,6 +9521,12 @@
       "UnloadPeriod": 1,
       "id": 915,
       "name": "WarpPrismTransport"
+    },
+    "Warpable": {
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "PowerUserBehavior": "PowerUserWarpable",
+      "id": 1412,
+      "name": "Warpable"
     },
     "WorkerStopIdleAbilityVespene": {
       "AutoCastFilters": "HarvestableResource,Visible,UnderConstruction;Ally,Neutral,Enemy",
@@ -6702,6 +9750,157 @@
       ],
       "id": 1182,
       "name": "ZergBuild"
+    },
+    "evolutionchamberresearch": {
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Structures",
+      "InfoArray": [
+        {
+          "Button": {
+            "DefaultButtonFace": "EvolvePropulsivePeristalsis",
+            "Flags": {
+              "ShowInGlossary": 1
+            },
+            "Requirements": "LearnEvolveSecretedCoating",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "80",
+          "Upgrade": "SecretedCoating",
+          "index": "Research10"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zerggroundarmor1",
+            "Requirements": "LearnZergGroundArmor1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "160",
+          "Upgrade": "ZergGroundArmorsLevel1",
+          "index": "Research4"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zerggroundarmor2",
+            "Requirements": "LearnZergGroundArmor2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "190",
+          "Upgrade": "ZergGroundArmorsLevel2",
+          "index": "Research5"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zerggroundarmor3",
+            "Requirements": "LearnZergGroundArmor3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 250,
+            "Vespene": 250
+          },
+          "Time": "220",
+          "Upgrade": "ZergGroundArmorsLevel3",
+          "index": "Research6"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergmeleeweapons1",
+            "Requirements": "LearnZergMeleeWeapon1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "ZergMeleeWeaponsLevel1",
+          "index": "Research1"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergmeleeweapons2",
+            "Requirements": "LearnZergMeleeWeapon2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "190",
+          "Upgrade": "ZergMeleeWeaponsLevel2",
+          "index": "Research2"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergmeleeweapons3",
+            "Requirements": "LearnZergMeleeWeapon3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "220",
+          "Upgrade": "ZergMeleeWeaponsLevel3",
+          "index": "Research3"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergmissileweapons1",
+            "Requirements": "LearnZergMissileWeapon1",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 100,
+            "Vespene": 100
+          },
+          "Time": "160",
+          "Upgrade": "ZergMissileWeaponsLevel1",
+          "index": "Research7"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergmissileweapons2",
+            "Requirements": "LearnZergMissileWeapon2",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 150,
+            "Vespene": 150
+          },
+          "Time": "190",
+          "Upgrade": "ZergMissileWeaponsLevel2",
+          "index": "Research8"
+        },
+        {
+          "Button": {
+            "DefaultButtonFace": "zergmissileweapons3",
+            "Requirements": "LearnZergMissileWeapon3",
+            "State": "Restricted"
+          },
+          "Resource": {
+            "Minerals": 200,
+            "Vespene": 200
+          },
+          "Time": "220",
+          "Upgrade": "ZergMissileWeaponsLevel3",
+          "index": "Research9"
+        }
+      ],
+      "id": 1215,
+      "name": "evolutionchamberresearch",
+      "upgrade": "SecretedCoating"
     },
     "move": {
       "AbilSetId": "Move",
@@ -10088,7 +13287,7 @@
       "id": 36,
       "name": "CommandCenterFlying",
       "race": "Terran",
-      "type": "unit"
+      "type": "structure"
     },
     "Corruptor": {
       "AIEvalFactor": 0.7,
@@ -12016,7 +15215,7 @@
       "name": "Drone",
       "race": "Zerg",
       "time": 17,
-      "type": "structure"
+      "type": "unit"
     },
     "EngineeringBay": {
       "AbilArray": [
@@ -17169,7 +20368,7 @@
         "DiggingClaws",
         "LurkerRange"
       ],
-      "time": 120,
+      "time": 80,
       "type": "structure"
     },
     "LurkerMP": {
@@ -17325,7 +20524,7 @@
       "id": 502,
       "name": "LurkerMP",
       "race": "Zerg",
-      "time": 25,
+      "time": 33,
       "type": "unit"
     },
     "LurkerMPEgg": {
@@ -19273,7 +22472,7 @@
       ],
       "race": "Terran",
       "time": 35,
-      "type": "unit"
+      "type": "structure"
     },
     "OrbitalCommandFlying": {
       "AbilArray": [
@@ -19398,7 +22597,7 @@
       "id": 134,
       "name": "OrbitalCommandFlying",
       "race": "Terran",
-      "type": "unit"
+      "type": "structure"
     },
     "Overlord": {
       "AIEvalFactor": 0,
@@ -20387,7 +23586,7 @@
       ],
       "race": "Terran",
       "time": 50,
-      "type": "unit"
+      "type": "structure"
     },
     "Probe": {
       "AIOverideTargetPriority": 10,
@@ -20701,7 +23900,7 @@
       "name": "Probe",
       "race": "Protoss",
       "time": 17,
-      "type": "structure"
+      "type": "unit"
     },
     "Pylon": {
       "AbilArray": [
@@ -21160,7 +24359,7 @@
         "SpawningPool"
       ],
       "time": 50,
-      "type": "structure"
+      "type": "unit"
     },
     "Ravager": {
       "AbilArray": [
@@ -23159,7 +26358,7 @@
       "name": "SCV",
       "race": "Terran",
       "time": 17,
-      "type": "structure"
+      "type": "unit"
     },
     "SensorTower": {
       "AbilArray": [
@@ -25427,7 +28626,7 @@
       "id": 19,
       "name": "SupplyDepot",
       "race": "Terran",
-      "time": 1.3,
+      "time": 30,
       "type": "structure",
       "unlocks": [
         "Barracks"
@@ -27821,9 +31020,17 @@
       "TurningRate": 719.4726,
       "id": 133,
       "name": "WarpGate",
+      "produces": [
+        "Adept",
+        "DarkTemplar",
+        "HighTemplar",
+        "Sentry",
+        "Stalker",
+        "Zealot"
+      ],
       "race": "Protoss",
       "time": 10,
-      "type": "unit"
+      "type": "structure"
     },
     "WarpPrism": {
       "AIEvalFactor": 0,

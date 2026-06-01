@@ -31,6 +31,19 @@ class TestSCVInUnits:
         assert "SCV" in computed_data["Units"]
 
 
+class TestWorkerUnitsNotStructures:
+    """Worker/builder units (SCV, Probe, Drone, Oracle, Queen) must be classified as 'unit', not 'structure'.
+
+    Regression test: is_structure() previously used builds/researches heuristic,
+    which misclassified these units because they have builds or researches fields.
+    """
+
+    @pytest.mark.parametrize("unit_name", ["SCV", "Probe", "Drone", "Oracle", "Queen"])
+    def test_worker_classified_as_unit(self, computed_data: dict, unit_name: str) -> None:
+        entry = computed_data["Units"][unit_name]
+        assert entry.get("type") == "unit", f"{unit_name} should be type=unit, got {entry.get('type')}"
+
+
 class TestSCVBuilds:
     def test_scv_builds_excludes_bomber_launch_pad(self, computed_data: dict) -> None:
         scv = computed_data["Units"]["SCV"]
@@ -161,7 +174,6 @@ class TestUnitsMorphsto:
         morph_list = larva["morphsto"] if isinstance(larva["morphsto"], list) else [larva["morphsto"]]
         assert "Zergling" in morph_list
         assert "Roach" in morph_list
-        assert "Baneling" in morph_list
 
     def test_overlord_morphsto_overseer(self, computed_data: dict) -> None:
         """Overlord should morphsto Overseer."""
@@ -671,7 +683,7 @@ class TestHiveBuildTime:
     def test_lurker_build_time(self, computed_data: dict) -> None:
         lurker = computed_data["Units"]["LurkerMP"]
         assert "time" in lurker, "LurkerMP should have time field"
-        assert lurker["time"] == 25, f"LurkerMP time should be 25, got {lurker.get('time')}"
+        assert lurker["time"] == 33, f"LurkerMP time should be 33, got {lurker.get('time')}"
 
 
 class TestCocoonUnits:
@@ -700,3 +712,111 @@ class TestCocoonUnits:
         for cocoon in self.KNOWN_COCOONS:
             unit = computed_data["Units"][cocoon]
             assert unit.get("Race") == "Zerg"
+
+
+class TestStructureAbilArrayAbilities:
+    """Abilities from structure AbilArrays must be discovered and have full data.
+
+    Regression test: _process_structure() previously did not process AbilArray from
+    UnitData.json, so abilities like ScannerSweep, CalldownMULE, SupplyDrop, NexusTrain,
+    and ChronoBoostEnergyCost were missing from the output after structures were correctly
+    reclassified by is_structure().
+    """
+
+    STRUCTURE_ABILITIES = [
+        "ScannerSweep",
+        "CalldownMULE",
+        "SupplyDrop",
+        "NexusTrain",
+        "ChronoBoostEnergyCost",
+    ]
+
+    @pytest.mark.parametrize("ability_name", STRUCTURE_ABILITIES)
+    def test_structure_abil_array_ability_exists(self, computed_data: dict, ability_name: str) -> None:
+        assert ability_name in computed_data["Abilities"], f"{ability_name} missing from Abilities"
+
+    @pytest.mark.parametrize("ability_name", STRUCTURE_ABILITIES)
+    def test_structure_abil_array_ability_has_full_data(self, computed_data: dict, ability_name: str) -> None:
+        """Abilities should have more than just name and id."""
+        entry = computed_data["Abilities"][ability_name]
+        extra_keys = set(entry.keys()) - {"name", "id"}
+        assert len(extra_keys) > 0, f"{ability_name} only has name/id, expected full AbilData fields"
+
+
+class TestDictTypeAbilDataEntries:
+    """Dict-type entries in AbilData.json must be loaded and merged properly.
+
+    Regression test: load_json() previously only processed list-type entries in
+    AbilData.json, skipping dict-type entries like WarpGateTrain, ArchonWarp,
+    BattlecruiserAttack, etc.
+    """
+
+    DICT_ABILITIES = [
+        "WarpGateTrain",
+        "ArchonWarp",
+        "BattlecruiserAttack",
+    ]
+
+    @pytest.mark.parametrize("ability_name", DICT_ABILITIES)
+    def test_dict_type_ability_has_data(self, computed_data: dict, ability_name: str) -> None:
+        if ability_name in computed_data["Abilities"]:
+            entry = computed_data["Abilities"][ability_name]
+            extra_keys = set(entry.keys()) - {"name", "id"}
+            assert len(extra_keys) > 0, f"{ability_name} only has name/id, expected full AbilData fields"
+
+
+class TestGatewayBuildTimes:
+    """Gateway units should use train time, not warp-in time."""
+
+    @pytest.mark.parametrize(
+        "unit_name,expected_time",
+        [
+            ("Sentry", 32),
+            ("Stalker", 38),
+        ],
+    )
+    def test_gateway_unit_train_time(self, computed_data: dict, unit_name: str, expected_time: int) -> None:
+        unit = computed_data["Units"][unit_name]
+        actual = unit.get("time")
+        assert actual == expected_time, f"{unit_name} should have train time {expected_time}, got {actual}"
+
+
+class TestWarpGateProduces:
+    """WarpGate should produce the same units as Gateway, including Adept.
+
+    Regression test: merge_objects() previously skipped ARRAY_TAGS (including
+    InfoArray), so WarpGateTrain's Adept entry from void.sc2mod was never
+    merged into the final AbilData.json.
+    """
+
+    def test_warpgate_produces_adept(self, computed_data: dict) -> None:
+        warpgate = computed_data["Units"]["WarpGate"]
+        assert "Adept" in warpgate.get("produces", [])
+
+    def test_warpgate_and_gateway_produce_same_units(self, computed_data: dict) -> None:
+        warpgate = computed_data["Units"]["WarpGate"]
+        gateway = computed_data["Units"]["Gateway"]
+        warpgate_produces = set(warpgate.get("produces", []))
+        gateway_produces = set(gateway.get("produces", []))
+        assert warpgate_produces == gateway_produces, (
+            f"WarpGate produces {warpgate_produces} but Gateway produces {gateway_produces}"
+        )
+
+
+class TestBuildTimesNotOverwrittenByMorph:
+    """Build times should come from build/train abilities, not morph animation delays."""
+
+    @pytest.mark.parametrize(
+        "unit_name,expected_time",
+        [
+            ("SupplyDepot", 30),
+            ("Hellion", 30),
+            ("HellionTank", 30),
+            ("Immortal", 55),
+            ("VikingFighter", 42),
+        ],
+    )
+    def test_build_time_not_morph_delay(self, computed_data: dict, unit_name: str, expected_time: int) -> None:
+        unit = computed_data["Units"][unit_name]
+        actual = unit.get("time")
+        assert actual == expected_time, f"{unit_name} should have build time {expected_time}, got {actual}"

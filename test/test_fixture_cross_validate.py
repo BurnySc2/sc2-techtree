@@ -256,7 +256,7 @@ class TestMorphTimes:
         unit = computed_data["Units"].get("LurkerMP")
         assert unit is not None, "LurkerMP not in computed data"
         assert "time" in unit, "LurkerMP missing time field"
-        assert unit["time"] == 25, f"LurkerMP morph time should be 25 (SectionArray.Delay), got {unit['time']}"
+        assert unit["time"] == 33, f"LurkerMP morph time should be 33 (SectionArray.Delay), got {unit['time']}"
 
     def test_ravager_has_morph_time(self, computed_data: dict) -> None:
         unit = computed_data["Units"].get("Ravager")

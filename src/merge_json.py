@@ -344,6 +344,10 @@ def merge_objects(base: dict, override: dict) -> dict:
         if key == "index":
             continue
         if key in ARRAY_TAGS:
+            if key in base:
+                merge_values(base, override, key)
+            else:
+                base[key] = deepcopy(override_val)
             continue
         if key not in base:
             base[key] = deepcopy(override_val)

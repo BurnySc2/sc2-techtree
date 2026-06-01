@@ -3865,6 +3865,14 @@
       "race": "Terran"
     },
     "WarpGate": {
+      "produces": [
+        "Adept",
+        "DarkTemplar",
+        "HighTemplar",
+        "Sentry",
+        "Stalker",
+        "Zealot"
+      ],
       "race": "Protoss"
     },
     "WarpPrism": {

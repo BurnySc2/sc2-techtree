@@ -15634,11 +15634,20 @@
           "Requirements": "HaveDarkShrine",
           "State": "Restricted"
         },
-        "Cooldown": {
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "Flags": {
+            "EnableChargeTimeQueuing": 1
+          },
           "Link": "WarpGateTrain",
-          "TimeUse": "45"
+          "TimeUse": 45
         },
-        "Time": "5",
+        "Cooldown": {
+          "TimeUse": "0"
+        },
+        "Time": "16",
         "Unit": "DarkTemplar",
         "index": "Train5"
       },
@@ -15648,11 +15657,20 @@
           "Requirements": "HaveTemplarArchives",
           "State": "Restricted"
         },
-        "Cooldown": {
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "Flags": {
+            "EnableChargeTimeQueuing": 1
+          },
           "Link": "WarpGateTrain",
-          "TimeUse": "45"
+          "TimeUse": 45
         },
-        "Time": "5",
+        "Cooldown": {
+          "TimeUse": "0"
+        },
+        "Time": "16",
         "Unit": "HighTemplar",
         "index": "Train4"
       },
@@ -15662,11 +15680,20 @@
           "Requirements": "HaveCyberneticsCore",
           "State": "Restricted"
         },
-        "Cooldown": {
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "Flags": {
+            "EnableChargeTimeQueuing": 1
+          },
           "Link": "WarpGateTrain",
-          "TimeUse": "32"
+          "TimeUse": 32
         },
-        "Time": "5",
+        "Cooldown": {
+          "TimeUse": "0"
+        },
+        "Time": "16",
         "Unit": "Sentry",
         "index": "Train6"
       },
@@ -15676,24 +15703,66 @@
           "Requirements": "HaveCyberneticsCore",
           "State": "Restricted"
         },
-        "Cooldown": {
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "Flags": {
+            "EnableChargeTimeQueuing": 1
+          },
           "Link": "WarpGateTrain",
-          "TimeUse": "32"
+          "TimeUse": 32
         },
-        "Time": "5",
+        "Cooldown": {
+          "TimeUse": "0"
+        },
+        "Time": "16",
         "Unit": "Stalker",
         "index": "Train2"
+      },
+      {
+        "Button": {
+          "DefaultButtonFace": "WarpInAdept",
+          "Requirements": "HaveCyberneticsCore",
+          "State": "Restricted"
+        },
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "Flags": {
+            "EnableChargeTimeQueuing": 1
+          },
+          "Link": "WarpGateTrain",
+          "TimeUse": 28
+        },
+        "Cooldown": {
+          "Link": "WarpGateTrain"
+        },
+        "Time": "16",
+        "Unit": "Adept",
+        "index": "Train7"
       },
       {
         "Button": {
           "DefaultButtonFace": "Zealot",
           "State": "Restricted"
         },
-        "Cooldown": {
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "Flags": {
+            "EnableChargeTimeQueuing": 1
+          },
           "Link": "WarpGateTrain",
-          "TimeUse": "23"
+          "TimeStart": 30,
+          "TimeUse": 28
         },
-        "Time": "5",
+        "Cooldown": {
+          "TimeUse": "0"
+        },
+        "Time": "16",
         "Unit": "Zealot",
         "index": "Train1"
       }
