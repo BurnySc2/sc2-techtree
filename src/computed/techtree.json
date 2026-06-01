@@ -95,11 +95,11 @@
     },
     "MorphToGhostAlternate": {
       "morphsto": "GhostAlternate",
-      "race": ""
+      "race": "Terran"
     },
     "MorphToGhostNova": {
       "morphsto": "GhostNova",
-      "race": ""
+      "race": "Terran"
     },
     "MorphToGuardianMP": {
       "morphsto": "GuardianMP",
@@ -301,130 +301,130 @@
       "race": "Protoss"
     },
     "AiurLightBridgeAbandonedNE10": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNE12": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNE8": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNW10": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNW12": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNW8": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeAbandonedNW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNE10": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNE12": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNE8": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNW10": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNW12": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNW8": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurLightBridgeNW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleNE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleNE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleNE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleNW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleNW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleNW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleSE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleSE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleSE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleSW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleSW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeDestructibleSW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeNE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeNE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeNE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeNW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeNW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "AiurTempleBridgeNW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "Anteplott": {
       "race": ""
@@ -563,16 +563,10 @@
       "race": "Terran"
     },
     "BarracksReactor": {
-      "race": "Terran",
-      "requires": [
-        "HasQueuedAddon"
-      ]
+      "race": "Terran"
     },
     "BarracksTechLab": {
-      "race": "",
-      "requires": [
-        "HasQueuedAddon"
-      ],
+      "race": "Terran",
       "researches": [
         "PunisherGrenades",
         "ShieldWall",
@@ -707,13 +701,13 @@
       "race": "Zerg"
     },
     "Broodling": {
-      "race": ""
+      "race": "Zerg"
     },
     "BroodlingDefault": {
       "race": "Zerg"
     },
     "BroodlingEscort": {
-      "race": ""
+      "race": "Zerg"
     },
     "BrutaliskACGluescreenDummy": {
       "race": ""
@@ -770,10 +764,10 @@
       "race": "Zerg"
     },
     "ChangelingZergling": {
-      "race": ""
+      "race": "Zerg"
     },
     "ChangelingZerglingWings": {
-      "race": ""
+      "race": "Zerg"
     },
     "CleaningBot": {
       "race": ""
@@ -1383,7 +1377,7 @@
       ],
       "researches": [
         "HiSecAutoTracking",
-        "NeosteelFrame",
+        "TerranBuildingArmor",
         "TerranInfantryArmorsLevel1",
         "TerranInfantryArmorsLevel2",
         "TerranInfantryArmorsLevel3",
@@ -1417,43 +1411,43 @@
       "race": "Terran"
     },
     "ExtendingBridgeNEWide10": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNEWide10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNEWide12": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNEWide12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNEWide8": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNEWide8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNWWide10": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNWWide10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNWWide12": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNWWide12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNWWide8": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNWWide8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ExtendingBridgeNoMinimap": {
-      "race": ""
+      "race": "Terran"
     },
     "Extractor": {
       "race": "Zerg"
@@ -1477,7 +1471,8 @@
         "Hellion",
         "HellionTank",
         "SiegeTank",
-        "Thor"
+        "Thor",
+        "WidowMine"
       ],
       "race": "Terran",
       "requires": [
@@ -1497,16 +1492,10 @@
       "race": "Terran"
     },
     "FactoryReactor": {
-      "race": "Terran",
-      "requires": [
-        "HasQueuedAddon"
-      ]
+      "race": "Terran"
     },
     "FactoryTechLab": {
-      "race": "",
-      "requires": [
-        "HasQueuedAddon"
-      ],
+      "race": "Terran",
       "researches": [
         "CycloneLockOnDamageUpgrade",
         "DrillClaws",
@@ -1624,22 +1613,22 @@
       "morphsto": [
         "GhostNova"
       ],
-      "race": ""
+      "race": "Terran"
     },
     "GhostMengskACGluescreenDummy": {
       "race": ""
     },
     "GhostNova": {
-      "race": ""
+      "race": "Terran"
     },
     "GlaiveWurmBounceWeapon": {
-      "race": ""
+      "race": "Zerg"
     },
     "GlaiveWurmM2Weapon": {
-      "race": ""
+      "race": "Zerg"
     },
     "GlaiveWurmM3Weapon": {
-      "race": ""
+      "race": "Zerg"
     },
     "GlaiveWurmWeapon": {
       "race": "Zerg"
@@ -2324,7 +2313,7 @@
       "race": ""
     },
     "ObserverSiegeMode": {
-      "race": ""
+      "race": "Protoss"
     },
     "OmegaNetworkACGluescreenDummy": {
       "race": ""
@@ -2388,7 +2377,7 @@
       "race": ""
     },
     "OverseerSiegeMode": {
-      "race": ""
+      "race": "Zerg"
     },
     "OverseerZagaraACGluescreenDummy": {
       "race": ""
@@ -2502,148 +2491,148 @@
       "race": "Terran"
     },
     "PortCity_Bridge_UnitE10": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitE12": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitE8": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitN10": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitN10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitN12": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitN12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitN8": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitN8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNE10": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNE12": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNE8": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNW10": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNW12": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNW8": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitNW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitS10": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitS10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitS12": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitS12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitS8": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitS8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSE10": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSE12": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSE8": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSW10": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSW12": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSW8": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitSW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitW10": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitW12": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitW8": {
-      "race": ""
+      "race": "Terran"
     },
     "PortCity_Bridge_UnitW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "PreviewBunkerUpgraded": {
       "race": "Terran"
@@ -2726,7 +2715,7 @@
       "race": "Protoss"
     },
     "PylonOvercharged": {
-      "race": ""
+      "race": "Protoss"
     },
     "Queen": {
       "builds": [
@@ -3018,40 +3007,40 @@
       "race": ""
     },
     "ShakurasLightBridgeNE10": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNE12": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNE8": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNW10": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNW12": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNW8": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasLightBridgeNW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "ShakurasVespeneGeyser": {
       "race": ""
@@ -3339,16 +3328,16 @@
       "race": ""
     },
     "SnowRefinery_Terran_ExtendingBridgeNEShort8": {
-      "race": ""
+      "race": "Terran"
     },
     "SnowRefinery_Terran_ExtendingBridgeNEShort8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "SnowRefinery_Terran_ExtendingBridgeNWShort8": {
-      "race": ""
+      "race": "Terran"
     },
     "SnowRefinery_Terran_ExtendingBridgeNWShort8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "SpacePlatformGeyser": {
       "race": ""
@@ -3498,16 +3487,10 @@
       "race": "Terran"
     },
     "StarportReactor": {
-      "race": "Terran",
-      "requires": [
-        "HasQueuedAddon"
-      ]
+      "race": "Terran"
     },
     "StarportTechLab": {
-      "race": "",
-      "requires": [
-        "HasQueuedAddon"
-      ],
+      "race": "Terran",
       "researches": [
         "BansheeCloak",
         "BansheeSpeed",
@@ -4068,76 +4051,76 @@
       "race": ""
     },
     "XelNaga_Caverns_Floating_BridgeH10": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeH10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeH12": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeH12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeH8": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeH8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNE10": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNE10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNE12": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNE12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNE8": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNE8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNW10": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNW10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNW12": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNW12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNW8": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeNW8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeV10": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeV10Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeV12": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeV12Out": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeV8": {
-      "race": ""
+      "race": "Terran"
     },
     "XelNaga_Caverns_Floating_BridgeV8Out": {
-      "race": ""
+      "race": "Terran"
     },
     "YamatoWeapon": {
       "race": "Terran"
@@ -4315,9 +4298,6 @@
     "MicrobialShroud": {
       "requires": []
     },
-    "NeosteelFrame": {
-      "requires": []
-    },
     "NeuralParasite": {
       "requires": []
     },
@@ -4418,6 +4398,9 @@
       "requires": []
     },
     "TempestGroundAttackUpgrade": {
+      "requires": []
+    },
+    "TerranBuildingArmor": {
       "requires": []
     },
     "TerranInfantryArmorsLevel1": {

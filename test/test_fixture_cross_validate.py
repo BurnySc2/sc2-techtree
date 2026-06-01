@@ -210,9 +210,6 @@ class TestGasCostConsistency:
 
 class TestComputedUnitsHaveRequiredFields:
     KNOWN_UNITS_WITHOUT_COST = {
-        "BarracksTechLab",
-        "FactoryTechLab",
-        "StarportTechLab",
         "CollapsiblePurifierTowerDebris",
         "CollapsibleRockTowerDebris",
         "CollapsibleRockTowerDebrisRampLeft",

@@ -803,6 +803,66 @@ class TestWarpGateProduces:
         )
 
 
+class TestTechLabCostResource:
+    """TechLab units should have CostResource with Minerals=50 and Vespene=25.
+
+    Regression test: TechLab entries in data.json were missing CostResource
+    because the parent TechLab unit's cost data was not being inherited by
+    BarracksTechLab, FactoryTechLab, and StarportTechLab.
+    """
+
+    TECH_LABS = ["BarracksTechLab", "FactoryTechLab", "StarportTechLab"]
+
+    @pytest.mark.parametrize("unit_name", TECH_LABS)
+    def test_techlab_has_cost_resource(self, computed_data: dict, unit_name: str) -> None:
+        """Each TechLab should have a CostResource field."""
+        unit = computed_data["Units"][unit_name]
+        assert "CostResource" in unit, f"{unit_name} should have CostResource"
+
+    @pytest.mark.parametrize("unit_name", TECH_LABS)
+    def test_techlab_minerals(self, computed_data: dict, unit_name: str) -> None:
+        """Each TechLab should cost 50 minerals."""
+        unit = computed_data["Units"][unit_name]
+        minerals = unit.get("CostResource", {}).get("Minerals")
+        assert minerals == 50, f"{unit_name} minerals should be 50, got {minerals}"
+
+    @pytest.mark.parametrize("unit_name", TECH_LABS)
+    def test_techlab_vespene(self, computed_data: dict, unit_name: str) -> None:
+        """Each TechLab should cost 25 vespene."""
+        unit = computed_data["Units"][unit_name]
+        vespene = unit.get("CostResource", {}).get("Vespene")
+        assert vespene == 25, f"{unit_name} vespene should be 25, got {vespene}"
+
+
+class TestReactorCostResource:
+    """Reactor units should have CostResource with Minerals=50 and Vespene=50.
+
+    Verifies that all three Reactor variants have correct cost data.
+    """
+
+    REACTORS = ["BarracksReactor", "FactoryReactor", "StarportReactor"]
+
+    @pytest.mark.parametrize("unit_name", REACTORS)
+    def test_reactor_has_cost_resource(self, computed_data: dict, unit_name: str) -> None:
+        """Each Reactor should have a CostResource field."""
+        unit = computed_data["Units"][unit_name]
+        assert "CostResource" in unit, f"{unit_name} should have CostResource"
+
+    @pytest.mark.parametrize("unit_name", REACTORS)
+    def test_reactor_minerals(self, computed_data: dict, unit_name: str) -> None:
+        """Each Reactor should cost 50 minerals."""
+        unit = computed_data["Units"][unit_name]
+        minerals = unit.get("CostResource", {}).get("Minerals")
+        assert minerals == 50, f"{unit_name} minerals should be 50, got {minerals}"
+
+    @pytest.mark.parametrize("unit_name", REACTORS)
+    def test_reactor_vespene(self, computed_data: dict, unit_name: str) -> None:
+        """Each Reactor should cost 50 vespene."""
+        unit = computed_data["Units"][unit_name]
+        vespene = unit.get("CostResource", {}).get("Vespene")
+        assert vespene == 50, f"{unit_name} vespene should be 50, got {vespene}"
+
+
 class TestBuildTimesNotOverwrittenByMorph:
     """Build times should come from build/train abilities, not morph animation delays."""
 

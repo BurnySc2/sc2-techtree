@@ -193,6 +193,18 @@ class TestFactory:
         assert "produces" in factory
         assert "WarHound" not in factory["produces"]
 
+    def test_factory_produces(self, techtree_data: dict) -> None:
+        factory = techtree_data["Units"]["Factory"]
+        assert "produces" in factory
+        assert factory["produces"] == [
+            "Cyclone",
+            "Hellion",
+            "HellionTank",
+            "SiegeTank",
+            "Thor",
+            "WidowMine",
+        ]
+
 
 class TestRoboticsFacility:
     def test_robotics_facility_produces(self, techtree_data: dict) -> None:
@@ -235,6 +247,16 @@ class TestBarracksTechLab:
             "Stimpack",
         ]
 
+    def test_barracks_tech_lab_race(self, techtree_data: dict) -> None:
+        lab = techtree_data["Units"]["BarracksTechLab"]
+        assert lab["race"] == "Terran"
+
+    def test_barracks_tech_lab_requires_no_has_queued_addon(self, techtree_data: dict) -> None:
+        """HasQueuedAddon is an internal game mechanic, not a real building requirement."""
+        lab = techtree_data["Units"]["BarracksTechLab"]
+        requires = lab.get("requires", [])
+        assert "HasQueuedAddon" not in requires
+
 
 class TestUltraliskCavern:
     def test_ultralisk_cavern_researches(self, techtree_data: dict) -> None:
@@ -257,6 +279,16 @@ class TestFactoryTechLab:
             "TransformationServos",
         ]
 
+    def test_factory_tech_lab_race(self, techtree_data: dict) -> None:
+        lab = techtree_data["Units"]["FactoryTechLab"]
+        assert lab["race"] == "Terran"
+
+    def test_factory_tech_lab_requires_no_has_queued_addon(self, techtree_data: dict) -> None:
+        """HasQueuedAddon is an internal game mechanic, not a real building requirement."""
+        lab = techtree_data["Units"]["FactoryTechLab"]
+        requires = lab.get("requires", [])
+        assert "HasQueuedAddon" not in requires
+
 
 class TestStarportTechLab:
     def test_starport_tech_lab_researches(self, techtree_data: dict) -> None:
@@ -267,6 +299,40 @@ class TestStarportTechLab:
             "BansheeSpeed",
             "InterferenceMatrix",
         ]
+
+    def test_starport_tech_lab_race(self, techtree_data: dict) -> None:
+        lab = techtree_data["Units"]["StarportTechLab"]
+        assert lab["race"] == "Terran"
+
+    def test_starport_tech_lab_requires_no_has_queued_addon(self, techtree_data: dict) -> None:
+        """HasQueuedAddon is an internal game mechanic, not a real building requirement."""
+        lab = techtree_data["Units"]["StarportTechLab"]
+        requires = lab.get("requires", [])
+        assert "HasQueuedAddon" not in requires
+
+
+class TestBarracksReactor:
+    def test_barracks_reactor_requires_no_has_queued_addon(self, techtree_data: dict) -> None:
+        """HasQueuedAddon is an internal game mechanic, not a real building requirement."""
+        reactor = techtree_data["Units"]["BarracksReactor"]
+        requires = reactor.get("requires", [])
+        assert "HasQueuedAddon" not in requires
+
+
+class TestFactoryReactor:
+    def test_factory_reactor_requires_no_has_queued_addon(self, techtree_data: dict) -> None:
+        """HasQueuedAddon is an internal game mechanic, not a real building requirement."""
+        reactor = techtree_data["Units"]["FactoryReactor"]
+        requires = reactor.get("requires", [])
+        assert "HasQueuedAddon" not in requires
+
+
+class TestStarportReactor:
+    def test_starport_reactor_requires_no_has_queued_addon(self, techtree_data: dict) -> None:
+        """HasQueuedAddon is an internal game mechanic, not a real building requirement."""
+        reactor = techtree_data["Units"]["StarportReactor"]
+        requires = reactor.get("requires", [])
+        assert "HasQueuedAddon" not in requires
 
 
 class TestCyberneticsCore:
@@ -295,7 +361,7 @@ class TestEngineeringBay:
         assert "researches" in bay
         assert bay["researches"] == [
             "HiSecAutoTracking",
-            "NeosteelFrame",
+            "TerranBuildingArmor",
             "TerranInfantryArmorsLevel1",
             "TerranInfantryArmorsLevel2",
             "TerranInfantryArmorsLevel3",
@@ -307,7 +373,7 @@ class TestEngineeringBay:
     def test_engineering_bay_researches_excludes_terran_building_armor(self, techtree_data: dict) -> None:
         bay = techtree_data["Units"]["EngineeringBay"]
         assert "researches" in bay
-        assert "TerranBuildingArmor" not in bay["researches"]
+        assert "NeosteelFrame" not in bay["researches"]
 
 
 class TestFleetBeacon:

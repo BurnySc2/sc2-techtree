@@ -38,6 +38,12 @@ MORPH_EXCLUDE: set[str] = set()
 # Units that should NOT appear in Larva's produces list (not trainable from Larva)
 LARVA_EXCLUDE = {"Baneling"}
 
+# Units that have ObjectFamily:Campaign in EditorCategories but are actually standard melee units
+CAMPAIGN_EXCLUDE = {
+    "WidowMine",
+    "WidowMineBurrowed",
+}
+
 
 def _load_cocoon_units(units_data: Any) -> set[str]:
     """Extract cocoon-type units from UnitData (units whose id contains 'Cocoon')."""
@@ -78,7 +84,7 @@ SHARED_RESEARCH_EXCLUDE = {
 # Global research exclusions - items that appear in game data but aren't actual researches
 RESEARCH_EXCLUDE = {
     "haltech",  # not a research (CyberneticsCore)
-    "TerranBuildingArmor",  # not EngineeringBay research
+    "NeosteelFrame",  # not a techtree research
     "ImmortalRevive",  # not RoboticsBay research
     "RoachSupply",  # not RoachWarren research
     "LocustLifetimeIncrease",  # not InfestationPit research
@@ -90,6 +96,11 @@ RESEARCH_EXCLUDE = {
     "AmplifiedShielding",  # not TwilightCouncil research
     "overlordtransport",  # not a research
     "SecretedCoating",  # not a EvolutionChamper research
+}
+
+# Requirements to exclude - internal game mechanics, not real building requirements
+REQUIREMENT_EXCLUDE = {
+    "HasQueuedAddon",  # internal addon slot occupancy flag
 }
 
 
@@ -187,7 +198,7 @@ STRUCTURE_ADDITIONAL_RESEARCHES = {
     "FusionCore": ["LiberatorAGRangeUpgrade"],
     "HydraliskDen": ["Frenzy"],
     "InfestationPit": ["MicrobialShroud"],
-    "EngineeringBay": ["HiSecAutoTracking"],
+    "EngineeringBay": ["HiSecAutoTracking", "TerranBuildingArmor"],
 }
 
 
@@ -212,6 +223,9 @@ def parse_requirement(req: str) -> list[str]:
             result.append(name)
         elif part.startswith("Learn"):
             # Skip LearnX requirements - these are prerequisite unlocks
+            pass
+        elif part in REQUIREMENT_EXCLUDE:
+            # Skip internal game mechanic requirements
             pass
         else:
             result.append(part)
@@ -298,6 +312,9 @@ def is_structure(data: dict) -> bool:
 def is_campaign_unit(data: dict) -> bool:
     """Check if a unit is from Campaign (should be excluded)."""
     if isinstance(data, dict):
+        unit_id = data.get("id", "")
+        if unit_id in CAMPAIGN_EXCLUDE:
+            return False
         editor_categories = data.get("EditorCategories", "")
         if isinstance(editor_categories, list):
             return EDITOR_CAT_CAMPAIGN in editor_categories
@@ -305,14 +322,31 @@ def is_campaign_unit(data: dict) -> bool:
     return False
 
 
-def get_race(data: dict) -> str:
-    """Get the race of a unit/structure."""
-    if isinstance(data, dict):
-        race = data.get("Race", "")
-        if isinstance(race, list):
-            race = race[0] if race else ""
+def get_race(data: dict, units_data: dict | None = None, _visited: set | None = None) -> str:
+    """Get the race of a unit/structure, following parent inheritance if needed."""
+    if not isinstance(data, dict):
+        return ""
+    race = data.get("Race", "")
+    if isinstance(race, list):
+        race = race[0] if race else ""
+    if race:
         return RACE_MAP.get(race, race)
-    return ""
+    # No direct Race field — follow parent inheritance
+    if units_data is None:
+        return ""
+    parent = data.get("parent", "")
+    if not parent or parent not in units_data:
+        return ""
+    # Guard against circular references
+    if _visited is None:
+        _visited = set()
+    if parent in _visited:
+        return ""
+    _visited.add(parent)
+    parent_data = units_data[parent]
+    if not isinstance(parent_data, dict):
+        return ""
+    return get_race(parent_data, units_data, _visited)
 
 
 def _match_ability_to_structure(
@@ -497,7 +531,7 @@ def generate_techtree() -> dict:
         if not isinstance(unit_data, dict):
             continue
 
-        race = get_race(unit_data)
+        race = get_race(unit_data, units_data)
         entry: dict[str, Any] = {"race": race}
 
         produces: list[str] = []
@@ -630,7 +664,7 @@ def generate_techtree() -> dict:
 
                     race = ""
                     if isinstance(morph_target, str) and morph_target in units_data:
-                        race = get_race(units_data[morph_target])
+                        race = get_race(units_data[morph_target], units_data)
 
                     requires = []
                     cmd_buttons = abil_data.get("CmdButtonArray", [])
@@ -653,7 +687,7 @@ def generate_techtree() -> dict:
             if target:
                 race = ""
                 if target in units_data:
-                    race = get_race(units_data[target])
+                    race = get_race(units_data[target], units_data)
                 abilities[abil_name] = {
                     "morphsto": target,
                     "race": race,

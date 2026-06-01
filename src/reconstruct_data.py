@@ -410,7 +410,7 @@ def _process_unit(
 ) -> None:
     """Handle unit abilities, builds, produces, morphsto, requirements."""
     unit_info = units_section.get(name, {})
-    unit_full_data = unit_data.get(name, {})
+    unit_full_data = resolve_parent_fields(name, unit_data)
 
     # Handle unit's produces field (e.g., Larva produces units)
     produces = unit_info.get(FIELD_PRODUCES, [])
@@ -546,7 +546,7 @@ def _process_structure(
                             enqueue_if_new(queue, visited_units, "unit", unit_name)
 
     # Add abilities from this structure's AbilArray (from UnitData.json)
-    structure_full_data = unit_data.get(name, {}) if unit_data else {}
+    structure_full_data = resolve_parent_fields(name, unit_data) if unit_data else {}
     abil_array = structure_full_data.get(FIELD_ABIL_ARRAY, [])
     for ability_entry in abil_array:
         ability_name = extract_abil_name(ability_entry)
@@ -798,6 +798,28 @@ def _bfs_traversal(
     }
 
 
+def resolve_parent_fields(unit_name: str, unit_data: dict, _visited: set | None = None) -> dict:
+    """Resolve inherited fields from parent unit. Child fields take precedence."""
+    if _visited is None:
+        _visited = set()
+    if unit_name in _visited:
+        return {}
+    _visited.add(unit_name)
+
+    data = unit_data.get(unit_name, {})
+    if not isinstance(data, dict):
+        return {}
+
+    parent = data.get("parent")
+    if parent and parent in unit_data:
+        parent_data = resolve_parent_fields(parent, unit_data, _visited)
+        merged = {}
+        merged.update(parent_data)
+        merged.update(data)
+        return merged
+    return data
+
+
 def _build_result(
     visited_sets: VisitedSets,
     units_section: dict,
@@ -829,7 +851,7 @@ def _build_result(
     # Populate units with full data from UnitData.json
     for unit_name in visited_units:
         unit_entry = units_section.get(unit_name, {})
-        full_data = unit_data.get(unit_name, {})
+        full_data = resolve_parent_fields(unit_name, unit_data)
         merged = merge_entry(unit_name, unit_entry, full_data)
         merged["type"] = "unit"
         # Filter builds to exclude mercenary buildings for SCV
@@ -843,7 +865,7 @@ def _build_result(
     # Populate structures with full data - structures are now in units_section
     for structure_name in visited_structures:
         structure_entry = units_section.get(structure_name, {})
-        full_data = unit_data.get(structure_name, {})
+        full_data = resolve_parent_fields(structure_name, unit_data)
         merged = merge_entry(structure_name, structure_entry, full_data)
         merged["type"] = "structure"
         # Filter builds to exclude mercenary buildings for SCV (handles structures loop)
