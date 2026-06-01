@@ -5,6 +5,9 @@ BUTTON_INDEX_EXECUTE = "Execute"
 
 REQUIREMENT_NAME_FIXES = {
     "RoboticsFa": "RoboticsFacility",
+    "TemplarArchives": "TemplarArchive",
+    "LurkerDen": "LurkerDenMP",
+    "BanelingNest2": "RoachWarren",
 }
 
 

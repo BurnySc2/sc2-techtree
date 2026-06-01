@@ -765,6 +765,32 @@ class TestDictTypeAbilDataEntries:
             assert len(extra_keys) > 0, f"{ability_name} only has name/id, expected full AbilData fields"
 
 
+class TestArchon:
+    """Archon should be present in computed data with correct attributes.
+
+    Regression test: Archon was missing from computed data because ArchonWarp
+    (a dict-type CAbilMerge ability) was not being processed correctly.
+    """
+
+    def test_archon_exists_in_units(self, computed_data: dict) -> None:
+        """Archon should be present in Units section."""
+        assert "Archon" in computed_data["Units"], "Archon should exist in computed data Units"
+
+    def test_archon_is_protoss_unit(self, computed_data: dict) -> None:
+        """Archon should be a Protoss unit."""
+        archon = computed_data["Units"]["Archon"]
+        assert archon.get("race") == "Protoss", f"Archon race should be Protoss, got {archon.get('race')}"
+        assert archon.get("type") == "unit", f"Archon type should be unit, got {archon.get('type')}"
+
+    def test_archon_warp_morphsto_archon(self, computed_data: dict) -> None:
+        """ArchonWarp ability should have morphsto pointing to Archon."""
+        assert "ArchonWarp" in computed_data["Abilities"], "ArchonWarp should exist in Abilities"
+        archon_warp = computed_data["Abilities"]["ArchonWarp"]
+        assert archon_warp.get("morphsto") == "Archon", (
+            f"ArchonWarp morphsto should be Archon, got {archon_warp.get('morphsto')}"
+        )
+
+
 class TestGatewayBuildTimes:
     """Gateway units should use train time, not warp-in time."""
 

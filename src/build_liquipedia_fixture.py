@@ -69,7 +69,7 @@ PROTOSS_STRUCTURES = {
     "FleetBeacon",
     "RoboticsBay",
     "RoboticsFacility",
-    "TemplarArchives",
+    "TemplarArchive",
     "DarkShrine",
     "Battlecruiser",
     "Mothership",

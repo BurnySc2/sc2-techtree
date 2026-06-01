@@ -119,6 +119,51 @@ class TestMorphToBaneling:
         assert morph["requires"] == ["BanelingNest"]
 
 
+class TestBanelingNestNotRoachWarren:
+    """BanelingNest should unlock Banelings, not Roaches.
+
+    Regression test: BanelingNest2 in the XML data was incorrectly mapped to
+    BanelingNest instead of RoachWarren, causing Roach/Ravager to appear in
+    BanelingNest's unlocks.
+    """
+
+    def test_baneling_nest_unlocks_baneling(self, techtree_data: dict) -> None:
+        """BanelingNest should unlock Baneling."""
+        nest = techtree_data["Units"]["BanelingNest"]
+        assert "unlocks" in nest
+        assert "Baneling" in nest["unlocks"]
+
+    def test_baneling_nest_does_not_unlock_roach(self, techtree_data: dict) -> None:
+        """BanelingNest should NOT unlock Roach (that belongs to RoachWarren)."""
+        nest = techtree_data["Units"]["BanelingNest"]
+        unlocks = nest.get("unlocks", [])
+        assert "Roach" not in unlocks
+
+    def test_baneling_nest_does_not_unlock_ravager(self, techtree_data: dict) -> None:
+        """BanelingNest should NOT unlock Ravager (that belongs to RoachWarren)."""
+        nest = techtree_data["Units"]["BanelingNest"]
+        unlocks = nest.get("unlocks", [])
+        assert "Ravager" not in unlocks
+
+    def test_baneling_nest_does_not_unlock_ravager_cocoon(self, techtree_data: dict) -> None:
+        """BanelingNest should NOT unlock RavagerCocoon (that belongs to RoachWarren)."""
+        nest = techtree_data["Units"]["BanelingNest"]
+        unlocks = nest.get("unlocks", [])
+        assert "RavagerCocoon" not in unlocks
+
+    def test_roach_warren_unlocks_roach(self, techtree_data: dict) -> None:
+        """RoachWarren should unlock Roach."""
+        warren = techtree_data["Units"]["RoachWarren"]
+        assert "unlocks" in warren
+        assert "Roach" in warren["unlocks"]
+
+    def test_roach_warren_unlocks_ravager(self, techtree_data: dict) -> None:
+        """RoachWarren should unlock Ravager."""
+        warren = techtree_data["Units"]["RoachWarren"]
+        assert "unlocks" in warren
+        assert "Ravager" in warren["unlocks"]
+
+
 class TestLarva:
     def test_larva_morphsto(self, techtree_data: dict) -> None:
         larva = techtree_data["Units"]["Larva"]
@@ -232,6 +277,19 @@ class TestTemplarArchive:
         archive = techtree_data["Units"]["TemplarArchive"]
         assert "researches" in archive
         assert archive["researches"] == ["PsiStormTech"]
+
+    def test_high_templar_requires_templar_archive_not_archives(self, techtree_data: dict) -> None:
+        """HighTemplar should require 'TemplarArchive' (singular), not 'TemplarArchives'."""
+        high_templar = techtree_data["Units"]["HighTemplar"]
+        assert "requires" in high_templar
+        assert "TemplarArchive" in high_templar["requires"]
+        assert "TemplarArchives" not in high_templar["requires"]
+
+    def test_templar_archive_unlocks_high_templar(self, techtree_data: dict) -> None:
+        """TemplarArchive should unlock HighTemplar."""
+        archive = techtree_data["Units"]["TemplarArchive"]
+        assert "unlocks" in archive
+        assert "HighTemplar" in archive["unlocks"]
 
 
 class TestTwilightCouncil:
@@ -462,6 +520,12 @@ class TestLurkerDenMP:
             "DiggingClaws",
             "LurkerRange",
         ]
+
+    def test_lurker_den_mp_unlocks_lurker(self, techtree_data: dict) -> None:
+        """LurkerDenMP should exist and unlock LurkerMP."""
+        den = techtree_data["Units"]["LurkerDenMP"]
+        assert "unlocks" in den
+        assert "LurkerMP" in den["unlocks"]
 
 
 class TestRoachWarren:

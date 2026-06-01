@@ -1,5 +1,9 @@
 {
   "Abilities": {
+    "ArchonWarp": {
+      "morphsto": "Archon",
+      "race": "Protoss"
+    },
     "BarracksLiftOff": {
       "morphsto": "BarracksFlying",
       "race": "Terran"
@@ -127,7 +131,7 @@
       ],
       "race": "",
       "requires": [
-        "LurkerDen"
+        "LurkerDenMP"
       ]
     },
     "MorphToMothership": {
@@ -148,7 +152,7 @@
       "morphsto": "Ravager",
       "race": "Zerg",
       "requires": [
-        "BanelingNest2"
+        "RoachWarren"
       ]
     },
     "MorphToSwarmHostBurrowedMP": {
@@ -1071,6 +1075,9 @@
       ]
     },
     "DarkTemplar": {
+      "morphsto": [
+        "Archon"
+      ],
       "race": "Protoss",
       "requires": [
         "DarkShrine"
@@ -1790,9 +1797,12 @@
       "race": ""
     },
     "HighTemplar": {
+      "morphsto": [
+        "Archon"
+      ],
       "race": "Protoss",
       "requires": [
-        "TemplarArchives"
+        "TemplarArchive"
       ]
     },
     "HighTemplarACGluescreenDummy": {
@@ -2151,12 +2161,16 @@
       "researches": [
         "DiggingClaws",
         "LurkerRange"
+      ],
+      "unlocks": [
+        "LurkerMP",
+        "LurkerMPEgg"
       ]
     },
     "LurkerMP": {
       "race": "Zerg",
       "requires": [
-        "LurkerDen",
+        "LurkerDenMP",
         "UseLurkerAspectMP"
       ]
     },
@@ -2170,7 +2184,7 @@
       ],
       "race": "Zerg",
       "requires": [
-        "LurkerDen",
+        "LurkerDenMP",
         "UseLurkerAspectMP"
       ]
     },
@@ -2827,7 +2841,7 @@
     "Ravager": {
       "race": "Zerg",
       "requires": [
-        "BanelingNest2"
+        "RoachWarren"
       ]
     },
     "RavagerACGluescreenDummy": {
@@ -2842,7 +2856,7 @@
       ],
       "race": "Zerg",
       "requires": [
-        "BanelingNest2"
+        "RoachWarren"
       ]
     },
     "RavagerCorrosiveBileMissile": {
@@ -2964,6 +2978,11 @@
       "researches": [
         "GlialReconstitution",
         "TunnelingClaws"
+      ],
+      "unlocks": [
+        "Ravager",
+        "RavagerCocoon",
+        "Roach"
       ]
     },
     "RoboticsBay": {
@@ -3696,6 +3715,9 @@
       ],
       "researches": [
         "PsiStormTech"
+      ],
+      "unlocks": [
+        "HighTemplar"
       ]
     },
     "TestZerg": {

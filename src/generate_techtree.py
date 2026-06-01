@@ -58,6 +58,9 @@ def _load_cocoon_units(units_data: Any) -> set[str]:
 # Requirement name fixes (maps incorrect names to correct ones)
 REQUIREMENT_NAME_FIXES = {
     "RoboticsFa": "RoboticsFacility",
+    "TemplarArchives": "TemplarArchive",
+    "LurkerDen": "LurkerDenMP",
+    "BanelingNest2": "RoachWarren",
 }
 # Map research upgrade names to canonical names
 RESEARCH_NAME_MAP = {
@@ -289,6 +292,36 @@ def get_lift_off_target(abil_data: Any) -> str | None:
     if isinstance(abil_data, dict):
         return abil_data.get("unit")
     return None
+
+
+def _is_merge_ability(abil_data: dict) -> bool:
+    """Check if an ability is a CAbilMerge type (e.g., ArchonWarp).
+
+    CAbilMerge abilities have a CmdButtonArray with a 'SelectedUnits' index entry,
+    indicating two units are selected to merge into one.
+    """
+    cmd_buttons = abil_data.get("CmdButtonArray", [])
+    if isinstance(cmd_buttons, list):
+        for btn in cmd_buttons:
+            if isinstance(btn, dict) and btn.get("index") == "SelectedUnits":
+                return True
+    return False
+
+
+def _get_merge_target_units(units_data: dict) -> list[str]:
+    """Find units that have the Mergeable ability — these are CAbilMerge results."""
+    targets: set[str] = set()
+    for unit_name, unit_data in units_data.items():
+        if isinstance(unit_data, dict):
+            for abil_entry in unit_data.get("AbilArray", []):
+                abil_name = None
+                if isinstance(abil_entry, dict) and "Link" in abil_entry:
+                    abil_name = abil_entry["Link"]
+                elif isinstance(abil_entry, str):
+                    abil_name = abil_entry
+                if abil_name == "Mergeable":
+                    targets.add(unit_name)
+    return sorted(targets)
 
 
 def get_requirement_from_button(item: dict) -> str:
@@ -527,6 +560,9 @@ def generate_techtree() -> dict:
     global MORPH_EXCLUDE
     MORPH_EXCLUDE = _load_cocoon_units(units_data)
 
+    # Detect merge target units (units with Mergeable ability, e.g., Archon)
+    merge_target_units = _get_merge_target_units(units_data)
+
     structures: dict[str, dict] = {}
     units: dict[str, dict] = {}
     abilities: dict[str, dict] = {}
@@ -625,6 +661,13 @@ def generate_techtree() -> dict:
                 if isinstance(abil, dict):
                     target = get_lift_off_target(abil)
                     if target:
+                        morphsto = _accumulate_morphsto(morphsto, target)
+
+            # Handle CAbilMerge abilities (e.g., ArchonWarp -> Archon)
+            if not morphsto:
+                abil = abils_data.get(abil_name)
+                if isinstance(abil, dict) and _is_merge_ability(abil) and unit_name in units_data:
+                    for target in merge_target_units:
                         morphsto = _accumulate_morphsto(morphsto, target)
 
         if produces:
@@ -733,6 +776,30 @@ def generate_techtree() -> dict:
                 }
                 if requires:
                     abilities[abil_name]["requires"] = sorted(set(requires))
+
+        # Handle CAbilMerge abilities (e.g., ArchonWarp -> Archon)
+        elif _is_merge_ability(abil_data) and merge_target_units:
+            target = merge_target_units[0] if len(merge_target_units) == 1 else merge_target_units
+
+            race = ""
+            if isinstance(target, str) and target in units_data:
+                race = get_race(units_data[target], units_data)
+
+            requires = []
+            cmd_buttons = abil_data.get("CmdButtonArray", [])
+            if isinstance(cmd_buttons, list):
+                for btn in cmd_buttons:
+                    if isinstance(btn, dict) and btn.get("index") == BUTTON_INDEX_EXECUTE:
+                        req = btn.get("Requirements", "")
+                        if req:
+                            requires.extend(parse_requirement(req))
+
+            abilities[abil_name] = {
+                "morphsto": target,
+                "race": race,
+            }
+            if requires:
+                abilities[abil_name]["requires"] = sorted(set(requires))
 
     # Build structure -> upgrades mapping
     structure_to_upgrades: dict[str, list[str]] = defaultdict(list)
