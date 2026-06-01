@@ -299,6 +299,16 @@ def get_requirement_from_button(item: dict) -> str:
     return ""
 
 
+def _get_requirement_from_cmd_button(abil_data: dict) -> str:
+    """Extract requirement from CmdButtonArray Execute button (fallback for morph/upgrade abilities)."""
+    cmd_buttons = abil_data.get("CmdButtonArray", [])
+    if isinstance(cmd_buttons, list):
+        for btn in cmd_buttons:
+            if isinstance(btn, dict) and btn.get("index") == BUTTON_INDEX_EXECUTE:
+                return btn.get("Requirements", "")
+    return ""
+
+
 def is_structure(data: dict) -> bool:
     """Check if a unit is a structure."""
     if isinstance(data, dict):
@@ -460,6 +470,8 @@ def _build_ability_indices(abils_data: dict) -> tuple[dict[str, list[tuple[str, 
                 if isinstance(item, dict):
                     produced_units = get_info_units(item)
                     req = get_requirement_from_button(item)
+                    if not req:
+                        req = _get_requirement_from_cmd_button(abil_data)
                     for unit in produced_units:
                         ability_produces[abil_name].append((unit, req))
                     if _is_research_ability(abil_name):
@@ -469,6 +481,8 @@ def _build_ability_indices(abils_data: dict) -> tuple[dict[str, list[tuple[str, 
         elif isinstance(info, dict):
             produced_units = get_info_units(info)
             req = get_requirement_from_button(info)
+            if not req:
+                req = _get_requirement_from_cmd_button(abil_data)
             for unit in produced_units:
                 ability_produces[abil_name].append((unit, req))
             # Extract upgrades from dict InfoArray for research abilities

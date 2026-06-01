@@ -23,7 +23,7 @@ class TestBarracks:
     def test_barracks_unlocks(self, techtree_data: dict) -> None:
         barracks = techtree_data["Units"]["Barracks"]
         assert "unlocks" in barracks
-        assert barracks["unlocks"] == ["Bunker", "Factory", "GhostAcademy"]
+        assert barracks["unlocks"] == ["Bunker", "Factory", "GhostAcademy", "OrbitalCommand"]
 
 
 class TestSupplyDepot:
@@ -52,6 +52,14 @@ class TestCorruptor:
         corruptor = techtree_data["Units"]["Corruptor"]
         assert "morphsto" in corruptor
         assert corruptor["morphsto"] == ["BroodLord"]
+
+
+class TestBroodLord:
+    def test_broodlord_requires(self, techtree_data: dict) -> None:
+        """BroodLord morphs from Corruptor and should require GreaterSpire."""
+        broodlord = techtree_data["Units"]["BroodLord"]
+        assert "requires" in broodlord
+        assert broodlord["requires"] == ["GreaterSpire"]
 
 
 class TestMorphToBroodLord:
@@ -418,6 +426,12 @@ class TestGreaterSpire:
             "ZergFlyerWeaponsLevel3",
         ]
 
+    def test_greater_spire_requires(self, techtree_data: dict) -> None:
+        """GreaterSpire morphs from Spire and should require Hive."""
+        spire = techtree_data["Units"]["GreaterSpire"]
+        assert "requires" in spire
+        assert spire["requires"] == ["Hive"]
+
 
 class TestHydraliskDen:
     def test_hydralisk_den_researches(self, techtree_data: dict) -> None:
@@ -504,6 +518,12 @@ class TestPlanetaryFortress:
         assert "produces" in pf
         assert pf["produces"] == ["SCV"]
 
+    def test_planetary_fortress_requires(self, techtree_data: dict) -> None:
+        """PlanetaryFortress morphs from CommandCenter and should require EngineeringBay."""
+        pf = techtree_data["Units"]["PlanetaryFortress"]
+        assert "requires" in pf
+        assert pf["requires"] == ["EngineeringBay"]
+
 
 class TestHatchery:
     def test_hatchery_produces_queen(self, techtree_data: dict) -> None:
@@ -534,6 +554,12 @@ class TestLair:
         # Should NOT have overlordtransport
         assert "overlordtransport" not in lair["researches"]
 
+    def test_lair_requires(self, techtree_data: dict) -> None:
+        """Lair morphs from Hatchery and should require SpawningPool."""
+        lair = techtree_data["Units"]["Lair"]
+        assert "requires" in lair
+        assert lair["requires"] == ["SpawningPool"]
+
 
 class TestHive:
     def test_hive_researches(self, techtree_data: dict) -> None:
@@ -545,6 +571,12 @@ class TestHive:
         assert "overlordspeed" in hive["researches"]
         # Should NOT have overlordtransport
         assert "overlordtransport" not in hive["researches"]
+
+    def test_hive_requires(self, techtree_data: dict) -> None:
+        """Hive morphs from Lair and should require InfestationPit."""
+        hive = techtree_data["Units"]["Hive"]
+        assert "requires" in hive
+        assert hive["requires"] == ["InfestationPit"]
 
 
 class TestStructureBuildsAddons:

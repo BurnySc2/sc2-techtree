@@ -508,7 +508,10 @@
       "morphsto": [
         "Baneling"
       ],
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "BanelingNest"
+      ]
     },
     "BanelingNest": {
       "race": "Zerg",
@@ -519,7 +522,8 @@
         "CentrificalHooks"
       ],
       "unlocks": [
-        "Baneling"
+        "Baneling",
+        "BanelingCocoon"
       ]
     },
     "Banshee": {
@@ -552,7 +556,8 @@
       "unlocks": [
         "Bunker",
         "Factory",
-        "GhostAcademy"
+        "GhostAcademy",
+        "OrbitalCommand"
       ]
     },
     "BarracksFlying": {
@@ -680,7 +685,10 @@
       "race": ""
     },
     "BroodLord": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "GreaterSpire"
+      ]
     },
     "BroodLordACGluescreenDummy": {
       "race": ""
@@ -695,7 +703,10 @@
       "morphsto": [
         "BroodLord"
       ],
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "GreaterSpire"
+      ]
     },
     "BroodLordWeapon": {
       "race": "Zerg"
@@ -1081,7 +1092,10 @@
       "race": "Zerg"
     },
     "DefilerMPBurrowed": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "UseBurrow"
+      ]
     },
     "DefilerMPDarkSwarmWeapon": {
       "race": "Zerg"
@@ -1288,10 +1302,16 @@
       "morphsto": [
         "DevourerMP"
       ],
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "GreaterSpire"
+      ]
     },
     "DevourerMP": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "GreaterSpire"
+      ]
     },
     "DevourerMPWeaponMissile": {
       "race": "Protoss"
@@ -1387,6 +1407,7 @@
       ],
       "unlocks": [
         "MissileTurret",
+        "PlanetaryFortress",
         "SensorTower"
       ]
     },
@@ -1644,6 +1665,9 @@
     },
     "GreaterSpire": {
       "race": "Zerg",
+      "requires": [
+        "Hive"
+      ],
       "researches": [
         "ZergFlyerArmorsLevel1",
         "ZergFlyerArmorsLevel2",
@@ -1651,6 +1675,14 @@
         "ZergFlyerWeaponsLevel1",
         "ZergFlyerWeaponsLevel2",
         "ZergFlyerWeaponsLevel3"
+      ],
+      "unlocks": [
+        "BroodLord",
+        "BroodLordCocoon",
+        "DevourerCocoonMP",
+        "DevourerMP",
+        "GuardianCocoonMP",
+        "GuardianMP"
       ]
     },
     "GuardianACGluescreenDummy": {
@@ -1660,10 +1692,16 @@
       "morphsto": [
         "GuardianMP"
       ],
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "GreaterSpire"
+      ]
     },
     "GuardianMP": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "GreaterSpire"
+      ]
     },
     "GuardianMPWeapon": {
       "race": "Zerg"
@@ -1774,11 +1812,15 @@
         "Queen"
       ],
       "race": "Zerg",
+      "requires": [
+        "InfestationPit"
+      ],
       "researches": [
         "Burrow",
         "overlordspeed"
       ],
       "unlocks": [
+        "GreaterSpire",
         "UltraliskCavern",
         "Viper"
       ]
@@ -1854,6 +1896,7 @@
         "NeuralParasite"
       ],
       "unlocks": [
+        "Hive",
         "Infestor",
         "SwarmHostMP"
       ]
@@ -1959,6 +2002,9 @@
         "Queen"
       ],
       "race": "Zerg",
+      "requires": [
+        "SpawningPool"
+      ],
       "researches": [
         "Burrow",
         "overlordspeed"
@@ -1967,7 +2013,9 @@
         "HydraliskDen",
         "InfestationPit",
         "NydusNetwork",
-        "Spire"
+        "OverlordTransport",
+        "Spire",
+        "TransportOverlordCocoon"
       ]
     },
     "Larva": {
@@ -2106,7 +2154,11 @@
       ]
     },
     "LurkerMP": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "LurkerDen",
+        "UseLurkerAspectMP"
+      ]
     },
     "LurkerMPBurrowed": {
       "race": "Zerg"
@@ -2116,7 +2168,11 @@
         "LurkerMP",
         "LurkerMPEgg"
       ],
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "LurkerDen",
+        "UseLurkerAspectMP"
+      ]
     },
     "Lyote": {
       "race": ""
@@ -2340,7 +2396,10 @@
       "produces": [
         "SCV"
       ],
-      "race": "Terran"
+      "race": "Terran",
+      "requires": [
+        "Barracks"
+      ]
     },
     "OrbitalCommandACGluescreenDummy": {
       "race": ""
@@ -2359,7 +2418,10 @@
       "morphsto": [
         "Overseer"
       ],
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "UseOverseerMorph"
+      ]
     },
     "OverlordGenerateCreepKeybind": {
       "race": ""
@@ -2368,10 +2430,16 @@
       "morphsto": [
         "Overseer"
       ],
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "Lair"
+      ]
     },
     "Overseer": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "UseOverseerMorph"
+      ]
     },
     "OverseerACGluescreenDummy": {
       "race": ""
@@ -2482,7 +2550,10 @@
       "produces": [
         "SCV"
       ],
-      "race": "Terran"
+      "race": "Terran",
+      "requires": [
+        "EngineeringBay"
+      ]
     },
     "PointDefenseDrone": {
       "race": "Terran"
@@ -2754,7 +2825,10 @@
       "race": ""
     },
     "Ravager": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "BanelingNest2"
+      ]
     },
     "RavagerACGluescreenDummy": {
       "race": ""
@@ -2766,7 +2840,10 @@
       "morphsto": [
         "Ravager"
       ],
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "BanelingNest2"
+      ]
     },
     "RavagerCorrosiveBileMissile": {
       "race": "Zerg"
@@ -3354,6 +3431,7 @@
       "unlocks": [
         "BanelingNest",
         "Digester",
+        "Lair",
         "Queen",
         "RoachWarren",
         "SpineCrawler",
@@ -3667,7 +3745,10 @@
       "morphsto": [
         "OverlordTransport"
       ],
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "Lair"
+      ]
     },
     "TrooperMengskACGluescreenDummy": {
       "race": ""
@@ -3856,7 +3937,10 @@
         "Stalker",
         "Zealot"
       ],
-      "race": "Protoss"
+      "race": "Protoss",
+      "requires": [
+        "UseWarpGate"
+      ]
     },
     "WarpPrism": {
       "race": "Protoss"
@@ -4192,7 +4276,10 @@
       ]
     },
     "ZerglingBurrowed": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "UseBurrow"
+      ]
     },
     "ZerglingKerriganACGluescreenDummy": {
       "race": ""
