@@ -31,6 +31,9 @@ def parse_requirement(req: str) -> list[str]:
             result.append(name)
         elif part.startswith("Learn"):
             pass
+        elif part.startswith("Use"):
+            # Skip UseX requirements - these are ability/upgrade prerequisites, not structures
+            pass
         else:
             result.append(part)
     return result

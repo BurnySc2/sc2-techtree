@@ -227,6 +227,9 @@ def parse_requirement(req: str) -> list[str]:
         elif part.startswith("Learn"):
             # Skip LearnX requirements - these are prerequisite unlocks
             pass
+        elif part.startswith("Use"):
+            # Skip UseX requirements - these are ability/upgrade prerequisites, not structures
+            pass
         elif part in REQUIREMENT_EXCLUDE:
             # Skip internal game mechanic requirements
             pass

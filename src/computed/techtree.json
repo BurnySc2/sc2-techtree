@@ -143,10 +143,7 @@
     },
     "MorphToOverseer": {
       "morphsto": "Overseer",
-      "race": "Zerg",
-      "requires": [
-        "UseOverseerMorph"
-      ]
+      "race": "Zerg"
     },
     "MorphToRavager": {
       "morphsto": "Ravager",
@@ -234,10 +231,7 @@
     },
     "UpgradeToWarpGate": {
       "morphsto": "WarpGate",
-      "race": "Protoss",
-      "requires": [
-        "UseWarpGate"
-      ]
+      "race": "Protoss"
     },
     "evolutionchamberresearch": {
       "upgrade": "SecretedCoating"
@@ -1099,10 +1093,7 @@
       "race": "Zerg"
     },
     "DefilerMPBurrowed": {
-      "race": "Zerg",
-      "requires": [
-        "UseBurrow"
-      ]
+      "race": "Zerg"
     },
     "DefilerMPDarkSwarmWeapon": {
       "race": "Zerg"
@@ -2170,8 +2161,7 @@
     "LurkerMP": {
       "race": "Zerg",
       "requires": [
-        "LurkerDenMP",
-        "UseLurkerAspectMP"
+        "LurkerDenMP"
       ]
     },
     "LurkerMPBurrowed": {
@@ -2184,8 +2174,7 @@
       ],
       "race": "Zerg",
       "requires": [
-        "LurkerDenMP",
-        "UseLurkerAspectMP"
+        "LurkerDenMP"
       ]
     },
     "Lyote": {
@@ -2432,10 +2421,7 @@
       "morphsto": [
         "Overseer"
       ],
-      "race": "Zerg",
-      "requires": [
-        "UseOverseerMorph"
-      ]
+      "race": "Zerg"
     },
     "OverlordGenerateCreepKeybind": {
       "race": ""
@@ -2450,10 +2436,7 @@
       ]
     },
     "Overseer": {
-      "race": "Zerg",
-      "requires": [
-        "UseOverseerMorph"
-      ]
+      "race": "Zerg"
     },
     "OverseerACGluescreenDummy": {
       "race": ""
@@ -3959,10 +3942,7 @@
         "Stalker",
         "Zealot"
       ],
-      "race": "Protoss",
-      "requires": [
-        "UseWarpGate"
-      ]
+      "race": "Protoss"
     },
     "WarpPrism": {
       "race": "Protoss"
@@ -4298,10 +4278,7 @@
       ]
     },
     "ZerglingBurrowed": {
-      "race": "Zerg",
-      "requires": [
-        "UseBurrow"
-      ]
+      "race": "Zerg"
     },
     "ZerglingKerriganACGluescreenDummy": {
       "race": ""

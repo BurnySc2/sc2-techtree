@@ -3,6 +3,8 @@ from pathlib import Path
 
 import pytest
 
+from src.generate_techtree import parse_requirement
+
 
 @pytest.fixture
 def techtree_data() -> dict:
@@ -654,3 +656,47 @@ class TestStructureBuildsAddons:
         reactor = f"{structure}Reactor"
         assert "builds" in unit
         assert set(unit["builds"]) >= {tech_lab, reactor}
+
+
+class TestLurkerMP:
+    def test_lurker_mp_requires_lurker_den_mp(self, techtree_data: dict) -> None:
+        """LurkerMP should require LurkerDenMP."""
+        lurker = techtree_data["Units"]["LurkerMP"]
+        assert "requires" in lurker
+        assert "LurkerDenMP" in lurker["requires"]
+
+    def test_lurker_mp_requires_not_use_lurker_aspect(self, techtree_data: dict) -> None:
+        """LurkerMP should NOT require UseLurkerAspectMP (internal game mechanic, not a building)."""
+        lurker = techtree_data["Units"]["LurkerMP"]
+        requires = lurker.get("requires", [])
+        assert "UseLurkerAspectMP" not in requires
+
+
+class TestOverseer:
+    def test_overseer_requires_not_use_overseer_morph(self, techtree_data: dict) -> None:
+        """Overseer should NOT require UseOverseerMorph (internal game mechanic, not a building)."""
+        overseer = techtree_data["Units"]["Overseer"]
+        requires = overseer.get("requires", [])
+        assert "UseOverseerMorph" not in requires
+
+
+class TestParseRequirement:
+    def test_parse_requirement_use_prefix_returns_empty(self) -> None:
+        """Use* requirements should be skipped (they are ability/upgrade prerequisites, not structures)."""
+        assert parse_requirement("UseLurkerAspectMP") == []
+
+    def test_parse_requirement_use_overseer_morph_returns_empty(self) -> None:
+        """UseOverseerMorph should be skipped."""
+        assert parse_requirement("UseOverseerMorph") == []
+
+    def test_parse_requirement_have_prefix(self) -> None:
+        """Have* requirements should return the structure name."""
+        assert parse_requirement("HaveBarracks") == ["Barracks"]
+
+    def test_parse_requirement_learn_prefix_returns_empty(self) -> None:
+        """Learn* requirements should be skipped."""
+        assert parse_requirement("LearnSomething") == []
+
+    def test_parse_requirement_empty_string(self) -> None:
+        """Empty string should return empty list."""
+        assert parse_requirement("") == []
