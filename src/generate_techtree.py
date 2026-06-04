@@ -227,6 +227,9 @@ def parse_requirement(req: str) -> list[str]:
         elif part.startswith("Learn"):
             # Skip LearnX requirements - these are prerequisite unlocks
             pass
+        elif part.startswith("Use"):
+            # Skip UseX requirements - these are ability/upgrade prerequisites, not structures
+            pass
         elif part in REQUIREMENT_EXCLUDE:
             # Skip internal game mechanic requirements
             pass
@@ -607,9 +610,10 @@ def generate_techtree() -> dict:
                     if _is_train_ability(abil_name) and _match_ability_to_structure(
                         abil_name, unit_name, ability_to_structures, require_prefix_match=True
                     ):
-                        if not is_campaign_unit(units_data.get(produced_unit, {})):
-                            if unit_name != "Larva" or produced_unit not in LARVA_EXCLUDE:
-                                produces.append(produced_unit)
+                        if not is_campaign_unit(units_data.get(produced_unit, {})) and (
+                            unit_name != "Larva" or produced_unit not in LARVA_EXCLUDE
+                        ):
+                            produces.append(produced_unit)
                     elif _is_build_ability(abil_name):
                         # For build abilities, include units not in units_data (e.g., tech labs)
                         # Also include units in units_data even if they have empty race (tech labs)
@@ -684,10 +688,7 @@ def generate_techtree() -> dict:
         if unlocks.get(unit_name):
             entry["unlocks"] = sorted(unlocks[unit_name])
         if morphsto:
-            if isinstance(morphsto, list):
-                unique_targets = sorted(set(morphsto))
-            else:
-                unique_targets = [morphsto]
+            unique_targets = sorted(set(morphsto)) if isinstance(morphsto, list) else [morphsto]
             entry["morphsto"] = unique_targets
         if unit_name in unit_requirements:
             entry["requires"] = sorted(set(unit_requirements[unit_name]))

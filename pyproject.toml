@@ -59,4 +59,4 @@ ignore = ["SIM300"]
 pep8-naming.classmethod-decorators = ["pydantic.validator", "classmethod"]
 
 [tool.pytest.ini_options]
-pythonpath = ["."]
+pythonpath = [".", "src"]

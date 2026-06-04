@@ -5262,10 +5262,7 @@
       "id": 1449,
       "morphsto": "Overseer",
       "name": "MorphToOverseer",
-      "race": "Zerg",
-      "requires": [
-        "UseOverseerMorph"
-      ]
+      "race": "Zerg"
     },
     "MorphToRavager": {
       "Alert": "MorphComplete_Zerg",
@@ -9189,10 +9186,7 @@
       "id": 1519,
       "morphsto": "WarpGate",
       "name": "UpgradeToWarpGate",
-      "race": "Protoss",
-      "requires": [
-        "UseWarpGate"
-      ]
+      "race": "Protoss"
     },
     "ViperConsumeStructure": {
       "Alignment": "Positive",
@@ -21208,8 +21202,7 @@
       "name": "LurkerMP",
       "race": "Zerg",
       "requires": [
-        "LurkerDenMP",
-        "UseLurkerAspectMP"
+        "LurkerDenMP"
       ],
       "time": 33,
       "type": "unit"
@@ -21320,8 +21313,7 @@
       "name": "LurkerMPEgg",
       "race": "Zerg",
       "requires": [
-        "LurkerDenMP",
-        "UseLurkerAspectMP"
+        "LurkerDenMP"
       ],
       "type": "unit"
     },
@@ -23517,9 +23509,6 @@
       ],
       "name": "OverlordCocoon",
       "race": "Zerg",
-      "requires": [
-        "UseOverseerMorph"
-      ],
       "type": "unit"
     },
     "OverlordTransport": {
@@ -23823,9 +23812,6 @@
       "id": 129,
       "name": "Overseer",
       "race": "Zerg",
-      "requires": [
-        "UseOverseerMorph"
-      ],
       "time": 16.6665,
       "type": "unit"
     },
@@ -31800,9 +31786,6 @@
         "Zealot"
       ],
       "race": "Protoss",
-      "requires": [
-        "UseWarpGate"
-      ],
       "time": 10,
       "type": "structure"
     },
