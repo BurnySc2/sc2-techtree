@@ -466,6 +466,16 @@ class TestFusionCore:
         ]
 
 
+class TestGhost:
+    def test_ghost_exists(self, techtree_data: dict) -> None:
+        assert "Ghost" in techtree_data["Units"]
+
+    def test_ghost_requires(self, techtree_data: dict) -> None:
+        ghost = techtree_data["Units"]["Ghost"]
+        assert "requires" in ghost
+        assert ghost["requires"] == ["AttachedTechLab", "GhostAcademy"]
+
+
 class TestGhostAcademy:
     def test_ghost_academy_researches(self, techtree_data: dict) -> None:
         academy = techtree_data["Units"]["GhostAcademy"]

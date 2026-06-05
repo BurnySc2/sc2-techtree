@@ -1615,8 +1615,8 @@
     "Ghost": {
       "race": "Terran",
       "requires": [
-        "AttachedBarrTechLab",
-        "ShadowOps"
+        "AttachedTechLab",
+        "GhostAcademy"
       ]
     },
     "GhostAcademy": {
@@ -1626,6 +1626,9 @@
       ],
       "researches": [
         "PersonalCloaking"
+      ],
+      "unlocks": [
+        "Ghost"
       ]
     },
     "GhostAlternate": {

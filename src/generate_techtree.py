@@ -61,6 +61,8 @@ REQUIREMENT_NAME_FIXES = {
     "TemplarArchives": "TemplarArchive",
     "LurkerDen": "LurkerDenMP",
     "BanelingNest2": "RoachWarren",
+    "AttachedBarrTechLab": "AttachedTechLab",
+    "ShadowOps": "GhostAcademy",
 }
 # Map research upgrade names to canonical names
 RESEARCH_NAME_MAP = {
@@ -234,7 +236,7 @@ def parse_requirement(req: str) -> list[str]:
             # Skip internal game mechanic requirements
             pass
         else:
-            result.append(part)
+            result.append(REQUIREMENT_NAME_FIXES.get(part, part))
     return result
 
 
