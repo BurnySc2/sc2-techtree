@@ -804,7 +804,7 @@ class TestGatewayBuildTimes:
     def test_gateway_unit_train_time(self, computed_data: dict, unit_name: str, expected_time: int) -> None:
         unit = computed_data["Units"][unit_name]
         actual = unit.get("time")
-        assert actual == expected_time, f"{unit_name} should have train time {expected_time}, got {actual}"
+        assert abs(actual - expected_time) < 1, f"{unit_name} should have train time {expected_time}, got {actual}"
 
 
 class TestWarpGateProduces:

@@ -876,6 +876,41 @@
       "AffectedUnitArray": "Gateway",
       "Alert": "ResearchComplete",
       "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
+      "EffectArray": [
+        {
+          "Operation": "Multiply",
+          "Reference": "Abil,GatewayTrain,InfoArray[Train1].Time",
+          "Value": "0.600000"
+        },
+        {
+          "Operation": "Multiply",
+          "Reference": "Abil,GatewayTrain,InfoArray[Train2].Time",
+          "Value": "0.600000"
+        },
+        {
+          "Operation": "Multiply",
+          "Reference": "Abil,GatewayTrain,InfoArray[Train4].Time",
+          "Value": "0.600000"
+        },
+        {
+          "Operation": "Multiply",
+          "Reference": "Abil,GatewayTrain,InfoArray[Train5].Time",
+          "Value": "0.600000"
+        },
+        {
+          "Operation": "Multiply",
+          "Reference": "Abil,GatewayTrain,InfoArray[Train6].Time",
+          "Value": "0.600000"
+        },
+        {
+          "Operation": "Multiply",
+          "Reference": "Abil,GatewayTrain,InfoArray[Train7].Time",
+          "Value": "0.600000"
+        }
+      ],
+      "Flags": {
+        "TechTreeCheat": 1
+      },
       "Icon": "Assets\\Textures\\BTN-Building-Protoss-WarpGate.dds",
       "Race": "Prot",
       "ScoreAmount": 100,
@@ -965,17 +1000,12 @@
       "AffectedUnitArray": "HERC",
       "EffectArray": [
         {
-          "Operation": "Set",
-          "Reference": "Weapon,HERCWeapon,Icon",
-          "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds"
+          "Value": "0",
+          "index": "11"
         },
         {
-          "Reference": "Effect,HERCWeaponDamage,Amount",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Weapon,HERCWeapon,Level",
-          "Value": "1"
+          "Value": "2",
+          "index": "10"
         }
       ],
       "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel1.dds",
@@ -990,17 +1020,12 @@
       "AffectedUnitArray": "HERC",
       "EffectArray": [
         {
-          "Operation": "Set",
-          "Reference": "Weapon,HERCWeapon,Icon",
-          "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds"
+          "Value": "0",
+          "index": "11"
         },
         {
-          "Reference": "Effect,HERCWeaponDamage,Amount",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Weapon,HERCWeapon,Level",
-          "Value": "1"
+          "Value": "2",
+          "index": "10"
         }
       ],
       "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel2.dds",
@@ -1015,17 +1040,12 @@
       "AffectedUnitArray": "HERC",
       "EffectArray": [
         {
-          "Operation": "Set",
-          "Reference": "Weapon,HERCWeapon,Icon",
-          "Value": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds"
+          "Value": "0",
+          "index": "11"
         },
         {
-          "Reference": "Effect,HERCWeaponDamage,Amount",
-          "Value": "2.000000"
-        },
-        {
-          "Reference": "Weapon,HERCWeapon,Level",
-          "Value": "1"
+          "Value": "2",
+          "index": "10"
         }
       ],
       "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel3.dds",
@@ -3096,6 +3116,14 @@
           "Value": "5"
         },
         {
+          "Reference": "Unit,AutoTurret,LifeArmor",
+          "Value": "2"
+        },
+        {
+          "Reference": "Unit,AutoTurret,LifeArmorLevel",
+          "Value": "2"
+        },
+        {
           "Reference": "Unit,BypassArmorDrone,LifeArmor",
           "index": "61"
         },
@@ -5008,6 +5036,11 @@
         },
         {
           "Operation": "Set",
+          "Reference": "Weapon,InfestorWeaponAcidSpores,Icon",
+          "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
+        },
+        {
+          "Operation": "Set",
           "Reference": "Weapon,LurkerMP,Icon",
           "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level1.dds"
         },
@@ -5025,6 +5058,10 @@
           "Value": "1"
         },
         {
+          "Reference": "Effect,InfestorWeaponDamage,Amount",
+          "Value": "1"
+        },
+        {
           "Reference": "Effect,LurkerMPDamage,Amount",
           "Value": "2"
         },
@@ -5033,11 +5070,19 @@
           "Value": "1"
         },
         {
+          "Reference": "Weapon,AcidSpitSwarmhostDummy,Level",
+          "Value": "1"
+        },
+        {
           "Reference": "Weapon,InfestedAcidSpines,Level",
           "Value": "1"
         },
         {
           "Reference": "Weapon,InfestedGuassRifle,Level",
+          "Value": "1"
+        },
+        {
+          "Reference": "Weapon,InfestorWeaponAcidSpores,Level",
           "Value": "1"
         },
         {
@@ -5073,6 +5118,11 @@
         },
         {
           "Operation": "Set",
+          "Reference": "Weapon,InfestorWeaponAcidSpores,Icon",
+          "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+        },
+        {
+          "Operation": "Set",
           "Reference": "Weapon,LurkerMP,Icon",
           "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
         },
@@ -5090,6 +5140,10 @@
           "Value": "1"
         },
         {
+          "Reference": "Effect,InfestorWeaponDamage,Amount",
+          "Value": "1"
+        },
+        {
           "Reference": "Effect,LurkerMPDamage,Amount",
           "Value": "2"
         },
@@ -5098,11 +5152,19 @@
           "Value": "1"
         },
         {
+          "Reference": "Weapon,AcidSpitSwarmhostDummy,Level",
+          "Value": "1"
+        },
+        {
           "Reference": "Weapon,InfestedAcidSpines,Level",
           "Value": "1"
         },
         {
           "Reference": "Weapon,InfestedGuassRifle,Level",
+          "Value": "1"
+        },
+        {
+          "Reference": "Weapon,InfestorWeaponAcidSpores,Level",
           "Value": "1"
         },
         {
@@ -5138,6 +5200,11 @@
         },
         {
           "Operation": "Set",
+          "Reference": "Weapon,InfestorWeaponAcidSpores,Icon",
+          "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+        },
+        {
+          "Operation": "Set",
           "Reference": "Weapon,LurkerMP,Icon",
           "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
         },
@@ -5155,6 +5222,10 @@
           "Value": "1"
         },
         {
+          "Reference": "Effect,InfestorWeaponDamage,Amount",
+          "Value": "1"
+        },
+        {
           "Reference": "Effect,LurkerMPDamage,Amount",
           "Value": "2"
         },
@@ -5163,11 +5234,19 @@
           "Value": "1"
         },
         {
+          "Reference": "Weapon,AcidSpitSwarmhostDummy,Level",
+          "Value": "1"
+        },
+        {
           "Reference": "Weapon,InfestedAcidSpines,Level",
           "Value": "1"
         },
         {
           "Reference": "Weapon,InfestedGuassRifle,Level",
+          "Value": "1"
+        },
+        {
+          "Reference": "Weapon,InfestorWeaponAcidSpores,Level",
           "Value": "1"
         },
         {

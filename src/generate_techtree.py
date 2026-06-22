@@ -30,6 +30,11 @@ RACE_MAP = {
 # Mapping of units to their correct requirements when game data is inconsistent
 UNIT_REQUIREMENT_FIXES = {
     "Roach": ["RoachWarren"],
+    "HighTemplar": ["TemplarArchive"],
+    "DarkTemplar": ["DarkShrine"],
+    "Sentry": ["CyberneticsCore"],
+    "Stalker": ["CyberneticsCore"],
+    "Adept": ["CyberneticsCore"],
 }
 
 # Units to exclude from morph targets (cocoons) - loaded dynamically from game data
@@ -266,24 +271,20 @@ def get_info_units(info: Any) -> list[str]:
 
 
 def get_info_upgrades(info: Any) -> list[str]:
-    """Extract upgrade names from InfoArray entries (only if has DefaultButtonFace)."""
+    """Extract upgrade names from InfoArray entries."""
     upgrades = []
     if isinstance(info, list):
         for item in info:
             if isinstance(item, dict):
-                btn = item.get("Button", {})
-                if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
-                    upgrade = item.get("Upgrade")
-                    if upgrade:
-                        mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
-                        upgrades.append(mapped)
+                upgrade = item.get("Upgrade")
+                if upgrade:
+                    mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
+                    upgrades.append(mapped)
     elif isinstance(info, dict):
-        btn = info.get("Button", {})
-        if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
-            upgrade = info.get("Upgrade")
-            if upgrade:
-                mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
-                upgrades.append(mapped)
+        upgrade = info.get("Upgrade")
+        if upgrade:
+            mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
+            upgrades.append(mapped)
     return upgrades
 
 
@@ -552,6 +553,12 @@ def _build_unlocks_mapping(
                         unit_requirements[produced_unit].extend(UNIT_REQUIREMENT_FIXES[produced_unit])
                     else:
                         unit_requirements[produced_unit].append(req_struct)
+            elif produced_unit in UNIT_REQUIREMENT_FIXES:
+                # Apply hardcoded fixes even when requirement data is missing
+                for req_struct in UNIT_REQUIREMENT_FIXES[produced_unit]:
+                    if req_struct in units_data:
+                        unlocks[req_struct].add(produced_unit)
+                    unit_requirements[produced_unit].append(req_struct)
 
     return unlocks, unit_requirements
 

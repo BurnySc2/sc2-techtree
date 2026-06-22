@@ -1941,6 +1941,9 @@
     "InfestorTerransWeapon": {
       "race": "Zerg"
     },
+    "InfestorWeapon": {
+      "race": "Zerg"
+    },
     "InhibitorZoneBase": {
       "race": ""
     },
@@ -2186,6 +2189,9 @@
     "MULE": {
       "race": "Terran"
     },
+    "MapmakerNeutralUnitGameStartModifierDecrease": {
+      "race": ""
+    },
     "Marauder": {
       "race": "Terran",
       "requires": [
@@ -2271,6 +2277,9 @@
       "race": ""
     },
     "MineralFieldOpaque900": {
+      "race": ""
+    },
+    "MineralWall3x3": {
       "race": ""
     },
     "MissileTurret": {
@@ -2475,6 +2484,9 @@
       "race": ""
     },
     "PermanentCreepBlocker1x1": {
+      "race": ""
+    },
+    "PhaseShield": {
       "race": ""
     },
     "Phoenix": {
@@ -4086,6 +4098,9 @@
       "race": ""
     },
     "XelNagaTower": {
+      "race": ""
+    },
+    "XelNagaTowerRangeIndicatorDummy": {
       "race": ""
     },
     "XelNaga_Caverns_Door": {

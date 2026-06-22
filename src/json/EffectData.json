@@ -294,6 +294,66 @@
       "id": "BurrowChargeCasterApplyBehaviorRevD"
     },
     {
+      "Behavior": "BurrowDownTransientStun",
+      "Duration": 0.31,
+      "EditorCategories": "Race:Zerg",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "id": "RoachBurrowDownTransientStun"
+    },
+    {
+      "Behavior": "BurrowDownTransientStun",
+      "Duration": 0.8,
+      "EditorCategories": "Race:Zerg",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "id": "InfestorBurrowDownTransientStun"
+    },
+    {
+      "Behavior": "BurrowMoveCloakSuppress",
+      "Duration": 0.5556,
+      "EditorCategories": "",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "InfestorBurrowTransientCloakDelay"
+    },
+    {
+      "Behavior": "BurrowMoveCloakSuppress",
+      "Duration": 0.5556,
+      "EditorCategories": "",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "RoachBurrowTransientCloakDelay"
+    },
+    {
+      "Behavior": "BurrowUpTransientStun",
+      "Duration": 0.7517,
+      "EditorCategories": "Race:Zerg",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "id": "RoachBurrowUpTransientStun"
+    },
+    {
+      "Behavior": "BurrowUpTransientStun",
+      "Duration": 1.5,
+      "EditorCategories": "Race:Zerg",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "id": "InfestorBurrowUpTransientStun"
+    },
+    {
       "Behavior": "BypassArmorDebuffOne",
       "EditorCategories": "Race:Terran",
       "ValidatorArray": "BypassArmorOne",
@@ -331,6 +391,13 @@
       "Behavior": "Changeling",
       "EditorCategories": "Race:Zerg",
       "id": "ChangelingTimedLife"
+    },
+    {
+      "Behavior": "ChangelingDeathDamageResponse",
+      "WhichUnit": {
+        "Value": "Source"
+      },
+      "id": "ChangelingDeathDamageResponseAB"
     },
     {
       "Behavior": "ChannelingCausticSpray",
@@ -778,6 +845,13 @@
       "id": "InstantMorphUnburrowABNoChecks"
     },
     {
+      "Behavior": "IsActiveBuilderSCV",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "IsBuildingSCVAB"
+    },
+    {
       "Behavior": "KD8ChargeFate",
       "id": "ReaperKD8ChargeFateAB"
     },
@@ -950,6 +1024,24 @@
       "id": "PylonSpecialPowerAB"
     },
     {
+      "Behavior": "NeuralParasite",
+      "EditorCategories": "Race:Zerg",
+      "ValidatorArray": {
+        "0": "IsActiveBuilderSCV"
+      },
+      "WhichUnit": {
+        "Effect": "NeuralParasiteLaunchMissile"
+      },
+      "id": "NeuralParasiteSCVAB"
+    },
+    {
+      "Behavior": "NeuralParasiteBlockBurrow",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "NeuralParasiteBlockBurrowAB"
+    },
+    {
       "Behavior": "NeuralParasiteDrone",
       "EditorCategories": "Race:Zerg",
       "ValidatorArray": {
@@ -959,6 +1051,21 @@
         "Effect": "NeuralParasiteLaunchMissile"
       },
       "id": "NeuralParasiteDroneCheck"
+    },
+    {
+      "Behavior": "NeuralParasiteSCVRefresh",
+      "EditorCategories": "Race:Zerg",
+      "ValidatorArray": {
+        "0": "IsSCV"
+      },
+      "WhichUnit": {
+        "Effect": "NeuralParasiteLaunchMissile"
+      },
+      "id": "NeuralParasiteApplySCVBehavior"
+    },
+    {
+      "Behavior": "NeutralPhaseShield",
+      "id": "PhaseShieldAB"
     },
     {
       "Behavior": "NexusInvulnerability",
@@ -1045,6 +1152,13 @@
         "value": "NotCloaked"
       },
       "id": "OracleCloakingFieldNew"
+    },
+    {
+      "Behavior": "OracleDeceleration",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "BuildDeceleration"
     },
     {
       "Behavior": "OraclePhaseShift",
@@ -1252,6 +1366,14 @@
       "id": "QueenBirth"
     },
     {
+      "Behavior": "QueenInjectStun",
+      "EditorCategories": "Race:Zerg",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "QueenInjectStunAB"
+    },
+    {
       "Behavior": "QueenMPEnsnare",
       "EditorCategories": "Race:Zerg",
       "id": "QueenMPEnsnareApply"
@@ -1399,6 +1521,14 @@
     {
       "Behavior": "RoughTerrainSlow",
       "id": "RoughTerrainApplyBehavior"
+    },
+    {
+      "Behavior": "SCVMoveToBuildSeek",
+      "id": "SCVMovetoBuildSeekAB"
+    },
+    {
+      "Behavior": "SCVMovetoBuildAllyAntiGrief",
+      "id": "SCVMovetoBuildAntigriefAB"
     },
     {
       "Behavior": "SalvageBaneling",
@@ -1796,6 +1926,13 @@
       "id": "VortexKillDamageAB"
     },
     {
+      "Behavior": "WarpPrismLoadupDecFixMorphCheck",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "WarpPrismDecFixMorphCheckAB"
+    },
+    {
       "Behavior": "WarpShipDenyPower",
       "EditorCategories": "Race:Protoss",
       "WhichUnit": {
@@ -1961,6 +2098,10 @@
         "Value": "Caster"
       },
       "id": "YoinkWaitAB"
+    },
+    {
+      "EditorCategories": "",
+      "id": "HasMorphedBefore"
     },
     {
       "EditorCategories": "",
@@ -2195,10 +2336,6 @@
     },
     {
       "EditorCategories": "Race:Zerg",
-      "id": "NeuralParasiteChildren"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
       "id": "ParasiticBombDelayTimedLife"
     },
     {
@@ -2228,7 +2365,13 @@
       "id": "WidowMineDelayRemoveAB"
     },
     {
+      "id": "ChangelingDelayMovement"
+    },
+    {
       "id": "InfestorEnsnareMakePrecursorReheightSource"
+    },
+    {
+      "id": "MapmakerDecreaseRockHealth"
     },
     {
       "id": "MineDroneCountdown"
@@ -2252,6 +2395,17 @@
     "id": "OverchargeForce"
   },
   "CEffectCancelOrder": [
+    {
+      "AbilCmd": "attack,Execute",
+      "OwningPlayer": {
+        "Value": "Target"
+      },
+      "id": "DisguiseEx3CancelAttackOnChangeling"
+    },
+    {
+      "AbilCmd": "attack,Execute",
+      "id": "SCVMovetoAttack4CancelAttack"
+    },
     {
       "Count": 32,
       "EditorCategories": "Race:Zerg",
@@ -2616,6 +2770,21 @@
         "value": "CasterNotFungalGrowthed"
       },
       "id": "HyperjumpInitialCP"
+    },
+    {
+      "EditorCategories": "",
+      "FinalEffect": "KillOtherNearbyChangelings",
+      "Flags": {
+        "RandomPeriod": 1
+      },
+      "PeriodCount": 1,
+      "PeriodicPeriodArray": {
+        "value": 0.05
+      },
+      "WhichLocation": {
+        "Value": "TargetUnit"
+      },
+      "id": "KillOtherNearbyChangelingsDelay"
     },
     {
       "EditorCategories": "",
@@ -3664,6 +3833,31 @@
         "Value": "TargetUnit"
       },
       "id": "InterceptorLaunchUpgradedPersistent"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "Flags": {
+        "PersistUntilDestroyed": 1
+      },
+      "PeriodicEffectArray": "MakeOracleFaceTargetPoint",
+      "PeriodicPeriodArray": 0.0625,
+      "WhichLocation": {
+        "Value": "TargetUnit"
+      },
+      "id": "FaceStasisPeriodic"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "Flags": {
+        "PersistUntilDestroyed": 1
+      },
+      "PeriodicEffectArray": "NeutralGuardianShieldSearch",
+      "PeriodicPeriodArray": 0.5,
+      "PeriodicValidator": "NotHaveScramblerMissileBehavior",
+      "WhichLocation": {
+        "Value": "SourceUnit"
+      },
+      "id": "NeutralGuardianShieldCP"
     },
     {
       "EditorCategories": "Race:Protoss",
@@ -4845,6 +5039,34 @@
     },
     {
       "EditorCategories": "Race:Zerg",
+      "PeriodCount": 2,
+      "PeriodicEffectArray": {
+        "value": "BurrowTransientSwitch"
+      },
+      "PeriodicPeriodArray": {
+        "value": 0
+      },
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "InfestorBurrowUpTransient"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "PeriodCount": 2,
+      "PeriodicEffectArray": {
+        "value": "BurrowTransientSwitch"
+      },
+      "PeriodicPeriodArray": {
+        "value": 0
+      },
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "RoachBurrowUpTransient"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
       "PeriodCount": 240,
       "PeriodicEffectArray": "DefilerMPDarkSwarmSearch",
       "PeriodicPeriodArray": 0.25,
@@ -4865,6 +5087,34 @@
         "Value": "TargetUnit"
       },
       "id": "TornadoMissileCP"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "PeriodCount": 3,
+      "PeriodicEffectArray": {
+        "value": "BurrowTransientSwitch"
+      },
+      "PeriodicPeriodArray": {
+        "value": 0
+      },
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "InfestorBurrowDownTransient"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "PeriodCount": 3,
+      "PeriodicEffectArray": {
+        "value": "BurrowTransientSwitch"
+      },
+      "PeriodicPeriodArray": {
+        "value": 0
+      },
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "RoachBurrowDownTransient"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -5254,7 +5504,7 @@
         "Value": "Target"
       },
       "ValidatorArray": {
-        "value": "NotMassive"
+        "value": "IsNotRecallingNexus"
       },
       "id": "ReaperKD8Knockback"
     },
@@ -6142,6 +6392,20 @@
       "CreateFlags": {
         "OffsetByRadius": 0,
         "Placement": 0,
+        "PlacementIgnoreBlockers": 1
+      },
+      "EditorCategories": "",
+      "SpawnRange": 0,
+      "SpawnUnit": "XelNagaTowerRangeIndicatorDummy",
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "XelnagaTowerRangeIndicatorDummyCreate"
+    },
+    {
+      "CreateFlags": {
+        "OffsetByRadius": 0,
+        "Placement": 0,
         "ProvideFood": 0,
         "TechComplete": 0,
         "UseFood": 0
@@ -6602,7 +6866,7 @@
       "SpawnRange": 3,
       "SpawnUnit": "KD8Charge",
       "WhichLocation": {
-        "Value": "TargetUnitOrPoint"
+        "Value": "TargetPoint"
       },
       "id": "KD8Charge"
     },
@@ -6644,7 +6908,7 @@
     },
     {
       "EditorCategories": "Race:Zerg",
-      "SpawnEffect": "ChangelingTimedLife",
+      "SpawnEffect": "ChangelingSpawnEffectSet",
       "SpawnRange": 2,
       "SpawnUnit": "Changeling",
       "WhichLocation": {
@@ -6676,12 +6940,6 @@
       "SpawnUnit": "ChangelingZerglingWings",
       "id": "DisguiseAsZerglingWithWingsCU",
       "parent": "DisguiseEx3CU"
-    },
-    {
-      "ValidatorArray": {
-        "value": "IsNotRecallingNexus"
-      },
-      "id": "KD8Knockback"
     },
     {
       "id": "LoadOutSpray@1",
@@ -7191,16 +7449,6 @@
     {
       "Amount": 10,
       "AttributeBonus": {
-        "Light": 10
-      },
-      "EditorCategories": "Race:Terran",
-      "Kind": "Ranged",
-      "id": "C10CanisterRifle",
-      "parent": "DU_WEAP"
-    },
-    {
-      "Amount": 10,
-      "AttributeBonus": {
         "Light": 12
       },
       "Death": "Blast",
@@ -7295,6 +7543,20 @@
         "Energy": -1
       },
       "id": "LeechDamage"
+    },
+    {
+      "Amount": 10,
+      "ImpactLocation": {
+        "Value": "TargetUnit"
+      },
+      "LaunchLocation": {
+        "Value": "TargetUnit"
+      },
+      "SearchFlags": {
+        "ExtendByUnitRadius": 1
+      },
+      "ValidatorArray": "IsChangeling",
+      "id": "KillOtherNearbyChangelings"
     },
     {
       "Amount": 10,
@@ -7399,21 +7661,6 @@
       "parent": "DU_WEAP_MISSILE"
     },
     {
-      "Amount": 130,
-      "AttributeBonus": {
-        "Psionic": 40
-      },
-      "EditorCategories": "Race:Terran",
-      "Flags": {
-        "Notification": 1
-      },
-      "ResponseFlags": {
-        "Acquire": 1,
-        "Flee": 1
-      },
-      "id": "ChannelSnipeDamage"
-    },
-    {
       "Amount": 14,
       "AttributeBonus": {
         "Massive": 6
@@ -7462,6 +7709,16 @@
     {
       "Amount": 15,
       "AttributeBonus": {
+        "Light": 0
+      },
+      "EditorCategories": "Race:Terran",
+      "Kind": "Ranged",
+      "id": "C10CanisterRifle",
+      "parent": "DU_WEAP"
+    },
+    {
+      "Amount": 15,
+      "AttributeBonus": {
         "Light": 10
       },
       "EditorCategories": "Race:Protoss",
@@ -7486,6 +7743,18 @@
       "EditorCategories": "Race:Zerg",
       "id": "RavagerWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
+    },
+    {
+      "Amount": 170,
+      "EditorCategories": "Race:Terran",
+      "Flags": {
+        "Notification": 1
+      },
+      "ResponseFlags": {
+        "Acquire": 1,
+        "Flee": 1
+      },
+      "id": "ChannelSnipeDamage"
     },
     {
       "Amount": 18,
@@ -7513,7 +7782,6 @@
       "Amount": 18,
       "Death": "Blast",
       "EditorCategories": "Race:Terran",
-      "ValidatorArray": "DetectedORNotCloakedBuried",
       "id": "CycloneAttackWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
     },
@@ -7559,7 +7827,8 @@
       "Death": "Blast",
       "EditorCategories": "Race:Terran",
       "Kind": "Spell",
-      "id": "CycloneAirWeaponDamage",
+      "ValidatorArray": "DetectedORNotCloakedBuried",
+      "id": "CycloneWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
     },
     {
@@ -7568,7 +7837,7 @@
       "Death": "Blast",
       "EditorCategories": "Race:Terran",
       "Kind": "Spell",
-      "id": "CycloneWeaponDamage",
+      "id": "CycloneAirWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
     },
     {
@@ -7618,7 +7887,7 @@
     {
       "Amount": 20,
       "AttributeBonus": {
-        "Biological": 10
+        "Biological": 15
       },
       "Death": "Disintegrate",
       "EditorCategories": "Race:Zerg",
@@ -8011,6 +8280,13 @@
       "Kind": "Ranged",
       "id": "HighTemplarWeaponDamage",
       "parent": "DU_WEAP"
+    },
+    {
+      "Amount": 4,
+      "Death": "Disintegrate",
+      "EditorCategories": "Race:Zerg",
+      "id": "InfestorWeaponDamage",
+      "parent": "DU_WEAP_MISSILE"
     },
     {
       "Amount": 4,
@@ -8484,7 +8760,7 @@
       "parent": "DU_WEAP_MISSILE"
     },
     {
-      "Amount": 6.85,
+      "Amount": 6.25,
       "EditorCategories": "Race:Protoss",
       "Flags": {
         "Notification": 1
@@ -8497,7 +8773,7 @@
       "id": "PsiStormDamageInitial"
     },
     {
-      "Amount": 6.85,
+      "Amount": 6.25,
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": "PsiStormUTargetFilters",
       "Visibility": "Hidden",
@@ -9400,6 +9676,14 @@
         "Kill": 1,
         "NoKillCredit": 1
       },
+      "ValidatorArray": "XelnagaTowerCombine",
+      "id": "KillXelnagaRangeDummyUnit"
+    },
+    {
+      "Flags": {
+        "Kill": 1,
+        "NoKillCredit": 1
+      },
       "id": "KillTargetDeathNormal"
     },
     {
@@ -9567,6 +9851,9 @@
       "parent": "DU_WEAP_MISSILE"
     },
     {
+      "id": "FakeWeaponDummyDamage"
+    },
+    {
       "id": "MassiveKnockoverDummy"
     },
     {
@@ -9600,6 +9887,14 @@
         "Value": "SourcePoint"
       },
       "id": "LurkerMPDestroyPersistent"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "Effect": "FaceStasisPeriodic",
+      "WhichLocation": {
+        "Value": "TargetUnit"
+      },
+      "id": "OracleFacePersistentDestroy"
     },
     {
       "EditorCategories": "Race:Terran",
@@ -10449,6 +10744,13 @@
     },
     {
       "AreaArray": {
+        "Effect": "DisguiseEx3ChangeAttackedTargetSet",
+        "Radius": "100"
+      },
+      "id": "DisguiseEx3AttackMoveBugFix"
+    },
+    {
+      "AreaArray": {
         "Effect": "EMPForceFieldKill",
         "Radius": "2"
       },
@@ -10520,6 +10822,11 @@
       ],
       "MaxCount": 1,
       "SearchFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "TargetSorts": {
+        "SortArray": {
+          "value": "TSThreatensMutalisk"
+        }
+      },
       "id": "GlaiveWurmE1"
     },
     {
@@ -10538,6 +10845,11 @@
       ],
       "MaxCount": 1,
       "SearchFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "TargetSorts": {
+        "SortArray": {
+          "value": "TSThreatensMutalisk"
+        }
+      },
       "id": "GlaiveWurmE2"
     },
     {
@@ -10711,6 +11023,28 @@
     },
     {
       "AreaArray": {
+        "Effect": "KillOtherNearbyChangelingsDelay",
+        "Radius": "1.25"
+      },
+      "ImpactLocation": {
+        "Value": "SourceUnit"
+      },
+      "SearchFlags": {
+        "ExtendByUnitRadius": 1
+      },
+      "id": "KillOtherNearbyChangelingsSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "KillXelnagaRangeDummyUnit"
+      },
+      "EditorCategories": "",
+      "MaxCount": 1,
+      "SearchFilters": "-;Self,Ally,Neutral,Enemy",
+      "id": "XelnagaTowerRangeIndicatorDummyDestroy"
+    },
+    {
+      "AreaArray": {
         "Effect": "LurkerMPDamage",
         "Radius": "0.5"
       },
@@ -10733,6 +11067,15 @@
         "0": "WeaponInRange"
       },
       "id": "LurkerMPSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "MapmakerNeutralUnitGameStartModifierSwitch",
+        "Radius": "0.5"
+      },
+      "MinCount": 1,
+      "SearchFilters": "Structure;Self",
+      "id": "MapmakerNeutralUnitGameStartModifierSearch"
     },
     {
       "AreaArray": {
@@ -11052,6 +11395,23 @@
     },
     {
       "AreaArray": {
+        "Effect": "PhaseShieldAB",
+        "Radius": "4.5"
+      },
+      "EditorCategories": "Race:Protoss",
+      "ImpactLocation": {
+        "Value": "TargetUnit"
+      },
+      "SearchFilters": "-;Enemy,Air,Structure,Missile,Stasis,Dead,Hidden,Invulnerable,AirUnit",
+      "SearchFlags": {
+        "CenterAtLaunch": 1,
+        "ExtendByUnitRadius": 1,
+        "OffsetAreaByAngle": 0
+      },
+      "id": "NeutralGuardianShieldSearch"
+    },
+    {
+      "AreaArray": {
         "Effect": "PointDefenseLaserSet",
         "Radius": "8"
       },
@@ -11354,6 +11714,57 @@
         "SameCliff": 1
       },
       "id": "RoughTerrainSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoAttack2SetEffects",
+        "Radius": "1"
+      },
+      "SearchFilters": "Ground,Worker;Player,Ally,Stasis,Dead,Hidden",
+      "SearchFlags": {
+        "ExtendByUnitRadius": 1
+      },
+      "id": "SCVMovetoAttack1Enum"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoAttack5Attack",
+        "Radius": "5"
+      },
+      "SearchFilters": "Ground,Worker;Player,Ally,Stasis,Dead,Hidden",
+      "id": "SCVMovetoAttack6EnumFinal"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoBuildAllySwitch",
+        "Radius": "1"
+      },
+      "ExcludeArray": {
+        "Effect": "SCVMovetoBuildSeekAB"
+      },
+      "MaxCount": 1,
+      "SearchFilters": "Ground,Worker;Neutral,Enemy,Stasis,Dead,Hidden",
+      "SearchFlags": {
+        "ExtendByUnitRadius": 1
+      },
+      "id": "SCVMovetoBuildSearchWorker"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoGatherOrder",
+        "Radius": "2"
+      },
+      "EditorCategories": "",
+      "SearchFilters": "Worker;Ally,Neutral,Enemy",
+      "id": "SCVMovetoGatherSearchWorker"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoGatherSourceSet",
+        "Radius": "0.5"
+      },
+      "SearchFilters": "RawResource;Enemy",
+      "id": "SCVMovetoGatherSearchHiddenVespene"
     },
     {
       "AreaArray": {
@@ -12147,6 +12558,16 @@
       "id": "CalldownMULEIssueOrder"
     },
     {
+      "Abil": "MULERepair",
+      "CmdFlags": {
+        "SetAutoCast": 1,
+        "SetAutoCastOn": 1
+      },
+      "EditorCategories": "",
+      "ValidatorArray": "MuleOrderIsHarvest",
+      "id": "MuleAutocastEnable"
+    },
+    {
       "Abil": "MorphToCollapsiblePurifierTowerDebris",
       "id": "CollapsiblePurifierTowerIssueOrder"
     },
@@ -12355,6 +12776,15 @@
       "id": "WorkerIssueGatherOrderSCV"
     },
     {
+      "Abil": "SCVHarvest",
+      "EditorCategories": "",
+      "Target": {
+        "Value": "CasterUnit"
+      },
+      "ValidatorArray": "VespeneMovetoGeyserIsTarget",
+      "id": "SCVMovetoGatherOrder"
+    },
+    {
       "Abil": "SpawnInfestedTerran",
       "CmdFlags": {
         "Queued": 1
@@ -12521,6 +12951,48 @@
     },
     {
       "Abil": "attack",
+      "CmdFlags": {
+        "Preempt": 1,
+        "User": 1
+      },
+      "Target": {
+        "Value": "CasterUnit"
+      },
+      "ValidatorArray": {
+        "value": "ConstructingSCVIsActiveFollowTarget"
+      },
+      "id": "SCVMovetoAttack5Attack"
+    },
+    {
+      "Abil": "attack",
+      "CmdFlags": {
+        "Preempt": 1
+      },
+      "EditorCategories": "Race:Zerg",
+      "Player": {
+        "Value": "Caster"
+      },
+      "Target": {
+        "Value": "TargetUnitOrPoint"
+      },
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "BurrowTransientAttackIssueOrder"
+    },
+    {
+      "Abil": "attack",
+      "CmdFlags": {
+        "Preempt": 1
+      },
+      "Target": {
+        "Effect": "DisguiseEx3FinalSet",
+        "Value": "TargetUnit"
+      },
+      "id": "DisguiseEx3IssueAttackOnDisguise"
+    },
+    {
+      "Abil": "attack",
       "EditorCategories": "Race:Terran",
       "Target": {
         "Effect": "BypassArmorCU",
@@ -12591,6 +13063,51 @@
         "Value": "Source"
       },
       "id": "ReleaseInterceptorsPatrolIssueOrder"
+    },
+    {
+      "Abil": "move",
+      "AbilCmdIndex": 3,
+      "CmdFlags": {
+        "IsOrder": 1,
+        "Preempt": 1,
+        "TargetSelf": 1,
+        "User": 1
+      },
+      "Target": {
+        "Value": "CasterUnit"
+      },
+      "id": "SCVMovetoAttack4Follow"
+    },
+    {
+      "Abil": "move",
+      "CmdFlags": {
+        "Preempt": 1,
+        "SmartClick": 1
+      },
+      "Target": {
+        "Value": "SourceUnit"
+      },
+      "ValidatorArray": {
+        "value": "VespeneMovetoBuildCombine"
+      },
+      "id": "SCVMovetoBuildOrder"
+    },
+    {
+      "Abil": "move",
+      "CmdFlags": {
+        "Preempt": 1
+      },
+      "EditorCategories": "Race:Zerg",
+      "Player": {
+        "Value": "Caster"
+      },
+      "Target": {
+        "Value": "TargetUnitOrPoint"
+      },
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "BurrowTransientMoveIssueOrder"
     },
     {
       "Abil": "move",
@@ -12682,14 +13199,9 @@
     },
     {
       "Abil": "move",
-      "Target": {
-        "Effect": "GrappleCreatePlaceholderSwitch",
-        "Value": "TargetUnit"
+      "Player": {
+        "Value": "Caster"
       },
-      "id": "GrapplePlaceholderIssueMove"
-    },
-    {
-      "Abil": "move",
       "Target": {
         "Value": "TargetPoint"
       },
@@ -12697,6 +13209,14 @@
         "Value": "Caster"
       },
       "id": "HerdIssueMoveOrderSelf"
+    },
+    {
+      "Abil": "move",
+      "Target": {
+        "Effect": "GrappleCreatePlaceholderSwitch",
+        "Value": "TargetUnit"
+      },
+      "id": "GrapplePlaceholderIssueMove"
     },
     {
       "Abil": "stop",
@@ -12761,6 +13281,20 @@
     {
       "id": "SalvageReaper",
       "parent": "Salvage"
+    }
+  ],
+  "CEffectLastTarget": [
+    {
+      "EditorCategories": "Race:Zerg",
+      "Effect": "BurrowTransientAttackIssueOrder",
+      "LastTargetType": "Attack",
+      "id": "BurrowTransientAttackLastTarget"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "Effect": "BurrowTransientMoveIssueOrder",
+      "LastTargetType": "Move",
+      "id": "BurrowTransientMoveLastTarget"
     }
   ],
   "CEffectLaunchMissile": [
@@ -13087,6 +13621,12 @@
         "index": "IsNotInterceptor"
       },
       "id": "InfestorEnsnareLM"
+    },
+    {
+      "AmmoUnit": "InfestorWeapon",
+      "EditorCategories": "Race:Zerg",
+      "ImpactEffect": "InfestorWeaponDamage",
+      "id": "InfestorWeaponLM"
     },
     {
       "AmmoUnit": "KD8ChargeWeapon",
@@ -13827,12 +14367,13 @@
       "id": "EyeStalk"
     },
     {
-      "LaunchEffect": "SeekerMissileLaunchSet",
-      "id": "SeekerMissileLaunchMissile"
-    },
-    {
+      "LaunchEffect": "NeuralParasiteBlockBurrowAB",
       "ValidatorArray": "NotHeroic",
       "id": "NeuralParasiteLaunchMissile"
+    },
+    {
+      "LaunchEffect": "SeekerMissileLaunchSet",
+      "id": "SeekerMissileLaunchMissile"
     },
     {
       "ValidatorArray": {
@@ -13855,6 +14396,16 @@
     "id": "SnowGlazeStarterMPModifyPlayer"
   },
   "CEffectModifyUnit": [
+    {
+      "CopyOrderCount": 32,
+      "LaunchUnit": {
+        "Value": "Caster"
+      },
+      "ModifyFlags": {
+        "CopyAutoCast": 1
+      },
+      "id": "CopyOrdersCaster"
+    },
     {
       "CopyOrderCount": 50,
       "CopyRallyCount": 50,
@@ -13963,6 +14514,20 @@
         "index": "Energy"
       },
       "id": "EnergyRecharge"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "FacingLocation": {
+        "Value": "TargetUnit"
+      },
+      "FacingType": "LookAt",
+      "ImpactUnit": {
+        "Value": "Caster"
+      },
+      "ModifyFlags": {
+        "InterpolateFacing": 1
+      },
+      "id": "MakeOracleFaceTargetPoint"
     },
     {
       "EditorCategories": "Race:Protoss",
@@ -14216,7 +14781,7 @@
       },
       "ValidatorArray": "ChannelSnipeRefundValidator",
       "VitalArray": {
-        "Change": 50,
+        "Change": 75,
         "index": "Energy"
       },
       "id": "ChannelSnipeEnergyRefund"
@@ -14298,6 +14863,17 @@
     },
     {
       "EditorCategories": "Race:Zerg",
+      "SelectTransferFlags": {
+        "DeselectSource": 1,
+        "IncludeControlGroups": 1
+      },
+      "SelectTransferUnit": {
+        "Value": "Caster"
+      },
+      "id": "Creep Tumor Selection"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
       "ValidatorArray": "NotDisintegrating",
       "VitalArray": {
         "Change": 0.3125,
@@ -14344,6 +14920,19 @@
     },
     {
       "ImpactUnit": {
+        "Effect": "SCVMovetoBuildSearchWorker",
+        "Value": "Source"
+      },
+      "ModifyFlags": {
+        "Owner": 1
+      },
+      "ModifyOwnerPlayer": {
+        "Value": "Target"
+      },
+      "id": "SCVMovetoBuildChangeOwner"
+    },
+    {
+      "ImpactUnit": {
         "Effect": "SlaynElementalGrabLM",
         "Value": "Caster"
       },
@@ -14372,6 +14961,19 @@
         "index": "Energy"
       },
       "id": "NexusShieldRechargeEnergy"
+    },
+    {
+      "SelectTransferFlags": {
+        "SingleOnly": 1
+      },
+      "SelectTransferUnit": {
+        "Effect": "NeuralParasiteLaunchMissile",
+        "Value": "Caster"
+      },
+      "TransferUnit": {
+        "Value": "Target"
+      },
+      "id": "NeuralParasiteTargetSelect"
     },
     {
       "ValidatorArray": "NotDisintegrating",
@@ -14416,6 +15018,16 @@
       "id": "WidowMineTargetingBeamDummy"
     }
   ],
+  "CEffectRandomPointInCircle": {
+    "EditorCategories": "",
+    "Effect": "HerdIssueMoveOrderSelf",
+    "Radius": 2.5,
+    "RestrictToCircumference": 1,
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    },
+    "id": "HerdIssueCircle"
+  },
   "CEffectReleaseMagazine": {
     "EditorCategories": "Race:Protoss",
     "WhichUnit": {
@@ -14592,12 +15204,25 @@
       "id": "CloakingDroneRB"
     },
     {
+      "BehaviorLink": "CreepTumorActive",
+      "EditorCategories": "Race:Zerg",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "CreepTumorActiveRB"
+    },
+    {
       "BehaviorLink": "CycloneWeaponLaunchMissileAlternate",
       "EditorCategories": "Race:Terran",
       "WhichUnit": {
         "Value": "Caster"
       },
       "id": "CycloneWeaponLaunchMissileAlternateRB"
+    },
+    {
+      "BehaviorLink": "EMPDecloak",
+      "EditorCategories": "Race:Terran",
+      "id": "EMPDecloakRB"
     },
     {
       "BehaviorLink": "FungalGrowth",
@@ -14669,6 +15294,13 @@
       "BehaviorLink": "ImmortalOverload",
       "EditorCategories": "Race:Protoss",
       "id": "ImmortalBarrierRemoveBarrier"
+    },
+    {
+      "BehaviorLink": "IsActiveBuilderSCV",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "IsBuildingSCVRB"
     },
     {
       "BehaviorLink": "LiberatorTargetMorphBehavior",
@@ -14837,6 +15469,14 @@
         "Value": "Caster"
       },
       "id": "PhaseNeuralParasiteRemove"
+    },
+    {
+      "BehaviorLink": "NeuralParasite",
+      "EditorCategories": "Race:Zerg",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "NeuralParasiteSCVRB"
     },
     {
       "BehaviorLink": "NeuralParasiteDrone",
@@ -15025,6 +15665,14 @@
       "BehaviorLink": "ResourceStun",
       "EditorCategories": "Race:Protoss",
       "id": "ResourceStunRemoveBehavior"
+    },
+    {
+      "BehaviorLink": "SCVMoveToBuildSeek",
+      "id": "SCVMovetoBuildSeekRB"
+    },
+    {
+      "BehaviorLink": "SCVMovetoBuildAllyAntiGrief",
+      "id": "SCVMovetoBuildAntigriefRB"
     },
     {
       "BehaviorLink": "SalvageShared",
@@ -15947,6 +16595,15 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
+        "value": "OracleStasisTrapBuildBeamOn"
+      },
+      "SetSource": 1,
+      "TargetLocationType": "UnitOrPoint",
+      "id": "StasisWardPlaceSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
         "value": "OracleWeaponDamage"
       },
       "ValidatorArray": "NotHaveBeamTargetCDBehavior",
@@ -16197,11 +16854,6 @@
     },
     {
       "EditorCategories": "Race:Terran",
-      "EffectArray": "HerdIssueMoveOrderSelf",
-      "id": "HerdInteractSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
       "EffectArray": "LiberatorAGMissileLM",
       "ValidatorArray": "LiberatorAGTargets",
       "id": "LiberatorAGMissileLMSet"
@@ -16210,11 +16862,6 @@
       "EditorCategories": "Race:Terran",
       "EffectArray": "LockOnDummyWeaponRB",
       "id": "LockOnClearSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": "NeuralParasiteLockOnRemove",
-      "id": "NeuralParasitePersistentSet"
     },
     {
       "EditorCategories": "Race:Terran",
@@ -16253,6 +16900,20 @@
         }
       ],
       "id": "WidowMineAttack"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "0": "HerdIssueCircle"
+      },
+      "id": "HerdInteractSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "index": "ApplyNeuralAcquireToAllChildren"
+      },
+      "id": "NeuralParasitePersistentSet"
     },
     {
       "EditorCategories": "Race:Terran",
@@ -16918,7 +17579,7 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "CreepTumorBuildAB"
+        "value": "CreepTumorActiveRB"
       },
       "id": "CreepTumorLaunchMissileSet"
     },
@@ -17261,7 +17922,7 @@
       "Marker": {
         "Link": "YoinkMarker"
       },
-      "ValidatorArray": "IsNotPhaseShielded",
+      "ValidatorArray": "CasterIsAlive",
       "id": "YoinkSetVikingAir"
     },
     {
@@ -17272,7 +17933,7 @@
       "Marker": {
         "Link": "YoinkMarker"
       },
-      "ValidatorArray": "IsNotPhaseShielded",
+      "ValidatorArray": "CasterIsAlive",
       "id": "YoinkSetVikingGround"
     },
     {
@@ -17510,6 +18171,11 @@
       "id": "NeuralParasiteExpireSet"
     },
     {
+      "EffectArray": "SCVMovetoGatherSearchWorker",
+      "SetSource": 1,
+      "id": "SCVMovetoGatherSourceSet"
+    },
+    {
       "EffectArray": {
         "value": "##abil####nNext##Delay"
       },
@@ -17531,10 +18197,23 @@
     },
     {
       "EffectArray": {
+        "value": "ChangelingTimedLife"
+      },
+      "id": "ChangelingSpawnEffectSet"
+    },
+    {
+      "EffectArray": {
         "value": "CritterFleeIssueOrder"
       },
       "TargetLocationType": "Point",
       "id": "CritterFleeSet"
+    },
+    {
+      "EffectArray": {
+        "value": "DisguiseEx3CancelAttackOnChangeling"
+      },
+      "ValidatorArray": "TargetAttackingCaster",
+      "id": "DisguiseEx3ChangeAttackedTargetSet"
     },
     {
       "EffectArray": {
@@ -17544,9 +18223,33 @@
     },
     {
       "EffectArray": {
+        "value": "IsBuildingSCVAB"
+      },
+      "id": "SCVStartBuildingSet"
+    },
+    {
+      "EffectArray": {
+        "value": "IsBuildingSCVRB"
+      },
+      "id": "SCVCancelBuildingSet"
+    },
+    {
+      "EffectArray": {
+        "value": "IsBuildingSCVRB"
+      },
+      "id": "SCVFinishBuildingSet"
+    },
+    {
+      "EffectArray": {
         "value": "KD8PrecursorUnitKnockbackAB"
       },
       "id": "ReaperKD8KnockbackCreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "MapmakerNeutralUnitGameStartModifierSearch"
+      },
+      "id": "MapmakerNeutralUnitGameStartModifierSet"
     },
     {
       "EffectArray": {
@@ -17665,6 +18368,22 @@
     },
     {
       "EffectArray": {
+        "value": "SCVMovetoAttack3ActiveAttackerSet"
+      },
+      "ValidatorArray": "TargetHasMeleeWeapon",
+      "id": "SCVMovetoAttack2SetEffects"
+    },
+    {
+      "EffectArray": {
+        "value": "SCVMovetoAttack4CancelAttack"
+      },
+      "ValidatorArray": {
+        "value": "ConstructingSCVIsActiveAttackTarget"
+      },
+      "id": "SCVMovetoAttack3ActiveAttackerSet"
+    },
+    {
+      "EffectArray": {
         "value": "ShieldBatteryRechargeChanneled"
       },
       "ValidatorArray": {
@@ -17774,6 +18493,18 @@
     {
       "CaseArray": [
         {
+          "Effect": "BurrowTransientAttackLastTarget"
+        },
+        {
+          "Effect": "BurrowTransientMoveLastTarget"
+        }
+      ],
+      "EditorCategories": "Race:Zerg",
+      "id": "BurrowTransientSwitch"
+    },
+    {
+      "CaseArray": [
+        {
           "Effect": "CrucioShockCannonBlast",
           "Validator": "IsSupplyDepotLowered",
           "index": "1"
@@ -17798,6 +18529,19 @@
       ],
       "EditorCategories": "Race:Zerg",
       "id": "FungalGrowthTargetOnCreepSwitch"
+    },
+    {
+      "CaseArray": [
+        {
+          "Effect": "SCVMovetoBuildChangeOwner",
+          "FallThrough": "1",
+          "Validator": "TargetIsAlly"
+        },
+        {
+          "Effect": "SCVMovetoBuildOrder"
+        }
+      ],
+      "id": "SCVMovetoBuildAllySwitch"
     },
     {
       "CaseArray": {
@@ -18115,16 +18859,16 @@
     }
   ],
   "CEffectTransferBehavior": {
-    "Behavior": "ParasiticBombTimer",
+    "Behavior": "ChangelingDeathDamageResponse",
     "Copy": 1,
     "EditorCategories": "Race:Zerg",
     "ImpactUnit": {
       "Value": "Target"
     },
     "LaunchUnit": {
-      "Effect": "ParasiticBombAB"
+      "Value": "Caster"
     },
-    "id": "ParasiticBombCUCopyBehavior"
+    "id": "KillOtherNearbyChangelingsTransferDeathResponse"
   },
   "CEffectUseCalldown": {
     "CalldownCount": 1,
