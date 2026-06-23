@@ -266,13 +266,13 @@
         "0": "SiegeTank",
         "1": "Mutalisk",
         "2": "Colossus",
-        "value": "SiegeTankSieged"
+        "value": "Hydralisk"
       },
       "GlossaryWeakArray": {
         "0": "Ghost",
         "1": "Corruptor",
         "2": "HighTemplar",
-        "value": "VikingFighter"
+        "value": "Phoenix"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -650,7 +650,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 30,
       "TechAliasArray": {
-        "value": "Alias_Hatchery"
+        "value": "Alias_Lair"
       },
       "TechTreeUnlockedUnitArray": "Overseer",
       "TurningRate": 719.4726,
@@ -833,7 +833,7 @@
       "SubgroupPriority": 28,
       "TechAliasArray": "Alias_Hatchery",
       "TechTreeProducedUnitArray": {
-        "value": "Larva"
+        "value": "Queen"
       },
       "TurningRate": 719.4726,
       "id": "Hatchery"
@@ -996,7 +996,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 32,
       "TechAliasArray": {
-        "value": "Alias_Hatchery"
+        "value": "Alias_Lair"
       },
       "TechTreeUnlockedUnitArray": "SnakeCaster",
       "TurningRate": 719.4726,
@@ -1088,10 +1088,10 @@
       "GlossaryPriority": 210,
       "GlossaryStrongArray": {
         "1": "LurkerMP",
-        "value": "Banshee"
+        "value": "DarkTemplar"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "Stalker"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -1194,7 +1194,7 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 201,
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "PhotonCannon"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -1513,7 +1513,7 @@
       "Speed": 0.5625,
       "SubgroupPriority": 58,
       "TechTreeProducedUnitArray": {
-        "value": "Drone"
+        "value": "Ultralisk"
       },
       "id": "Larva"
     },
@@ -1800,10 +1800,10 @@
       "GlossaryPriority": 110,
       "GlossaryStrongArray": {
         "1": "LurkerMP",
-        "value": "Banshee"
+        "value": "DarkTemplar"
       },
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "PhotonCannon"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -1956,7 +1956,7 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 110,
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "PhotonCannon"
       },
       "Height": 4.25,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -2775,7 +2775,7 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 185,
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "PhotonCannon"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -2967,10 +2967,10 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 168,
       "GlossaryStrongArray": {
-        "value": "SCV"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "Phoenix"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -3306,10 +3306,10 @@
       "GlossaryPriority": 217,
       "GlossaryStrongArray": {
         "2": "Oracle",
-        "value": "Hellion"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -3469,10 +3469,10 @@
       "GlossaryPriority": 230,
       "GlossaryStrongArray": {
         "2": "Oracle",
-        "value": "Banshee"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillDisplay": "Always",
@@ -3636,11 +3636,11 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 240,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "value": "Banshee"
+        "value": "VoidRay"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "LifeArmor": 2,
@@ -3774,11 +3774,11 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 220,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillDisplay": "Always",
@@ -3926,11 +3926,11 @@
         "0": "Battlecruiser",
         "1": "BroodLord",
         "2": "Tempest",
-        "value": "Phoenix"
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
         "0": "Thor",
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -4073,7 +4073,7 @@
       "GlossaryWeakArray": {
         "1": "Corruptor",
         "2": "Carrier",
-        "value": "Battlecruiser"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -4204,11 +4204,11 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 200,
       "GlossaryStrongArray": {
-        "value": "Banshee"
+        "value": "DarkTemplar"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "value": "SiegeTankSieged"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "LifeArmor": 1,
@@ -4337,7 +4337,7 @@
       "GlossaryPriority": 190,
       "GlossaryWeakArray": {
         "2": "Tempest",
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -4569,10 +4569,10 @@
       "GlossaryCategory": "",
       "GlossaryPriority": 190,
       "GlossaryStrongArray": {
-        "value": "WidowMine"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "Phoenix"
       },
       "Height": 3,
       "HotkeyCategory": "",
@@ -4749,10 +4749,10 @@
       "GlossaryStrongArray": {
         "0": "Liberator",
         "2": "Marine",
-        "value": "Thor"
+        "value": "Carrier"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -4978,12 +4978,12 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 300,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
         "2": "Immortal",
-        "value": "SiegeTankSieged"
+        "value": "Colossus"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "LifeArmor": 1,
@@ -5140,13 +5140,13 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 70,
       "GlossaryStrongArray": {
-        "value": "Raven"
+        "value": "HighTemplar"
       },
       "GlossaryWeakArray": {
         "0": "Thor",
         "1": "Roach",
         "2": "Stalker",
-        "value": "Marauder"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.375,
@@ -5301,12 +5301,12 @@
         "0": "Marauder",
         "1": "Roach",
         "2": "Adept",
-        "value": "Thor"
+        "value": "Immortal"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
         "2": "Immortal",
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.5,
@@ -5450,12 +5450,13 @@
         "0": "SiegeTank",
         "1": "Ultralisk",
         "2": "HighTemplar",
-        "index": "Marine"
+        "index": "Marine",
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
         "1": "Corruptor",
         "2": "Tempest",
-        "value": "VikingFighter"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -5566,10 +5567,10 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 50,
       "GlossaryStrongArray": {
-        "value": "SCV"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
-        "value": "Marauder"
+        "value": "Stalker"
       },
       "Height": 0.5,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -5717,10 +5718,10 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 130,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Banshee"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.875,
@@ -5852,10 +5853,10 @@
       "GlossaryPriority": 135,
       "GlossaryStrongArray": {
         "1": "Roach",
-        "value": "Marine"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Banshee"
+        "value": "Immortal"
       },
       "HotkeyAlias": "SiegeTank",
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -6204,10 +6205,10 @@
       "GlossaryStrongArray": {
         "1": "Mutalisk",
         "2": "VoidRay",
-        "value": "Marine"
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
-        "value": "Ultralisk"
+        "value": "HighTemplar"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -6392,12 +6393,12 @@
       "GlossaryStrongArray": {
         "1": "Hydralisk",
         "2": "Sentry",
-        "value": "Marine"
+        "value": "Hydralisk"
       },
       "GlossaryWeakArray": {
         "1": "Roach",
         "2": "Colossus",
-        "value": "Ghost"
+        "value": "Roach"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -6958,13 +6959,13 @@
         "0": "Banshee",
         "1": "Mutalisk",
         "2": "VoidRay",
-        "value": "Battlecruiser"
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
         "1": "Zergling",
         "2": "Colossus",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.375,
@@ -7305,13 +7306,13 @@
       "GlossaryStrongArray": {
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "0": "Marauder",
         "1": "Infestor",
         "2": "Stalker",
-        "value": "Thor"
+        "value": "Roach"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.375,
@@ -8064,10 +8065,10 @@
       },
       "Food": -3,
       "GlossaryStrongArray": {
-        "value": "SiegeTankSieged"
+        "value": "Disruptor"
       },
       "GlossaryWeakArray": {
-        "value": "Thor"
+        "value": "Archon"
       },
       "HotkeyAlias": "HERC",
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -11084,10 +11085,10 @@
       ],
       "Food": -3,
       "GlossaryStrongArray": {
-        "value": "Marauder"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
-        "value": "Thor"
+        "value": "Immortal"
       },
       "InnerRadius": 0.5,
       "KillDisplay": "Never",
@@ -11209,10 +11210,10 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 250,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
-        "value": "Raven"
+        "value": "Observer"
       },
       "InnerRadius": 0.375,
       "KillDisplay": "Never",
@@ -12624,10 +12625,10 @@
       "GlossaryStrongArray": {
         "0": "VikingFighter",
         "2": "Phoenix",
-        "value": "Marine"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 1,
@@ -12750,13 +12751,13 @@
         "0": "Marine",
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Zergling"
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
         "0": "Marauder",
         "1": "Roach",
         "2": "Stalker",
-        "value": "Roach"
+        "value": "Marauder"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -12897,10 +12898,10 @@
       },
       "Food": -4,
       "GlossaryStrongArray": {
-        "value": "SiegeTank"
+        "value": "BroodLord"
       },
       "GlossaryWeakArray": {
-        "value": "Battlecruiser"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "KillXP": 350,
@@ -13054,10 +13055,10 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 70,
       "GlossaryStrongArray": {
-        "value": "SCV"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
-        "value": "Raven"
+        "value": "Observer"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -13470,11 +13471,11 @@
       "GlossaryStrongArray": {
         "1": "BroodLord",
         "2": "Tempest",
-        "value": "Battlecruiser"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
         "1": "Hydralisk",
-        "value": "Marine"
+        "value": "Stalker"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -13881,11 +13882,11 @@
         "0": "SiegeTank",
         "1": "Ravager",
         "2": "Adept",
-        "value": "SiegeTankSieged"
+        "value": "Colossus"
       },
       "GlossaryWeakArray": {
         "0": "VikingFighter",
-        "value": "Marine"
+        "value": "Phoenix"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -14173,7 +14174,7 @@
       "SubgroupPriority": 24,
       "TechAliasArray": "Alias_Barracks",
       "TechTreeProducedUnitArray": {
-        "value": "Marine"
+        "value": "Ghost"
       },
       "TurningRate": 719.4726,
       "id": "Barracks"
@@ -14589,12 +14590,12 @@
       "GlossaryStrongArray": {
         "1": "Corruptor",
         "2": "Tempest",
-        "value": "Reaper"
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
         "1": "Zergling",
         "2": "Immortal",
-        "value": "Marauder"
+        "value": "Zergling"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5,
@@ -14773,12 +14774,12 @@
       "GlossaryPriority": 190,
       "GlossaryStrongArray": {
         "1": "LurkerMP",
-        "value": "Banshee"
+        "value": "DarkTemplar"
       },
       "GlossaryWeakArray": {
         "0": "VikingFighter",
         "1": "Mutalisk",
-        "value": "Ghost"
+        "value": "Phoenix"
       },
       "Height": 4.15,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -15272,7 +15273,7 @@
       "TacticalAIThink": "AIThinkNexus",
       "TechTreeProducedUnitArray": {
         "1": "Mothership",
-        "value": "Probe"
+        "value": "Mothership"
       },
       "TurningRate": 719.4726,
       "WeaponArray": [
@@ -15482,7 +15483,7 @@
       "TacticalAIThink": "AIThinkCommandCenter",
       "TechAliasArray": "Alias_CommandCenter",
       "TechTreeProducedUnitArray": {
-        "value": "SCV"
+        "value": "OrbitalCommand"
       },
       "TurningRate": 719.4726,
       "id": "CommandCenter"
@@ -15753,7 +15754,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 8,
       "TechTreeUnlockedUnitArray": {
-        "value": "DarkTemplar"
+        "value": "Archon"
       },
       "TurningRate": 719.4726,
       "id": "DarkShrine"
@@ -15999,7 +16000,8 @@
       "SubgroupPriority": 22,
       "TechAliasArray": "Alias_Factory",
       "TechTreeProducedUnitArray": {
-        "index": "WidowMine"
+        "index": "SiegeTank",
+        "value": "Thor"
       },
       "TurningRate": 719.4726,
       "id": "Factory"
@@ -16098,7 +16100,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 14,
       "TechTreeUnlockedUnitArray": {
-        "value": "Carrier"
+        "value": "Tempest"
       },
       "TurningRate": 719.4726,
       "id": "FleetBeacon"
@@ -16415,13 +16417,13 @@
       "GlossaryStrongArray": {
         "0": "Zergling",
         "1": "Zealot",
-        "value": "Mutalisk"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "Thor",
         "1": "Ravager",
         "2": "Archon",
-        "value": "Hellion"
+        "value": "Zergling"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -16954,7 +16956,7 @@
       "TacticalAIThink": "AIThinkGateway",
       "TechAliasArray": "Alias_Gateway",
       "TechTreeProducedUnitArray": {
-        "value": "WarpGate"
+        "value": "DarkTemplar"
       },
       "TurningRate": 719.4726,
       "id": "Gateway"
@@ -17845,7 +17847,7 @@
       "TechAliasArray": "Alias_Pylon",
       "TurningRate": 719.4726,
       "TurretArray": {
-        "value": "PylonCrystalRotate"
+        "value": "PylonRingRotate"
       },
       "id": "Pylon"
     },
@@ -17980,7 +17982,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 20,
       "TechTreeProducedUnitArray": {
-        "value": "Phoenix"
+        "value": "Carrier"
       },
       "TurningRate": 719.4726,
       "id": "Stargate"
@@ -18094,7 +18096,7 @@
       "SubgroupPriority": 20,
       "TechAliasArray": "Alias_Starport",
       "TechTreeProducedUnitArray": {
-        "value": "VikingFighter"
+        "value": "Battlecruiser"
       },
       "TurningRate": 719.4726,
       "id": "Starport"
@@ -18653,7 +18655,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 20,
       "TechTreeUnlockedUnitArray": {
-        "value": "Zergling"
+        "value": "Queen"
       },
       "TurningRate": 719.4726,
       "id": "SpawningPool"
@@ -18818,7 +18820,7 @@
       "SubgroupPriority": 24,
       "TechAliasArray": "Alias_Spire",
       "TechTreeUnlockedUnitArray": {
-        "value": "Mutalisk"
+        "value": "Corruptor"
       },
       "TurningRate": 719.4726,
       "id": "Spire"
@@ -19109,7 +19111,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 10,
       "TechTreeUnlockedUnitArray": {
-        "value": "HighTemplar"
+        "value": "Archon"
       },
       "TurningRate": 719.4726,
       "id": "TemplarArchive"
@@ -19469,10 +19471,10 @@
       "GlossaryPriority": 310,
       "GlossaryStrongArray": {
         "2": "Phoenix",
-        "value": "Banshee"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "LifeArmorName": "Unit/LifeArmorName/TerranBuildingPlating",
@@ -19693,10 +19695,10 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 346,
       "GlossaryStrongArray": {
-        "value": "SCV"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "HotkeyCategory": "",
       "KillDisplay": "Never",
@@ -20352,10 +20354,10 @@
       "GlossaryCategory": "",
       "GlossaryPriority": 219,
       "GlossaryStrongArray": {
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
-        "value": "HellionTank"
+        "value": "Adept"
       },
       "HotkeyCategory": "",
       "InnerRadius": 0.375,
@@ -20504,12 +20506,12 @@
       "GlossaryStrongArray": {
         "1": "Roach",
         "2": "Stalker",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
         "1": "Viper",
-        "value": "Thor"
+        "value": "Disruptor"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -20797,11 +20799,11 @@
       "GlossaryPriority": 66,
       "GlossaryStrongArray": {
         "0": "Liberator",
-        "value": "SiegeTankSieged"
+        "value": "Sentry"
       },
       "GlossaryWeakArray": {
         "1": "Mutalisk",
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -21109,12 +21111,12 @@
       "GlossaryStrongArray": {
         "1": "Zergling",
         "2": "Adept",
-        "value": "Hellion"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "1": "LurkerMP",
         "2": "Immortal",
-        "value": "Marauder"
+        "value": "Ultralisk"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.625,
@@ -21455,13 +21457,13 @@
         "0": "Marine",
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "0": "Ghost",
         "1": "BroodLord",
         "2": "Immortal",
-        "value": "Marauder"
+        "value": "VoidRay"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.75,
@@ -21782,13 +21784,13 @@
       "GlossaryStrongArray": {
         "1": "Hydralisk",
         "2": "Stalker",
-        "value": "Marauder"
+        "value": "Hydralisk"
       },
       "GlossaryWeakArray": {
         "0": "HellionTank",
         "1": "Baneling",
         "2": "Colossus",
-        "value": "Hellion"
+        "value": "Baneling"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillDisplay": "Always",
@@ -21937,12 +21939,12 @@
       "GlossaryPriority": 170,
       "GlossaryStrongArray": {
         "0": "SiegeTank",
-        "value": "Mutalisk"
+        "value": "Phoenix"
       },
       "GlossaryWeakArray": {
         "1": "Corruptor",
         "2": "Tempest",
-        "value": "VikingFighter"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -22122,13 +22124,13 @@
       "GlossaryStrongArray": {
         "1": "Zergling",
         "2": "Immortal",
-        "value": "Marauder"
+        "value": "Hydralisk"
       },
       "GlossaryWeakArray": {
         "0": "HellionTank",
         "1": "Roach",
         "2": "Colossus",
-        "value": "Hellion"
+        "value": "Baneling"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -22387,10 +22389,10 @@
       },
       "Food": -2,
       "GlossaryStrongArray": {
-        "value": "MissileTurret"
+        "value": "Banshee"
       },
       "GlossaryWeakArray": {
-        "value": "Battlecruiser"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "KillXP": 80,
@@ -23118,11 +23120,11 @@
       "GlossaryStrongArray": {
         "0": "SiegeTank",
         "1": "Ultralisk",
-        "value": "VikingFighter"
+        "value": "Phoenix"
       },
       "GlossaryWeakArray": {
         "2": "Tempest",
-        "value": "Battlecruiser"
+        "value": "Carrier"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -23234,10 +23236,10 @@
       "GlossaryStrongArray": {
         "0": "Liberator",
         "1": "BroodLord",
-        "value": "SwarmHostMP"
+        "value": "Colossus"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -23585,10 +23587,10 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 148,
       "GlossaryStrongArray": {
-        "value": "SCV"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
-        "value": "HellionTank"
+        "value": "Colossus"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillDisplay": "Never",
@@ -23727,12 +23729,13 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 90,
       "GlossaryStrongArray": {
-        "index": "Marine"
+        "index": "Marine",
+        "value": "Adept"
       },
       "GlossaryWeakArray": {
         "1": "Hydralisk",
         "2": "Immortal",
-        "value": "Thor"
+        "value": "Ultralisk"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5625,
@@ -24291,13 +24294,14 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 81,
       "GlossaryStrongArray": {
-        "index": "SCV"
+        "index": "Zergling",
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "Marauder",
         "1": "Baneling",
         "2": "Stalker",
-        "value": "Baneling"
+        "value": "Marauder"
       },
       "HotkeyAlias": "Hellion",
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -24441,11 +24445,11 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 80,
       "GlossaryStrongArray": {
-        "value": "Zergling"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
         "0": "Cyclone",
-        "value": "Marauder"
+        "value": "Stalker"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.5,
@@ -24986,13 +24990,13 @@
         "0": "SCV",
         "1": "Drone",
         "2": "Probe",
-        "value": "Marine"
+        "value": "Roach"
       },
       "GlossaryWeakArray": {
         "0": "Banshee",
         "1": "Mutalisk",
         "2": "Stalker",
-        "value": "Baneling"
+        "value": "Archon"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -25430,11 +25434,11 @@
       "GlossaryPriority": 135,
       "GlossaryStrongArray": {
         "2": "Stalker",
-        "value": "Marauder"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
         "2": "Tempest",
-        "value": "Thor"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5,
@@ -26495,11 +26499,11 @@
       "GlossaryPriority": 21,
       "GlossaryStrongArray": {
         "1": "Mutalisk",
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "value": "SiegeTankSieged"
+        "value": "Colossus"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.375,
@@ -26641,10 +26645,10 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 60,
       "GlossaryStrongArray": {
-        "value": "Thor"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.375,
@@ -26896,10 +26900,10 @@
       "GlossaryStrongArray": {
         "0": "VikingFighter",
         "2": "Phoenix",
-        "value": "Marine"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "HotkeyAlias": "Thor",
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -27040,10 +27044,10 @@
       "GlossaryCategory": "",
       "GlossaryPriority": 126,
       "GlossaryStrongArray": {
-        "value": "Stalker"
+        "value": "SiegeTankSieged"
       },
       "GlossaryWeakArray": {
-        "value": "Roach"
+        "value": "Marauder"
       },
       "HotkeyAlias": "",
       "HotkeyCategory": "",
@@ -27190,13 +27194,13 @@
       "GlossaryPriority": 160,
       "GlossaryStrongArray": {
         "2": "Immortal",
-        "value": "Battlecruiser"
+        "value": "Carrier"
       },
       "GlossaryWeakArray": {
         "0": "Marine",
         "1": "Hydralisk",
         "2": "Phoenix",
-        "value": "VikingFighter"
+        "value": "Mutalisk"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -27315,10 +27319,10 @@
       },
       "Food": -3,
       "GlossaryStrongArray": {
-        "value": "Battlecruiser"
+        "value": "BroodLord"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "Mutalisk"
       },
       "Height": 3.75,
       "KillXP": 80,
@@ -27454,13 +27458,13 @@
       "GlossaryStrongArray": {
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "0": "VikingFighter",
         "1": "Corruptor",
         "2": "Tempest",
-        "value": "Thor"
+        "value": "Ultralisk"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5625,
@@ -27612,12 +27616,12 @@
         "0": "Cyclone",
         "1": "Roach",
         "2": "Stalker",
-        "value": "SiegeTankSieged"
+        "value": "Roach"
       },
       "GlossaryWeakArray": {
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5,
@@ -27754,10 +27758,10 @@
       },
       "Food": -4,
       "GlossaryStrongArray": {
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "GlossaryWeakArray": {
-        "value": "Hellion"
+        "value": "Colossus"
       },
       "InnerRadius": 0.375,
       "KillXP": 20,
@@ -27931,10 +27935,10 @@
         "0": "Marine",
         "1": "Baneling",
         "2": "Oracle",
-        "value": "Marauder"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Raven"
+        "value": "Observer"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "KillDisplay": "Always",
@@ -28070,10 +28074,10 @@
       ],
       "Food": -2,
       "GlossaryStrongArray": {
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "GlossaryWeakArray": {
-        "value": "Raven"
+        "value": "Observer"
       },
       "HotkeyAlias": "WidowMine",
       "KillDisplay": "Always",
@@ -28270,10 +28274,10 @@
       },
       "Food": -2,
       "GlossaryStrongArray": {
-        "value": "Battlecruiser"
+        "value": "Phoenix"
       },
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "KillXP": 400,
@@ -28378,10 +28382,10 @@
       },
       "Food": -3,
       "GlossaryStrongArray": {
-        "value": "SiegeTankSieged"
+        "value": "Disruptor"
       },
       "GlossaryWeakArray": {
-        "value": "Thor"
+        "value": "Archon"
       },
       "InnerRadius": 0.5,
       "KillDisplay": "Always",
@@ -28988,13 +28992,13 @@
         "0": "SCV",
         "1": "Drone",
         "2": "Probe",
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
         "0": "Thor",
         "1": "Viper",
         "2": "Phoenix",
-        "value": "Marine"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -30721,7 +30725,7 @@
       ],
       "BuildOnAs": "ExtractorRich",
       "BuiltOn": {
-        "value": "PurifierVespeneGeyser"
+        "value": "ShakurasVespeneGeyser"
       },
       "CardLayouts": {
         "LayoutButtons": {
@@ -30894,7 +30898,7 @@
       ],
       "BuildOnAs": "RefineryRich",
       "BuiltOn": {
-        "value": "PurifierVespeneGeyser"
+        "value": "ShakurasVespeneGeyser"
       },
       "CardLayouts": {
         "LayoutButtons": [
@@ -31102,7 +31106,7 @@
       ],
       "BuildOnAs": "AssimilatorRich",
       "BuiltOn": {
-        "value": "PurifierVespeneGeyser"
+        "value": "ShakurasVespeneGeyser"
       },
       "CardLayouts": {
         "LayoutButtons": {

@@ -265,6 +265,46 @@ def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
     return unit_build_times
 
 
+def extract_batch_counts(abil_data: dict) -> dict[str, int]:
+    """Extract batch training counts from AbilData.json.
+
+    When a training ability trains multiple units at once (e.g., Zergling x2),
+    the Unit field in InfoArray is a dict with "value" and "count" keys.
+
+    Returns:
+        dict mapping unit name -> batch count (only entries with count > 1)
+    """
+    batch_counts: dict[str, int] = {}
+
+    for ability_id, ability in abil_data.items():
+        entries = ability if isinstance(ability, list) else [ability]
+
+        for entry in entries:
+            if not isinstance(entry, dict):
+                continue
+
+            info_array = entry.get("InfoArray", [])
+            if isinstance(info_array, list):
+                for item in info_array:
+                    if not isinstance(item, dict):
+                        continue
+                    unit = item.get("Unit", "")
+                    if isinstance(unit, dict):
+                        count = unit.get("count", 1)
+                        unit_name = unit.get("value", "")
+                        if isinstance(count, (int, float)) and count > 1 and isinstance(unit_name, str) and unit_name:
+                            batch_counts[unit_name] = int(count)
+            elif isinstance(info_array, dict):
+                unit = info_array.get("Unit", "")
+                if isinstance(unit, dict):
+                    count = unit.get("count", 1)
+                    unit_name = unit.get("value", "")
+                    if isinstance(count, (int, float)) and count > 1 and isinstance(unit_name, str) and unit_name:
+                        batch_counts[unit_name] = int(count)
+
+    return batch_counts
+
+
 def enqueue_if_new(
     queue: deque[QueueItem],
     visited: set[ItemName],
@@ -852,6 +892,9 @@ def _build_result(
     # Extract unit/structure build times from AbilData.json
     unit_build_times = extract_unit_build_times(abil_data)
 
+    # Extract batch training counts (e.g., Zergling trains 2 at a time)
+    batch_counts = extract_batch_counts(abil_data)
+
     # Populate units with full data from UnitData.json
     for unit_name in visited_units:
         unit_entry = units_section.get(unit_name, {})
@@ -864,6 +907,15 @@ def _build_result(
         # Add build time if available
         if unit_name in unit_build_times:
             merged["time"] = unit_build_times[unit_name]
+        # Apply batch training count to costs (e.g., Zergling x2 -> multiply Food, Minerals, Vespene)
+        if unit_name in batch_counts:
+            count = batch_counts[unit_name]
+            if "Food" in merged and isinstance(merged["Food"], (int, float)):
+                merged["Food"] = merged["Food"] * count
+            if "CostResource" in merged and isinstance(merged["CostResource"], dict):
+                for field in ("Minerals", "Vespene"):
+                    if field in merged["CostResource"] and isinstance(merged["CostResource"][field], (int, float)):
+                        merged["CostResource"][field] = merged["CostResource"][field] * count
         result["Units"][unit_name] = merged
 
     # Populate structures with full data - structures are now in units_section

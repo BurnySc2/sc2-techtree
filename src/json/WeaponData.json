@@ -5,7 +5,7 @@
       "AcquireScanFilters": "-;Player,Ally,Neutral,Enemy",
       "AcquireTargetSorts": {
         "SortArray": {
-          "value": "MothershipTrackedTargetFire"
+          "value": "TSDistance"
         }
       },
       "AllowedMovement": "Moving",
@@ -342,7 +342,7 @@
     {
       "AcquireTargetSorts": {
         "SortArray": {
-          "value": "TSTrackedByBattlecruiser"
+          "value": "GroundTarget"
         }
       },
       "AllowedMovement": "Moving",

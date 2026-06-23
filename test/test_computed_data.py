@@ -889,6 +889,26 @@ class TestReactorCostResource:
         assert vespene == 50, f"{unit_name} vespene should be 50, got {vespene}"
 
 
+class TestZergling:
+    def test_zergling_attributes(self, computed_data: dict) -> None:
+        """Zergling should have correct build cost and time."""
+        zergling = computed_data["Units"]["Zergling"]
+
+        # Food should be -1 (2 zerglings × 0.5 supply each)
+        assert "Food" in zergling, "Zergling should have Food field"
+        food = zergling["Food"]
+        assert food == -1, f"Zergling food should be -1, got {food}"
+
+        # Minerals should be 50 (total cost for 2 zerglings)
+        assert "CostResource" in zergling, "Zergling should have CostResource field"
+        minerals = zergling["CostResource"].get("Minerals")
+        assert minerals == 50, f"Zergling minerals should be 50, got {minerals}"
+
+        # Time should exist and be > 10
+        assert "time" in zergling, "Zergling should have time field"
+        assert zergling["time"] > 10, f"Zergling time should be > 10, got {zergling['time']}"
+
+
 class TestBuildTimesNotOverwrittenByMorph:
     """Build times should come from build/train abilities, not morph animation delays."""
 

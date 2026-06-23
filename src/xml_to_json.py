@@ -54,7 +54,20 @@ def _postprocess_index_value(child_list: list[dict]) -> dict:
 
 
 def _postprocess_value_only(child_list: list[dict]) -> dict:
-    return {next(iter(child_list[0].keys())): _coerce_value(child_list[0]["value"])}
+    if len(child_list) == 1:
+        return {next(iter(child_list[0].keys())): _coerce_value(child_list[0]["value"])}
+
+    # Multiple entries - check if they're all identical (batch training, e.g., Zergling x2)
+    first_key = next(iter(child_list[0].keys()))
+    first_value = child_list[0]["value"]
+    all_same = all(next(iter(entry.keys())) == first_key and entry["value"] == first_value for entry in child_list)
+
+    if all_same:
+        # Batch training - preserve count alongside the value
+        return {first_key: _coerce_value(first_value), "count": len(child_list)}
+    else:
+        # Different entries - keep as dict mapping key -> coerced value
+        return {next(iter(entry.keys())): _coerce_value(entry["value"]) for entry in child_list}
 
 
 def _postprocess_entries(children_by_tag: dict) -> dict:

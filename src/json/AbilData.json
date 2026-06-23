@@ -2825,7 +2825,7 @@
       "Range": 500,
       "SmartPriority": 20,
       "SmartValidatorArray": {
-        "value": "CasterAndTargetNotDead"
+        "value": "TargetIsEnemyOrNeutral"
       },
       "id": "BattlecruiserAttackEvaluator"
     },
@@ -2974,7 +2974,7 @@
       "AutoCastFilters": "Visible;Neutral,Enemy,Missile,Stasis,Dead,Invulnerable",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "healCasterMinEnergy"
+        "value": "NotWarpingIn"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "Heal",
@@ -2992,7 +2992,7 @@
       },
       "Range": 4,
       "SmartValidatorArray": {
-        "value": "healSmartTargetFilters"
+        "value": "NotWarpingIn"
       },
       "TargetFilters": {
         "0": "Biological,Visible;Self,Enemy,Structure,Missile,Dead,Hidden,Invulnerable"
@@ -3000,7 +3000,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -3017,7 +3017,7 @@
       "AutoCastFilters": "Visible;Neutral,Enemy,Missile,Stasis,Dead,Invulnerable",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "NotWarpingIn"
+        "value": "healCasterMinEnergy"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "RavenRepairDroneHeal",
@@ -3035,13 +3035,13 @@
       },
       "Range": 6,
       "SmartValidatorArray": {
-        "value": "healSmartTargetFilters"
+        "value": "NotWarpingIn"
       },
       "TargetFilters": "Mechanical,Visible;Self,Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable",
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -3081,7 +3081,7 @@
       "AutoCastFilters": "Visible;Player,Ally,Neutral",
       "AutoCastRange": 7,
       "AutoCastValidatorArray": {
-        "value": "noMarkers"
+        "value": "IsNotBroodlingFate"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "LockOnAir",
@@ -3114,7 +3114,7 @@
       "AutoCastFilters": "Visible;Player,Ally,Neutral",
       "AutoCastRange": 7.5,
       "AutoCastValidatorArray": {
-        "value": "CasterIsNotHidden"
+        "value": "NotLarvaEgg"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "LockOn",
@@ -3140,7 +3140,7 @@
       "TargetFilters": "Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
       "TargetSorts": {
         "SortArray": {
-          "value": "TSThreatensCyclone"
+          "value": "AirTarget"
         }
       },
       "id": "LockOn"
@@ -3199,7 +3199,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSMarker"
+          "value": "TSDistance"
         }
       },
       "id": "SapStructure"
@@ -3726,7 +3726,7 @@
       "AutoCastFilters": "Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "Casterhas10EnergyorCasterisBatteryOvercharged"
+        "value": "NotHaveBatteryCooldownBehavior"
       },
       "CancelableArray": {
         "Channel": 1
@@ -3763,7 +3763,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -3778,7 +3778,7 @@
       "AutoCastFilters": "Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "Casterhas10EnergyorCasterisBatteryOvercharged"
+        "value": "UnitOrAttackingStructure"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "ShieldBatteryRecharge",
@@ -3801,7 +3801,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -4067,7 +4067,7 @@
       "AutoCastFilters": "Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign",
       "AutoCastRange": 5,
       "AutoCastValidatorArray": {
-        "value": "NotLarvaEgg"
+        "value": "IsNotNeuralParasited"
       },
       "CancelEffect": {
         "Prep": "WidowMineTargetTintRemoveBehavior"
@@ -14904,6 +14904,7 @@
           },
           "Time": "24",
           "Unit": {
+            "count": 2,
             "value": "Zergling"
           },
           "index": "Train2"
@@ -15219,6 +15220,7 @@
           "AutoCastOn": 1
         },
         "Unit": {
+          "count": 2,
           "value": "LocustMP"
         },
         "index": "Train1"
@@ -15411,7 +15413,7 @@
       "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
       "LoadCargoBehavior": "BunkerWeaponRangeBonus",
       "LoadValidatorArray": {
-        "value": "NotWidowMineTarget"
+        "value": "IsNotHellionTank"
       },
       "MaxCargoCount": 4,
       "MaxCargoSize": 2,
@@ -15562,7 +15564,7 @@
       "InitialUnloadDelay": 0.5,
       "LoadPeriod": 0.25,
       "LoadValidatorArray": {
-        "value": "NotSpawnling"
+        "value": "NotWidowMineTarget"
       },
       "MaxCargoCount": 255,
       "MaxCargoSize": 8,

@@ -1867,7 +1867,7 @@
     {
       "name": "Zergling",
       "race": "Zerg",
-      "minerals": 25,
+      "minerals": 50,
       "gas": 0,
       "buildtime": 384.0,
       "built_from": [],
