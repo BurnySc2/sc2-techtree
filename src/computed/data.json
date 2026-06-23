@@ -19891,7 +19891,6 @@
         "Lair"
       ],
       "researches": [
-        "MicrobialShroud",
         "NeuralParasite"
       ],
       "time": 50,
@@ -32987,13 +32986,6 @@
       "name": "MedivacCaduceusReactor",
       "requires": [],
       "time": 70
-    },
-    "MicrobialShroud": {
-      "gas": 150,
-      "minerals": 150,
-      "name": "MicrobialShroud",
-      "requires": [],
-      "time": 110
     },
     "NeuralParasite": {
       "gas": 150,

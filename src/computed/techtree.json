@@ -1896,7 +1896,6 @@
         "Lair"
       ],
       "researches": [
-        "MicrobialShroud",
         "NeuralParasite"
       ],
       "unlocks": [
@@ -4397,9 +4396,6 @@
       ]
     },
     "MedivacCaduceusReactor": {
-      "requires": []
-    },
-    "MicrobialShroud": {
       "requires": []
     },
     "NeuralParasite": {

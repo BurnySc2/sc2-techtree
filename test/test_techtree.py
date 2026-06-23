@@ -519,7 +519,6 @@ class TestInfestationPit:
         pit = techtree_data["Units"]["InfestationPit"]
         assert "researches" in pit
         assert pit["researches"] == [
-            "MicrobialShroud",
             "NeuralParasite",
         ]
 

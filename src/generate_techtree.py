@@ -100,6 +100,7 @@ RESEARCH_EXCLUDE = {
     "LocustLifetimeIncrease",  # not InfestationPit research
     "FlyingLocusts",  # not InfestationPit research
     "InfestorEnergyUpgrade",  # not InfestationPit research
+    "MicrobialShroud",  # not InfestationPit research
     "CarrierLaunchSpeedUpgrade",  # not FleetBeacon research
     "TempestRangeUpgrade",  # not FleetBeacon research
     "SunderingImpact",  # not TwilightCouncil research
@@ -207,7 +208,6 @@ STRUCTURE_RESEARCH_EXCLUDE = {
 STRUCTURE_ADDITIONAL_RESEARCHES = {
     "FusionCore": ["LiberatorAGRangeUpgrade"],
     "HydraliskDen": ["Frenzy"],
-    "InfestationPit": ["MicrobialShroud"],
     "EngineeringBay": ["HiSecAutoTracking", "TerranBuildingArmor"],
 }
 
