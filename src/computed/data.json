@@ -32763,6 +32763,7 @@
       "requires": [
         "SpawningPool"
       ],
+      "time": 24,
       "type": "unit"
     }
   },

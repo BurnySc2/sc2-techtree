@@ -179,6 +179,8 @@ def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
             info_array = entry.get("InfoArray", [])
             if isinstance(info_array, dict):
                 unit_name = info_array.get("Unit", "")
+                if isinstance(unit_name, dict) and "value" in unit_name:
+                    unit_name = unit_name["value"]
 
                 if not isinstance(unit_name, str):
                     continue
@@ -221,6 +223,8 @@ def extract_unit_build_times(abil_data: dict) -> dict[str, float]:
                         continue
 
                     unit_name = item.get("Unit", "")
+                    if isinstance(unit_name, dict) and "value" in unit_name:
+                        unit_name = unit_name["value"]
                     time_str = item.get("Time", "0")
 
                     if unit_name and time_str and time_str != "0":
