@@ -565,6 +565,24 @@ class TestRoboticsBay:
         ]
 
 
+class TestArchon:
+    def test_archon_no_requires_dark_shrine(self, techtree_data: dict) -> None:
+        """Archon is a merge target (HighTemplar + DarkTemplar → Archon).
+
+        It should NOT require DarkShrine. The DarkShrine's TechTreeUnlockedUnitArray
+        lists Archon because DarkShrine indirectly unlocks Archon via DarkTemplar merging,
+        but this should not create a direct "requires" relationship.
+        """
+        archon = techtree_data["Units"]["Archon"]
+        requires = archon.get("requires", [])
+        assert "DarkShrine" not in requires
+
+    def test_archon_is_protoss(self, techtree_data: dict) -> None:
+        """Archon should be a Protoss unit."""
+        archon = techtree_data["Units"]["Archon"]
+        assert archon["race"] == "Protoss"
+
+
 class TestDarkShrine:
     def test_dark_shrine_researches(self, techtree_data: dict) -> None:
         shrine = techtree_data["Units"]["DarkShrine"]
@@ -634,6 +652,12 @@ class TestLair:
         lair = techtree_data["Units"]["Lair"]
         assert "requires" in lair
         assert lair["requires"] == ["SpawningPool"]
+
+    def test_lair_unlocks_overseer(self, techtree_data: dict) -> None:
+        """Lair should unlock Overseer (detected via TechTreeUnlockedUnitArray in game data)."""
+        lair = techtree_data["Units"]["Lair"]
+        assert "unlocks" in lair
+        assert "Overseer" in lair["unlocks"]
 
 
 class TestHive:

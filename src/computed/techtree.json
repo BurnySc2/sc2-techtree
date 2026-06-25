@@ -1065,6 +1065,7 @@
         "DarkTemplarBlinkUpgrade"
       ],
       "unlocks": [
+        "Archon",
         "DarkTemplar"
       ]
     },
@@ -2020,6 +2021,7 @@
         "InfestationPit",
         "NydusNetwork",
         "OverlordTransport",
+        "Overseer",
         "Spire",
         "TransportOverlordCocoon"
       ]
@@ -2447,7 +2449,10 @@
       ]
     },
     "Overseer": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "Lair"
+      ]
     },
     "OverseerACGluescreenDummy": {
       "race": ""
@@ -3714,6 +3719,7 @@
         "PsiStormTech"
       ],
       "unlocks": [
+        "Archon",
         "HighTemplar"
       ]
     },
