@@ -30,6 +30,11 @@ RACE_MAP = {
 # Mapping of units to their correct requirements when game data is inconsistent
 UNIT_REQUIREMENT_FIXES = {
     "Roach": ["RoachWarren"],
+    "HighTemplar": ["TemplarArchive"],
+    "DarkTemplar": ["DarkShrine"],
+    "Sentry": ["CyberneticsCore"],
+    "Stalker": ["CyberneticsCore"],
+    "Adept": ["CyberneticsCore"],
 }
 
 # Units to exclude from morph targets (cocoons) - loaded dynamically from game data
@@ -95,6 +100,7 @@ RESEARCH_EXCLUDE = {
     "LocustLifetimeIncrease",  # not InfestationPit research
     "FlyingLocusts",  # not InfestationPit research
     "InfestorEnergyUpgrade",  # not InfestationPit research
+    "MicrobialShroud",  # not InfestationPit research
     "CarrierLaunchSpeedUpgrade",  # not FleetBeacon research
     "TempestRangeUpgrade",  # not FleetBeacon research
     "SunderingImpact",  # not TwilightCouncil research
@@ -202,7 +208,6 @@ STRUCTURE_RESEARCH_EXCLUDE = {
 STRUCTURE_ADDITIONAL_RESEARCHES = {
     "FusionCore": ["LiberatorAGRangeUpgrade"],
     "HydraliskDen": ["Frenzy"],
-    "InfestationPit": ["MicrobialShroud"],
     "EngineeringBay": ["HiSecAutoTracking", "TerranBuildingArmor"],
 }
 
@@ -266,24 +271,20 @@ def get_info_units(info: Any) -> list[str]:
 
 
 def get_info_upgrades(info: Any) -> list[str]:
-    """Extract upgrade names from InfoArray entries (only if has DefaultButtonFace)."""
+    """Extract upgrade names from InfoArray entries."""
     upgrades = []
     if isinstance(info, list):
         for item in info:
             if isinstance(item, dict):
-                btn = item.get("Button", {})
-                if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
-                    upgrade = item.get("Upgrade")
-                    if upgrade:
-                        mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
-                        upgrades.append(mapped)
+                upgrade = item.get("Upgrade")
+                if upgrade:
+                    mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
+                    upgrades.append(mapped)
     elif isinstance(info, dict):
-        btn = info.get("Button", {})
-        if isinstance(btn, dict) and btn.get("DefaultButtonFace"):
-            upgrade = info.get("Upgrade")
-            if upgrade:
-                mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
-                upgrades.append(mapped)
+        upgrade = info.get("Upgrade")
+        if upgrade:
+            mapped = RESEARCH_NAME_MAP.get(upgrade, upgrade)
+            upgrades.append(mapped)
     return upgrades
 
 
@@ -532,9 +533,38 @@ def _build_ability_indices(abils_data: dict) -> tuple[dict[str, list[tuple[str, 
     return ability_produces, ability_upgrades
 
 
+def _extract_unlocked_units_from_tech_tree(unit_data: dict) -> list[str]:
+    """Extract unit names from TechTreeUnlockedUnitArray field.
+
+    This field explicitly declares what a structure unlocks in the game data.
+    Handles multiple formats:
+        - String: "Overseer"
+        - Dict with value key: {"value": "Archon"}
+        - List of dicts: [{"index": "2", "value": "Adept"}, {"index": "3", "removed": "1"}]
+    """
+    raw = unit_data.get("TechTreeUnlockedUnitArray")
+    if not raw:
+        return []
+
+    units: list[str] = []
+    items = raw if isinstance(raw, list) else [raw]
+    for item in items:
+        if isinstance(item, dict):
+            # Skip removal markers
+            if item.get("removed") == "1":
+                continue
+            value = item.get("value")
+            if value and isinstance(value, str) and value != "N/A":
+                units.append(value)
+        elif isinstance(item, str) and item != "N/A":
+            units.append(item)
+    return units
+
+
 def _build_unlocks_mapping(
     ability_produces: dict[str, list[tuple[str, str]]],
     units_data: dict,
+    merge_target_units: set[str] | None = None,
 ) -> tuple[dict[str, set[str]], dict[str, list[str]]]:
     """Build unlocks and unit_requirements mappings from ability produces."""
     unlocks: dict[str, set[str]] = defaultdict(set)
@@ -552,6 +582,31 @@ def _build_unlocks_mapping(
                         unit_requirements[produced_unit].extend(UNIT_REQUIREMENT_FIXES[produced_unit])
                     else:
                         unit_requirements[produced_unit].append(req_struct)
+            elif produced_unit in UNIT_REQUIREMENT_FIXES:
+                # Apply hardcoded fixes even when requirement data is missing
+                for req_struct in UNIT_REQUIREMENT_FIXES[produced_unit]:
+                    if req_struct in units_data:
+                        unlocks[req_struct].add(produced_unit)
+                    unit_requirements[produced_unit].append(req_struct)
+
+    # Supplement with TechTreeUnlockedUnitArray from game data.
+    # This field explicitly declares what each structure unlocks (e.g., Lair → Overseer).
+    # It covers cases where the ability-based detection fails (e.g., Use* prefixed requirements).
+    for unit_name, unit_data in units_data.items():
+        if not isinstance(unit_data, dict):
+            continue
+        for unlocked_unit in _extract_unlocked_units_from_tech_tree(unit_data):
+            if unlocked_unit in units_data:
+                unlocks[unit_name].add(unlocked_unit)
+                # Skip adding requirements for merge targets (e.g., Archon) —
+                # merge targets are produced by merging units, not by a specific structure.
+                # TechTreeUnlockedUnitArray lists them because they are indirectly unlocked,
+                # but this should not create a direct "requires" relationship.
+                if merge_target_units and unlocked_unit in merge_target_units:
+                    continue
+                # Also ensure unit_requirements tracks this unlock
+                if unlocked_unit not in unit_requirements or not unit_requirements[unlocked_unit]:
+                    unit_requirements[unlocked_unit].append(unit_name)
 
     return unlocks, unit_requirements
 
@@ -579,7 +634,7 @@ def generate_techtree() -> dict:
     ability_to_structures = _build_ability_to_structures_mapping(units_data)
 
     # Build unlocks mapping
-    unlocks, unit_requirements = _build_unlocks_mapping(ability_produces, units_data)
+    unlocks, unit_requirements = _build_unlocks_mapping(ability_produces, units_data, set(merge_target_units))
 
     # Collect produces, builds, researches, morphsto for each structure/unit
     for unit_name, unit_data in units_data.items():

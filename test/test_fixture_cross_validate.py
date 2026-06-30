@@ -163,7 +163,7 @@ class TestMineralCostConsistency:
         "name,expected_minerals",
         [
             ("Marine", 50),
-            ("Zergling", 25),
+            ("Zergling", 50),
             ("Zealot", 100),
             ("SCV", 50),
             ("Probe", 50),

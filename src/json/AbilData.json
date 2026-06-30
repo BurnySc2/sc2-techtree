@@ -2,6 +2,18 @@
   "CAbilArmMagazine": [
     {
       "InfoArray": {
+        "Charge": {
+          "Link": "Abil/##id##"
+        },
+        "Cooldown": {
+          "Link": "Abil/##id##"
+        },
+        "index": "Ammo1"
+      },
+      "id": "ArmSiloWithNuke"
+    },
+    {
+      "InfoArray": {
         "Flags": {
           "AutoBuildOn": 1
         },
@@ -68,111 +80,23 @@
     "default": "1",
     "id": "SC2_Battery"
   },
-  "CAbilBehavior": [
-    {
-      "BehaviorArray": "OracleWeapon",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "OracleWeaponOff",
-          "Flags": {
-            "ToSelection": 1
-          },
-          "index": "Off"
+  "CAbilBehavior": {
+    "CmdButtonArray": [
+      {
+        "Flags": {
+          "ToSelection": 1
         },
-        {
-          "DefaultButtonFace": "OracleWeaponOn",
-          "Flags": {
-            "ToSelection": 1
-          },
-          "index": "On"
-        }
-      ],
-      "Cost": {
-        "Charge": {
-          "Link": "Abil/OracleWeapon"
-        },
-        "Cooldown": {
-          "TimeUse": "4"
-        },
-        "Vital": {
-          "Energy": 25
-        },
-        "index": "0"
+        "index": "Off"
       },
-      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
-      "Flags": {
-        "Toggle": 1,
-        "Transient": 1
-      },
-      "Name": "Abil/Name/OracleWeapon",
-      "id": "OracleWeapon",
-      "parent": "GhostCloak"
-    },
-    {
-      "BehaviorArray": "VolatileBurstBuilding",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "DisableBuildingAttack",
-          "index": "Off"
+      {
+        "Flags": {
+          "ToSelection": 1
         },
-        {
-          "DefaultButtonFace": "EnableBuildingAttack",
-          "index": "On"
-        }
-      ],
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
-      "Flags": {
-        "Toggle": 1,
-        "Transient": 1
-      },
-      "id": "VolatileBurstBuilding"
-    },
-    {
-      "Name": "Abil/Name/SalvageBaneling",
-      "id": "SalvageBaneling",
-      "parent": "Salvage"
-    },
-    {
-      "Name": "Abil/Name/SalvageDrone",
-      "id": "SalvageDrone",
-      "parent": "Salvage"
-    },
-    {
-      "Name": "Abil/Name/SalvageHydralisk",
-      "id": "SalvageHydralisk",
-      "parent": "Salvage"
-    },
-    {
-      "Name": "Abil/Name/SalvageInfestor",
-      "id": "SalvageInfestor",
-      "parent": "Salvage"
-    },
-    {
-      "Name": "Abil/Name/SalvageQueen",
-      "id": "SalvageQueen",
-      "parent": "Salvage"
-    },
-    {
-      "Name": "Abil/Name/SalvageRoach",
-      "id": "SalvageRoach",
-      "parent": "Salvage"
-    },
-    {
-      "Name": "Abil/Name/SalvageSwarmHost",
-      "id": "SalvageSwarmHost",
-      "parent": "Salvage"
-    },
-    {
-      "Name": "Abil/Name/SalvageUltralisk",
-      "id": "SalvageUltralisk",
-      "parent": "Salvage"
-    },
-    {
-      "Name": "Abil/Name/SalvageZergling",
-      "id": "SalvageZergling",
-      "parent": "Salvage"
-    }
-  ],
+        "index": "On"
+      }
+    ],
+    "id": "GenerateCreep"
+  },
   "CAbilBuild": [
     {
       "Alert": "AddOnComplete",
@@ -531,6 +455,11 @@
     {
       "ConstructionMover": "Construction",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "EffectArray": {
+        "Cancel": "SCVCancelBuildingSet",
+        "Finish": "SCVFinishBuildingSet",
+        "Start": "SCVStartBuildingSet"
+      },
       "FidgetDelayMax": 8.5,
       "FidgetDelayMin": 6.5,
       "FlagArray": {
@@ -694,13 +623,19 @@
     {
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "EffectArray": {
-        "Cancel": "OracleStasisTrapBuildBeamOff",
-        "Finish": "OracleStasisTrapBuildBeamOff",
-        "Start": "OracleStasisTrapBuildBeamOn"
+        "Cancel": "OracleFacePersistentDestroy",
+        "Finish": "OracleFacePersistentDestroy",
+        "Start": "StasisWardPlaceSet"
       },
-      "FlagArray": {
-        "RequireFacing": 1
-      },
+      "FidgetDelayMax": 0.0625,
+      "FlagArray": [
+        {
+          "RequireFacing": 0
+        },
+        {
+          "RequireFacing": 1
+        }
+      ],
       "InfoArray": {
         "Button": {
           "DefaultButtonFace": "OracleBuildStasisTrap",
@@ -708,7 +643,7 @@
             "ShowInGlossary": 1
           }
         },
-        "Time": "5",
+        "Time": "5.6",
         "Unit": "OracleStasisTrap",
         "Vital": {
           "Energy": 50
@@ -1275,7 +1210,8 @@
         "0": "HallucinationCreateArchon"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationArchon"
     },
@@ -1332,7 +1268,8 @@
         "0": "HallucinationCreateColossus"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationColossus"
     },
@@ -1363,7 +1300,8 @@
         "0": "HallucinationCreateHighTemplar"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationHighTemplar"
     },
@@ -1399,7 +1337,8 @@
         "0": "HallucinationCreateImmortal"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationImmortal"
     },
@@ -1629,7 +1568,8 @@
         "0": "HallucinationCreateOracle"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationOracle"
     },
@@ -1694,7 +1634,8 @@
         "0": "HallucinationCreatePhoenix"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationPhoenix"
     },
@@ -1714,7 +1655,8 @@
         "0": "HallucinationCreateProbe"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationProbe"
     },
@@ -1781,7 +1723,8 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "Transient": 1
       },
       "ProducedUnitArray": "Changeling",
       "id": "SpawnChangeling"
@@ -1802,7 +1745,8 @@
         "0": "HallucinationCreateStalker"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationStalker"
     },
@@ -1838,7 +1782,8 @@
         "0": "HallucinationCreateVoidRay"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationVoidRay"
     },
@@ -1876,7 +1821,8 @@
         "0": "HallucinationCreateAdept"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationAdept"
     },
@@ -1896,7 +1842,8 @@
         "0": "HallucinationCreateWarpPrism"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationWarpPrism"
     },
@@ -1915,7 +1862,8 @@
         "0": "HallucinationCreateDisruptor"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationDisruptor"
     },
@@ -1951,7 +1899,8 @@
         "0": "HallucinationCreateZealot"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": "HallucinationZealot"
     },
@@ -2326,7 +2275,6 @@
       "CastOutroTime": 0.5,
       "CmdButtonArray": {
         "DefaultButtonFace": "AmorphousArmorcloud",
-        "Requirements": "UseAmorphousArmorcloud",
         "index": "Execute"
       },
       "Cost": {
@@ -2343,7 +2291,7 @@
         "AllowMovement": 1,
         "NoDeceleration": 1
       },
-      "Range": 9,
+      "Range": 12,
       "id": "AmorphousArmorcloud"
     },
     {
@@ -2767,7 +2715,9 @@
     },
     {
       "AINotifyEffect": "SpawnMutantLarva",
-      "CastOutroTime": 2.3,
+      "CastOutroTime": {
+        "0": 0
+      },
       "CmdButtonArray": {
         "DefaultButtonFace": "MorphMorphalisk",
         "index": "Execute"
@@ -2786,6 +2736,9 @@
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": {
         "0": "SpawnLarvaSet"
+      },
+      "Flags": {
+        "ReExecutable": 1
       },
       "Marker": {
         "Link": "Abil/SpawnMutantLarva"
@@ -2872,7 +2825,7 @@
       "Range": 500,
       "SmartPriority": 20,
       "SmartValidatorArray": {
-        "value": "CasterAndTargetNotDead"
+        "value": "TargetIsEnemyOrNeutral"
       },
       "id": "BattlecruiserAttackEvaluator"
     },
@@ -2926,6 +2879,7 @@
     },
     {
       "AbilSetId": "Graviton",
+      "ArcSlop": 360,
       "CancelableArray": {
         "Channel": 1
       },
@@ -3020,7 +2974,7 @@
       "AutoCastFilters": "Visible;Neutral,Enemy,Missile,Stasis,Dead,Invulnerable",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "healCasterMinEnergy"
+        "value": "NotWarpingIn"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "Heal",
@@ -3038,7 +2992,7 @@
       },
       "Range": 4,
       "SmartValidatorArray": {
-        "value": "healSmartTargetFilters"
+        "value": "NotWarpingIn"
       },
       "TargetFilters": {
         "0": "Biological,Visible;Self,Enemy,Structure,Missile,Dead,Hidden,Invulnerable"
@@ -3046,7 +3000,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -3063,7 +3017,7 @@
       "AutoCastFilters": "Visible;Neutral,Enemy,Missile,Stasis,Dead,Invulnerable",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "NotWarpingIn"
+        "value": "healCasterMinEnergy"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "RavenRepairDroneHeal",
@@ -3081,13 +3035,13 @@
       },
       "Range": 6,
       "SmartValidatorArray": {
-        "value": "healSmartTargetFilters"
+        "value": "NotWarpingIn"
       },
       "TargetFilters": "Mechanical,Visible;Self,Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable",
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -3127,7 +3081,7 @@
       "AutoCastFilters": "Visible;Player,Ally,Neutral",
       "AutoCastRange": 7,
       "AutoCastValidatorArray": {
-        "value": "noMarkers"
+        "value": "IsNotBroodlingFate"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "LockOnAir",
@@ -3160,7 +3114,7 @@
       "AutoCastFilters": "Visible;Player,Ally,Neutral",
       "AutoCastRange": 7.5,
       "AutoCastValidatorArray": {
-        "value": "CasterIsNotHidden"
+        "value": "NotLarvaEgg"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "LockOn",
@@ -3186,7 +3140,7 @@
       "TargetFilters": "Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
       "TargetSorts": {
         "SortArray": {
-          "value": "TSThreatensCyclone"
+          "value": "AirTarget"
         }
       },
       "id": "LockOn"
@@ -3245,7 +3199,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSMarker"
+          "value": "TSDistance"
         }
       },
       "id": "SapStructure"
@@ -3392,7 +3346,9 @@
           "TimeUse": "20"
         }
       },
+      "CursorEffect": "KD8SearchArea",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "Placeholder": "KD8Charge",
       "Range": 5,
       "TargetFilters": "Ground,Visible;-",
       "id": "KD8Charge"
@@ -3770,7 +3726,7 @@
       "AutoCastFilters": "Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "Casterhas10EnergyorCasterisBatteryOvercharged"
+        "value": "NotHaveBatteryCooldownBehavior"
       },
       "CancelableArray": {
         "Channel": 1
@@ -3807,7 +3763,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -3822,7 +3778,7 @@
       "AutoCastFilters": "Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "Casterhas10EnergyorCasterisBatteryOvercharged"
+        "value": "UnitOrAttackingStructure"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "ShieldBatteryRecharge",
@@ -3845,7 +3801,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -4111,7 +4067,7 @@
       "AutoCastFilters": "Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign",
       "AutoCastRange": 5,
       "AutoCastValidatorArray": {
-        "value": "NotLarvaEgg"
+        "value": "IsNotNeuralParasited"
       },
       "CancelEffect": {
         "Prep": "WidowMineTargetTintRemoveBehavior"
@@ -4387,11 +4343,10 @@
       },
       "Cost": {
         "Charge": {
-          "Link": "Abil/BatteryOvercharge"
-        },
-        "Cooldown": {
+          "CountMax": 1,
+          "CountUse": 1,
           "Location": "Player",
-          "TimeUse": "63"
+          "TimeUse": 63
         },
         "Vital": {
           "Energy": 50
@@ -4418,9 +4373,12 @@
         "index": "Execute"
       },
       "Cost": {
-        "Cooldown": {
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
           "Location": "Player",
-          "TimeUse": "182"
+          "TimeUse": 182
         },
         "Vital": {
           "Energy": 50
@@ -4692,6 +4650,9 @@
         "Transient": 1
       },
       "Range": 500,
+      "SharedFlags": {
+        "RegisterCooldownEvent": 1
+      },
       "id": "SpawnLocustsTargeted"
     },
     {
@@ -4771,7 +4732,7 @@
     },
     {
       "AutoCastFilters": "Ground;Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable",
-      "AutoCastRange": 6,
+      "AutoCastRange": 10,
       "CmdButtonArray": {
         "DefaultButtonFace": "Herd",
         "index": "Execute"
@@ -4791,7 +4752,9 @@
         "AutoCastOn": 1,
         "ReExecutable": 1
       },
-      "Range": 6,
+      "Range": {
+        "0": 10
+      },
       "TargetSorts": {
         "SortArray": "TSRandom"
       },
@@ -5029,7 +4992,7 @@
       ],
       "Cost": {
         "Vital": {
-          "Energy": 50
+          "Energy": 75
         }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -7170,6 +7133,58 @@
         },
         "index": "Execute"
       },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "1.4"
+        }
+      },
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "IgnoreFacing": 1,
+        "IgnoreFood": 1,
+        "IgnorePlacement": 1,
+        "IgnoreUnitCost": 1,
+        "Interruptible": 1,
+        "Transient": 1
+      },
+      "InfoArray": {
+        "RandomDelayMax": "0.1",
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 0.1
+            },
+            "index": "Collide"
+          },
+          {
+            "DurationArray": {
+              "Delay": 0.31
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 0.31
+            },
+            "EffectArray": {
+              "Start": "RoachBurrowDownTransient"
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "RoachBurrowed"
+      },
+      "id": "BurrowRoachDown"
+    },
+    {
+      "AbilSetId": "BrwD",
+      "ActorKey": "BurrowDown",
+      "CmdButtonArray": {
+        "Flags": {
+          "ShowInGlossary": 0
+        },
+        "index": "Execute"
+      },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
         "IgnoreFacing": 1,
@@ -7393,75 +7408,19 @@
       "Flags": {
         "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnorePlacement": 0,
+        "IgnorePlacement": 1,
         "IgnoreUnitCost": 1,
-        "Interruptible": 1
-      },
-      "InfoArray": {
-        "RandomDelayMax": "0.1",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 0.5556
-            },
-            "index": "Collide"
-          },
-          {
-            "DurationArray": {
-              "Delay": 0.5556
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 0.5556
-            },
-            "index": "Actor"
-          }
-        ],
-        "Unit": "RoachBurrowed"
-      },
-      "id": "BurrowRoachDown"
-    },
-    {
-      "AbilSetId": "BrwD",
-      "ActorKey": "BurrowDown",
-      "CmdButtonArray": {
-        "Flags": {
-          "ShowInGlossary": 0
-        },
-        "index": "Execute"
-      },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
-      "Flags": {
-        "IgnoreFacing": 1,
-        "IgnoreFood": 1,
-        "IgnorePlacement": 0,
-        "IgnoreUnitCost": 1,
-        "Interruptible": 1
+        "Interruptible": 1,
+        "Transient": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 0.5
-            },
-            "index": "Collide"
+        "SectionArray": {
+          "EffectArray": {
+            "Start": "InfestorBurrowDownTransient"
           },
-          {
-            "DurationArray": {
-              "Delay": 0.5
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 0.5
-            },
-            "index": "Actor"
-          }
-        ],
+          "index": "Actor"
+        },
         "Unit": "InfestorBurrowed"
       },
       "id": "BurrowInfestorDown"
@@ -7485,24 +7444,17 @@
         "IgnoreFacing": 1,
         "IgnoreFood": 1,
         "IgnoreUnitCost": 1,
-        "SuppressMovement": 1
+        "SuppressMovement": 1,
+        "Transient": 1
       },
       "InfoArray": {
-        "RandomDelayMax": "0.125",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Duration": 0.875
-            },
-            "index": "Actor"
+        "RandomDelayMax": "0.5",
+        "SectionArray": {
+          "EffectArray": {
+            "Start": "InfestorBurrowUpTransient"
           },
-          {
-            "DurationArray": {
-              "Duration": 0.875
-            },
-            "index": "Stats"
-          }
-        ],
+          "index": "Actor"
+        },
         "Unit": "Infestor"
       },
       "id": "BurrowInfestorUp"
@@ -7561,27 +7513,32 @@
         "IgnoreFacing": 1,
         "IgnoreFood": 1,
         "IgnoreUnitCost": 1,
-        "SuppressMovement": 1
+        "Interruptible": 1,
+        "SuppressMovement": 0,
+        "Transient": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.1",
         "SectionArray": [
           {
             "DurationArray": {
-              "Duration": 0.4443
+              "Duration": 0.7517
+            },
+            "EffectArray": {
+              "Finish": "RoachBurrowUpTransient"
             },
             "index": "Actor"
           },
           {
             "DurationArray": {
-              "Duration": 0.4443
+              "Duration": 0.7517
             },
             "index": "Stats"
           }
         ],
-        "Unit": "Ravager"
+        "Unit": "Roach"
       },
-      "id": "BurrowRavagerUp"
+      "id": "BurrowRoachUp"
     },
     {
       "AbilSetId": "BrwU",
@@ -7621,9 +7578,9 @@
             "index": "Stats"
           }
         ],
-        "Unit": "Roach"
+        "Unit": "Ravager"
       },
-      "id": "BurrowRoachUp"
+      "id": "BurrowRavagerUp"
     },
     {
       "AbilSetId": "BrwU",
@@ -8758,6 +8715,8 @@
       "AutoCastCountMax": 500,
       "AutoCastRange": 5,
       "AutoCastValidatorArray": "NotHaveUpgradeToWarpGateAutoCastDisabler",
+      "BehaviorOff": "MorphingintoWarpGate",
+      "BehaviorOn": "MorphingintoWarpGate",
       "CmdButtonArray": [
         {
           "DefaultButtonFace": "Cancel",
@@ -8765,19 +8724,30 @@
         },
         {
           "DefaultButtonFace": "UpgradeToWarpGate",
-          "Requirements": "UseWarpGate",
+          "Flags": {
+            "ShowInGlossary": 0,
+            "ToSelection": 1
+          },
+          "Requirements": "UseWarpGateHideFree",
           "State": "Restricted",
           "index": "Execute"
         }
       ],
+      "Cost": {
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "TimeUse": 10
+        }
+      },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
-        "AutoCast": 1,
-        "AutoCastOn": 1,
         "BestUnit": 1,
         "Birth": 1,
         "DisableAbils": 1,
         "FastBuild": 1,
+        "Interruptible": 1,
         "Produce": 1,
         "ShowProgress": 1
       },
@@ -8786,6 +8756,9 @@
           {
             "DurationArray": {
               "Delay": 10
+            },
+            "EffectArray": {
+              "Finish": "HasMorphedBefore"
             },
             "index": "Abils"
           },
@@ -8803,6 +8776,64 @@
           }
         ],
         "Unit": "WarpGate"
+      },
+      "RefundFraction": {
+        "Resource": {
+          "Custom": -1,
+          "Minerals": -1,
+          "Terrazine": -1,
+          "Vespene": -1
+        }
+      },
+      "id": "MorphBuildingGatewayWarpGateFree"
+    },
+    {
+      "Activity": "UI/Transforming",
+      "Alert": "TransformationComplete",
+      "AutoCastCountMax": 500,
+      "AutoCastRange": 5,
+      "AutoCastValidatorArray": "NotHaveUpgradeToWarpGateAutoCastDisabler",
+      "BehaviorOff": "MorphingintoWarpGate",
+      "BehaviorOn": "MorphingintoWarpGate",
+      "CmdButtonArray": {
+        "Flags": {
+          "ToSelection": 1
+        },
+        "Requirements": "UseWarpgateNotMorphedBefore",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Resource": {
+          "Minerals": 25,
+          "Vespene": 25
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "ShowProgress": 1
+      },
+      "InfoArray": {
+        "SectionArray": {
+          "EffectArray": {
+            "Finish": "HasMorphedBefore"
+          },
+          "index": "Abils"
+        },
+        "Unit": "WarpGate"
+      },
+      "RefundFraction": {
+        "Resource": {
+          "Custom": -1,
+          "Minerals": -1,
+          "Terrazine": -1,
+          "Vespene": -1
+        }
       },
       "id": "UpgradeToWarpGate"
     },
@@ -9598,16 +9629,14 @@
     },
     {
       "Alert": "TransformationComplete",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "Cancel",
-          "index": "Cancel"
+      "BehaviorOff": "WarpgateDemorphing",
+      "BehaviorOn": "WarpgateDemorphing",
+      "CmdButtonArray": {
+        "Flags": {
+          "ToSelection": 1
         },
-        {
-          "DefaultButtonFace": "MorphBackToGateway",
-          "index": "Execute"
-        }
-      ],
+        "index": "Execute"
+      },
       "Cost": {
         "Cooldown": {
           "Link": "WarpGateTrain",
@@ -9620,15 +9649,33 @@
         "Birth": 1,
         "DisableAbils": 1,
         "FastBuild": 1,
+        "Interruptible": 1,
         "ShowProgress": 1
       },
       "InfoArray": {
-        "SectionArray": {
-          "EffectArray": {
-            "Finish": "UpgradeToWarpGateAutoCastDisabler"
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 7
+            },
+            "EffectArray": {
+              "Finish": "UpgradeToWarpGateAutoCastDisabler"
+            },
+            "index": "Abils"
           },
-          "index": "Abils"
-        },
+          {
+            "DurationArray": {
+              "Delay": 7
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 7
+            },
+            "index": "Actor"
+          }
+        ],
         "Unit": "Gateway"
       },
       "id": "MorphBackToGateway"
@@ -9947,7 +9994,8 @@
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
         "BestUnit": 1,
-        "IgnoreFacing": 1
+        "IgnoreFacing": 1,
+        "WaitUntilStopped": 0
       },
       "InfoArray": {
         "SectionArray": [
@@ -9981,24 +10029,16 @@
       ],
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
-        "BestUnit": 1,
+        "BestUnit": 0,
         "IgnoreFacing": 1
       },
       "InfoArray": {
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Duration": 1.5
-            },
-            "index": "Actor"
+        "SectionArray": {
+          "EffectArray": {
+            "Finish": "WarpPrismDecFixMorphCheckAB"
           },
-          {
-            "DurationArray": {
-              "Duration": 1.5
-            },
-            "index": "Stats"
-          }
-        ],
+          "index": "Actor"
+        },
         "Unit": "WarpPrism"
       },
       "id": "TransportMode"
@@ -12246,12 +12286,9 @@
         },
         {
           "Button": {
-            "DefaultButtonFace": "ResearchWarpGate",
             "Flags": {
-              "ShowInGlossary": 1
-            },
-            "Requirements": "LearnWarpGate",
-            "State": "Restricted"
+              "ShowInGlossary": 0
+            }
           },
           "Resource": {
             "Minerals": 50,
@@ -13913,8 +13950,8 @@
             "State": "Restricted"
           },
           "Resource": {
-            "Minerals": 150,
-            "Vespene": 150
+            "Minerals": 100,
+            "Vespene": 100
           },
           "Time": "160",
           "Upgrade": "ZergGroundArmorsLevel1",
@@ -13927,8 +13964,8 @@
             "State": "Restricted"
           },
           "Resource": {
-            "Minerals": 200,
-            "Vespene": 200
+            "Minerals": 150,
+            "Vespene": 150
           },
           "Time": "190",
           "Upgrade": "ZergGroundArmorsLevel2",
@@ -13941,8 +13978,8 @@
             "State": "Restricted"
           },
           "Resource": {
-            "Minerals": 250,
-            "Vespene": 250
+            "Minerals": 200,
+            "Vespene": 200
           },
           "Time": "220",
           "Upgrade": "ZergGroundArmorsLevel3",
@@ -14756,7 +14793,7 @@
       "Activity": "UI/Morphing",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
-        "DisableCollision": 1,
+        "DisableCollision": 0,
         "KillOnCancel": 1,
         "KillOnFinish": 1,
         "Select": 1,
@@ -14867,6 +14904,7 @@
           },
           "Time": "24",
           "Unit": {
+            "count": 2,
             "value": "Zergling"
           },
           "index": "Train2"
@@ -14908,6 +14946,7 @@
         "Unit": "Mothership",
         "index": "Train1"
       },
+      "Offset": "0,0",
       "id": "NexusTrainMothership"
     },
     {
@@ -15055,39 +15094,19 @@
       "InfoArray": [
         {
           "Button": {
-            "DefaultButtonFace": "DarkTemplar",
-            "Requirements": "HaveDarkShrine",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
           },
-          "Time": "55",
-          "Unit": "DarkTemplar",
-          "index": "Train5"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "HighTemplar",
-            "Requirements": "HaveTemplarArchives",
-            "State": "Restricted"
-          },
-          "Time": "55",
-          "Unit": "HighTemplar",
-          "index": "Train4"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "Sentry",
-            "Requirements": "HaveCyberneticsCore",
-            "State": "Restricted"
-          },
-          "Time": "32",
+          "Time": "32.66",
           "Unit": "Sentry",
           "index": "Train6"
         },
         {
           "Button": {
-            "DefaultButtonFace": "Stalker",
-            "Requirements": "HaveCyberneticsCore",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
           },
           "Time": "38",
           "Unit": "Stalker",
@@ -15095,9 +15114,19 @@
         },
         {
           "Button": {
-            "DefaultButtonFace": "WarpInAdept",
-            "Requirements": "HaveCyberneticsCore",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
+          },
+          "Time": "38",
+          "Unit": "Zealot",
+          "index": "Train1"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            }
           },
           "Time": "42",
           "Unit": "Adept",
@@ -15105,12 +15134,23 @@
         },
         {
           "Button": {
-            "DefaultButtonFace": "Zealot",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
           },
-          "Time": "38",
-          "Unit": "Zealot",
-          "index": "Train1"
+          "Time": "60.66",
+          "Unit": "DarkTemplar",
+          "index": "Train5"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            }
+          },
+          "Time": "60.66",
+          "Unit": "HighTemplar",
+          "index": "Train4"
         }
       ],
       "id": "GatewayTrain"
@@ -15180,6 +15220,7 @@
           "AutoCastOn": 1
         },
         "Unit": {
+          "count": 2,
           "value": "LocustMP"
         },
         "index": "Train1"
@@ -15261,79 +15302,42 @@
       "AbilSetId": "ULdM",
       "CmdButtonArray": [
         {
-          "DefaultButtonFace": "BunkerUnloadAll",
+          "DefaultButtonFace": "LoadNearbyOverlord",
           "Flags": {
-            "ToSelection": 1
+            "Hidden": 0
           },
-          "index": "UnloadAll"
-        },
-        {
-          "DefaultButtonFace": "MedivacLoad",
-          "index": "Load"
-        },
-        {
-          "DefaultButtonFace": "MedivacUnloadAll",
-          "index": "UnloadAt"
-        },
-        {
-          "Flags": {
-            "Hidden": 1
-          },
+          "Requirements": "UseSingleOverlordTransport",
           "index": "LoadAll"
         },
         {
-          "Flags": {
-            "Hidden": 1
-          },
-          "index": "UnloadUnit"
+          "Requirements": "UseSingleOverlordTransport",
+          "index": "Load"
         }
       ],
-      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
+      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": {
         "CargoDeath": 1
       },
-      "LoadCargoEffect": "WarpPrismLoadDummy",
+      "LoadTransportBehavior": "OverlordTransport",
       "LoadValidatorArray": "NotWidowMineTarget",
       "MaxCargoCount": 8,
       "MaxCargoSize": 8,
-      "Range": 5,
+      "SearchRadius": 4,
       "TargetFilters": "Visible;Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden",
       "TotalCargoSpace": 8,
-      "UnloadCargoEffect": "WarpPrismUnloadCargoSetEffect",
+      "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
       "UnloadPeriod": 1,
-      "id": "WarpPrismTransport"
+      "id": "OverlordTransport"
     },
     {
       "AbilSetId": "ULdM",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "MedivacLoad",
-          "index": "Load"
+      "CmdButtonArray": {
+        "DefaultButtonFace": "LoadNearbyMedivac",
+        "Flags": {
+          "Hidden": 0
         },
-        {
-          "DefaultButtonFace": "MedivacUnloadAll",
-          "index": "UnloadAt"
-        },
-        {
-          "Flags": {
-            "Hidden": 1,
-            "ToSelection": 1
-          },
-          "index": "UnloadAll"
-        },
-        {
-          "Flags": {
-            "Hidden": 1
-          },
-          "index": "LoadAll"
-        },
-        {
-          "Flags": {
-            "Hidden": 1
-          },
-          "index": "UnloadUnit"
-        }
-      ],
+        "index": "LoadAll"
+      },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
         "CargoDeath": 1
@@ -15341,6 +15345,7 @@
       "LoadValidatorArray": "NotWidowMineTarget",
       "MaxCargoCount": 8,
       "MaxCargoSize": 8,
+      "SearchRadius": 4,
       "TargetFilters": "Visible;Self,Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden",
       "TotalCargoSpace": 8,
       "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
@@ -15350,22 +15355,27 @@
     {
       "AbilSetId": "ULdM",
       "CmdButtonArray": {
-        "Requirements": "UseSingleOverlordTransport",
-        "index": "Load"
+        "DefaultButtonFace": "LoadNearbyWarpPrism",
+        "Flags": {
+          "Hidden": 0
+        },
+        "index": "LoadAll"
       },
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Flags": {
         "CargoDeath": 1
       },
-      "LoadTransportBehavior": "OverlordTransport",
+      "LoadCargoEffect": "WarpPrismLoadDummy",
       "LoadValidatorArray": "NotWidowMineTarget",
       "MaxCargoCount": 8,
       "MaxCargoSize": 8,
+      "Range": 5,
+      "SearchRadius": 5,
       "TargetFilters": "Visible;Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden",
       "TotalCargoSpace": 8,
-      "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
+      "UnloadCargoEffect": "WarpPrismUnloadCargoSetEffect",
       "UnloadPeriod": 1,
-      "id": "OverlordTransport"
+      "id": "WarpPrismTransport"
     },
     {
       "AbilSetId": "ULdS",
@@ -15403,7 +15413,7 @@
       "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
       "LoadCargoBehavior": "BunkerWeaponRangeBonus",
       "LoadValidatorArray": {
-        "value": "NotWidowMineTarget"
+        "value": "IsNotHellionTank"
       },
       "MaxCargoCount": 4,
       "MaxCargoSize": 2,
@@ -15554,7 +15564,7 @@
       "InitialUnloadDelay": 0.5,
       "LoadPeriod": 0.25,
       "LoadValidatorArray": {
-        "value": "NotSpawnling"
+        "value": "NotWidowMineTarget"
       },
       "MaxCargoCount": 255,
       "MaxCargoSize": 8,
@@ -15630,141 +15640,100 @@
     "InfoArray": [
       {
         "Button": {
-          "DefaultButtonFace": "DarkTemplar",
-          "Requirements": "HaveDarkShrine",
-          "State": "Restricted"
+          "Flags": {
+            "ToSelection": 1
+          }
         },
         "Charge": {
-          "CountMax": 1,
-          "CountStart": 1,
-          "CountUse": 1,
-          "Flags": {
-            "EnableChargeTimeQueuing": 1
-          },
-          "Link": "WarpGateTrain",
-          "TimeUse": 45
+          "TimeStart": "32.8",
+          "TimeUse": "30.8"
         },
         "Cooldown": {
           "TimeUse": "0"
         },
-        "Time": "16",
-        "Unit": "DarkTemplar",
-        "index": "Train5"
+        "Time": "5.6",
+        "Unit": "Zealot",
+        "index": "Train1"
       },
       {
         "Button": {
-          "DefaultButtonFace": "HighTemplar",
-          "Requirements": "HaveTemplarArchives",
-          "State": "Restricted"
+          "Flags": {
+            "ToSelection": 1
+          }
         },
         "Charge": {
-          "CountMax": 1,
-          "CountStart": 1,
-          "CountUse": 1,
-          "Flags": {
-            "EnableChargeTimeQueuing": 1
-          },
-          "Link": "WarpGateTrain",
-          "TimeUse": 45
-        },
-        "Cooldown": {
-          "TimeUse": "0"
-        },
-        "Time": "16",
-        "Unit": "HighTemplar",
-        "index": "Train4"
-      },
-      {
-        "Button": {
-          "DefaultButtonFace": "Sentry",
-          "Requirements": "HaveCyberneticsCore",
-          "State": "Restricted"
-        },
-        "Charge": {
-          "CountMax": 1,
-          "CountStart": 1,
-          "CountUse": 1,
-          "Flags": {
-            "EnableChargeTimeQueuing": 1
-          },
-          "Link": "WarpGateTrain",
-          "TimeUse": 32
-        },
-        "Cooldown": {
-          "TimeUse": "0"
-        },
-        "Time": "16",
-        "Unit": "Sentry",
-        "index": "Train6"
-      },
-      {
-        "Button": {
-          "DefaultButtonFace": "Stalker",
-          "Requirements": "HaveCyberneticsCore",
-          "State": "Restricted"
-        },
-        "Charge": {
-          "CountMax": 1,
-          "CountStart": 1,
-          "CountUse": 1,
-          "Flags": {
-            "EnableChargeTimeQueuing": 1
-          },
-          "Link": "WarpGateTrain",
-          "TimeUse": 32
-        },
-        "Cooldown": {
-          "TimeUse": "0"
-        },
-        "Time": "16",
-        "Unit": "Stalker",
-        "index": "Train2"
-      },
-      {
-        "Button": {
-          "DefaultButtonFace": "WarpInAdept",
-          "Requirements": "HaveCyberneticsCore",
-          "State": "Restricted"
-        },
-        "Charge": {
-          "CountMax": 1,
-          "CountStart": 1,
-          "CountUse": 1,
-          "Flags": {
-            "EnableChargeTimeQueuing": 1
-          },
-          "Link": "WarpGateTrain",
-          "TimeUse": 28
+          "TimeUse": "30.8"
         },
         "Cooldown": {
           "Link": "WarpGateTrain"
         },
-        "Time": "16",
+        "Time": "5.6",
         "Unit": "Adept",
         "index": "Train7"
       },
       {
         "Button": {
-          "DefaultButtonFace": "Zealot",
-          "State": "Restricted"
+          "Flags": {
+            "ToSelection": 1
+          }
         },
         "Charge": {
-          "CountMax": 1,
-          "CountStart": 1,
-          "CountUse": 1,
-          "Flags": {
-            "EnableChargeTimeQueuing": 1
-          },
-          "Link": "WarpGateTrain",
-          "TimeStart": 30,
-          "TimeUse": 28
+          "TimeUse": "30.8"
         },
         "Cooldown": {
           "TimeUse": "0"
         },
-        "Time": "16",
-        "Unit": "Zealot",
-        "index": "Train1"
+        "Time": "5.6",
+        "Unit": "Sentry",
+        "index": "Train6"
+      },
+      {
+        "Button": {
+          "Flags": {
+            "ToSelection": 1
+          }
+        },
+        "Charge": {
+          "TimeUse": "30.8"
+        },
+        "Cooldown": {
+          "TimeUse": "0"
+        },
+        "Time": "5.6",
+        "Unit": "Stalker",
+        "index": "Train2"
+      },
+      {
+        "Button": {
+          "Flags": {
+            "ToSelection": 1
+          }
+        },
+        "Charge": {
+          "TimeUse": "49"
+        },
+        "Cooldown": {
+          "TimeUse": "0"
+        },
+        "Time": "5.6",
+        "Unit": "DarkTemplar",
+        "index": "Train5"
+      },
+      {
+        "Button": {
+          "Flags": {
+            "ToSelection": 1
+          }
+        },
+        "Charge": {
+          "TimeUse": "49"
+        },
+        "Cooldown": {
+          "TimeUse": "0"
+        },
+        "Time": "5.6",
+        "Unit": "HighTemplar",
+        "index": "Train4"
       }
     ],
     "id": "WarpGateTrain"

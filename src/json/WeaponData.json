@@ -5,7 +5,7 @@
       "AcquireScanFilters": "-;Player,Ally,Neutral,Enemy",
       "AcquireTargetSorts": {
         "SortArray": {
-          "value": "MothershipTrackedTargetFire"
+          "value": "TSDistance"
         }
       },
       "AllowedMovement": "Moving",
@@ -33,6 +33,15 @@
       "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
       "TeleportResetRange": 0,
       "id": "PurifierBeamDummyTargetFire"
+    },
+    {
+      "AcquireFilters": "-;Player,Ally,Neutral,Enemy",
+      "Effect": "",
+      "Options": {
+        "Hidden": 1
+      },
+      "Range": 0,
+      "id": "ScanMoveDummy"
     },
     {
       "AcquireFilters": "Ground,Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
@@ -333,7 +342,7 @@
     {
       "AcquireTargetSorts": {
         "SortArray": {
-          "value": "TSTrackedByBattlecruiser"
+          "value": "GroundTarget"
         }
       },
       "AllowedMovement": "Moving",
@@ -645,23 +654,7 @@
     },
     {
       "AllowedMovement": "Slowing",
-      "ArcSlop": 360,
-      "DamagePoint": 0,
-      "DisplayEffect": "BroodlingEscortDamage",
-      "EditorCategories": "Race:Zerg",
-      "Effect": "BroodlordIterateBroodlingEscort",
-      "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level0.dds",
-      "MinScanRange": 10.5,
-      "Period": 2.5,
-      "RandomDelayMax": -2.5,
-      "RandomDelayMin": -2.5,
-      "Range": 10,
-      "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
-      "id": "BroodlingStrike"
-    },
-    {
-      "AllowedMovement": "Slowing",
-      "ArcSlop": 45,
+      "ArcSlop": 180,
       "DamagePoint": 0,
       "DisplayEffect": "GlaiveWurmU1",
       "EditorCategories": "Race:Zerg",
@@ -679,6 +672,22 @@
       "RangeSlop": 2,
       "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
       "id": "GlaiveWurm"
+    },
+    {
+      "AllowedMovement": "Slowing",
+      "ArcSlop": 360,
+      "DamagePoint": 0,
+      "DisplayEffect": "BroodlingEscortDamage",
+      "EditorCategories": "Race:Zerg",
+      "Effect": "BroodlordIterateBroodlingEscort",
+      "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level0.dds",
+      "MinScanRange": 10.5,
+      "Period": 2.5,
+      "RandomDelayMax": -2.5,
+      "RandomDelayMin": -2.5,
+      "Range": 10,
+      "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+      "id": "BroodlingStrike"
     },
     {
       "AllowedMovement": "Slowing",
@@ -956,6 +965,24 @@
     },
     {
       "Arc": 360,
+      "Backswing": 0,
+      "ChaseFilters": "-;Enemy",
+      "EditorCategories": "Race:Protoss",
+      "Effect": "FakeWeaponDummyDamage",
+      "LegacyOptions": {
+        "FaceTargetWhileInCooldown": 0
+      },
+      "MinScanRange": 12,
+      "Options": {
+        "Hidden": 1
+      },
+      "Period": 1,
+      "Range": 11.35,
+      "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+      "id": "DisruptorFakeWeapon"
+    },
+    {
+      "Arc": 360,
       "DamagePoint": 0.125,
       "DisplayEffect": "LiberatorAGDamage",
       "EditorCategories": "Race:Terran",
@@ -1169,9 +1196,9 @@
       "DamagePoint": 0.083,
       "EditorCategories": "Race:Terran",
       "Icon": "Assets\\Textures\\btn-upgrade-terran-infantryweaponslevel0.dds",
-      "MinScanRange": 6.5,
+      "MinScanRange": 7.5,
       "Period": 1.5,
-      "Range": 6,
+      "Range": 7,
       "TargetFilters": "Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
       "id": "C10CanisterRifle"
     },
@@ -1385,6 +1412,20 @@
     {
       "DamagePoint": 0.2666,
       "DisplayEffect": "LocustMPDamage",
+      "DisplayName": "Unit/Name/LocustMP",
+      "EditorCategories": "Race:Zerg",
+      "Effect": "LocustMPLM",
+      "Icon": "Assets\\Textures\\btn-unit-zerg-locust.dds",
+      "MinScanRange": 6,
+      "Name": "Weapon/Name/LocustMP",
+      "Period": 0.6,
+      "Range": 3,
+      "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+      "id": "AcidSpitSwarmhostDummy"
+    },
+    {
+      "DamagePoint": 0.2666,
+      "DisplayEffect": "LocustMPDamage",
       "EditorCategories": "Race:Zerg",
       "Effect": "LocustMPLM",
       "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
@@ -1578,6 +1619,20 @@
       "Range": 6,
       "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
       "id": "HighTemplarWeapon"
+    },
+    {
+      "DisplayEffect": "InfestorWeaponDamage",
+      "DisplayName": "Weapon/Name/GuardianMPWeapon",
+      "EditorCategories": "Race:Zerg",
+      "Effect": "InfestorWeaponLM",
+      "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level0.dds",
+      "MinScanRange": 6.5,
+      "Name": "Weapon/Name/GuardianMPWeapon",
+      "Period": 1.754,
+      "RandomDelayMax": 0.0625,
+      "Range": 6,
+      "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
+      "id": "InfestorWeaponAcidSpores"
     },
     {
       "DisplayEffect": "LocustMPMeleeDamage",

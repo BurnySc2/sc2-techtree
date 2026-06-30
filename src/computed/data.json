@@ -87,7 +87,6 @@
       "CastOutroTime": 0.5,
       "CmdButtonArray": {
         "DefaultButtonFace": "AmorphousArmorcloud",
-        "Requirements": "UseAmorphousArmorcloud",
         "index": "Execute"
       },
       "Cost": {
@@ -104,7 +103,7 @@
         "AllowMovement": 1,
         "NoDeceleration": 1
       },
-      "Range": 9,
+      "Range": 12,
       "id": "AmorphousArmorcloud",
       "name": "AmorphousArmorcloud"
     },
@@ -139,6 +138,19 @@
       "morphsto": "Archon",
       "name": "ArchonWarp",
       "race": "Protoss"
+    },
+    "ArmSiloWithNuke": {
+      "InfoArray": {
+        "Charge": {
+          "Link": "Abil/##id##"
+        },
+        "Cooldown": {
+          "Link": "Abil/##id##"
+        },
+        "index": "Ammo1"
+      },
+      "id": 729,
+      "name": "ArmSiloWithNuke"
     },
     "ArmoryResearch": {
       "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
@@ -955,7 +967,7 @@
       "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
       "LoadCargoBehavior": "BunkerWeaponRangeBonus",
       "LoadValidatorArray": {
-        "value": "NotWidowMineTarget"
+        "value": "IsNotHellionTank"
       },
       "MaxCargoCount": 4,
       "MaxCargoSize": 2,
@@ -1162,32 +1174,19 @@
       "Flags": {
         "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnorePlacement": 0,
+        "IgnorePlacement": 1,
         "IgnoreUnitCost": 1,
-        "Interruptible": 1
+        "Interruptible": 1,
+        "Transient": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.3703",
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 0.5
-            },
-            "index": "Collide"
+        "SectionArray": {
+          "EffectArray": {
+            "Start": "InfestorBurrowDownTransient"
           },
-          {
-            "DurationArray": {
-              "Delay": 0.5
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 0.5
-            },
-            "index": "Actor"
-          }
-        ],
+          "index": "Actor"
+        },
         "Unit": "InfestorBurrowed"
       },
       "id": 1445,
@@ -1370,32 +1369,41 @@
         },
         "index": "Execute"
       },
+      "Cost": {
+        "Cooldown": {
+          "TimeUse": "1.4"
+        }
+      },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
         "IgnoreFacing": 1,
         "IgnoreFood": 1,
-        "IgnorePlacement": 0,
+        "IgnorePlacement": 1,
         "IgnoreUnitCost": 1,
-        "Interruptible": 1
+        "Interruptible": 1,
+        "Transient": 1
       },
       "InfoArray": {
         "RandomDelayMax": "0.1",
         "SectionArray": [
           {
             "DurationArray": {
-              "Delay": 0.5556
+              "Delay": 0.1
             },
             "index": "Collide"
           },
           {
             "DurationArray": {
-              "Delay": 0.5556
+              "Delay": 0.31
             },
             "index": "Stats"
           },
           {
             "DurationArray": {
-              "Duration": 0.5556
+              "Duration": 0.31
+            },
+            "EffectArray": {
+              "Start": "RoachBurrowDownTransient"
             },
             "index": "Actor"
           }
@@ -1577,7 +1585,7 @@
       ],
       "Cost": {
         "Vital": {
-          "Energy": 50
+          "Energy": 75
         }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -1852,12 +1860,9 @@
         },
         {
           "Button": {
-            "DefaultButtonFace": "ResearchWarpGate",
             "Flags": {
-              "ShowInGlossary": 1
-            },
-            "Requirements": "LearnWarpGate",
-            "State": "Restricted"
+              "ShowInGlossary": 0
+            }
           },
           "Resource": {
             "Minerals": 50,
@@ -1975,11 +1980,10 @@
       },
       "Cost": {
         "Charge": {
-          "Link": "Abil/BatteryOvercharge"
-        },
-        "Cooldown": {
+          "CountMax": 1,
+          "CountUse": 1,
           "Location": "Player",
-          "TimeUse": "63"
+          "TimeUse": 63
         },
         "Vital": {
           "Energy": 50
@@ -2916,39 +2920,19 @@
       "InfoArray": [
         {
           "Button": {
-            "DefaultButtonFace": "DarkTemplar",
-            "Requirements": "HaveDarkShrine",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
           },
-          "Time": "55",
-          "Unit": "DarkTemplar",
-          "index": "Train5"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "HighTemplar",
-            "Requirements": "HaveTemplarArchives",
-            "State": "Restricted"
-          },
-          "Time": "55",
-          "Unit": "HighTemplar",
-          "index": "Train4"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "Sentry",
-            "Requirements": "HaveCyberneticsCore",
-            "State": "Restricted"
-          },
-          "Time": "32",
+          "Time": "32.66",
           "Unit": "Sentry",
           "index": "Train6"
         },
         {
           "Button": {
-            "DefaultButtonFace": "Stalker",
-            "Requirements": "HaveCyberneticsCore",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
           },
           "Time": "38",
           "Unit": "Stalker",
@@ -2956,9 +2940,19 @@
         },
         {
           "Button": {
-            "DefaultButtonFace": "WarpInAdept",
-            "Requirements": "HaveCyberneticsCore",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
+          },
+          "Time": "38",
+          "Unit": "Zealot",
+          "index": "Train1"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            }
           },
           "Time": "42",
           "Unit": "Adept",
@@ -2966,16 +2960,45 @@
         },
         {
           "Button": {
-            "DefaultButtonFace": "Zealot",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
           },
-          "Time": "38",
-          "Unit": "Zealot",
-          "index": "Train1"
+          "Time": "60.66",
+          "Unit": "DarkTemplar",
+          "index": "Train5"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            }
+          },
+          "Time": "60.66",
+          "Unit": "HighTemplar",
+          "index": "Train4"
         }
       ],
       "id": 945,
       "name": "GatewayTrain"
+    },
+    "GenerateCreep": {
+      "CmdButtonArray": [
+        {
+          "Flags": {
+            "ToSelection": 1
+          },
+          "index": "Off"
+        },
+        {
+          "Flags": {
+            "ToSelection": 1
+          },
+          "index": "On"
+        }
+      ],
+      "id": 1693,
+      "name": "GenerateCreep"
     },
     "GhostAcademyResearch": {
       "EditorCategories": "Race:Terran,AbilityorEffectType:Structures",
@@ -3053,6 +3076,7 @@
     },
     "GravitonBeam": {
       "AbilSetId": "Graviton",
+      "ArcSlop": 360,
       "CancelableArray": {
         "Channel": 1
       },
@@ -3134,7 +3158,8 @@
         "0": "HallucinationCreateAdept"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 2392,
       "name": "HallucinationAdept"
@@ -3155,7 +3180,8 @@
         "0": "HallucinationCreateArchon"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 147,
       "name": "HallucinationArchon"
@@ -3176,7 +3202,8 @@
         "0": "HallucinationCreateColossus"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 149,
       "name": "HallucinationColossus"
@@ -3196,7 +3223,8 @@
         "0": "HallucinationCreateDisruptor"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 2390,
       "name": "HallucinationDisruptor"
@@ -3217,7 +3245,8 @@
         "0": "HallucinationCreateHighTemplar"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 151,
       "name": "HallucinationHighTemplar"
@@ -3238,7 +3267,8 @@
         "0": "HallucinationCreateImmortal"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 153,
       "name": "HallucinationImmortal"
@@ -3259,7 +3289,8 @@
         "0": "HallucinationCreateOracle"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 2115,
       "name": "HallucinationOracle"
@@ -3280,7 +3311,8 @@
         "0": "HallucinationCreatePhoenix"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 155,
       "name": "HallucinationPhoenix"
@@ -3301,7 +3333,8 @@
         "0": "HallucinationCreateProbe"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 157,
       "name": "HallucinationProbe"
@@ -3322,7 +3355,8 @@
         "0": "HallucinationCreateStalker"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 159,
       "name": "HallucinationStalker"
@@ -3343,7 +3377,8 @@
         "0": "HallucinationCreateVoidRay"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 161,
       "name": "HallucinationVoidRay"
@@ -3364,7 +3399,8 @@
         "0": "HallucinationCreateWarpPrism"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 163,
       "name": "HallucinationWarpPrism"
@@ -3385,7 +3421,8 @@
         "0": "HallucinationCreateZealot"
       },
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "TransientPreferred": 1
       },
       "id": 165,
       "name": "HallucinationZealot"
@@ -3692,7 +3729,9 @@
           "TimeUse": "20"
         }
       },
+      "CursorEffect": "KD8SearchArea",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "Placeholder": "KD8Charge",
       "Range": 5,
       "TargetFilters": "Ground,Visible;-",
       "id": 2589,
@@ -3771,7 +3810,7 @@
       "Activity": "UI/Morphing",
       "EditorCategories": "Race:Zerg,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
-        "DisableCollision": 1,
+        "DisableCollision": 0,
         "KillOnCancel": 1,
         "KillOnFinish": 1,
         "Select": 1,
@@ -3882,6 +3921,7 @@
           },
           "Time": "24",
           "Unit": {
+            "count": 2,
             "value": "Zergling"
           },
           "index": "Train2"
@@ -3982,7 +4022,7 @@
       "AutoCastFilters": "Visible;Player,Ally,Neutral",
       "AutoCastRange": 7.5,
       "AutoCastValidatorArray": {
-        "value": "CasterIsNotHidden"
+        "value": "NotLarvaEgg"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "LockOn",
@@ -4008,7 +4048,7 @@
       "TargetFilters": "Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable",
       "TargetSorts": {
         "SortArray": {
-          "value": "TSThreatensCyclone"
+          "value": "AirTarget"
         }
       },
       "id": 2351,
@@ -4113,7 +4153,7 @@
       "AutoCastFilters": "Visible;Neutral,Enemy,Missile,Stasis,Dead,Invulnerable",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "healCasterMinEnergy"
+        "value": "NotWarpingIn"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "Heal",
@@ -4131,7 +4171,7 @@
       },
       "Range": 4,
       "SmartValidatorArray": {
-        "value": "healSmartTargetFilters"
+        "value": "NotWarpingIn"
       },
       "TargetFilters": {
         "0": "Biological,Visible;Self,Enemy,Structure,Missile,Dead,Hidden,Invulnerable"
@@ -4139,7 +4179,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -4174,35 +4214,13 @@
     },
     "MedivacTransport": {
       "AbilSetId": "ULdM",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "MedivacLoad",
-          "index": "Load"
+      "CmdButtonArray": {
+        "DefaultButtonFace": "LoadNearbyMedivac",
+        "Flags": {
+          "Hidden": 0
         },
-        {
-          "DefaultButtonFace": "MedivacUnloadAll",
-          "index": "UnloadAt"
-        },
-        {
-          "Flags": {
-            "Hidden": 1,
-            "ToSelection": 1
-          },
-          "index": "UnloadAll"
-        },
-        {
-          "Flags": {
-            "Hidden": 1
-          },
-          "index": "LoadAll"
-        },
-        {
-          "Flags": {
-            "Hidden": 1
-          },
-          "index": "UnloadUnit"
-        }
-      ],
+        "index": "LoadAll"
+      },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
       "Flags": {
         "CargoDeath": 1
@@ -4210,6 +4228,7 @@
       "LoadValidatorArray": "NotWidowMineTarget",
       "MaxCargoCount": 8,
       "MaxCargoSize": 8,
+      "SearchRadius": 4,
       "TargetFilters": "Visible;Self,Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden",
       "TotalCargoSpace": 8,
       "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
@@ -4264,16 +4283,14 @@
     },
     "MorphBackToGateway": {
       "Alert": "TransformationComplete",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "Cancel",
-          "index": "Cancel"
+      "BehaviorOff": "WarpgateDemorphing",
+      "BehaviorOn": "WarpgateDemorphing",
+      "CmdButtonArray": {
+        "Flags": {
+          "ToSelection": 1
         },
-        {
-          "DefaultButtonFace": "MorphBackToGateway",
-          "index": "Execute"
-        }
-      ],
+        "index": "Execute"
+      },
       "Cost": {
         "Cooldown": {
           "Link": "WarpGateTrain",
@@ -4286,19 +4303,116 @@
         "Birth": 1,
         "DisableAbils": 1,
         "FastBuild": 1,
+        "Interruptible": 1,
         "ShowProgress": 1
       },
       "InfoArray": {
-        "SectionArray": {
-          "EffectArray": {
-            "Finish": "UpgradeToWarpGateAutoCastDisabler"
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 7
+            },
+            "EffectArray": {
+              "Finish": "UpgradeToWarpGateAutoCastDisabler"
+            },
+            "index": "Abils"
           },
-          "index": "Abils"
-        },
+          {
+            "DurationArray": {
+              "Delay": 7
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 7
+            },
+            "index": "Actor"
+          }
+        ],
         "Unit": "Gateway"
       },
       "id": 1521,
       "name": "MorphBackToGateway"
+    },
+    "MorphBuildingGatewayWarpGateFree": {
+      "Activity": "UI/Transforming",
+      "Alert": "TransformationComplete",
+      "AutoCastCountMax": 500,
+      "AutoCastRange": 5,
+      "AutoCastValidatorArray": "NotHaveUpgradeToWarpGateAutoCastDisabler",
+      "BehaviorOff": "MorphingintoWarpGate",
+      "BehaviorOn": "MorphingintoWarpGate",
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "Cancel",
+          "index": "Cancel"
+        },
+        {
+          "DefaultButtonFace": "UpgradeToWarpGate",
+          "Flags": {
+            "ShowInGlossary": 0,
+            "ToSelection": 1
+          },
+          "Requirements": "UseWarpGateHideFree",
+          "State": "Restricted",
+          "index": "Execute"
+        }
+      ],
+      "Cost": {
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "TimeUse": 10
+        }
+      },
+      "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
+      "Flags": {
+        "BestUnit": 1,
+        "Birth": 1,
+        "DisableAbils": 1,
+        "FastBuild": 1,
+        "Interruptible": 1,
+        "Produce": 1,
+        "ShowProgress": 1
+      },
+      "InfoArray": {
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 10
+            },
+            "EffectArray": {
+              "Finish": "HasMorphedBefore"
+            },
+            "index": "Abils"
+          },
+          {
+            "DurationArray": {
+              "Delay": 10
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 10
+            },
+            "index": "Actor"
+          }
+        ],
+        "Unit": "WarpGate"
+      },
+      "RefundFraction": {
+        "Resource": {
+          "Custom": -1,
+          "Minerals": -1,
+          "Terrazine": -1,
+          "Vespene": -1
+        }
+      },
+      "id": "MorphBuildingGatewayWarpGateFree",
+      "name": "MorphBuildingGatewayWarpGateFree"
     },
     "MorphToBaneling": {
       "Alert": "MorphComplete_Zerg",
@@ -5656,9 +5770,12 @@
         "index": "Execute"
       },
       "Cost": {
-        "Cooldown": {
+        "Charge": {
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
           "Location": "Player",
-          "TimeUse": "182"
+          "TimeUse": 182
         },
         "Vital": {
           "Energy": 50
@@ -5702,6 +5819,7 @@
         "Unit": "Mothership",
         "index": "Train1"
       },
+      "Offset": "0,0",
       "id": 139,
       "name": "NexusTrainMothership"
     },
@@ -5882,13 +6000,19 @@
     "OracleStasisTrapBuild": {
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "EffectArray": {
-        "Cancel": "OracleStasisTrapBuildBeamOff",
-        "Finish": "OracleStasisTrapBuildBeamOff",
-        "Start": "OracleStasisTrapBuildBeamOn"
+        "Cancel": "OracleFacePersistentDestroy",
+        "Finish": "OracleFacePersistentDestroy",
+        "Start": "StasisWardPlaceSet"
       },
-      "FlagArray": {
-        "RequireFacing": 1
-      },
+      "FidgetDelayMax": 0.0625,
+      "FlagArray": [
+        {
+          "RequireFacing": 0
+        },
+        {
+          "RequireFacing": 1
+        }
+      ],
       "InfoArray": {
         "Button": {
           "DefaultButtonFace": "OracleBuildStasisTrap",
@@ -5896,7 +6020,7 @@
             "ShowInGlossary": 1
           }
         },
-        "Time": "5",
+        "Time": "5.6",
         "Unit": "OracleStasisTrap",
         "Vital": {
           "Energy": 50
@@ -5906,46 +6030,6 @@
       "Range": 5,
       "id": 2535,
       "name": "OracleStasisTrapBuild"
-    },
-    "OracleWeapon": {
-      "BehaviorArray": "OracleWeapon",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "OracleWeaponOff",
-          "Flags": {
-            "ToSelection": 1
-          },
-          "index": "Off"
-        },
-        {
-          "DefaultButtonFace": "OracleWeaponOn",
-          "Flags": {
-            "ToSelection": 1
-          },
-          "index": "On"
-        }
-      ],
-      "Cost": {
-        "Charge": {
-          "Link": "Abil/OracleWeapon"
-        },
-        "Cooldown": {
-          "TimeUse": "4"
-        },
-        "Vital": {
-          "Energy": 25
-        },
-        "index": "0"
-      },
-      "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
-      "Flags": {
-        "Toggle": 1,
-        "Transient": 1
-      },
-      "Name": "Abil/Name/OracleWeapon",
-      "id": 2376,
-      "name": "OracleWeapon",
-      "parent": "GhostCloak"
     },
     "OrbitalCommandLand": {
       "InfoArray": {
@@ -5971,10 +6055,20 @@
     },
     "OverlordTransport": {
       "AbilSetId": "ULdM",
-      "CmdButtonArray": {
-        "Requirements": "UseSingleOverlordTransport",
-        "index": "Load"
-      },
+      "CmdButtonArray": [
+        {
+          "DefaultButtonFace": "LoadNearbyOverlord",
+          "Flags": {
+            "Hidden": 0
+          },
+          "Requirements": "UseSingleOverlordTransport",
+          "index": "LoadAll"
+        },
+        {
+          "Requirements": "UseSingleOverlordTransport",
+          "index": "Load"
+        }
+      ],
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": {
         "CargoDeath": 1
@@ -5983,6 +6077,7 @@
       "LoadValidatorArray": "NotWidowMineTarget",
       "MaxCargoCount": 8,
       "MaxCargoSize": 8,
+      "SearchRadius": 4,
       "TargetFilters": "Visible;Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden",
       "TotalCargoSpace": 8,
       "UnloadCargoEffect": "PurificationNovaTargettedCasterRB",
@@ -6077,7 +6172,8 @@
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
         "BestUnit": 1,
-        "IgnoreFacing": 1
+        "IgnoreFacing": 1,
+        "WaitUntilStopped": 0
       },
       "InfoArray": {
         "SectionArray": [
@@ -6966,7 +7062,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSMarker"
+          "value": "TSDistance"
         }
       },
       "id": 246,
@@ -7038,7 +7134,7 @@
       "AutoCastFilters": "Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "Casterhas10EnergyorCasterisBatteryOvercharged"
+        "value": "UnitOrAttackingStructure"
       },
       "CmdButtonArray": {
         "DefaultButtonFace": "ShieldBatteryRecharge",
@@ -7061,7 +7157,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -7077,7 +7173,7 @@
       "AutoCastFilters": "Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden",
       "AutoCastRange": 6,
       "AutoCastValidatorArray": {
-        "value": "Casterhas10EnergyorCasterisBatteryOvercharged"
+        "value": "NotHaveBatteryCooldownBehavior"
       },
       "CancelableArray": {
         "Channel": 1
@@ -7114,7 +7210,7 @@
       "TargetSorts": {
         "RequestCount": "1",
         "SortArray": {
-          "value": "TSAlliancePassive"
+          "value": "TSDistance"
         }
       },
       "UseMarkerArray": {
@@ -7195,7 +7291,8 @@
       },
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Flags": {
-        "BestUnit": 1
+        "BestUnit": 1,
+        "Transient": 1
       },
       "ProducedUnitArray": "Changeling",
       "id": 182,
@@ -7203,7 +7300,9 @@
     },
     "SpawnLarva": {
       "AINotifyEffect": "SpawnMutantLarva",
-      "CastOutroTime": 2.3,
+      "CastOutroTime": {
+        "0": 0
+      },
       "CmdButtonArray": {
         "DefaultButtonFace": "MorphMorphalisk",
         "index": "Execute"
@@ -7222,6 +7321,9 @@
       "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
       "Effect": {
         "0": "SpawnLarvaSet"
+      },
+      "Flags": {
+        "ReExecutable": 1
       },
       "Marker": {
         "Link": "Abil/SpawnMutantLarva"
@@ -7261,6 +7363,9 @@
         "Transient": 1
       },
       "Range": 500,
+      "SharedFlags": {
+        "RegisterCooldownEvent": 1
+      },
       "id": 2705,
       "name": "SpawnLocustsTargeted"
     },
@@ -8277,6 +8382,11 @@
     "TerranBuild": {
       "ConstructionMover": "Construction",
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
+      "EffectArray": {
+        "Cancel": "SCVCancelBuildingSet",
+        "Finish": "SCVFinishBuildingSet",
+        "Start": "SCVStartBuildingSet"
+      },
       "FidgetDelayMax": 8.5,
       "FidgetDelayMin": 6.5,
       "FlagArray": {
@@ -9137,51 +9247,47 @@
       "AutoCastCountMax": 500,
       "AutoCastRange": 5,
       "AutoCastValidatorArray": "NotHaveUpgradeToWarpGateAutoCastDisabler",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "Cancel",
-          "index": "Cancel"
+      "BehaviorOff": "MorphingintoWarpGate",
+      "BehaviorOn": "MorphingintoWarpGate",
+      "CmdButtonArray": {
+        "Flags": {
+          "ToSelection": 1
         },
-        {
-          "DefaultButtonFace": "UpgradeToWarpGate",
-          "Requirements": "UseWarpGate",
-          "State": "Restricted",
-          "index": "Execute"
+        "Requirements": "UseWarpgateNotMorphedBefore",
+        "index": "Execute"
+      },
+      "Cost": {
+        "Resource": {
+          "Minerals": 25,
+          "Vespene": 25
         }
-      ],
+      },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
-        "AutoCast": 1,
-        "AutoCastOn": 1,
         "BestUnit": 1,
         "Birth": 1,
         "DisableAbils": 1,
         "FastBuild": 1,
+        "Interruptible": 1,
         "Produce": 1,
         "ShowProgress": 1
       },
       "InfoArray": {
-        "SectionArray": [
-          {
-            "DurationArray": {
-              "Delay": 10
-            },
-            "index": "Abils"
+        "SectionArray": {
+          "EffectArray": {
+            "Finish": "HasMorphedBefore"
           },
-          {
-            "DurationArray": {
-              "Delay": 10
-            },
-            "index": "Stats"
-          },
-          {
-            "DurationArray": {
-              "Duration": 10
-            },
-            "index": "Actor"
-          }
-        ],
+          "index": "Abils"
+        },
         "Unit": "WarpGate"
+      },
+      "RefundFraction": {
+        "Resource": {
+          "Custom": -1,
+          "Minerals": -1,
+          "Terrazine": -1,
+          "Vespene": -1
+        }
       },
       "id": 1519,
       "morphsto": "WarpGate",
@@ -9278,26 +9384,6 @@
       "id": 2157,
       "name": "VoidSiphon"
     },
-    "VolatileBurstBuilding": {
-      "BehaviorArray": "VolatileBurstBuilding",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "DisableBuildingAttack",
-          "index": "Off"
-        },
-        {
-          "DefaultButtonFace": "EnableBuildingAttack",
-          "index": "On"
-        }
-      ],
-      "EditorCategories": "Race:Zerg,AbilityorEffectType:Units",
-      "Flags": {
-        "Toggle": 1,
-        "Transient": 1
-      },
-      "id": 2082,
-      "name": "VolatileBurstBuilding"
-    },
     "Vortex": {
       "Arc": 360,
       "AutoCastFilters": "Visible;Self,Player,Ally",
@@ -9337,141 +9423,100 @@
       "InfoArray": [
         {
           "Button": {
-            "DefaultButtonFace": "DarkTemplar",
-            "Requirements": "HaveDarkShrine",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
           },
           "Charge": {
-            "CountMax": 1,
-            "CountStart": 1,
-            "CountUse": 1,
-            "Flags": {
-              "EnableChargeTimeQueuing": 1
-            },
-            "Link": "WarpGateTrain",
-            "TimeUse": 45
+            "TimeStart": "32.8",
+            "TimeUse": "30.8"
           },
           "Cooldown": {
             "TimeUse": "0"
           },
-          "Time": "16",
-          "Unit": "DarkTemplar",
-          "index": "Train5"
+          "Time": "5.6",
+          "Unit": "Zealot",
+          "index": "Train1"
         },
         {
           "Button": {
-            "DefaultButtonFace": "HighTemplar",
-            "Requirements": "HaveTemplarArchives",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
           },
           "Charge": {
-            "CountMax": 1,
-            "CountStart": 1,
-            "CountUse": 1,
-            "Flags": {
-              "EnableChargeTimeQueuing": 1
-            },
-            "Link": "WarpGateTrain",
-            "TimeUse": 45
-          },
-          "Cooldown": {
-            "TimeUse": "0"
-          },
-          "Time": "16",
-          "Unit": "HighTemplar",
-          "index": "Train4"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "Sentry",
-            "Requirements": "HaveCyberneticsCore",
-            "State": "Restricted"
-          },
-          "Charge": {
-            "CountMax": 1,
-            "CountStart": 1,
-            "CountUse": 1,
-            "Flags": {
-              "EnableChargeTimeQueuing": 1
-            },
-            "Link": "WarpGateTrain",
-            "TimeUse": 32
-          },
-          "Cooldown": {
-            "TimeUse": "0"
-          },
-          "Time": "16",
-          "Unit": "Sentry",
-          "index": "Train6"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "Stalker",
-            "Requirements": "HaveCyberneticsCore",
-            "State": "Restricted"
-          },
-          "Charge": {
-            "CountMax": 1,
-            "CountStart": 1,
-            "CountUse": 1,
-            "Flags": {
-              "EnableChargeTimeQueuing": 1
-            },
-            "Link": "WarpGateTrain",
-            "TimeUse": 32
-          },
-          "Cooldown": {
-            "TimeUse": "0"
-          },
-          "Time": "16",
-          "Unit": "Stalker",
-          "index": "Train2"
-        },
-        {
-          "Button": {
-            "DefaultButtonFace": "WarpInAdept",
-            "Requirements": "HaveCyberneticsCore",
-            "State": "Restricted"
-          },
-          "Charge": {
-            "CountMax": 1,
-            "CountStart": 1,
-            "CountUse": 1,
-            "Flags": {
-              "EnableChargeTimeQueuing": 1
-            },
-            "Link": "WarpGateTrain",
-            "TimeUse": 28
+            "TimeUse": "30.8"
           },
           "Cooldown": {
             "Link": "WarpGateTrain"
           },
-          "Time": "16",
+          "Time": "5.6",
           "Unit": "Adept",
           "index": "Train7"
         },
         {
           "Button": {
-            "DefaultButtonFace": "Zealot",
-            "State": "Restricted"
+            "Flags": {
+              "ToSelection": 1
+            }
           },
           "Charge": {
-            "CountMax": 1,
-            "CountStart": 1,
-            "CountUse": 1,
-            "Flags": {
-              "EnableChargeTimeQueuing": 1
-            },
-            "Link": "WarpGateTrain",
-            "TimeStart": 30,
-            "TimeUse": 28
+            "TimeUse": "30.8"
           },
           "Cooldown": {
             "TimeUse": "0"
           },
-          "Time": "16",
-          "Unit": "Zealot",
-          "index": "Train1"
+          "Time": "5.6",
+          "Unit": "Sentry",
+          "index": "Train6"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            }
+          },
+          "Charge": {
+            "TimeUse": "30.8"
+          },
+          "Cooldown": {
+            "TimeUse": "0"
+          },
+          "Time": "5.6",
+          "Unit": "Stalker",
+          "index": "Train2"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            }
+          },
+          "Charge": {
+            "TimeUse": "49"
+          },
+          "Cooldown": {
+            "TimeUse": "0"
+          },
+          "Time": "5.6",
+          "Unit": "DarkTemplar",
+          "index": "Train5"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
+            }
+          },
+          "Charge": {
+            "TimeUse": "49"
+          },
+          "Cooldown": {
+            "TimeUse": "0"
+          },
+          "Time": "5.6",
+          "Unit": "HighTemplar",
+          "index": "Train4"
         }
       ],
       "id": 1432,
@@ -9479,35 +9524,13 @@
     },
     "WarpPrismTransport": {
       "AbilSetId": "ULdM",
-      "CmdButtonArray": [
-        {
-          "DefaultButtonFace": "BunkerUnloadAll",
-          "Flags": {
-            "ToSelection": 1
-          },
-          "index": "UnloadAll"
+      "CmdButtonArray": {
+        "DefaultButtonFace": "LoadNearbyWarpPrism",
+        "Flags": {
+          "Hidden": 0
         },
-        {
-          "DefaultButtonFace": "MedivacLoad",
-          "index": "Load"
-        },
-        {
-          "DefaultButtonFace": "MedivacUnloadAll",
-          "index": "UnloadAt"
-        },
-        {
-          "Flags": {
-            "Hidden": 1
-          },
-          "index": "LoadAll"
-        },
-        {
-          "Flags": {
-            "Hidden": 1
-          },
-          "index": "UnloadUnit"
-        }
-      ],
+        "index": "LoadAll"
+      },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:Units",
       "Flags": {
         "CargoDeath": 1
@@ -9517,6 +9540,7 @@
       "MaxCargoCount": 8,
       "MaxCargoSize": 8,
       "Range": 5,
+      "SearchRadius": 5,
       "TargetFilters": "Visible;Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden",
       "TotalCargoSpace": 8,
       "UnloadCargoEffect": "WarpPrismUnloadCargoSetEffect",
@@ -9535,7 +9559,7 @@
       "AutoCastFilters": "Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable,Benign",
       "AutoCastRange": 5,
       "AutoCastValidatorArray": {
-        "value": "NotLarvaEgg"
+        "value": "IsNotNeuralParasited"
       },
       "CancelEffect": {
         "Prep": "WidowMineTargetTintRemoveBehavior"
@@ -9870,8 +9894,8 @@
             "State": "Restricted"
           },
           "Resource": {
-            "Minerals": 150,
-            "Vespene": 150
+            "Minerals": 100,
+            "Vespene": 100
           },
           "Time": "160",
           "Upgrade": "ZergGroundArmorsLevel1",
@@ -9884,8 +9908,8 @@
             "State": "Restricted"
           },
           "Resource": {
-            "Minerals": 200,
-            "Vespene": 200
+            "Minerals": 150,
+            "Vespene": 150
           },
           "Time": "190",
           "Upgrade": "ZergGroundArmorsLevel2",
@@ -9898,8 +9922,8 @@
             "State": "Restricted"
           },
           "Resource": {
-            "Minerals": 250,
-            "Vespene": 250
+            "Minerals": 200,
+            "Vespene": 200
           },
           "Time": "220",
           "Upgrade": "ZergGroundArmorsLevel3",
@@ -10144,13 +10168,13 @@
         "0": "Marine",
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Zergling"
+        "value": "Marine"
       },
       "GlossaryWeakArray": {
         "0": "Marauder",
         "1": "Roach",
         "2": "Stalker",
-        "value": "Roach"
+        "value": "Marauder"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -10300,12 +10324,13 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 90,
       "GlossaryStrongArray": {
-        "index": "Marine"
+        "index": "Marine",
+        "value": "Adept"
       },
       "GlossaryWeakArray": {
         "1": "Hydralisk",
         "2": "Immortal",
-        "value": "Thor"
+        "value": "Ultralisk"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5625,
@@ -10518,12 +10543,17 @@
         "Armored": 1,
         "Structure": 1
       },
-      "BehaviorArray": {
-        "Link": "WorkerPeriodicRefineryCheck"
-      },
+      "BehaviorArray": [
+        {
+          "Link": "SCVMoveToGatherSeek"
+        },
+        {
+          "Link": "WorkerPeriodicRefineryCheck"
+        }
+      ],
       "BuildOnAs": "AssimilatorRich",
       "BuiltOn": {
-        "value": "PurifierVespeneGeyser"
+        "value": "ShakurasVespeneGeyser"
       },
       "CardLayouts": {
         "LayoutButtons": {
@@ -10898,13 +10928,13 @@
       "GlossaryStrongArray": {
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "0": "Marauder",
         "1": "Infestor",
         "2": "Stalker",
-        "value": "Thor"
+        "value": "Roach"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.375,
@@ -11280,11 +11310,11 @@
         "0": "SiegeTank",
         "1": "Ravager",
         "2": "Adept",
-        "value": "SiegeTankSieged"
+        "value": "Colossus"
       },
       "GlossaryWeakArray": {
         "0": "VikingFighter",
-        "value": "Marine"
+        "value": "Phoenix"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -11448,7 +11478,7 @@
       "SubgroupPriority": 24,
       "TechAliasArray": "Alias_Barracks",
       "TechTreeProducedUnitArray": {
-        "value": "Marine"
+        "value": "Ghost"
       },
       "TurningRate": 719.4726,
       "builds": [
@@ -12006,10 +12036,10 @@
       "GlossaryStrongArray": {
         "0": "Liberator",
         "2": "Marine",
-        "value": "Thor"
+        "value": "Carrier"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -12034,7 +12064,7 @@
       "SeparationRadius": 1.25,
       "Sight": 12,
       "Speed": 1.875,
-      "SubgroupPriority": 80,
+      "SubgroupPriority": 76,
       "TacticalAIThink": "AIThinkBattleCruiser",
       "TechAliasArray": "Alias_BattlecruiserClass",
       "VisionHeight": 15,
@@ -12169,12 +12199,13 @@
         "0": "SiegeTank",
         "1": "Ultralisk",
         "2": "HighTemplar",
-        "index": "Marine"
+        "index": "Marine",
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
         "1": "Corruptor",
         "2": "Tempest",
-        "value": "VikingFighter"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -12524,12 +12555,12 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 300,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
         "2": "Immortal",
-        "value": "SiegeTankSieged"
+        "value": "Colossus"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "LifeArmor": 1,
@@ -12673,12 +12704,12 @@
       "GlossaryPriority": 170,
       "GlossaryStrongArray": {
         "0": "SiegeTank",
-        "value": "Mutalisk"
+        "value": "Phoenix"
       },
       "GlossaryWeakArray": {
         "1": "Corruptor",
         "2": "Tempest",
-        "value": "VikingFighter"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -13158,7 +13189,7 @@
       "CargoSize": 8,
       "Collide": {
         "Colossus": 1,
-        "Flying": 1,
+        "Flying": 0,
         "Structure": 1
       },
       "CostCategory": "Army",
@@ -13183,13 +13214,13 @@
       "GlossaryStrongArray": {
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "0": "VikingFighter",
         "1": "Corruptor",
         "2": "Tempest",
-        "value": "Thor"
+        "value": "Ultralisk"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5625,
@@ -13399,7 +13430,7 @@
         "UseLineOfSight": 1
       },
       "FogVisibility": "Snapshot",
-      "Food": 15,
+      "Food": 13,
       "Footprint": "Footprint5x5Contour",
       "GlossaryPriority": 30,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -13432,7 +13463,7 @@
       "TacticalAIThink": "AIThinkCommandCenter",
       "TechAliasArray": "Alias_CommandCenter",
       "TechTreeProducedUnitArray": {
-        "value": "SCV"
+        "value": "OrbitalCommand"
       },
       "TurningRate": 719.4726,
       "id": 18,
@@ -13556,7 +13587,7 @@
         "TownAlert": 1,
         "UseLineOfSight": 1
       },
-      "Food": 15,
+      "Food": 13,
       "GlossaryAlias": "CommandCenter",
       "Height": 3.25,
       "HotkeyAlias": "CommandCenter",
@@ -13700,11 +13731,11 @@
         "0": "Battlecruiser",
         "1": "BroodLord",
         "2": "Tempest",
-        "value": "Phoenix"
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
         "0": "Thor",
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -14139,12 +14170,12 @@
         "0": "Marauder",
         "1": "Roach",
         "2": "Adept",
-        "value": "Thor"
+        "value": "Immortal"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
         "2": "Immortal",
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.5,
@@ -14300,7 +14331,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 8,
       "TechTreeUnlockedUnitArray": {
-        "value": "DarkTemplar"
+        "value": "Archon"
       },
       "TurningRate": 719.4726,
       "id": 69,
@@ -14315,6 +14346,7 @@
       "time": 100,
       "type": "structure",
       "unlocks": [
+        "Archon",
         "DarkTemplar"
       ]
     },
@@ -14441,10 +14473,10 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 70,
       "GlossaryStrongArray": {
-        "value": "SCV"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
-        "value": "Raven"
+        "value": "Observer"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -14487,7 +14519,7 @@
       "requires": [
         "DarkShrine"
       ],
-      "time": 55,
+      "time": 60.66,
       "type": "unit"
     },
     "DebrisRampLeft": {
@@ -14779,10 +14811,10 @@
       },
       "Food": -2,
       "GlossaryStrongArray": {
-        "value": "Battlecruiser"
+        "value": "Phoenix"
       },
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "KillXP": 400,
@@ -14828,6 +14860,9 @@
         },
         {
           "Link": "Warpable"
+        },
+        {
+          "Link": "attack"
         },
         {
           "Link": "move"
@@ -14923,6 +14958,7 @@
       "DamageDealtXP": 1,
       "DamageTakenXP": 1,
       "DeathRevealRadius": 3,
+      "DefaultAcquireLevel": "Defensive",
       "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
       "Fidget": {
         "ChanceArray": {
@@ -14943,11 +14979,11 @@
       "GlossaryPriority": 135,
       "GlossaryStrongArray": {
         "2": "Stalker",
-        "value": "Marauder"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
         "2": "Tempest",
-        "value": "Thor"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5,
@@ -14981,6 +15017,9 @@
       "SubgroupPriority": 72,
       "TacticalAIThink": "AIThinkDisruptor",
       "TurningRate": 999.8437,
+      "WeaponArray": {
+        "Link": "DisruptorFakeWeapon"
+      },
       "id": 694,
       "name": "Disruptor",
       "race": "Protoss",
@@ -15857,12 +15896,17 @@
         "Biological": 1,
         "Structure": 1
       },
-      "BehaviorArray": {
-        "Link": "WorkerPeriodicRefineryCheck"
-      },
+      "BehaviorArray": [
+        {
+          "Link": "SCVMoveToGatherSeek"
+        },
+        {
+          "Link": "WorkerPeriodicRefineryCheck"
+        }
+      ],
       "BuildOnAs": "ExtractorRich",
       "BuiltOn": {
-        "value": "PurifierVespeneGeyser"
+        "value": "ShakurasVespeneGeyser"
       },
       "CardLayouts": {
         "LayoutButtons": {
@@ -16055,7 +16099,8 @@
       "SubgroupPriority": 22,
       "TechAliasArray": "Alias_Factory",
       "TechTreeProducedUnitArray": {
-        "index": "WidowMine"
+        "index": "SiegeTank",
+        "value": "Thor"
       },
       "TurningRate": 719.4726,
       "builds": [
@@ -16574,7 +16619,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 14,
       "TechTreeUnlockedUnitArray": {
-        "value": "Carrier"
+        "value": "Tempest"
       },
       "TurningRate": 719.4726,
       "id": 64,
@@ -16901,6 +16946,9 @@
           "Link": "GatewayTrain"
         },
         {
+          "Link": "MorphBuildingGatewayWarpGateFree"
+        },
+        {
           "Link": "Rally"
         },
         {
@@ -16920,7 +16968,7 @@
           "Link": "FastEnablerGatewayMorphingPowerSource"
         },
         {
-          "Link": "MorphingintoWarpGate"
+          "Link": "GatewayTrainingState"
         }
       ],
       "CardLayouts": {
@@ -16930,20 +16978,14 @@
             "Column": "4",
             "Face": "CancelBuilding",
             "Row": "2",
-            "Type": "AbilCmd"
+            "Type": "AbilCmd",
+            "index": "10"
           },
           {
-            "AbilCmd": "GatewayTrain,Train1",
-            "Column": "0",
-            "Face": "Zealot",
-            "Row": "0",
-            "Type": "AbilCmd"
-          },
-          {
-            "AbilCmd": "GatewayTrain,Train2",
-            "Column": "2",
-            "Face": "Stalker",
-            "Row": "0",
+            "AbilCmd": "BuildInProgress,Cancel",
+            "Column": "4",
+            "Face": "CancelBuilding",
+            "Row": "2",
             "Type": "AbilCmd"
           },
           {
@@ -16961,6 +17003,21 @@
             "Type": "AbilCmd"
           },
           {
+            "AbilCmd": "GatewayTrain,Train5",
+            "Column": "1",
+            "Face": "DarkTemplar",
+            "Row": "1",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "GatewayTrain,Train6",
+            "Column": "1",
+            "Face": "Sentry",
+            "Row": "0",
+            "Type": "AbilCmd",
+            "index": "8"
+          },
+          {
             "AbilCmd": "GatewayTrain,Train6",
             "Column": "1",
             "Face": "Sentry",
@@ -16971,7 +17028,24 @@
             "AbilCmd": "GatewayTrain,Train7",
             "Column": "3",
             "Face": "WarpInAdept",
+            "Row": "2",
+            "Type": "AbilCmd",
+            "index": "9"
+          },
+          {
+            "AbilCmd": "MorphBuildingGatewayWarpGateFree,Cancel",
+            "Column": "2",
+            "Face": "Stalker",
             "Row": "0",
+            "Type": "AbilCmd",
+            "index": "2"
+          },
+          {
+            "AbilCmd": "MorphBuildingGatewayWarpGateFree,Execute",
+            "Column": 0,
+            "Face": "UpgradeToWarpGate",
+            "Row": 2,
+            "ShowInGlossary": 0,
             "Type": "AbilCmd"
           },
           {
@@ -16980,6 +17054,14 @@
             "Face": "Rally",
             "Row": "1",
             "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "UpgradeToWarpGate,Cancel",
+            "Column": "0",
+            "Face": "Cancel",
+            "Row": "0",
+            "Type": "AbilCmd",
+            "index": "1"
           },
           {
             "AbilCmd": "UpgradeToWarpGate,Cancel",
@@ -16996,10 +17078,38 @@
             "Type": "AbilCmd"
           },
           {
-            "AbilCmd": "que5,CancelLast",
-            "Column": "4",
-            "Face": "Cancel",
-            "Row": "2",
+            "AbilCmd": "WarpGateTrain,Train1",
+            "Column": "0",
+            "Face": "Zealot",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "WarpGateTrain,Train2",
+            "Column": "2",
+            "Face": "Stalker",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "WarpGateTrain,Train4",
+            "Column": "0",
+            "Face": "HighTemplar",
+            "Row": "1",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "WarpGateTrain,Train6",
+            "Column": "1",
+            "Face": "Sentry",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "WarpGateTrain,Train7",
+            "Column": "3",
+            "Face": "WarpInAdept",
+            "Row": "0",
             "Type": "AbilCmd"
           }
         ]
@@ -17058,11 +17168,11 @@
       "ShieldsStart": 500,
       "Sight": 9,
       "StationaryTurningRate": 719.4726,
-      "SubgroupPriority": 24,
+      "SubgroupPriority": 30,
       "TacticalAIThink": "AIThinkGateway",
       "TechAliasArray": "Alias_Gateway",
       "TechTreeProducedUnitArray": {
-        "value": "WarpGate"
+        "value": "DarkTemplar"
       },
       "TurningRate": 719.4726,
       "id": 62,
@@ -17216,25 +17326,25 @@
         "PreventDestroy": 1,
         "UseLineOfSight": 1
       },
-      "Food": -2,
+      "Food": -3,
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 70,
       "GlossaryStrongArray": {
-        "value": "Raven"
+        "value": "HighTemplar"
       },
       "GlossaryWeakArray": {
         "0": "Thor",
         "1": "Roach",
         "2": "Stalker",
-        "value": "Marauder"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.375,
       "KillXP": 30,
       "LateralAcceleration": 46.0625,
       "LifeArmorName": "Unit/LifeArmorName/TerranInfantryArmor",
-      "LifeMax": 125,
-      "LifeStart": 125,
+      "LifeMax": 100,
+      "LifeStart": 100,
       "MinimapRadius": 0.375,
       "Mob": "Multiplayer",
       "PlaneArray": {
@@ -17248,7 +17358,7 @@
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 0.375,
       "Sight": 11,
-      "Speed": 2.8125,
+      "Speed": 2.75,
       "StationaryTurningRate": 999.8437,
       "SubgroupPriority": 82,
       "TacticalAIThink": "AIThinkGhost",
@@ -17526,11 +17636,11 @@
         "PreventDestroy": 1,
         "UseLineOfSight": 1
       },
-      "Food": -2,
+      "Food": -3,
       "GlossaryCategory": "",
       "GlossaryPriority": 70,
       "GlossaryStrongArray": {
-        "value": "Raven"
+        "value": "HighTemplar"
       },
       "GlossaryWeakArray": {
         "0": "Marauder",
@@ -17541,8 +17651,8 @@
       "KillXP": 30,
       "LateralAcceleration": 46.0625,
       "LifeArmorName": "Unit/LifeArmorName/TerranInfantryArmor",
-      "LifeMax": 125,
-      "LifeStart": 125,
+      "LifeMax": 100,
+      "LifeStart": 100,
       "MinimapRadius": 0.375,
       "Mob": "Multiplayer",
       "PlaneArray": {
@@ -17556,7 +17666,7 @@
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 0.375,
       "Sight": 11,
-      "Speed": 2.8125,
+      "Speed": 2.75,
       "StationaryTurningRate": 999.8437,
       "SubgroupPriority": 82,
       "TacticalAIThink": "AIThinkGhost",
@@ -17701,11 +17811,11 @@
         "PreventDestroy": 1,
         "UseLineOfSight": 1
       },
-      "Food": -2,
+      "Food": -3,
       "GlossaryCategory": "",
       "GlossaryPriority": 70,
       "GlossaryStrongArray": {
-        "value": "Raven"
+        "value": "HighTemplar"
       },
       "GlossaryWeakArray": {
         "0": "Marauder",
@@ -17716,8 +17826,8 @@
       "KillXP": 30,
       "LateralAcceleration": 46.0625,
       "LifeArmorName": "Unit/LifeArmorName/TerranInfantryArmor",
-      "LifeMax": 125,
-      "LifeStart": 125,
+      "LifeMax": 100,
+      "LifeStart": 100,
       "MinimapRadius": 0.375,
       "Mob": "Multiplayer",
       "PlaneArray": {
@@ -17731,7 +17841,7 @@
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 0.375,
       "Sight": 11,
-      "Speed": 2.8125,
+      "Speed": 2.75,
       "StationaryTurningRate": 999.8437,
       "SubgroupPriority": 82,
       "TacticalAIThink": "AIThinkGhost",
@@ -18263,7 +18373,7 @@
       },
       "CostCategory": "Economy",
       "CostResource": {
-        "Minerals": 325
+        "Minerals": 350
       },
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
@@ -18283,7 +18393,7 @@
         "UseLineOfSight": 1
       },
       "FogVisibility": "Snapshot",
-      "Food": 6,
+      "Food": 4,
       "Footprint": "Footprint6x5DropOffCreepSourceContour",
       "GlossaryPriority": 10,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -18315,7 +18425,7 @@
       "SubgroupPriority": 28,
       "TechAliasArray": "Alias_Hatchery",
       "TechTreeProducedUnitArray": {
-        "value": "Larva"
+        "value": "Queen"
       },
       "TurningRate": 719.4726,
       "id": 86,
@@ -18444,11 +18554,11 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 80,
       "GlossaryStrongArray": {
-        "value": "Zergling"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
         "0": "Cyclone",
-        "value": "Marauder"
+        "value": "Stalker"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.5,
@@ -18603,13 +18713,14 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 81,
       "GlossaryStrongArray": {
-        "index": "SCV"
+        "index": "Zergling",
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "Marauder",
         "1": "Baneling",
         "2": "Stalker",
-        "value": "Baneling"
+        "value": "Marauder"
       },
       "HotkeyAlias": "Hellion",
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -18689,6 +18800,7 @@
         }
       ],
       "Acceleration": 1000,
+      "AcquireMovementLimit": 5.5,
       "AttackTargetPriority": 20,
       "Attributes": {
         "Biological": 1,
@@ -18807,12 +18919,12 @@
       "GlossaryStrongArray": {
         "1": "Hydralisk",
         "2": "Sentry",
-        "value": "Marine"
+        "value": "Hydralisk"
       },
       "GlossaryWeakArray": {
         "1": "Roach",
         "2": "Colossus",
-        "value": "Ghost"
+        "value": "Roach"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -18861,7 +18973,7 @@
       "requires": [
         "TemplarArchive"
       ],
-      "time": 55,
+      "time": 60.66,
       "type": "unit"
     },
     "Hive": {
@@ -18972,7 +19084,7 @@
       },
       "CostCategory": "Technology",
       "CostResource": {
-        "Minerals": 675,
+        "Minerals": 700,
         "Vespene": 250
       },
       "DeathRevealRadius": 3,
@@ -18989,7 +19101,7 @@
         "UseLineOfSight": 1
       },
       "FogVisibility": "Snapshot",
-      "Food": 6,
+      "Food": 4,
       "Footprint": "Footprint6x5DropOffCreepSourceContour",
       "GlossaryPriority": 18,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -19022,7 +19134,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 32,
       "TechAliasArray": {
-        "value": "Alias_Hatchery"
+        "value": "Alias_Lair"
       },
       "TechTreeUnlockedUnitArray": "SnakeCaster",
       "TurningRate": 719.4726,
@@ -19321,13 +19433,13 @@
         "0": "Banshee",
         "1": "Mutalisk",
         "2": "VoidRay",
-        "value": "Battlecruiser"
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
         "1": "Zergling",
         "2": "Colossus",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.375,
@@ -19629,12 +19741,12 @@
         "0": "Cyclone",
         "1": "Roach",
         "2": "Stalker",
-        "value": "SiegeTankSieged"
+        "value": "Roach"
       },
       "GlossaryWeakArray": {
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5,
@@ -19714,9 +19826,8 @@
             "index": "2"
           },
           {
-            "AbilCmd": "InfestationPitResearch,Research6",
-            "Face": "AmorphousArmorcloud",
-            "index": "3"
+            "index": "3",
+            "removed": "1"
           }
         ]
       },
@@ -19781,7 +19892,6 @@
         "Lair"
       ],
       "researches": [
-        "MicrobialShroud",
         "NeuralParasite"
       ],
       "time": 50,
@@ -19822,6 +19932,9 @@
           "Link": "NeuralParasite"
         },
         {
+          "Link": "attack"
+        },
+        {
           "Link": "move"
         },
         {
@@ -19829,6 +19942,7 @@
         }
       ],
       "Acceleration": 1000,
+      "AcquireMovementLimit": 5.5,
       "AttackTargetPriority": 20,
       "Attributes": {
         "Armored": 1,
@@ -20104,10 +20218,10 @@
       "GlossaryStrongArray": {
         "1": "Mutalisk",
         "2": "VoidRay",
-        "value": "Marine"
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
-        "value": "Ultralisk"
+        "value": "HighTemplar"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -20136,6 +20250,9 @@
       "SubgroupPriority": 94,
       "TacticalAIThink": "AIThinkInfestor",
       "TurningRate": 999.8437,
+      "WeaponArray": {
+        "Link": "InfestorWeaponAcidSpores"
+      },
       "id": 111,
       "name": "Infestor",
       "race": "Zerg",
@@ -20392,10 +20509,10 @@
       "GlossaryCategory": "",
       "GlossaryPriority": 219,
       "GlossaryStrongArray": {
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
-        "value": "HellionTank"
+        "value": "Adept"
       },
       "HotkeyCategory": "",
       "InnerRadius": 0.375,
@@ -20558,7 +20675,7 @@
       },
       "CostCategory": "Technology",
       "CostResource": {
-        "Minerals": 475,
+        "Minerals": 500,
         "Vespene": 100
       },
       "DeathRevealRadius": 3,
@@ -20575,7 +20692,7 @@
         "UseLineOfSight": 1
       },
       "FogVisibility": "Snapshot",
-      "Food": 6,
+      "Food": 4,
       "Footprint": "Footprint6x5DropOffCreepSourceContour",
       "GlossaryPriority": 14,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -20606,7 +20723,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 30,
       "TechAliasArray": {
-        "value": "Alias_Hatchery"
+        "value": "Alias_Lair"
       },
       "TechTreeUnlockedUnitArray": "Overseer",
       "TurningRate": 719.4726,
@@ -20633,6 +20750,7 @@
         "InfestationPit",
         "NydusNetwork",
         "OverlordTransport",
+        "Overseer",
         "Spire",
         "TransportOverlordCocoon"
       ]
@@ -20744,13 +20862,13 @@
         "Ground": 1
       },
       "Race": "Zerg",
-      "Radius": 0.125,
+      "Radius": 0.3125,
       "SeparationRadius": 0,
       "Sight": 5,
       "Speed": 0.5625,
       "SubgroupPriority": 58,
       "TechTreeProducedUnitArray": {
-        "value": "Drone"
+        "value": "Ultralisk"
       },
       "id": 151,
       "morphsto": [
@@ -20886,11 +21004,11 @@
       "GlossaryStrongArray": {
         "0": "SiegeTank",
         "1": "Ultralisk",
-        "value": "VikingFighter"
+        "value": "Phoenix"
       },
       "GlossaryWeakArray": {
         "2": "Tempest",
-        "value": "Battlecruiser"
+        "value": "Carrier"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -21166,12 +21284,12 @@
       "GlossaryStrongArray": {
         "1": "Roach",
         "2": "Stalker",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
         "1": "Viper",
-        "value": "Thor"
+        "value": "Disruptor"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -21427,10 +21545,10 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 60,
       "GlossaryStrongArray": {
-        "value": "Thor"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.375,
@@ -21453,7 +21571,7 @@
       "Sight": 10,
       "Speed": 2.25,
       "StationaryTurningRate": 999.8437,
-      "SubgroupPriority": 76,
+      "SubgroupPriority": 78,
       "TauntDuration": {
         "Cheer": 5,
         "Dance": 5
@@ -21570,11 +21688,11 @@
       "GlossaryPriority": 21,
       "GlossaryStrongArray": {
         "1": "Mutalisk",
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "value": "SiegeTankSieged"
+        "value": "Colossus"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.375,
@@ -21598,7 +21716,7 @@
       "Sight": 9,
       "Speed": 2.25,
       "StationaryTurningRate": 999.8437,
-      "SubgroupPriority": 78,
+      "SubgroupPriority": 80,
       "TauntDuration": {
         "Cheer": 5,
         "Dance": 5
@@ -21669,6 +21787,13 @@
             "Column": "2",
             "Face": "MedivacLoad",
             "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "MedivacTransport,LoadAll",
+            "Column": "2",
+            "Face": "LoadNearbyMedivac",
+            "Row": "1",
             "Type": "AbilCmd"
           },
           {
@@ -21765,7 +21890,7 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 185,
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "PhotonCannon"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -21916,10 +22041,10 @@
       "GlossaryPriority": 310,
       "GlossaryStrongArray": {
         "2": "Phoenix",
-        "value": "Banshee"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "LifeArmorName": "Unit/LifeArmorName/TerranBuildingPlating",
@@ -22050,7 +22175,7 @@
       "GlossaryPriority": 190,
       "GlossaryWeakArray": {
         "2": "Tempest",
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -22122,6 +22247,7 @@
         }
       ],
       "Acceleration": 3.5,
+      "AcquireMovementLimit": 8,
       "AttackTargetPriority": 20,
       "Attributes": {
         "Biological": 1,
@@ -22202,13 +22328,13 @@
         "0": "SCV",
         "1": "Drone",
         "2": "Probe",
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
         "0": "Thor",
         "1": "Viper",
         "2": "Phoenix",
-        "value": "Marine"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -22252,9 +22378,6 @@
         {
           "Link": "ChronoBoostEnergyCost",
           "index": "1"
-        },
-        {
-          "Link": "EnergyRecharge"
         },
         {
           "Link": "EnergyRecharge"
@@ -22310,7 +22433,7 @@
         "Structure": 1
       },
       "BehaviorArray": {
-        "Link": "FastEnablerPowerSourceNexus"
+        "Link": "NexusDeath"
       },
       "CardLayouts": {
         "LayoutButtons": [
@@ -22381,7 +22504,7 @@
         "UseLineOfSight": 1
       },
       "FogVisibility": "Snapshot",
-      "Food": 15,
+      "Food": 13,
       "Footprint": "Footprint5x5Contour",
       "GlossaryPriority": 10,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -22418,7 +22541,7 @@
       "TacticalAIThink": "AIThinkNexus",
       "TechTreeProducedUnitArray": {
         "1": "Mothership",
-        "value": "Probe"
+        "value": "Mothership"
       },
       "TurningRate": 719.4726,
       "WeaponArray": [
@@ -22638,10 +22761,10 @@
       "GlossaryPriority": 110,
       "GlossaryStrongArray": {
         "1": "LurkerMP",
-        "value": "Banshee"
+        "value": "DarkTemplar"
       },
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "PhotonCannon"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -22711,6 +22834,7 @@
         }
       ],
       "Acceleration": 3,
+      "AcquireMovementLimit": 8,
       "AttackTargetPriority": 20,
       "Attributes": [
         {
@@ -22833,10 +22957,10 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 168,
       "GlossaryStrongArray": {
-        "value": "SCV"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "Phoenix"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -22954,10 +23078,10 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 250,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
-        "value": "Raven"
+        "value": "Observer"
       },
       "InnerRadius": 0.375,
       "KillDisplay": "Never",
@@ -22982,7 +23106,7 @@
       "id": 732,
       "name": "OracleStasisTrap",
       "race": "Protoss",
-      "time": 5,
+      "time": 5.6,
       "type": "structure"
     },
     "OrbitalCommand": {
@@ -23114,7 +23238,7 @@
         "UseLineOfSight": 1
       },
       "FogVisibility": "Snapshot",
-      "Food": 15,
+      "Food": 13,
       "Footprint": "Footprint5x5Contour",
       "GlossaryPriority": 32,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -23257,7 +23381,7 @@
         "TownAlert": 1,
         "UseLineOfSight": 1
       },
-      "Food": 15,
+      "Food": 13,
       "GlossaryAlias": "OrbitalCommand",
       "Height": 3.75,
       "HotkeyAlias": "OrbitalCommand",
@@ -23357,12 +23481,12 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 201,
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "PhotonCannon"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillXP": 20,
-      "LateralAcceleration": 46.0625,
+      "LateralAcceleration": 1,
       "LifeArmorName": "Unit/LifeArmorName/ZergAirArmor",
       "LifeMax": 200,
       "LifeRegenRate": 0.2734,
@@ -23381,11 +23505,11 @@
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 0.75,
       "Sight": 11,
-      "Speed": 0.6445,
-      "StationaryTurningRate": 999.8437,
+      "Speed": 0.6054,
+      "StationaryTurningRate": 499.9218,
       "SubgroupPriority": 72,
       "TechAliasArray": "Alias_Overlord",
-      "TurningRate": 999.8437,
+      "TurningRate": 499.9218,
       "VisionHeight": 15,
       "id": 106,
       "morphsto": [
@@ -23580,6 +23704,13 @@
             "Type": "AbilCmd"
           },
           {
+            "AbilCmd": "OverlordTransport,LoadAll",
+            "Column": "2",
+            "Face": "LoadNearbyOverlord",
+            "Row": "1",
+            "Type": "AbilCmd"
+          },
+          {
             "AbilCmd": "OverlordTransport,UnloadAt",
             "Column": "3",
             "Face": "OverlordTransportUnload",
@@ -23674,10 +23805,10 @@
       "SeparationRadius": 0.75,
       "Sight": 11,
       "Speed": 0.914,
-      "StationaryTurningRate": 999.8437,
+      "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 73,
       "TechAliasArray": "Alias_Overlord",
-      "TurningRate": 999.8437,
+      "TurningRate": 719.4726,
       "VisionHeight": 15,
       "id": 893,
       "morphsto": [
@@ -23777,10 +23908,10 @@
       "GlossaryPriority": 210,
       "GlossaryStrongArray": {
         "1": "LurkerMP",
-        "value": "Banshee"
+        "value": "DarkTemplar"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "Stalker"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -23815,6 +23946,9 @@
       "id": 129,
       "name": "Overseer",
       "race": "Zerg",
+      "requires": [
+        "Lair"
+      ],
       "time": 16.6665,
       "type": "unit"
     },
@@ -23926,7 +24060,7 @@
       "GlossaryWeakArray": {
         "1": "Corruptor",
         "2": "Carrier",
-        "value": "Battlecruiser"
+        "value": "Corruptor"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -24061,11 +24195,11 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 200,
       "GlossaryStrongArray": {
-        "value": "Banshee"
+        "value": "DarkTemplar"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "value": "SiegeTankSieged"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "LifeArmor": 1,
@@ -24228,16 +24362,16 @@
         "UseLineOfSight": 1
       },
       "FogVisibility": "Snapshot",
-      "Food": 15,
+      "Food": 13,
       "Footprint": "Footprint5x5Contour",
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 240,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "value": "Banshee"
+        "value": "VoidRay"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "LifeArmor": 2,
@@ -24611,14 +24745,9 @@
         "Armored": 1,
         "Structure": 1
       },
-      "BehaviorArray": [
-        {
-          "Link": "FastEnablerPowerUser"
-        },
-        {
-          "Link": "PowerSourceFast"
-        }
-      ],
+      "BehaviorArray": {
+        "Link": "PowerSource"
+      },
       "CardLayouts": {
         "LayoutButtons": [
           {
@@ -24695,7 +24824,7 @@
       "TechAliasArray": "Alias_Pylon",
       "TurningRate": 719.4726,
       "TurretArray": {
-        "value": "PylonCrystalRotate"
+        "value": "PylonRingRotate"
       },
       "id": 60,
       "name": "Pylon",
@@ -24995,10 +25124,10 @@
       "GlossaryPriority": 217,
       "GlossaryStrongArray": {
         "2": "Oracle",
-        "value": "Hellion"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -25018,8 +25147,8 @@
       "Race": "Zerg",
       "Radius": 0.875,
       "RankDisplay": "Always",
-      "ScoreKill": 175,
-      "ScoreMake": 175,
+      "ScoreKill": 150,
+      "ScoreMake": 150,
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 0.875,
       "Sight": 9,
@@ -25075,6 +25204,7 @@
         }
       ],
       "Acceleration": 1000,
+      "AcquireMovementLimit": 11,
       "AttackTargetPriority": 20,
       "Attributes": {
         "Biological": 1
@@ -25311,11 +25441,11 @@
       "GlossaryPriority": 66,
       "GlossaryStrongArray": {
         "0": "Liberator",
-        "value": "SiegeTankSieged"
+        "value": "Sentry"
       },
       "GlossaryWeakArray": {
         "1": "Mutalisk",
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -25577,15 +25707,14 @@
       "GlossaryPriority": 190,
       "GlossaryStrongArray": {
         "1": "LurkerMP",
-        "value": "Banshee"
+        "value": "DarkTemplar"
       },
       "GlossaryWeakArray": {
         "0": "VikingFighter",
         "1": "Mutalisk",
-        "2": "HighTemplar",
-        "value": "Ghost"
+        "value": "Phoenix"
       },
-      "Height": 3.75,
+      "Height": 4.15,
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "KillDisplay": "Always",
       "KillXP": 45,
@@ -25610,7 +25739,7 @@
       "Sight": 11,
       "Speed": 2.9492,
       "StationaryTurningRate": 999.8437,
-      "SubgroupPriority": 84,
+      "SubgroupPriority": 77,
       "TacticalAIThink": "AIThinkRaven",
       "TurningRate": 999.8437,
       "VisionHeight": 15,
@@ -25702,10 +25831,10 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 50,
       "GlossaryStrongArray": {
-        "value": "SCV"
+        "value": "Probe"
       },
       "GlossaryWeakArray": {
-        "value": "Marauder"
+        "value": "Stalker"
       },
       "Height": 0.5,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -25764,12 +25893,17 @@
         "Mechanical": 1,
         "Structure": 1
       },
-      "BehaviorArray": {
-        "Link": "WorkerPeriodicRefineryCheck"
-      },
+      "BehaviorArray": [
+        {
+          "Link": "SCVMoveToGatherSeek"
+        },
+        {
+          "Link": "WorkerPeriodicRefineryCheck"
+        }
+      ],
       "BuildOnAs": "RefineryRich",
       "BuiltOn": {
-        "value": "PurifierVespeneGeyser"
+        "value": "ShakurasVespeneGeyser"
       },
       "CardLayouts": {
         "LayoutButtons": [
@@ -25868,9 +26002,14 @@
         "Mechanical": 1,
         "Structure": 1
       },
-      "BehaviorArray": {
-        "Link": "WorkerPeriodicRefineryCheck"
-      },
+      "BehaviorArray": [
+        {
+          "Link": "SCVMoveToGatherSeek"
+        },
+        {
+          "Link": "WorkerPeriodicRefineryCheck"
+        }
+      ],
       "BuiltOn": "RichVespeneGeyser",
       "CardLayouts": {
         "LayoutButtons": [
@@ -26187,6 +26326,7 @@
             "AbilCmd": "stop,Stop",
             "Column": "1",
             "Face": "Stop",
+            "Requirements": "UseBurrow",
             "Row": "0",
             "Type": "AbilCmd",
             "index": "5"
@@ -26234,12 +26374,12 @@
       "GlossaryStrongArray": {
         "1": "Zergling",
         "2": "Adept",
-        "value": "Hellion"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "1": "LurkerMP",
         "2": "Immortal",
-        "value": "Marauder"
+        "value": "Ultralisk"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.625,
@@ -27482,13 +27622,13 @@
       "GlossaryStrongArray": {
         "0": "Zergling",
         "1": "Zealot",
-        "value": "Mutalisk"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "Thor",
         "1": "Ravager",
         "2": "Archon",
-        "value": "Hellion"
+        "value": "Zergling"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -27529,7 +27669,7 @@
       "requires": [
         "CyberneticsCore"
       ],
-      "time": 32,
+      "time": 32.66,
       "type": "unit"
     },
     "ShieldBattery": {
@@ -27554,7 +27694,7 @@
         "Structure": 1
       },
       "BehaviorArray": {
-        "Link": "BatteryEnergy"
+        "Link": "PowerUserQueueSmall"
       },
       "CardLayouts": {
         "LayoutButtons": [
@@ -27601,7 +27741,7 @@
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
       "EnergyMax": 100,
       "EnergyRegenRate": 0.5625,
-      "EnergyStart": 50,
+      "EnergyStart": 75,
       "FlagArray": {
         "AIDefense": 1,
         "ArmorDisabledWhileConstructing": 1,
@@ -27753,10 +27893,10 @@
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 130,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Banshee"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 0.875,
@@ -27914,7 +28054,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 20,
       "TechTreeUnlockedUnitArray": {
-        "value": "Zergling"
+        "value": "Queen"
       },
       "TurningRate": 719.4726,
       "id": 89,
@@ -28038,11 +28178,11 @@
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 220,
       "GlossaryStrongArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "GlossaryWeakArray": {
         "0": "SiegeTank",
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillDisplay": "Always",
@@ -28244,7 +28384,7 @@
       "SubgroupPriority": 24,
       "TechAliasArray": "Alias_Spire",
       "TechTreeUnlockedUnitArray": {
-        "value": "Mutalisk"
+        "value": "Corruptor"
       },
       "TurningRate": 719.4726,
       "id": 92,
@@ -28383,10 +28523,10 @@
       "GlossaryPriority": 230,
       "GlossaryStrongArray": {
         "2": "Oracle",
-        "value": "Banshee"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
-        "value": "Marine"
+        "value": "Zealot"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillDisplay": "Always",
@@ -28542,12 +28682,12 @@
       "GlossaryStrongArray": {
         "1": "Corruptor",
         "2": "Tempest",
-        "value": "Reaper"
+        "value": "Mutalisk"
       },
       "GlossaryWeakArray": {
         "1": "Zergling",
         "2": "Immortal",
-        "value": "Marauder"
+        "value": "Zergling"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.5,
@@ -28722,7 +28862,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 20,
       "TechTreeProducedUnitArray": {
-        "value": "Phoenix"
+        "value": "Carrier"
       },
       "TurningRate": 719.4726,
       "id": 67,
@@ -28853,7 +28993,7 @@
       "SubgroupPriority": 20,
       "TechAliasArray": "Alias_Starport",
       "TechTreeProducedUnitArray": {
-        "value": "VikingFighter"
+        "value": "Battlecruiser"
       },
       "TurningRate": 719.4726,
       "builds": [
@@ -29649,6 +29789,9 @@
       "DeathRevealRadius": 3,
       "Description": "Button/Tooltip/SwarmHostMP",
       "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "EquipmentArray": {
+        "Weapon": "AcidSpitSwarmhostDummy"
+      },
       "Facing": 45,
       "FlagArray": [
         {
@@ -29727,9 +29870,6 @@
       "Attributes": {
         "Armored": 1,
         "Biological": 1
-      },
-      "BehaviorArray": {
-        "Link": "TrainInfestedTerran"
       },
       "CardLayouts": {
         "LayoutButtons": [
@@ -29926,6 +30066,9 @@
       },
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Unit,ObjectFamily:Melee",
+      "EquipmentArray": {
+        "Weapon": "AcidSpitSwarmhostDummy"
+      },
       "FlagArray": {
         "AIHighPrioTarget": 1,
         "AIPreferBurrow": 1,
@@ -29943,13 +30086,13 @@
         "0": "SCV",
         "1": "Drone",
         "2": "Probe",
-        "value": "Marine"
+        "value": "Roach"
       },
       "GlossaryWeakArray": {
         "0": "Banshee",
         "1": "Mutalisk",
         "2": "Stalker",
-        "value": "Baneling"
+        "value": "Archon"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.5,
@@ -30062,10 +30205,10 @@
       "GlossaryStrongArray": {
         "0": "Liberator",
         "1": "BroodLord",
-        "value": "SwarmHostMP"
+        "value": "Colossus"
       },
       "GlossaryWeakArray": {
-        "value": "VikingFighter"
+        "value": "VoidRay"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -30221,7 +30364,7 @@
       "StationaryTurningRate": 719.4726,
       "SubgroupPriority": 10,
       "TechTreeUnlockedUnitArray": {
-        "value": "HighTemplar"
+        "value": "Archon"
       },
       "TurningRate": 719.4726,
       "id": 68,
@@ -30236,6 +30379,7 @@
       "time": 50,
       "type": "structure",
       "unlocks": [
+        "Archon",
         "HighTemplar"
       ]
     },
@@ -30347,10 +30491,10 @@
       "GlossaryStrongArray": {
         "0": "VikingFighter",
         "2": "Phoenix",
-        "value": "Marine"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Marauder"
+        "value": "Immortal"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "InnerRadius": 1,
@@ -30956,13 +31100,13 @@
         "0": "Marine",
         "1": "Zergling",
         "2": "Zealot",
-        "value": "Marine"
+        "value": "Zergling"
       },
       "GlossaryWeakArray": {
         "0": "Ghost",
         "1": "BroodLord",
         "2": "Immortal",
-        "value": "Marauder"
+        "value": "VoidRay"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "InnerRadius": 0.75,
@@ -31246,11 +31390,11 @@
       "GlossaryStrongArray": {
         "1": "BroodLord",
         "2": "Tempest",
-        "value": "Battlecruiser"
+        "value": "VoidRay"
       },
       "GlossaryWeakArray": {
         "1": "Hydralisk",
-        "value": "Marine"
+        "value": "Stalker"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/TerranUnits",
@@ -31436,13 +31580,13 @@
         "0": "SiegeTank",
         "1": "Mutalisk",
         "2": "Colossus",
-        "value": "SiegeTankSieged"
+        "value": "Hydralisk"
       },
       "GlossaryWeakArray": {
         "0": "Ghost",
         "1": "Corruptor",
         "2": "HighTemplar",
-        "value": "VikingFighter"
+        "value": "Phoenix"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ZergUnits",
@@ -31593,13 +31737,13 @@
       "GlossaryPriority": 160,
       "GlossaryStrongArray": {
         "2": "Immortal",
-        "value": "Battlecruiser"
+        "value": "Carrier"
       },
       "GlossaryWeakArray": {
         "0": "Marine",
         "1": "Hydralisk",
         "2": "Phoenix",
-        "value": "VikingFighter"
+        "value": "Mutalisk"
       },
       "Height": 3.75,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
@@ -31664,6 +31808,13 @@
       "CardLayouts": {
         "LayoutButtons": [
           {
+            "AbilCmd": "MorphBackToGateway,Cancel",
+            "Column": "4",
+            "Face": "Cancel",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
             "AbilCmd": "MorphBackToGateway,Execute",
             "Column": "1",
             "Face": "MorphBackToGateway",
@@ -31718,6 +31869,12 @@
             "Face": "WarpInAdept",
             "Row": "0",
             "Type": "AbilCmd"
+          },
+          {
+            "Column": "0",
+            "Face": "UpgradeToWarpGate",
+            "Row": "2",
+            "Type": "AbilCmd"
           }
         ]
       },
@@ -31736,6 +31893,10 @@
       },
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
+      "EffectArray": {
+        "Birth": "HasMorphedBefore",
+        "Create": "HasMorphedBefore"
+      },
       "Facing": 315,
       "FlagArray": {
         "ArmorDisabledWhileConstructing": 1,
@@ -31775,7 +31936,7 @@
       "ShieldsStart": 500,
       "Sight": 9,
       "StationaryTurningRate": 719.4726,
-      "SubgroupPriority": 30,
+      "SubgroupPriority": 24,
       "TechAliasArray": "Alias_Gateway",
       "TurningRate": 719.4726,
       "id": 133,
@@ -31818,6 +31979,9 @@
         "Mechanical": 1,
         "Psionic": 1
       },
+      "BehaviorArray": {
+        "Link": "WarpPrismLoadupDecelerationFix"
+      },
       "CardLayouts": {
         "LayoutButtons": [
           {
@@ -31832,6 +31996,13 @@
             "Column": "2",
             "Face": "WarpPrismLoad",
             "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "WarpPrismTransport,LoadAll",
+            "Column": "2",
+            "Face": "LoadNearbyWarpPrism",
+            "Row": "1",
             "Type": "AbilCmd"
           },
           {
@@ -31906,9 +32077,9 @@
       "GlossaryCategory": "Unit/Category/ProtossUnits",
       "GlossaryPriority": 110,
       "GlossaryWeakArray": {
-        "value": "MissileTurret"
+        "value": "PhotonCannon"
       },
-      "Height": 3.75,
+      "Height": 4.25,
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "KillXP": 35,
       "LateralAcceleration": 57,
@@ -32085,10 +32256,10 @@
         "0": "Marine",
         "1": "Baneling",
         "2": "Oracle",
-        "value": "Marauder"
+        "value": "Stalker"
       },
       "GlossaryWeakArray": {
-        "value": "Raven"
+        "value": "Observer"
       },
       "HotkeyCategory": "Unit/Category/TerranUnits",
       "KillDisplay": "Always",
@@ -32230,13 +32401,13 @@
       "GlossaryStrongArray": {
         "1": "Zergling",
         "2": "Immortal",
-        "value": "Marauder"
+        "value": "Hydralisk"
       },
       "GlossaryWeakArray": {
         "0": "HellionTank",
         "1": "Roach",
         "2": "Colossus",
-        "value": "Hellion"
+        "value": "Baneling"
       },
       "HotkeyCategory": "Unit/Category/ProtossUnits",
       "InnerRadius": 0.375,
@@ -32528,7 +32699,7 @@
       },
       "CostCategory": "Army",
       "CostResource": {
-        "Minerals": 25
+        "Minerals": 50
       },
       "DamageDealtXP": 1,
       "DamageTakenXP": 1,
@@ -32546,19 +32717,19 @@
         "PreventDestroy": 1,
         "UseLineOfSight": 1
       },
-      "Food": -0.5,
+      "Food": -1.0,
       "GlossaryCategory": "Unit/Category/ZergUnits",
       "GlossaryPriority": 50,
       "GlossaryStrongArray": {
         "1": "Hydralisk",
         "2": "Stalker",
-        "value": "Marauder"
+        "value": "Hydralisk"
       },
       "GlossaryWeakArray": {
         "0": "HellionTank",
         "1": "Baneling",
         "2": "Colossus",
-        "value": "Hellion"
+        "value": "Baneling"
       },
       "HotkeyCategory": "Unit/Category/ZergUnits",
       "KillDisplay": "Always",
@@ -32602,6 +32773,7 @@
       "requires": [
         "SpawningPool"
       ],
+      "time": 24,
       "type": "unit"
     }
   },
@@ -32820,13 +32992,6 @@
       "name": "MedivacCaduceusReactor",
       "requires": [],
       "time": 70
-    },
-    "MicrobialShroud": {
-      "gas": 150,
-      "minerals": 150,
-      "name": "MicrobialShroud",
-      "requires": [],
-      "time": 110
     },
     "NeuralParasite": {
       "gas": 150,
@@ -33298,17 +33463,17 @@
       "time": 220
     },
     "ZergGroundArmorsLevel1": {
-      "gas": 150,
+      "gas": 100,
       "id": 56,
-      "minerals": 150,
+      "minerals": 100,
       "name": "ZergGroundArmorsLevel1",
       "requires": [],
       "time": 160
     },
     "ZergGroundArmorsLevel2": {
-      "gas": 200,
+      "gas": 150,
       "id": 57,
-      "minerals": 200,
+      "minerals": 150,
       "name": "ZergGroundArmorsLevel2",
       "requires": [
         "Lair",
@@ -33317,9 +33482,9 @@
       "time": 190
     },
     "ZergGroundArmorsLevel3": {
-      "gas": 250,
+      "gas": 200,
       "id": 58,
-      "minerals": 250,
+      "minerals": 200,
       "name": "ZergGroundArmorsLevel3",
       "requires": [
         "Hive",

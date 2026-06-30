@@ -1065,6 +1065,7 @@
         "DarkTemplarBlinkUpgrade"
       ],
       "unlocks": [
+        "Archon",
         "DarkTemplar"
       ]
     },
@@ -1896,7 +1897,6 @@
         "Lair"
       ],
       "researches": [
-        "MicrobialShroud",
         "NeuralParasite"
       ],
       "unlocks": [
@@ -1939,6 +1939,9 @@
       "race": "Zerg"
     },
     "InfestorTerransWeapon": {
+      "race": "Zerg"
+    },
+    "InfestorWeapon": {
       "race": "Zerg"
     },
     "InhibitorZoneBase": {
@@ -2018,6 +2021,7 @@
         "InfestationPit",
         "NydusNetwork",
         "OverlordTransport",
+        "Overseer",
         "Spire",
         "TransportOverlordCocoon"
       ]
@@ -2186,6 +2190,9 @@
     "MULE": {
       "race": "Terran"
     },
+    "MapmakerNeutralUnitGameStartModifierDecrease": {
+      "race": ""
+    },
     "Marauder": {
       "race": "Terran",
       "requires": [
@@ -2271,6 +2278,9 @@
       "race": ""
     },
     "MineralFieldOpaque900": {
+      "race": ""
+    },
+    "MineralWall3x3": {
       "race": ""
     },
     "MissileTurret": {
@@ -2439,7 +2449,10 @@
       ]
     },
     "Overseer": {
-      "race": "Zerg"
+      "race": "Zerg",
+      "requires": [
+        "Lair"
+      ]
     },
     "OverseerACGluescreenDummy": {
       "race": ""
@@ -2475,6 +2488,9 @@
       "race": ""
     },
     "PermanentCreepBlocker1x1": {
+      "race": ""
+    },
+    "PhaseShield": {
       "race": ""
     },
     "Phoenix": {
@@ -3703,6 +3719,7 @@
         "PsiStormTech"
       ],
       "unlocks": [
+        "Archon",
         "HighTemplar"
       ]
     },
@@ -4088,6 +4105,9 @@
     "XelNagaTower": {
       "race": ""
     },
+    "XelNagaTowerRangeIndicatorDummy": {
+      "race": ""
+    },
     "XelNaga_Caverns_Door": {
       "race": ""
     },
@@ -4382,9 +4402,6 @@
       ]
     },
     "MedivacCaduceusReactor": {
-      "requires": []
-    },
-    "MicrobialShroud": {
       "requires": []
     },
     "NeuralParasite": {

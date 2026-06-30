@@ -73,7 +73,8 @@
       "Behavior": "AggressiveMutation",
       "EditorCategories": "Race:Zerg",
       "ValidatorArray": {
-        "index": "IsZergUnit"
+        "index": "IsZergUnit",
+        "value": "IsNotInfestedTerransEgg"
       },
       "id": "AggressiveMutationAB"
     },
@@ -99,7 +100,8 @@
       "Behavior": "ArbiterMPCloakFieldEffect",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "index": "NotMothership"
+        "index": "NotMothership",
+        "value": "NotArbiterMP"
       },
       "id": "ArbiterMPCloakingFieldApply"
     },
@@ -115,7 +117,8 @@
       "Behavior": "ArbiterMPRecalling",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "index": "NotLarvaEgg"
+        "index": "NotLarvaEgg",
+        "value": "NotAbducted"
       },
       "id": "ArbiterMPRecallApplyPreRecallBehavior"
     },
@@ -153,7 +156,8 @@
       "Behavior": "BatteryOvercharge",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "index": "IsShieldBattery"
+        "index": "IsShieldBattery",
+        "value": "NexusBatteryOvercharge8Range"
       },
       "id": "BatteryOverchargeAB"
     },
@@ -294,6 +298,66 @@
       "id": "BurrowChargeCasterApplyBehaviorRevD"
     },
     {
+      "Behavior": "BurrowDownTransientStun",
+      "Duration": 0.31,
+      "EditorCategories": "Race:Zerg",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "id": "RoachBurrowDownTransientStun"
+    },
+    {
+      "Behavior": "BurrowDownTransientStun",
+      "Duration": 0.8,
+      "EditorCategories": "Race:Zerg",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "id": "InfestorBurrowDownTransientStun"
+    },
+    {
+      "Behavior": "BurrowMoveCloakSuppress",
+      "Duration": 0.5556,
+      "EditorCategories": "",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "InfestorBurrowTransientCloakDelay"
+    },
+    {
+      "Behavior": "BurrowMoveCloakSuppress",
+      "Duration": 0.5556,
+      "EditorCategories": "",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "RoachBurrowTransientCloakDelay"
+    },
+    {
+      "Behavior": "BurrowUpTransientStun",
+      "Duration": 0.7517,
+      "EditorCategories": "Race:Zerg",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "id": "RoachBurrowUpTransientStun"
+    },
+    {
+      "Behavior": "BurrowUpTransientStun",
+      "Duration": 1.5,
+      "EditorCategories": "Race:Zerg",
+      "Flags": {
+        "UseDuration": 1
+      },
+      "id": "InfestorBurrowUpTransientStun"
+    },
+    {
       "Behavior": "BypassArmorDebuffOne",
       "EditorCategories": "Race:Terran",
       "ValidatorArray": "BypassArmorOne",
@@ -333,6 +397,13 @@
       "id": "ChangelingTimedLife"
     },
     {
+      "Behavior": "ChangelingDeathDamageResponse",
+      "WhichUnit": {
+        "Value": "Source"
+      },
+      "id": "ChangelingDeathDamageResponseAB"
+    },
+    {
       "Behavior": "ChannelingCausticSpray",
       "EditorCategories": "Race:Zerg",
       "WhichUnit": {
@@ -344,7 +415,8 @@
       "Behavior": "Charging",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "index": "ChargeMinTriggerDistance"
+        "index": "ChargeMinTriggerDistance",
+        "value": "ChargeMaxDistance"
       },
       "WhichUnit": {
         "Value": "Caster"
@@ -371,7 +443,7 @@
       "Behavior": "ChronoBoostEnergyCost",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "value": "TimeWarpTargetFilters"
+        "value": "TimeWarpViableTargets"
       },
       "id": "ChronoBoostEnergyCostAB"
     },
@@ -397,7 +469,8 @@
       "Behavior": "CloakFieldEffect",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "index": "NotMothership"
+        "index": "NotMothership",
+        "value": "NotCloaked"
       },
       "id": "CloakingFieldNew"
     },
@@ -768,7 +841,7 @@
       "Behavior": "InstantMorph",
       "EditorCategories": "Race:Zerg",
       "ValidatorArray": {
-        "value": "IsNotRoach"
+        "value": "IsNotHydralisk"
       },
       "id": "InstantMorphUnburrowAB"
     },
@@ -776,6 +849,13 @@
       "Behavior": "InstantMorph",
       "EditorCategories": "Race:Zerg",
       "id": "InstantMorphUnburrowABNoChecks"
+    },
+    {
+      "Behavior": "IsActiveBuilderSCV",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "IsBuildingSCVAB"
     },
     {
       "Behavior": "KD8ChargeFate",
@@ -881,7 +961,8 @@
       "Behavior": "MothershipCorePurifyNexus",
       "EditorCategories": "",
       "ValidatorArray": {
-        "index": "IsNexus"
+        "index": "IsNexus",
+        "value": "IsNotConstructing"
       },
       "WhichUnit": {
         "Value": "Caster"
@@ -917,7 +998,8 @@
     {
       "Behavior": "MothershipRecalling",
       "ValidatorArray": {
-        "index": "NotLarvaEgg"
+        "index": "NotLarvaEgg",
+        "value": "NotReleasedInterceptor"
       },
       "id": "MothershipMassRecallApplyBehavior"
     },
@@ -950,6 +1032,24 @@
       "id": "PylonSpecialPowerAB"
     },
     {
+      "Behavior": "NeuralParasite",
+      "EditorCategories": "Race:Zerg",
+      "ValidatorArray": {
+        "0": "IsActiveBuilderSCV"
+      },
+      "WhichUnit": {
+        "Effect": "NeuralParasiteLaunchMissile"
+      },
+      "id": "NeuralParasiteSCVAB"
+    },
+    {
+      "Behavior": "NeuralParasiteBlockBurrow",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "NeuralParasiteBlockBurrowAB"
+    },
+    {
       "Behavior": "NeuralParasiteDrone",
       "EditorCategories": "Race:Zerg",
       "ValidatorArray": {
@@ -959,6 +1059,21 @@
         "Effect": "NeuralParasiteLaunchMissile"
       },
       "id": "NeuralParasiteDroneCheck"
+    },
+    {
+      "Behavior": "NeuralParasiteSCVRefresh",
+      "EditorCategories": "Race:Zerg",
+      "ValidatorArray": {
+        "0": "IsSCV"
+      },
+      "WhichUnit": {
+        "Effect": "NeuralParasiteLaunchMissile"
+      },
+      "id": "NeuralParasiteApplySCVBehavior"
+    },
+    {
+      "Behavior": "NeutralPhaseShield",
+      "id": "PhaseShieldAB"
     },
     {
       "Behavior": "NexusInvulnerability",
@@ -1010,7 +1125,8 @@
       "Behavior": "NexusShieldRechargeOnPylonBehavior",
       "EditorCategories": "",
       "ValidatorArray": {
-        "index": "IsPylon"
+        "index": "IsPylon",
+        "value": "NotHaveNexusShieldRechargeOnPylonBehavior"
       },
       "id": "NexusShieldRechargeOnPylonAB"
     },
@@ -1042,9 +1158,16 @@
       "Behavior": "OracleCloakFieldEffect",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "value": "NotCloaked"
+        "value": "NotEMPed"
       },
       "id": "OracleCloakingFieldNew"
+    },
+    {
+      "Behavior": "OracleDeceleration",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "BuildDeceleration"
     },
     {
       "Behavior": "OraclePhaseShift",
@@ -1078,7 +1201,7 @@
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
         "index": "NotFrenzied",
-        "value": "NotLarva"
+        "value": "IsNotInfestedTerransEgg"
       },
       "id": "OracleStasisTrapActivateAB"
     },
@@ -1252,6 +1375,14 @@
       "id": "QueenBirth"
     },
     {
+      "Behavior": "QueenInjectStun",
+      "EditorCategories": "Race:Zerg",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "QueenInjectStunAB"
+    },
+    {
       "Behavior": "QueenMPEnsnare",
       "EditorCategories": "Race:Zerg",
       "id": "QueenMPEnsnareApply"
@@ -1260,7 +1391,8 @@
       "Behavior": "QueenSpawnLarvaHiddenStack",
       "EditorCategories": "Race:Zerg",
       "ValidatorArray": {
-        "index": "IsHatcheryLairOrHive"
+        "index": "IsHatcheryLairOrHive",
+        "value": "NotContaminated"
       },
       "id": "SpawnMutantLarvaHiddenAB"
     },
@@ -1268,7 +1400,8 @@
       "Behavior": "QueenSpawnLarvaTimer",
       "EditorCategories": "Race:Zerg",
       "ValidatorArray": {
-        "index": "IsHatcheryLairOrHive"
+        "index": "IsHatcheryLairOrHive",
+        "value": "NotContaminated"
       },
       "id": "SpawnMutantLarvaApplyTimerBehavior"
     },
@@ -1314,7 +1447,8 @@
       "Behavior": "Recalling",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "0": ""
+        "0": "",
+        "value": "NotAbducted"
       },
       "id": "MassRecallApplyBehavior"
     },
@@ -1387,7 +1521,8 @@
       "Behavior": "ResourceStun",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "index": "Minerals"
+        "index": "Minerals",
+        "value": "NotResourceStun"
       },
       "id": "ResourceStunApplyBehavior"
     },
@@ -1399,6 +1534,14 @@
     {
       "Behavior": "RoughTerrainSlow",
       "id": "RoughTerrainApplyBehavior"
+    },
+    {
+      "Behavior": "SCVMoveToBuildSeek",
+      "id": "SCVMovetoBuildSeekAB"
+    },
+    {
+      "Behavior": "SCVMovetoBuildAllyAntiGrief",
+      "id": "SCVMovetoBuildAntigriefAB"
     },
     {
       "Behavior": "SalvageBaneling",
@@ -1539,7 +1682,8 @@
       "Behavior": "Slow",
       "EditorCategories": "Race:Terran",
       "ValidatorArray": {
-        "index": "PunisherGrenadesResearched"
+        "index": "PunisherGrenadesResearched",
+        "value": "NotFrenzied"
       },
       "id": "PunisherGrenadesSlow"
     },
@@ -1560,7 +1704,8 @@
       "Behavior": "SupplyDropEnRoute",
       "EditorCategories": "Race:Terran",
       "ValidatorArray": {
-        "index": "IsSupplyDepotEitherFlavor"
+        "index": "IsSupplyDepotEitherFlavor",
+        "value": "IsSupplyDepotMorphing"
       },
       "id": "SupplyDropApplyTempBehavior"
     },
@@ -1796,6 +1941,13 @@
       "id": "VortexKillDamageAB"
     },
     {
+      "Behavior": "WarpPrismLoadupDecFixMorphCheck",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "WarpPrismDecFixMorphCheckAB"
+    },
+    {
       "Behavior": "WarpShipDenyPower",
       "EditorCategories": "Race:Protoss",
       "WhichUnit": {
@@ -1964,6 +2116,10 @@
     },
     {
       "EditorCategories": "",
+      "id": "HasMorphedBefore"
+    },
+    {
+      "EditorCategories": "",
       "id": "InfestorEnsnareDelayedRemove"
     },
     {
@@ -1996,7 +2152,8 @@
     {
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "index": "NoYoink"
+        "index": "NoYoink",
+        "value": "IsNotMothershipCorePurifyNexus"
       },
       "id": "VortexEventHorizon"
     },
@@ -2153,7 +2310,8 @@
     {
       "EditorCategories": "Race:Zerg",
       "ValidatorArray": {
-        "index": "IsNotWarpingIn"
+        "index": "IsNotWarpingIn",
+        "value": "IsNotPhaseShifted"
       },
       "WhichUnit": {
         "Effect": "NeuralParasiteLaunchMissile"
@@ -2195,10 +2353,6 @@
     },
     {
       "EditorCategories": "Race:Zerg",
-      "id": "NeuralParasiteChildren"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
       "id": "ParasiticBombDelayTimedLife"
     },
     {
@@ -2228,7 +2382,13 @@
       "id": "WidowMineDelayRemoveAB"
     },
     {
+      "id": "ChangelingDelayMovement"
+    },
+    {
       "id": "InfestorEnsnareMakePrecursorReheightSource"
+    },
+    {
+      "id": "MapmakerDecreaseRockHealth"
     },
     {
       "id": "MineDroneCountdown"
@@ -2252,6 +2412,17 @@
     "id": "OverchargeForce"
   },
   "CEffectCancelOrder": [
+    {
+      "AbilCmd": "attack,Execute",
+      "OwningPlayer": {
+        "Value": "Target"
+      },
+      "id": "DisguiseEx3CancelAttackOnChangeling"
+    },
+    {
+      "AbilCmd": "attack,Execute",
+      "id": "SCVMovetoAttack4CancelAttack"
+    },
     {
       "Count": 32,
       "EditorCategories": "Race:Zerg",
@@ -2297,7 +2468,7 @@
       "RechargeVital": "Shields",
       "RechargeVitalRate": 36,
       "ValidatorArray": {
-        "value": "CasterIsNotBatteryOvercharged"
+        "value": "NotVortexd"
       },
       "id": "ShieldBatteryRechargeChanneled"
     },
@@ -2307,7 +2478,7 @@
       "EditorCategories": "Race:Terran",
       "RechargeVitalRate": 9,
       "ValidatorArray": {
-        "value": "noMarkers"
+        "value": "NotUnrepairable"
       },
       "id": "RavenRepairDroneHeal"
     },
@@ -2323,7 +2494,7 @@
       "RechargeVital": "Shields",
       "RechargeVitalRate": 36,
       "ValidatorArray": {
-        "value": "noMarkers"
+        "value": "NotInterceptor"
       },
       "id": "ShieldBatteryRechargeEx5"
     },
@@ -2335,7 +2506,7 @@
       "RechargeVital": "Shields",
       "RechargeVitalRate": 72,
       "ValidatorArray": {
-        "value": "CasterHasBatteryOverchargeBehavior"
+        "value": "NotVortexd"
       },
       "id": "ShieldBatteryRechargeChanneledOvercharged"
     },
@@ -2352,7 +2523,8 @@
     },
     {
       "ValidatorArray": {
-        "index": ""
+        "index": "MedivacHealTargetFilter",
+        "value": "NotDisintegrating"
       },
       "id": "MedivacHeal"
     }
@@ -2613,9 +2785,24 @@
       "PeriodicEffectArray": "HyperjumpCreatePrecursor",
       "PeriodicPeriodArray": 1.4,
       "ValidatorArray": {
-        "value": "CasterNotFungalGrowthed"
+        "value": "BattlecruiserPlacementCheck"
       },
       "id": "HyperjumpInitialCP"
+    },
+    {
+      "EditorCategories": "",
+      "FinalEffect": "KillOtherNearbyChangelings",
+      "Flags": {
+        "RandomPeriod": 1
+      },
+      "PeriodCount": 1,
+      "PeriodicPeriodArray": {
+        "value": 0.2
+      },
+      "WhichLocation": {
+        "Value": "TargetUnit"
+      },
+      "id": "KillOtherNearbyChangelingsDelay"
     },
     {
       "EditorCategories": "",
@@ -2866,10 +3053,10 @@
       "EditorCategories": "",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamageSearch"
+        "value": "CollapsibleRockTowerIssueOrder"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "PeriodicValidator": "NotDead",
       "WhichLocation": {
@@ -2881,10 +3068,10 @@
       "EditorCategories": "",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamageSearchRampLeft"
+        "value": "CollapsibleRockTowerIssueOrderRampLeft"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "PeriodicValidator": "NotDead",
       "WhichLocation": {
@@ -2896,10 +3083,10 @@
       "EditorCategories": "",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamageSearchRampLeftGreen"
+        "value": "CollapsibleRockTowerIssueOrderRampLeftGreen"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "PeriodicValidator": "NotDead",
       "WhichLocation": {
@@ -2911,10 +3098,10 @@
       "EditorCategories": "",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamageSearchRampRight"
+        "value": "CollapsibleRockTowerIssueOrderRampRight"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "PeriodicValidator": "NotDead",
       "WhichLocation": {
@@ -2926,10 +3113,10 @@
       "EditorCategories": "",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamageSearchRampRightGreen"
+        "value": "CollapsibleRockTowerIssueOrderRampRightGreen"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "PeriodicValidator": "NotDead",
       "WhichLocation": {
@@ -2941,10 +3128,10 @@
       "EditorCategories": "",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "CollapsibleTerranTowerRubbleDamageSearch"
+        "value": "CollapsibleTerranTowerIssueOrder"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "PeriodicValidator": "NotDead",
       "WhichLocation": {
@@ -2956,10 +3143,10 @@
       "EditorCategories": "",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "CollapsibleTerranTowerRubbleDamageSearchRampLeft"
+        "value": "CollapsibleTerranTowerRampLeftIssueOrder"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "PeriodicValidator": "NotDead",
       "WhichLocation": {
@@ -2971,10 +3158,10 @@
       "EditorCategories": "",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "CollapsibleTerranTowerRubbleDamageSearchRampRight"
+        "value": "CollapsibleTerranTowerRampRightIssueOrder"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "PeriodicValidator": "NotDead",
       "WhichLocation": {
@@ -2986,7 +3173,7 @@
       "EditorCategories": "",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "RagdollDeathFarLM"
+        "value": "RagdollDeathFarKU"
       },
       "PeriodicOffsetArray": "0,-20,20",
       "PeriodicPeriodArray": 0.2,
@@ -2999,10 +3186,10 @@
       "EditorCategories": "",
       "PeriodCount": 3,
       "PeriodicEffectArray": {
-        "value": "CollapsiblePurifierTowerRubbleDamageSearch"
+        "value": "CollapsiblePurifierTowerIssueOrder"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "PeriodicValidator": "NotDead",
       "WhichLocation": {
@@ -3027,9 +3214,11 @@
       },
       "PeriodCount": 2,
       "PeriodicEffectArray": {
+        "count": 2,
         "value": "ThermalLancesFriendlyDamage"
       },
       "PeriodicPeriodArray": {
+        "count": 2,
         "value": 0.09
       },
       "TimeScaleSource": {
@@ -3048,9 +3237,11 @@
       },
       "PeriodCount": 2,
       "PeriodicEffectArray": {
+        "count": 2,
         "value": "ThermalLancesFriendlyDamageAir"
       },
       "PeriodicPeriodArray": {
+        "count": 2,
         "value": 0.09
       },
       "TimeScaleSource": {
@@ -3094,7 +3285,7 @@
       "PeriodCount": 11,
       "PeriodicEffectArray": "ThermalLancesE",
       "PeriodicOffsetArray": {
-        "value": "-1.25,0,0"
+        "value": "1.25,0,0"
       },
       "PeriodicPeriodArray": {
         "0": 0.0227
@@ -3122,7 +3313,7 @@
       "PeriodCount": 11,
       "PeriodicEffectArray": "ThermalLancesEReverse",
       "PeriodicOffsetArray": {
-        "value": "1.25,0,0"
+        "value": "-1.25,0,0"
       },
       "PeriodicPeriodArray": {
         "0": 0.0227
@@ -3150,7 +3341,7 @@
       "PeriodCount": 11,
       "PeriodicEffectArray": "ThermalLancesEAir",
       "PeriodicOffsetArray": {
-        "value": "-1.25,0,0"
+        "value": "1.25,0,0"
       },
       "PeriodicPeriodArray": 0.025,
       "TimeScaleSource": {
@@ -3173,7 +3364,7 @@
       "PeriodCount": 11,
       "PeriodicEffectArray": "ThermalLancesEReverseAir",
       "PeriodicOffsetArray": {
-        "value": "1.25,0,0"
+        "value": "-1.25,0,0"
       },
       "PeriodicPeriodArray": 0.025,
       "TimeScaleSource": {
@@ -3258,7 +3449,7 @@
         "Value": "Caster"
       },
       "ValidatorArray": {
-        "value": "NotDoubleDamage"
+        "value": "NotQuadDamage"
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -3312,7 +3503,7 @@
       },
       "PeriodCount": 15,
       "PeriodicEffectArray": {
-        "value": "TimeStopSearch02"
+        "value": "TimeStopSearch16"
       },
       "PeriodicPeriodArray": 1,
       "id": "TimeStopSearchingPersistent"
@@ -3372,7 +3563,7 @@
         "Value": "Caster"
       },
       "ValidatorArray": {
-        "value": "EnergyNotFull"
+        "value": "NotDeadOrConstruction"
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -3617,7 +3808,7 @@
       "PeriodCount": 2,
       "PeriodicEffectArray": "PsiBlades",
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.28
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -3654,7 +3845,7 @@
       "PeriodCount": 8,
       "PeriodicEffectArray": "CarrierInterceptor",
       "PeriodicPeriodArray": {
-        "value": 0.125
+        "value": 0.25
       },
       "PeriodicValidator": "CasterNotDead",
       "TimeScaleSource": {
@@ -3668,15 +3859,40 @@
     {
       "EditorCategories": "Race:Protoss",
       "Flags": {
+        "PersistUntilDestroyed": 1
+      },
+      "PeriodicEffectArray": "MakeOracleFaceTargetPoint",
+      "PeriodicPeriodArray": 0.0625,
+      "WhichLocation": {
+        "Value": "TargetUnit"
+      },
+      "id": "FaceStasisPeriodic"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "Flags": {
+        "PersistUntilDestroyed": 1
+      },
+      "PeriodicEffectArray": "NeutralGuardianShieldSearch",
+      "PeriodicPeriodArray": 0.5,
+      "PeriodicValidator": "NotHaveScramblerMissileBehavior",
+      "WhichLocation": {
+        "Value": "SourceUnit"
+      },
+      "id": "NeutralGuardianShieldCP"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "Flags": {
         "RandomEffect": 1,
         "RandomOffset": 1
       },
       "PeriodCount": 1,
       "PeriodicEffectArray": {
-        "value": "ReleaseInterceptorsPatrolLeftTurnCP"
+        "value": "ReleaseInterceptorsPatrolRightTurnCP"
       },
       "PeriodicOffsetArray": {
-        "value": "2.5,0,0"
+        "value": "2.165,-1.25,0"
       },
       "WhichLocation": {
         "Effect": "ReleaseInterceptorsSet"
@@ -3691,7 +3907,7 @@
       "PeriodCount": 1,
       "PeriodicEffectArray": "ReleaseInterceptorsPatrolIssueOrder",
       "PeriodicOffsetArray": {
-        "value": "0,0,0"
+        "value": "0.433,-0.25,0"
       },
       "id": "ReleaseInterceptorsPatrolRandomizerCP"
     },
@@ -3703,7 +3919,7 @@
       "PeriodicPeriodArray": 0.476,
       "PeriodicValidator": "TargetNotDead",
       "ValidatorArray": {
-        "value": "NexusBatteryOvercharge8Range"
+        "value": "NotWarpingIn"
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -3716,6 +3932,7 @@
       "PeriodCount": 1,
       "PeriodicEffectArray": "InterceptorBeamAADamage",
       "PeriodicPeriodArray": {
+        "count": 2,
         "value": 0
       },
       "TimeScaleSource": {
@@ -3732,6 +3949,7 @@
       "PeriodCount": 1,
       "PeriodicEffectArray": "InterceptorBeamAGDamage",
       "PeriodicPeriodArray": {
+        "count": 2,
         "value": 0
       },
       "TimeScaleSource": {
@@ -3748,6 +3966,7 @@
       "PeriodCount": 1,
       "PeriodicEffectArray": "InterceptorBeamDamage",
       "PeriodicPeriodArray": {
+        "count": 2,
         "value": 0
       },
       "TimeScaleSource": {
@@ -3835,7 +4054,7 @@
       "PeriodCount": 7,
       "PeriodicEffectArray": "ReleaseInterceptorsPatrolRandomizerCP",
       "PeriodicOffsetArray": {
-        "value": "0,0,0"
+        "value": "0,2.5,0"
       },
       "id": "ReleaseInterceptorsPatrolLeftTurnCP"
     },
@@ -3848,7 +4067,7 @@
       "PeriodCount": 7,
       "PeriodicEffectArray": "ReleaseInterceptorsPatrolRandomizerCP",
       "PeriodicOffsetArray": {
-        "value": "0,0,0"
+        "value": "0,2.5,0"
       },
       "id": "ReleaseInterceptorsPatrolRightTurnCP"
     },
@@ -3869,7 +4088,7 @@
       "PeriodicPeriodArray": 0,
       "PeriodicValidator": "CasterHasEnergy",
       "ValidatorArray": {
-        "value": "ShieldsNotFull"
+        "value": "CasterHasEnergy"
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -3882,9 +4101,10 @@
       "PeriodicEffectArray": {
         "0": "IonCannonsLMRight",
         "1": "IonCannonsLMLeft",
-        "value": "IonCannonsLMLeft"
+        "value": "IonCannonsLMRight"
       },
       "PeriodicPeriodArray": {
+        "count": 2,
         "value": 0
       },
       "WhichLocation": {
@@ -3896,9 +4116,10 @@
       "EditorCategories": "Race:Protoss",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "ScoutMPAirLMLeft"
+        "value": "ScoutMPAirLMRight"
       },
       "PeriodicPeriodArray": {
+        "count": 2,
         "value": 0
       },
       "WhichLocation": {
@@ -3910,13 +4131,13 @@
       "EditorCategories": "Race:Protoss",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "TimeWarpControllerRBCaster"
+        "value": "TimeWarpControllerABCaster"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.0625
       },
       "ValidatorArray": {
-        "value": "TimeWarpTargetFilters"
+        "value": "IsNotChronoBoosted"
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -4044,7 +4265,8 @@
       "PeriodCount": 2,
       "PeriodicEffectArray": "BacklashRocketsLM",
       "PeriodicPeriodArray": {
-        "index": 0
+        "index": 0,
+        "value": 0.15
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -4134,7 +4356,7 @@
       "PeriodCount": 10,
       "PeriodicEffectArray": "BattlecruiserAntiAirSearch",
       "PeriodicPeriodArray": {
-        "value": 0.25
+        "value": 0.32
       },
       "id": "BattlecruiserAntiAirCreatePersistent"
     },
@@ -4164,7 +4386,7 @@
       "PeriodicEffectArray": "BypassArmorReapplyABSet",
       "PeriodicPeriodArray": 0.5,
       "ValidatorArray": {
-        "value": "NotHaveBypassArmorDebuffCombine"
+        "value": "BypassArmorGreaterThanZero"
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -4232,6 +4454,7 @@
       },
       "PeriodCount": 2,
       "PeriodicEffectArray": {
+        "count": 2,
         "value": "LiberatorDamageMissileLM"
       },
       "PeriodicPeriodArray": 0.05,
@@ -4263,7 +4486,7 @@
       "PeriodCount": 2,
       "PeriodicEffectArray": "LongboltMissileLM",
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.1
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -4281,7 +4504,7 @@
       "PeriodCount": 2,
       "PeriodicEffectArray": "P38ScytheGuassPistol",
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.122
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -4299,7 +4522,7 @@
       "PeriodCount": 2,
       "PeriodicEffectArray": "RenegadeLongboltMissileLM",
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.1
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -4316,30 +4539,11 @@
       },
       "PeriodCount": 2,
       "PeriodicEffectArray": {
-        "value": "HerdIssueMoveOrderSelf"
-      },
-      "PeriodicPeriodArray": {
-        "value": 0
-      },
-      "TimeScaleSource": {
-        "Value": "Caster"
-      },
-      "WhichLocation": {
-        "Value": "CasterUnit"
-      },
-      "id": "HerdInteractMovePersistent"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "Flags": {
-        "Channeled": 1
-      },
-      "PeriodCount": 2,
-      "PeriodicEffectArray": {
+        "count": 2,
         "value": "ThorsHammerDamage"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.375
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -4354,10 +4558,30 @@
       "Flags": {
         "Channeled": 1
       },
+      "PeriodCount": 2,
+      "PeriodicEffectArray": {
+        "value": "HerdIssueStopOrderSelf"
+      },
+      "PeriodicPeriodArray": {
+        "value": 2
+      },
+      "TimeScaleSource": {
+        "Value": "Caster"
+      },
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "HerdInteractMovePersistent"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "Flags": {
+        "Channeled": 1
+      },
       "PeriodCount": 4,
       "PeriodicEffectArray": "JavelinMissileLaunchersLM",
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.125
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -4414,10 +4638,11 @@
       "EditorCategories": "Race:Terran",
       "PeriodCount": 2,
       "PeriodicEffectArray": {
+        "count": 2,
         "value": "LanzerTorpedoesLM"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.21
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -4542,9 +4767,10 @@
         "0": "LurkerMPCU"
       },
       "PeriodicOffsetArray": {
-        "value": "0,-11,0"
+        "value": "0,-12,0"
       },
       "PeriodicPeriodArray": {
+        "count": 9,
         "index": 0,
         "value": 0.125
       },
@@ -4639,7 +4865,8 @@
       "PeriodicPeriodArray": 0.125,
       "PeriodicValidator": "NotDead",
       "ValidatorArray": {
-        "index": "ContaminateTargetFilters"
+        "index": "ContaminateTargetFilters",
+        "value": "noMarkers"
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -4672,7 +4899,7 @@
       "PeriodCount": 10,
       "PeriodicEffectArray": "LurkerMPSearch",
       "PeriodicOffsetArray": {
-        "value": "0,-1,0"
+        "value": "0,-10,0"
       },
       "PeriodicPeriodArray": 0.125,
       "TimeScaleSource": {
@@ -4691,7 +4918,7 @@
       "PeriodCount": 2,
       "PeriodicEffectArray": "TalonsLM",
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.3
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -4711,7 +4938,7 @@
         "0": "TalonsLM"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.3
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -4845,6 +5072,34 @@
     },
     {
       "EditorCategories": "Race:Zerg",
+      "PeriodCount": 2,
+      "PeriodicEffectArray": {
+        "value": "InfestorBurrowUpTransientStun"
+      },
+      "PeriodicPeriodArray": {
+        "value": 0.0625
+      },
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "InfestorBurrowUpTransient"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "PeriodCount": 2,
+      "PeriodicEffectArray": {
+        "value": "RoachBurrowUpTransientStun"
+      },
+      "PeriodicPeriodArray": {
+        "value": 0.0625
+      },
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "RoachBurrowUpTransient"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
       "PeriodCount": 240,
       "PeriodicEffectArray": "DefilerMPDarkSwarmSearch",
       "PeriodicPeriodArray": 0.25,
@@ -4859,7 +5114,7 @@
         "Value": "Caster"
       },
       "ValidatorArray": {
-        "value": "TornadoMaxDistance"
+        "value": "TornadoMissileFilters"
       },
       "WhichLocation": {
         "Value": "TargetUnit"
@@ -4868,13 +5123,41 @@
     },
     {
       "EditorCategories": "Race:Zerg",
+      "PeriodCount": 3,
+      "PeriodicEffectArray": {
+        "value": "InfestorBurrowDownTransientStun"
+      },
+      "PeriodicPeriodArray": {
+        "value": 0.0625
+      },
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "InfestorBurrowDownTransient"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "PeriodCount": 3,
+      "PeriodicEffectArray": {
+        "value": "RoachBurrowDownTransientStun"
+      },
+      "PeriodicPeriodArray": {
+        "value": 0.0625
+      },
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "RoachBurrowDownTransient"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
       "PeriodCount": 9,
       "PeriodicEffectArray": "DigesterCreepInitialCreateUnit",
       "PeriodicOffsetArray": {
-        "value": "0,-2.5,0"
+        "value": "-1,-27,0"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.5
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -4889,10 +5172,10 @@
       "PeriodCount": 9,
       "PeriodicEffectArray": "DigesterCreepSecondaryCreateUnit",
       "PeriodicOffsetArray": {
-        "value": "0,-2.5,0"
+        "value": "-1,-27,0"
       },
       "PeriodicPeriodArray": {
-        "value": 0
+        "value": 0.5
       },
       "TimeScaleSource": {
         "Value": "Caster"
@@ -5107,10 +5390,10 @@
     {
       "PeriodCount": 3,
       "PeriodicEffectArray": {
-        "value": "OracleStasisTrapReveal"
+        "value": "SuicideRemove"
       },
       "PeriodicPeriodArray": {
-        "value": 0.5
+        "value": 1.66
       },
       "WhichLocation": {
         "Value": "CasterPoint"
@@ -5254,7 +5537,7 @@
         "Value": "Target"
       },
       "ValidatorArray": {
-        "value": "NotMassive"
+        "value": "IsStrategicWarpOut"
       },
       "id": "ReaperKD8Knockback"
     },
@@ -5587,7 +5870,7 @@
         "Value": "Target"
       },
       "ValidatorArray": {
-        "value": "NotFrenzied"
+        "value": "TargetNotTacticalJumping"
       },
       "WhichLocation": {
         "Value": "CasterUnitOrPoint"
@@ -5612,7 +5895,7 @@
       "SpawnRange": 2,
       "SpawnUnit": "SiegeTank",
       "ValidatorArray": {
-        "value": "NotWarpingIn"
+        "value": "NoYoink"
       },
       "WhichLocation": {
         "Value": "CasterUnitOrPoint"
@@ -6142,6 +6425,20 @@
       "CreateFlags": {
         "OffsetByRadius": 0,
         "Placement": 0,
+        "PlacementIgnoreBlockers": 1
+      },
+      "EditorCategories": "",
+      "SpawnRange": 0,
+      "SpawnUnit": "XelNagaTowerRangeIndicatorDummy",
+      "WhichLocation": {
+        "Value": "CasterUnit"
+      },
+      "id": "XelnagaTowerRangeIndicatorDummyCreate"
+    },
+    {
+      "CreateFlags": {
+        "OffsetByRadius": 0,
+        "Placement": 0,
         "ProvideFood": 0,
         "TechComplete": 0,
         "UseFood": 0
@@ -6602,7 +6899,7 @@
       "SpawnRange": 3,
       "SpawnUnit": "KD8Charge",
       "WhichLocation": {
-        "Value": "TargetUnitOrPoint"
+        "Value": "TargetPoint"
       },
       "id": "KD8Charge"
     },
@@ -6644,7 +6941,7 @@
     },
     {
       "EditorCategories": "Race:Zerg",
-      "SpawnEffect": "ChangelingTimedLife",
+      "SpawnEffect": "ChangelingSpawnEffectSet",
       "SpawnRange": 2,
       "SpawnUnit": "Changeling",
       "WhichLocation": {
@@ -6676,12 +6973,6 @@
       "SpawnUnit": "ChangelingZerglingWings",
       "id": "DisguiseAsZerglingWithWingsCU",
       "parent": "DisguiseEx3CU"
-    },
-    {
-      "ValidatorArray": {
-        "value": "IsNotRecallingNexus"
-      },
-      "id": "KD8Knockback"
     },
     {
       "id": "LoadOutSpray@1",
@@ -7070,7 +7361,7 @@
         "NoVitalAbsorbShields": 1
       },
       "ValidatorArray": {
-        "value": "DefilerMPPlagueLifeGT1"
+        "value": "NotStasis"
       },
       "id": "DefilerMPPlagueDamage"
     },
@@ -7191,16 +7482,6 @@
     {
       "Amount": 10,
       "AttributeBonus": {
-        "Light": 10
-      },
-      "EditorCategories": "Race:Terran",
-      "Kind": "Ranged",
-      "id": "C10CanisterRifle",
-      "parent": "DU_WEAP"
-    },
-    {
-      "Amount": 10,
-      "AttributeBonus": {
         "Light": 12
       },
       "Death": "Blast",
@@ -7223,7 +7504,7 @@
         "0": "MultipleHitGroundOnlyAttackTargetFilter",
         "1": "noMarkers",
         "2": "ColossusAttackDamageMaxRange",
-        "value": "ThermalLancesCliffLevel"
+        "value": "noMarkers"
       },
       "Visibility": "Visible",
       "id": "ThermalLancesMU",
@@ -7298,6 +7579,20 @@
     },
     {
       "Amount": 10,
+      "ImpactLocation": {
+        "Value": "TargetUnit"
+      },
+      "LaunchLocation": {
+        "Value": "TargetUnit"
+      },
+      "SearchFlags": {
+        "ExtendByUnitRadius": 1
+      },
+      "ValidatorArray": "IsChangeling",
+      "id": "KillOtherNearbyChangelings"
+    },
+    {
+      "Amount": 10,
       "id": "LocustMPMeleeDamage",
       "parent": "LocustMPDamage"
     },
@@ -7338,7 +7633,7 @@
       "Kind": "Ranged",
       "KindSplash": "Splash",
       "ValidatorArray": {
-        "value": "ThermalLancesCliffLevel"
+        "value": "noMarkers"
       },
       "Visibility": "Visible",
       "id": "ThermalLancesMUAir",
@@ -7399,21 +7694,6 @@
       "parent": "DU_WEAP_MISSILE"
     },
     {
-      "Amount": 130,
-      "AttributeBonus": {
-        "Psionic": 40
-      },
-      "EditorCategories": "Race:Terran",
-      "Flags": {
-        "Notification": 1
-      },
-      "ResponseFlags": {
-        "Acquire": 1,
-        "Flee": 1
-      },
-      "id": "ChannelSnipeDamage"
-    },
-    {
       "Amount": 14,
       "AttributeBonus": {
         "Massive": 6
@@ -7462,6 +7742,16 @@
     {
       "Amount": 15,
       "AttributeBonus": {
+        "Light": 0
+      },
+      "EditorCategories": "Race:Terran",
+      "Kind": "Ranged",
+      "id": "C10CanisterRifle",
+      "parent": "DU_WEAP"
+    },
+    {
+      "Amount": 15,
+      "AttributeBonus": {
         "Light": 10
       },
       "EditorCategories": "Race:Protoss",
@@ -7486,6 +7776,18 @@
       "EditorCategories": "Race:Zerg",
       "id": "RavagerWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
+    },
+    {
+      "Amount": 170,
+      "EditorCategories": "Race:Terran",
+      "Flags": {
+        "Notification": 1
+      },
+      "ResponseFlags": {
+        "Acquire": 1,
+        "Flee": 1
+      },
+      "id": "ChannelSnipeDamage"
     },
     {
       "Amount": 18,
@@ -7513,7 +7815,6 @@
       "Amount": 18,
       "Death": "Blast",
       "EditorCategories": "Race:Terran",
-      "ValidatorArray": "DetectedORNotCloakedBuried",
       "id": "CycloneAttackWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
     },
@@ -7559,7 +7860,8 @@
       "Death": "Blast",
       "EditorCategories": "Race:Terran",
       "Kind": "Spell",
-      "id": "CycloneAirWeaponDamage",
+      "ValidatorArray": "DetectedORNotCloakedBuried",
+      "id": "CycloneWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
     },
     {
@@ -7568,7 +7870,7 @@
       "Death": "Blast",
       "EditorCategories": "Race:Terran",
       "Kind": "Spell",
-      "id": "CycloneWeaponDamage",
+      "id": "CycloneAirWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
     },
     {
@@ -7618,7 +7920,7 @@
     {
       "Amount": 20,
       "AttributeBonus": {
-        "Biological": 10
+        "Biological": 15
       },
       "Death": "Disintegrate",
       "EditorCategories": "Race:Zerg",
@@ -7999,7 +8301,7 @@
       "EditorCategories": "Race:Terran",
       "Kind": "Ranged",
       "ValidatorArray": {
-        "value": "MultipleHitGroundOnlyAttackTargetFilter"
+        "value": "ReaperAttackDamageMaxRangeCombine"
       },
       "id": "P38ScytheGuassPistol",
       "parent": "DU_WEAP"
@@ -8014,10 +8316,17 @@
     },
     {
       "Amount": 4,
+      "Death": "Disintegrate",
+      "EditorCategories": "Race:Zerg",
+      "id": "InfestorWeaponDamage",
+      "parent": "DU_WEAP_MISSILE"
+    },
+    {
+      "Amount": 4,
       "EditorCategories": "Race:Zerg",
       "Kind": "Ranged",
       "ValidatorArray": {
-        "value": "MultipleHitGroundOnlyAttackTargetFilter"
+        "value": "QueenTalonsAGAttackDamageMaxRange"
       },
       "id": "Talons",
       "parent": "DU_WEAP"
@@ -8448,7 +8757,7 @@
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
         "1": "MultipleHitAttackTargetFilter",
-        "value": "MothershipRangeCheck"
+        "value": "NotHidden"
       },
       "Visibility": "Visible",
       "id": "MothershipBeamDamage",
@@ -8484,7 +8793,7 @@
       "parent": "DU_WEAP_MISSILE"
     },
     {
-      "Amount": 6.85,
+      "Amount": 6.25,
       "EditorCategories": "Race:Protoss",
       "Flags": {
         "Notification": 1
@@ -8497,7 +8806,7 @@
       "id": "PsiStormDamageInitial"
     },
     {
-      "Amount": 6.85,
+      "Amount": 6.25,
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": "PsiStormUTargetFilters",
       "Visibility": "Hidden",
@@ -8614,7 +8923,8 @@
       "Death": "Eviscerate",
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "index": "MultipleHitGroundOnlyAttackTargetFilter"
+        "index": "MultipleHitGroundOnlyAttackTargetFilter",
+        "value": "ZealotAttackDamageMaxRange"
       },
       "id": "PsiBlades",
       "parent": "DU_WEAP"
@@ -8635,7 +8945,7 @@
         "Value": "TargetUnit"
       },
       "ValidatorArray": {
-        "value": "ChargeDamageDistance"
+        "value": "ZealotSunderingImpactUpgraded"
       },
       "id": "ChargingDamage"
     },
@@ -8659,7 +8969,7 @@
       "Amount": 8,
       "EditorCategories": "Race:Protoss",
       "ValidatorArray": {
-        "value": "ChargeTargetNotAlive"
+        "value": "ZealotSunderingImpactUpgraded"
       },
       "id": "ChargingDamageSecondary"
     },
@@ -8713,7 +9023,7 @@
         "SameCliff": 0
       },
       "ValidatorArray": {
-        "value": "VolatileBurstFallbackEnemyNeutralBuilding"
+        "value": "noMarkers"
       },
       "id": "VolatileBurstDirectFallbackEnemyNeutralBuilding",
       "parent": "VolatileBurstU2"
@@ -8737,7 +9047,7 @@
         "SameCliff": 0
       },
       "ValidatorArray": {
-        "value": "VolatileBurstFallbackEnemyNeutralUnit"
+        "value": "noMarkers"
       },
       "id": "VolatileBurstDirectFallbackEnemyNeutralUnit",
       "parent": "VolatileBurstU"
@@ -9400,6 +9710,14 @@
         "Kill": 1,
         "NoKillCredit": 1
       },
+      "ValidatorArray": "XelnagaTowerCombine",
+      "id": "KillXelnagaRangeDummyUnit"
+    },
+    {
+      "Flags": {
+        "Kill": 1,
+        "NoKillCredit": 1
+      },
       "id": "KillTargetDeathNormal"
     },
     {
@@ -9567,6 +9885,9 @@
       "parent": "DU_WEAP_MISSILE"
     },
     {
+      "id": "FakeWeaponDummyDamage"
+    },
+    {
       "id": "MassiveKnockoverDummy"
     },
     {
@@ -9600,6 +9921,14 @@
         "Value": "SourcePoint"
       },
       "id": "LurkerMPDestroyPersistent"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "Effect": "FaceStasisPeriodic",
+      "WhichLocation": {
+        "Value": "TargetUnit"
+      },
+      "id": "OracleFacePersistentDestroy"
     },
     {
       "EditorCategories": "Race:Terran",
@@ -9969,7 +10298,7 @@
       },
       "TargetSorts": {
         "SortArray": {
-          "value": "TSThreatensCyclone"
+          "value": "TSDistance"
         }
       },
       "id": "AcquireTargetUnloadSearch"
@@ -10449,6 +10778,13 @@
     },
     {
       "AreaArray": {
+        "Effect": "DisguiseEx3ChangeAttackedTargetSet",
+        "Radius": "100"
+      },
+      "id": "DisguiseEx3AttackMoveBugFix"
+    },
+    {
+      "AreaArray": {
         "Effect": "EMPForceFieldKill",
         "Radius": "2"
       },
@@ -10520,6 +10856,11 @@
       ],
       "MaxCount": 1,
       "SearchFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "TargetSorts": {
+        "SortArray": {
+          "value": "TSDistanceToTarget"
+        }
+      },
       "id": "GlaiveWurmE1"
     },
     {
@@ -10538,6 +10879,11 @@
       ],
       "MaxCount": 1,
       "SearchFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
+      "TargetSorts": {
+        "SortArray": {
+          "value": "TSDistanceToTarget"
+        }
+      },
       "id": "GlaiveWurmE2"
     },
     {
@@ -10711,6 +11057,28 @@
     },
     {
       "AreaArray": {
+        "Effect": "KillOtherNearbyChangelingsDelay",
+        "Radius": "1.25"
+      },
+      "ImpactLocation": {
+        "Value": "SourceUnit"
+      },
+      "SearchFlags": {
+        "ExtendByUnitRadius": 1
+      },
+      "id": "KillOtherNearbyChangelingsSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "KillXelnagaRangeDummyUnit"
+      },
+      "EditorCategories": "",
+      "MaxCount": 1,
+      "SearchFilters": "-;Self,Ally,Neutral,Enemy",
+      "id": "XelnagaTowerRangeIndicatorDummyDestroy"
+    },
+    {
+      "AreaArray": {
         "Effect": "LurkerMPDamage",
         "Radius": "0.5"
       },
@@ -10733,6 +11101,15 @@
         "0": "WeaponInRange"
       },
       "id": "LurkerMPSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "MapmakerNeutralUnitGameStartModifierSwitch",
+        "Radius": "0.5"
+      },
+      "MinCount": 1,
+      "SearchFilters": "Structure;Self",
+      "id": "MapmakerNeutralUnitGameStartModifierSearch"
     },
     {
       "AreaArray": {
@@ -10795,7 +11172,7 @@
       },
       "TargetSorts": {
         "SortArray": {
-          "value": "MothershipTrackedTargetFire"
+          "value": "TSDistance"
         }
       },
       "ValidatorArray": "CasterIsAlive",
@@ -11049,6 +11426,23 @@
         "ExtendByUnitRadius": 1
       },
       "id": "PenetratingShotSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "PhaseShieldAB",
+        "Radius": "4.5"
+      },
+      "EditorCategories": "Race:Protoss",
+      "ImpactLocation": {
+        "Value": "TargetUnit"
+      },
+      "SearchFilters": "-;Enemy,Air,Structure,Missile,Stasis,Dead,Hidden,Invulnerable,AirUnit",
+      "SearchFlags": {
+        "CenterAtLaunch": 1,
+        "ExtendByUnitRadius": 1,
+        "OffsetAreaByAngle": 0
+      },
+      "id": "NeutralGuardianShieldSearch"
     },
     {
       "AreaArray": {
@@ -11354,6 +11748,57 @@
         "SameCliff": 1
       },
       "id": "RoughTerrainSearch"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoAttack2SetEffects",
+        "Radius": "1"
+      },
+      "SearchFilters": "Ground,Worker;Player,Ally,Stasis,Dead,Hidden",
+      "SearchFlags": {
+        "ExtendByUnitRadius": 1
+      },
+      "id": "SCVMovetoAttack1Enum"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoAttack5Attack",
+        "Radius": "5"
+      },
+      "SearchFilters": "Ground,Worker;Player,Ally,Stasis,Dead,Hidden",
+      "id": "SCVMovetoAttack6EnumFinal"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoBuildAllySwitch",
+        "Radius": "1"
+      },
+      "ExcludeArray": {
+        "Effect": "SCVMovetoBuildSeekAB"
+      },
+      "MaxCount": 1,
+      "SearchFilters": "Ground,Worker;Neutral,Enemy,Stasis,Dead,Hidden",
+      "SearchFlags": {
+        "ExtendByUnitRadius": 1
+      },
+      "id": "SCVMovetoBuildSearchWorker"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoGatherOrder",
+        "Radius": "2"
+      },
+      "EditorCategories": "",
+      "SearchFilters": "Worker;Ally,Neutral,Enemy",
+      "id": "SCVMovetoGatherSearchWorker"
+    },
+    {
+      "AreaArray": {
+        "Effect": "SCVMovetoGatherSourceSet",
+        "Radius": "0.5"
+      },
+      "SearchFilters": "RawResource;Enemy",
+      "id": "SCVMovetoGatherSearchHiddenVespene"
     },
     {
       "AreaArray": {
@@ -12147,6 +12592,16 @@
       "id": "CalldownMULEIssueOrder"
     },
     {
+      "Abil": "MULERepair",
+      "CmdFlags": {
+        "SetAutoCast": 1,
+        "SetAutoCastOn": 1
+      },
+      "EditorCategories": "",
+      "ValidatorArray": "MuleOrderIsHarvest",
+      "id": "MuleAutocastEnable"
+    },
+    {
       "Abil": "MorphToCollapsiblePurifierTowerDebris",
       "id": "CollapsiblePurifierTowerIssueOrder"
     },
@@ -12297,7 +12752,7 @@
         "Value": "TargetUnit"
       },
       "ValidatorArray": {
-        "value": "Minerals"
+        "value": "CasterIsNotHatchery"
       },
       "WhichUnit": {
         "Value": "Caster"
@@ -12355,6 +12810,15 @@
       "id": "WorkerIssueGatherOrderSCV"
     },
     {
+      "Abil": "SCVHarvest",
+      "EditorCategories": "",
+      "Target": {
+        "Value": "CasterUnit"
+      },
+      "ValidatorArray": "VespeneMovetoGeyserIsTarget",
+      "id": "SCVMovetoGatherOrder"
+    },
+    {
       "Abil": "SpawnInfestedTerran",
       "CmdFlags": {
         "Queued": 1
@@ -12401,7 +12865,7 @@
         "Value": "CasterUnit"
       },
       "ValidatorArray": {
-        "value": "IsNotChronoBoosted"
+        "value": "PreviousChronoBoostTargetIsDead"
       },
       "WhichUnit": {
         "Value": "Caster"
@@ -12521,6 +12985,48 @@
     },
     {
       "Abil": "attack",
+      "CmdFlags": {
+        "Preempt": 1,
+        "User": 1
+      },
+      "Target": {
+        "Value": "CasterUnit"
+      },
+      "ValidatorArray": {
+        "value": "ConstructingSCVNotAttackOrderTargetBetter"
+      },
+      "id": "SCVMovetoAttack5Attack"
+    },
+    {
+      "Abil": "attack",
+      "CmdFlags": {
+        "Preempt": 1
+      },
+      "EditorCategories": "Race:Zerg",
+      "Player": {
+        "Value": "Caster"
+      },
+      "Target": {
+        "Value": "TargetUnitOrPoint"
+      },
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "BurrowTransientAttackIssueOrder"
+    },
+    {
+      "Abil": "attack",
+      "CmdFlags": {
+        "Preempt": 1
+      },
+      "Target": {
+        "Effect": "DisguiseEx3FinalSet",
+        "Value": "TargetUnit"
+      },
+      "id": "DisguiseEx3IssueAttackOnDisguise"
+    },
+    {
+      "Abil": "attack",
       "EditorCategories": "Race:Terran",
       "Target": {
         "Effect": "BypassArmorCU",
@@ -12591,6 +13097,51 @@
         "Value": "Source"
       },
       "id": "ReleaseInterceptorsPatrolIssueOrder"
+    },
+    {
+      "Abil": "move",
+      "AbilCmdIndex": 3,
+      "CmdFlags": {
+        "IsOrder": 1,
+        "Preempt": 1,
+        "TargetSelf": 1,
+        "User": 1
+      },
+      "Target": {
+        "Value": "CasterUnit"
+      },
+      "id": "SCVMovetoAttack4Follow"
+    },
+    {
+      "Abil": "move",
+      "CmdFlags": {
+        "Preempt": 1,
+        "SmartClick": 1
+      },
+      "Target": {
+        "Value": "SourceUnit"
+      },
+      "ValidatorArray": {
+        "value": "IsNotActiveBuilderSCV"
+      },
+      "id": "SCVMovetoBuildOrder"
+    },
+    {
+      "Abil": "move",
+      "CmdFlags": {
+        "Preempt": 1
+      },
+      "EditorCategories": "Race:Zerg",
+      "Player": {
+        "Value": "Caster"
+      },
+      "Target": {
+        "Value": "TargetUnitOrPoint"
+      },
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "BurrowTransientMoveIssueOrder"
     },
     {
       "Abil": "move",
@@ -12682,14 +13233,9 @@
     },
     {
       "Abil": "move",
-      "Target": {
-        "Effect": "GrappleCreatePlaceholderSwitch",
-        "Value": "TargetUnit"
+      "Player": {
+        "Value": "Caster"
       },
-      "id": "GrapplePlaceholderIssueMove"
-    },
-    {
-      "Abil": "move",
       "Target": {
         "Value": "TargetPoint"
       },
@@ -12697,6 +13243,14 @@
         "Value": "Caster"
       },
       "id": "HerdIssueMoveOrderSelf"
+    },
+    {
+      "Abil": "move",
+      "Target": {
+        "Effect": "GrappleCreatePlaceholderSwitch",
+        "Value": "TargetUnit"
+      },
+      "id": "GrapplePlaceholderIssueMove"
     },
     {
       "Abil": "stop",
@@ -12761,6 +13315,20 @@
     {
       "id": "SalvageReaper",
       "parent": "Salvage"
+    }
+  ],
+  "CEffectLastTarget": [
+    {
+      "EditorCategories": "Race:Zerg",
+      "Effect": "BurrowTransientAttackIssueOrder",
+      "LastTargetType": "Attack",
+      "id": "BurrowTransientAttackLastTarget"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "Effect": "BurrowTransientMoveIssueOrder",
+      "LastTargetType": "Move",
+      "id": "BurrowTransientMoveLastTarget"
     }
   ],
   "CEffectLaunchMissile": [
@@ -13084,9 +13652,16 @@
       "AmmoUnit": "InfestorEnsnareAttackMissile",
       "ImpactEffect": "InfestorEnsnare",
       "ValidatorArray": {
-        "index": "IsNotInterceptor"
+        "index": "IsNotInterceptor",
+        "value": "IsNotTransportOverlordCocoon"
       },
       "id": "InfestorEnsnareLM"
+    },
+    {
+      "AmmoUnit": "InfestorWeapon",
+      "EditorCategories": "Race:Zerg",
+      "ImpactEffect": "InfestorWeaponDamage",
+      "id": "InfestorWeaponLM"
     },
     {
       "AmmoUnit": "KD8ChargeWeapon",
@@ -13191,7 +13766,8 @@
       "EditorCategories": "Race:Zerg",
       "ImpactEffect": "NydusCanalAttackerDamage",
       "ValidatorArray": {
-        "index": "NydusCanalAttackerTargetFilters"
+        "index": "NydusCanalAttackerTargetFilters",
+        "value": ""
       },
       "id": "NydusCanalAttackerLaunchMissile"
     },
@@ -13299,7 +13875,8 @@
       "EditorCategories": "Race:Terran",
       "FinishEffect": "RavenScramblerMissileABswitch",
       "ValidatorArray": {
-        "index": "IsMechanicalOrIsPsionic"
+        "index": "IsMechanicalOrIsPsionic",
+        "value": "TargetNotTacticalJumping"
       },
       "id": "RavenScramblerMissileLM"
     },
@@ -13425,7 +14002,7 @@
       },
       "ImpactEffect": "ViperConsumeStructureCreatePersistent",
       "ValidatorArray": {
-        "value": "LifeGT2"
+        "value": "ConsumePeriodicCheck"
       },
       "id": "ViperConsumeStructureLaunchMissile"
     },
@@ -13573,7 +14150,7 @@
         "Link": "YoinkMover"
       },
       "ValidatorArray": {
-        "value": "NotHiddenYoink"
+        "value": "CantYoinkYet"
       },
       "id": "YoinkLaunchTarget"
     },
@@ -13596,7 +14173,7 @@
         "Link": "YoinkMoverAir"
       },
       "ValidatorArray": {
-        "value": "NotHiddenYoink"
+        "value": "CantYoinkYet"
       },
       "id": "YoinkLaunchTargetAir"
     },
@@ -13619,7 +14196,7 @@
         "Link": "YoinkMoverGlide"
       },
       "ValidatorArray": {
-        "value": "NotHiddenYoink"
+        "value": "CantYoinkYet"
       },
       "id": "YoinkLaunchTargetGlide"
     },
@@ -13642,7 +14219,7 @@
         "Link": "YoinkMover"
       },
       "ValidatorArray": {
-        "value": "NotHiddenYoinkSiegeTank"
+        "value": "CantYoinkYet"
       },
       "id": "YoinkLaunchTargetSiegeTank"
     },
@@ -13665,7 +14242,7 @@
         "Link": "YoinkMoverAir"
       },
       "ValidatorArray": {
-        "value": "NotHiddenYoinkVikingAir"
+        "value": "CantYoinkYet"
       },
       "id": "YoinkLaunchTargetVikingAir"
     },
@@ -13688,7 +14265,7 @@
         "Link": "YoinkMover"
       },
       "ValidatorArray": {
-        "value": "NotHiddenYoinkVikingGround"
+        "value": "CantYoinkYet"
       },
       "id": "YoinkLaunchTargetVikingGround"
     },
@@ -13778,7 +14355,8 @@
         "Link": "UnitKnockbackMover3"
       },
       "ValidatorArray": {
-        "index": "KD8Range"
+        "index": "KD8Range",
+        "value": "KD8TargetNotDead"
       },
       "id": "ReaperKD8KnockbackPHLM"
     },
@@ -13827,12 +14405,13 @@
       "id": "EyeStalk"
     },
     {
-      "LaunchEffect": "SeekerMissileLaunchSet",
-      "id": "SeekerMissileLaunchMissile"
-    },
-    {
+      "LaunchEffect": "NeuralParasiteBlockBurrowAB",
       "ValidatorArray": "NotHeroic",
       "id": "NeuralParasiteLaunchMissile"
+    },
+    {
+      "LaunchEffect": "SeekerMissileLaunchSet",
+      "id": "SeekerMissileLaunchMissile"
     },
     {
       "ValidatorArray": {
@@ -13855,6 +14434,16 @@
     "id": "SnowGlazeStarterMPModifyPlayer"
   },
   "CEffectModifyUnit": [
+    {
+      "CopyOrderCount": 32,
+      "LaunchUnit": {
+        "Value": "Caster"
+      },
+      "ModifyFlags": {
+        "CopyAutoCast": 1
+      },
+      "id": "CopyOrdersCaster"
+    },
     {
       "CopyOrderCount": 50,
       "CopyRallyCount": 50,
@@ -13963,6 +14552,20 @@
         "index": "Energy"
       },
       "id": "EnergyRecharge"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "FacingLocation": {
+        "Value": "TargetUnit"
+      },
+      "FacingType": "LookAt",
+      "ImpactUnit": {
+        "Value": "Caster"
+      },
+      "ModifyFlags": {
+        "InterpolateFacing": 1
+      },
+      "id": "MakeOracleFaceTargetPoint"
     },
     {
       "EditorCategories": "Race:Protoss",
@@ -14148,7 +14751,7 @@
         "Turret": "LiberatorAG"
       },
       "ValidatorArray": {
-        "value": "IsNotDisguisedChangeling"
+        "value": "IsNotNeuralParasited"
       },
       "id": "LiberatorTurretFace"
     },
@@ -14168,7 +14771,7 @@
         "Turret": "Cyclone"
       },
       "ValidatorArray": {
-        "value": "CasterIsNotHidden"
+        "value": "NotLockingOn"
       },
       "id": "LockOnAirTurretStart"
     },
@@ -14188,7 +14791,7 @@
         "Turret": "Cyclone"
       },
       "ValidatorArray": {
-        "value": "CasterIsNotHidden"
+        "value": "NotLockingOn"
       },
       "id": "LockOnTurretStart"
     },
@@ -14216,7 +14819,7 @@
       },
       "ValidatorArray": "ChannelSnipeRefundValidator",
       "VitalArray": {
-        "Change": 50,
+        "Change": 75,
         "index": "Energy"
       },
       "id": "ChannelSnipeEnergyRefund"
@@ -14298,6 +14901,17 @@
     },
     {
       "EditorCategories": "Race:Zerg",
+      "SelectTransferFlags": {
+        "DeselectSource": 1,
+        "IncludeControlGroups": 1
+      },
+      "SelectTransferUnit": {
+        "Value": "Caster"
+      },
+      "id": "Creep Tumor Selection"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
       "ValidatorArray": "NotDisintegrating",
       "VitalArray": {
         "Change": 0.3125,
@@ -14308,7 +14922,7 @@
     {
       "EditorCategories": "Race:Zerg",
       "ValidatorArray": {
-        "value": "LifeGT2"
+        "value": "ConsumePeriodicCheck"
       },
       "VitalArray": {
         "Change": -7.5,
@@ -14344,6 +14958,19 @@
     },
     {
       "ImpactUnit": {
+        "Effect": "SCVMovetoBuildSearchWorker",
+        "Value": "Source"
+      },
+      "ModifyFlags": {
+        "Owner": 1
+      },
+      "ModifyOwnerPlayer": {
+        "Value": "Target"
+      },
+      "id": "SCVMovetoBuildChangeOwner"
+    },
+    {
+      "ImpactUnit": {
         "Effect": "SlaynElementalGrabLM",
         "Value": "Caster"
       },
@@ -14372,6 +14999,19 @@
         "index": "Energy"
       },
       "id": "NexusShieldRechargeEnergy"
+    },
+    {
+      "SelectTransferFlags": {
+        "SingleOnly": 1
+      },
+      "SelectTransferUnit": {
+        "Effect": "NeuralParasiteLaunchMissile",
+        "Value": "Caster"
+      },
+      "TransferUnit": {
+        "Value": "Target"
+      },
+      "id": "NeuralParasiteTargetSelect"
     },
     {
       "ValidatorArray": "NotDisintegrating",
@@ -14416,6 +15056,16 @@
       "id": "WidowMineTargetingBeamDummy"
     }
   ],
+  "CEffectRandomPointInCircle": {
+    "EditorCategories": "",
+    "Effect": "HerdIssueMoveOrderSelf",
+    "Radius": 2.5,
+    "RestrictToCircumference": 1,
+    "WhichLocation": {
+      "Value": "TargetPoint"
+    },
+    "id": "HerdIssueCircle"
+  },
   "CEffectReleaseMagazine": {
     "EditorCategories": "Race:Protoss",
     "WhichUnit": {
@@ -14592,12 +15242,25 @@
       "id": "CloakingDroneRB"
     },
     {
+      "BehaviorLink": "CreepTumorActive",
+      "EditorCategories": "Race:Zerg",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "CreepTumorActiveRB"
+    },
+    {
       "BehaviorLink": "CycloneWeaponLaunchMissileAlternate",
       "EditorCategories": "Race:Terran",
       "WhichUnit": {
         "Value": "Caster"
       },
       "id": "CycloneWeaponLaunchMissileAlternateRB"
+    },
+    {
+      "BehaviorLink": "EMPDecloak",
+      "EditorCategories": "Race:Terran",
+      "id": "EMPDecloakRB"
     },
     {
       "BehaviorLink": "FungalGrowth",
@@ -14671,6 +15334,13 @@
       "id": "ImmortalBarrierRemoveBarrier"
     },
     {
+      "BehaviorLink": "IsActiveBuilderSCV",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "IsBuildingSCVRB"
+    },
+    {
       "BehaviorLink": "LiberatorTargetMorphBehavior",
       "EditorCategories": "Race:Terran",
       "id": "LiberatorTargetAAMorphRB"
@@ -14736,7 +15406,8 @@
       "BehaviorLink": "MothershipCoreRecalling",
       "EditorCategories": "",
       "ValidatorArray": {
-        "index": "NotLarvaEgg"
+        "index": "NotLarvaEgg",
+        "value": "NotAbducted"
       },
       "id": "MothershipCoreMassRecallDeathRemove"
     },
@@ -14794,7 +15465,8 @@
       "BehaviorLink": "MothershipRecalling",
       "EditorCategories": "",
       "ValidatorArray": {
-        "index": "NotLarvaEgg"
+        "index": "NotLarvaEgg",
+        "value": "NotAbducted"
       },
       "id": "MothershipMassRecallDeathRemove"
     },
@@ -14837,6 +15509,14 @@
         "Value": "Caster"
       },
       "id": "PhaseNeuralParasiteRemove"
+    },
+    {
+      "BehaviorLink": "NeuralParasite",
+      "EditorCategories": "Race:Zerg",
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "NeuralParasiteSCVRB"
     },
     {
       "BehaviorLink": "NeuralParasiteDrone",
@@ -15025,6 +15705,14 @@
       "BehaviorLink": "ResourceStun",
       "EditorCategories": "Race:Protoss",
       "id": "ResourceStunRemoveBehavior"
+    },
+    {
+      "BehaviorLink": "SCVMoveToBuildSeek",
+      "id": "SCVMovetoBuildSeekRB"
+    },
+    {
+      "BehaviorLink": "SCVMovetoBuildAllyAntiGrief",
+      "id": "SCVMovetoBuildAntigriefRB"
     },
     {
       "BehaviorLink": "SalvageShared",
@@ -15295,7 +15983,7 @@
       "EditorCategories": "",
       "EffectArray": "MothershipCoreMassRecallSearch",
       "ValidatorArray": {
-        "value": "IsNexus"
+        "value": "IsNotConstructing"
       },
       "id": "MothershipCoreMassRecallPrepare"
     },
@@ -15303,7 +15991,7 @@
       "EditorCategories": "",
       "EffectArray": "MothershipMassRecallSearch",
       "ValidatorArray": {
-        "value": "IsNexus"
+        "value": "IsNotConstructing"
       },
       "id": "MothershipMassRecallPrepare"
     },
@@ -15335,296 +16023,113 @@
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "AmorphousArmorcloudAB"
+        "count": 2,
+        "value": "ThermalBeamDamage"
+      },
+      "id": "ThermalBeamSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "AmorphousArmorcloudABSpell"
       },
       "id": "AmorphousArmorcloudABSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "BlindingCloudStructureAB"
+        "value": "BlindingCloudTransportIterateTransport"
       },
       "id": "BlindingCloudStructureSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "BypassArmorStunRB"
+        "value": "BypassArmorDebuffThreeRB"
       },
       "id": "BypassArmorRBSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "CollapsibleRockTowerDiagonalCPFinal"
-      },
-      "id": "CollapsibleRockTowerDiagonalCPFinalSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "CollapsibleRockTowerDiagonalCPMakeInvulnerable"
+        "value": "CollapsibleRockTowerDiagonalCPDelay"
       },
       "id": "CollapsibleRockTowerDiagonalCPSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamage"
-      },
-      "id": "CollapsibleRockTowerRubbleDamageSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamageRampLeft"
-      },
-      "id": "CollapsibleRockTowerRubbleDamageRampLeftSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamageRampLeftGreen"
-      },
-      "id": "CollapsibleRockTowerRubbleDamageRampLeftSetGreen"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamageRampRight"
-      },
-      "id": "CollapsibleRockTowerRubbleDamageRampRightSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "CollapsibleRockTowerRubbleDamageRampRightGreen"
-      },
-      "id": "CollapsibleRockTowerRubbleDamageRampRightGreenSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "CollapsibleRockTowerRubbleSearch"
+        "value": "CollapsibleRockTowerIssueOrder"
       },
       "id": "CollapsibleRockTowerRubbleSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "CollapsibleTerranTowerRubbleDamage"
+        "value": "CollapsibleRockTowerRubbleRemoveCaster"
       },
-      "id": "CollapsibleTerranTowerRubbleDamageSet"
+      "id": "CollapsibleRockTowerRubbleDamageSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "CollapsibleTerranTowerRubbleDamageRampLeft"
+        "value": "CollapsibleRockTowerRubbleRemoveCasterRampLeft"
       },
-      "id": "CollapsibleTerranTowerRubbleDamageRampLeftSet"
+      "id": "CollapsibleRockTowerRubbleDamageRampLeftSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "CollapsibleTerranTowerRubbleDamageRampRight"
+        "value": "CollapsibleRockTowerRubbleRemoveCasterRampLeftGreen"
       },
-      "id": "CollapsibleTerranTowerRubbleDamageRampRightSet"
+      "id": "CollapsibleRockTowerRubbleDamageRampLeftSetGreen"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "CollapsibleTerranTowerRubbleSearch"
+        "value": "CollapsibleRockTowerRubbleRemoveCasterRampRight"
+      },
+      "id": "CollapsibleRockTowerRubbleDamageRampRightSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "CollapsibleRockTowerRubbleRemoveCasterRampRightGreen"
+      },
+      "id": "CollapsibleRockTowerRubbleDamageRampRightGreenSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "CollapsibleTerranTowerIssueOrder"
       },
       "id": "CollapsibleTerranTowerRubbleSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "DestructibleStatueRubbleSearch"
+        "value": "CollapsibleTerranTowerRubbleRemoveCaster"
       },
-      "id": "DestructibleStatueRubbleSet"
+      "id": "CollapsibleTerranTowerRubbleDamageSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "HydraliskFrenzyMove"
+        "value": "CollapsibleTerranTowerRubbleRemoveCasterRampLeft"
       },
-      "TargetLocationType": "Point",
-      "id": "HydraliskFrenzySet"
+      "id": "CollapsibleTerranTowerRubbleDamageRampLeftSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "MothershipCoreTeleportCU"
+        "value": "CollapsibleTerranTowerRubbleRemoveCasterRampRight"
       },
-      "ValidatorArray": {
-        "value": "IsNexus"
-      },
-      "id": "MothershipCorePurifyNexusSet"
+      "id": "CollapsibleTerranTowerRubbleDamageRampRightSet"
     },
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "OracleVoidSiphonApplyBehavior"
-      },
-      "id": "OracleVoidSiphonInitialSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "OracleVoidSiphonCreatePersistent"
-      },
-      "id": "OracleVoidSiphonPersistentSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "OverchargeApply"
-      },
-      "id": "OverchargeSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "OverchargePushSearch"
-      },
-      "id": "OverchargeSearchSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PickupMultiplayerResources"
-      },
-      "id": "PickupMultiplayerResourcesSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PickupPalletGas"
-      },
-      "id": "PickupPalletGasSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PickupPalletMinerals"
-      },
-      "id": "PickupPalletMineralsSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PickupScrapLargeResources"
-      },
-      "id": "PickupScrapLargeSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PickupScrapMediumResources"
-      },
-      "id": "PickupScrapMediumSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PickupScrapSmallResources"
-      },
-      "id": "PickupScrapSmallSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PointDefenseSearch"
-      },
-      "ValidatorArray": {
-        "value": "PointDefenseDroneUnitFilter"
-      },
-      "id": "PointDefenseLaserInitialSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PurificationNovaMorph"
-      },
-      "id": "PurificationNovaSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PurificationNovaNotificationSearch"
-      },
-      "id": "PurificationNovaPeriodicSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PurificationNovaTargettedSearch"
-      },
-      "ValidatorArray": {
-        "value": "TargetNotChangeling"
-      },
-      "id": "PurificationNovaDetonateSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "PurificationNovaTargettedSearch"
-      },
-      "ValidatorArray": {
-        "value": "TargetNotChangeling"
-      },
-      "id": "PurificationNovaDetonateSetSiegeTank"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "RavenScramblerMissileLM"
-      },
-      "ValidatorArray": {
-        "value": "NoScramblerMarker"
-      },
-      "id": "RavenScramblerMissileSetInitial"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "RemovePrecursor"
-      },
-      "id": "InfestedTerransImpact"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "ResetEnergyRemove"
-      },
-      "id": "ResetEnergySet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "SiegeTankUnloadDelayAB"
-      },
-      "id": "MedivacUnloadCargoSetEffect"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "SprayProtossInitialUpgrade"
-      },
-      "id": "NexusCreateSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "SprayTerranInitialUpgrade"
-      },
-      "id": "CCCreateSet"
-    },
-    {
-      "EditorCategories": "",
-      "EffectArray": {
-        "value": "SprayZergInitialUpgrade"
+        "value": "CommandStructureAutoRally"
       },
       "ValidatorArray": "HatcheryCreateSetTargetFilters",
       "id": "HatcheryCreateSet"
@@ -15632,7 +16137,191 @@
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "TempestDisruptionBlastSearch"
+        "value": "CommandStructureAutoRally"
+      },
+      "id": "CCCreateSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "CommandStructureAutoRally"
+      },
+      "id": "NexusCreateSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "DisruptorTransportUnloadPurificationNovaCooldownReset"
+      },
+      "id": "MedivacUnloadCargoSetEffect"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "HydraliskFrenzyApplyBehavior"
+      },
+      "TargetLocationType": "Point",
+      "id": "HydraliskFrenzySet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "InfestedTerransMorphToInfestedTerran"
+      },
+      "id": "InfestedTerransImpact"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "KillCaster"
+      },
+      "id": "CollapsibleRockTowerDiagonalCPFinalSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "MothershipCoreApplyPurifyAB"
+      },
+      "ValidatorArray": {
+        "value": "IsNotConstructing"
+      },
+      "id": "MothershipCorePurifyNexusSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "OracleVoidSiphonCreateDamagePersistent"
+      },
+      "id": "OracleVoidSiphonPersistentSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "OracleVoidSiphonPeriodicSet"
+      },
+      "id": "OracleVoidSiphonInitialSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "OverchargeApplySpeed"
+      },
+      "id": "OverchargeSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "OverchargeSearch"
+      },
+      "id": "OverchargeSearchSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PickupKillDelay"
+      },
+      "id": "PickupPalletGasSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PickupKillDelay"
+      },
+      "id": "PickupPalletMineralsSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PickupKillDelay"
+      },
+      "id": "PickupScrapLargeSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PickupKillDelay"
+      },
+      "id": "PickupScrapMediumSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PickupKillDelay"
+      },
+      "id": "PickupScrapSmallSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PickupRemoveDelay"
+      },
+      "id": "PickupMultiplayerResourcesSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PointDefenseApplyBehavior"
+      },
+      "ValidatorArray": {
+        "value": "CasterHas10Energy"
+      },
+      "id": "PointDefenseLaserInitialSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PurificationNovaCooldownVisualAB"
+      },
+      "id": "PurificationNovaSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PurificationNovaDetonateRBCaster"
+      },
+      "ValidatorArray": {
+        "value": "IsNotSiegedSiegeTank"
+      },
+      "id": "PurificationNovaDetonateSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PurificationNovaDetonateRBCaster"
+      },
+      "ValidatorArray": {
+        "value": "IsSiegedSiegeTank"
+      },
+      "id": "PurificationNovaDetonateSetSiegeTank"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "PurificationNovaDetonateSearchSiegedSiegeTank"
+      },
+      "id": "PurificationNovaPeriodicSet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "ResetEnergyAdd"
+      },
+      "id": "ResetEnergySet"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "ScramblerMarkerAB"
+      },
+      "ValidatorArray": {
+        "value": "TargetNotTacticalJumping"
+      },
+      "id": "RavenScramblerMissileSetInitial"
+    },
+    {
+      "EditorCategories": "",
+      "EffectArray": {
+        "value": "TempestDisruptionBlastSecondaryWarningSearch"
       },
       "TargetLocationType": "Point",
       "id": "TempestDisruptionBlastSet"
@@ -15640,9 +16329,9 @@
     {
       "EditorCategories": "",
       "EffectArray": {
-        "value": "ThermalBeamDamage"
+        "value": "TimedLifeFate"
       },
-      "id": "ThermalBeamSet"
+      "id": "DestructibleStatueRubbleSet"
     },
     {
       "EditorCategories": "",
@@ -15698,7 +16387,7 @@
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
         "1": "PurificationNovaPostApply",
-        "value": "PurificationNovaSearch"
+        "value": "PurificationNovaMorphBack"
       },
       "id": "PurificationNovaSearchSet"
     },
@@ -15707,13 +16396,12 @@
       "EffectArray": {
         "value": "AdeptDamage"
       },
-      "TargetLocationType": "UnitOrPoint",
-      "id": "AdeptPiercingSet"
+      "id": "AdeptUpgradeSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "AdeptPhaseShiftCasterAB"
+        "value": "AdeptPhaseShiftCU"
       },
       "TargetLocationType": "Point",
       "id": "AdeptPhaseShiftInitialSet"
@@ -15721,7 +16409,14 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "AdeptPhaseShiftRemoveDisablesSet"
+        "value": "AdeptPhaseShiftKillDummy"
+      },
+      "id": "PhaseShiftTimerCancelSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "AdeptPhaseUnitOrderQueue"
       },
       "TargetLocationType": "Point",
       "id": "AdeptPhaseShiftTeleportSet"
@@ -15729,86 +16424,72 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "AdeptShadePhaseShiftCancelCasterBehavior"
+        "value": "AdeptPiercingInitialPersistent"
       },
-      "id": "PhaseShiftTimerCancelSet"
+      "TargetLocationType": "UnitOrPoint",
+      "id": "AdeptPiercingSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "AdeptUpgradeApplyDeathCheck"
-      },
-      "id": "AdeptUpgradeSet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "ArbiterMPRecallTeleport"
+        "value": "ArbiterMPRecallApplyPostRecallBehavior"
       },
       "ValidatorArray": {
-        "value": "NotLarvaEgg"
+        "value": "NotLarva"
       },
       "id": "ArbiterMPRecallSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ArbiterMPStasisFieldApply"
+        "value": "ArbiterMPStasisFieldTimerApply"
       },
       "id": "ArbiterMPStasisFieldSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "BuildingStasis"
+        "value": "BuildDeceleration"
+      },
+      "SetSource": 1,
+      "TargetLocationType": "UnitOrPoint",
+      "id": "StasisWardPlaceSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "BuildingStasisIterateTransport"
       },
       "id": "BuildingStasisSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ChargingDamage"
+        "value": "ChargeAttackRemoveBuff"
       },
       "ValidatorArray": {
-        "value": "ChargeTargetNotDead"
+        "value": "NotHidden"
       },
       "id": "ChargingPrimaryDamageSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "CloakingFieldSearch"
+        "value": "CloakingFieldSearchNew"
       },
       "id": "CloakingFieldSearchSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "CloneApplyBehavior"
+        "value": "CloneApplyDummyBehavior"
       },
       "id": "CloneBehaviorSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "CloneCreateUnitSwitch"
-      },
-      "ValidatorArray": {
-        "value": "IsNotTempUnit"
-      },
-      "id": "CloneSet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "DamageTakenBarrieAutocastAB"
-      },
-      "id": "DamageTakenBarrierAutocastSet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "DisruptionBeamDamage"
+        "value": "DisruptionBeamABTarget"
       },
       "ValidatorArray": "NotHaveBeamTargetCDBehavior",
       "id": "SentryWeaponPeriodicSet"
@@ -15816,7 +16497,7 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "Feedback"
+        "value": "FeedbackEnergyLoss"
       },
       "ValidatorArray": "NotShieldBattery",
       "id": "FeedbackSet"
@@ -15824,54 +16505,59 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "GravitonBeamDummy"
+        "value": "GravitonBeamBehavior"
       },
       "id": "GravitonBeamPeriodicSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "HallucinationCreateUnitBHal"
+        "value": "HallucinationCreateUnitBTimer"
       },
       "id": "HallucinationCreateUnitB"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ImmortalOverloadAB"
+        "value": "ImmortalBarrierSupressedApplyBehavior"
+      },
+      "id": "DamageTakenBarrierAutocastSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "ImmortalBarrierSupressedApplyBehavior"
       },
       "id": "ImmortalBarrierAfterfirstdamageeffect"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "MassRecallTeleport"
+        "value": "Kill"
+      },
+      "id": "PurificationNovaTargettedSearchSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "KillSource"
+      },
+      "id": "ResourceStunFinalSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "MassRecallPostBehavior"
       },
       "ValidatorArray": {
-        "value": "NotLarvaEgg"
+        "value": "NotLarva"
       },
       "id": "MassRecallSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "MothershipBeamPersistent"
-      },
-      "ValidatorArray": "IsNotDisguisedChangeling",
-      "id": "MothershipBeamSet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "MothershipBeamPersistent"
-      },
-      "ValidatorArray": "MothershipSingleTargetFilter",
-      "id": "MothershipBeamFriendlyFireSet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "MothershipSearch"
+        "value": "MothershipBeamFriendlyFireSet"
       },
       "TargetLocationType": "UnitOrPoint",
       "id": "MothershipBeamSetCustom"
@@ -15879,75 +16565,101 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "MothershipStasisCasterApplyBehavior"
+        "value": "MothershipSecondaryBeamPersistent"
+      },
+      "ValidatorArray": "IsNotDisguisedChangeling",
+      "id": "MothershipBeamSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "MothershipSecondaryBeamPersistent"
+      },
+      "ValidatorArray": "MothershipSingleTargetFilter",
+      "id": "MothershipBeamFriendlyFireSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "MothershipStasisSearch"
       },
       "id": "MothershipStasisSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "MothershipStrategicRecallTeleport"
+        "value": "MothershipStrategicRecallSetPrevent2ndRecall"
       },
       "id": "MothershipStrategicRecallSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "NexusMassRecallCastingAB"
+        "value": "NexusMassRecallPhased"
       },
       "ValidatorArray": {
-        "value": "IsNotRecallingNexus"
-      },
-      "id": "NexusMassRecallWarpOutSet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "NexusMassRecallCastingAB"
-      },
-      "ValidatorArray": {
-        "value": "IsStrategicWarpOut"
+        "value": "IsNotNexusMassRecallWarpingOut"
       },
       "id": "MothershipStrategicRecallWarpOutSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "NexusMassRecallTeleport"
+        "value": "NexusMassRecallPhased"
+      },
+      "ValidatorArray": {
+        "value": "IsStrategicWarpOut"
+      },
+      "id": "NexusMassRecallWarpOutSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "NexusMassRecallSetPrevent2ndRecall"
       },
       "id": "NexusMassRecallSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "NexusShieldOverchargeEnergy"
+        "value": "NexusShieldOverchargeShield"
       },
       "ValidatorArray": {
-        "value": "ShieldsNotFull"
+        "value": "CasterHasEnergy"
       },
       "id": "NexusShieldOverchargeSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "NexusShieldRechargeEnergy"
+        "value": "NexusShieldRechargeShield"
       },
       "ValidatorArray": {
-        "value": "ShieldsNotFull"
+        "value": "CasterHasEnergy"
       },
       "id": "NexusShieldRechargeSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "OracleCloakingFieldSearch"
+        "value": "OracleCloakingFieldSearchNew"
       },
       "id": "OracleCloakingFieldSearchSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "OracleWeaponDamage"
+        "value": "OracleRevelationApplyBehavior"
+      },
+      "ValidatorArray": {
+        "value": "NotHidden"
+      },
+      "id": "RevelationReapplySet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "OracleWeaponABTarget"
       },
       "ValidatorArray": "NotHaveBeamTargetCDBehavior",
       "id": "OracleWeaponPeriodicSet"
@@ -15955,21 +16667,49 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "PhaseMothershipCoreRecalledRemove"
+        "value": "PhaseMothershipCoreRecallingRemove"
       },
       "id": "PhaseShiftRemoveRecall"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "PrismaticBeamChargeEffect01"
+        "value": "PrismaticBeamChargeEffect02"
+      },
+      "id": "PrismaticBeamChainSet2"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "PrismaticBeamChargeEffect03"
+      },
+      "id": "PrismaticBeamChainSet3"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "PrismaticBeamChargeEffect03"
       },
       "id": "PrismaticBeamInitialSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "PurificationNovaPhaseRB"
+        "value": "PrismaticBeamMUx2"
+      },
+      "id": "PrismaticBeamDamageSet2"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "PrismaticBeamMUx3"
+      },
+      "id": "PrismaticBeamDamageSet3"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "PurificationNovaPostPhaseRB"
       },
       "ValidatorArray": "IsDisruptorPhased",
       "id": "PurificationNovaTransportPickupSet"
@@ -15977,7 +16717,7 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "PurificationNovaTargettedCasterAB"
+        "value": "PurificationNovaTargettedCU"
       },
       "TargetLocationType": "Point",
       "id": "PurificationNovaTargettedInitialSet"
@@ -15985,28 +16725,14 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "PurificationNovaTargettedSearch"
-      },
-      "id": "PurificationNovaTargettedSearchSet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "PurificationNovaTargettedSpawnAB"
+        "value": "PurificationNovaTargettedIssueOrder"
       },
       "id": "PurificationNovaTargettedSpawnSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ReleaseInterceptors"
-      },
-      "id": "ReleaseInterceptorsReleaseSet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "ReleaseInterceptorsLeashOrder"
+        "value": "ReleaseInterceptorsApplyWanderDelay"
       },
       "ValidatorArray": "ReleaseInterceptorsNotNearStartingPointOrNotDoingStuff",
       "id": "ReleaseInterceptorsLeashSet"
@@ -16014,21 +16740,28 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "RescueTeleport"
+        "value": "ReleaseInterceptorsApplyWanderDelay"
+      },
+      "id": "ReleaseInterceptorsReleaseSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "RescueRemoveBehavior"
       },
       "id": "RescueSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ResourceStunApplyBehavior"
+        "value": "ResourceStunCreateUnit"
       },
       "id": "ResourceStunSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ResourceStunRenewSearch"
+        "value": "ResourceStunDummySearch"
       },
       "TargetLocationType": "Point",
       "id": "ResourceStunInitialSet"
@@ -16036,7 +16769,7 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ResourceStunRenewTimer"
+        "value": "ResourceStunRenewLife"
       },
       "ValidatorArray": "IsMineralShield",
       "id": "ResourceStunRenewSet"
@@ -16044,31 +16777,14 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ResourceStunSearch"
-      },
-      "id": "ResourceStunFinalSet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "RevelationPersistent"
-      },
-      "ValidatorArray": {
-        "value": "NotCloakedAndNotBuried"
-      },
-      "id": "RevelationReapplySet"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "RipFieldApplyBehavior"
+        "value": "RipFieldDamage"
       },
       "id": "RipFieldSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ScryerCreatePersistent0Dot5"
+        "value": "ScryerApplyBehavior"
       },
       "Marker": {
         "Link": "Effect/ScryerFriendlySet"
@@ -16079,87 +16795,69 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ScryerCreatePersistent0Dot5"
+        "value": "ScryerApplyFriendlyBehavior"
       },
       "ValidatorArray": {
-        "value": "TargetNotPreordained"
+        "value": "TargetIsAllyorPlayer"
       },
       "id": "ScryerFriendlySet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ScryerEnemySet"
+        "value": "ScryerFriendlySet"
       },
       "id": "ScryerSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "SingleRecallTeleport"
+        "value": "SingleRecallPostBehavior"
       },
       "id": "SingleRecallSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "ThermalLancesForwardAir"
+        "value": "SuicideRemove"
+      },
+      "ValidatorArray": {
+        "value": "IsNotLarva"
+      },
+      "id": "CloneSet"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "EffectArray": {
+        "value": "ThermalLancesFriendlyCPAir"
       },
       "id": "ThermalLancesAir"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "TornadoMissileLM"
+        "value": "TornadoMissileLMDummy"
       },
       "id": "TornadoMissileLMSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "VoidMPImmortalRevivePostMorphHeal"
+        "value": "VoidMPImmortalReviveDelayPersistent"
       },
       "id": "VoidMPImmortalReviveDeadSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "VoidMPImmortalReviveSupressedApplyBehavior"
+        "value": "VoidMPImmortalRevivePostMorphHeal"
       },
       "id": "VoidMPImmortalReviveSet"
     },
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "VoidRayPhase2"
-      },
-      "id": "PrismaticBeamChainSet2"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "VoidRayPhase2"
-      },
-      "id": "PrismaticBeamDamageSet2"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "VoidRayPhase3"
-      },
-      "id": "PrismaticBeamChainSet3"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "VoidRayPhase3"
-      },
-      "id": "PrismaticBeamDamageSet3"
-    },
-    {
-      "EditorCategories": "Race:Protoss",
-      "EffectArray": {
-        "value": "VoidRaySwarmDamage"
+        "value": "VoidRayWeaponABTarget"
       },
       "ValidatorArray": "NotHaveBeamTargetCDBehavior",
       "id": "VoidRayWeaponPeriodicSet"
@@ -16167,10 +16865,10 @@
     {
       "EditorCategories": "Race:Protoss",
       "EffectArray": {
-        "value": "VortexKillForceField"
+        "value": "VortexApplyDisable"
       },
       "ValidatorArray": {
-        "value": "NoYoink"
+        "value": "IsNotMothershipCorePurifyNexus"
       },
       "id": "VortexEffect"
     },
@@ -16197,11 +16895,6 @@
     },
     {
       "EditorCategories": "Race:Terran",
-      "EffectArray": "HerdIssueMoveOrderSelf",
-      "id": "HerdInteractSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
       "EffectArray": "LiberatorAGMissileLM",
       "ValidatorArray": "LiberatorAGTargets",
       "id": "LiberatorAGMissileLMSet"
@@ -16210,11 +16903,6 @@
       "EditorCategories": "Race:Terran",
       "EffectArray": "LockOnDummyWeaponRB",
       "id": "LockOnClearSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": "NeuralParasiteLockOnRemove",
-      "id": "NeuralParasitePersistentSet"
     },
     {
       "EditorCategories": "Race:Terran",
@@ -16257,14 +16945,29 @@
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "250mmStrikeCannonsApplyBehavior"
+        "0": "HerdIssueCircle"
+      },
+      "id": "HerdInteractSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "index": "NeuralParasitePersistent",
+        "value": "NeuralParasiteTargetSelect"
+      },
+      "id": "NeuralParasitePersistentSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "250mmStrikeCannonsDummy"
       },
       "id": "250mmStrikeCannonsSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "AssimilatorRichAB"
+        "value": "AssimilatorRichRB"
       },
       "ValidatorArray": "RichVespeneGeyser",
       "id": "AssimilatorRichSet"
@@ -16272,21 +16975,14 @@
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "AutoTurretReleaseLM"
-      },
-      "id": "AutoTurretReleaseLaunch"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "AutoturretTimedLife"
+        "value": "AutoTurretReleaseLaunch"
       },
       "id": "AutoTurretSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "BattlecruiserAntiAirApplyBehavior"
+        "value": "BattlecruiserAntiAirCreatePersistent"
       },
       "TargetLocationType": "UnitOrPoint",
       "id": "BattlecruiserAntiAirSet"
@@ -16294,22 +16990,7 @@
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "BattlecruiserAttackTrackerDP"
-      },
-      "TargetLocationType": "Point",
-      "id": "BattlecruiserAttackTrackerPointSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "BattlecruiserAttackTrackerDP"
-      },
-      "id": "BattlecruiserAttackTrackerStopSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "BattlecruiserChasingAB"
+        "value": "BattlecruiserAttackTrackerCP"
       },
       "Marker": {
         "Link": "Effect/BattlecruiserAttackTrackerCP",
@@ -16322,133 +17003,148 @@
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "BattlecruiserTransientTrackerAB"
+        "value": "BattlecruiserAttackTrackerOrderAttack"
+      },
+      "TargetLocationType": "Point",
+      "id": "BattlecruiserAttackTrackerPointSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "BattlecruiserAttackTrackerOrderStop"
+      },
+      "id": "BattlecruiserAttackTrackerStopSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "BattlecruiserDamageSwitch"
       },
       "id": "BattlecruiserDamageSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "BypassArmorDebuffOneRB"
-      },
-      "id": "BypassArmorReapplyABSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "BypassArmorMovementDebuffAB"
+        "value": "BypassArmorDebuffDamageDummy"
       },
       "id": "BypassArmorABSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "CancelAttackOrders"
+        "value": "BypassArmorDebuffThreeAB"
       },
-      "id": "GhostHoldFireSet"
+      "id": "BypassArmorReapplyABSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "ChannelSnipeCreatePersistent"
+        "value": "CalldownMULECreatePersistent"
+      },
+      "id": "CalldownMULECreateSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "ChannelSnipeCombatBeamDummy"
       },
       "id": "ChannelSnipeInitialSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "ChannelSnipeDamage"
+        "value": "ChannelSnipeCombatRB"
       },
       "id": "ChannelSnipeDamageSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "ChannelSnipeEnergyRefund"
+        "value": "ChannelSnipeRefundRB"
       },
       "id": "ChannelSnipeRefundSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "CrucioShockCannonBlastSet"
+        "value": "CrucioShockCannonDirected"
       },
       "id": "CrucioShockCannonSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "CycloneAirWeaponLaunchMissileLeft"
+        "value": "CycloneWeaponLaunchMissileAlternateAB"
       },
       "id": "CycloneAirWeaponLaunchMissileLeftSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "CycloneAirWeaponLaunchMissileLeftAlternative"
+        "value": "CycloneWeaponLaunchMissileAlternateAB"
       },
       "id": "CycloneAirWeaponLaunchMissileLeftSetAlternative"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "CycloneAirWeaponLaunchMissileRight"
-      },
-      "id": "CycloneAirWeaponLaunchMissileRightSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "CycloneAirWeaponLaunchMissileRightAlternative"
-      },
-      "id": "CycloneAirWeaponLaunchMissileRightSetAlternative"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "CycloneWeaponLaunchMissileLeft"
+        "value": "CycloneWeaponLaunchMissileAlternateAB"
       },
       "id": "CycloneWeaponLaunchMissileLeftSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "CycloneWeaponLaunchMissileLeft"
+        "value": "CycloneWeaponLaunchMissileAlternateAB"
       },
       "id": "CycloneWeaponLaunchMissileLeftSetNew"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "CycloneWeaponLaunchMissileRight"
+        "value": "CycloneWeaponLaunchMissileAlternateRB"
+      },
+      "id": "CycloneAirWeaponLaunchMissileRightSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "CycloneWeaponLaunchMissileAlternateRB"
+      },
+      "id": "CycloneAirWeaponLaunchMissileRightSetAlternative"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "CycloneWeaponLaunchMissileAlternateRB"
       },
       "id": "CycloneWeaponLaunchMissileRightSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "CycloneWeaponLaunchMissileRight"
+        "value": "CycloneWeaponLaunchMissileAlternateRB"
       },
       "id": "CycloneWeaponLaunchMissileRightSetNew"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "EMPDamage"
+        "value": "EMPApplyDecloakBehavior"
       },
       "id": "EMPSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "EMPSearch"
+        "value": "EMPSearchForceField"
       },
       "id": "EMPSearchSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "ExtractorRichAB"
+        "value": "ExtractorRichRB"
       },
       "ValidatorArray": "RichVespeneGeyser",
       "id": "ExtractorRichSet"
@@ -16456,107 +17152,63 @@
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "GhostSnipeDoTApplyBehavior"
+        "value": "GhostHoldFireB"
+      },
+      "id": "GhostHoldFireSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "GhostSnipeDoTDummy"
       },
       "id": "GhostSnipeDoTSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "GrappleCreatePlaceholderRemove"
+        "value": "GrappleCasterInMotionRemoveBehavior"
       },
       "id": "GrappleLaunchCasterImpactSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "GrappleLaunchCasterSwitch"
+        "value": "GrappleImpactDummy"
       },
       "id": "GrappleImpactSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "HyperjumpTeleport"
+        "value": "HyperjumpTeleportAB"
       },
       "id": "HyperjumpTeleportSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "HyperjumpTeleportOutAB"
+        "value": "HyperjumpTeleportOutTargetAB"
       },
       "id": "HyperjumpTeleportOutABSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "InfernalFlameThrower"
+        "value": "InfernalFlameThrowerCP"
       },
       "id": "InfernalFlameThrowerSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "KD8ChargeExplodeDamage"
-      },
-      "id": "KD8ChargeEndSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "KD8ChargeLM"
-      },
-      "id": "KD8ChargeLaunch"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "KD8SearchArea"
-      },
-      "id": "KD8ChargeInitialSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "LockOnAB"
-      },
-      "id": "LockOnAirFireSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "LockOnAB"
-      },
-      "id": "LockOnFireSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "LockOnAirTurretStart"
-      },
-      "ValidatorArray": "AirUnitFilter",
-      "id": "LockOnAirInitialSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "LockOnInitialSet"
+        "value": "LockOnAirInitialSet"
       },
       "id": "LockOnGroundAirSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "LockOnTurretStart"
-      },
-      "ValidatorArray": "GroundUnitFilter",
-      "id": "LockOnInitialSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "LockOnTurretStart"
+        "value": "LockOnDummyWeaponAB"
       },
       "ValidatorArray": "TargetNotInvisibleDummyUnit",
       "id": "LockOnInitialSetNew"
@@ -16564,94 +17216,138 @@
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
+        "value": "LockOnResetCooldownInitial"
+      },
+      "ValidatorArray": "AirUnitFilter",
+      "id": "LockOnAirInitialSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "LockOnResetCooldownInitial"
+      },
+      "ValidatorArray": "GroundUnitFilter",
+      "id": "LockOnInitialSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "LockOnResetCooldownInitial"
+      },
+      "id": "LockOnAirFireSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "LockOnResetCooldownInitial"
+      },
+      "id": "LockOnFireSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
         "value": "MakePrecursor"
       },
-      "id": "CalldownMULECreateSet"
+      "id": "AutoTurretReleaseLaunch"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "MineDroneDirectDamage"
+        "value": "MakePrecursor"
       },
-      "id": "MineDroneExplodeSet"
+      "id": "KD8ChargeLaunch"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "OracleStasisTrapActivateCP"
-      },
-      "id": "OracleStasisTrapActivateSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "OracleStasisTrapStopIssueOrder"
-      },
-      "id": "OracleStasisTrapSearchSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "PenetratingShotDamage"
-      },
-      "id": "PenetratingShotDamageSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "PointDefenseDroneTimedLife"
+        "value": "MakePrecursor"
       },
       "id": "PointDefenseDroneReleaseSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "PointDefenseLaserDamage"
-      },
-      "ValidatorArray": {
-        "value": "PointDefenseDroneUnitFilter"
-      },
-      "id": "PointDefenseLaserSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "PunisherGrenadesLMLeft"
-      },
-      "id": "PunisherGrenadesLaunchSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "PunisherGrenadesSlow"
-      },
-      "id": "PunisherGrenadesSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "RavenRepairDroneTimedLife"
+        "value": "MakePrecursor"
       },
       "id": "RavenRepairDroneReleaseSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "RavenShredderMissileDamage"
+        "value": "MineDroneExplode"
+      },
+      "id": "MineDroneExplodeSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "OracleStasisTrapActivateAB"
+      },
+      "id": "OracleStasisTrapSearchSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "OracleStasisTrapCasterAB"
+      },
+      "id": "OracleStasisTrapActivateSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "PenetratingShotApplyBehavior"
+      },
+      "id": "PenetratingShotDamageSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "PointDefenseLaserEnergy"
+      },
+      "ValidatorArray": {
+        "value": "CasterHas10Energy"
+      },
+      "id": "PointDefenseLaserSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "PunisherGrenadesLMRight"
+      },
+      "id": "PunisherGrenadesLaunchSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "PunisherGrenadesU"
+      },
+      "id": "PunisherGrenadesSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "RavenShredderMissileImpactSearchArea"
       },
       "id": "RavenShredderMissileImpactSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "RavenShredderMissileLaunchCP"
+        "value": "RavenShredderMissileTintCP"
       },
       "id": "RavenShredderMissileLaunchSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "RefineryRichAB"
+        "value": "ReaperKD8Knockback"
+      },
+      "id": "KD8ChargeEndSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "RefineryRichRB"
       },
       "ValidatorArray": "RichVespeneGeyser",
       "id": "RefineryRichSet"
@@ -16659,14 +17355,14 @@
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "SeekerMissileLaunchCP"
+        "value": "SeekerMissileLaunchTintCP"
       },
       "id": "SeekerMissileLaunchSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "SelfRepairApplyBehavior"
+        "value": "SelfRepairEndApplyBehavior"
       },
       "ValidatorArray": "ThorLifeNotFull",
       "id": "ThorSelfRepairSet"
@@ -16674,33 +17370,28 @@
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "SupplyDropApplyBehavior"
+        "value": "Suicide"
+      },
+      "id": "KD8ChargeInitialSet"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "Transfusion2"
       },
       "id": "SupplyDropSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "WidowMineExplodeDirect"
-      },
-      "Marker": {
-        "MatchFlags": {
-          "Id": 1
-        }
-      },
-      "id": "WidowMineExplodeSet"
-    },
-    {
-      "EditorCategories": "Race:Terran",
-      "EffectArray": {
-        "value": "WidowMineExplodeSplashShields"
+        "value": "WidowMineExplodeSplash"
       },
       "id": "WidowMineExplodeSplashSet"
     },
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "WidowMineExplodeSplashShields2"
+        "value": "WidowMineExplodeSplash2"
       },
       "ValidatorArray": "noMarkers",
       "id": "WidowMineExplodeSplashSet2"
@@ -16708,10 +17399,22 @@
     {
       "EditorCategories": "Race:Terran",
       "EffectArray": {
-        "value": "WidowMineExplodeSplashShields3"
+        "value": "WidowMineExplodeSplash3"
       },
       "ValidatorArray": "noMarkers",
       "id": "WidowMineExplodeSplashSet3"
+    },
+    {
+      "EditorCategories": "Race:Terran",
+      "EffectArray": {
+        "value": "WidowMineExplodeSplashSearch"
+      },
+      "Marker": {
+        "MatchFlags": {
+          "Id": 1
+        }
+      },
+      "id": "WidowMineExplodeSet"
     },
     {
       "EditorCategories": "Race:Terran",
@@ -16773,7 +17476,7 @@
         "Link": "YoinkMarker"
       },
       "ValidatorArray": {
-        "value": "TargetNotTacticalJumping"
+        "value": "CasterIsAlive"
       },
       "id": "YoinkSet"
     },
@@ -16781,7 +17484,7 @@
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "0": "",
-        "value": "SurfaceForSpellcast"
+        "value": "FungalGrowthSearchDummy"
       },
       "TargetLocationType": "Point",
       "id": "FungalGrowthInitialSet"
@@ -16797,10 +17500,10 @@
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "0": "ViperConsumeDamage",
-        "value": "ViperConsumeStructureModifyTarget"
+        "value": "ViperConsumeStructureModifyCaster"
       },
       "ValidatorArray": {
-        "value": "LifeGT2"
+        "value": "ConsumePeriodicCheck"
       },
       "id": "ViperConsumeStructurePeriodicSet"
     },
@@ -16808,7 +17511,7 @@
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "1": "FungalGrowthSlowMovementApplyBehavior",
-        "value": "FungalGrowthApplyBehavior"
+        "value": "FungalGrowthApplyMovementBehavior"
       },
       "ValidatorArray": "",
       "id": "FungalGrowthSet"
@@ -16817,7 +17520,7 @@
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "2": "BroodlingTimedLifeBroodLord",
-        "value": "BroodlingEscortMissileB"
+        "value": "BroodlingEscortLaunchBTransfer"
       },
       "id": "BroodlingEscortLaunchB"
     },
@@ -16825,87 +17528,56 @@
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "3": "BroodlingTimedLifeBroodLord",
-        "value": "BroodlingEscortRelease"
+        "value": "BroodlingTimedLife"
       },
       "id": "BroodlingEscortLaunch"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "##id##IssueOrder"
-      },
-      "default": "1",
-      "id": "DisguiseSetDefault"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "BanelingDontExplode"
-      },
-      "ValidatorArray": "CasterIsNotHidden",
-      "id": "VolatileBurst"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "BroodlingEscortDamageUnit"
+        "value": "BroodlingEscortImpactA"
       },
       "id": "BroodlingEscortDamageSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "BroodlingEscortRelease"
+        "value": "BroodlingEscortLaunchA"
       },
       "id": "BroodlingEscortUnitSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "BurrowChargeCasterApplyBehaviorRevD"
-      },
-      "TargetLocationType": "Point",
-      "ValidatorArray": {
-        "value": "BurrowChargeMinimumRange"
-      },
-      "id": "BurrowChargeInitialRevD"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "BurrowChargeImpactAB"
+        "value": "BurrowChargeCreatePHLM"
       },
       "id": "BurrowChargeCreatePHSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "BurrowChargeMPForcePersistent"
+        "value": "BurrowChargeCreatePersistentRevD"
+      },
+      "TargetLocationType": "Point",
+      "ValidatorArray": {
+        "value": "TargetIsPathable"
+      },
+      "id": "BurrowChargeInitialRevD"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "BurrowChargeMPTargetDamage"
       },
       "ValidatorArray": {
-        "value": "CasterIsNotHidden"
+        "value": "NotBurrowChargingRevD"
       },
       "id": "BurrowChargeMPTargetSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "BurrowChargeTargetSearchRevD"
-      },
-      "TargetLocationType": "Point",
-      "id": "BurrowChargeImpactSetRevD"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "CancelAttackOrders"
-      },
-      "id": "LurkerHoldFireSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "CorruptorGroundAttackApplyBehavior"
+        "value": "CorruptorGroundAttackDamage"
       },
       "Marker": {
         "Link": "ChainReaction",
@@ -16918,21 +17590,28 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "CreepTumorBuildAB"
+        "value": "Creep Tumor Selection"
       },
       "id": "CreepTumorLaunchMissileSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "DevourerMPWeaponDamage"
+        "value": "DefilerMPConsumeModifyUnit"
+      },
+      "id": "DefilerMPConsumeSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "DevourerMPWeaponSearch"
       },
       "id": "DevourerMPWeaponSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "DigesterCreepDestroyPersistent"
+        "value": "DigesterCreepSprayCreateTargetUnit"
       },
       "TargetLocationType": "Point",
       "id": "DigesterCreepInitialSet"
@@ -16940,7 +17619,22 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "DigesterCreepSprayApplyBehavior"
+        "value": "DigesterCreepSprayPersistCreatePersistent"
+      },
+      "ValidatorArray": "IsCreepSprayTargetUnit",
+      "id": "DigesterCreepSprayWeaponAttackSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "DigesterCreepSprayTimedLifeApplyBehavior"
+      },
+      "id": "DigesterCreepSecondarySet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "DigesterCreepSprayVisionApplyBehavior"
       },
       "Marker": {
         "Link": "Effect/DigesterCreepSecondarySet"
@@ -16950,130 +17644,176 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "DigesterCreepSprayApplyBehavior"
-      },
-      "id": "DigesterCreepSecondarySet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "DisguiseEx3ChangeOwnerMimicCP"
+        "value": "DisguiseEx3RemoveCaster"
       },
       "id": "DisguiseEx3FinalSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "EyeStalkApplyBehavior"
+        "value": "DisguiseMimic"
+      },
+      "default": "1",
+      "id": "DisguiseSetDefault"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "EyeStalkCreatePersistent"
       },
       "id": "EyeStalkSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "GlaiveWurmU1"
+        "value": "GlaiveWurmE1"
       },
       "id": "GlaiveWurmS1"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "GlaiveWurmU2"
+        "value": "GlaiveWurmE2"
       },
       "id": "GlaiveWurmS2"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "HellionTankApplyBehavior"
+        "value": "HellionTankSearch"
       },
       "id": "HellionTank"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "InfestorEnsnareReheightSourceLaunchMissile"
+        "value": "InfestorEnsnareDelayedRemove"
       },
       "id": "InfestorEnsnareReheightSourceStartSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "KaiserBladesDamage"
+        "value": "KaiserBladesSearch"
       },
       "id": "KaiserBlades"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "Kill"
+        "value": "KillRemove"
       },
-      "id": "DefilerMPConsumeSet"
+      "id": "LurkerMPSearchSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "value": "KillRemove"
       },
-      "ValidatorArray": "IsCreepSprayTargetUnit",
-      "id": "DigesterCreepSprayWeaponAttackSet"
+      "id": "SalvageBaneling"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "value": "KillRemove"
       },
-      "ValidatorArray": "IsNotMothershipCorePurifyNexus",
-      "id": "YoinkImpactSet"
+      "id": "SalvageDrone"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "value": "KillRemove"
       },
-      "ValidatorArray": "IsNotPhaseShielded",
-      "id": "YoinkImpactSetVikingAir"
+      "id": "SalvageHydralisk"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "value": "KillRemove"
       },
-      "ValidatorArray": "IsNotPhaseShielded",
-      "id": "YoinkImpactSetVikingGround"
+      "id": "SalvageInfestor"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
         "value": "KillRemove"
       },
-      "id": "YoinkImpactSetSiegeTank"
+      "id": "SalvageQueen"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "KillsToCaster"
+        "value": "KillRemove"
       },
-      "id": "InfestedTerransInitialSet"
+      "id": "SalvageRoach"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "LeechApplyBehavior"
+        "value": "KillRemove"
+      },
+      "id": "SalvageSwarmHost"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "KillRemove"
+      },
+      "id": "SalvageUltralisk"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "KillRemove"
+      },
+      "id": "SalvageZergling"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "KillsToOrigin"
+      },
+      "id": "ParasiticBombCUDodgeSpawnSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "KillsToOrigin"
+      },
+      "id": "ParasiticBombCUSpawnSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "KillsToOrigin"
+      },
+      "id": "ParasiticBombDodgeCUSpawnSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "LeechApplyCasterBehavior"
       },
       "id": "LeechCastSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "LeechModifyUnit"
+        "value": "LeechDamage"
       },
       "id": "LeechSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "LiberatorTargetAAMorphRB"
+        "value": "LiberatorAGDamage"
+      },
+      "id": "LiberatorAGDamageSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "LiberatorTargetAAMorphOrder"
       },
       "TargetLocationType": "Point",
       "id": "LiberatorTargetAAMorphOrderSet"
@@ -17081,7 +17821,7 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "LiberatorTargetMorphAB"
+        "value": "LiberatorTargetMorphDelayPersistent"
       },
       "TargetLocationType": "Point",
       "id": "LiberatorTargetMorphOrderInitialSet"
@@ -17089,290 +17829,21 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "LiberatorTurretFace"
-      },
-      "id": "LiberatorAGDamageSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "LurkerMPWeaponRangeSwitch"
-      },
-      "id": "LurkerMPSearchSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "MakePrecursorLocust"
+        "value": "LocustMPCreateLMA"
       },
       "id": "LocustMPCreateSetA"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "MakePrecursorLocust"
+        "value": "LocustMPCreateLMB"
       },
       "id": "LocustMPCreateSetB"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "OracleVoidSiphonDamage"
-      },
-      "id": "OracleVoidSiphonPeriodicSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ParasiteSporeGroundLaunchMissile"
-      },
-      "id": "ParasiteSporeGroundSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ParasiteSporeLaunchMissile"
-      },
-      "id": "ParasiteSporeSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ParasiticBombCU"
-      },
-      "id": "ParasiticBombFinalSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ParasiticBombCUCopyBehavior"
-      },
-      "id": "ParasiticBombCUSpawnSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ParasiticBombDodgeTimerAB"
-      },
-      "id": "ParasiticBombDodgeCUSpawnSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ParasiticBombInitialImpactDummy"
-      },
-      "id": "ParasiticBombInitialSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ParasiticBombOrderRelay"
-      },
-      "id": "ParasiticBombOrderRelaySet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ParasiticBombOrderRelayDodge"
-      },
-      "id": "ParasiticBombOrderRelayDodgeSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ParasiticBombTimerAB"
-      },
-      "id": "ParasiticBombCUDodgeSpawnSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "QueenMPEnsnareApply"
-      },
-      "ValidatorArray": "",
-      "id": "QueenMPEnsnareSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "QueenMPSpawnBroodlingsDamage"
-      },
-      "ValidatorArray": "",
-      "id": "QueenMPSpawnBroodlingsSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RavagerCorrosiveBileCP"
-      },
-      "TargetLocationType": "Point",
-      "id": "RavagerCorrosiveBileLaunchSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RavagerCorrosiveBileDamage"
-      },
-      "id": "RavagerCorrosiveBileSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RemovePrecursor"
-      },
-      "id": "BroodlingEscortImpact"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RemovePrecursor"
-      },
-      "id": "BroodlingEscortImpactB"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RemovePrecursorLocust"
-      },
-      "id": "LocustMPCreateLMImpactSetA"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RemovePrecursorLocust"
-      },
-      "id": "LocustMPCreateLMImpactSetB"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RemoveRecallingBehaviorSiegeTank"
-      },
-      "Marker": {
-        "Link": "YoinkMarker"
-      },
-      "id": "YoinkSetSiegeTank"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RemoveRecallingBehaviorVikingAir"
-      },
-      "Marker": {
-        "Link": "YoinkMarker"
-      },
-      "ValidatorArray": "IsNotPhaseShielded",
-      "id": "YoinkSetVikingAir"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RemoveRecallingBehaviorVikingGround"
-      },
-      "Marker": {
-        "Link": "YoinkMarker"
-      },
-      "ValidatorArray": "IsNotPhaseShielded",
-      "id": "YoinkSetVikingGround"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SalvageBanelingModifyPlayer"
-      },
-      "id": "SalvageBaneling"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SalvageDroneModifyPlayer"
-      },
-      "id": "SalvageDrone"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SalvageHydraliskModifyPlayer"
-      },
-      "id": "SalvageHydralisk"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SalvageInfestorModifyPlayer"
-      },
-      "id": "SalvageInfestor"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SalvageQueenModifyPlayer"
-      },
-      "id": "SalvageQueen"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SalvageRoachModifyPlayer"
-      },
-      "id": "SalvageRoach"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SalvageSwarmHostModifyPlayer"
-      },
-      "id": "SalvageSwarmHost"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SalvageUltraliskModifyPlayer"
-      },
-      "id": "SalvageUltralisk"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SalvageZerglingModifyPlayer"
-      },
-      "id": "SalvageZergling"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "ScourgeMPWeaponDamage"
-      },
-      "id": "ScourgeMPWeaponSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SpawnMutantLarvaApplySpawnBehavior"
-      },
-      "id": "SpawnLarvaExpireSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SpawnMutantLarvaHiddenAB"
-      },
-      "ValidatorArray": {
-        "value": "IsHatcheryLairOrHive"
-      },
-      "id": "SpawnLarvaSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SpawnMutantLarvaRemoveSpawnBehavior"
-      },
-      "id": "LarvaRelease"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "SwarmHostEggAnimationMPAB"
+        "value": "LocustMPCreateUnitB"
       },
       "TargetLocationType": "Point",
       "id": "LocustMPCreateSet"
@@ -17380,51 +17851,49 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "SwarmSeedsLaunchSecondaryMissile"
+        "value": "LocustMPStun"
+      },
+      "id": "LocustMPCreateLMImpactSetA"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "LocustMPStun"
+      },
+      "id": "LocustMPCreateLMImpactSetB"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "LurkerHoldFireB"
+      },
+      "id": "LurkerHoldFireSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "MakePrecursor"
+      },
+      "id": "InfestedTerransInitialSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "MakePrecursor"
+      },
+      "id": "LarvaRelease"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "MakePrecursor"
       },
       "id": "MantalingSpawnSet"
     },
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "Transfusion"
-      },
-      "ValidatorArray": {
-        "value": "LifeNotFull"
-      },
-      "id": "TransfusionImpactSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "VoidSwarmHostSpawnLocustCU"
-      },
-      "TargetLocationType": "Point",
-      "ValidatorArray": "InfestedTerransPlacementCheck",
-      "id": "VoidSwarmHostSpawnLocustSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "VolatileBurstDirectFallbackEnemyNeutralBuilding"
-      },
-      "ValidatorArray": "CliffLevelNotEqual",
-      "id": "BanelingVolatileBurstDirectFallbackSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "VortexKillDamageDummy"
-      },
-      "Marker": {
-        "Link": "Effect/DigesterCreepSecondarySet"
-      },
-      "id": "VortexKillSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "YoinkMarkerBehavior"
+        "value": "MakePrecursorYoink"
       },
       "Marker": {
         "Link": "YoinkMarker"
@@ -17435,17 +17904,7 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "YoinkMarkerBehaviorSiegeTank"
-      },
-      "Marker": {
-        "Link": "YoinkMarker"
-      },
-      "id": "YoinkStartSetSiegeTank"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "YoinkMarkerBehaviorVikingAir"
+        "value": "MakePrecursorYoink"
       },
       "Marker": {
         "Link": "YoinkMarker"
@@ -17456,13 +17915,257 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
-        "value": "YoinkMarkerBehaviorVikingGround"
+        "value": "MakePrecursorYoink"
       },
       "Marker": {
         "Link": "YoinkMarker"
       },
       "ValidatorArray": "IsNotPhaseShielded",
       "id": "YoinkStartSetVikingGround"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "MakePrecursorYoink"
+      },
+      "Marker": {
+        "Link": "YoinkMarker"
+      },
+      "id": "YoinkStartSetSiegeTank"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "OracleVoidSiphonAddMinerals"
+      },
+      "id": "OracleVoidSiphonPeriodicSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "ParasiteSporeApplyBehavior"
+      },
+      "id": "ParasiteSporeGroundSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "ParasiteSporeApplyBehavior"
+      },
+      "id": "ParasiteSporeSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "ParasiticBombDelayTimedLife"
+      },
+      "id": "ParasiticBombOrderRelayDodgeSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "ParasiticBombDelayTimedLife"
+      },
+      "id": "ParasiticBombOrderRelaySet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "ParasiticBombGlazeMarkerAB"
+      },
+      "id": "ParasiticBombInitialSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "ParasiticBombGlazeMarkerRB"
+      },
+      "id": "ParasiticBombFinalSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "QueenInjectStunAB"
+      },
+      "ValidatorArray": {
+        "value": "QueenTargetFiltersInject"
+      },
+      "id": "SpawnLarvaSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "QueenMPEnsnareDamageDummy"
+      },
+      "ValidatorArray": "",
+      "id": "QueenMPEnsnareSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "QueenMPSpawnBroodlingsCreate"
+      },
+      "ValidatorArray": "",
+      "id": "QueenMPSpawnBroodlingsSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "RavagerCorrosiveBileForceFieldKill"
+      },
+      "id": "RavagerCorrosiveBileSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "RavagerCorrosiveBileWarningDummySearch"
+      },
+      "TargetLocationType": "Point",
+      "id": "RavagerCorrosiveBileLaunchSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "SpawnMutantLarvaRemoveHiddenBehavior"
+      },
+      "id": "SpawnLarvaExpireSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "Suicide"
+      },
+      "ValidatorArray": "CasterIsNotHidden",
+      "id": "VolatileBurst"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "SuicideRemove"
+      },
+      "id": "BroodlingEscortImpact"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "SuicideRemove"
+      },
+      "id": "BroodlingEscortImpactB"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "SuicideRemove"
+      },
+      "id": "ScourgeMPWeaponSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "SwarmHostEggAnimationMPAB"
+      },
+      "TargetLocationType": "Point",
+      "ValidatorArray": "InfestedTerransPlacementCheck",
+      "id": "VoidSwarmHostSpawnLocustSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "TransfusionAB"
+      },
+      "ValidatorArray": {
+        "value": "NotDisintegrating"
+      },
+      "id": "TransfusionImpactSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "UltraliskWeaponCooldownIssueOrder"
+      },
+      "TargetLocationType": "Point",
+      "id": "BurrowChargeImpactSetRevD"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "VolatileBurstDirectFallbackEnemyNeutralUnit"
+      },
+      "ValidatorArray": "CliffLevelNotEqual",
+      "id": "BanelingVolatileBurstDirectFallbackSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "VortexKillDamageAB"
+      },
+      "Marker": {
+        "Link": "Effect/DigesterCreepSecondarySet"
+      },
+      "id": "VortexKillSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "YoinkDelayPersistentSiegeTank"
+      },
+      "Marker": {
+        "Link": "YoinkMarker"
+      },
+      "id": "YoinkSetSiegeTank"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "YoinkDelayPersistentVikingAir"
+      },
+      "Marker": {
+        "Link": "YoinkMarker"
+      },
+      "ValidatorArray": "CasterIsAlive",
+      "id": "YoinkSetVikingAir"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "YoinkDelayPersistentVikingGround"
+      },
+      "Marker": {
+        "Link": "YoinkMarker"
+      },
+      "ValidatorArray": "CasterIsAlive",
+      "id": "YoinkSetVikingGround"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "YoinkRemoveTentacleBehavior"
+      },
+      "ValidatorArray": "IsNotMothershipCorePurifyNexus",
+      "id": "YoinkImpactSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "YoinkRemoveTentacleBehaviorSiegeTank"
+      },
+      "id": "YoinkImpactSetSiegeTank"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "YoinkRemoveTentacleBehaviorVikingAir"
+      },
+      "ValidatorArray": "IsNotPhaseShielded",
+      "id": "YoinkImpactSetVikingAir"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "YoinkRemoveTentacleBehaviorVikingGround"
+      },
+      "ValidatorArray": "IsNotPhaseShielded",
+      "id": "YoinkImpactSetVikingGround"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -17510,8 +18213,13 @@
       "id": "NeuralParasiteExpireSet"
     },
     {
+      "EffectArray": "SCVMovetoGatherSearchWorker",
+      "SetSource": 1,
+      "id": "SCVMovetoGatherSourceSet"
+    },
+    {
       "EffectArray": {
-        "value": "##abil####nNext##Delay"
+        "value": "##abil####n##Damage"
       },
       "ValidatorArray": "noMarkers",
       "default": "1",
@@ -17519,7 +18227,7 @@
     },
     {
       "EffectArray": {
-        "value": "##abil##2Delay"
+        "value": "##abil##MainDamage"
       },
       "Marker": {
         "MatchFlags": {
@@ -17531,179 +18239,232 @@
     },
     {
       "EffectArray": {
-        "value": "CritterFleeIssueOrder"
+        "value": "ChangelingDelayMovement"
+      },
+      "id": "ChangelingSpawnEffectSet"
+    },
+    {
+      "EffectArray": {
+        "value": "CritterFleeAB"
       },
       "TargetLocationType": "Point",
       "id": "CritterFleeSet"
     },
     {
       "EffectArray": {
-        "value": "GrappleCreatePlaceholderAB"
+        "value": "DisguiseEx3IssueAttackOnDisguise"
+      },
+      "ValidatorArray": "TargetAttackingCaster",
+      "id": "DisguiseEx3ChangeAttackedTargetSet"
+    },
+    {
+      "EffectArray": {
+        "value": "GrappleLaunchCasterSwitch"
       },
       "id": "GrappleCreatePlaceholderSet"
     },
     {
       "EffectArray": {
-        "value": "KD8PrecursorUnitKnockbackAB"
+        "value": "GrappleUnitKnockbackBy5PHLM"
       },
-      "id": "ReaperKD8KnockbackCreatePHSet"
+      "id": "GrappleUnitKnockbackBy5CreatePHSet"
     },
     {
       "EffectArray": {
-        "value": "MassiveKnockoverDummy"
-      },
-      "id": "MassiveKnockover"
-    },
-    {
-      "EffectArray": {
-        "value": "MothershipCoreMassRecallTeleport"
-      },
-      "ValidatorArray": {
-        "value": "NotLarvaEgg"
-      },
-      "id": "MothershipCoreMassRecallSet"
-    },
-    {
-      "EffectArray": {
-        "value": "MothershipCoreTeleportPlacement"
+        "value": "MakePrecursorCore"
       },
       "TargetLocationType": "Point",
       "id": "MothershipCoreTeleportPlacementSet"
     },
     {
       "EffectArray": {
-        "value": "MothershipMassRecallTeleport"
+        "value": "MothershipCoreMassRecallPostBehavior"
       },
       "ValidatorArray": {
-        "value": "NotLarvaEgg"
+        "value": "NotLarva"
+      },
+      "id": "MothershipCoreMassRecallSet"
+    },
+    {
+      "EffectArray": {
+        "value": "MothershipMassRecallPostBehavior"
+      },
+      "ValidatorArray": {
+        "value": "NotLarva"
       },
       "id": "MothershipMassRecallSet"
     },
     {
       "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
+        "value": "ReaperKD8KnockbackPHLM"
       },
-      "id": "GrappleUnitKnockbackBy5CreatePHSet"
+      "id": "ReaperKD8KnockbackCreatePHSet"
     },
     {
       "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy10CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy11CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy12CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy2CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy3CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy4CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy5CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy6CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy7CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy8CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitKnockbackBy9CreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "PrecursorUnitKnockbackAB"
-      },
-      "id": "UnitLaunchToTargetPointCreatePHSet"
-    },
-    {
-      "EffectArray": {
-        "value": "RepulserFieldIssueOrder"
+        "value": "RepulserFieldApplyForce"
       },
       "id": "RepulserFieldSet"
     },
     {
       "EffectArray": {
-        "value": "ShieldBatteryRechargeChanneled"
+        "value": "SCVMovetoAttack4Follow"
       },
       "ValidatorArray": {
-        "value": "noMarkers"
+        "value": "ConstructingSCVNotFollowOrderTargetBetter"
+      },
+      "id": "SCVMovetoAttack3ActiveAttackerSet"
+    },
+    {
+      "EffectArray": {
+        "value": "SCVMovetoAttack5Attack"
+      },
+      "ValidatorArray": "TargetHasMeleeWeapon",
+      "id": "SCVMovetoAttack2SetEffects"
+    },
+    {
+      "EffectArray": {
+        "value": "SCVMovetoAttack6EnumFinal"
+      },
+      "id": "SCVFinishBuildingSet"
+    },
+    {
+      "EffectArray": {
+        "value": "SCVMovetoBuildSeekAB"
+      },
+      "id": "SCVCancelBuildingSet"
+    },
+    {
+      "EffectArray": {
+        "value": "SCVMovetoBuildSeekRB"
+      },
+      "id": "SCVStartBuildingSet"
+    },
+    {
+      "EffectArray": {
+        "value": "ShieldBatteryRechargeChanneledOvercharged"
+      },
+      "ValidatorArray": {
+        "value": "NotInterceptor"
       },
       "id": "ShieldBatteryRechargeChanneledSet"
     },
     {
       "EffectArray": {
-        "value": "SlaynElementalGrabStunAB"
+        "value": "SlaynElementalGrabStunDrainHeal"
       },
       "id": "SlaynElementalGrabStunSet"
     },
     {
       "EffectArray": {
-        "value": "SnowGlazeStarterMPSearch"
+        "value": "Suicide"
+      },
+      "id": "MassiveKnockover"
+    },
+    {
+      "EffectArray": {
+        "value": "SuicideRemove"
+      },
+      "id": "MapmakerNeutralUnitGameStartModifierSet"
+    },
+    {
+      "EffectArray": {
+        "value": "SuicideRemove"
       },
       "id": "SnowGlazeStarterMPSet"
     },
     {
       "EffectArray": {
-        "value": "WorkerIssueGatherOrderProbe"
+        "value": "UnitKnockbackBy10PHLM"
       },
-      "id": "WorkerIssueGatherOrderSet"
+      "id": "UnitKnockbackBy10CreatePHSet"
     },
     {
       "EffectArray": {
-        "value": "WorkerRemoveGatherOrderDrone"
+        "value": "UnitKnockbackBy11PHLM"
+      },
+      "id": "UnitKnockbackBy11CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitKnockbackBy12PHLM"
+      },
+      "id": "UnitKnockbackBy12CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitKnockbackBy2PHLM"
+      },
+      "id": "UnitKnockbackBy2CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitKnockbackBy3PHLM"
+      },
+      "id": "UnitKnockbackBy3CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitKnockbackBy4PHLM"
+      },
+      "id": "UnitKnockbackBy4CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitKnockbackBy5PHLM"
+      },
+      "id": "UnitKnockbackBy5CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitKnockbackBy6PHLM"
+      },
+      "id": "UnitKnockbackBy6CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitKnockbackBy7PHLM"
+      },
+      "id": "UnitKnockbackBy7CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitKnockbackBy8PHLM"
+      },
+      "id": "UnitKnockbackBy8CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitKnockbackBy9PHLM"
+      },
+      "id": "UnitKnockbackBy9CreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "UnitLaunchToTargetPointLM"
+      },
+      "id": "UnitLaunchToTargetPointCreatePHSet"
+    },
+    {
+      "EffectArray": {
+        "value": "WorkerRemoveGatherOrderProbe"
       },
       "id": "WorkerRemoveGatherOrderSet"
     },
     {
       "EffectArray": {
-        "value": "WorkerVespeneWalkApplyBehaviorTimed"
+        "value": "WorkerStartStopIdleAbility"
       },
       "ValidatorArray": {
-        "value": "WorkerCasterGatheringThisCombine"
+        "value": "WorkerProbeHasNoVespeneAndNoBug"
       },
       "id": "WorkerStartStopIdleAbilitySet"
+    },
+    {
+      "EffectArray": {
+        "value": "WorkerVespeneWalkRemoveBehavior"
+      },
+      "id": "WorkerIssueGatherOrderSet"
     },
     {
       "TargetLocationType": "Point",
@@ -17774,6 +18535,18 @@
     {
       "CaseArray": [
         {
+          "Effect": "BurrowTransientAttackLastTarget"
+        },
+        {
+          "Effect": "BurrowTransientMoveLastTarget"
+        }
+      ],
+      "EditorCategories": "Race:Zerg",
+      "id": "BurrowTransientSwitch"
+    },
+    {
+      "CaseArray": [
+        {
           "Effect": "CrucioShockCannonBlast",
           "Validator": "IsSupplyDepotLowered",
           "index": "1"
@@ -17798,6 +18571,19 @@
       ],
       "EditorCategories": "Race:Zerg",
       "id": "FungalGrowthTargetOnCreepSwitch"
+    },
+    {
+      "CaseArray": [
+        {
+          "Effect": "SCVMovetoBuildChangeOwner",
+          "FallThrough": "1",
+          "Validator": "TargetIsAlly"
+        },
+        {
+          "Effect": "SCVMovetoBuildOrder"
+        }
+      ],
+      "id": "SCVMovetoBuildAllySwitch"
     },
     {
       "CaseArray": {
@@ -18115,16 +18901,16 @@
     }
   ],
   "CEffectTransferBehavior": {
-    "Behavior": "ParasiticBombTimer",
+    "Behavior": "ChangelingDeathDamageResponse",
     "Copy": 1,
     "EditorCategories": "Race:Zerg",
     "ImpactUnit": {
       "Value": "Target"
     },
     "LaunchUnit": {
-      "Effect": "ParasiticBombAB"
+      "Value": "Caster"
     },
-    "id": "ParasiticBombCUCopyBehavior"
+    "id": "KillOtherNearbyChangelingsTransferDeathResponse"
   },
   "CEffectUseCalldown": {
     "CalldownCount": 1,
