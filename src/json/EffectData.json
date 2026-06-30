@@ -2353,6 +2353,10 @@
     },
     {
       "EditorCategories": "Race:Zerg",
+      "id": "NeuralParasiteChildren"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
       "id": "ParasiticBombDelayTimedLife"
     },
     {
@@ -11777,7 +11781,7 @@
         "Effect": "SCVMovetoBuildSeekAB"
       },
       "MaxCount": 1,
-      "SearchFilters": "Ground,Worker;Neutral,Enemy,Stasis,Dead,Hidden",
+      "SearchFilters": "Ground,Worker;Ally,Neutral,Enemy,Stasis,Dead,Hidden",
       "SearchFlags": {
         "ExtendByUnitRadius": 1
       },
@@ -14556,6 +14560,17 @@
     {
       "EditorCategories": "Race:Protoss",
       "FacingLocation": {
+        "Value": "CasterUnit"
+      },
+      "FacingType": "LookAt",
+      "ModifyFlags": {
+        "InterpolateFacing": 1
+      },
+      "id": "MakeQueenFaceHatchery"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "FacingLocation": {
         "Value": "TargetUnit"
       },
       "FacingType": "LookAt",
@@ -15001,6 +15016,16 @@
       "id": "NexusShieldRechargeEnergy"
     },
     {
+      "ImpactUnit": {
+        "Value": "Source"
+      },
+      "VitalArray": {
+        "Change": -3,
+        "index": "Life"
+      },
+      "id": "ForcefieldMinusLifeTick"
+    },
+    {
       "SelectTransferFlags": {
         "SingleOnly": 1
       },
@@ -15020,6 +15045,14 @@
         "index": "Life"
       },
       "id": "Transfusion"
+    },
+    {
+      "ValidatorArray": "TargetIsForceField",
+      "VitalArray": {
+        "Change": -60,
+        "index": "Life"
+      },
+      "id": "ForcefieldMinusHalfLife"
     },
     {
       "VitalArray": [
@@ -17510,6 +17543,14 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
+        "1": "ForcefieldMinusHalfLife",
+        "value": "RavagerCorrosiveBileForceFieldKill"
+      },
+      "id": "RavagerCorrosiveBileSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
         "1": "FungalGrowthSlowMovementApplyBehavior",
         "value": "FungalGrowthApplyMovementBehavior"
       },
@@ -17988,7 +18029,7 @@
         "value": "QueenInjectStunAB"
       },
       "ValidatorArray": {
-        "value": "QueenTargetFiltersInject"
+        "value": "NotContaminated"
       },
       "id": "SpawnLarvaSet"
     },
@@ -18007,13 +18048,6 @@
       },
       "ValidatorArray": "",
       "id": "QueenMPSpawnBroodlingsSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RavagerCorrosiveBileForceFieldKill"
-      },
-      "id": "RavagerCorrosiveBileSet"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -18573,19 +18607,6 @@
       "id": "FungalGrowthTargetOnCreepSwitch"
     },
     {
-      "CaseArray": [
-        {
-          "Effect": "SCVMovetoBuildChangeOwner",
-          "FallThrough": "1",
-          "Validator": "TargetIsAlly"
-        },
-        {
-          "Effect": "SCVMovetoBuildOrder"
-        }
-      ],
-      "id": "SCVMovetoBuildAllySwitch"
-    },
-    {
       "CaseArray": {
         "Effect": "ATSLaserBatteryLM",
         "Validator": "GroundUnitFilter"
@@ -18735,6 +18756,12 @@
       "CaseDefault": "RavenScramblerMissileAB",
       "EditorCategories": "Race:Terran",
       "id": "RavenScramblerMissileABswitch"
+    },
+    {
+      "CaseArray": {
+        "Effect": "SCVMovetoBuildOrder"
+      },
+      "id": "SCVMovetoBuildAllySwitch"
     },
     {
       "CaseArray": {

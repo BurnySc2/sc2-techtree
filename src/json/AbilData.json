@@ -4092,7 +4092,9 @@
         "Smart": 1
       },
       "PrepEffect": "WidowMineTargetTintApplyBehavior",
-      "PrepTime": 1.5,
+      "PrepTime": {
+        "0": 1.19
+      },
       "Range": 5,
       "RangeSlop": 0,
       "TargetFilters": "Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
@@ -14925,7 +14927,7 @@
           },
           "Requirements": "HaveSpawningPool"
         },
-        "Effect": "",
+        "Effect": "MakeQueenFaceHatchery",
         "Time": "50",
         "Unit": "Queen",
         "index": "Train1"
@@ -15128,7 +15130,7 @@
               "ToSelection": 1
             }
           },
-          "Time": "42",
+          "Time": "45.51",
           "Unit": "Adept",
           "index": "Train7"
         },
@@ -15138,7 +15140,7 @@
               "ToSelection": 1
             }
           },
-          "Time": "60.66",
+          "Time": "56",
           "Unit": "DarkTemplar",
           "index": "Train5"
         },
@@ -15148,7 +15150,7 @@
               "ToSelection": 1
             }
           },
-          "Time": "60.66",
+          "Time": "56",
           "Unit": "HighTemplar",
           "index": "Train4"
         }
@@ -15281,7 +15283,7 @@
           "Button": {
             "Requirements": ""
           },
-          "Time": "45",
+          "Time": "47.6",
           "Unit": "Reaper",
           "index": "Train2"
         },
@@ -15370,7 +15372,7 @@
       "MaxCargoCount": 8,
       "MaxCargoSize": 8,
       "Range": 5,
-      "SearchRadius": 5,
+      "SearchRadius": 5.875,
       "TargetFilters": "Visible;Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden",
       "TotalCargoSpace": 8,
       "UnloadCargoEffect": "WarpPrismUnloadCargoSetEffect",

@@ -1625,7 +1625,7 @@
       "DisplayName": "Weapon/Name/GuardianMPWeapon",
       "EditorCategories": "Race:Zerg",
       "Effect": "InfestorWeaponLM",
-      "Icon": "Assets\\Textures\\btn-upgrade-zerg-airattacks-level0.dds",
+      "Icon": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level0.dds",
       "MinScanRange": 6.5,
       "Name": "Weapon/Name/GuardianMPWeapon",
       "Period": 1.754,

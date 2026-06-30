@@ -3426,7 +3426,7 @@
         {
           "Operation": "Set",
           "Reference": "Weapon,InfestorWeaponAcidSpores,Icon",
-          "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level2.dds"
+          "Value": "Assets\\Textures\\btn-upgrade-zerg-missileattacks-level3.dds"
         },
         {
           "Operation": "Set",
@@ -3534,7 +3534,7 @@
       "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level1.dds",
       "LeaderLevel": 1,
       "Name": "Upgrade/Name/ZergGroundArmorsLevel1",
-      "ScoreAmount": 300,
+      "ScoreAmount": 200,
       "id": "ZergGroundArmorsLevel1",
       "parent": "ZergGroundArmors"
     },
@@ -3602,7 +3602,7 @@
       "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level3.dds",
       "LeaderLevel": 3,
       "Name": "Upgrade/Name/ZergGroundArmorsLevel3",
-      "ScoreAmount": 500,
+      "ScoreAmount": 400,
       "id": "ZergGroundArmorsLevel3",
       "parent": "ZergGroundArmors"
     },
@@ -4104,7 +4104,7 @@
       "Icon": "Assets\\Textures\\btn-upgrade-zerg-flyercarapace-level2.dds",
       "LeaderLevel": 2,
       "Name": "Upgrade/Name/ZergFlyerArmorsLevel2",
-      "ScoreAmount": 350,
+      "ScoreAmount": 300,
       "id": "ZergFlyerArmorsLevel2",
       "parent": "ZergFlyerArmors"
     },

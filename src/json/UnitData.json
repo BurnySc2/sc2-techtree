@@ -642,8 +642,8 @@
         "Terrazine": 1,
         "Vespene": 1
       },
-      "ScoreKill": 575,
-      "ScoreMake": 525,
+      "ScoreKill": 600,
+      "ScoreMake": 550,
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 2,
       "Sight": 12,
@@ -824,8 +824,8 @@
         "Terrazine": 1,
         "Vespene": 1
       },
-      "ScoreKill": 325,
-      "ScoreMake": 275,
+      "ScoreKill": 350,
+      "ScoreMake": 300,
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 2,
       "Sight": 12,
@@ -988,8 +988,8 @@
         "Terrazine": 1,
         "Vespene": 1
       },
-      "ScoreKill": 925,
-      "ScoreMake": 875,
+      "ScoreKill": 950,
+      "ScoreMake": 900,
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 2,
       "Sight": 12,
@@ -3329,8 +3329,8 @@
       "Race": "Zerg",
       "Radius": 0.875,
       "RankDisplay": "Always",
-      "ScoreKill": 150,
-      "ScoreMake": 150,
+      "ScoreKill": 175,
+      "ScoreMake": 175,
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 0.875,
       "Sight": 9,
@@ -4345,8 +4345,8 @@
       "LateralAcceleration": 2.0625,
       "LifeArmor": 2,
       "LifeArmorName": "Unit/LifeArmorName/ProtossBuildingPlating",
-      "LifeMax": 350,
-      "LifeStart": 350,
+      "LifeMax": 400,
+      "LifeStart": 400,
       "MinimapRadius": 1.375,
       "Mob": "Multiplayer",
       "Mover": "Fly",
@@ -4363,8 +4363,8 @@
       "ShieldArmorName": "Unit/ShieldArmorName/ProtossPlasmaShields",
       "ShieldRegenDelay": 10,
       "ShieldRegenRate": 2,
-      "ShieldsMax": 350,
-      "ShieldsStart": 350,
+      "ShieldsMax": 200,
+      "ShieldsStart": 200,
       "Sight": 14,
       "Speed": 1.6054,
       "SubgroupPriority": 96,
@@ -9290,7 +9290,7 @@
       "Race": "Zerg",
       "Radius": 0.875,
       "RankDisplay": "Always",
-      "ScoreKill": 150,
+      "ScoreKill": 175,
       "SelectAlias": "Queen",
       "SeparationRadius": 0,
       "Sight": 5,
@@ -17772,22 +17772,13 @@
         "Link": "PowerSource"
       },
       "CardLayouts": {
-        "LayoutButtons": [
-          {
-            "AbilCmd": "BuildInProgress,Cancel",
-            "Column": "4",
-            "Face": "CancelBuilding",
-            "Row": "2",
-            "Type": "AbilCmd"
-          },
-          {
-            "Column": "0",
-            "Face": "ImprovedEnergy",
-            "Requirements": "NearWarpgateorNexus",
-            "Row": "2",
-            "Type": "Passive"
-          }
-        ]
+        "LayoutButtons": {
+          "AbilCmd": "BuildInProgress,Cancel",
+          "Column": "4",
+          "Face": "CancelBuilding",
+          "Row": "2",
+          "Type": "AbilCmd"
+        }
       },
       "Collide": {
         "Burrow": 1,
@@ -25498,6 +25489,16 @@
           "Link": "PowerSourceFast"
         }
       ],
+      "CardLayouts": {
+        "LayoutButtons": {
+          "Column": "0",
+          "Face": "ImprovedEnergy",
+          "Requirements": "NearWarpgateorNexus",
+          "Row": "2",
+          "Type": "Passive"
+        },
+        "index": "0"
+      },
       "TechAliasArray": "Alias_Pylon",
       "id": "PylonOvercharged",
       "parent": "Pylon"
@@ -26027,6 +26028,14 @@
         }
       ],
       "AttackTargetPriority": 20,
+      "BehaviorArray": [
+        {
+          "Link": "ForceFieldHalfLife"
+        },
+        {
+          "Link": "ForceFieldHealthExpiry"
+        }
+      ],
       "CardLayouts": [
         {
           "LayoutButtons": {
@@ -26072,8 +26081,8 @@
         "Untargetable": 1
       },
       "InnerRadius": 0.5,
-      "LifeMax": 15,
-      "LifeStart": 15,
+      "LifeMax": 120,
+      "LifeStart": 120,
       "MinimapRadius": 0,
       "PlacementFootprint": "Footprint3x3ForceField",
       "PlaneArray": {
