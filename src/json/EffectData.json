@@ -1540,10 +1540,6 @@
       "id": "SCVMovetoBuildSeekAB"
     },
     {
-      "Behavior": "SCVMovetoBuildAllyAntiGrief",
-      "id": "SCVMovetoBuildAntigriefAB"
-    },
-    {
       "Behavior": "SalvageBaneling",
       "EditorCategories": "Race:Zerg",
       "id": "SalvageBanelingApplyBehavior"
@@ -2350,6 +2346,10 @@
     {
       "EditorCategories": "Race:Zerg",
       "id": "LocustMPTimedLife"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "id": "NeuralParasiteChildren"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -7496,25 +7496,6 @@
       "AttributeBonus": {
         "Light": 5
       },
-      "Death": "Fire",
-      "EditorCategories": "Race:Protoss",
-      "Kind": "Ranged",
-      "KindSplash": "Splash",
-      "ValidatorArray": {
-        "0": "MultipleHitGroundOnlyAttackTargetFilter",
-        "1": "noMarkers",
-        "2": "ColossusAttackDamageMaxRange",
-        "value": "noMarkers"
-      },
-      "Visibility": "Visible",
-      "id": "ThermalLancesMU",
-      "parent": "DU_WEAP"
-    },
-    {
-      "Amount": 10,
-      "AttributeBonus": {
-        "Light": 5
-      },
       "ValidatorArray": [
         {
           "index": "0",
@@ -7615,6 +7596,25 @@
       "Amount": 110,
       "EditorCategories": "Race:Zerg",
       "id": "ScourgeMPWeaponDamage"
+    },
+    {
+      "Amount": 12,
+      "AttributeBonus": {
+        "Light": 3
+      },
+      "Death": "Fire",
+      "EditorCategories": "Race:Protoss",
+      "Kind": "Ranged",
+      "KindSplash": "Splash",
+      "ValidatorArray": {
+        "0": "MultipleHitGroundOnlyAttackTargetFilter",
+        "1": "noMarkers",
+        "2": "ColossusAttackDamageMaxRange",
+        "value": "noMarkers"
+      },
+      "Visibility": "Visible",
+      "id": "ThermalLancesMU",
+      "parent": "DU_WEAP"
     },
     {
       "Amount": 12,
@@ -7860,7 +7860,7 @@
       "Death": "Blast",
       "EditorCategories": "Race:Terran",
       "Kind": "Spell",
-      "ValidatorArray": "DetectedORNotCloakedBuried",
+      "ValidatorArray": "CycloneCloakFix",
       "id": "CycloneWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
     },
@@ -11770,14 +11770,14 @@
     },
     {
       "AreaArray": {
-        "Effect": "SCVMovetoBuildAllySwitch",
+        "Effect": "SCVMovetoBuildOrder",
         "Radius": "1"
       },
       "ExcludeArray": {
         "Effect": "SCVMovetoBuildSeekAB"
       },
       "MaxCount": 1,
-      "SearchFilters": "Ground,Worker;Neutral,Enemy,Stasis,Dead,Hidden",
+      "SearchFilters": "Ground,Worker;Ally,Neutral,Enemy,Stasis,Dead,Hidden",
       "SearchFlags": {
         "ExtendByUnitRadius": 1
       },
@@ -13122,7 +13122,7 @@
         "Value": "SourceUnit"
       },
       "ValidatorArray": {
-        "value": "IsNotActiveBuilderSCV"
+        "value": "IsSCV"
       },
       "id": "SCVMovetoBuildOrder"
     },
@@ -14556,6 +14556,17 @@
     {
       "EditorCategories": "Race:Protoss",
       "FacingLocation": {
+        "Value": "CasterUnit"
+      },
+      "FacingType": "LookAt",
+      "ModifyFlags": {
+        "InterpolateFacing": 1
+      },
+      "id": "MakeQueenFaceHatchery"
+    },
+    {
+      "EditorCategories": "Race:Protoss",
+      "FacingLocation": {
         "Value": "TargetUnit"
       },
       "FacingType": "LookAt",
@@ -14958,19 +14969,6 @@
     },
     {
       "ImpactUnit": {
-        "Effect": "SCVMovetoBuildSearchWorker",
-        "Value": "Source"
-      },
-      "ModifyFlags": {
-        "Owner": 1
-      },
-      "ModifyOwnerPlayer": {
-        "Value": "Target"
-      },
-      "id": "SCVMovetoBuildChangeOwner"
-    },
-    {
-      "ImpactUnit": {
         "Effect": "SlaynElementalGrabLM",
         "Value": "Caster"
       },
@@ -15001,6 +14999,16 @@
       "id": "NexusShieldRechargeEnergy"
     },
     {
+      "ImpactUnit": {
+        "Value": "Source"
+      },
+      "VitalArray": {
+        "Change": -3,
+        "index": "Life"
+      },
+      "id": "ForcefieldMinusLifeTick"
+    },
+    {
       "SelectTransferFlags": {
         "SingleOnly": 1
       },
@@ -15020,6 +15028,14 @@
         "index": "Life"
       },
       "id": "Transfusion"
+    },
+    {
+      "ValidatorArray": "TargetIsForceField",
+      "VitalArray": {
+        "Change": -60,
+        "index": "Life"
+      },
+      "id": "ForcefieldMinusHalfLife"
     },
     {
       "VitalArray": [
@@ -15709,10 +15725,6 @@
     {
       "BehaviorLink": "SCVMoveToBuildSeek",
       "id": "SCVMovetoBuildSeekRB"
-    },
-    {
-      "BehaviorLink": "SCVMovetoBuildAllyAntiGrief",
-      "id": "SCVMovetoBuildAntigriefRB"
     },
     {
       "BehaviorLink": "SalvageShared",
@@ -17510,6 +17522,14 @@
     {
       "EditorCategories": "Race:Zerg",
       "EffectArray": {
+        "1": "ForcefieldMinusHalfLife",
+        "value": "RavagerCorrosiveBileForceFieldKill"
+      },
+      "id": "RavagerCorrosiveBileSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
         "1": "FungalGrowthSlowMovementApplyBehavior",
         "value": "FungalGrowthApplyMovementBehavior"
       },
@@ -17988,7 +18008,7 @@
         "value": "QueenInjectStunAB"
       },
       "ValidatorArray": {
-        "value": "QueenTargetFiltersInject"
+        "value": "NotContaminated"
       },
       "id": "SpawnLarvaSet"
     },
@@ -18007,13 +18027,6 @@
       },
       "ValidatorArray": "",
       "id": "QueenMPSpawnBroodlingsSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "value": "RavagerCorrosiveBileForceFieldKill"
-      },
-      "id": "RavagerCorrosiveBileSet"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -18571,19 +18584,6 @@
       ],
       "EditorCategories": "Race:Zerg",
       "id": "FungalGrowthTargetOnCreepSwitch"
-    },
-    {
-      "CaseArray": [
-        {
-          "Effect": "SCVMovetoBuildChangeOwner",
-          "FallThrough": "1",
-          "Validator": "TargetIsAlly"
-        },
-        {
-          "Effect": "SCVMovetoBuildOrder"
-        }
-      ],
-      "id": "SCVMovetoBuildAllySwitch"
     },
     {
       "CaseArray": {

@@ -4092,7 +4092,9 @@
         "Smart": 1
       },
       "PrepEffect": "WidowMineTargetTintApplyBehavior",
-      "PrepTime": 1.5,
+      "PrepTime": {
+        "0": 1.19
+      },
       "Range": 5,
       "RangeSlop": 0,
       "TargetFilters": "Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
@@ -8738,7 +8740,7 @@
           "CountMax": 1,
           "CountStart": 1,
           "CountUse": 1,
-          "TimeUse": 10
+          "TimeUse": 5.6
         }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
@@ -8755,7 +8757,7 @@
         "SectionArray": [
           {
             "DurationArray": {
-              "Delay": 10
+              "Delay": 5.6
             },
             "EffectArray": {
               "Finish": "HasMorphedBefore"
@@ -8764,13 +8766,13 @@
           },
           {
             "DurationArray": {
-              "Delay": 10
+              "Delay": 5.6
             },
             "index": "Stats"
           },
           {
             "DurationArray": {
-              "Duration": 10
+              "Duration": 5.6
             },
             "index": "Actor"
           }
@@ -8819,12 +8821,29 @@
         "ShowProgress": 1
       },
       "InfoArray": {
-        "SectionArray": {
-          "EffectArray": {
-            "Finish": "HasMorphedBefore"
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 5.6
+            },
+            "EffectArray": {
+              "Finish": "HasMorphedBefore"
+            },
+            "index": "Abils"
           },
-          "index": "Abils"
-        },
+          {
+            "DurationArray": {
+              "Delay": 5.6
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 5.6
+            },
+            "index": "Actor"
+          }
+        ],
         "Unit": "WarpGate"
       },
       "RefundFraction": {
@@ -9635,6 +9654,7 @@
         "Flags": {
           "ToSelection": 1
         },
+        "Requirements": "WarpgateNotDemorphing",
         "index": "Execute"
       },
       "Cost": {
@@ -9656,7 +9676,7 @@
         "SectionArray": [
           {
             "DurationArray": {
-              "Delay": 7
+              "Delay": 5.6
             },
             "EffectArray": {
               "Finish": "UpgradeToWarpGateAutoCastDisabler"
@@ -9665,13 +9685,13 @@
           },
           {
             "DurationArray": {
-              "Delay": 7
+              "Delay": 5.6
             },
             "index": "Stats"
           },
           {
             "DurationArray": {
-              "Duration": 7
+              "Duration": 5.6
             },
             "index": "Actor"
           }
@@ -14925,7 +14945,7 @@
           },
           "Requirements": "HaveSpawningPool"
         },
-        "Effect": "",
+        "Effect": "MakeQueenFaceHatchery",
         "Time": "50",
         "Unit": "Queen",
         "index": "Train1"
@@ -15096,6 +15116,17 @@
           "Button": {
             "Flags": {
               "ToSelection": 1
+            },
+            "Requirements": "GatewayNotMorphing"
+          },
+          "Time": "38",
+          "Unit": "Zealot",
+          "index": "Train1"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
             }
           },
           "Time": "32.66",
@@ -15118,17 +15149,7 @@
               "ToSelection": 1
             }
           },
-          "Time": "38",
-          "Unit": "Zealot",
-          "index": "Train1"
-        },
-        {
-          "Button": {
-            "Flags": {
-              "ToSelection": 1
-            }
-          },
-          "Time": "42",
+          "Time": "45.51",
           "Unit": "Adept",
           "index": "Train7"
         },
@@ -15138,7 +15159,7 @@
               "ToSelection": 1
             }
           },
-          "Time": "60.66",
+          "Time": "56",
           "Unit": "DarkTemplar",
           "index": "Train5"
         },
@@ -15148,7 +15169,7 @@
               "ToSelection": 1
             }
           },
-          "Time": "60.66",
+          "Time": "56",
           "Unit": "HighTemplar",
           "index": "Train4"
         }
@@ -15281,7 +15302,7 @@
           "Button": {
             "Requirements": ""
           },
-          "Time": "45",
+          "Time": "47.6",
           "Unit": "Reaper",
           "index": "Train2"
         },
@@ -15370,7 +15391,7 @@
       "MaxCargoCount": 8,
       "MaxCargoSize": 8,
       "Range": 5,
-      "SearchRadius": 5,
+      "SearchRadius": 5.875,
       "TargetFilters": "Visible;Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden",
       "TotalCargoSpace": 8,
       "UnloadCargoEffect": "WarpPrismUnloadCargoSetEffect",
@@ -15642,7 +15663,8 @@
         "Button": {
           "Flags": {
             "ToSelection": 1
-          }
+          },
+          "Requirements": "WarpgateNotDemorphing"
         },
         "Charge": {
           "TimeStart": "32.8",
