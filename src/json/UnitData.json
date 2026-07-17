@@ -1292,13 +1292,6 @@
             "Type": "AbilCmd"
           },
           {
-            "AbilCmd": "OverlordTransport,LoadAll",
-            "Column": "2",
-            "Face": "LoadNearbyOverlord",
-            "Row": "1",
-            "Type": "AbilCmd"
-          },
-          {
             "AbilCmd": "OverlordTransport,UnloadAt",
             "Column": "3",
             "Face": "OverlordTransportUnload",
@@ -1875,13 +1868,6 @@
             "Column": "2",
             "Face": "WarpPrismLoad",
             "Row": "2",
-            "Type": "AbilCmd"
-          },
-          {
-            "AbilCmd": "WarpPrismTransport,LoadAll",
-            "Column": "2",
-            "Face": "LoadNearbyWarpPrism",
-            "Row": "1",
             "Type": "AbilCmd"
           },
           {
@@ -2672,13 +2658,6 @@
             "Column": "2",
             "Face": "MedivacLoad",
             "Row": "2",
-            "Type": "AbilCmd"
-          },
-          {
-            "AbilCmd": "MedivacTransport,LoadAll",
-            "Column": "2",
-            "Face": "LoadNearbyMedivac",
-            "Row": "1",
             "Type": "AbilCmd"
           },
           {
@@ -5136,7 +5115,7 @@
         "PreventDestroy": 1,
         "UseLineOfSight": 1
       },
-      "Food": -3,
+      "Food": -2,
       "GlossaryCategory": "Unit/Category/TerranUnits",
       "GlossaryPriority": 70,
       "GlossaryStrongArray": {
@@ -13552,13 +13531,6 @@
             "Type": "AbilCmd"
           },
           {
-            "AbilCmd": "WarpPrismTransport,LoadAll",
-            "Column": "2",
-            "Face": "LoadNearbyWarpPrism",
-            "Row": "1",
-            "Type": "AbilCmd"
-          },
-          {
             "AbilCmd": "WarpPrismTransport,UnloadAt",
             "Column": "3",
             "Face": "WarpPrismUnloadAll",
@@ -15039,7 +15011,7 @@
       },
       "CostCategory": "Economy",
       "CostResource": {
-        "Minerals": 550
+        "Minerals": 450
       },
       "DeathRevealRadius": 3,
       "Description": "Button/Tooltip/OrbitalCommandUnit",
@@ -15084,8 +15056,8 @@
         "Terrazine": 1,
         "Vespene": 1
       },
-      "ScoreKill": 550,
-      "ScoreMake": 550,
+      "ScoreKill": 450,
+      "ScoreMake": 450,
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 2.5,
       "Sight": 11,
@@ -15429,7 +15401,7 @@
       },
       "CostCategory": "Economy",
       "CostResource": {
-        "Minerals": 400
+        "Minerals": 300
       },
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
@@ -15473,8 +15445,8 @@
         "Terrazine": 1,
         "Vespene": 1
       },
-      "ScoreKill": 400,
-      "ScoreMake": 400,
+      "ScoreKill": 300,
+      "ScoreMake": 300,
       "ScoreResult": "BuildOrder",
       "SeparationRadius": 2.5,
       "Sight": 11,
@@ -16787,13 +16759,6 @@
             "Type": "AbilCmd"
           },
           {
-            "AbilCmd": "GatewayTrain,Train5",
-            "Column": "1",
-            "Face": "DarkTemplar",
-            "Row": "1",
-            "Type": "AbilCmd"
-          },
-          {
             "AbilCmd": "GatewayTrain,Train6",
             "Column": "1",
             "Face": "Sentry",
@@ -16815,6 +16780,13 @@
             "Row": "2",
             "Type": "AbilCmd",
             "index": "9"
+          },
+          {
+            "AbilCmd": "MorphBackToGateway,Execute",
+            "Column": "1",
+            "Face": "MorphBackToGateway",
+            "Row": "2",
+            "Type": "AbilCmd"
           },
           {
             "AbilCmd": "MorphBuildingGatewayWarpGateFree,Cancel",
@@ -16879,6 +16851,13 @@
             "AbilCmd": "WarpGateTrain,Train4",
             "Column": "0",
             "Face": "HighTemplar",
+            "Row": "1",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "WarpGateTrain,Train5",
+            "Column": "1",
+            "Face": "DarkTemplar",
             "Row": "1",
             "Type": "AbilCmd"
           },
@@ -16952,7 +16931,7 @@
       "ShieldsStart": 500,
       "Sight": 9,
       "StationaryTurningRate": 719.4726,
-      "SubgroupPriority": 30,
+      "SubgroupPriority": 24,
       "TacticalAIThink": "AIThinkGateway",
       "TechAliasArray": "Alias_Gateway",
       "TechTreeProducedUnitArray": {
@@ -17621,6 +17600,48 @@
       "CardLayouts": {
         "LayoutButtons": [
           {
+            "AbilCmd": "GatewayTrain,Train1",
+            "Column": "0",
+            "Face": "Zealot",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "GatewayTrain,Train2",
+            "Column": "2",
+            "Face": "Stalker",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "GatewayTrain,Train4",
+            "Column": "0",
+            "Face": "HighTemplar",
+            "Row": "1",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "GatewayTrain,Train5",
+            "Column": "1",
+            "Face": "DarkTemplar",
+            "Row": "1",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "GatewayTrain,Train6",
+            "Column": "1",
+            "Face": "Sentry",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "GatewayTrain,Train7",
+            "Column": "3",
+            "Face": "WarpInAdept",
+            "Row": "0",
+            "Type": "AbilCmd"
+          },
+          {
             "AbilCmd": "MorphBackToGateway,Cancel",
             "Column": "4",
             "Face": "Cancel",
@@ -17635,10 +17656,24 @@
             "Type": "AbilCmd"
           },
           {
+            "AbilCmd": "MorphBuildingGatewayWarpGateFree,Execute",
+            "Column": "0",
+            "Face": "UpgradeToWarpGate",
+            "Row": "2",
+            "Type": "AbilCmd"
+          },
+          {
             "AbilCmd": "Rally,Rally1",
             "Column": "4",
             "Face": "Rally",
             "Row": "1",
+            "Type": "AbilCmd"
+          },
+          {
+            "AbilCmd": "UpgradeToWarpGate,Execute",
+            "Column": "0",
+            "Face": "UpgradeToWarpGate",
+            "Row": "2",
             "Type": "AbilCmd"
           },
           {
@@ -17681,12 +17716,6 @@
             "Column": "3",
             "Face": "WarpInAdept",
             "Row": "0",
-            "Type": "AbilCmd"
-          },
-          {
-            "Column": "0",
-            "Face": "UpgradeToWarpGate",
-            "Row": "2",
             "Type": "AbilCmd"
           }
         ]
@@ -17740,7 +17769,7 @@
       "Radius": 1.75,
       "ScoreKill": 150,
       "ScoreResult": "BuildOrder",
-      "SelectAlias": "Gateway",
+      "SelectAlias": "WarpGate",
       "SeparationRadius": 1.75,
       "ShieldArmorName": "Unit/ShieldArmorName/ProtossPlasmaShields",
       "ShieldRegenDelay": 10,
@@ -17749,7 +17778,7 @@
       "ShieldsStart": 500,
       "Sight": 9,
       "StationaryTurningRate": 719.4726,
-      "SubgroupPriority": 24,
+      "SubgroupPriority": 30,
       "TechAliasArray": "Alias_Gateway",
       "TurningRate": 719.4726,
       "id": "WarpGate"
@@ -22250,7 +22279,7 @@
       },
       "CostCategory": "Economy",
       "CostResource": {
-        "Minerals": 400
+        "Minerals": 300
       },
       "DeathRevealRadius": 3,
       "EditorCategories": "ObjectType:Structure,ObjectFamily:Melee",
@@ -22283,7 +22312,7 @@
       "Race": "Terr",
       "Radius": 2.5,
       "RepairTime": 100,
-      "ScoreKill": 400,
+      "ScoreKill": 300,
       "SeparationRadius": 2.5,
       "Sight": 11,
       "Speed": 0.9375,
@@ -25092,7 +25121,7 @@
       },
       "CostCategory": "Economy",
       "CostResource": {
-        "Minerals": 550
+        "Minerals": 450
       },
       "DamageDealtXP": 1,
       "DamageTakenXP": 1,
@@ -25130,7 +25159,7 @@
       "Race": "Terr",
       "Radius": 2.5,
       "RepairTime": 135,
-      "ScoreKill": 550,
+      "ScoreKill": 450,
       "SeparationRadius": 2.5,
       "Sight": 11,
       "Speed": 0.9375,

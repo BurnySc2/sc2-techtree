@@ -8740,7 +8740,7 @@
           "CountMax": 1,
           "CountStart": 1,
           "CountUse": 1,
-          "TimeUse": 10
+          "TimeUse": 5.6
         }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
@@ -8757,7 +8757,7 @@
         "SectionArray": [
           {
             "DurationArray": {
-              "Delay": 10
+              "Delay": 5.6
             },
             "EffectArray": {
               "Finish": "HasMorphedBefore"
@@ -8766,13 +8766,13 @@
           },
           {
             "DurationArray": {
-              "Delay": 10
+              "Delay": 5.6
             },
             "index": "Stats"
           },
           {
             "DurationArray": {
-              "Duration": 10
+              "Duration": 5.6
             },
             "index": "Actor"
           }
@@ -8821,12 +8821,29 @@
         "ShowProgress": 1
       },
       "InfoArray": {
-        "SectionArray": {
-          "EffectArray": {
-            "Finish": "HasMorphedBefore"
+        "SectionArray": [
+          {
+            "DurationArray": {
+              "Delay": 5.6
+            },
+            "EffectArray": {
+              "Finish": "HasMorphedBefore"
+            },
+            "index": "Abils"
           },
-          "index": "Abils"
-        },
+          {
+            "DurationArray": {
+              "Delay": 5.6
+            },
+            "index": "Stats"
+          },
+          {
+            "DurationArray": {
+              "Duration": 5.6
+            },
+            "index": "Actor"
+          }
+        ],
         "Unit": "WarpGate"
       },
       "RefundFraction": {
@@ -9637,6 +9654,7 @@
         "Flags": {
           "ToSelection": 1
         },
+        "Requirements": "WarpgateNotDemorphing",
         "index": "Execute"
       },
       "Cost": {
@@ -9658,7 +9676,7 @@
         "SectionArray": [
           {
             "DurationArray": {
-              "Delay": 7
+              "Delay": 5.6
             },
             "EffectArray": {
               "Finish": "UpgradeToWarpGateAutoCastDisabler"
@@ -9667,13 +9685,13 @@
           },
           {
             "DurationArray": {
-              "Delay": 7
+              "Delay": 5.6
             },
             "index": "Stats"
           },
           {
             "DurationArray": {
-              "Duration": 7
+              "Duration": 5.6
             },
             "index": "Actor"
           }
@@ -15098,6 +15116,17 @@
           "Button": {
             "Flags": {
               "ToSelection": 1
+            },
+            "Requirements": "GatewayNotMorphing"
+          },
+          "Time": "38",
+          "Unit": "Zealot",
+          "index": "Train1"
+        },
+        {
+          "Button": {
+            "Flags": {
+              "ToSelection": 1
             }
           },
           "Time": "32.66",
@@ -15113,16 +15142,6 @@
           "Time": "38",
           "Unit": "Stalker",
           "index": "Train2"
-        },
-        {
-          "Button": {
-            "Flags": {
-              "ToSelection": 1
-            }
-          },
-          "Time": "38",
-          "Unit": "Zealot",
-          "index": "Train1"
         },
         {
           "Button": {
@@ -15644,7 +15663,8 @@
         "Button": {
           "Flags": {
             "ToSelection": 1
-          }
+          },
+          "Requirements": "WarpgateNotDemorphing"
         },
         "Charge": {
           "TimeStart": "32.8",

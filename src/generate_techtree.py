@@ -112,6 +112,8 @@ RESEARCH_EXCLUDE = {
 # Requirements to exclude - internal game mechanics, not real building requirements
 REQUIREMENT_EXCLUDE = {
     "HasQueuedAddon",  # internal addon slot occupancy flag
+    "GatewayNotMorphing",  # internal gateway morph-state check
+    "WarpgateNotDemorphing",  # internal warp gate morph-state check
 }
 
 

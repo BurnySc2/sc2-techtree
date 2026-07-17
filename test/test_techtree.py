@@ -713,6 +713,19 @@ class TestOverseer:
         assert "UseOverseerMorph" not in requires
 
 
+class TestZealot:
+    def test_zealot_no_requires(self, techtree_data: dict) -> None:
+        """Zealot should have no requirements.
+
+        GatewayNotMorphing/WarpgateNotDemorphing are runtime state checks,
+        not tech tree requirements.
+        """
+        zealot = techtree_data["Units"]["Zealot"]
+        requires = zealot.get("requires", [])
+        assert "GatewayNotMorphing" not in requires
+        assert "WarpgateNotDemorphing" not in requires
+
+
 class TestParseRequirement:
     def test_parse_requirement_use_prefix_returns_empty(self) -> None:
         """Use* requirements should be skipped (they are ability/upgrade prerequisites, not structures)."""

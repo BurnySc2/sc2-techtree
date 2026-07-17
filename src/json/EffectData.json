@@ -1540,10 +1540,6 @@
       "id": "SCVMovetoBuildSeekAB"
     },
     {
-      "Behavior": "SCVMovetoBuildAllyAntiGrief",
-      "id": "SCVMovetoBuildAntigriefAB"
-    },
-    {
       "Behavior": "SalvageBaneling",
       "EditorCategories": "Race:Zerg",
       "id": "SalvageBanelingApplyBehavior"
@@ -7500,25 +7496,6 @@
       "AttributeBonus": {
         "Light": 5
       },
-      "Death": "Fire",
-      "EditorCategories": "Race:Protoss",
-      "Kind": "Ranged",
-      "KindSplash": "Splash",
-      "ValidatorArray": {
-        "0": "MultipleHitGroundOnlyAttackTargetFilter",
-        "1": "noMarkers",
-        "2": "ColossusAttackDamageMaxRange",
-        "value": "noMarkers"
-      },
-      "Visibility": "Visible",
-      "id": "ThermalLancesMU",
-      "parent": "DU_WEAP"
-    },
-    {
-      "Amount": 10,
-      "AttributeBonus": {
-        "Light": 5
-      },
       "ValidatorArray": [
         {
           "index": "0",
@@ -7619,6 +7596,25 @@
       "Amount": 110,
       "EditorCategories": "Race:Zerg",
       "id": "ScourgeMPWeaponDamage"
+    },
+    {
+      "Amount": 12,
+      "AttributeBonus": {
+        "Light": 3
+      },
+      "Death": "Fire",
+      "EditorCategories": "Race:Protoss",
+      "Kind": "Ranged",
+      "KindSplash": "Splash",
+      "ValidatorArray": {
+        "0": "MultipleHitGroundOnlyAttackTargetFilter",
+        "1": "noMarkers",
+        "2": "ColossusAttackDamageMaxRange",
+        "value": "noMarkers"
+      },
+      "Visibility": "Visible",
+      "id": "ThermalLancesMU",
+      "parent": "DU_WEAP"
     },
     {
       "Amount": 12,
@@ -7864,7 +7860,7 @@
       "Death": "Blast",
       "EditorCategories": "Race:Terran",
       "Kind": "Spell",
-      "ValidatorArray": "DetectedORNotCloakedBuried",
+      "ValidatorArray": "CycloneCloakFix",
       "id": "CycloneWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
     },
@@ -11774,7 +11770,7 @@
     },
     {
       "AreaArray": {
-        "Effect": "SCVMovetoBuildAllySwitch",
+        "Effect": "SCVMovetoBuildOrder",
         "Radius": "1"
       },
       "ExcludeArray": {
@@ -13126,7 +13122,7 @@
         "Value": "SourceUnit"
       },
       "ValidatorArray": {
-        "value": "IsNotActiveBuilderSCV"
+        "value": "IsSCV"
       },
       "id": "SCVMovetoBuildOrder"
     },
@@ -14973,19 +14969,6 @@
     },
     {
       "ImpactUnit": {
-        "Effect": "SCVMovetoBuildSearchWorker",
-        "Value": "Source"
-      },
-      "ModifyFlags": {
-        "Owner": 1
-      },
-      "ModifyOwnerPlayer": {
-        "Value": "Target"
-      },
-      "id": "SCVMovetoBuildChangeOwner"
-    },
-    {
-      "ImpactUnit": {
         "Effect": "SlaynElementalGrabLM",
         "Value": "Caster"
       },
@@ -15742,10 +15725,6 @@
     {
       "BehaviorLink": "SCVMoveToBuildSeek",
       "id": "SCVMovetoBuildSeekRB"
-    },
-    {
-      "BehaviorLink": "SCVMovetoBuildAllyAntiGrief",
-      "id": "SCVMovetoBuildAntigriefRB"
     },
     {
       "BehaviorLink": "SalvageShared",
@@ -18756,12 +18735,6 @@
       "CaseDefault": "RavenScramblerMissileAB",
       "EditorCategories": "Race:Terran",
       "id": "RavenScramblerMissileABswitch"
-    },
-    {
-      "CaseArray": {
-        "Effect": "SCVMovetoBuildOrder"
-      },
-      "id": "SCVMovetoBuildAllySwitch"
     },
     {
       "CaseArray": {

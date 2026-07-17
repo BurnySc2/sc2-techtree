@@ -200,6 +200,14 @@
         {
           "Value": "1",
           "index": "5"
+        },
+        {
+          "Value": "2",
+          "index": "31"
+        },
+        {
+          "Value": "2",
+          "index": "32"
         }
       ],
       "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds",
@@ -270,6 +278,14 @@
         {
           "Value": "1",
           "index": "5"
+        },
+        {
+          "Value": "2",
+          "index": "31"
+        },
+        {
+          "Value": "2",
+          "index": "32"
         }
       ],
       "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds",
@@ -340,6 +356,14 @@
         {
           "Value": "1",
           "index": "5"
+        },
+        {
+          "Value": "2",
+          "index": "31"
+        },
+        {
+          "Value": "2",
+          "index": "32"
         }
       ],
       "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds",
@@ -880,32 +904,32 @@
         {
           "Operation": "Multiply",
           "Reference": "Abil,GatewayTrain,InfoArray[Train1].Time",
-          "Value": "0.600000"
+          "Value": "0.500000"
         },
         {
           "Operation": "Multiply",
           "Reference": "Abil,GatewayTrain,InfoArray[Train2].Time",
-          "Value": "0.600000"
+          "Value": "0.500000"
         },
         {
           "Operation": "Multiply",
           "Reference": "Abil,GatewayTrain,InfoArray[Train4].Time",
-          "Value": "0.600000"
+          "Value": "0.500000"
         },
         {
           "Operation": "Multiply",
           "Reference": "Abil,GatewayTrain,InfoArray[Train5].Time",
-          "Value": "0.600000"
+          "Value": "0.500000"
         },
         {
           "Operation": "Multiply",
           "Reference": "Abil,GatewayTrain,InfoArray[Train6].Time",
-          "Value": "0.600000"
+          "Value": "0.500000"
         },
         {
           "Operation": "Multiply",
           "Reference": "Abil,GatewayTrain,InfoArray[Train7].Time",
-          "Value": "0.600000"
+          "Value": "0.500000"
         }
       ],
       "Flags": {
@@ -3568,7 +3592,7 @@
       "Icon": "Assets\\Textures\\btn-upgrade-zerg-groundcarapace-level2.dds",
       "LeaderLevel": 2,
       "Name": "Upgrade/Name/ZergGroundArmorsLevel2",
-      "ScoreAmount": 400,
+      "ScoreAmount": 300,
       "id": "ZergGroundArmorsLevel2",
       "parent": "ZergGroundArmors"
     },

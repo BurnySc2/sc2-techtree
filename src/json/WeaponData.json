@@ -977,7 +977,7 @@
         "Hidden": 1
       },
       "Period": 1,
-      "Range": 11.35,
+      "Range": 7,
       "TargetFilters": "Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable",
       "id": "DisruptorFakeWeapon"
     },
