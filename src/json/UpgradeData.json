@@ -200,14 +200,6 @@
         {
           "Value": "1",
           "index": "5"
-        },
-        {
-          "Value": "2",
-          "index": "31"
-        },
-        {
-          "Value": "2",
-          "index": "32"
         }
       ],
       "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel1.dds",
@@ -278,14 +270,6 @@
         {
           "Value": "1",
           "index": "5"
-        },
-        {
-          "Value": "2",
-          "index": "31"
-        },
-        {
-          "Value": "2",
-          "index": "32"
         }
       ],
       "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel2.dds",
@@ -356,14 +340,6 @@
         {
           "Value": "1",
           "index": "5"
-        },
-        {
-          "Value": "2",
-          "index": "31"
-        },
-        {
-          "Value": "2",
-          "index": "32"
         }
       ],
       "Icon": "Assets\\Textures\\btn-upgrade-protoss-groundweaponslevel3.dds",
@@ -900,38 +876,6 @@
       "AffectedUnitArray": "Gateway",
       "Alert": "ResearchComplete",
       "EditorCategories": "Race:Protoss,UpgradeType:SpellResearch",
-      "EffectArray": [
-        {
-          "Operation": "Multiply",
-          "Reference": "Abil,GatewayTrain,InfoArray[Train1].Time",
-          "Value": "0.500000"
-        },
-        {
-          "Operation": "Multiply",
-          "Reference": "Abil,GatewayTrain,InfoArray[Train2].Time",
-          "Value": "0.500000"
-        },
-        {
-          "Operation": "Multiply",
-          "Reference": "Abil,GatewayTrain,InfoArray[Train4].Time",
-          "Value": "0.500000"
-        },
-        {
-          "Operation": "Multiply",
-          "Reference": "Abil,GatewayTrain,InfoArray[Train5].Time",
-          "Value": "0.500000"
-        },
-        {
-          "Operation": "Multiply",
-          "Reference": "Abil,GatewayTrain,InfoArray[Train6].Time",
-          "Value": "0.500000"
-        },
-        {
-          "Operation": "Multiply",
-          "Reference": "Abil,GatewayTrain,InfoArray[Train7].Time",
-          "Value": "0.500000"
-        }
-      ],
       "Flags": {
         "TechTreeCheat": 1
       },
