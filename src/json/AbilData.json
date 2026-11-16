@@ -2275,6 +2275,7 @@
       "CastOutroTime": 0.5,
       "CmdButtonArray": {
         "DefaultButtonFace": "AmorphousArmorcloud",
+        "Requirements": "UseAmorphousArmorcloud",
         "index": "Execute"
       },
       "Cost": {
@@ -2291,7 +2292,7 @@
         "AllowMovement": 1,
         "NoDeceleration": 1
       },
-      "Range": 12,
+      "Range": 9,
       "id": "AmorphousArmorcloud"
     },
     {
@@ -4092,9 +4093,7 @@
         "Smart": 1
       },
       "PrepEffect": "WidowMineTargetTintApplyBehavior",
-      "PrepTime": {
-        "0": 1.19
-      },
+      "PrepTime": 1.5,
       "Range": 5,
       "RangeSlop": 0,
       "TargetFilters": "Visible;Player,Ally,Neutral,Structure,Missile,Item,Stasis,Dead,Hidden,Invulnerable",
@@ -4994,7 +4993,7 @@
       ],
       "Cost": {
         "Vital": {
-          "Energy": 75
+          "Energy": 50
         }
       },
       "EditorCategories": "Race:Terran,AbilityorEffectType:Units",
@@ -8730,21 +8729,21 @@
             "ShowInGlossary": 0,
             "ToSelection": 1
           },
-          "Requirements": "UseWarpGateHideFree",
+          "Requirements": "UseWarpGate",
           "State": "Restricted",
           "index": "Execute"
         }
       ],
       "Cost": {
         "Charge": {
-          "CountMax": 1,
-          "CountStart": 1,
-          "CountUse": 1,
-          "TimeUse": 5.6
+          "CountStart": "1",
+          "TimeUse": "5.6"
         }
       },
       "EditorCategories": "Race:Protoss,AbilityorEffectType:MorphsandBurrows",
       "Flags": {
+        "AutoCast": 1,
+        "AutoCastOn": 1,
         "BestUnit": 1,
         "Birth": 1,
         "DisableAbils": 1,
@@ -13970,8 +13969,8 @@
             "State": "Restricted"
           },
           "Resource": {
-            "Minerals": 100,
-            "Vespene": 100
+            "Minerals": 150,
+            "Vespene": 150
           },
           "Time": "160",
           "Upgrade": "ZergGroundArmorsLevel1",
@@ -13984,8 +13983,8 @@
             "State": "Restricted"
           },
           "Resource": {
-            "Minerals": 150,
-            "Vespene": 150
+            "Minerals": 200,
+            "Vespene": 200
           },
           "Time": "190",
           "Upgrade": "ZergGroundArmorsLevel2",
@@ -13998,8 +13997,8 @@
             "State": "Restricted"
           },
           "Resource": {
-            "Minerals": 200,
-            "Vespene": 200
+            "Minerals": 250,
+            "Vespene": 250
           },
           "Time": "220",
           "Upgrade": "ZergGroundArmorsLevel3",
@@ -15149,7 +15148,7 @@
               "ToSelection": 1
             }
           },
-          "Time": "45.51",
+          "Time": "42",
           "Unit": "Adept",
           "index": "Train7"
         },
@@ -15302,7 +15301,7 @@
           "Button": {
             "Requirements": ""
           },
-          "Time": "47.6",
+          "Time": "44.8",
           "Unit": "Reaper",
           "index": "Train2"
         },
@@ -15667,13 +15666,20 @@
           "Requirements": "WarpgateNotDemorphing"
         },
         "Charge": {
-          "TimeStart": "32.8",
-          "TimeUse": "30.8"
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "Flags": {
+            "EnableChargeTimeQueuing": 1
+          },
+          "Link": "WarpGateTrain",
+          "TimeStart": 30,
+          "TimeUse": 28
         },
         "Cooldown": {
           "TimeUse": "0"
         },
-        "Time": "5.6",
+        "Time": "16",
         "Unit": "Zealot",
         "index": "Train1"
       },
@@ -15684,12 +15690,19 @@
           }
         },
         "Charge": {
-          "TimeUse": "30.8"
+          "CountMax": 1,
+          "CountStart": 1,
+          "CountUse": 1,
+          "Flags": {
+            "EnableChargeTimeQueuing": 1
+          },
+          "Link": "WarpGateTrain",
+          "TimeUse": 28
         },
         "Cooldown": {
           "Link": "WarpGateTrain"
         },
-        "Time": "5.6",
+        "Time": "16",
         "Unit": "Adept",
         "index": "Train7"
       },
@@ -15700,12 +15713,12 @@
           }
         },
         "Charge": {
-          "TimeUse": "30.8"
+          "TimeUse": "32.2"
         },
         "Cooldown": {
           "TimeUse": "0"
         },
-        "Time": "5.6",
+        "Time": "16",
         "Unit": "Sentry",
         "index": "Train6"
       },
@@ -15716,12 +15729,12 @@
           }
         },
         "Charge": {
-          "TimeUse": "30.8"
+          "TimeUse": "32.2"
         },
         "Cooldown": {
           "TimeUse": "0"
         },
-        "Time": "5.6",
+        "Time": "16",
         "Unit": "Stalker",
         "index": "Train2"
       },
@@ -15732,12 +15745,12 @@
           }
         },
         "Charge": {
-          "TimeUse": "49"
+          "TimeUse": "44.8"
         },
         "Cooldown": {
           "TimeUse": "0"
         },
-        "Time": "5.6",
+        "Time": "16",
         "Unit": "DarkTemplar",
         "index": "Train5"
       },
@@ -15748,12 +15761,12 @@
           }
         },
         "Charge": {
-          "TimeUse": "49"
+          "TimeUse": "44.8"
         },
         "Cooldown": {
           "TimeUse": "0"
         },
-        "Time": "5.6",
+        "Time": "16",
         "Unit": "HighTemplar",
         "index": "Train4"
       }

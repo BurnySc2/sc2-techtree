@@ -7482,6 +7482,16 @@
     {
       "Amount": 10,
       "AttributeBonus": {
+        "Light": 10
+      },
+      "EditorCategories": "Race:Terran",
+      "Kind": "Ranged",
+      "id": "C10CanisterRifle",
+      "parent": "DU_WEAP"
+    },
+    {
+      "Amount": 10,
+      "AttributeBonus": {
         "Light": 12
       },
       "Death": "Blast",
@@ -7489,6 +7499,25 @@
       "Kind": "Ranged",
       "ValidatorArray": "noMarkers",
       "id": "AdeptDamage",
+      "parent": "DU_WEAP"
+    },
+    {
+      "Amount": 10,
+      "AttributeBonus": {
+        "Light": 5
+      },
+      "Death": "Fire",
+      "EditorCategories": "Race:Protoss",
+      "Kind": "Ranged",
+      "KindSplash": "Splash",
+      "ValidatorArray": {
+        "0": "MultipleHitGroundOnlyAttackTargetFilter",
+        "1": "noMarkers",
+        "2": "ColossusAttackDamageMaxRange",
+        "value": "noMarkers"
+      },
+      "Visibility": "Visible",
+      "id": "ThermalLancesMU",
       "parent": "DU_WEAP"
     },
     {
@@ -7600,43 +7629,11 @@
     {
       "Amount": 12,
       "AttributeBonus": {
-        "Light": 3
-      },
-      "Death": "Fire",
-      "EditorCategories": "Race:Protoss",
-      "Kind": "Ranged",
-      "KindSplash": "Splash",
-      "ValidatorArray": {
-        "0": "MultipleHitGroundOnlyAttackTargetFilter",
-        "1": "noMarkers",
-        "2": "ColossusAttackDamageMaxRange",
-        "value": "noMarkers"
-      },
-      "Visibility": "Visible",
-      "id": "ThermalLancesMU",
-      "parent": "DU_WEAP"
-    },
-    {
-      "Amount": 12,
-      "AttributeBonus": {
         "Mechanical": 8
       },
       "EditorCategories": "Race:Terran",
       "Kind": "Ranged",
       "id": "TwinGatlingCannons",
-      "parent": "DU_WEAP"
-    },
-    {
-      "Amount": 12,
-      "Death": "Fire",
-      "EditorCategories": "Race:Protoss",
-      "Kind": "Ranged",
-      "KindSplash": "Splash",
-      "ValidatorArray": {
-        "value": "noMarkers"
-      },
-      "Visibility": "Visible",
-      "id": "ThermalLancesMUAir",
       "parent": "DU_WEAP"
     },
     {
@@ -7694,6 +7691,21 @@
       "parent": "DU_WEAP_MISSILE"
     },
     {
+      "Amount": 130,
+      "AttributeBonus": {
+        "Psionic": 40
+      },
+      "EditorCategories": "Race:Terran",
+      "Flags": {
+        "Notification": 1
+      },
+      "ResponseFlags": {
+        "Acquire": 1,
+        "Flee": 1
+      },
+      "id": "ChannelSnipeDamage"
+    },
+    {
       "Amount": 14,
       "AttributeBonus": {
         "Massive": 6
@@ -7742,21 +7754,24 @@
     {
       "Amount": 15,
       "AttributeBonus": {
-        "Light": 0
-      },
-      "EditorCategories": "Race:Terran",
-      "Kind": "Ranged",
-      "id": "C10CanisterRifle",
-      "parent": "DU_WEAP"
-    },
-    {
-      "Amount": 15,
-      "AttributeBonus": {
         "Light": 10
       },
       "EditorCategories": "Race:Protoss",
       "Kind": "Spell",
       "id": "OracleShotDamage",
+      "parent": "DU_WEAP"
+    },
+    {
+      "Amount": 15,
+      "Death": "Fire",
+      "EditorCategories": "Race:Protoss",
+      "Kind": "Ranged",
+      "KindSplash": "Splash",
+      "ValidatorArray": {
+        "value": "noMarkers"
+      },
+      "Visibility": "Visible",
+      "id": "ThermalLancesMUAir",
       "parent": "DU_WEAP"
     },
     {
@@ -7776,18 +7791,6 @@
       "EditorCategories": "Race:Zerg",
       "id": "RavagerWeaponDamage",
       "parent": "DU_WEAP_MISSILE"
-    },
-    {
-      "Amount": 170,
-      "EditorCategories": "Race:Terran",
-      "Flags": {
-        "Notification": 1
-      },
-      "ResponseFlags": {
-        "Acquire": 1,
-        "Flee": 1
-      },
-      "id": "ChannelSnipeDamage"
     },
     {
       "Amount": 18,
@@ -7920,7 +7923,7 @@
     {
       "Amount": 20,
       "AttributeBonus": {
-        "Biological": 15
+        "Biological": 10
       },
       "Death": "Disintegrate",
       "EditorCategories": "Race:Zerg",
@@ -8793,26 +8796,6 @@
       "parent": "DU_WEAP_MISSILE"
     },
     {
-      "Amount": 6.25,
-      "EditorCategories": "Race:Protoss",
-      "Flags": {
-        "Notification": 1
-      },
-      "ResponseFlags": {
-        "Acquire": 1,
-        "Flee": 1
-      },
-      "ValidatorArray": "PsiStormUTargetFilters",
-      "id": "PsiStormDamageInitial"
-    },
-    {
-      "Amount": 6.25,
-      "EditorCategories": "Race:Protoss",
-      "ValidatorArray": "PsiStormUTargetFilters",
-      "Visibility": "Hidden",
-      "id": "PsiStormDamage"
-    },
-    {
       "Amount": 6.875,
       "EditorCategories": "Race:Protoss",
       "Flags": {
@@ -8846,6 +8829,26 @@
       "Visibility": "Visible",
       "id": "ScoutMPAirU",
       "parent": "DU_WEAP"
+    },
+    {
+      "Amount": 7,
+      "EditorCategories": "Race:Protoss",
+      "Flags": {
+        "Notification": 1
+      },
+      "ResponseFlags": {
+        "Acquire": 1,
+        "Flee": 1
+      },
+      "ValidatorArray": "PsiStormUTargetFilters",
+      "id": "PsiStormDamageInitial"
+    },
+    {
+      "Amount": 7,
+      "EditorCategories": "Race:Protoss",
+      "ValidatorArray": "PsiStormUTargetFilters",
+      "Visibility": "Hidden",
+      "id": "PsiStormDamage"
     },
     {
       "Amount": 7.5,
@@ -10856,11 +10859,6 @@
       ],
       "MaxCount": 1,
       "SearchFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
-      "TargetSorts": {
-        "SortArray": {
-          "value": "TSDistanceToTarget"
-        }
-      },
       "id": "GlaiveWurmE1"
     },
     {
@@ -10879,11 +10877,6 @@
       ],
       "MaxCount": 1,
       "SearchFilters": "Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable",
-      "TargetSorts": {
-        "SortArray": {
-          "value": "TSDistanceToTarget"
-        }
-      },
       "id": "GlaiveWurmE2"
     },
     {
@@ -12602,6 +12595,20 @@
       "id": "MuleAutocastEnable"
     },
     {
+      "Abil": "MorphBuildingGatewayWarpGateFree",
+      "CmdFlags": {
+        "SetAutoCast": 1
+      },
+      "EditorCategories": "Race:Protoss",
+      "Player": {
+        "Value": "Caster"
+      },
+      "WhichUnit": {
+        "Value": "Caster"
+      },
+      "id": "UpgradeToWarpGateAutoCastOff"
+    },
+    {
       "Abil": "MorphToCollapsiblePurifierTowerDebris",
       "id": "CollapsiblePurifierTowerIssueOrder"
     },
@@ -12901,20 +12908,6 @@
         "Link": "Effect/Vortex"
       },
       "id": "VortexUnsiege"
-    },
-    {
-      "Abil": "UpgradeToWarpGate",
-      "CmdFlags": {
-        "SetAutoCast": 1
-      },
-      "EditorCategories": "Race:Protoss",
-      "Player": {
-        "Value": "Caster"
-      },
-      "WhichUnit": {
-        "Value": "Caster"
-      },
-      "id": "UpgradeToWarpGateAutoCastOff"
     },
     {
       "Abil": "UpgradeToWarpGate",
@@ -14830,7 +14823,7 @@
       },
       "ValidatorArray": "ChannelSnipeRefundValidator",
       "VitalArray": {
-        "Change": 75,
+        "Change": 50,
         "index": "Energy"
       },
       "id": "ChannelSnipeEnergyRefund"
@@ -17060,6 +17053,9 @@
       "EffectArray": {
         "value": "ChannelSnipeCombatBeamDummy"
       },
+      "ValidatorArray": {
+        "value": "NotInPsiStorm"
+      },
       "id": "ChannelSnipeInitialSet"
     },
     {
@@ -17518,14 +17514,6 @@
         "value": "ConsumePeriodicCheck"
       },
       "id": "ViperConsumeStructurePeriodicSet"
-    },
-    {
-      "EditorCategories": "Race:Zerg",
-      "EffectArray": {
-        "1": "ForcefieldMinusHalfLife",
-        "value": "RavagerCorrosiveBileForceFieldKill"
-      },
-      "id": "RavagerCorrosiveBileSet"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -18027,6 +18015,13 @@
       },
       "ValidatorArray": "",
       "id": "QueenMPSpawnBroodlingsSet"
+    },
+    {
+      "EditorCategories": "Race:Zerg",
+      "EffectArray": {
+        "value": "RavagerCorrosiveBileForceFieldKill"
+      },
+      "id": "RavagerCorrosiveBileSet"
     },
     {
       "EditorCategories": "Race:Zerg",
@@ -18756,6 +18751,10 @@
     {
       "ValidatorArray": "BroodlingAllowedAttack",
       "id": "BroodlingEscort"
+    },
+    {
+      "ValidatorArray": "IsNotSiegedSiegeTank",
+      "id": "YoinkStartSwitch"
     }
   ],
   "CEffectTeleport": [
